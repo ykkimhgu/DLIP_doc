@@ -12,3 +12,7 @@
 
 * [Install](embeddedcontroller/ec_install.md)
 
+---
+
+* [Github](https://github.com/ykkimhgu)
+
