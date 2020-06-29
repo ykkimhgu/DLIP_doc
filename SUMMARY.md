@@ -4,7 +4,7 @@
 
 ## Home
 
-* [gitbook\_docs](home/readme.md)
+* [gitbook\_docs](home/home.md)
 * [ML\_docs](home/ml_docs/README.md)
   * [Machine Learning Documents](home/ml_docs/mldocs.md)
   * [Machine Learning 2](home/ml_docs/mldocs-1/README.md)
@@ -14,8 +14,9 @@
 
 * [Setup](airsim/setup/README.md)
   * [Build on Windows](airsim/setup/build-on-windows.md)
-  * [Untitled](airsim/setup/untitled.md)
-* [Tutorial](airsim/tutorial.md)
+  * [Setup FAQ](airsim/setup/untitled.md)
+* [Tutorial](airsim/tutorial/README.md)
+  * [Demo\_0](airsim/tutorial/tutorial_intro.md)
 
 ## Tensorflow
 
