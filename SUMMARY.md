@@ -5,12 +5,16 @@
   * [Machine Learning Documents](ml_docs/mldocs.md)
   * [Machine Learning 2](ml_docs/mldocs.md)
     * [Machine Learning 3](ml_docs/mldocs.md)
+
+---
+
 ## Airsim
 * [setup](airsim/README.md)
 * [Tutorial](airsim/README.md)
 
-## EmbeddedController
+---
 
+## Tensorflow
 * [Install](embeddedcontroller/ec_install.md)
 
 ---
