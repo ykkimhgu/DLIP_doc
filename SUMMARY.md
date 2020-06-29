@@ -3,7 +3,8 @@
 * [gitbook\_docs](README.md)
 * [ML\_docs](ml_docs/README.md)
   * [Machine Learning Documents](ml_docs/mldocs.md)
-
+  * [Machine Learning 2](ml_docs/mldocs.md)
+    * [Machine Learning 3](ml_docs/mldocs.md)
 ## MachineVision
 
 * [Untitled](machinevision/untitled.md)
