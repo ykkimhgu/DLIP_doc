@@ -13,8 +13,12 @@ description: A short tutorial on how to install Airsim on Window 10.
 ## Requirements
 
 * Window 10
+* NVIDIA Graphic card & Driver
 * Unreal engine &gt;=4.22
 * Visual Studio 2019
+* Git for windows
+
+
 
 
 
