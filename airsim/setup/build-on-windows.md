@@ -1,6 +1,6 @@
 ---
 description: >-
-  Read  https://microsoft.github.io/AirSim/build_windows/ for more detailed
+  Read [AirSim Doc] (https://microsoft.github.io/AirSim/build_windows) for more detailed
   information
 ---
 
@@ -12,6 +12,9 @@ description: >-
 2. Run the Epic Games Launcher, open the `Library` tab on the left pane. Click on the `Add Versions` which should show the option to download **Unreal 4.24** as shown below. If you have multiple versions of Unreal installed then **make sure 4.24 is set to `current`** by clicking down arrow next to the Launch button for the version.
 
    **Note**: AirSim also works with UE &gt;= 4.22, however, we recommend you update to 4.24. **Note**: If you have UE 4.16 or older projects, please see the [upgrade guide](https://github.com/ykkimhgu/gitbook_docs/tree/744cefa60529ba375f5fbccce60616d217c2429b/airsim/setup/unreal_upgrade.md) to upgrade your projects.
+
+![GitHub Logo](/install_vs1.jpg)
+Format: ![Alt Text](url)
 
 ### Build AirSim
 
