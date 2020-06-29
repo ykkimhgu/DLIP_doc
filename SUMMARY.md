@@ -1,21 +1,25 @@
 # Table of contents
-## Home
-* [gitbook\_docs](README.md)
-* [ML\_docs](ml_docs/README.md)
-  * [Machine Learning Documents](ml_docs/mldocs.md)
-  * [Machine Learning 2](ml_docs/mldocs.md)
-    * [Machine Learning 3](ml_docs/mldocs.md)
 
----
+* [Introduction](README.md)
+
+## Home
+
+* [gitbook\_docs](home/readme.md)
+* [ML\_docs](home/ml_docs/README.md)
+  * [Machine Learning Documents](home/ml_docs/mldocs.md)
+  * [Machine Learning 2](home/ml_docs/mldocs-1/README.md)
+    * [Machine Learning 3](home/ml_docs/mldocs-1/mldocs.md)
 
 ## Airsim
-* [setup](airsim/README.md)
-* [Tutorial](airsim/README.md)
 
----
+* [Setup](airsim/setup/README.md)
+  * [Build on Windows](airsim/setup/build-on-windows.md)
+  * [Untitled](airsim/setup/untitled.md)
+* [Tutorial](airsim/tutorial.md)
 
 ## Tensorflow
-* [Install](embeddedcontroller/ec_install.md)
+
+* [Install](tensorflow/ec_install.md)
 
 ---
 
