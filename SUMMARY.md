@@ -12,11 +12,12 @@
 
 ## Airsim
 
-* [Setup](airsim/setup/README.md)
-  * [Build on Windows](airsim/setup/build-on-windows.md)
-  * [Setup FAQ](airsim/setup/untitled.md)
-* [Tutorial](airsim/tutorial/README.md)
-  * [Demo\_0](airsim/tutorial/tutorial_intro.md)
+* [Setup](airsim/docs/setup/README.md)
+  * [Build on Windows](airsim/docs/setup/build-on-windows.md)
+  * [Setup FAQ](airsim/docs/setup/untitled.md)
+* [Tutorial](airsim/docs/tutorial/README.md)
+  * [Demo\_0](airsim/docs/tutorial/tutorial_block.md)
+  * [Demo\_1](airsim/docs/tutorial/tutorial_intro.md)
 
 ## Tensorflow
 

@@ -33,7 +33,7 @@ Here are quick steps to get Blocks environment up and running:
 For Windows, you can just change the code in Visual Studio, press F5 and re-run. There are few batch files available in folder `AirSim\Unreal\Environments\Blocks` that lets you sync code, clean etc.
 
 ### Chosing Your Vehicle: Car or Multirotor
-By default AirSim spawns multirotor. You can easily change this to car and use all of AirSim goodies. Please see [using car](https://microsoft.github.io/AirSim/using_car/using_car.md) guide.
+By default AirSim spawns multirotor. You can easily change this to car and use all of AirSim goodies. Please see [using car](https://microsoft.github.io/AirSim/using_car/) guide.
 
 ## FAQ
 #### I see warnings about like "_BuitData" file is missing. 
