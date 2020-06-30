@@ -30,15 +30,13 @@ description: >-
 
 * Install Visual Studio 2019.
 
-   **Note**: Use **English** for the VS2019 language. If you choose **Korean**, you may need to convert 'UTF Encoding' is some AirSim source files.
+  > **Note**: Use **English** for the VS2019 language. If you choose **Korean**, you may need to convert 'UTF Encoding' is some AirSim source files.
 
    ![Install](install_vs1.jpg)
   
-  **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** \(should be selected by default\) while installing VS 2019.
+* **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** (should be selected by default) while installing VS 2019.
 
    ![Install](install_vs2.jpg)
-
-   **Note**: Use **English** for the VS2019 language. If you choose **Korean**, you may need to convert 'UTF Encoding' is some AirSim source files.
 
 ### Download AirSim
 
@@ -59,7 +57,7 @@ description: >-
 * Run `build.cmd` from the command line. This will create ready to use plugin bits in the `Unreal\Plugins` folder that can be dropped into any Unreal project.
   ![build1](build1.jpg)
 
-> **Build error**:  If the build error message is related to UTF decoding Go to FAQ #1
+  > **Build error**:  If the build error message is related to UTF decoding Go to FAQ #1
 
 ### Build Unreal Project
 
@@ -68,7 +66,6 @@ Finally, you will need an Unreal project that hosts the environment for your veh
 Please see [setting up Built-in Block  Environment](../tutorial/tutorial_block.md).
 
 Also, see [setting up Unreal Environment](https://microsoft.github.io/AirSim/unreal_proj/) for more detail.
-
 
 ## FAQ
 

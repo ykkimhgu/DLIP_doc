@@ -1,6 +1,10 @@
 
 # Tutorial 1: Setup Blocks Environment for AirSim
 
+You can set-up your own Unreal Environment with [these instructions](https://github.com/Microsoft/AirSim/#how-to-get-it).
+
+For this tutorial, we will use a simple block environment.
+
 Blocks environment is available in repo in folder `Unreal/Environments/Blocks` and is designed to be lightweight in size. That means its very basic but fast.
 
 Here are quick steps to get Blocks environment up and running:
@@ -33,9 +37,6 @@ Here are quick steps to get Blocks environment up and running:
 
 For Windows, you can just change the code in Visual Studio, press F5 and re-run. There are few batch files available in folder `AirSim\Unreal\Environments\Blocks` that lets you sync code, clean etc.
 
-### Chosing Your Vehicle: Car or Multirotor
-
-By default AirSim spawns multirotor. You can easily change this to car and use all of AirSim goodies. Please see [using car](https://microsoft.github.io/AirSim/using_car/) guide.
 
 ## FAQ
 
