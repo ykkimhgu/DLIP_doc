@@ -31,7 +31,7 @@ Here are quick steps to get Blocks environment up and running:
 
 4. Press the Play button in Unreal Editor and you will see something like in below video. Also see [how to use AirSim](https://github.com/Microsoft/AirSim/#how-to-use-it).
 
-[![Blocks Demo Video](../images/blocks_video.png)](https://www.youtube.com/watch?v=-r_QGaxMT4A)
+    [![Blocks Demo Video](../images/blocks_video.png)](https://www.youtube.com/watch?v=-r_QGaxMT4A)
 
 ### Changing Code and Rebuilding
 

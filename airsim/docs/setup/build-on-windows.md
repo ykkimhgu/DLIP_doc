@@ -44,9 +44,9 @@ description: >-
 * Move to the target directory to install AirSim. Use `cd` command to change directory
 * Clone the AirSim repo by typing
   
-  ```text
-     git clone https://github.com/Microsoft/AirSim.git
-  ```
+```text
+git clone https://github.com/Microsoft/AirSim.git
+```
 
   ![gitInstall](clone1.jpg)
 
@@ -55,6 +55,7 @@ description: >-
 * Open `Command Prompt for VS2019`
 * Move to the installed AirSim directory by `cd AirSim`.
 * Run `build.cmd` from the command line. This will create ready to use plugin bits in the `Unreal\Plugins` folder that can be dropped into any Unreal project.
+  
   ![build1](build1.jpg)
 
   > **Build error**:  If the build error message is related to UTF decoding Go to FAQ #1
