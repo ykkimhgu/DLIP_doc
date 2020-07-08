@@ -24,6 +24,10 @@ Here's a short sample of the model in action:
 
 [https://youtu.be/CauKo089zm0](https://youtu.be/CauKo089zm0)
 
+#### How to embed 
+
+[https://youtu.be/CauKo089zm0](https://www.youtube.com/watch?v=cFtnflNe5fM)
+
 ## Structure of this tutorial
 
 The code presented in this tutorial is written in [Keras](https://keras.io/), a high-level deep learning Python API capable of running on top of [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), [TensorFlow](https://www.tensorflow.org/) or [Theano](http://deeplearning.net/software/theano/index.html). The fact that Keras lets you work with the deep learning framework of your choice, along with its simplicity of use, makes it an ideal choice for beginners, eliminating the learning curve that comes with most popular frameworks.
