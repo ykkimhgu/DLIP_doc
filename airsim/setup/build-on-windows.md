@@ -18,14 +18,14 @@ description: >-
 
    **Note**: AirSim also works with UE &gt;= 4.22, however, we recommend you update to 4.24.
 
-   ![Install](../../.gitbook/assets/install2.jpg)
+![Install](../../.gitbook/assets/install2.jpg)
 
 ### Install Git for Windows
 
 * [Download](https://git-scm.com/) Git for Windows \(lastes source, release 2.27.0\)
 * Use default settings to install
 
-  ![gitInstall](../../.gitbook/assets/gitInstall.jpg)
+![gitInstall](../../.gitbook/assets/gitInstall.jpg)
 
 ### Install Visual Studio
 
@@ -33,11 +33,11 @@ description: >-
 
   > **Note**: Use **English** for the VS2019 language. If you choose **Korean**, you may need to convert 'UTF Encoding' is some AirSim source files.
 
-  ![Install](../../.gitbook/assets/install_vs1.jpg)
-
 * **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** \(should be selected by default\) while installing VS 2019.
 
-  ![Install](../../.gitbook/assets/install_vs2.jpg)
+![Install](../../.gitbook/assets/install_vs1.jpg)
+
+![Install](../../.gitbook/assets/install_vs2.jpg)
 
 ### Download AirSim
 
@@ -57,9 +57,11 @@ git clone https://github.com/Microsoft/AirSim.git
 * Move to the installed AirSim directory by `cd AirSim`.
 * Run `build.cmd` from the command line. This will create ready to use plugin bits in the `Unreal\Plugins` folder that can be dropped into any Unreal project.
 
-  ![build1](../../.gitbook/assets/build1.jpg)
+
 
   > **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
+
+![build1](../../.gitbook/assets/build1.jpg)
 
 ### Build Unreal Project
 
@@ -78,9 +80,9 @@ The initial setting for VS2019 gives the warning as the compile error. This erro
 * Open the header/source files that gives encoding warning with VS2019
 * **Save As** with **Save with Encoding**: Encoding **UTF-8 with signature**
 
-  ![faq1](../../.gitbook/assets/FAQ1.jpg)
+![faq2](../../.gitbook/assets/faq2.jpg)
 
-  ![faq2](../../.gitbook/assets/faq2.jpg)
+![faq1](../../.gitbook/assets/FAQ1.jpg)
 
 #### Clashes of VS 2017 and VS2019. How to force Unreal to use Visual Studio 2019
 
