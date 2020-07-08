@@ -13,7 +13,9 @@ description: >-
 1. [Download](https://www.unrealengine.com/download) the Epic Games Launcher. While the Unreal Engine is open source and free to download, registration is still required.
 
     ![Install](../../.gitbook/assets/install1.jpg)
+    
   ![Install](../../.gitbook/assets/install1.jpg)
+
 ![Install](../../.gitbook/assets/install1.jpg)
 
 2. Run the Epic Games Launcher, open the `Library` tab on the left pane. Click on the `Add Versions` which should show the option to download **Unreal 4.24** as shown below. If you have multiple versions of Unreal installed then **make sure 4.24 is set to `current`** by clicking down arrow next to the Launch button for the version.
