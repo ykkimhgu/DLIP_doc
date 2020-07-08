@@ -125,3 +125,71 @@ The dataset for the model is quite large. [You can download it from here](https:
 ### A note from the curators
 
 We have made our best effort to ensure this tutorial can help you get started with the basics of autonomous driving and get you to the point where you can start exploring new ideas independently. We would love to hear your feedback on how we can improve and evolve this tutorial. We would also love to know what other tutorials we can provide you that will help you advance your career goals. Please feel free to use the GitHub issues section for all feedback. All feedback will be monitored closely. If you have ideas you would like to [collaborate](../README.md#contributing) on, please feel free to reach out to us and we will be happy to work with you.
+
+## ISSUES
+
+### 1. Fails to create test.h5 and eval.h5 in DataExplorationAndPreparation
+#### Problem description
+Stops with error in generating test/validation dataset  of .h5 files  in **DataExplorationAndPreparation**
+It seems it creates **train.h5** but does not create **test.h5** and **eval.h5**
+
+#### Problem details
+When running this code in **DataExplorationAndPreparation**
+
+    ```
+    train_eval_test_split = [0.7, 0.2, 0.1]
+    full_path_raw_folders = [os.path.join(RAW_DATA_DIR, f) for f in DATA_FOLDERS]
+    Cooking.cook(full_path_raw_folders, COOKED_DATA_DIR, train_eval_test_split)
+    ```
+Iteration stops with this output message. 
+It seems it creates **train.h5** but does not create **test.h5** and **eval.h5**
+Codes before this line worked fine.
+
+    ```
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_1...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_2...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_3...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_4...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_5...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/normal_6...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/swerve_1...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/swerve_2...
+    Reading data from ../dataset/EndToEndLearningRawData/data_raw/swerve_3...
+    Processing ../dataset/data_cooked/train.h5...
+    ---------------------------------------------------------------------------
+    StopIteration                             Traceback (most recent call last)
+    ~\Git_Program\AirSim\ADCookBook\Tutorial_E2EDeepLearning\Cooking.py in generatorForH5py(data_mappings, chunk_size)
+        129                 raise StopIteration
+    --> 130     raise StopIteration
+        131 
+
+    StopIteration: 
+
+    The above exception was the direct cause of the following exception:
+
+    RuntimeError                              Traceback (most recent call last)
+    <ipython-input-13-bce568193587> in <module>
+        1 train_eval_test_split = [0.7, 0.2, 0.1]
+        2 full_path_raw_folders = [os.path.join(RAW_DATA_DIR, f) for f in DATA_FOLDERS]
+    ----> 3 Cooking.cook(full_path_raw_folders, COOKED_DATA_DIR, train_eval_test_split)
+
+    ~\Git_Program\AirSim\ADCookBook\Tutorial_E2EDeepLearning\Cooking.py in cook(folders, output_directory, train_eval_test_split)
+        192     for i in range(0, len(split_mappings), 1):
+        193         print('Processing {0}...'.format(output_files[i]))
+    --> 194         saveH5pyData(split_mappings[i], output_files[i])
+        195         print('Finished saving {0}.'.format(output_files[i]))
+        196 
+
+    ~\Git_Program\AirSim\ADCookBook\Tutorial_E2EDeepLearning\Cooking.py in saveH5pyData(data_mappings, target_file_path)
+        162         dset_previous_state[:] = previous_state_chunk
+        163 
+    --> 164         for image_names_chunk, label_chunk, previous_state_chunk in gen:
+        165             image_chunk = np.asarray(readImagesFromPath(image_names_chunk))
+        166 
+    RuntimeError: generator raised StopIteration
+    ```
+
+#### Experiment/Environment details
+* Tutorial used: *AirSimE2EDeepLearning*-> *DataExplorationAndPreparation*
+* Environment used: *landscape*
+* Versions of artifacts used (if applicable): *Python 3.7.7 Keras 2.3.1 Using Tensorflow backened*, *h5py*

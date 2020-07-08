@@ -59,11 +59,32 @@
   * [Setup](underConstruction.md)
   * [How to use](underConstruction.md)
   
-* [Google Codelab]()
+* [Google Codelab](underConstruction.md)
   * [Install](underConstruction.md)
   * [Setup](underConstruction.md)
   * [How to use](underConstruction.md)
   
+## Instructions: Tools for Deep Learning
+
+* [Git_Github](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+* [Anaconda](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+* [Pandas](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+* [MATPlot](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+* [NumPy](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+* [SciPy, scikit-learn](underConstruction.md)
+  * [Install](underConstruction.md)
+  * [How to use](underConstruction.md)
+
 ---
 
 * [Github](https://github.com/ykkimhgu)
