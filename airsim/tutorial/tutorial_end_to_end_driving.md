@@ -24,9 +24,10 @@ Here's a short sample of the model in action:
 
 [https://youtu.be/CauKo089zm0](https://youtu.be/CauKo089zm0)
 
-#### How to embed 
+#### Demonstration
 
-[https://youtu.be/CauKo089zm0](https://www.youtube.com/watch?v=cFtnflNe5fM)
+{% youtube src="https://www.youtube.com/watch?v=cFtnflNe5fM"}
+{% youtube src="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" %}
 
 ## Structure of this tutorial
 
