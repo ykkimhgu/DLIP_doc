@@ -1,10 +1,6 @@
-# Demonstration 
+# Untitled
 
-
-
-{% youtube src="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" %}
-
-#### 
+{% embed url="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" caption="" %}
 
 {% tabs %}
 {% tab title="First Tab" %}

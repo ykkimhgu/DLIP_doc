@@ -26,8 +26,9 @@ Here's a short sample of the model in action:
 
 #### Demonstration
 
-{% youtube src="https://www.youtube.com/watch?v=cFtnflNe5fM"}
-{% youtube src="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" %}
+{% youtube src="[https://www.youtube.com/watch?v=cFtnflNe5fM"}](https://www.youtube.com/watch?v=cFtnflNe5fM"})
+
+{% embed url="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" caption="" %}
 
 ## Structure of this tutorial
 
@@ -105,7 +106,9 @@ You should also be comfortable with Python. At the very least, you should be abl
 
 We have created a standalone build of the AirSim simulation environment for the tutorials in this cookbook. [You can download the build package from here](https://airsimtutorialdataset.blob.core.windows.net/e2edl/AD_Cookbook_AirSim.7z). Consider using [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy), as the file size is large. After downloading the package, unzip it and run the PowerShell command
 
-`.\AD_Cookbook_Start_AirSim.ps1 landscape` ![lanscape](../../.gitbook/assets/tutorial_ADcook1.png)
+`.\AD_Cookbook_Start_AirSim.ps1 landscape` 
+
+![lanscape](../../.gitbook/assets/tutorial_ADcook1.png)
 
 to start the simulator in the landscape environment.
 
