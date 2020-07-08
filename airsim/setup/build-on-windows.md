@@ -71,9 +71,9 @@ Please see [setting up Built-in Block Environment](../tutorial/tutorial_block.md
 
 Also, see [setting up Unreal Environment](https://microsoft.github.io/AirSim/unreal_proj/) for more detail.
 
-## FAQ
+## Troubleshooting
 
-#### Building Error message of Error C2220
+###  Building Error message of Error C2220
 
 The initial setting for VS2019 gives the warning as the compile error. This error has to do with some sources have some characters encoded which shows warning by the compiler.
 
@@ -84,7 +84,7 @@ The initial setting for VS2019 gives the warning as the compile error. This erro
 
 ![faq1](../../.gitbook/assets/FAQ1.jpg)
 
-#### Clashes of VS 2017 and VS2019. How to force Unreal to use Visual Studio 2019
+### Clashes of VS 2017 and VS2019. How to force Unreal to use Visual Studio 2019
 
 If different versions of Visual Studio are installed. such as VS2017 and VS 2019, Unreal may be associated with VS2017. Building an AirSim project in VS2019 with Unreal associated with VS2017 can give build error.
 
