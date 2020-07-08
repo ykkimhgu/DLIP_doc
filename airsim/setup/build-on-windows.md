@@ -12,13 +12,13 @@ description: >-
 
 1. [Download](https://www.unrealengine.com/download) the Epic Games Launcher. While the Unreal Engine is open source and free to download, registration is still required.
 
-    ![Install](../../.gitbook/assets/install1.jpg)
-    
-  ![Install](../../.gitbook/assets/install1.jpg)
+   ![Install](../../.gitbook/assets/install1.jpg)
+
+   ![Install](../../.gitbook/assets/install1.jpg)
 
 ![Install](../../.gitbook/assets/install1.jpg)
 
-2. Run the Epic Games Launcher, open the `Library` tab on the left pane. Click on the `Add Versions` which should show the option to download **Unreal 4.24** as shown below. If you have multiple versions of Unreal installed then **make sure 4.24 is set to `current`** by clicking down arrow next to the Launch button for the version.
+1. Run the Epic Games Launcher, open the `Library` tab on the left pane. Click on the `Add Versions` which should show the option to download **Unreal 4.24** as shown below. If you have multiple versions of Unreal installed then **make sure 4.24 is set to `current`** by clicking down arrow next to the Launch button for the version.
 
    **Note**: AirSim also works with UE &gt;= 4.22, however, we recommend you update to 4.24.
 
@@ -61,9 +61,7 @@ git clone https://github.com/Microsoft/AirSim.git
 * Move to the installed AirSim directory by `cd AirSim`.
 * Run `build.cmd` from the command line. This will create ready to use plugin bits in the `Unreal\Plugins` folder that can be dropped into any Unreal project.
 
-
-
-  > **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
+> **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
 
 ![build1](../../.gitbook/assets/build1.jpg)
 
@@ -77,7 +75,7 @@ Also, see [setting up Unreal Environment](https://microsoft.github.io/AirSim/unr
 
 ## Troubleshooting
 
-###  Building Error message of Error C2220
+### Building Error message of Error C2220
 
 The initial setting for VS2019 gives the warning as the compile error. This error has to do with some sources have some characters encoded which shows warning by the compiler.
 
