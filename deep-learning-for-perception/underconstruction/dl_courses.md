@@ -26,5 +26,8 @@
 ## Resources
 
 * \[What is End to End Learning\]\([https://towardsdatascience.com/e2e-the-every-purpose-ml-method-5d4f20dafee4\#:~:text=End%2Dto%2Dend \(E2E,resent in traditional pipeline designs](https://towardsdatascience.com/e2e-the-every-purpose-ml-method-5d4f20dafee4#:~:text=End%2Dto%2Dend%20%28E2E,resent%20in%20traditional%20pipeline%20designs).\) \)
+
+[https://towardsdatascience.com/e2e-the-every-purpose-ml-method-5d4f20dafee4\#:~:text=End%2Dto%2Dend \(E2E,resent in traditional pipeline designs](https://towardsdatascience.com/e2e-the-every-purpose-ml-method-5d4f20dafee4#:~:text=End%2Dto%2Dend%20%28E2E,resent%20in%20traditional%20pipeline%20designs).\)
+
 * [Visualization of Deep Learning](https://microscope.openai.com/models)
 

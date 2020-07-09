@@ -48,7 +48,6 @@
 
 * [Jupyter Notebook](program-ide-for-deep-learning/underconstruction/README.md)
   * [Install](program-ide-for-deep-learning/underconstruction/underconstruction.md)
-  * [Setup](program-ide-for-deep-learning/underconstruction/underconstruction-1.md)
   * [How to use](program-ide-for-deep-learning/underconstruction/underconstruction-2.md)
 * [Visual Studio Code](program-ide-for-deep-learning/underconstruction-1/README.md)
   * [Install](program-ide-for-deep-learning/underconstruction-1/underconstruction.md)
@@ -59,7 +58,7 @@
   * [Setup](program-ide-for-deep-learning/underconstruction-2/underconstruction-1.md)
   * [How to use](program-ide-for-deep-learning/underconstruction-2/underconstruction-2.md)
 
-## Instructions: Tools for Deep Learning
+## Tools for Deep Learning <a id="instructions-tools-for-deep-learning"></a>
 
 * [Git\_Github](instructions-tools-for-deep-learning/underconstruction/README.md)
   * [Install](instructions-tools-for-deep-learning/underconstruction/underconstruction.md)
