@@ -23,7 +23,13 @@
   * [Tutorial](machine-learning/underconstruction/ml_resources-1.md)
 
 ## Deep Learning for Perception
+* [Deep Learning](deepLearning/docs/DL_intro.md)
+  * [Recommended Courses](deepLearning/docs/DL_courses.md)
+  * [Resources](deepLearning/docs/DL_resources.md)
+  * [Tutorial](deepLearning/docs/DL_tutorial.md)
 
+
+## Deep Learning for Perception
 * [Deep Learning](deep-learning-for-perception/underconstruction/README.md)
   * [Recommended Courses](deep-learning-for-perception/underconstruction/dl_courses.md)
   * [Resources](deep-learning-for-perception/underconstruction/dl_resources.md)
