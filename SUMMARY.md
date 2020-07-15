@@ -23,17 +23,11 @@
   * [Tutorial](machine-learning/underconstruction/ml_resources-1.md)
 
 ## Deep Learning for Perception
-* [Deep Learning](deepLearning/docs/DL_intro.md)
-  * [Recommended Courses](deepLearning/docs/DL_courses.md)
-  * [Resources](deepLearning/docs/DL_resources.md)
-  * [Tutorial](deepLearning/docs/DL_tutorial.md)
 
-
-## Deep Learning for Perception
-* [Deep Learning](deep-learning-for-perception/underconstruction/README.md)
-  * [Recommended Courses](deep-learning-for-perception/underconstruction/dl_courses.md)
-  * [Resources](deep-learning-for-perception/underconstruction/dl_resources.md)
-  * [Tutorial](deep-learning-for-perception/underconstruction/dl_resources-1.md)
+* [Deep Learning](deep-learning-for-perception/dl_intro/README.md)
+  * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
+  * [Resources](deep-learning-for-perception/dl_intro/resources.md)
+  * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
 
 ## Deep Learning Language
 
@@ -49,6 +43,9 @@
   * [Install](deep-learning-language/ec_install-2/install_tf.md)
   * [Cheat Sheet](deep-learning-language/ec_install-2/install_tf-1.md)
   * [Tutorial](deep-learning-language/ec_install-2/install_tf-2.md)
+* [Python](deep-learning-language/python/README.md)
+  * [Install](deep-learning-language/python/install.md)
+  * [Cheat Sheet](deep-learning-language/python/cheat-sheet.md)
 
 ## Program IDE for Deep Learning
 
@@ -87,6 +84,8 @@
 
 ---
 
+* [OpenCV](opencv/README.md)
+  * [MATLAB-OpenCV](opencv/matlab-opencv.md)
 * [Github](https://github.com/ykkimhgu)
 * [Untitled](untitled.md)
 
