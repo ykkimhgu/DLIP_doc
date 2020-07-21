@@ -19,6 +19,7 @@
 1. [Pyimagesearch.com tutorial for facial landmark detection](https://www.pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/)
 2. [Towardscience Drowsiness detection with machine learning](https://towardsdatascience.com/drowsiness-detection-with-machine-learning-765a16ca208a)
 3. [UTA real-life drowsiness dataset](https://sites.google.com/view/utarldd/home)
+4. [mlxtend extract face landmarks function](http://rasbt.github.io/mlxtend/user_guide/image/extract_face_landmarks/)
 
 
 
