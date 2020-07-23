@@ -38,7 +38,7 @@
   * [Cheat Sheet](deep-learning-language/ec_install/install_tf-1.md)
   * [Tutorial](deep-learning-language/ec_install/install_tf-2.md)
 * [Keras](deep-learning-language/ec_install-1/README.md)
-  * [Cheat Sheet](deep-learning-language/ec_install-1/install_tf-1.md)
+  * [Cheat Sheet](deep-learning-language/ec_install-1/cheatsheet-keras.md)
   * [Tutorial Keras](deep-learning-language/ec_install-1/tutorial-keras.md)
 * [PyTorch](deep-learning-language/ec_install-2/README.md)
   * [Install](deep-learning-language/ec_install-2/install_tf.md)

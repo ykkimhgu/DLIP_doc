@@ -31,5 +31,17 @@ Follow the tutorials in the following orders
 2. Use LeNet to train and recognize vehicles. Use Dataset of 
 3. Create your own convnet network for MNIST dataset. Compare the performance with tutorial output
 
+## Popular network architecture in Keras
+
+### Inception
+
+### ResNet
+
+### VGG
+
+### Squeeze Net
+
+### YOLOv3
+
 
 
