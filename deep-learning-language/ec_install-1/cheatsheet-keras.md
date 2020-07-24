@@ -197,22 +197,22 @@ model = load_model('model.h5')
 #### Model \(json\) and weight separately
 
 ```text
-# serialize model to JSON
 from keras.models import model_from_json
+
+# SAVE model and weight
+# serialize model to JSON
 model_json = model.to_json()
-with open("model.json", "w") as json_file:
-    json_file.write(model_json)
+with open("model_xception_catdog.json", "w") as json_file:
+    json_file.write(model_json)    
 # serialize weights to HDF5
-model.save_weights("model.h5")
+model.save_weights("weight_xception_catdog.h5")
+print("Saved model to disk")
 
  
-# load json and create model
-json_file = open('model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-loaded_model = model_from_json(loaded_model_json)
-# load weights into new model
-loaded_model.load_weights("model.h5")
+# LOAD model and weight
+with open('model_xception_catdog.json','r') as f:    
+    loaded_model = tf.keras.models.model_from_json(f.read())
+loaded_model.load_weights("weight_xception_catdog.h5")
 ```
 
 ### Run inference 
