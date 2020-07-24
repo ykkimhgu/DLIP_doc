@@ -24,6 +24,84 @@ import numpy as np
 print(np.__version__)
 ```
 
+### Load and Plot Images
+
+#### Using OpenCV  \(color mode is  B-G-R\)
+
+```text
+import cv2
+
+im = cv2.imread('data/src/lena.jpg')
+
+print(type(im))
+print(im.shape)
+print(im.dtype)
+cv2.imshow(im)
+```
+
+#### Using Matplotlib
+
+```text
+# load and display an image with Matplotlib
+from matplotlib import image
+from matplotlib import pyplot
+
+# load image as pixel array
+image = image.imread('kolala.jpeg')
+
+# summarize shape of the pixel array
+print(image.dtype)
+print(image.shape)
+# display the array of pixels as an image
+pyplot.imshow(image)
+pyplot.show()
+```
+
+#### Using Keras PIL image
+
+```text
+import matplotlib.pyplot as plt
+
+#Load and Plot image in Keras - PIL image
+img = keras.preprocessing.image.load_img(
+    data_path+"/Cat/6779.jpg", target_size=image_size, grayscale=False
+)
+print(type(img))
+print(img.format)
+print(img.mode)
+print(img.size)
+
+# show the image
+img.show()
+```
+
+#### Convert PIL to Numpy,  OpenCV to Numpy
+
+```text
+#Convert PIL image into Numpy Array  
+img_array = keras.preprocessing.image.img_to_array(img)
+print(img_array.shape)  # (32=batch,180,180, channel=3)
+print(img_array.dtype)  # float32 
+plt.imshow(img_array.astype("uint8"))
+
+#Convert OpenCV MAT image into Numpy Array  
+```
+
+#### Subplot with matplotlib 
+
+```text
+import matplotlib.pyplot as plt
+
+#Creates a Dataset with batch=1
+for images, labels in train_ds.take(1):   # taking one batch
+    plt.figure(figsize=(10, 10))
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        plt.imshow(images[i].numpy().astype("uint8"))
+        plt.title(int(labels[i]))
+        plt.axis("off")
+```
+
 ### Split into train validate database
 
 ```text
