@@ -1,5 +1,9 @@
 # Cheat Sheet
 
+&gt; ! create an extensive notebook for this cheat sheet
+
+
+
 ## Keras API cheat sheet
 
 
