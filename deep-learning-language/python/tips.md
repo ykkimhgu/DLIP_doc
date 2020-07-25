@@ -1,8 +1,54 @@
 # Tips
 
+### List vs tuple vs dictionary in Python
+
+**List**
+
+* A list is a mutable, ordered sequence of items.
+*  List variables are declared by using brackets `[ ]` 
+* The list elements can be anything and each list element can have a completely different type. This is not allowed in arrays. Arrays are objects with definite type and size
+
+```python
+A = [ ] # This is a blank list variable
+B = [2, 4, 'john'] # lists can contain different variable types.
+```
+
+**Tuple**
+
+* Similar to list, but  _immutable_ like strings i.e. you cannot modify tuples
+* Tuples are heterogeneous data structures \(i.e., their entries have different meanings\), while lists are homogeneous sequences.
+* can be used as the _key_ in Dictionary
+* tuple is declared in parentheses **\( \)**
+
+```python
+tupleA = (1, 2, 3, 4)
+person=(‘ABC’,’admin’,’12345')
+
+# This gives error:  'tuple' cannot be assigned
+tupleA[2] = 5
+```
+
+**Dictionary**
+
+*  A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ \(name\) with _values_ \(details\). 
+* the key must be unique and  immutable  \(tuples, not list\)
+
+```python
+# Python 3
+my_dict = {1: 'one', 2: 'two', 3: 'three'}
+my_dict.keys() 
+# dict_keys([1, 2, 3])
+my_dict.values()
+# dict_values(['one', 'two', 'three'])
+```
+
+### 
+
 ### Documenting your code in Python \(docstring\)
 
 An official specification on how you should format your docstrings called [PEP 0257](https://www.python.org/dev/peps/pep-0257/), based on reStructuredText \(reST\)
+
+> For Google style guide for C++, [read here](https://google.github.io/styleguide/cppguide.html)
 
 #### Google format
 
