@@ -47,6 +47,7 @@
 * [Python](deep-learning-language/python/README.md)
   * [Install](deep-learning-language/python/install.md)
   * [Cheat Sheet](deep-learning-language/python/cheat-sheet.md)
+  * [Tips](deep-learning-language/python/tips.md)
 
 ## Program IDE for Deep Learning
 
