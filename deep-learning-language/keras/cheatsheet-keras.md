@@ -345,10 +345,15 @@ x = layers.experimental.preprocessing.CenterCrop(height=180, width=180)(x)
 
 ### Build Model
 
-We'll build a small CNN for a simple example
+* **Example 1: A few layer CNN for a simple exampl**e
 
 ```text
-model_simple=keras.Sequential(
+input_shape=image_size + (3,)
+num_classes=2;
+
+print(input_shape)
+
+model=keras.Sequential(
     [
      keras.Input(shape=input_shape),
      layers.Conv2D(32,kernel_size=(3,3), activation="relu"), #(filerNumber=32)
@@ -359,10 +364,83 @@ model_simple=keras.Sequential(
      layers.Dense(num_classes,activation="softmax"),
     ]
 )
-model_simple.summary()
+model.summary()
 ```
 
-#### &gt;  For other archiectures, go to Tutorial
+#### \* Example 2: Small version of Xception
+
+```text
+#  Small version of the Xception network. 
+
+data_augmentation = keras.Sequential(
+    [
+        layers.experimental.preprocessing.RandomFlip("horizontal"),
+        layers.experimental.preprocessing.RandomRotation(0.1),
+    ]
+)
+
+def make_model(input_shape, num_classes):
+    inputs = keras.Input(shape=input_shape)
+    
+    
+    # PREPROCESSING for Model Input
+    # Image augmentation block with flip, rotation
+    x = data_augmentation(inputs)
+    # Entry block
+    x = layers.experimental.preprocessing.Rescaling(1.0 / 255)(x)
+    # Center-crop images to 180x180
+    #x = layers.experimental.preprocessing.CenterCrop(height=180, width=180)(x)
+
+    # Building Model
+    x = layers.Conv2D(32, 3, strides=2, padding="same")(x)  # filter=32, kernelSize=3x3
+    x = layers.BatchNormalization()(x)
+    x = layers.Activation("relu")(x)
+
+    x = layers.Conv2D(64, 3, padding="same")(x)
+    x = layers.BatchNormalization()(x)
+    x = layers.Activation("relu")(x)
+
+    previous_block_activation = x  # Set aside residual
+
+    for size in [128, 256, 512, 728]:
+        x = layers.Activation("relu")(x)
+        x = layers.SeparableConv2D(size, 3, padding="same")(x)
+        x = layers.BatchNormalization()(x)
+
+        x = layers.Activation("relu")(x)
+        x = layers.SeparableConv2D(size, 3, padding="same")(x)
+        x = layers.BatchNormalization()(x)
+
+        x = layers.MaxPooling2D(3, strides=2, padding="same")(x)
+
+        # Project residual
+        residual = layers.Conv2D(size, 1, strides=2, padding="same")(
+            previous_block_activation
+        )
+        x = layers.add([x, residual])  # Add back residual
+        previous_block_activation = x  # Set aside next residual
+
+    x = layers.SeparableConv2D(1024, 3, padding="same")(x)
+    x = layers.BatchNormalization()(x)
+    x = layers.Activation("relu")(x)
+
+    x = layers.GlobalAveragePooling2D()(x)
+    if num_classes == 2:
+        activation = "sigmoid"
+        units = 1
+    else:
+        activation = "softmax"
+        units = num_classes
+
+    x = layers.Dropout(0.5)(x)
+    outputs = layers.Dense(units, activation=activation)(x)
+    return keras.Model(inputs, outputs)
+
+
+model = make_model(input_shape=image_size + (3,), num_classes=2)
+```
+
+####  For other archiectures, go to Tutorial
 
 
 
@@ -380,24 +458,30 @@ model.summary()
 ### Train the model
 
 ```text
-epochs = 50
+# Example 1
+epochs = 2
 
-callbacks = [
-    keras.callbacks.ModelCheckpoint("save_at_{epoch}.h5"),
+my_callbacks = [
+    tf.keras.callbacks.EarlyStopping(patience=2),
+    tf.keras.callbacks.ModelCheckpoint(filepath='model.{epoch:02d}-{val_loss:.2f}.h5'),
+    tf.keras.callbacks.TensorBoard(log_dir='./logs'),
 ]
+
 model.compile(
     optimizer=keras.optimizers.Adam(1e-3),
     loss="binary_crossentropy",
     metrics=["accuracy"],
 )
+
 model.fit(
-    train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds,
+    train_ds, epochs=epochs, callbacks=my_callbacks, validation_data=val_ds,
 )
+
 ```
 
 ### Save and load model in Keras <a id="How-to-save-and-load-Model-in-Keras"></a>
 
-#### Option 1\) Model and Weight in one file
+#### Option 1\) Model and Weight in one file \(_gives error..._ \)
 
 ```text
 # save model and architecture to single file
@@ -435,14 +519,29 @@ loaded_model.load_weights("weight_xception_catdog.h5")
 #### Test on some data
 
 ```text
+# Example 1
+display(data_path+"/Cat/6779.jpg")
+
+#Load and Plot image in Keras - PIL image
 img = keras.preprocessing.image.load_img(
-    "PetImages/Cat/6779.jpg", target_size=image_size
+    data_path+"Cat/6779.jpg", target_size=image_size, grayscale=False
 )
+display(img.size)
+img.show()
+
+#Convert PIL image into Numpy Array  
 img_array = keras.preprocessing.image.img_to_array(img)
+plt.imshow(img_array.astype("uint8"))
+
+# Reshape NumpyArray to  Model input size (batchx180x180x3)
 img_array = tf.expand_dims(img_array, 0)  # Create batch axis
+display(img_array.shape)
 
 predictions = model.predict(img_array)
-score = predictions[0]
+display(predictions.shape)
+score = predictions[0][0]
+
+#print format: e.g.  print("pi=%s" % "3.14159")
 print(
     "This image is %.2f percent cat and %.2f percent dog."
     % (100 * (1 - score), 100 * score)
@@ -450,4 +549,12 @@ print(
 ```
 
 #### Test on all validate database
+
+```text
+# Evaluate the whole validation dataset
+score=model.evaluate(val_ds, verbose=0)
+print(score.shape)
+print("Test loss:", score[0])
+print("Test accuracy: ", score[1])
+```
 
