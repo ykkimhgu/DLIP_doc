@@ -362,7 +362,9 @@ model_simple=keras.Sequential(
 model_simple.summary()
 ```
 
-#### 
+#### &gt;  For other archiectures, go to Tutorial
+
+
 
 ### Visualize model
 
@@ -395,7 +397,7 @@ model.fit(
 
 ### Save and load model in Keras <a id="How-to-save-and-load-Model-in-Keras"></a>
 
-#### Model and Weight in one file
+#### Option 1\) Model and Weight in one file
 
 ```text
 # save model and architecture to single file
@@ -407,7 +409,7 @@ model = load_model('model.h5')
 
 ```
 
-#### Model \(json\) and weight separately
+#### Option 2\) Model \(json\) and weight separately
 
 ```text
 from keras.models import model_from_json
