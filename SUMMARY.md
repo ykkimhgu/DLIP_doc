@@ -28,6 +28,7 @@
   * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
   * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
+* [Deep Learning Papers](deep-learning-for-perception/deep-learning-papers.md)
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
   * [Face Eye Lip Detection](deep-learning-for-perception/deep-learning-case-study/face-eye-lip-detection.md)
 
