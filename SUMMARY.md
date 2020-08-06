@@ -32,7 +32,7 @@
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
   * [Face Eye Lip Detection](deep-learning-for-perception/deep-learning-case-study/face-eye-lip-detection.md)
 
-## Deep Learning Language
+## Deep Learning Framework <a id="deep-learning-language"></a>
 
 * [TensorFlow](deep-learning-language/ec_install/README.md)
   * [Install](deep-learning-language/ec_install/install_tf.md)

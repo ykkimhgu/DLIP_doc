@@ -10,7 +10,7 @@
 
 * \*\*\*\*[**The state of 3D object detection: A review of the state of the art based upon the KITTI leaderboard**](https://towardsdatascience.com/the-state-of-3d-object-detection-f65a385f67a8)\*\*\*\*
 
-![Image fDetector \(LIDAR only\) latency vs vehicle AP](https://miro.medium.com/max/951/1*YtBWthQWmq5bqOytEl51NQ.png)
+![Detector \(LIDAR only\) latency vs vehicle AP](https://miro.medium.com/max/951/1*YtBWthQWmq5bqOytEl51NQ.png)
 
 
 
@@ -18,9 +18,9 @@
 
 
 
-![Image for pDetector \(LIDAR+RGB fusion labeled\) latency vs vehicle APost](https://miro.medium.com/max/936/1*11IfMVEO1yFrI5sz5NAH6A.png)
+![Detector \(LIDAR+RGB fusion labeled\) latency vs vehicle APost](https://miro.medium.com/max/936/1*11IfMVEO1yFrI5sz5NAH6A.png)
 
-![Image for Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
+![Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
 
 ### Time Series Classification 
 
