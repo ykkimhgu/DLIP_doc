@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Useful Resources](useful-resources.md)
 
 ## Airsim
 
