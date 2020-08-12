@@ -22,17 +22,17 @@
 
 ## Deep Learning Framework
 
-* [TensorFlow](deep-learning-framework/ec_install/README.md)
-  * [Install](deep-learning-framework/ec_install/install_tf.md)
-  * [Cheat Sheet](deep-learning-framework/ec_install/install_tf-1.md)
-  * [Tutorial](deep-learning-framework/ec_install/install_tf-2.md)
+* [TensorFlow](deep-learning-framework/tensorflow/README.md)
+  * [Install](deep-learning-framework/tensorflow/install_tf.md)
+  * [Cheat Sheet](deep-learning-framework/tensorflow/install_tf-1.md)
+  * [Tutorial](deep-learning-framework/tensorflow/install_tf-2.md)
 * [Keras](deep-learning-framework/keras/README.md)
   * [Cheat Sheet](deep-learning-framework/keras/cheatsheet-keras.md)
   * [Tutorial Keras](deep-learning-framework/keras/tutorial-keras.md)
-* [PyTorch](deep-learning-framework/ec_install-2/README.md)
-  * [Install](deep-learning-framework/ec_install-2/install_tf.md)
-  * [Cheat Sheet](deep-learning-framework/ec_install-2/install_tf-1.md)
-  * [Tutorial](deep-learning-framework/ec_install-2/install_tf-2.md)
+* [PyTorch](deep-learning-framework/pytorch/README.md)
+  * [Install](deep-learning-framework/pytorch/install_py.md)
+  * [Cheat Sheet](deep-learning-framework/pytorch/cheatsheet-py.md)
+  * [Tutorial](deep-learning-framework/pytorch/tutorial-py.md)
 
 ## Programming DL
 
