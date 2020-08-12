@@ -1,2 +1,2 @@
-# ML Course
+# ML Courses
 

@@ -1,0 +1,5 @@
+# T\#3: Opencv CPP
+
+You can drive the car using keyboard, gamepad or [steering wheel](https://github.com/ykkimhgu/gitbook_docs/tree/89bf64c3b2679b45893eec7c530581cd7441d2cf/airsim/docs/tutorial/steering_wheel_installation.md). To fly drone manually, you will need either XBox controller or a remote control \(feel free to [contribute](https://github.com/ykkimhgu/gitbook_docs/tree/89bf64c3b2679b45893eec7c530581cd7441d2cf/airsim/docs/tutorial/CONTRIBUTING.md) keyboard support\). Please see [remote control setup](https://github.com/ykkimhgu/gitbook_docs/tree/89bf64c3b2679b45893eec7c530581cd7441d2cf/airsim/docs/tutorial/remote_control.md) for more details.   
+ You can use [APIs](https://github.com/ykkimhgu/gitbook_docs/tree/89bf64c3b2679b45893eec7c530581cd7441d2cf/airsim/docs/tutorial/apis.md) for programmatic control or use so-called [Computer Vision mode](https://github.com/ykkimhgu/gitbook_docs/tree/89bf64c3b2679b45893eec7c530581cd7441d2cf/airsim/docs/tutorial/image_apis.md) to move around in environment using the keyboard.
+

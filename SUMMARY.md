@@ -1,23 +1,10 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Useful Resources](useful-resources.md)
-
-## Airsim
-
-* [Setup](airsim/setup/README.md)
-  * [Install](airsim/setup/build-on-windows.md)
-* [Tutorial](airsim/tutorial/README.md)
-  * [T\#1](airsim/tutorial/tutorial_use_precompiled.md)
-  * [T\#2](airsim/tutorial/tutorial_block.md)
-  * [T\#3: Opencv CPP](airsim/tutorial/tutorial_opencv_cpp.md)
-  * [T\#4: Opencv Py](airsim/tutorial/tutorial_opencv_py.md)
-  * [Untitled](airsim/tutorial/untitled.md)
-  * [T\#5: End2End Driving](airsim/tutorial/tutorial_end_to_end_driving.md)
 
 ## Machine Learning
 
-* [ML Course](machine-learning/underconstruction/README.md)
+* [ML Courses](machine-learning/underconstruction/README.md)
   * [Recommended Courses](machine-learning/underconstruction/ml_courses.md)
   * [Resources](machine-learning/underconstruction/ml_resources.md)
   * [Tutorial](machine-learning/underconstruction/ml_resources-1.md)
@@ -55,7 +42,7 @@
   * [Tips](programming-dl/python/tips.md)
 * [OpenCV](programming-dl/opencv/README.md)
   * [MATLAB-OpenCV](programming-dl/opencv/matlab-opencv.md)
-* [DL Library Tools](programming-dl/dl-library-tools/README.md)
+* [DL Library](programming-dl/dl-library-tools/README.md)
   * [NumPy](programming-dl/dl-library-tools/underconstruction-4/README.md)
     * [Install](programming-dl/dl-library-tools/underconstruction-4/underconstruction.md)
     * [How to use](programming-dl/dl-library-tools/underconstruction-4/underconstruction-1.md)
@@ -89,6 +76,20 @@
 
 ## Simulator
 
-* [Untitled](simulator/untitled.md)
+* [CARLA](simulator/carla.md)
+* [Airsim](simulator/untitled/README.md)
+  * [Setup](simulator/untitled/setup/README.md)
+    * [Install](simulator/untitled/setup/build-on-windows.md)
+  * [Tutorial](simulator/untitled/tutorial/README.md)
+    * [T\#1](simulator/untitled/tutorial/tutorial_use_precompiled.md)
+    * [T\#2](simulator/untitled/tutorial/tutorial_block.md)
+    * [T\#3: Opencv CPP](simulator/untitled/tutorial/tutorial_opencv_cpp.md)
+    * [T\#4: Opencv Py](simulator/untitled/tutorial/tutorial_opencv_py.md)
+    * [Untitled](simulator/untitled/tutorial/untitled.md)
+    * [T\#5: End2End Driving](simulator/untitled/tutorial/tutorial_end_to_end_driving.md)
+
+## Resources
+
+* [Useful Resources](resources/useful-resources.md)
 * [Github](https://github.com/ykkimhgu)
 
