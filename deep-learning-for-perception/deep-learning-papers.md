@@ -22,6 +22,14 @@
 
 ![Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
 
+### 3D Object Orientation Detection
+
+{% embed url="https://towardsdatascience.com/anchors-and-multi-bin-loss-for-multi-modal-target-regression-647ea1974617" %}
+
+{% embed url="https://towardsdatascience.com/orientation-estimation-in-monocular-3d-object-detection-f850ace91411" %}
+
+
+
 ### Time Series Classification 
 
 * [Deep Learning for Time series classification: a review](https://arxiv.org/pdf/1809.04356.pdf)
