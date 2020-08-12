@@ -4,10 +4,10 @@
 
 ## Machine Learning
 
-* [ML Courses](machine-learning/underconstruction/README.md)
-  * [Recommended Courses](machine-learning/underconstruction/ml_courses.md)
-  * [Resources](machine-learning/underconstruction/ml_resources.md)
-  * [Tutorial](machine-learning/underconstruction/ml_resources-1.md)
+* [ML Courses](machine-learning/ml-intro/README.md)
+  * [Recommended Courses](machine-learning/ml-intro/ml_courses.md)
+  * [Resources](machine-learning/ml-intro/ml_resources.md)
+  * [Tutorial](machine-learning/ml-intro/ml_tutorial.md)
 
 ## Deep Learning for Perception
 
@@ -20,19 +20,19 @@
   * [Anomaly Detection in Time Series](deep-learning-for-perception/deep-learning-case-study/anomaly-detection-in-time-series.md)
   * [Face Eye Lip Detection](deep-learning-for-perception/deep-learning-case-study/face-eye-lip-detection.md)
 
-## Deep Learning Framework <a id="deep-learning-language"></a>
+## Deep Learning Framework
 
-* [TensorFlow](deep-learning-language/ec_install/README.md)
-  * [Install](deep-learning-language/ec_install/install_tf.md)
-  * [Cheat Sheet](deep-learning-language/ec_install/install_tf-1.md)
-  * [Tutorial](deep-learning-language/ec_install/install_tf-2.md)
-* [Keras](deep-learning-language/keras/README.md)
-  * [Cheat Sheet](deep-learning-language/keras/cheatsheet-keras.md)
-  * [Tutorial Keras](deep-learning-language/keras/tutorial-keras.md)
-* [PyTorch](deep-learning-language/ec_install-2/README.md)
-  * [Install](deep-learning-language/ec_install-2/install_tf.md)
-  * [Cheat Sheet](deep-learning-language/ec_install-2/install_tf-1.md)
-  * [Tutorial](deep-learning-language/ec_install-2/install_tf-2.md)
+* [TensorFlow](deep-learning-framework/ec_install/README.md)
+  * [Install](deep-learning-framework/ec_install/install_tf.md)
+  * [Cheat Sheet](deep-learning-framework/ec_install/install_tf-1.md)
+  * [Tutorial](deep-learning-framework/ec_install/install_tf-2.md)
+* [Keras](deep-learning-framework/keras/README.md)
+  * [Cheat Sheet](deep-learning-framework/keras/cheatsheet-keras.md)
+  * [Tutorial Keras](deep-learning-framework/keras/tutorial-keras.md)
+* [PyTorch](deep-learning-framework/ec_install-2/README.md)
+  * [Install](deep-learning-framework/ec_install-2/install_tf.md)
+  * [Cheat Sheet](deep-learning-framework/ec_install-2/install_tf-1.md)
+  * [Tutorial](deep-learning-framework/ec_install-2/install_tf-2.md)
 
 ## Programming DL
 
@@ -77,16 +77,16 @@
 ## Simulator
 
 * [CARLA](simulator/carla.md)
-* [Airsim](simulator/untitled/README.md)
-  * [Setup](simulator/untitled/setup/README.md)
-    * [Install](simulator/untitled/setup/build-on-windows.md)
-  * [Tutorial](simulator/untitled/tutorial/README.md)
-    * [T\#1](simulator/untitled/tutorial/tutorial_use_precompiled.md)
-    * [T\#2](simulator/untitled/tutorial/tutorial_block.md)
-    * [T\#3: Opencv CPP](simulator/untitled/tutorial/tutorial_opencv_cpp.md)
-    * [T\#4: Opencv Py](simulator/untitled/tutorial/tutorial_opencv_py.md)
-    * [Untitled](simulator/untitled/tutorial/untitled.md)
-    * [T\#5: End2End Driving](simulator/untitled/tutorial/tutorial_end_to_end_driving.md)
+* [Airsim](simulator/airsim/README.md)
+  * [Setup](simulator/airsim/setup/README.md)
+    * [Install](simulator/airsim/setup/build-on-windows.md)
+  * [Tutorial](simulator/airsim/tutorial/README.md)
+    * [T\#1](simulator/airsim/tutorial/tutorial_use_precompiled.md)
+    * [T\#2](simulator/airsim/tutorial/tutorial_block.md)
+    * [T\#3: Opencv CPP](simulator/airsim/tutorial/tutorial_opencv_cpp.md)
+    * [T\#4: Opencv Py](simulator/airsim/tutorial/tutorial_opencv_py.md)
+    * [Untitled](simulator/airsim/tutorial/untitled.md)
+    * [T\#5: End2End Driving](simulator/airsim/tutorial/tutorial_end_to_end_driving.md)
 
 ## Resources
 
