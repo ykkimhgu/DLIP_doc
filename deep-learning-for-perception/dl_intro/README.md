@@ -1,4 +1,4 @@
-# Deep Learning Courses
+# DL Courses
 
 ## Deep Learning for Vision Systems
 
