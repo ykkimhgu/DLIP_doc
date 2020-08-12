@@ -32,7 +32,9 @@ description: A short tutorial on how to install Airsim on Window 10.
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2Fb98bb2fcd3c88380c2b3f9da53a85db5f4b4b10f.jpg?alt=media)
 
-​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F0aa9b007473f7411472a76b0360d56c756a9cf38.jpg?alt=media)‌
+​‌
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F0aa9b007473f7411472a76b0360d56c756a9cf38.jpg?alt=media)
 
 ### Install Git for Windows <a id="install-git-for-windows"></a>
 
@@ -41,7 +43,9 @@ description: A short tutorial on how to install Airsim on Window 10.
 * ​[Download](https://git-scm.com/) Git for Windows \(lastes source, release 2.27.0\)
 * Use default settings to install
 
-​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F31be58c30532533eefac7da6ca8e31d795d3b847.jpg?alt=media)‌
+​‌
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F31be58c30532533eefac7da6ca8e31d795d3b847.jpg?alt=media)
 
 ### Install Visual Studio <a id="install-visual-studio"></a>
 
@@ -53,7 +57,11 @@ description: A short tutorial on how to install Airsim on Window 10.
 
 * **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** \(should be selected by default\) while installing VS 2019.
 
-​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2Fca9578365549c3576af3f7f46d325019eb978d5d.jpg?alt=media)​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F2f96a5b58c61231e6399e6b95a7e612c7d99e4bc.jpg?alt=media)‌
+​​‌
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F2f96a5b58c61231e6399e6b95a7e612c7d99e4bc.jpg?alt=media)
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2Fca9578365549c3576af3f7f46d325019eb978d5d.jpg?alt=media)
 
 ### Download AirSim <a id="download-airsim"></a>
 
@@ -67,7 +75,9 @@ description: A short tutorial on how to install Airsim on Window 10.
 git clone https://github.com/Microsoft/AirSim.git
 ```
 
-​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F9af9c754644d72b14a9346fcb0c1f3a2491f02df.jpg?alt=media)‌
+​‌
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F9af9c754644d72b14a9346fcb0c1f3a2491f02df.jpg?alt=media)
 
 ### Build AirSim <a id="build-airsim"></a>
 
@@ -79,7 +89,9 @@ git clone https://github.com/Microsoft/AirSim.git
 
 > **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
 
-​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F03cfbd6fc4a97e718c471a515e6c9549ae524619.jpg?alt=media)‌
+​‌
+
+![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F03cfbd6fc4a97e718c471a515e6c9549ae524619.jpg?alt=media)
 
 ### Build Unreal Project <a id="build-unreal-project"></a>
 
