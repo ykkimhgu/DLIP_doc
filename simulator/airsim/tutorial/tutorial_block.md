@@ -10,7 +10,7 @@ Here are quick steps to get Blocks environment up and running:
 
 ## Windows
 
-1. Make sure you have [installed Unreal and built AirSim](../setup/build-on-windows.md).
+1. Make sure you have [installed Unreal and built AirSim]().
 2. Make sure you have `uproject` files are associated with Unreal engine
    * After installation of Unreal, Restart computer
    * Open `Epic Game Launcher` -&gt; `Unreal Engine` -&gt; `Unreal Engine 4.24.x`

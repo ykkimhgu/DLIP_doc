@@ -78,8 +78,7 @@
 
 * [CARLA](simulator/carla.md)
 * [Airsim](simulator/airsim/README.md)
-  * [Setup](simulator/airsim/setup/README.md)
-    * [Install](simulator/airsim/setup/build-on-windows.md)
+  * [Setup](simulator/airsim/setup.md)
   * [Tutorial](simulator/airsim/tutorial/README.md)
     * [T\#1](simulator/airsim/tutorial/tutorial_use_precompiled.md)
     * [T\#2](simulator/airsim/tutorial/tutorial_block.md)

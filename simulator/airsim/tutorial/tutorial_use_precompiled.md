@@ -4,7 +4,7 @@
 
 For this tutorial, we will use precompiled Landscape binary. You can also download the binaries for the environment of your choice from the [latest release](https://github.com/Microsoft/AirSim/releases).
 
-* You should have completed the [set-up proces](../setup/build-on-windows.md)
+* You should have completed the [set-up proces]()
 * Go to AirSim [latest release](https://github.com/Microsoft/AirSim/releases) and download `City.zip.001` and `City.zip.002` ![download](../../../.gitbook/assets/tutorial_precompiled1.png)
 * Unzip these two files using **7-zip**
 * Double click `CityEnviron.exe` to run
