@@ -38,18 +38,12 @@ description: A short tutorial on how to install Airsim on Window 10.
 
 ### Install Git for Windows <a id="install-git-for-windows"></a>
 
-‌
-
 * ​[Download](https://git-scm.com/) Git for Windows \(lastes source, release 2.27.0\)
 * Use default settings to install
-
-​‌
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F31be58c30532533eefac7da6ca8e31d795d3b847.jpg?alt=media)
 
 ### Install Visual Studio <a id="install-visual-studio"></a>
-
-‌
 
 * Install Visual Studio 2019.
 
@@ -57,15 +51,11 @@ description: A short tutorial on how to install Airsim on Window 10.
 
 * **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** \(should be selected by default\) while installing VS 2019.
 
-​​‌
-
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F2f96a5b58c61231e6399e6b95a7e612c7d99e4bc.jpg?alt=media)
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2Fca9578365549c3576af3f7f46d325019eb978d5d.jpg?alt=media)
 
 ### Download AirSim <a id="download-airsim"></a>
-
-‌
 
 * Start `Git Bash` or `Git GUI`
 * Move to the target directory to install AirSim. Use `cd` command to change directory
@@ -75,13 +65,9 @@ description: A short tutorial on how to install Airsim on Window 10.
 git clone https://github.com/Microsoft/AirSim.git
 ```
 
-​‌
-
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F9af9c754644d72b14a9346fcb0c1f3a2491f02df.jpg?alt=media)
 
 ### Build AirSim <a id="build-airsim"></a>
-
-‌
 
 * Open `Command Prompt for VS2019`
 * Move to the installed AirSim directory by `cd AirSim`.
@@ -89,13 +75,9 @@ git clone https://github.com/Microsoft/AirSim.git
 
 > **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
 
-​‌
-
 ![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F03cfbd6fc4a97e718c471a515e6c9549ae524619.jpg?alt=media)
 
 ### Build Unreal Project <a id="build-unreal-project"></a>
-
-‌
 
 Finally, you will need an Unreal project that hosts the environment for your vehicles. AirSim comes with a built-in "Blocks Environment" which you can use, or you can create your own.‌
 
@@ -105,11 +87,7 @@ Also, see [setting up Unreal Environment](https://microsoft.github.io/AirSim/unr
 
 ## Troubleshooting <a id="troubleshooting"></a>
 
-‌
-
 ### Building Error message of Error C2220 <a id="building-error-message-of-error-c2220"></a>
-
-‌
 
 The initial setting for VS2019 gives the warning as the compile error. This error has to do with some sources have some characters encoded which shows warning by the compiler.‌
 
@@ -119,8 +97,6 @@ The initial setting for VS2019 gives the warning as the compile error. This erro
 ​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2F0372e208fbae13123284b0cd92ebffd107b31253.jpg?alt=media)​![](https://gblobscdn.gitbook.com/assets%2F-MAwtzMy_pbrChIExFtN%2Fsync%2Fc8810f140df0e6756949dd99370cf0c9a146d3c8.jpg?alt=media)‌
 
 ### Clashes of VS 2017 and VS2019. How to force Unreal to use Visual Studio 2019 <a id="clashes-of-vs-2017-and-vs-2019-how-to-force-unreal-to-use-visual-studio-2019"></a>
-
-‌
 
 If different versions of Visual Studio are installed. such as VS2017 and VS 2019, Unreal may be associated with VS2017. Building an AirSim project in VS2019 with Unreal associated with VS2017 can give build error.‌
 
