@@ -112,7 +112,11 @@ The learning curve with small training sets could be noisy. If the noise in the 
 
 ### Further Reading
 
+#### Working with small data sets
+
 {% embed url="https://towardsdatascience.com/breaking-the-curse-of-small-data-sets-in-machine-learning-part-2-894aa45277f4" %}
+
+{% embed url="https://towardsdatascience.com/how-to-use-deep-learning-even-with-small-data-e7f34b673987" %}
 
 
 
