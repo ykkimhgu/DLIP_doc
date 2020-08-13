@@ -14,6 +14,7 @@
 * [DL Courses](deep-learning-for-perception/dl_intro/README.md)
   * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
+  * [Technical Strategy](deep-learning-for-perception/dl_intro/technical-strategy.md)
   * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
 * [Deep Learning Papers](deep-learning-for-perception/deep-learning-papers.md)
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
