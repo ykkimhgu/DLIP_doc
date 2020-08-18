@@ -31,9 +31,10 @@
   * [Cheat Sheet](deep-learning-framework/keras/cheatsheet-keras.md)
   * [Tutorial Keras](deep-learning-framework/keras/tutorial-keras.md)
 * [PyTorch](deep-learning-framework/pytorch/README.md)
-  * [Install](deep-learning-framework/pytorch/install_py.md)
   * [Cheat Sheet](deep-learning-framework/pytorch/cheatsheet-py.md)
-  * [Tutorial](deep-learning-framework/pytorch/tutorial-py.md)
+  * [Tutorial](deep-learning-framework/pytorch/tutorial-torch/README.md)
+    * [Neural Networks](deep-learning-framework/pytorch/tutorial-torch/neural-networks.md)
+    * [autograd torch](deep-learning-framework/pytorch/tutorial-torch/autograd-torch.md)
 
 ## Programming DL
 
@@ -57,7 +58,6 @@
     * [Install](programming-dl/dl-library-tools/underconstruction-2/underconstruction.md)
     * [How to use](programming-dl/dl-library-tools/underconstruction-2/underconstruction-1.md)
   * [Anaconda](programming-dl/dl-library-tools/underconstruction-1/README.md)
-    * [Install](programming-dl/dl-library-tools/underconstruction-1/underconstruction.md)
     * [How to use](programming-dl/dl-library-tools/underconstruction-1/underconstruction-1.md)
   * [Git\_Github](programming-dl/dl-library-tools/underconstruction/README.md)
     * [Install](programming-dl/dl-library-tools/underconstruction/underconstruction.md)
