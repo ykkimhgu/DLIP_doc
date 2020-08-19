@@ -26,7 +26,14 @@ print(a)
 print(b)
 ```
 
-## Install tensorflow
+## Datasets
+
+There are several options for dataset
+
+* load data into a numpy array, then convert this array into a `torch.*Tensor`
+* For images, packages such as Pillow, OpenCV are useful
+* \(Recommend\) For vision, we have created a package called `torchvision`
+  * data loaders for common datasets such as Imagenet, CIFAR10, MNIST, etc.
 
 ## Install Keras
 

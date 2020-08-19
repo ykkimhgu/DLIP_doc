@@ -33,6 +33,7 @@
 * [PyTorch](deep-learning-framework/pytorch/README.md)
   * [Cheat Sheet](deep-learning-framework/pytorch/cheatsheet-py.md)
   * [Tutorial](deep-learning-framework/pytorch/tutorial-torch/README.md)
+    * [Train ConvNet using CIFAR10](deep-learning-framework/pytorch/tutorial-torch/train-convnet-using-cifar10.md)
     * [Neural Networks](deep-learning-framework/pytorch/tutorial-torch/neural-networks.md)
     * [autograd torch](deep-learning-framework/pytorch/tutorial-torch/autograd-torch.md)
 
