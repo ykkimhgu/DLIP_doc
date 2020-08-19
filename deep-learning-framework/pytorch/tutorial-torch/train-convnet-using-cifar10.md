@@ -1,5 +1,7 @@
 # Train ConvNet using CIFAR10
 
+[Source code \(Jupyter notebook\)](https://github.com/ykkimhgu/gitbook_docs/blob/master/deep-learning-framework/pytorch/neural_networks_tutorial_ykk.ipynb)
+
 ### Training an image classifier <a id="Training-an-image-classifier"></a>
 
 We will do the following steps in order:
@@ -9,7 +11,8 @@ We will do the following steps in order:
 3. Define a loss function
 4. Train the network on the training data
 5. Test the network on the test data
-6. Loading and normalizing CIFAR10 
+
+
 
 ### Data Loading
 
@@ -163,7 +166,29 @@ for epoch in range(2):  # loop over the dataset multiple times
 print('Finished Training')
 ```
 
-### Evaluation
+### Save model
+
+```python
+PATH = './cifar_net.pth'
+torch.save(net.state_dict(), PATH)
+
+# To use the saved model
+net = Net()
+net.load_state_dict(torch.load(PATH))
+```
+
+### Test the network
+
+#### Show some ground truth of test data
+
+```python
+dataiter = iter(testloader)
+images, labels = dataiter.next()
+
+# print images
+imshow(torchvision.utils.make_grid(images))
+print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
+```
 
 #### Overall accuracy
 
@@ -184,6 +209,8 @@ print('Accuracy of the network on the 10000 test images: %d %%' % (
 
 #### Evaluate each class
 
+> numpy.squeeze\(\) function is used when we want to remove single-dimensional entries from the shape of an array.
+
 ```python
 class_correct = list(0. for i in range(10))
 class_total = list(0. for i in range(10))
@@ -191,11 +218,11 @@ with torch.no_grad():
     for data in testloader:
         images, labels = data
         outputs = net(images)
-        _, predicted = torch.max(outputs, 1)
-        c = (predicted == labels).squeeze()
+        _, predicted = torch.max(outputs, 1)  # max(outputs, dim=1) returns (values, indices)
+        c = (predicted == labels).squeeze()   # remove dim=1
         for i in range(4):
             label = labels[i]
-            class_correct[label] += c[i].item()
+            class_correct[label] += c[i].item() #c[i] is a tensor either true or false
             class_total[label] += 1
 
 
@@ -203,4 +230,16 @@ for i in range(10):
     print('Accuracy of %5s : %2d %%' % (
         classes[i], 100 * class_correct[i] / class_total[i]))
 ```
+
+
+
+### Exercise
+
+* Try increasing the width of your network \(argument 2 of
+
+  the first `nn.Conv2d`, and argument 1 of the second `nn.Conv2d` 
+
+  they need to be the same number\), see what kind of speedup you get.
+
+* Build a MNIST Convnet
 
