@@ -19,6 +19,8 @@ A typical training procedure for a neural network is as follows:
 
 ![convnet](https://pytorch.org/tutorials/_images/mnist.png)
 
+input -&gt; conv2d -&gt; relu -&gt; maxpool2d -&gt; conv2d -&gt; relu -&gt; maxpool2d -&gt; view -&gt; linear -&gt; relu -&gt; linear -&gt; relu -&gt; linear -&gt; MSELoss -&gt; loss
+
 ### Define the network
 
 Let’s define this network:
@@ -87,5 +89,37 @@ out.backward(torch.randn(1, 10))
 
 
 
+### Loss Function <a id="Update-the-weights"></a>
+
+A loss function takes the \(output, target\) pair of inputs. There are several different  loss functions [https://pytorch.org/docs/nn.html\#loss-functions](https://pytorch.org/docs/nn.html#loss-functions)\`\`
+
+```python
+output = net(input)
+target = torch.randn(10)  # a dummy target, for example
+target = target.view(1, -1)  # make it the same shape as output
+criterion = nn.MSELoss()
+
+loss = criterion(output, target)
+print(loss)
+```
+
 ### Update the weights\(Optimization\) <a id="Update-the-weights"></a>
+
+various different update rules such as SGD, Nesterov-SGD, Adam, RMSProp, etc.
+
+```python
+import torch.optim as optim
+
+# create your optimizer
+optimizer = optim.SGD(net.parameters(), lr=0.01)
+
+# in your training loop:
+optimizer.zero_grad()   # zero the gradient buffers
+output = net(input)
+loss = criterion(output, target)
+loss.backward()
+optimizer.step()    # Does the update
+```
+
+
 
