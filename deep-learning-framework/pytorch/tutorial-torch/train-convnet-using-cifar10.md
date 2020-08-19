@@ -67,7 +67,7 @@ testset = torchvision.datasets.CIFAR10(root='./data', train=False,
 
 #### User Defined Dataset
 
-### Load and Show images\(tensor\)
+### Load and Show images\(tensor, color\)
 
 ```python
 import matplotlib.pyplot as plt
@@ -78,7 +78,9 @@ import numpy as np
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
     npimg = img.numpy()
-    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.imshow(np.transpose(npimg, (1, 2, 0))) # channel goes at last
+    plt.xticks([])
+    plt.yticks([])
     plt.show()
 
 

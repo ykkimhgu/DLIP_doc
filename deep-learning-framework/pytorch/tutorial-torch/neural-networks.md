@@ -25,6 +25,8 @@ input -&gt; conv2d -&gt; relu -&gt; maxpool2d -&gt; conv2d -&gt; relu -&gt; maxp
 
 Let’s define this network:
 
+> tensor.view\(-1,n\), Returns a new tensor with the same data as the self tensor but of a different shape. the size -1 is inferred from other dimensions
+
 ```python
 import torch
 import torch.nn as nn
