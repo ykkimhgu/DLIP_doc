@@ -85,7 +85,36 @@ net.zero_grad()
 out.backward(torch.randn(1, 10))
 ```
 
-### Datasets
+### Datasets \(MNIST\)
+
+`torchvision.datasets.MNIST(root, train=True, transform=None, target_transform=None, download=False)`
+
+*   **root** \(_string_\) – Root directory of dataset where `MNIST/processed/training.pt` and `MNIST/processed/test.pt` exist.
+
+```python
+#  a batch_size of 64, size 1000 for testing
+#  mean 0.1307, std 0.3081 used for the Normalize() 
+batch_size_train=64
+batch_size_test=64
+
+# transform = transforms.Compose(
+#     [transforms.ToTensor(),
+#      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])   
+transform = transforms.Compose(
+    [transforms.ToTensor(),
+     transforms.Normalize((0.1307,), (0.3081,))])  
+
+# Train set    
+trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size_train,
+                                          shuffle=True, num_workers=2)
+
+# Test set
+testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size_test,
+                                         shuffle=True, num_workers=2)
+
+```
 
 
 
