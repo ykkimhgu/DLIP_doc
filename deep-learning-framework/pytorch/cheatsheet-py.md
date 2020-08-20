@@ -35,5 +35,23 @@ There are several options for dataset
 * \(Recommend\) For vision, we have created a package called `torchvision`
   * data loaders for common datasets such as Imagenet, CIFAR10, MNIST, etc.
 
-## Install Keras
+## Using GPU
+
+```python
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+net.to(device)
+
+for epoch in range(epochs):
+    for inputs, labels in train_loader:
+        inputs, labels = inputs.to(device), labels.to(device)
+        
+# ...
+# evaluation
+with torch.no_grad():
+    for inputs, labels in test_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+# ...
+```
+
+
 
