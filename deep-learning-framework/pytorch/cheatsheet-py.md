@@ -1,6 +1,6 @@
 # Cheat Sheet
 
-## Numpy &lt;-&gt; Torch Tensor
+### Numpy &lt;-&gt; Torch Tensor
 
 Tensors are similar to NumPy’s ndarrays, with the addition being that Tensors can also be used on a GPU to accelerate computing.
 
@@ -26,7 +26,7 @@ print(a)
 print(b)
 ```
 
-## Datasets
+### Datasets
 
 There are several options for dataset
 
@@ -35,7 +35,7 @@ There are several options for dataset
 * \(Recommend\) For vision, we have created a package called `torchvision`
   * data loaders for common datasets such as Imagenet, CIFAR10, MNIST, etc.
 
-## Using GPU
+### Using GPU
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -53,5 +53,17 @@ with torch.no_grad():
 # ...
 ```
 
+### Visualizing Loss Curve
 
+### Evaluation
+
+### Model function
+
+make it a function
+
+### Train function
+
+### Test function
+
+### Plot output image function
 
