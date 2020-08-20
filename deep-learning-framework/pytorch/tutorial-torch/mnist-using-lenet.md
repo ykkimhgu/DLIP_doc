@@ -4,6 +4,8 @@
 
 **Modified: Y.-K Kim 2020-08-19**
 
+\*\*\*\*[**Source code**](https://github.com/ykkimhgu/gitbook_docs/blob/master/deep-learning-framework/pytorch/MNIST_tutorial_ykk.ipynb)\*\*\*\*
+
 It is a simple feed-forward CNN network for MNIST. Lets use LeNet for MNIST handwritten recognition.
 
 A typical training procedure for a neural network is as follows:
