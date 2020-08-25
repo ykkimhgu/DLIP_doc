@@ -17,6 +17,26 @@ Keras/TensorFlow are compatible with:
 * Windows 7 or later
 * macOS 10.12.6 \(Sierra\) or later.
 
+#### Install with Anaconda
+
+* Create new environment by conda
+
+`conda create -n tf`
+
+* change to the env you have just built by conda:
+
+`activete tf`
+
+* install TensorFlow/Keras  you need:
+
+`conda install tensorflow-gpu=1.14` 
+
+`conda install -c conda-forge keras=2.2.5`
+
+```text
+
+```
+
 ### Why use Keras?
 
 {% embed url="https://keras.io/why\_keras/" %}
