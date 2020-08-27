@@ -11,6 +11,7 @@
 
 ## Deep Learning for Perception
 
+* [DL resources](deep-learning-for-perception/dl-resources.md)
 * [DL Courses](deep-learning-for-perception/dl_intro/README.md)
   * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
