@@ -31,6 +31,8 @@ tupleA[2] = 5
 **Dictionary**
 
 *  A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ \(name\) with _values_ \(details\). 
+* written with curly brackets  {  }
+*  A colon \(:\) separates each **key** from its **value**.
 * the key must be unique and  immutable  \(tuples, not list\)
 
 ```python
@@ -43,6 +45,31 @@ my_dict.values()
 ```
 
 ### 
+
+### Dictionary in Python
+
+#### Create a dictionary with dict\(\) constructor
+
+```python
+# create a dictionary using two list
+students = ['Amanda', 'Teresa', 'Paula', 'Mario']
+ages = [27, 38, 17, 40]
+
+# zip method --> iterator of tuples --> dict method --> dictionary
+students_ages = dict(zip(students, ages))
+print(students_ages)
+# {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
+
+
+# create a dictionary with dict() function using keyword arguments
+# dictionary - ages of students
+students_ages = dict(Amanda=27, Teresa=38, Paula=17, Mario=40)
+print(students_ages)
+# {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
+
+
+
+```
 
 ### Documenting your code in Python \(docstring\)
 
