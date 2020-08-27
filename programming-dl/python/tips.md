@@ -68,8 +68,56 @@ print(students_ages)
 # {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
 
 
-
+ students_ages = {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
+ print(students_ages)
 ```
+
+### Class in Python
+
+#### **Instance methods**
+
+* Called using objects
+* Must have `self` as the first parameter
+* \(`self` is another python term. We can use self to access any data or other instance methods which resides in that class. These cannot be accessed without using self\)
+
+#### Initializer Method
+
+* must be called `__init__()`~~\(~~double underscore is used by python runtime\)
+* The first parameter is `self`
+* If the initializer method is present, the constructor calls `__init__()`
+
+`>`  ****The underscore prefix in a variable/method name is meant as a _hint_ to another programmer that a variable or method starting with a single underscore is intended only for internal use. This convention is [defined in PEP 8](http://pep8.org/#descriptive-naming-styles).
+
+```python
+# Base class
+class House:
+    '''
+    A place which provides with shelter or accommodation
+    '''
+    def __init__(self, rooms, bathrooms):
+        self.rooms = rooms
+        self.bathrooms = bathrooms
+    def room_details(self):
+        print(f'This property has {self.rooms} rooms \
+              with {self.bathrooms} bathrooms')
+class Apartment(House):
+    '''
+    A house within a large building where others also have
+    their own house
+    '''
+    def __init__(self, rooms, bathrooms, floor):
+        House.__init__(self, rooms, bathrooms)
+        self.floor = floor
+
+# Create an Apartment
+apartment = Apartment(2, 2, 21)
+apartment.room_details()
+
+Output:
+This property has 2 rooms with 2 bathrooms
+```
+
+
 
 ### Documenting your code in Python \(docstring\)
 
