@@ -117,7 +117,51 @@ Output:
 This property has 2 rooms with 2 bathrooms
 ```
 
+### Index of array
 
+#### .shape
+
+input\_tensor.shape\[-1\] \# get value of the last index of shape
+
+### Reshaping arrays
+
+source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b)
+
+![source click here](../../.gitbook/assets/image%20%289%29.png)
+
+### Stacking 2D data to 3D data
+
+```python
+ # change to  [rows][cols][channels] for Keras
+    
+    # Method0
+    x_train3D=np.stack((x_train,x_train,x_train),axis=2) 
+
+    # Method1
+    # numpy(channel,r,c) [channels].[rows][cols]
+    x_train3D=np.stack((x_train,x_train,x_train))  
+    print(x_train3D.shape)    
+    x_train3D=np.moveaxis(x_train3D,0,2)
+    print(x_train3D.shape)
+
+    x_test3D=np.stack((x_test,x_test,x_test))
+    x_test3D=np.moveaxis(x_test3D,0,2)
+    print(x_test3D.shape)
+    
+    
+    # NEEDS TO BE MODIFIED  (stack-->concatenate)
+    # Method2
+    x_train=np.expand_dims(x_train,axis=2)
+    print(x_train.shape)
+    x_train3D=np.stack((x_train,x_train,x_train),axis=1)  
+    print(x_train3D.shape)
+
+    # Method3
+    x_train=np.reshape(x_train,[x_train.shape[0],x_train.shape[1],1])
+    print(x_train.shape)
+    x_train3D=np.stack((x_train,x_train,x_train))  
+    print(x_train3D.shape)
+```
 
 ### Documenting your code in Python \(docstring\)
 
