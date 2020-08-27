@@ -6,11 +6,14 @@ description: Selected Papers and blogs for Perception Deep Learning
 
 ### Selected papers on CNN
 
+* Alexnet
+* ResNet
 * Inception
+* YOLO
 
 
 
-### 3D object detection using LiDAR
+### Review: 3D object detection using LiDAR
 
 * \*\*\*\*[**The state of 3D object detection: A review of the state of the art based upon the KITTI leaderboard**](https://towardsdatascience.com/the-state-of-3d-object-detection-f65a385f67a8)\*\*\*\*
 
