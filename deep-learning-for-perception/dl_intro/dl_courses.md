@@ -2,8 +2,6 @@
 
 ## Deep Learning for Vision Systems
 
-## Deep Learning for Vision Systems
-
 ### Under Construction!
 
 ### Recommended Courses
