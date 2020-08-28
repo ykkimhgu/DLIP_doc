@@ -16,7 +16,7 @@
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
   * [Technical Strategy](deep-learning-for-perception/dl_intro/technical-strategy.md)
   * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
-* [Deep Learning Papers](deep-learning-for-perception/deep-learning-papers.md)
+* [DL Papers and Readings](deep-learning-for-perception/deep-learning-papers.md)
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
   * [Anomaly Detection in Time Series](deep-learning-for-perception/deep-learning-case-study/anomaly-detection-in-time-series.md)
   * [Face Eye Lip Detection](deep-learning-for-perception/deep-learning-case-study/face-eye-lip-detection.md)

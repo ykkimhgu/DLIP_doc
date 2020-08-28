@@ -2,14 +2,20 @@
 description: Selected Papers and blogs for Perception Deep Learning
 ---
 
-# Deep Learning Papers
+# DL Papers and Readings
 
 ### Selected papers on CNN
 
 * Alexnet
 * ResNet
 * Inception
+  * Paper link
+  * [Reading: A simple guide to Inception](https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202)
 * YOLO
+
+### Advances in 2D Computer Vision
+
+{% embed url="https://towardsdatascience.com/recent-advances-in-modern-computer-vision-56801edab980" %}
 
 
 
@@ -34,6 +40,12 @@ description: Selected Papers and blogs for Perception Deep Learning
 {% embed url="https://towardsdatascience.com/anchors-and-multi-bin-loss-for-multi-modal-target-regression-647ea1974617" %}
 
 {% embed url="https://towardsdatascience.com/orientation-estimation-in-monocular-3d-object-detection-f850ace91411" %}
+
+
+
+### Pseudo LiDAR: from 2D to 3D
+
+{% embed url="https://medium.com/swlh/making-a-pseudo-lidar-with-cameras-and-deep-learning-e8f03f939c5f" %}
 
 
 
