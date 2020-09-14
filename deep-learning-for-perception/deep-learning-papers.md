@@ -4,14 +4,35 @@ description: Selected Papers and blogs for Perception Deep Learning
 
 # DL Papers and Readings
 
-### Selected papers on CNN
+### Selected papers you need to read on CNN
 
-* Alexnet
-* ResNet
-* Inception
-  * Paper link
-  * [Reading: A simple guide to Inception](https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202)
+* [Alexnet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf):  [review on alexnet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160)
+* [VGGNet](https://arxiv.org/pdf/1409.1556):  [review on VGGNet](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11)
+* [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+* R-CNN: [reading](https://towardsdatascience.com/12-papers-you-should-read-to-understand-object-detection-in-the-deep-learning-era-3390d4a28891)
+  * R-CNN 2013
+  * Fast R-CNN: 2015
+  * Faster R-CNN: 2015
+* Inception:  [ simple guide to Inception](https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202)
+  * V1: GoogLeNet 
+  * [v3: 2016,](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)   [review on v3](https://medium.com/@sh.tsang/review-inception-v3-1st-runner-up-image-classification-in-ilsvrc-2015-17915421f77c)
+  * [v4: paper,](https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14806/14311)  review on v4
 * YOLO
+  * v1
+  * [v2](https://arxiv.org/abs/1612.08242)
+  * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf):  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) 
+  * v4: reading
+  * v5: reading
+* [SSD](https://arxiv.org/abs/1512.02325)
+* [RetinaNet](https://arxiv.org/abs/1708.02002)
+* [EfficientDet: 2019](https://arxiv.org/abs/1911.09070)
+* [EfficientNet: 2019](https://arxiv.org/abs/1905.11946)
+
+### Review on Object Detection
+
+* [Object Detection in 20 Years: A Survey](https://arxiv.org/pdf/1905.05055)
+
+![Image from zou2019](https://lh4.googleusercontent.com/XxgASA7WjkiCqsEW-EqXrUaRDNYEyKBkAemKtv4e9rS3AtzVIJBEgysN9in3lpdtLjzXeh5dzkkaYy6DWnWXCvEtjHFOEvaGzxUUrpzpl-NkwcsE32nMWmgBG2uSZFMzBdjWD40Z)
 
 ### Advances in 2D Computer Vision
 
@@ -34,6 +55,12 @@ description: Selected Papers and blogs for Perception Deep Learning
 ![Detector \(LIDAR+RGB fusion labeled\) latency vs vehicle APost](https://miro.medium.com/max/936/1*11IfMVEO1yFrI5sz5NAH6A.png)
 
 ![Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
+
+![Figure from PointPillars](../.gitbook/assets/image%20%2811%29.png)
+
+
+
+
 
 ### 3D Object Orientation Detection
 
