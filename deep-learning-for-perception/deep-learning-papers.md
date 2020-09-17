@@ -4,19 +4,32 @@ description: Selected Papers and blogs for Perception Deep Learning
 
 # DL Papers and Readings
 
-### Selected papers you need to read on CNN
+### Must read papers on CNN
+
+[A brief note on these selected papers: ](https://docs.google.com/document/d/1oTWU1kJXEOEvWUgKN878kvx3wSvjzk9aVXTUyABxDhM/edit?usp=sharing)
+
+#### Popular Backbone for CNN
 
 * [Alexnet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf):  [review on alexnet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160)
 * [VGGNet](https://arxiv.org/pdf/1409.1556):  [review on VGGNet](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11)
-* [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-* R-CNN: [reading](https://towardsdatascience.com/12-papers-you-should-read-to-understand-object-detection-in-the-deep-learning-era-3390d4a28891)
-  * R-CNN 2013
-  * Fast R-CNN: 2015
-  * Faster R-CNN: 2015
+* [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) 2015
 * Inception:  [ simple guide to Inception](https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202)
-  * V1: GoogLeNet 
-  * [v3: 2016,](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)   [review on v3](https://medium.com/@sh.tsang/review-inception-v3-1st-runner-up-image-classification-in-ilsvrc-2015-17915421f77c)
+  * v1 2014: GoogLeNet 
+  * [v3: 2015,](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)   [review on v3](https://medium.com/@sh.tsang/review-inception-v3-1st-runner-up-image-classification-in-ilsvrc-2015-17915421f77c)
   * [v4: paper,](https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14806/14311)  review on v4
+* Feature Pyramid ConvNet
+
+#### Object Detection
+
+1. Two-Stage Detector
+
+* R-CNN:  [reading on R-CNN and variants](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e)
+  * [R-CNN 2013](http://islab.ulsan.ac.kr/files/announcement/513/rcnn_pami.pdf) ,  [review on RCNN](https://medium.com/coinmonks/review-r-cnn-object-detection-b476aba290d1)
+  * [Fast R-CNN: 2015](https://arxiv.org/abs/1504.08083)
+  * [Faster R-CNN: 2015](https://arxiv.org/abs/1506.01497)
+
+2.One-Stage Detector
+
 * YOLO
   * v1
   * [v2](https://arxiv.org/abs/1612.08242)
@@ -24,7 +37,7 @@ description: Selected Papers and blogs for Perception Deep Learning
   * v4: reading
   * v5: reading
 * [SSD](https://arxiv.org/abs/1512.02325)
-* [RetinaNet](https://arxiv.org/abs/1708.02002)
+* [RetinaNet](https://arxiv.org/abs/1708.02002) 2017
 * [EfficientDet: 2019](https://arxiv.org/abs/1911.09070)
 * [EfficientNet: 2019](https://arxiv.org/abs/1905.11946)
 
