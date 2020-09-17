@@ -17,7 +17,7 @@ description: Selected Papers and blogs for Perception Deep Learning
   * v1 2014: GoogLeNet 
   * [v3: 2015,](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)   [review on v3](https://medium.com/@sh.tsang/review-inception-v3-1st-runner-up-image-classification-in-ilsvrc-2015-17915421f77c)
   * [v4: paper,](https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14806/14311)  review on v4
-* Feature Pyramid ConvNet
+* Feature Pyramid Network:  [review on FPN ](https://towardsdatascience.com/review-fpn-feature-pyramid-network-object-detection-262fc7482610)
 
 #### Object Detection
 
@@ -31,13 +31,15 @@ description: Selected Papers and blogs for Perception Deep Learning
 2.One-Stage Detector
 
 * YOLO
-  * v1
+  * [v1 2016:](https://arxiv.org/pdf/1506.02640v5.pdf) 
+    *  [YOLO explained](https://towardsdatascience.com/yolo-you-only-look-once-real-time-object-detection-explained-492dc9230006), [ YOLO in python](https://github.com/Garima13a/YOLO-Object-Detection), 
+    *  [Paper presentation CVPR2016](https://www.youtube.com/watch?v=NM6lrxy0bxs&feature=youtu.be&list=PLrrmP4uhN47Y-hWs7DVfCmLwUACRigYyT)
   * [v2](https://arxiv.org/abs/1612.08242)
-  * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf):  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) 
+  * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf):  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) , [whats new inYOLOv3](https://towardsdatascience.com/search?q=yolo)
   * v4: reading
   * v5: reading
 * [SSD](https://arxiv.org/abs/1512.02325)
-* [RetinaNet](https://arxiv.org/abs/1708.02002) 2017
+* [RetinaNet](https://arxiv.org/abs/1708.02002) 2017:  [review on retinanet](https://towardsdatascience.com/review-retinanet-focal-loss-object-detection-38fba6afabe4)
 * [EfficientDet: 2019](https://arxiv.org/abs/1911.09070)
 * [EfficientNet: 2019](https://arxiv.org/abs/1905.11946)
 
