@@ -80,6 +80,7 @@
 
 ## Simulator
 
+* [Simulator List](simulator/simulator-list.md)
 * [CARLA](simulator/carla.md)
 * [Airsim](simulator/airsim/README.md)
   * [Setup](simulator/airsim/setup.md)
