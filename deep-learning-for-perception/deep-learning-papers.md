@@ -35,7 +35,9 @@ description: Selected Papers and blogs for Perception Deep Learning
     *  [YOLO explained](https://towardsdatascience.com/yolo-you-only-look-once-real-time-object-detection-explained-492dc9230006), [ YOLO in python](https://github.com/Garima13a/YOLO-Object-Detection), [YOLO simpler explanation](https://towardsdatascience.com/computer-vision-a-journey-from-cnn-to-mask-r-cnn-and-yolo-part-2-b0b9e67762b1)
     *  [Paper presentation CVPR2016](https://www.youtube.com/watch?v=NM6lrxy0bxs&feature=youtu.be&list=PLrrmP4uhN47Y-hWs7DVfCmLwUACRigYyT)
     * [Slides for YOLO presentations](https://pjreddie.com/publications/)
-  * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf):  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) , [whats new inYOLOv3](https://towardsdatascience.com/search?q=yolo)
+  * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf): 
+    *  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) , [whats new inYOLOv3](https://towardsdatascience.com/search?q=yolo)
+    * [YOLOv3 in Keras](https://towardsdatascience.com/object-detection-using-yolov3-using-keras-80bf35e61ce1)
   * v4: reading
   * v5: reading
 * [SSD](https://arxiv.org/abs/1512.02325)
