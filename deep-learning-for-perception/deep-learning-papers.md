@@ -33,9 +33,9 @@ description: Selected Papers and blogs for Perception Deep Learning
 * YOLO
   * [v1 2016:](https://arxiv.org/pdf/1506.02640v5.pdf)  [v2](https://arxiv.org/abs/1612.08242)
     *  [YOLO explained](https://towardsdatascience.com/yolo-you-only-look-once-real-time-object-detection-explained-492dc9230006), [ YOLO in python](https://github.com/Garima13a/YOLO-Object-Detection), [YOLO simpler explanation](https://towardsdatascience.com/computer-vision-a-journey-from-cnn-to-mask-r-cnn-and-yolo-part-2-b0b9e67762b1)
-    *  [Paper presentation CVPR2016](https://www.youtube.com/watch?v=NM6lrxy0bxs&feature=youtu.be&list=PLrrmP4uhN47Y-hWs7DVfCmLwUACRigYyT)
-    * [v2 explained \(recom\)](http://christopher5106.github.io/object/detectors/2017/08/10/bounding-box-object-detectors-understanding-yolo.html)
-    * [Slides for YOLO presentations](https://pjreddie.com/publications/)
+    * [YOLOv1 CVPR2016 presentation](https://www.youtube.com/watch?v=NM6lrxy0bxs&feature=youtu.be&list=PLrrmP4uhN47Y-hWs7DVfCmLwUACRigYyT) 
+    * [Official slides, resource for YOLO ](https://pjreddie.com/publications/)
+    * [YOLOv2 simple explain](http://christopher5106.github.io/object/detectors/2017/08/10/bounding-box-object-detectors-understanding-yolo.html)
   * [v3](https://pjreddie.com/media/files/papers/YOLOv3.pdf) 2018: 
     *  [beginner guide](https://towardsdatascience.com/dive-really-deep-into-yolo-v3-a-beginners-guide-9e3d2666280e),  [theory explained](https://medium.com/analytics-vidhya/yolo-v3-theory-explained-33100f6d193) , [whats new inYOLOv3](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
     * [YOLOv3 in Keras](https://towardsdatascience.com/object-detection-using-yolov3-using-keras-80bf35e61ce1), [YOLOv3 in PyTorch](https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/)
