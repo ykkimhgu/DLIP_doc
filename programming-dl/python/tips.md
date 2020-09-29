@@ -86,6 +86,16 @@ print(students_ages)
 * The first parameter is `self`
 * If the initializer method is present, the constructor calls `__init__()`
 
+#### Super\(\) to inherit all the methods and properties from another class:
+
+* Inherits all the method, properties of Parent or sibling class
+
+```python
+class Child(Parent):
+  def __init__(self, txt):
+    super().__init__(txt)  # inherit Parent;s method/properties
+```
+
 `>`  ****The underscore prefix in a variable/method name is meant as a _hint_ to another programmer that a variable or method starting with a single underscore is intended only for internal use. This convention is [defined in PEP 8](http://pep8.org/#descriptive-naming-styles).
 
 ```python
