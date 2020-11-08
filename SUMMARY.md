@@ -12,6 +12,7 @@
 ## Deep Learning for Perception
 
 * [DL Courses](deep-learning-for-perception/dl_intro/README.md)
+  * [Image Processing with Deep Learning](deep-learning-for-perception/dl_intro/image-processing-with-deep-learning.md)
   * [Techniques](deep-learning-for-perception/dl_intro/dl-resources/README.md)
     * [Technical Strategy by A.Ng](deep-learning-for-perception/dl_intro/dl-resources/technical-strategy.md)
   * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
