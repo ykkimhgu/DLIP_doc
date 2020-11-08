@@ -9,9 +9,10 @@
   * [Resources](machine-learning/ml-intro/ml_resources.md)
   * [Tutorial](machine-learning/ml-intro/ml_tutorial.md)
 
----
+## Image Processing with DL
 
-* [Image Processing with Deep Learning](image-processing-with-deep-learning.md)
+* [Syllabus](image-processing-with-dl/image-processing-with-deep-learning.md)
+* [Image Processing Part 1](image-processing-with-dl/image-processing-part-1.md)
 
 ## Deep Learning for Perception
 
