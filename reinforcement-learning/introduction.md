@@ -1,6 +1,6 @@
 # Deep RL Introduction
 
-## Short Introduction on RL
+## Short Notes, Lectures  on Deep RL
 
 ### Deep Reinforcement Learning: Pong from Pixels by Andrej Karpathy
 
@@ -22,7 +22,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=xvRrgxcpaHY" %}
 
-## Deep RL Bootcamp Lecture Series
+## Deep RL Bootcamp 
 
 ### Deep RL overview
 
