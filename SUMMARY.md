@@ -102,3 +102,7 @@
 * [Useful Resources](resources/useful-resources.md)
 * [Github](https://github.com/ykkimhgu)
 
+## Reinforcement Learning
+
+* [Introduction](reinforcement-learning/introduction.md)
+
