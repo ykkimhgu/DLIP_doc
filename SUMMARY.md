@@ -104,5 +104,9 @@
 
 ## Reinforcement Learning
 
-* [Introduction](reinforcement-learning/introduction.md)
+* [Deep RL Introduction](reinforcement-learning/introduction.md)
+
+## Unsupervised Learning
+
+* [Introduction](unsupervised-learning/introduction.md)
 
