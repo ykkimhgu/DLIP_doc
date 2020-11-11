@@ -20,7 +20,6 @@
   * [Online Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Overview of Deep Learning](deep-learning-for-perception/dl_intro/overview-of-deep-learning/README.md)
     * [Deep Learning Basics: Introduction](deep-learning-for-perception/dl_intro/overview-of-deep-learning/deep-learning-basics-introduction.md)
-    * [Untitled](deep-learning-for-perception/dl_intro/overview-of-deep-learning/untitled.md)
     * [Deep Learning State of the Art](deep-learning-for-perception/dl_intro/overview-of-deep-learning/some-notes.md)
   * [Notes](deep-learning-for-perception/dl_intro/notes/README.md)
     * [Perceptron](deep-learning-for-perception/dl_intro/notes/perceptron.md)
