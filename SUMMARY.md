@@ -21,6 +21,8 @@
   * [Overview of Deep Learning](deep-learning-for-perception/dl_intro/overview-of-deep-learning/README.md)
     * [Deep Learning State of the Art](deep-learning-for-perception/dl_intro/overview-of-deep-learning/some-notes.md)
   * [Notes](deep-learning-for-perception/dl_intro/notes/README.md)
+    * [Back Propagation](deep-learning-for-perception/dl_intro/notes/back-propagation.md)
+    * [Perceptron](deep-learning-for-perception/dl_intro/notes/perceptron.md)
     * [DL Techniques](deep-learning-for-perception/dl_intro/notes/dl-resources/README.md)
       * [Technical Strategy by A.Ng](deep-learning-for-perception/dl_intro/notes/dl-resources/technical-strategy.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
