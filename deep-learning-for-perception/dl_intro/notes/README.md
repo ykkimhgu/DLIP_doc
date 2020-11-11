@@ -1,6 +1,6 @@
 # Notes
 
-### Percentron
+### Perceptron
 
 ### Backpropagation
 
