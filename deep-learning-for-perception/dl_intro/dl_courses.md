@@ -12,13 +12,13 @@
    * [Youtube lectures](https://youtu.be/vT1JzLTH4G4)
    * [Lecture Note](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture1.pdf)
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 ## Deep Learning Books
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 ## Recommended Schedule for Coursera
 

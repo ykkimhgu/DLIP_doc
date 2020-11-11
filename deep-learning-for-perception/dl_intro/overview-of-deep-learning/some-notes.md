@@ -13,35 +13,35 @@ Lecture on most recent research and developments in deep learning, and hopes for
 
 ## Milestones of Deep Learning 
 
-![Lex Fridman, DL Lectures](../../../.gitbook/assets/image%20%2820%29.png)
+![Lex Fridman, DL Lectures](../../../.gitbook/assets/image%20%2829%29.png)
 
-![](../../../.gitbook/assets/image%20%2842%29.png)
+![](../../../.gitbook/assets/image%20%2882%29.png)
 
 ![](../../../.gitbook/assets/image%20%2812%29.png)
 
 ## Deep Library
 
-![](../../../.gitbook/assets/image%20%2843%29.png)
+![](../../../.gitbook/assets/image%20%2883%29.png)
 
-![](../../../.gitbook/assets/image%20%2833%29.png)
+![](../../../.gitbook/assets/image%20%2860%29.png)
 
 ## Autonomous Vehicle Applications
 
-![](../../../.gitbook/assets/image%20%2829%29.png)
+![](../../../.gitbook/assets/image%20%2853%29.png)
 
-![](../../../.gitbook/assets/image%20%2826%29.png)
+![](../../../.gitbook/assets/image%20%2846%29.png)
 
-![](../../../.gitbook/assets/image%20%2837%29.png)
+![](../../../.gitbook/assets/image%20%2867%29.png)
 
-![](../../../.gitbook/assets/image%20%2830%29.png)
+![](../../../.gitbook/assets/image%20%2855%29.png)
 
-![](../../../.gitbook/assets/image%20%2840%29.png)
+![](../../../.gitbook/assets/image%20%2876%29.png)
 
-![](../../../.gitbook/assets/image%20%2822%29.png)
+![](../../../.gitbook/assets/image%20%2838%29.png)
 
-![](../../../.gitbook/assets/image%20%2814%29.png)
+![](../../../.gitbook/assets/image%20%2816%29.png)
 
-![](../../../.gitbook/assets/image%20%2828%29.png)
+![](../../../.gitbook/assets/image%20%2852%29.png)
 
-![](../../../.gitbook/assets/image%20%2824%29.png)
+![](../../../.gitbook/assets/image%20%2844%29.png)
 
