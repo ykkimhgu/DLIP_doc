@@ -1,10 +1,6 @@
 # Recommended Courses
 
-## Deep Learning for Vision Systems
-
-### Under Construction!
-
-### Recommended Courses
+## Online Deep Learning Courses 
 
 1. [Coursera: Deep Learning Specialization](https://www.deeplearning.ai/deep-learning-specialization/)
    * [Youtube lectures](https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w/playlists)
@@ -16,9 +12,15 @@
    * [Youtube lectures](https://youtu.be/vT1JzLTH4G4)
    * [Lecture Note](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture1.pdf)
 
-> **Note:** Check for updated lectures and notes
+![](../../.gitbook/assets/image%20%2815%29.png)
 
-### Recommended Schedule
+![](../../.gitbook/assets/image%20%2813%29.png)
+
+## Deep Learning Books
+
+![](../../.gitbook/assets/image%20%2816%29.png)
+
+## Recommended Schedule for Coursera
 
 #### Coursera lectures in 5 weeks
 

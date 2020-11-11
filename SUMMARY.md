@@ -23,7 +23,7 @@
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
   * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
 * [DL Papers and Readings](deep-learning-for-perception/deep-learning-papers/README.md)
-  * [Some Notes](deep-learning-for-perception/deep-learning-papers/some-notes.md)
+  * [Deep Learning State of the Art](deep-learning-for-perception/deep-learning-papers/some-notes.md)
   * [YouTube channels for DL](deep-learning-for-perception/deep-learning-papers/youtube-channels-for-dl.md)
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
   * [Anomaly Detection in Time Series](deep-learning-for-perception/deep-learning-case-study/anomaly-detection-in-time-series.md)
