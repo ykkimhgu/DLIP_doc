@@ -16,15 +16,16 @@
 
 ## Deep Learning for Perception
 
-* [DL Courses](deep-learning-for-perception/dl_intro/README.md)
+* [DL Lectures](deep-learning-for-perception/dl_intro/README.md)
+  * [Overview of Deep Learning](deep-learning-for-perception/dl_intro/overview-of-deep-learning/README.md)
+    * [Deep Learning State of the Art](deep-learning-for-perception/dl_intro/overview-of-deep-learning/some-notes.md)
+  * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Techniques](deep-learning-for-perception/dl_intro/dl-resources/README.md)
     * [Technical Strategy by A.Ng](deep-learning-for-perception/dl_intro/dl-resources/technical-strategy.md)
-  * [Recommended Courses](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
-  * [Tutorial](deep-learning-for-perception/dl_intro/tutorial.md)
-* [DL Papers and Readings](deep-learning-for-perception/deep-learning-papers/README.md)
-  * [Deep Learning State of the Art](deep-learning-for-perception/deep-learning-papers/some-notes.md)
-  * [YouTube channels for DL](deep-learning-for-perception/deep-learning-papers/youtube-channels-for-dl.md)
+  * [YouTube channels for DL](deep-learning-for-perception/dl_intro/youtube-channels-for-dl.md)
+  * [Tutorial for Deep Learning](deep-learning-for-perception/dl_intro/tutorial.md)
+* [Must Read Papers](deep-learning-for-perception/deep-learning-papers.md)
 * [Deep Learning Case Study](deep-learning-for-perception/deep-learning-case-study/README.md)
   * [Anomaly Detection in Time Series](deep-learning-for-perception/deep-learning-case-study/anomaly-detection-in-time-series.md)
   * [Face Eye Lip Detection](deep-learning-for-perception/deep-learning-case-study/face-eye-lip-detection.md)
