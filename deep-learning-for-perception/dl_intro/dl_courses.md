@@ -1,4 +1,4 @@
-# Recommended Courses
+# Online Courses
 
 ## Online Deep Learning Courses 
 

@@ -2,7 +2,7 @@
 description: Selected Papers and blogs for Perception Deep Learning
 ---
 
-# DL Papers and Readings
+# Must Read Papers
 
 ### Must read papers on CNN
 
