@@ -16,11 +16,11 @@ An introductory lecture for MIT course 6.S094 on the basics of deep learning inc
 
 {% file src="../../../.gitbook/assets/deep\_learning\_basics.pdf" caption="Slides PDF" %}
 
-![](../../../.gitbook/assets/image%20%2848%29.png)
+![](../../../.gitbook/assets/image%20%2849%29.png)
 
-![](../../../.gitbook/assets/image%20%2865%29.png)
+![](../../../.gitbook/assets/image%20%2866%29.png)
 
-![](../../../.gitbook/assets/image%20%2854%29.png)
+![](../../../.gitbook/assets/image%20%2855%29.png)
 
 ![](../../../.gitbook/assets/image%20%2832%29.png)
 
@@ -30,41 +30,41 @@ An introductory lecture for MIT course 6.S094 on the basics of deep learning inc
 
 ![](../../../.gitbook/assets/image%20%2836%29.png)
 
-![](../../../.gitbook/assets/image%20%2869%29.png)
+![](../../../.gitbook/assets/image%20%2870%29.png)
 
-![](../../../.gitbook/assets/image%20%2858%29.png)
+![](../../../.gitbook/assets/image%20%2859%29.png)
 
 ![](../../../.gitbook/assets/image%20%2843%29.png)
 
-![](../../../.gitbook/assets/image%20%2868%29.png)
+![](../../../.gitbook/assets/image%20%2869%29.png)
 
 ![](../../../.gitbook/assets/image%20%2813%29.png)
 
-![](../../../.gitbook/assets/image%20%2862%29.png)
+![](../../../.gitbook/assets/image%20%2863%29.png)
 
 ![](../../../.gitbook/assets/image%20%2826%29.png)
 
 ![](../../../.gitbook/assets/image%20%2841%29.png)
 
-![](../../../.gitbook/assets/image%20%2875%29.png)
+![](../../../.gitbook/assets/image%20%2876%29.png)
 
-![](../../../.gitbook/assets/image%20%2884%29.png)
+![](../../../.gitbook/assets/image%20%2886%29.png)
 
-![](../../../.gitbook/assets/image%20%2879%29.png)
+![](../../../.gitbook/assets/image%20%2881%29.png)
 
-![](../../../.gitbook/assets/image%20%2847%29.png)
+![](../../../.gitbook/assets/image%20%2848%29.png)
 
 ![](../../../.gitbook/assets/image%20%2817%29.png)
 
-![](../../../.gitbook/assets/image%20%2866%29.png)
+![](../../../.gitbook/assets/image%20%2867%29.png)
 
-![](../../../.gitbook/assets/image%20%2873%29.png)
+![](../../../.gitbook/assets/image%20%2874%29.png)
 
-![](../../../.gitbook/assets/image%20%2851%29.png)
+![](../../../.gitbook/assets/image%20%2852%29.png)
 
-![](../../../.gitbook/assets/image%20%2877%29.png)
+![](../../../.gitbook/assets/image%20%2878%29.png)
 
-![](../../../.gitbook/assets/image%20%2871%29.png)
+![](../../../.gitbook/assets/image%20%2872%29.png)
 
 ![](../../../.gitbook/assets/image%20%2835%29.png)
 
@@ -72,11 +72,11 @@ An introductory lecture for MIT course 6.S094 on the basics of deep learning inc
 
 ![](../../../.gitbook/assets/image%20%2833%29.png)
 
-![](../../../.gitbook/assets/image%20%2849%29.png)
+![](../../../.gitbook/assets/image%20%2850%29.png)
 
-![](../../../.gitbook/assets/image%20%2872%29.png)
+![](../../../.gitbook/assets/image%20%2873%29.png)
 
-![](../../../.gitbook/assets/image%20%2885%29.png)
+![](../../../.gitbook/assets/image%20%2887%29.png)
 
 ![](../../../.gitbook/assets/image%20%2839%29.png)
 
@@ -86,17 +86,17 @@ An introductory lecture for MIT course 6.S094 on the basics of deep learning inc
 
 ![](../../../.gitbook/assets/image%20%2827%29.png)
 
-![](../../../.gitbook/assets/image%20%2880%29.png)
+![](../../../.gitbook/assets/image%20%2882%29.png)
 
 ![](../../../.gitbook/assets/image%20%2820%29.png)
 
 ![](../../../.gitbook/assets/image%20%2834%29.png)
 
-![](../../../.gitbook/assets/image%20%2859%29.png)
+![](../../../.gitbook/assets/image%20%2860%29.png)
 
 ![](../../../.gitbook/assets/image%20%2822%29.png)
 
 ![](../../../.gitbook/assets/image%20%2837%29.png)
 
-![](../../../.gitbook/assets/image%20%2881%29.png)
+![](../../../.gitbook/assets/image%20%2883%29.png)
 

@@ -16,19 +16,19 @@ Defining a useful state space, action space and reward are hard part. Getting me
 
 ### Environment and Actions
 
-![Deep RL lecture -MIT](../.gitbook/assets/image%20%2861%29.png)
+![Deep RL lecture -MIT](../.gitbook/assets/image%20%2862%29.png)
 
 Challenge in RL in real-world applications are how to provide the experience? One option is providing Realistic simulation + transfer learning 
 
 #### Components of RL agent
 
-![](../.gitbook/assets/image%20%2857%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 ### Maximize the reward
 
 A good strategy for an agent would be to always choose an action that maximizes the \(discounted\) future reward
 
-![](../.gitbook/assets/image%20%2878%29.png)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 ### Optimal Policy
 
@@ -47,7 +47,7 @@ It can be classified either Model-based or Model-Free
 
 ![](../.gitbook/assets/image%20%2823%29.png)
 
-![](../.gitbook/assets/image%20%2864%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 #### Q-Learning \(Deep Q-Learning Network\)
 
@@ -59,11 +59,11 @@ A conventional method of Q-Learning, it is basically a Q-table that updates. But
 
 Deep Q-Learning uses a neural network to approximate the Q-Function.  This does not require to know and understand the physics of the environment. 
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
-![](../.gitbook/assets/image%20%2874%29.png)
+![](../.gitbook/assets/image%20%2875%29.png)
 
-![](../.gitbook/assets/image%20%2856%29.png)
+![](../.gitbook/assets/image%20%2857%29.png)
 
 ### Policy Gradient
 
@@ -71,7 +71,7 @@ Deep Q-Learning uses a neural network to approximate the Q-Function.  This does 
 
 Vanilla Policy Gradient
 
-![](../.gitbook/assets/image%20%2863%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
 #### Advantage Actor-Critic \(A2C\)
 
@@ -81,7 +81,7 @@ Combined DQN and REINFORCE
 
 #### Deep Deterministic Policy Gradient \(DDPG\)
 
-![](../.gitbook/assets/image%20%2870%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
 ![](../.gitbook/assets/image%20%2828%29.png)
 
