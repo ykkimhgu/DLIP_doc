@@ -8,7 +8,7 @@
 
 Maximize the expected\(upcoming future\) cumulative reward. What is and how to get the future or expected reward?
 
-![](../.gitbook/assets/image%20%28112%29.png)
+![](../.gitbook/assets/image%20%28114%29.png)
 
 ![](../.gitbook/assets/image%20%2895%29.png)
 
@@ -26,7 +26,7 @@ MDP: Reinforcement framework. It works on both continuing and episodic task.
 
 If the state signal has the Markov property, on the other hand, then the environment's response at t+1 depends only on the state and action representations at t, in which case the environment's dynamics can be de ned by specifying only
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28121%29.png)
 
 One-step Dynamics
 
@@ -68,19 +68,19 @@ Stochastic Policy
 
 ![](../.gitbook/assets/image%20%28109%29.png)
 
-### Example: Episodic problem of finding the goal
+### Example: Episodic problem of finding the goal \(deterministic policy\)
 
 The reward map
 
-![](../.gitbook/assets/image%20%28117%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 * Option 1:  An example of a bad policy. 
   * Starting at S\(1,1\) ,  cumulative reward score for this policy = -6
   * Starting at S\(1,2\) ,  cumulative reward score for this policy = -6
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../.gitbook/assets/image%20%28115%29.png)
 
-![](../.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28116%29.png)
 
 * * For every other state for this bad policy . 
   * This is a function of the environment state:  State-Value Function
@@ -95,8 +95,6 @@ For the given policy, the state-value function starting in state 's' returns the
 
 If the policy changes, the state-value function changes.
 
-* Then, how to find the optimal policy?
-
 ![](../.gitbook/assets/image%20%28100%29.png)
 
 ### Bellman Expectation Equation
@@ -104,12 +102,25 @@ If the policy changes, the state-value function changes.
 In calculating for the values of state-value functions for given policy, we can effectively calculate the value  of any state,  using recursive property.
 
 * Value of any state:  You only need the immediate reward and the value of the state that follows 
+* > But in complicated worlds, the immediate reward and next state cannot be known with certainty.
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
-![](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%28118%29.png)
 
-![](../.gitbook/assets/image%20%28120%29.png)
+![](../.gitbook/assets/image%20%28122%29.png)
+
+### An Optimal Policy
+
+Then, how to find the optimal policy? There are numbers of different policy. How can we define  if one policy is better than the other? 
+
+* A better policy if **all** state has equal or better values
+  * some policies may not be able to be compared
+* Optimal policy may not be unique
+
+![](../.gitbook/assets/image%20%28112%29.png)
+
+![](../.gitbook/assets/image%20%28110%29.png)
 
 ### Monte Carlo
 
