@@ -21,9 +21,10 @@
   * [Overview of Deep Learning](deep-learning-for-perception/dl_intro/overview-of-deep-learning/README.md)
     * [Deep Learning Basics: Introduction](deep-learning-for-perception/dl_intro/overview-of-deep-learning/deep-learning-basics-introduction.md)
     * [Deep Learning State of the Art](deep-learning-for-perception/dl_intro/overview-of-deep-learning/some-notes.md)
-  * [Notes](deep-learning-for-perception/dl_intro/notes/README.md)
+  * [Basics](deep-learning-for-perception/dl_intro/notes/README.md)
+    * [Forward Network](deep-learning-for-perception/dl_intro/notes/back-propagation.md)
     * [Perceptron](deep-learning-for-perception/dl_intro/notes/perceptron.md)
-    * [Back Propagation](deep-learning-for-perception/dl_intro/notes/back-propagation.md)
+    * [Back Propagation](deep-learning-for-perception/dl_intro/notes/back-propagation-1.md)
     * [DL Techniques](deep-learning-for-perception/dl_intro/notes/dl-resources/README.md)
       * [Technical Strategy by A.Ng](deep-learning-for-perception/dl_intro/notes/dl-resources/technical-strategy.md)
   * [Resources](deep-learning-for-perception/dl_intro/resources.md)
@@ -119,8 +120,11 @@
 
 ## Reinforcement Learning
 
-* [Deep RL Introduction](reinforcement-learning/introduction.md)
-* [RL Introduction](reinforcement-learning/rl-introduction.md)
+* [RL Overview](reinforcement-learning/introduction/README.md)
+  * [RL Bootcamp](reinforcement-learning/introduction/rl-bootcamp.md)
+  * [MIT Deep RL](reinforcement-learning/introduction/rl-mitdeepai.md)
+* [Textbook](reinforcement-learning/textbook.md)
+* [Basics](reinforcement-learning/basics.md)
 
 ## Unsupervised Learning
 

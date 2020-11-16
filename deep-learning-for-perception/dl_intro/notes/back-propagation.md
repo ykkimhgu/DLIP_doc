@@ -1,4 +1,4 @@
-# Back Propagation
+# Forward Network
 
 ## Activation Functions
 
