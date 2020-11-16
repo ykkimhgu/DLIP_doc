@@ -2,13 +2,13 @@
 
 ### Reward
 
-![](../.gitbook/assets/image%20%28108%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 #### Cumulative Reward
 
 Maximize the expected\(upcoming future\) cumulative reward. What is and how to get the future or expected reward?
 
-![](../.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28118%29.png)
 
 ![](../.gitbook/assets/image%20%2895%29.png)
 
@@ -18,7 +18,7 @@ The agent tries to select actions so that the sum of the discounted rewards it r
 
 Discounted rate: \[0,1\] give more weight to current or immediate rewards.  User design. It can be used to set limits of rewards not looking too far in continuous tasks.
 
-![](../.gitbook/assets/image%20%2896%29.png)
+![](../.gitbook/assets/image%20%2897%29.png)
 
 ### MDP: Markov Decision Process
 
@@ -26,7 +26,7 @@ MDP: Reinforcement framework. It works on both continuing and episodic task.
 
 If the state signal has the Markov property, on the other hand, then the environment's response at t+1 depends only on the state and action representations at t, in which case the environment's dynamics can be de ned by specifying only
 
-![](../.gitbook/assets/image%20%28121%29.png)
+![](../.gitbook/assets/image%20%28125%29.png)
 
 One-step Dynamics
 
@@ -37,11 +37,11 @@ One-step Dynamics
   *  {R\_0 ... R\_\(t\) }
 * The environment decides the state and reward by
 
-![](../.gitbook/assets/image%20%28106%29.png)
+![](../.gitbook/assets/image%20%28110%29.png)
 
 #### Pole-cart example
 
-![](../.gitbook/assets/image%20%28102%29.png)
+![](../.gitbook/assets/image%20%28104%29.png)
 
 It is an MDP problem, but not finite MDP.  The  environment considers only the current action and states not the previous ones to get the next reward.
 
@@ -56,46 +56,48 @@ It is an MDP problem, but not finite MDP.  The  environment considers only the c
 
 ### Policy
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../.gitbook/assets/image%20%28102%29.png)
 
 Deterministic Policy
 
 Stochastic Policy
 
-![](../.gitbook/assets/image%20%28104%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 
-![](../.gitbook/assets/image%20%28103%29.png)
+![](../.gitbook/assets/image%20%28105%29.png)
 
-![](../.gitbook/assets/image%20%28109%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
-### Example: Episodic problem of finding the goal \(deterministic policy\)
+### State-Value Function
+
+#### Example: Episodic problem of finding the goal \(deterministic policy\)
 
 The reward map
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28123%29.png)
 
 * Option 1:  An example of a bad policy. 
   * Starting at S\(1,1\) ,  cumulative reward score for this policy = -6
   * Starting at S\(1,2\) ,  cumulative reward score for this policy = -6
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
-![](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 * * For every other state for this bad policy . 
   * This is a function of the environment state:  State-Value Function
   * Each state has a value: Expected return by following this policy starting at that state
   * 
 
-![](../.gitbook/assets/image%20%2897%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
 
-![](../.gitbook/assets/image%20%2899%29.png)
+![](../.gitbook/assets/image%20%28100%29.png)
 
 For the given policy, the state-value function starting in state 's' returns the 'expected' reward
 
 If the policy changes, the state-value function changes.
 
-![](../.gitbook/assets/image%20%28100%29.png)
+![](../.gitbook/assets/image%20%28101%29.png)
 
 ### Bellman Expectation Equation
 
@@ -104,11 +106,11 @@ In calculating for the values of state-value functions for given policy, we can 
 * Value of any state:  You only need the immediate reward and the value of the state that follows 
 * > But in complicated worlds, the immediate reward and next state cannot be known with certainty.
 
-![](../.gitbook/assets/image%20%28113%29.png)
-
-![](../.gitbook/assets/image%20%28118%29.png)
+![](../.gitbook/assets/image%20%28117%29.png)
 
 ![](../.gitbook/assets/image%20%28122%29.png)
+
+![](../.gitbook/assets/image%20%28126%29.png)
 
 ### An Optimal Policy
 
@@ -118,9 +120,33 @@ Then, how to find the optimal policy? There are numbers of different policy. How
   * some policies may not be able to be compared
 * Optimal policy may not be unique
 
-![](../.gitbook/assets/image%20%28112%29.png)
+![](../.gitbook/assets/image%20%28116%29.png)
 
-![](../.gitbook/assets/image%20%28110%29.png)
+![](../.gitbook/assets/image%20%28114%29.png)
+
+### Action-Value function
+
+At that state s, there could be multiple choices of action to take for the given policy.  
+
+The optimal action-value function is denoted as :   q\*
+
+![](../.gitbook/assets/image%20%2896%29.png)
+
+![](../.gitbook/assets/image%20%28109%29.png)
+
+## 
+
+Example: starting at s\(0,0\), if action 'down' is chosen, then it follows the policy for all future time steps\(rest states\) to give the reward '0'.  It can continue for all other starting states and the action it takes at that state. 
+
+* Starting in that state & taking the action --&gt; follows the policy for the rest steps
+
+![](../.gitbook/assets/image%20%28108%29.png)
+
+![](../.gitbook/assets/image%20%28103%29.png)
+
+### Optimal Policy from Optimal action-value function
+
+![](../.gitbook/assets/image%20%28127%29.png)
 
 ### Monte Carlo
 
@@ -133,4 +159,12 @@ TD learning is a combination of Monte Carlo ideas and dynamic programming \(DP\)
 > model-free, update without the final outcome
 
 
+
+## QnA
+
+Difference between max and argmax?
+
+> max is the unique value :  -x^2
+>
+> argmax is a set of values for the maximum value:  e.g.  sinX
 
