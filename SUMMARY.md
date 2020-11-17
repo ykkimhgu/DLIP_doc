@@ -125,6 +125,7 @@
   * [MIT Deep RL](reinforcement-learning/introduction/rl-mitdeepai.md)
 * [Textbook](reinforcement-learning/textbook.md)
 * [Basics](reinforcement-learning/basics.md)
+* [Continuous Space RL](reinforcement-learning/continuous-space-rl.md)
 
 ## Unsupervised Learning
 

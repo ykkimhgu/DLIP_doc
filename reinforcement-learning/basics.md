@@ -1,5 +1,11 @@
 # Basics
 
+## Introduction
+
+![](../.gitbook/assets/image%20%28157%29.png)
+
+![](../.gitbook/assets/image%20%28155%29.png)
+
 ## Action, Reward, Policy
 
 ### Reward
@@ -208,6 +214,8 @@ There is a trade-off between Exploitation and Exploration
 
 Make sense to favor exploration over exploitation initially, when the environment is not fully known. As the policy gradually becomes more greedy, it make sense to favor exploitation over exploration
 
+**GLIE \(Greedy in the Limit with Infinite Exploration\)** 
+
 * $e\_i &gt; 0$ for all step i  &  $e\_i$ decays to zero as i approaches inf. 
 
 ### When to update the Q-table?  
@@ -245,18 +253,22 @@ TD learning is a combination of Monte Carlo ideas and dynamic programming \(DP\)
 
 ![](../.gitbook/assets/image%20%28149%29.png)
 
-### Sarsa\(0\)
-
-![](../.gitbook/assets/image%20%28137%29.png)
-
-### Q-Learning \( Sarsamax\)
-
-Chooses the action of state S\_\(t+1\) that gives the maximum q-value, after updating the Q-table at each step.
+### Sarsa\(0\), Q-Learning, Expected Sarsa
 
 * Sarsa\(0\): Chooses the action A\_\(t+1\) by the policy,  before updating Q\(S\_t,A\_t\)
+  * On-policy, uses e-greedy policy
+  * Better in online performance
 * Saramax: Chooses the action a from all the possible actions for the state S\_\(t+1\),  after updating Q\(S\_t,A\_t\)
+  * Off-policy. Different from the e-greedy policy to select action
+  * Chooses the action of state S\_\(t+1\) that gives the maximum q-value, after updating the Q-table at each step.
+* Expected Sarsa: Considers the expectation of all possible actions for the state S\_\(t+1\).
 
+  * On-policy
+  * Better in online performance, usually better than Sarsa
 
+These TD control algorithms are guaranteed to converge to optimal Q-table, as long as alpha is sufficiently small and GLIE \(Greedy in the Limit with Infinite Exploration\) is met.
+
+![](../.gitbook/assets/image%20%28137%29.png)
 
 ![](../.gitbook/assets/image%20%28138%29.png)
 
@@ -266,7 +278,7 @@ Chooses the action of state S\_\(t+1\) that gives the maximum q-value, after upd
 
 ![](../.gitbook/assets/image%20%28135%29.png)
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28152%29.png)
 
 ## Resources
 
