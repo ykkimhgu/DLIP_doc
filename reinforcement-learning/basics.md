@@ -28,7 +28,7 @@ MDP: Reinforcement framework. It works on both continuing and episodic task.
 
 If the state signal has the Markov property, on the other hand, then the environment's response at t+1 depends only on the state and action representations at t, in which case the environment's dynamics can be de ned by specifying only
 
-![](../.gitbook/assets/image%20%28138%29.png)
+![](../.gitbook/assets/image%20%28140%29.png)
 
 One-step Dynamics
 
@@ -76,7 +76,7 @@ Stochastic Policy
 
 The reward map
 
-![](../.gitbook/assets/image%20%28136%29.png)
+![](../.gitbook/assets/image%20%28137%29.png)
 
 * Option 1:  An example of a bad policy. 
   * Starting at S\(1,1\) ,  cumulative reward score for this policy = -6
@@ -112,7 +112,7 @@ In calculating for the values of state-value functions for given policy, we can 
 
 ![](../.gitbook/assets/image%20%28133%29.png)
 
-![](../.gitbook/assets/image%20%28141%29.png)
+![](../.gitbook/assets/image%20%28143%29.png)
 
 ### An Optimal Policy
 
@@ -148,9 +148,9 @@ Example: starting at s\(0,0\), if action 'down' is chosen, then it follows the p
 
 ### Optimal Policy from Optimal action-value function
 
-![](../.gitbook/assets/image%20%28140%29.png)
+![](../.gitbook/assets/image%20%28142%29.png)
 
-![](../.gitbook/assets/image%20%28145%29.png)
+![](../.gitbook/assets/image%20%28147%29.png)
 
 #### Example: 
 
@@ -183,7 +183,7 @@ In a single episode, the same action is selected from the same action multiple t
 * Every-visit MC Prediction:  average the returns of all visits to each state-action pair
 * First-visit MC Prediction: consider only the first visit to the state-action pair
 
-![](../.gitbook/assets/image%20%28142%29.png)
+![](../.gitbook/assets/image%20%28144%29.png)
 
 ### Greedy Policy and Epsilon Greedy Policy
 
@@ -237,19 +237,27 @@ TD learning is a combination of Monte Carlo ideas and dynamic programming \(DP\)
 >
 > TD:  update Q-table at every step,  model-free,
 
-![](../.gitbook/assets/image%20%28139%29.png)
+![](../.gitbook/assets/image%20%28141%29.png)
 
 ![](../.gitbook/assets/image%20%28122%29.png)
 
 ### 
 
-![](../.gitbook/assets/image%20%28144%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 ### Sarsa\(0\)
 
 ![](../.gitbook/assets/image%20%28134%29.png)
 
 ### Q-Learning \( Sarsamax\)
+
+Chooses the Action, after updating the Q-table at each step.
+
+![](../.gitbook/assets/image%20%28135%29.png)
+
+![](../.gitbook/assets/image%20%28138%29.png)
+
+
 
 
 
