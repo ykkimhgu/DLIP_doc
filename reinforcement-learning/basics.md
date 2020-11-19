@@ -2,6 +2,12 @@
 
 ## Introduction
 
+![](../.gitbook/assets/image%20%28165%29.png)
+
+![](../.gitbook/assets/image%20%28171%29.png)
+
+![](../.gitbook/assets/image%20%28166%29.png)
+
 ![](../.gitbook/assets/image%20%28157%29.png)
 
 ![](../.gitbook/assets/image%20%28155%29.png)
@@ -127,6 +133,9 @@ Then, how to find the optimal policy? There are numbers of different policy. How
 * A better policy if **all** state has equal or better values
   * some policies may not be able to be compared
 * Optimal policy may not be unique
+* From the best value-state function
+
+![](../.gitbook/assets/image%20%28169%29.png)
 
 ![](../.gitbook/assets/image%20%28126%29.png)
 
@@ -136,7 +145,13 @@ Then, how to find the optimal policy? There are numbers of different policy. How
 
 At that state s, there could be multiple choices of action to take for the given policy.  
 
-The optimal action-value function is denoted as :   q\*
+The optimal action-value function is denoted as :   q\*. It tells the best action to take for being in that state s.
+
+#### Action-value vs State-value
+
+![](../.gitbook/assets/image%20%28162%29.png)
+
+![](../.gitbook/assets/image%20%28161%29.png)
 
 ![](../.gitbook/assets/image%20%2897%29.png)
 
@@ -165,6 +180,26 @@ That maximizes the action-value function for each state can be found from the ta
 There can be multiple actions as in S3:  either a1 or a2.  We can give  probability p,q for each of them and '0' probability for the other actions. 
 
 ![](../.gitbook/assets/image%20%28114%29.png)
+
+## Value Iteration vs Policy Iteration
+
+Assume an MDP small discrete state-action spaces. Given an MDP \(S,A,P, R, gamma, H\), find the optimal policy PI\*
+
+![](../.gitbook/assets/image%20%28164%29.png)
+
+#### Value Iteration
+
+Iteratively update estimates of Q\(s\) and V\(s\) until they converge. Then, update the policy.
+
+![Pseudo code for value-iteration algorithm. Credit: Alpaydin Introduction to Machine Learning, 3rd edition.](../.gitbook/assets/image%20%28168%29.png)
+
+![](../.gitbook/assets/image%20%28163%29.png)
+
+#### Policy Iteration
+
+Policy can converge before the value function.  Redefine the policy at each step. Repeat until policy converges
+
+![](../.gitbook/assets/image%20%28170%29.png)
 
 ## Monte Carlo
 
