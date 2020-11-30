@@ -131,3 +131,8 @@
 
 * [Introduction](unsupervised-learning/introduction.md)
 
+## Unclassified
+
+* [Ethics](unclassified/ethics.md)
+* [Untitled](unclassified/untitled.md)
+

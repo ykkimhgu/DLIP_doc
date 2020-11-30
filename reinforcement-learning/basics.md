@@ -323,9 +323,9 @@ RL Cheat sheet- Udacity
 
 ## QnA
 
-Difference between max and argmax?
+Difference between max and argmax for f\(x\) , for x in domain D.
 
-> max is the unique value :  -x^2
+> max is the unique value of output\(x\):  -x^2
 >
-> argmax is a set of values for the maximum value:  e.g.  sinX
+> argmax is a set of values of x that give the maximum value:  e.g.  sinX
 
