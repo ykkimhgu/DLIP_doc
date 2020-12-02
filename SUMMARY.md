@@ -23,6 +23,7 @@
     * [Deep Learning State of the Art](deep-learning-for-perception/dl_intro/overview-of-deep-learning/some-notes.md)
   * [Basics](deep-learning-for-perception/dl_intro/notes/README.md)
     * [Forward Network](deep-learning-for-perception/dl_intro/notes/back-propagation.md)
+    * [Types of Convolution](deep-learning-for-perception/dl_intro/notes/types-of-convolution.md)
     * [Perceptron](deep-learning-for-perception/dl_intro/notes/perceptron.md)
     * [Back Propagation](deep-learning-for-perception/dl_intro/notes/back-propagation-1.md)
     * [DL Techniques](deep-learning-for-perception/dl_intro/notes/dl-resources/README.md)
