@@ -185,7 +185,15 @@ Introduced in AlexNet\(2012\), to do parallel convolutions.  The filters are sep
 
 ### Shuffled Grouped Convolution
 
-Introduced by[ ShuffleNet\(2017\)](https://arxiv.org/abs/1707.01083) for computation -efficient convolution.
+Introduced by[ ShuffleNet\(2017\)](https://arxiv.org/abs/1707.01083) for computation -efficient convolution. The idea is mixing up the information from different filter groups to connect the information flow between the channel groups. 
 
 Read [this blog ](https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f)for the paper explanations
+
+![Channel shuffle.](../../../.gitbook/assets/image%20%28199%29.png)
+
+### Pointwise grouped convolution
+
+The group operation is performed on the 3x3 spatial convolution, but not on 1 x 1 convolution. The ShuffleNet suggested 1x1 convolution on Group convolution
+
+> Group convolution of 1x1 filters instead of NxN filters \(N&gt;1\).
 
