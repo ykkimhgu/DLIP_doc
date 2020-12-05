@@ -22,7 +22,7 @@
 
 Maximize the expected\(upcoming future\) cumulative reward. What is and how to get the future or expected reward?
 
-![](../.gitbook/assets/image%20%28129%29.png)
+![](../.gitbook/assets/image%20%28129%29%20%281%29.png)
 
 ![](../.gitbook/assets/image%20%2896%29.png)
 
@@ -124,7 +124,7 @@ In calculating for the values of state-value functions for given policy, we can 
 
 ![](../.gitbook/assets/image%20%28136%29.png)
 
-![](../.gitbook/assets/image%20%28146%29.png)
+![](../.gitbook/assets/image%20%28146%29%20%281%29.png)
 
 ### An Optimal Policy
 
@@ -149,7 +149,7 @@ The optimal action-value function is denoted as :   q\*. It tells the best actio
 
 #### Action-value vs State-value
 
-![](../.gitbook/assets/image%20%28162%29.png)
+![](../.gitbook/assets/image%20%28167%29.png)
 
 ![](../.gitbook/assets/image%20%28161%29.png)
 
@@ -211,7 +211,7 @@ How to interact with the environment to find the optimal policy? Which action is
 
 Q\(s,a\), q values from the action-value functions for given policy. 
 
-![](../.gitbook/assets/image%20%28121%29.png)
+![](../.gitbook/assets/image%20%28148%29.png)
 
 #### MC Prediction
 

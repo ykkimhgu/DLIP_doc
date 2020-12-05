@@ -16,10 +16,12 @@
 
 ## Deep Learning for Perception
 
+* [Hardware](deep-learning-for-perception/hardware.md)
+* [Dataset](deep-learning-for-perception/dataset.md)
 * [Tutorial for Deep Learning](deep-learning-for-perception/tutorial.md)
 * [DL Lectures](deep-learning-for-perception/dl_intro/README.md)
   * [Online Course and Resources](deep-learning-for-perception/dl_intro/dl_courses/README.md)
-    * [Books](deep-learning-for-perception/dl_intro/dl_courses/books.md)  
+    * [Books](deep-learning-for-perception/dl_intro/dl_courses/books.md)
     * [YouTube channels for DL](deep-learning-for-perception/dl_intro/dl_courses/youtube-channels-for-dl.md)
     * [Resources](deep-learning-for-perception/dl_intro/dl_courses/resources.md)
   * [Overview of Deep Learning](deep-learning-for-perception/dl_intro/overview-of-deep-learning/README.md)
@@ -49,6 +51,7 @@
 
 ## Deep Learning Framework
 
+* [Framework](deep-learning-framework/framework.md)
 * [TensorFlow](deep-learning-framework/tensorflow/README.md)
   * [Install](deep-learning-framework/tensorflow/install_tf.md)
   * [Cheat Sheet](deep-learning-framework/tensorflow/install_tf-1.md)
