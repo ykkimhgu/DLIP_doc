@@ -50,5 +50,5 @@ Using the previous AND, NAND, OR gates with perceptrons, we can build **XOR**
 
 ![](../../../.gitbook/assets/image%20%28220%29.png)
 
-
+## Activation Function
 
