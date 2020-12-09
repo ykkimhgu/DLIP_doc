@@ -35,12 +35,22 @@ Using 3x3 kernel.  from 5x5=25 input features --&gt; 3x3=9 output.
 Common techniques in convolution
 
 * Padding: pad the edges with '0','1' or other values 
+* With padding: WxHxC --&gt; WxHxC 
+* Without padding: WxHxC -&gt; \(W-w+1\)x\(H-h+1\)xC
+
+![ Two-dimensional cross-correlation with padding](https://d2l.ai/_images/conv-pad.svg)
+
+image from[ here](https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html) 
 
 ![Same padding\[1\]](../../../.gitbook/assets/image%20%28186%29.png)
 
 * Striding: skip some of the slide locations
-* 
-![A stride 2 convolution\[1\]](../../../.gitbook/assets/image%20%28179%29.png)
+* ⌊\(nh−kh+ph+sh\)/sh⌋×⌊\(nw−kw+pw+sw\)/sw⌋.
+* With padding: WxHxC  \(W+S-1\)/S x \(H+S-1\)/S x C Without padding: WxHxC  \(W-w+S\)/S x \(H-h+S\)/S xC
+
+![Cross-correlation with strides of 3 and 2 for height and width, respectively. ](../../../.gitbook/assets/image%20%28234%29.png)
+
+![A stride 2 convolution w/o padding \[1\]](../../../.gitbook/assets/image%20%28179%29.png)
 
 #### Filter vs Kernel
 
@@ -65,6 +75,8 @@ Then, three channels are summed by element-wise addition to form one single chan
 ![](../../../.gitbook/assets/image%20%28185%29.png)
 
 ![Another way to think about 2D convolution: thinking of the process as sliding a 3D filter matrix through the input layer. Notice that the input layer and the filter have the same depth \(channel number = kernel number\). The 3D filter moves only in 2-direction, height &amp; width of the image \(That&#x2019;s why such operation is called as 2D convolution although a 3D filter is used to process 3D volumetric data\). The output is a one-layer matrix](../../../.gitbook/assets/image%20%28177%29.png)
+
+![](../../../.gitbook/assets/image%20%28229%29.png)
 
 ### 3D Convolution
 
