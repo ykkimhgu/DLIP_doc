@@ -4,7 +4,7 @@ Krizhevsky, Sutskever, Hinton, “Imagenet classification with deep convolutiona
 
 AlexNet is the winner of **ImageNet Large Scale Visual Recognition Challenge \(ILSVRC\) 2012**.
 
-![](../../.gitbook/assets/image%20%28239%29.png)
+![](../../.gitbook/assets/image%20%28240%29.png)
 
 Prior to ILSVRC 2012, competitors mostly used feature engineering techniques combined with a classifier \(i.e SVM\).
 
@@ -169,7 +169,7 @@ With the whole network **compared with a net with only half of kernels** \(only 
 **Dropout**  
 
 
-![](../../.gitbook/assets/image%20%28238%29.png)
+![](../../.gitbook/assets/image%20%28239%29.png)
 
 Instead of Combining the predictions of many different models , Dropout makes the neural network samples a different architecture, but all these architectures share weights
 
