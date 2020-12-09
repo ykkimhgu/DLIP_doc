@@ -19,6 +19,7 @@
 * [Hardware](deep-learning-for-perception/hardware.md)
 * [Dataset](deep-learning-for-perception/dataset.md)
 * [Tutorial for Deep Learning](deep-learning-for-perception/tutorial/README.md)
+  * [AlexNet Tutorial](deep-learning-for-perception/tutorial/alexnet-tutorial.md)
   * [LeNet-5 Tutorial](deep-learning-for-perception/tutorial/lenet-5-tutorial.md)
 * [DL Lectures](deep-learning-for-perception/dl_intro/README.md)
   * [Online Course and Resources](deep-learning-for-perception/dl_intro/dl_courses/README.md)
