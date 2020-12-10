@@ -23,6 +23,13 @@ Follow the tutorials in the following orders
 
 1. [How to train and test **your own dataset**](https://www.pyimagesearch.com/2018/09/10/keras-tutorial-how-to-get-started-with-keras-deep-learning-and-python/) 
 
+### Keras Model Zoo: 
+
+[Collection of pretrained models: click here](https://modelzoo.co/framework/keras)
+
+* [YOLOv3 in Keras](https://modelzoo.co/model/keras-yolov3)
+* [SSD in Keras](https://modelzoo.co/model/single-shot-multibox-detector-keras)
+
 ### Other Tutorials
 
 {% embed url="https://medium.com/analytics-vidhya/a-start-to-finish-guide-to-building-deep-neural-networks-in-keras-3d54de097a75" %}
