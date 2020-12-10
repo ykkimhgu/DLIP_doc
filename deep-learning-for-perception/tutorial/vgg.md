@@ -1,12 +1,22 @@
 # VGG
 
-## VGG16
+## Introduction
 
 **Reference**
 
 * [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556) \(ICLR 2015\)
 
 By default, it loads weights pre-trained on ImageNet. Check 'weights' for other options.
+
+### VGG-16
+
+![](../../.gitbook/assets/image%20%28243%29.png)
+
+![](../../.gitbook/assets/image%20%28238%29.png)
+
+### VGG-19
+
+![](../../.gitbook/assets/image%20%28235%29.png)
 
 ## Keras
 

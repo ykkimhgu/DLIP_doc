@@ -16,7 +16,7 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-![](../../../.gitbook/assets/image%20%28241%29.png)
+![](../../../.gitbook/assets/image%20%28244%29.png)
 
 check the image file
 
@@ -40,7 +40,7 @@ plt.imshow(img)
 
 #### Method 2: How to upload an image from local drive
 
-![](../../../.gitbook/assets/image%20%28238%29.png)
+![](../../../.gitbook/assets/image%20%28240%29.png)
 
 ## Loading dataset in CoLab
 

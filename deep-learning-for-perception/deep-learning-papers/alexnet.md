@@ -4,13 +4,13 @@ Krizhevsky, Sutskever, Hinton, “Imagenet classification with deep convolutiona
 
 AlexNet is the winner of **ImageNet Large Scale Visual Recognition Challenge \(ILSVRC\) 2012**.
 
-![](../../.gitbook/assets/image%20%28240%29.png)
+![](../../.gitbook/assets/image%20%28242%29.png)
 
 Prior to ILSVRC 2012, competitors mostly used feature engineering techniques combined with a classifier \(i.e SVM\).
 
 **AlexNet** marked a breakthrough in deep learning where a CNN was used to reduce the error rate in ILSVRC 2012 substantially and achieve the first place of the ILSVRC competition.
 
-![](../../.gitbook/assets/image%20%28236%29.png)
+![](../../.gitbook/assets/image%20%28237%29.png)
 
 **The highlights of this paper**:
 
@@ -169,7 +169,7 @@ With the whole network **compared with a net with only half of kernels** \(only 
 **Dropout**  
 
 
-![](../../.gitbook/assets/image%20%28239%29.png)
+![](../../.gitbook/assets/image%20%28241%29.png)
 
 Instead of Combining the predictions of many different models , Dropout makes the neural network samples a different architecture, but all these architectures share weights
 
