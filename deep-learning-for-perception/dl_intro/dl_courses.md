@@ -1,8 +1,8 @@
-# Online Courses
+# Online Lecture
 
 ## Online Deep Learning Courses 
 
-1. [Coursera: Deep Learning Specialization](https://www.deeplearning.ai/deep-learning-specialization/)
+1. [Deeplearning.ai\(coursera\):  Deep Learning Specialization](https://www.deeplearning.ai/deep-learning-specialization/)
    * [Youtube lectures](https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w/playlists)
    * [Tutorial](https://www.deeplearning.ai/ai-notes/)
 2. [MIT Intro. Deep Learning](http://introtodeeplearning.com/)
@@ -11,22 +11,11 @@
 3. [Stanford CS213n](http://cs231n.stanford.edu/)
    * [Youtube lectures](https://youtu.be/vT1JzLTH4G4)
    * [Lecture Note](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture1.pdf)
+4. Reinforcement Learning
+   * David Silver: Intro. to Reinforcement Learning
+   * OpenAI
 
-![](../../.gitbook/assets/image%20%2819%29.png)
-
-![](../../.gitbook/assets/image%20%2815%29.png)
-
-## Deep Learning Books
-
-Online free textbook:  Deep Learning by  Ian Goodfellow and Yoshua Bengio and Aaron Courville
-
-{% embed url="https://www.deeplearningbook.org" %}
-
-Offline books:
-
-![](../../.gitbook/assets/image%20%2821%29.png)
-
-## Recommended Schedule for Coursera
+### Recommended Schedule for Coursera
 
 #### Coursera lectures in 5 weeks
 
@@ -57,7 +46,31 @@ Offline books:
   * End to End Deep Learning for Autonomous Driving on AirSim
   * Lane Detection on AirSim
 
-### Resources
+## Youtube Channel on CNN
 
-* [ng](https://microscope.openai.com/models)
+### [Lex Fridman](https://www.youtube.com/user/lexfridman)​
+
+‌Lex Fridman is a professor at MIT, teachingDeep Learning.‌ The videos on this channel include conversations with extraordinary individuals that are pioneers or top researchers of AI fields‌  Also, includes MIT lectures series on Deep Learning: Deep Reinforcement Learning, RNN, CNN , Self-Driving Cars etc​
+
+{% embed url="https://www.youtube.com/c/lexfridman/featuredwww.youtube.com‌" %}
+
+
+
+### [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)​
+
+‌You can get an excellent **explanation on research papers covering the state of the art machine learning techniques,** including DETR, DQN.​[Yannic KilcherI make videos about machine learning research papers, programming, and issues of the AI community and the broader impact of AI in society. Twitter: https://t...www.youtube.com](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)‌
+
+{% embed url="https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew" %}
+
+
+
+### [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)​
+
+‌Excellent explanations on topics such as linear algebra, calculus, and partial differentiation. When studying Neural Networks. It is also essential to understand concepts such as [backpropagation](https://www.youtube.com/watch?v=Ilg3gGewQ5U&t=635s), [gradient descent](https://www.youtube.com/watch?v=IHZwWFHWa-w&t=2s&ab_channel=3Blue1Brown), and [neural networks in general](https://www.youtube.com/watch?v=aircAruvnKk).​
+
+{% embed url="https://www.youtube.com/channel/UCYO\_jab\_esuFRV4b17AJtAwwww.youtube.com" %}
+
+
+
+**​**
 

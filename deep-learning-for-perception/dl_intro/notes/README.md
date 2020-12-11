@@ -1,4 +1,4 @@
-# Basics
+# notes
 
 ### Perceptron
 
