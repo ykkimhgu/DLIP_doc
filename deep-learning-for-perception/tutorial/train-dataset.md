@@ -82,3 +82,11 @@ plt.legend(["Accuracy","Validation Accuracy","loss","Validation Loss"])
 plt.show()
 ```
 
+## Further resource
+
+[Tutorial: How to retune from pretrained model \(transfer learning\): VGG](https://www.youtube.com/watch?v=H8sXcAXrGR4&feature=youtu.be)
+
+* [https://github.com/Hvass-Labs/TensorFlow-Tutorials](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
+* 
+
+

@@ -1,8 +1,10 @@
 # Tutorial for Deep Learning
 
-## A list of Machine Learning Tutorial
+## Machine Learning Tutorial
 
-{% embed url="https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc" %}
+#### [Over 200 of the Best Machine Learning, NLP, and Python Tutorials](https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc)
+
+#### 
 
 ## Programming Tutorial
 
@@ -45,6 +47,8 @@
 [Implementing a CNN for Text Classification in TensorFlow](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/) \(wildml.com\)
 
 [How to Run Text Summarization with TensorFlow](http://pavel.surmenok.com/2016/10/15/how-to-run-text-summarization-with-tensorflow/) \(surmenok.com\)
+
+[Tutorial of Tensorflow with Youtube](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
 
 ### Scipy and numpy <a id="347e"></a>
 

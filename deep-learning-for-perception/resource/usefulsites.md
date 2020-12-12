@@ -2,6 +2,8 @@
 
 ### Useful resources for Deep Learning and Machine Learning
 
+#### Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data: [click here](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
+
 #### Drawing and Visualizing DNN 
 
 * **Simple diagrams of convoluted neural networks** [https://medium.com/inbrowserai/simple-diagrams-of-convoluted-neural-networks-39c097d2925b](https://medium.com/inbrowserai/simple-diagrams-of-convoluted-neural-networks-39c097d2925b)
