@@ -46,6 +46,7 @@
     * [Bias vs Variance](deep-learning-for-perception/dl_intro/notes/bias-vs-variance.md)
     * [DL Techniques](deep-learning-for-perception/dl_intro/notes/dl-resources/README.md)
       * [Technical Strategy by A.Ng](deep-learning-for-perception/dl_intro/notes/dl-resources/technical-strategy.md)
+* [Object Detection](deep-learning-for-perception/object-detection.md)
 * [Must Read Papers](deep-learning-for-perception/deep-learning-papers/README.md)
   * [ShuffleNet](deep-learning-for-perception/deep-learning-papers/shufflenet.md)
   * [ResNet](deep-learning-for-perception/deep-learning-papers/resnet.md)
