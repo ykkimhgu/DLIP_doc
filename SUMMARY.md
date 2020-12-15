@@ -28,6 +28,7 @@
   * [AlexNet Tutorial](deep-learning-for-perception/tutorial/alexnet-tutorial.md)
   * [LeNet-5 Tutorial](deep-learning-for-perception/tutorial/lenet-5-tutorial.md)
   * [VGG Tutorial](deep-learning-for-perception/tutorial/vgg.md)
+  * [ResNet Tutorial](deep-learning-for-perception/tutorial/resnet-tutorial.md)
 * [DL Lectures](deep-learning-for-perception/dl_intro/README.md)
   * [Online Lecture](deep-learning-for-perception/dl_intro/dl_courses.md)
   * [notes](deep-learning-for-perception/dl_intro/notes/README.md)

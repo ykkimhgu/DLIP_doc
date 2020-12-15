@@ -112,7 +112,9 @@ model.summary()
 
 
 
-### Building from scratch
+### Building from scratch:
+
+Implementation by PyTorch: [Vgg.py](https://github.com/pytorch/vision/blob/master/torchvision/models/vgg.py)
 
 
 
