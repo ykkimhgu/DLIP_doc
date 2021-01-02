@@ -1,4 +1,4 @@
-# Image Processing Part 1
+# Image Processing
 
 
 
