@@ -12,8 +12,8 @@
 ## Image Processing with DL
 
 * [Syllabus](image-processing-with-dl/image-processing-with-deep-learning.md)
-* [Image Processing Part 1](image-processing-with-dl/image-processing-part-1.md)
-* [Model n Calibration](image-processing-with-dl/model-n-calibration.md)
+* [Image Processing Part 1](image-processing-with-dl/image-processing-part-1/README.md)
+  * [Model n Calibration](image-processing-with-dl/image-processing-part-1/model-n-calibration.md)
 
 ## Deep Learning for Perception
 
