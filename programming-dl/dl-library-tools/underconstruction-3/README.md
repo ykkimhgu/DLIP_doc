@@ -1,6 +1,6 @@
 # MATPlot
 
-### Install
+## Install
 
 `conda install -c conda-forge matplotlib`
 

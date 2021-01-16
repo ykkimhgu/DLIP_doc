@@ -1,6 +1,6 @@
 # Online Lecture
 
-## Online Deep Learning Courses 
+## Online Deep Learning Courses
 
 1. [Deeplearning.ai\(coursera\):  Deep Learning Specialization](https://www.deeplearning.ai/deep-learning-specialization/)
    * [Youtube lectures](https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w/playlists)
@@ -50,27 +50,21 @@
 
 ### [Lex Fridman](https://www.youtube.com/user/lexfridman)​
 
-‌Lex Fridman is a professor at MIT, teachingDeep Learning.‌ The videos on this channel include conversations with extraordinary individuals that are pioneers or top researchers of AI fields‌  Also, includes MIT lectures series on Deep Learning: Deep Reinforcement Learning, RNN, CNN , Self-Driving Cars etc​
+‌Lex Fridman is a professor at MIT, teachingDeep Learning.‌ The videos on this channel include conversations with extraordinary individuals that are pioneers or top researchers of AI fields‌ Also, includes MIT lectures series on Deep Learning: Deep Reinforcement Learning, RNN, CNN , Self-Driving Cars etc​
 
-{% embed url="https://www.youtube.com/c/lexfridman/featuredwww.youtube.com‌" %}
-
-
+{% embed url="https://www.youtube.com/c/lexfridman/featuredwww.youtube.com‌" caption="" %}
 
 ### [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)​
 
 ‌You can get an excellent **explanation on research papers covering the state of the art machine learning techniques,** including DETR, DQN.​[Yannic KilcherI make videos about machine learning research papers, programming, and issues of the AI community and the broader impact of AI in society. Twitter: https://t...www.youtube.com](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)‌
 
-{% embed url="https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew" %}
-
-
+{% embed url="https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew" caption="" %}
 
 ### [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)​
 
 ‌Excellent explanations on topics such as linear algebra, calculus, and partial differentiation. When studying Neural Networks. It is also essential to understand concepts such as [backpropagation](https://www.youtube.com/watch?v=Ilg3gGewQ5U&t=635s), [gradient descent](https://www.youtube.com/watch?v=IHZwWFHWa-w&t=2s&ab_channel=3Blue1Brown), and [neural networks in general](https://www.youtube.com/watch?v=aircAruvnKk).​
 
-{% embed url="https://www.youtube.com/channel/UCYO\_jab\_esuFRV4b17AJtAwwww.youtube.com" %}
-
-
+{% embed url="https://www.youtube.com/channel/UCYO\_jab\_esuFRV4b17AJtAwwww.youtube.com" caption="" %}
 
 **​**
 

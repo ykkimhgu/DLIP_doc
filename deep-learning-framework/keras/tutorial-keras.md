@@ -11,7 +11,7 @@ Follow the tutorials in the following orders
      * [source from github](https://github.com/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb) ,  [run on colab](https://colab.research.google.com/github/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb)
    * original tutorial
      * [source  from github](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py) ,  [run on colab](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb)
-2.  **Image classification from scratch**
+2. **Image classification from scratch**
    * modified tutorial
      * [ source from github](https://github.com/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/Keras_tutorial_image_classification_from_scratch.ipynb)
    * original tutorial
@@ -23,7 +23,7 @@ Follow the tutorials in the following orders
 
 1. [How to train and test **your own dataset**](https://www.pyimagesearch.com/2018/09/10/keras-tutorial-how-to-get-started-with-keras-deep-learning-and-python/) 
 
-### Keras Model Zoo: 
+### Keras Model Zoo:
 
 [Collection of pretrained models: click here](https://modelzoo.co/framework/keras)
 
@@ -32,9 +32,7 @@ Follow the tutorials in the following orders
 
 ### Other Tutorials
 
-{% embed url="https://medium.com/analytics-vidhya/a-start-to-finish-guide-to-building-deep-neural-networks-in-keras-3d54de097a75" %}
-
-
+{% embed url="https://medium.com/analytics-vidhya/a-start-to-finish-guide-to-building-deep-neural-networks-in-keras-3d54de097a75" caption="" %}
 
 ## Exercise
 
@@ -77,7 +75,6 @@ Follow the tutorials in the following orders
 | [EfficientNetB6](https://keras.io/api/applications/efficientnet/#efficientnetb6-function) | 166 MB | - | - | 43,265,143 | - |
 | [EfficientNetB7](https://keras.io/api/applications/efficientnet/#efficientnetb7-function) | 256 MB | - | - | 66,658,687 | - |
 
-  
 The top-1 and top-5 accuracy refers to the model's performance on the ImageNet validation dataset.
 
 Depth refers to the topological depth of the network. This includes activation layers, batch normalization layers etc.
@@ -91,6 +88,4 @@ Depth refers to the topological depth of the network. This includes activation l
 ### Squeeze Net
 
 ### YOLOv3
-
-
 

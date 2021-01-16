@@ -11,9 +11,7 @@ Source file needed
 
 ### Dataset
 
-#### Download directly from Keras 
-
-
+#### Download directly from Keras
 
 ### CNN model
 
@@ -31,20 +29,17 @@ from keras.layers.normalization import BatchNormalization
 # Define your model
 def MYMODEL(weights_path=None):
     model = Sequential()
-    
+
     # architecture goes here
     model.add(Conv2D(input_shape=(224,224,3),filters=64,kernel_size=(3,3),padding="same", activation="relu"))
-    
+
     if weights_path:
     model.load_weights(weights_path)
 
     return model
-
 ```
 
 ## Train model
-
-
 
 Read dataset
 
@@ -88,5 +83,3 @@ plt.show()
 
 * [https://github.com/Hvass-Labs/TensorFlow-Tutorials](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
 * 
-
-

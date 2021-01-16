@@ -6,8 +6,6 @@ Learn how to test the pretrained model with validation dataset.
 
 ## My Model
 
-
-
 Prediction output
 
 ```text

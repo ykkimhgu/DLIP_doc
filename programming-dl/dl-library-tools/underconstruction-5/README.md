@@ -1,6 +1,6 @@
 # SciPy, scikit-learn
 
-### Install
+## Install
 
 `conda install -c anaconda scikit-learn`
 

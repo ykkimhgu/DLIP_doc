@@ -18,7 +18,7 @@ In this tutorial, you will learn how to train and test an end-to-end deep learni
 
 Here's a short sample of the model in action:
 
-![car-driving](../../../.gitbook/assets/car_driving.gif)
+![car-driving](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/car_driving.gif)
 
 #### Demo
 
@@ -26,7 +26,7 @@ Here's a short sample of the model in action:
 
 #### Demonstration
 
-{% youtube src="[https://www.youtube.com/watch?v=cFtnflNe5fM"}](https://www.youtube.com/watch?v=cFtnflNe5fM"})
+{% youtube src="\[[https://www.youtube.com/watch?v=cFtnflNe5fM"}\]\(https://www.youtube.com/watch?v=cFtnflNe5fM"}](https://www.youtube.com/watch?v=cFtnflNe5fM"}]%28https://www.youtube.com/watch?v=cFtnflNe5fM"})\)
 
 {% embed url="https://www.youtube.com/watch?v=CauKo089zm0&feature=youtu.be" caption="" %}
 
@@ -106,9 +106,9 @@ You should also be comfortable with Python. At the very least, you should be abl
 
 We have created a standalone build of the AirSim simulation environment for the tutorials in this cookbook. [You can download the build package from here](https://airsimtutorialdataset.blob.core.windows.net/e2edl/AD_Cookbook_AirSim.7z). Consider using [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy), as the file size is large. After downloading the package, unzip it and run the PowerShell command
 
-`.\AD_Cookbook_Start_AirSim.ps1 landscape` 
+`.\AD_Cookbook_Start_AirSim.ps1 landscape`
 
-![lanscape](../../../.gitbook/assets/tutorial_ADcook1.png)
+![lanscape](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/tutorial_ADcook1.png)
 
 to start the simulator in the landscape environment.
 
@@ -122,7 +122,7 @@ If you do not have a GPU available, you can spin up a [Deep Learning VM on Azure
 
 The dataset for the model is quite large. [You can download it from here](https://aka.ms/AirSimTutorialDataset). The first notebook will provide guidance on how to access the data once you have downloaded it. The final uncompressed data set size is approximately 3.25GB \(which although is nothing compared to the petabytes of data needed to train an actual self-driving car, should be enough for the purpose of this tutorial\).
 
-![dataset](../../../.gitbook/assets/tutorial_ADcook_dataset.png)
+![dataset](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/tutorial_ADcook_dataset.png)
 
 ### A note from the curators
 

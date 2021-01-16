@@ -1,6 +1,6 @@
 # Pandas
 
-### Install
+## Install
 
 `conda install -c anaconda pandas`
 

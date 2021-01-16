@@ -1,23 +1,20 @@
 # MATLAB-OpenCV
 
-### Using OpenCV in Matlab 
+## Using OpenCV in Matlab
 
-  
 **Computer Vision Toolbox OpenCV Interface**
 
 {% hint style="info" %}
-**Requirement:  Computer Vision Toolbox**
+**Requirement: Computer Vision Toolbox**
 {% endhint %}
 
-The Computer Vision System Toolbox OpenCV Interface enables you to bring existing OpenCV files and projects into MATLAB using MEX. The support package includes:   
-• Data type conversions between MATLAB and OpenCV   
-• Examples showing how to interface OpenCV and MATLAB   
-Opening the .mlpkginstall file from your operating system or from within MATLAB will initiate the installation process available for the release you have. This .mlpkginstall file is functional for R2014b and beyond.   
+The Computer Vision System Toolbox OpenCV Interface enables you to bring existing OpenCV files and projects into MATLAB using MEX. The support package includes:  
+• Data type conversions between MATLAB and OpenCV  
+• Examples showing how to interface OpenCV and MATLAB  
+Opening the .mlpkginstall file from your operating system or from within MATLAB will initiate the installation process available for the release you have. This .mlpkginstall file is functional for R2014b and beyond.  
 Watch this video to learn more about the package: [http://youtu.be/BasC2jkgyaM](http://youtu.be/BasC2jkgyaM)
 
-
-
-{% embed url="http://youtu.be/BasC2jkgyaM" %}
+{% embed url="http://youtu.be/BasC2jkgyaM" caption="" %}
 
 **How to Install**
 
@@ -56,11 +53,9 @@ testORBFeaturesOCV.m
 
 * Refer to  **MATLAB\_OpenCV examples**
 
-{% embed url="https://www.mathworks.com/help/vision/ug/opencv-interface\_bujcprv.html\#bujcpsp" %}
+{% embed url="https://www.mathworks.com/help/vision/ug/opencv-interface\_bujcprv.html\#bujcpsp" caption="" %}
 
 * Read  **OpenCV with MATLAB** for more info
 
-{% embed url="https://www.mathworks.com/discovery/matlab-opencv.html" %}
-
-
+{% embed url="https://www.mathworks.com/discovery/matlab-opencv.html" caption="" %}
 

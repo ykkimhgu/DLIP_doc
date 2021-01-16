@@ -13,9 +13,7 @@ Overview of LeNet: click here
 * Input: 32x32x1
   * MNIST image is 28x28.  MNIST is padded to 32
 
-![](../../.gitbook/assets/image%20%28231%29.png)
-
-
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28231%29.png)
 
 ### LeNet-5 layers: <a id="d723"></a>
 
@@ -55,9 +53,7 @@ model.add(layers.Dense(units=10, activation = 'softmax'))
 
 [Sample code: click here](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
 
-> Originally CONV 5x5.  Some code use CONV 3x3
-
-
+> Originally CONV 5x5. Some code use CONV 3x3
 
 ```python
 class Net(nn.Module):
