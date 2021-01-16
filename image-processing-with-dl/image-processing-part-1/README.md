@@ -1,7 +1,5 @@
 # Image Processing
 
-
-
 **Introduction to Image Processing**
 
 **Optics / Calibration**

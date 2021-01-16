@@ -8,13 +8,13 @@ Read about VGG: click here
 
 ### VGG-16
 
-![](../../.gitbook/assets/image%20%28243%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28243%29.png)
 
-![](../../.gitbook/assets/image%20%28238%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28238%29.png)
 
 ### VGG-19
 
-![](../../.gitbook/assets/image%20%28235%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28235%29.png)
 
 ## Keras
 
@@ -50,18 +50,15 @@ display(preds.shape)
 idx=np.argmax(preds)
 score=preds[0][idx]
 display(idx, score)
-
 ```
 
 ### Building from scratch
 
-[VGG-16: My Keras code](https://colab.research.google.com/drive/1TUI3WX639yajO0Hf6KW-GsQ8VCZxPFod?usp=sharing),  [VGG-16 weight file](https://drive.google.com/u/1/uc?id=0Bz7KyqmuGsilT0J5dmRCM0ROVHc&export=download)
+[VGG-16: My Keras code](https://colab.research.google.com/drive/1TUI3WX639yajO0Hf6KW-GsQ8VCZxPFod?usp=sharing), [VGG-16 weight file](https://drive.google.com/u/1/uc?id=0Bz7KyqmuGsilT0J5dmRCM0ROVHc&export=download)
 
 [Read this blog for step by step tutorial](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 
-
-
-![](../../.gitbook/assets/image%20%28252%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28252%29.png)
 
 ```python
 #Importing library
@@ -110,15 +107,7 @@ model.summary()
 
 ### Pretrained model:
 
-
-
 ### Building from scratch:
 
 Implementation by PyTorch: [Vgg.py](https://github.com/pytorch/vision/blob/master/torchvision/models/vgg.py)
-
-
-
-
-
-
 

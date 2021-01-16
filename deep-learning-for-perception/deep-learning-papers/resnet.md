@@ -6,25 +6,25 @@ Since AlexNet, the state-of-the-art CNN architecture is going deeper and deeper.
 
 Deep networks are hard to train because of the notorious vanishing gradient problem — as the gradient is back-propagated to earlier layers, repeated multiplication may make the gradient infinitively small.
 
-![](../../.gitbook/assets/image%20%28278%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28278%29.png)
 
- ResNets solve is the famous known vanishing gradient.  With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
+ResNets solve is the famous known vanishing gradient. With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
 
 The core idea of ResNet is introducing a so-called “identity shortcut connection” that skips one or more layers
 
 ## Residual Block
 
-The stacked layers fit a residual mapping is easier than letting them directly fit the desired underlaying mapping.  With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
+The stacked layers fit a residual mapping is easier than letting them directly fit the desired underlaying mapping. With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
 
-![](../../.gitbook/assets/image%20%28272%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28272%29.png)
 
-![](../../.gitbook/assets/image%20%28273%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28273%29.png)
 
 ### Blocks
 
-![Layer 1, block 1](../../.gitbook/assets/image%20%28274%29.png)
+![Layer 1, block 1](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28274%29.png)
 
-![Layer 1](../../.gitbook/assets/image%20%28279%29.png)
+![Layer 1](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28279%29.png)
 
 Down sampling of the volume though the network is achieved by increasing the stride instead of a pooling operation.
 
@@ -32,23 +32,21 @@ Since the volume got modified we need to apply one of our down sampling strategi
 
 ![Layer 2, Block 1](https://miro.medium.com/max/1170/1*Xd-OIT9GRwLaM3F5jdbfzQ.png)
 
-
-
-![Layer 2](../../.gitbook/assets/image%20%28277%29.png)
+![Layer 2](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28277%29.png)
 
 ### Variant of Residual Block
 
 There are several new architectures based on ResNet over years
 
-![variants of residual blocks](../../.gitbook/assets/image%20%28275%29.png)
+![variants of residual blocks](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28275%29.png)
 
 #### Pre-activation variant of residual block \[7\]
 
 K. He, X. Zhang, S. Ren, and J. Sun. Identity Mappings in Deep Residual Networks. arXiv preprint arXiv:1603.05027v3,2016.
 
-The gradients can flow through the shortcut connections to any other earlier layer unimpededly.  
+The gradients can flow through the shortcut connections to any other earlier layer unimpededly.
 
-Performance:  1202-layer ResNet &lt;110-layer Full Pre-activation ResNet
+Performance: 1202-layer ResNet &lt;110-layer Full Pre-activation ResNet
 
 ### ResNeXt <a id="5ce9"></a>
 
@@ -56,12 +54,7 @@ S. Xie, R. Girshick, P. Dollar, Z. Tu and K. He. Aggregated Residual Transformat
 
 Xie et al. \[8\] proposed a variant of ResNet that is codenamed ResNeXt with the following building block:
 
-  
-
-
 ![Imaleft: a building block of \[2\], right: a building block of ResNeXt with cardinality = 32ge for post](https://miro.medium.com/max/1044/1*7JzJ1RGh1Y4VoG1M4dseTw.png)
-
-
 
 This may look familiar to you as it is very similar to the Inception module of \[4\], they both follow the split-transform-merge paradigm, except in this variant, the outputs of different paths are merged by adding them together, while in \[4\] they are depth-concatenated. Another difference is that in \[4\], each path is different \(1x1, 3x3 and 5x5 convolution\) from each other, while in this architecture, all paths share the same topology.
 

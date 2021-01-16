@@ -2,7 +2,7 @@
 
 [Source code \(Jupyter notebook\)](https://github.com/ykkimhgu/gitbook_docs/blob/master/deep-learning-framework/pytorch/neural_networks_tutorial_ykk.ipynb)
 
-### Training an image classifier <a id="Training-an-image-classifier"></a>
+## Training an image classifier <a id="Training-an-image-classifier"></a>
 
 We will do the following steps in order:
 
@@ -12,9 +12,7 @@ We will do the following steps in order:
 4. Train the network on the training data
 5. Test the network on the test data
 
-
-
-### Data Loading
+## Data Loading
 
 ```text
 import torch
@@ -24,9 +22,9 @@ import torchvision.transforms as transforms
 
 > The output of torchvision datasets are PILImage images of range \[0, 1\]. We transform them to Tensors of normalized range \[-1, 1\].
 
-#### Download General Dataset
+### Download General Dataset
 
-{% embed url="https://pytorch.org/docs/stable/torchvision/datasets.html" %}
+{% embed url="https://pytorch.org/docs/stable/torchvision/datasets.html" caption="" %}
 
 ```python
 # Transform: normalize a tensor image wih mead/std
@@ -53,21 +51,21 @@ classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 ```
 
-#### Use Downloaded General Dataset
+### Use Downloaded General Dataset
 
-Change the option `download=False`,  and set the  path \(`root)`where data is stored.
+Change the option `download=False`, and set the path \(`root)`where data is stored.
 
 ```python
 trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
                                         download=False, transform=transform)
-                                        
+
 testset = torchvision.datasets.CIFAR10(root='./data', train=False,
                                        download=False, transform=transform)
 ```
 
-#### User Defined Dataset
+### User Defined Dataset
 
-### Load and Show images\(tensor, color\)
+## Load and Show images\(tensor, color\)
 
 ```python
 import matplotlib.pyplot as plt
@@ -98,7 +96,7 @@ imshow(torchvision.utils.make_grid(images))
 print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 ```
 
-### Define Model
+## Define Model
 
 ```python
 import torch.nn as nn
@@ -128,7 +126,7 @@ class Net(nn.Module):
 net = Net()
 ```
 
-### Define Loss function and Optimization
+## Define Loss function and Optimization
 
 ```python
 import torch.optim as optim
@@ -139,7 +137,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 ```
 
-### Train the network
+## Train the network
 
 ```python
 for epoch in range(2):  # loop over the dataset multiple times
@@ -168,7 +166,7 @@ for epoch in range(2):  # loop over the dataset multiple times
 print('Finished Training')
 ```
 
-### Save model
+## Save model
 
 ```python
 PATH = './cifar_net.pth'
@@ -179,9 +177,9 @@ net = Net()
 net.load_state_dict(torch.load(PATH))
 ```
 
-### Test the network
+## Test the network
 
-#### Show some ground truth of test data
+### Show some ground truth of test data
 
 ```python
 dataiter = iter(testloader)
@@ -192,7 +190,7 @@ imshow(torchvision.utils.make_grid(images))
 print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
 ```
 
-#### Overall accuracy
+### Overall accuracy
 
 ```python
 correct = 0
@@ -206,11 +204,11 @@ with torch.no_grad():
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
-        
+
 print('Accuracy of the network on the %d test images: %d %%' %(len(testloader.dataset), 100 * correct / total))
 ```
 
-#### Evaluate each class
+### Evaluate each class
 
 > numpy.squeeze\(\) function is used when we want to remove single-dimensional entries from the shape of an array.
 
@@ -234,13 +232,11 @@ for i in range(10):
         classes[i], 100 * class_correct[i] / class_total[i]))
 ```
 
-
-
-### Exercise
+## Exercise
 
 * Try increasing the width of your network \(argument 2 of
 
-  the first `nn.Conv2d`, and argument 1 of the second `nn.Conv2d` 
+  the first `nn.Conv2d`, and argument 1 of the second `nn.Conv2d`
 
   they need to be the same number\), see what kind of speedup you get.
 

@@ -4,7 +4,7 @@ description: Case studies of Deep Learning for Perception
 
 # Deep Learning Case Study
 
-### Case Study List
+## Case Study List
 
 1. Face, Eye, Nose Detection 
 2. Gaze detection for drowsiness alert

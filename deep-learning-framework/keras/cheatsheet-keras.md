@@ -2,11 +2,7 @@
 
 &gt; ! create an extensive notebook for this cheat sheet
 
-
-
 ## Keras API cheat sheet
-
-
 
 ### Check Library Version
 
@@ -78,7 +74,7 @@ Example: MS Cats vs Dogs images dataset
 
 * Assume raw data is downloaded and `PetImages` folder with two subfolders, `Cat` and `Dog` is saved locally.
 
-     Example: ~.keras/datasets/PetImages/
+  Example: ~.keras/datasets/PetImages/
 
 ```python
 import os
@@ -140,8 +136,6 @@ plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
 plt.show()
 ```
 
-### 
-
 #### Using Matplotlib
 
 ```text
@@ -160,7 +154,6 @@ print(img.shape)
 # display the array of pixels as an image
 pyplot.imshow(img)
 pyplot.show()
-
 ```
 
 #### Load and plot using PIL <a id="Load-and-plot-using-PIL"></a>
@@ -189,10 +182,10 @@ print(img_array.shape)  # (32=batch,180,180, channel=3)
 print(img_array.dtype)  # float32 
 plt.imshow(img_array.astype("uint8"))
 
-#Convert MAT into Numpy Array   
+#Convert MAT into Numpy Array
 ```
 
-#### Subplot with matplotlib 
+#### Subplot with matplotlib
 
 ```text
 from matplotlib import image
@@ -261,12 +254,11 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
     image_size=image_size,
     batch_size=batch_size,
 )
-
 ```
 
 #### Option 2\) Train Valid Test are divided by folder names manually `flow_from_directory` <a id="Option-2)-Train-Valid-Test-are-divided-by-folder-names-manually--flow_from_directory"></a>
 
-![The directory structure for a binary classification problem](../../.gitbook/assets/image%20%281%29.png)
+![The directory structure for a binary classification problem](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%281%29.png)
 
 ```text
 # Assuming datasets are divided in  '/train',''/valid',''/test' folders
@@ -320,8 +312,6 @@ for images, labels in train_ds.take(1):   # taking one batch
             plt.title(int(labels[i]))
             plt.axis("off")
 ```
-
-
 
 ### Preprocessing Database
 
@@ -381,8 +371,8 @@ data_augmentation = keras.Sequential(
 
 def make_model(input_shape, num_classes):
     inputs = keras.Input(shape=input_shape)
-    
-    
+
+
     # PREPROCESSING for Model Input
     # Image augmentation block with flip, rotation
     x = data_augmentation(inputs)
@@ -440,9 +430,7 @@ def make_model(input_shape, num_classes):
 model = make_model(input_shape=image_size + (3,), num_classes=2)
 ```
 
-####  For other archiectures, go to Tutorial
-
-
+#### For other archiectures, go to Tutorial
 
 ### Visualize model
 
@@ -476,7 +464,6 @@ model.compile(
 model.fit(
     train_ds, epochs=epochs, callbacks=my_callbacks, validation_data=val_ds,
 )
-
 ```
 
 ### Save and load model in Keras <a id="How-to-save-and-load-Model-in-Keras"></a>
@@ -490,7 +477,6 @@ model.save("model.h5")
 # load model
 from keras.models import load_model
 model = load_model('model.h5')
-
 ```
 
 #### Option 2\) Model \(json\) and weight separately
@@ -507,14 +493,14 @@ with open("model_xception_catdog.json", "w") as json_file:
 model.save_weights("weight_xception_catdog.h5")
 print("Saved model to disk")
 
- 
+
 # LOAD model and weight
 with open('model_xception_catdog.json','r') as f:    
     loaded_model = tf.keras.models.model_from_json(f.read())
 loaded_model.load_weights("weight_xception_catdog.h5")
 ```
 
-### Run inference 
+### Run inference
 
 #### Test on some data
 

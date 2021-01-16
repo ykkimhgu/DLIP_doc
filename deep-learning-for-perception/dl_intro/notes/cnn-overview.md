@@ -6,41 +6,35 @@
 
 * [image from here](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
-![](../../../.gitbook/assets/image%20%28225%29.png)
-
-
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28225%29.png)
 
 Example of simple CNN architecture
 
-![VGG-19](../../../.gitbook/assets/image%20%28232%29.png)
+![VGG-19](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28232%29.png)
 
-![](../../../.gitbook/assets/image%20%28224%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28224%29.png)
 
-LeNet-5 \(1998\):  [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
+LeNet-5 \(1998\): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
-![](../../../.gitbook/assets/image%20%28230%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28230%29.png)
 
 AlexNet\(2012\)
 
-![](../../../.gitbook/assets/image%20%28226%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28226%29.png)
 
 VGG-16\(2014\)
 
-![](../../../.gitbook/assets/image%20%28233%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28233%29.png)
 
 ## Convolution
 
 ## Activation Function
-
-
 
 ## Pooling
 
 A problem with the output feature maps is that they are sensitive to the location of the features in the input. One approach to address this sensitivity is to down sample the feature maps. This has the effect of making the resulting down sampled feature maps more robust to changes in the position of the feature in the image, referred to by the technical phrase “_local translation invariance_.”
 
 [Read this: Introduction to Pooling Layers by Machine Learning Mastery](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
-
-
 
 ## Fully Connected Layer
 
@@ -58,5 +52,5 @@ This architecture has become the standard ‘template’: stacking convolutions 
 
 * Paper: [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/index.html#lecun-98)
 * Authors: Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner
-* Published in: ****Proceedings of the IEEE \(1998\)
+* Published in: _\*\*_Proceedings of the IEEE \(1998\)
 

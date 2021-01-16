@@ -4,8 +4,6 @@
 
 #### [Over 200 of the Best Machine Learning, NLP, and Python Tutorials](https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc)
 
-#### 
-
 ## Programming Tutorial
 
 ### Python
@@ -60,8 +58,6 @@
 
 [A Crash Course in Python for Scientists](http://nbviewer.jupyter.org/gist/rpmuller/5920182#ii.-numpy-and-scipy) \(nbviewer.jupyter.org\)
 
-
-
 ## Math <a id="8244"></a>
 
 [Math for Machine Learning](https://people.ucsc.edu/~praman1/static/pub/math-for-ml.pdf) \(ucsc.edu\)
@@ -79,8 +75,6 @@
 [Probability Theory](http://www.cedar.buffalo.edu/~srihari/CSE574/Chap1/Probability-Theory.pdf) \(U. of Buffalo CSE574\)
 
 [Probability Theory for Machine Learning](http://www.cs.toronto.edu/~urtasun/courses/CSC411_Fall16/tutorial1.pdf) \(U. of Toronto CSC411\)
-
-
 
 ### Linear algebra <a id="492a"></a>
 

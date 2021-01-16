@@ -6,9 +6,9 @@
 
 ## Loading image file in CoLab
 
-Read  the following for detailed information:  [Load images by  Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/load_data/images.ipynb)
+Read the following for detailed information: [Load images by Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/load_data/images.ipynb)
 
-#### Method 1:  [How to import an image from local drive](https://medium.com/@rk.sarthak01/how-to-import-files-images-in-google-colab-from-your-local-system-46a801b1e568)
+### Method 1:  [How to import an image from local drive](https://medium.com/@rk.sarthak01/how-to-import-files-images-in-google-colab-from-your-local-system-46a801b1e568)
 
 ```python
 # Upload image file from local drive
@@ -16,7 +16,7 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-![](../../../.gitbook/assets/image%20%28244%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28244%29.png)
 
 check the image file
 
@@ -35,12 +35,11 @@ cv2_imshow(img)
 # Method 2: Open Image  with matplotlib
 img=mpimg.imread(imgfName)
 plt.imshow(img)
-
 ```
 
-#### Method 2: How to upload an image from local drive
+### Method 2: How to upload an image from local drive
 
-![](../../../.gitbook/assets/image%20%28240%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28240%29.png)
 
 ## Loading dataset in CoLab
 

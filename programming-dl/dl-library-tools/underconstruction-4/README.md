@@ -1,6 +1,6 @@
 # NumPy
 
-### Install
+## Install
 
- `conda install -c anaconda numpy`
+`conda install -c anaconda numpy`
 

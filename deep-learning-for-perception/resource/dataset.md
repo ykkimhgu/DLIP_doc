@@ -18,7 +18,5 @@ Open Custom Dataset
 
 * [Kaggle](https://www.kaggle.com/datasets)
 
-{% embed url="https://www.analyticsvidhya.com/blog/2018/03/comprehensive-collection-deep-learning-datasets/" %}
-
-
+{% embed url="https://www.analyticsvidhya.com/blog/2018/03/comprehensive-collection-deep-learning-datasets/" caption="" %}
 

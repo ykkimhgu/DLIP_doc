@@ -1,14 +1,12 @@
 # DL Techniques
 
-
-
 ## Techniques
 
 ### Evaluation Method
 
 ### Hyperparameter Tuning
 
-{% embed url="https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/" %}
+{% embed url="https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/" caption="" %}
 
 ### Methods of Efficient Inference
 
@@ -21,7 +19,7 @@
 
 ### Pruning Deep Network
 
-![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](../../../../.gitbook/assets/image%20%2810%29.png)
+![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2810%29.png)
 
 #### Weight pruning
 
@@ -31,19 +29,15 @@
 
 * Set entire columns to zero in the weight matrix to zero, in effect deleting the corresponding output neuron
 
-
-
 ![Image for post](https://miro.medium.com/max/791/1*pQeZG3Dp91OZ8WWV-VJ9Mw.png)
 
-{% embed url="https://towardsdatascience.com/pruning-deep-neural-network-56cae1ec5505" %}
-
-
+{% embed url="https://towardsdatascience.com/pruning-deep-neural-network-56cae1ec5505" caption="" %}
 
 ### 1x1D CNN
 
 ![Image for Source: Inception v3 paper, image free to share.post](https://miro.medium.com/max/2521/1*whVu6bmbDi9HtPIjSYPoWg.png)
 
-* Read: Inception paper   __[_“Going deeper with convolutions”_](https://arxiv.org/pdf/1409.4842.pdf)
+* Read: Inception paper   _\_\[_“Going deeper with convolutions”\_\]\([https://arxiv.org/pdf/1409.4842.pdf](https://arxiv.org/pdf/1409.4842.pdf)\)
 * 1×1 convolutions are an essential part of the Inception module.
 * A 1×1 convolution returns an output image with the same dimensions as the input image.
 * Colored images have three dimensions, or channels. 1×1 convolutions compress these channels at little cost, leaving a two-dimensional image to perform expensive 3×3 and 5×5 convolutions on.
@@ -53,7 +47,5 @@
 
 * Template 1:  the template is [here](https://github.com/FrancescoSaverioZuppichini/PyTorch-Deep-Learning-Template/tree/master)
 
-{% embed url="https://towardsdatascience.com/pytorch-deep-learning-template-6e638fc2fe64" %}
-
-
+{% embed url="https://towardsdatascience.com/pytorch-deep-learning-template-6e638fc2fe64" caption="" %}
 

@@ -1,10 +1,10 @@
 # notes
 
-### Perceptron
+## Perceptron
 
-### Backpropagation
+## Backpropagation
 
-### CNN  Techniques
+## CNN  Techniques
 
-### Technical Strategy by Andrew Ng
+## Technical Strategy by Andrew Ng
 

@@ -1,8 +1,6 @@
 # Python
 
-
-
-### Create the new environment:
+## Create the new environment:
 
 * To create the new environment for Python 3.6, in your terminal window or an Anaconda Prompt, run: \(example: env name 'py3'\)
 
@@ -10,7 +8,7 @@
   conda create -n py36 python=3.6 anaconda
   ```
 
-### [Updating or upgrading Python](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#id4)
+## [Updating or upgrading Python](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#id4)
 
 Use the terminal or an Anaconda Prompt for the following steps.
 
@@ -25,6 +23,4 @@ The following command upgrades Python to another branch---3.6---by installing th
 ```text
 conda install python=3.6
 ```
-
-
 

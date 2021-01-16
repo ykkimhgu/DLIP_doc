@@ -2,22 +2,20 @@
 
 ## General camera model
 
-There are  3 Coordinate Frames
+There are 3 Coordinate Frames
 
 * World {O}, Camera frame {C}, Image plane{Im} 
 
 The transformation between coordinate frames are
 
-*  Euclidean: {O} -&gt; {C},  Mext : the camera extrinsic matrix
-*  Perspective Projection: {C}-&gt; {Im},  Mint : the camera intrinsic matrix
+* Euclidean: {O} -&gt; {C},  Mext : the camera extrinsic matrix
+* Perspective Projection: {C}-&gt; {Im},  Mint : the camera intrinsic matrix
 
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28290%29.png)
 
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28293%29.png)
 
-![](../../.gitbook/assets/image%20%28290%29.png)
-
-![](../../.gitbook/assets/image%20%28293%29.png)
-
-![](../../.gitbook/assets/image%20%28288%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28288%29.png)
 
 > x: Image Coordinates: \(u,v,1\)
 >
@@ -31,11 +29,11 @@ The transformation between coordinate frames are
 
 ### Extrinsic Matrix
 
-Finding the camera external matrix of Mext, which is the transformation from {O} to {C}:  Xc=\[R \| T\] Xo
+Finding the camera external matrix of Mext, which is the transformation from {O} to {C}: Xc=\[R \| T\] Xo
 
-> Here,  R, T are from frame {C} to {O}. Depending on the notation, it can be the  pose of {O} w.r.t {C}
+> Here, R, T are from frame {C} to {O}. Depending on the notation, it can be the pose of {O} w.r.t {C}
 
-![](../../.gitbook/assets/image%20%28285%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28285%29.png)
 
 ### Intrinsic Matrix
 
@@ -43,54 +41,50 @@ Finding the camera external matrix of Mext, which is the transformation from {O}
 
 > _p_ is NOT in pixel unit. It is in \(mm\) at distance 'f' from the {C} center point.
 
-![](../../.gitbook/assets/image%20%28294%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28294%29.png)
 
-![](../../.gitbook/assets/image%20%28281%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28281%29.png)
 
+The relationship between P and _p_ are based on the similar triangle such as
 
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28283%29.png)
 
-The relationship between P and _p_ are based on the similar triangle such as 
+#### Unit Conversion from {C} 2D \(mm\) to {Im} 2D
 
-![](../../.gitbook/assets/image%20%28283%29.png)
-
-#### Unit Conversion from {C} 2D \(mm\) to {Im} 2D 
-
-On the same image plane, the unit is changed from \(mm\) to \(px\). This depends on the mm-px scale unit, which is the image sensor pixel size. 
+On the same image plane, the unit is changed from \(mm\) to \(px\). This depends on the mm-px scale unit, which is the image sensor pixel size.
 
 > Here, we assume that there is NO skew and lens distortion
 
-![](../../.gitbook/assets/image%20%28282%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28282%29.png)
 
 #### Intrinsic camera matrix, Mint
 
 Putting the above two equations, the matrix Mint is the transformation between the camera frame {C} 3D\(mm\) and the image plane frame {Im} 2D\(px\)
 
-![](../../.gitbook/assets/image%20%28284%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28284%29.png)
 
 > The scale factor cZ is not known from one frame of image. It is the actual distance of the object from the projection center.
 
-Thus, from the image acquisition, we express the object position in px without knowing the exact scale as 
+Thus, from the image acquisition, we express the object position in px without knowing the exact scale as
 
-![](../../.gitbook/assets/image%20%28291%29.png)
-
-
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28291%29.png)
 
 ## Camera Calibration
 
 It is determining \(1\) Extrinsic Matrix \(2\) Intrinsic Matrix including lens distortion
 
-![](../../.gitbook/assets/image%20%28287%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28287%29.png)
 
 * Intrinsic Calibration
   * Lens distortion 
   * Camera internal parameters
 * Extrinsic Calibration
-  *  6-DOF relative pose between the camera frame \(3-D\) and the world coordinate frame \(3-D\)
-  *  R, T are from {O} to {C}
+  * 6-DOF relative pose between the camera frame \(3-D\) and the world coordinate frame \(3-D\)
+  * R, T are from {O} to {C}
 
 ### Intrinsic Calibration
 
-Camera parameters 
+Camera parameters
 
 * focal length \(mm\)
 * image center \(px\)
@@ -103,19 +97,18 @@ Lens Distortion
   * Different color rays have different refraction
 * Spherical aberration
   * Real lenses are not thin and suffers from geometric aberration
-* Radial Distortion 
-
+* Radial Distortion
   * Distortion at the periphery of the image
 
-![](../../.gitbook/assets/image%20%28286%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28286%29.png)
 
-Xp: points’ location when lens is perfectly undistorted 
+Xp: points’ location when lens is perfectly undistorted
 
-Xd: points’ location when lens is distorted 
+Xd: points’ location when lens is distorted
 
 Use a set of many points to find the distortion parameters such as corner points of a chess board.
 
-![](../../.gitbook/assets/image%20%28280%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28280%29.png)
 
 ### Zhang calibration method
 
@@ -123,13 +116,11 @@ Zhang, Zhengyou. "A flexible new technique for camera calibration." IEEE Transac
 
 Read here for detailed explanation
 
-{% embed url="http://staff.fh-hagenberg.at/burger/publications/reports/2016Calibration/Burger-CameraCalibration-20160516.pdf" %}
-
-
+{% embed url="http://staff.fh-hagenberg.at/burger/publications/reports/2016Calibration/Burger-CameraCalibration-20160516.pdf" caption="" %}
 
 ## Appendix
 
-#### Q What are affine, projection, projective, perspective, homography? 
+#### Q What are affine, projection, projective, perspective, homography?
 
 * Projection is mapping 3D to 2D
   * orthography, perspective\(pinhole camera\) and more
@@ -140,33 +131,32 @@ Read here for detailed explanation
 
   \*\*\*\*
 
-![](../../.gitbook/assets/image%20%28301%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28301%29.png)
 
 #### Transformation: 2D-2D or 3D-3D \(in the same dimension\)
 
 * projective: parallel lines converge to vanishing point
 
-![](../../.gitbook/assets/image%20%28297%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28297%29.png)
 
-![](../../.gitbook/assets/image%20%28298%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28298%29.png)
 
 Transformation Types
 
 * Euclidean: preserves lengths and angles\(isometry\)
 * Similarity: isotropic scaling preserves angle, shape, ratios of length, areas, angles
 * Affine: non-singular transformation preserves parallelism A: n by n non-singular matrix \(3x3 for 3D point\)
-* Projective:  linear transformation on homogeneous n-vector \(3D point: 4 x1 vector\) 
-
+* Projective: linear transformation on homogeneous n-vector \(3D point: 4 x1 vector\)
   * Perspective projection\(3D-2D\) is a subclass of projective transformation 
   * P: non-singular nxn \(4x4 for 3D point\)
 
-![](../../.gitbook/assets/image%20%28295%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28295%29.png)
 
-![](../../.gitbook/assets/image%20%28303%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28303%29.png)
 
-![](../../.gitbook/assets/image%20%28296%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28296%29.png)
 
-![](../../.gitbook/assets/image%20%28299%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28299%29.png)
 
-![](../../.gitbook/assets/image%20%28302%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28302%29.png)
 

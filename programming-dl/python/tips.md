@@ -1,11 +1,11 @@
 # Tips
 
-### List vs tuple vs dictionary in Python
+## List vs tuple vs dictionary in Python
 
 **List**
 
 * A list is a mutable, ordered sequence of items.
-*  List variables are declared by using brackets `[ ]` 
+* List variables are declared by using brackets `[ ]` 
 * The list elements can be anything and each list element can have a completely different type. This is not allowed in arrays. Arrays are objects with definite type and size
 
 ```python
@@ -30,9 +30,9 @@ tupleA[2] = 5
 
 **Dictionary**
 
-*  A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ \(name\) with _values_ \(details\). 
+* A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ \(name\) with _values_ \(details\). 
 * written with curly brackets  {  }
-*  A colon \(:\) separates each **key** from its **value**.
+* A colon \(:\) separates each **key** from its **value**.
 * the key must be unique and  immutable  \(tuples, not list\)
 
 ```python
@@ -44,11 +44,9 @@ my_dict.values()
 # dict_values(['one', 'two', 'three'])
 ```
 
-### 
+## Dictionary in Python
 
-### Dictionary in Python
-
-#### Create a dictionary with dict\(\) constructor
+### Create a dictionary with dict\(\) constructor
 
 ```python
 # create a dictionary using two list
@@ -72,21 +70,21 @@ print(students_ages)
  print(students_ages)
 ```
 
-### Class in Python
+## Class in Python
 
-#### **Instance methods**
+### **Instance methods**
 
 * Called using objects
 * Must have `self` as the first parameter
 * \(`self` is another python term. We can use self to access any data or other instance methods which resides in that class. These cannot be accessed without using self\)
 
-#### Initializer Method
+### Initializer Method
 
 * must be called `__init__()`~~\(~~double underscore is used by python runtime\)
 * The first parameter is `self`
 * If the initializer method is present, the constructor calls `__init__()`
 
-#### Super\(\) to inherit all the methods and properties from another class:
+### Super\(\) to inherit all the methods and properties from another class:
 
 * Inherits all the method, properties of Parent or sibling class
 
@@ -96,7 +94,7 @@ class Child(Parent):
     super().__init__(txt)  # inherit Parent;s method/properties
 ```
 
-`>`  ****The underscore prefix in a variable/method name is meant as a _hint_ to another programmer that a variable or method starting with a single underscore is intended only for internal use. This convention is [defined in PEP 8](http://pep8.org/#descriptive-naming-styles).
+`>` _\*\*_The underscore prefix in a variable/method name is meant as a _hint_ to another programmer that a variable or method starting with a single underscore is intended only for internal use. This convention is [defined in PEP 8](http://pep8.org/#descriptive-naming-styles).
 
 ```python
 # Base class
@@ -127,23 +125,23 @@ Output:
 This property has 2 rooms with 2 bathrooms
 ```
 
-### Index of array
+## Index of array
 
-#### .shape
+### .shape
 
 input\_tensor.shape\[-1\] \# get value of the last index of shape
 
-### Reshaping arrays
+## Reshaping arrays
 
 source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b)
 
-![source click here](../../.gitbook/assets/image%20%289%29.png)
+![source click here](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%289%29.png)
 
-### Stacking 2D data to 3D data
+## Stacking 2D data to 3D data
 
 ```python
  # change to  [rows][cols][channels] for Keras
-    
+
     # Method0
     x_train3D=np.stack((x_train,x_train,x_train),axis=2) 
 
@@ -157,8 +155,8 @@ source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-pyt
     x_test3D=np.stack((x_test,x_test,x_test))
     x_test3D=np.moveaxis(x_test3D,0,2)
     print(x_test3D.shape)
-    
-    
+
+
     # NEEDS TO BE MODIFIED  (stack-->concatenate)
     # Method2
     x_train=np.expand_dims(x_train,axis=2)
@@ -173,13 +171,13 @@ source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-pyt
     print(x_train3D.shape)
 ```
 
-### Documenting your code in Python \(docstring\)
+## Documenting your code in Python \(docstring\)
 
 An official specification on how you should format your docstrings called [PEP 0257](https://www.python.org/dev/peps/pep-0257/), based on reStructuredText \(reST\)
 
 > For Google style guide for C++, [read here](https://google.github.io/styleguide/cppguide.html)
 
-#### Google format
+### Google format
 
 ```text
 """
@@ -198,10 +196,8 @@ Raises:
 ```
 
 * **Names to Avoid**
-
-  *  dashes \(`-`\) in any package/module name
+  * dashes \(`-`\) in any package/module name
   * Use CapWords for class names, but lower\_with\_under.py for module names.
-
 * Guidelines for naming
 * | Type | Public | Internal |
   | :--- | :--- | :--- |
@@ -322,9 +318,5 @@ def module_level_function(param1, param2=None, *args, **kwargs):
     if param1 == param2:
         raise ValueError('param1 may not be equal to param2')
     return True
-
-
 ```
-
-
 
