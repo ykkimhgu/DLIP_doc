@@ -87,6 +87,7 @@
   * [Cheat Sheet](programming/python/cheat-sheet.md)
   * [Tips](programming/python/tips.md)
 * [OpenCV](programming/opencv/README.md)
+  * [Python OpenCV](programming/opencv/python-opencv.md)
   * [MATLAB-OpenCV](programming/opencv/matlab-opencv.md)
 * [DL Library](programming/dl-library-tools/README.md)
   * [NumPy](programming/dl-library-tools/underconstruction-4/README.md)
