@@ -6,7 +6,7 @@
 
 1. Facial landmark dataset:  [iBUG 300-W dataset](https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/) with 68 \(x,y,\) - coordinate
 
-![Visualizing the 68 facial landmark coordinates from the iBUG 300-W](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image.png)
+![Visualizing the 68 facial landmark coordinates from the iBUG 300-W](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image.png)
 
 ### Software requirement
 

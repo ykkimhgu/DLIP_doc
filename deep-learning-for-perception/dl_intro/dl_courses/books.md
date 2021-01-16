@@ -8,7 +8,7 @@ Online free textbook:  Deep Learning by  Ian Goodfellow and Yoshua Bengio and Aa
 
 Offline books:
 
-![](../../../.gitbook/assets/image%20%2821%29.png)
+![](../../../images/image%20%2821%29.png)
 
 ## 
 

@@ -21,7 +21,7 @@ For example: We train our data on only black cats’ images. So, if we now try t
 
 Batch normalization allows each layer of a network to learn by itself a little bit more independently of other layers.
 
-![https://arxiv.org/pdf/1502.03167v3.pdf](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28263%29.png)
+![https://arxiv.org/pdf/1502.03167v3.pdf](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28263%29.png)
 
 * We can use higher learning rates because batch normalization makes sure that there’s no activation that’s gone really high or really low. And by that, things that previously couldn’t get to train, it will start to train.
 * It reduces overfitting because it has a slight regularization effects. Similar to dropout, it adds some noise to each hidden layer’s activations. Therefore, if we use batch normalization, we will use less dropout, which is a good thing because we are not going to lose a lot of information. However, we should not depend only on batch normalization for regularization; we should better use it together with dropout.

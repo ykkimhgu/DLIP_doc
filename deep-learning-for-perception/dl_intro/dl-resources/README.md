@@ -86,7 +86,7 @@ Training with small batch sizes tends to converge to **flat minimizers** that va
 
 ### Pruning Deep Network
 
-![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](../../../.gitbook/assets/image%20%2810%29.png)
+![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](../../../images/image%20%2810%29.png)
 
 #### Weight pruning
 

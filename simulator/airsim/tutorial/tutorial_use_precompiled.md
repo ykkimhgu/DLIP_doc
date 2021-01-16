@@ -5,14 +5,14 @@
 For this tutorial, we will use precompiled Landscape binary. You can also download the binaries for the environment of your choice from the [latest release](https://github.com/Microsoft/AirSim/releases).
 
 * You should have completed the [set-up proces](tutorial_use_precompiled.md)
-* Go to AirSim [latest release](https://github.com/Microsoft/AirSim/releases) and download `City.zip.001` and `City.zip.002` ![download](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/tutorial_precompiled1.png)
+* Go to AirSim [latest release](https://github.com/Microsoft/AirSim/releases) and download `City.zip.001` and `City.zip.002` ![download](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/tutorial_precompiled1.png)
 * Unzip these two files using **7-zip**
 * Double click `CityEnviron.exe` to run
   * Choose vehicle and control with keyboards
 
-    ![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/precompiled3.png)
+    ![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/precompiled3.png)
 
-    ![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/car_demo_video_large.png)
+    ![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/car_demo_video_large.png)
 
 ## Controlling Vehicles
 

@@ -4,13 +4,13 @@
 
 A loss function calculates the error between the prediction from the ground truth. It averages all error from all datasets.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2829%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2829%29.png)
 
 ### For Classification
 
 Softmax with Cross-Entropy Loss is often used
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2849%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2849%29.png)
 
 ### Further Reading
 
@@ -26,11 +26,11 @@ We want to get the model weights\(W\) to minimize the value of loss function for
 
 Minimize objective function J\(w\) by updating parameter\(w\) in opposite direction of gradient of J\(w\). Following the negative gradient of the Objective Function to find the minimum value of loss. It control the step size by learning rate n
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2885%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2885%29.png)
 
 Finding the derivative: 1\) analytical 2\) numerical approach. If possible, use analytical approach for faster and accurate gradient.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2847%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2847%29.png)
 
 Examples of Optimizer include
 
@@ -49,5 +49,5 @@ Often SGD is refered to Mini-batch Gradient Descent
 
 {% embed url="https://ruder.io/optimizing-gradient-descent/" caption="" %}
 
-![Forward vs backward pass](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2850%29.png)
+![Forward vs backward pass](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2850%29.png)
 

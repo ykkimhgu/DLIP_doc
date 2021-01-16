@@ -77,7 +77,7 @@ description: Selected Papers and blogs for Perception Deep Learning
 
 ![Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
 
-![Figure from PointPillars](../.gitbook/assets/image%20%2811%29.png)
+![Figure from PointPillars](../images/image%20%2811%29.png)
 
 
 

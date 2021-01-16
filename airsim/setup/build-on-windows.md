@@ -12,24 +12,24 @@ description: >-
 
 1. [Download](https://www.unrealengine.com/download) the Epic Games Launcher. While the Unreal Engine is open source and free to download, registration is still required.
 
-   ![Install](../../.gitbook/assets/install1.jpg)
+   ![Install](../../images/install1.jpg)
 
-   ![Install](../../.gitbook/assets/install1.jpg)
+   ![Install](../../images/install1.jpg)
 
-![Install](../../.gitbook/assets/install1.jpg)
+![Install](../../images/install1.jpg)
 
 1. Run the Epic Games Launcher, open the `Library` tab on the left pane. Click on the `Add Versions` which should show the option to download **Unreal 4.24** as shown below. If you have multiple versions of Unreal installed then **make sure 4.24 is set to `current`** by clicking down arrow next to the Launch button for the version.
 
    **Note**: AirSim also works with UE &gt;= 4.22, however, we recommend you update to 4.24.
 
-![Install](../../.gitbook/assets/install2.jpg)
+![Install](../../images/install2.jpg)
 
 ### Install Git for Windows
 
 * [Download](https://git-scm.com/) Git for Windows \(lastes source, release 2.27.0\)
 * Use default settings to install
 
-![gitInstall](../../.gitbook/assets/gitInstall.jpg)
+![gitInstall](../../images/gitInstall.jpg)
 
 ### Install Visual Studio
 
@@ -39,9 +39,9 @@ description: >-
 
 * **Make sure** to select **Desktop Development with C++** and **Windows 10 SDK 10.0.18362** \(should be selected by default\) while installing VS 2019.
 
-![Install](../../.gitbook/assets/install_vs1.jpg)
+![Install](../../images/install_vs1.jpg)
 
-![Install](../../.gitbook/assets/install_vs2.jpg)
+![Install](../../images/install_vs2.jpg)
 
 ### Download AirSim
 
@@ -53,7 +53,7 @@ description: >-
 git clone https://github.com/Microsoft/AirSim.git
 ```
 
-![gitInstall](../../.gitbook/assets/clone1.jpg)
+![gitInstall](../../images/clone1.jpg)
 
 ### Build AirSim
 
@@ -63,7 +63,7 @@ git clone https://github.com/Microsoft/AirSim.git
 
 > **Build error**: If the build error message is related to UTF decoding Go to FAQ \#1
 
-![build1](../../.gitbook/assets/build1.jpg)
+![build1](../../images/build1.jpg)
 
 ### Build Unreal Project
 
@@ -82,9 +82,9 @@ The initial setting for VS2019 gives the warning as the compile error. This erro
 * Open the header/source files that gives encoding warning with VS2019
 * **Save As** with **Save with Encoding**: Encoding **UTF-8 with signature**
 
-![faq2](../../.gitbook/assets/faq2.jpg)
+![faq2](../../images/faq2.jpg)
 
-![faq1](../../.gitbook/assets/FAQ1.jpg)
+![faq1](../../images/FAQ1.jpg)
 
 ### Clashes of VS 2017 and VS2019. How to force Unreal to use Visual Studio 2019
 

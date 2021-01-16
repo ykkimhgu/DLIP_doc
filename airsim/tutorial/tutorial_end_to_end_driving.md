@@ -18,7 +18,7 @@ In this tutorial, you will learn how to train and test an end-to-end deep learni
 
 Here's a short sample of the model in action:
 
-![car-driving](../../.gitbook/assets/car_driving.gif)
+![car-driving](../../images/car_driving.gif)
 
 #### Demo
 
@@ -108,7 +108,7 @@ We have created a standalone build of the AirSim simulation environment for the 
 
 `.\AD_Cookbook_Start_AirSim.ps1 landscape` 
 
-![lanscape](../../.gitbook/assets/tutorial_ADcook1.png)
+![lanscape](../../images/tutorial_ADcook1.png)
 
 to start the simulator in the landscape environment.
 
@@ -122,7 +122,7 @@ If you do not have a GPU available, you can spin up a [Deep Learning VM on Azure
 
 The dataset for the model is quite large. [You can download it from here](https://aka.ms/AirSimTutorialDataset). The first notebook will provide guidance on how to access the data once you have downloaded it. The final uncompressed data set size is approximately 3.25GB \(which although is nothing compared to the petabytes of data needed to train an actual self-driving car, should be enough for the purpose of this tutorial\).
 
-![dataset](../../.gitbook/assets/tutorial_ADcook_dataset.png)
+![dataset](../../images/tutorial_ADcook_dataset.png)
 
 ### A note from the curators
 

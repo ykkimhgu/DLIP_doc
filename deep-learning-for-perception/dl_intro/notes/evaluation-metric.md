@@ -13,17 +13,17 @@ Receiver Operating Characteristic\(ROC\) Curve
 * true positive rate \(recall\) vs false positive rate \(FPR\)
 * FPR is the ratio of negative instances that are incorrectly classified as positive
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28261%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28261%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28255%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28255%29.png)
 
 Area under the curve\(AUC\): a perfect classifier ROC AUC= 1 a purely random classifier ROC AUC= 0.5.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28259%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28259%29.png)
 
 * E.g. Find a Person. Red: Person, Green: non-person
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28258%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28258%29.png)
 
 ## Top-1, TOP-5 ImageNet,  ILSVRC
 
@@ -39,7 +39,7 @@ We need to evaluate the performance of both \(1\) classification and \(2\) local
 
 Object Detection uses the concept of **Intersection over Union \(IoU\)**. IoU computes intersection over the union of the two bounding boxes; the bounding box for the ground truth and the predicted bounding box. An IoU of 1 implies that predicted and the ground-truth bounding boxes perfectly overlap.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28270%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28270%29.png)
 
 Set a threshold value for the IoU to determine if the object detection is valid or not.
 
@@ -54,7 +54,7 @@ Also, need to consider the **confidence score \(classification\)** for each obje
 
 Use Precision and Recall as the metrics to evaluate the performance. Precision and Recall are calculated using true positives\(TP\), false positives\(FP\) and false negatives\(FN\).
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28260%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28260%29.png)
 
 ### mAP
 
@@ -68,7 +68,7 @@ It use 11-point interpolated average precision to calculate mean Average Precisi
 
 Example: In this example, the whole dataset contains 5 apples only. We collect all the predictions made for apples in all the images and rank it in descending order according to the predicted confidence level. \(IoU&gt;0.5\)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28256%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28256%29.png)
 
 > For example, for rank\#3, assume only 3 apples are predicted\(2 are correct\)
 >
@@ -76,7 +76,7 @@ Example: In this example, the whole dataset contains 5 apples only. We collect a
 >
 > **Recall** is the proportion of TP out of the possible positives = 2/5 = 0.4
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28265%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28265%29.png)
 
 **Step 2: use 11 point interpolation technique.**
 
@@ -84,7 +84,7 @@ Example: In this example, the whole dataset contains 5 apples only. We collect a
 
 Point interpolation: take the maximum Precision value of all future points of Recall.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28257%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28257%29.png)
 
 **Step 3: Calculate the mean Average Precision\(mAP\)**
 
@@ -92,7 +92,7 @@ Average Precision is the area under the curve of Precision-Recall
 
 mAP is calculated as
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28266%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28266%29.png)
 
 In our example, AP = \(5 × 1.0 + 4 × 0.57 + 2 × 0.5\)/11.
 
@@ -106,13 +106,13 @@ For later Pascal VOC competitions, VOC2010–2012 samples.
 
 No approximation or interpolation is needed. Instead of sampling 11 points, we sample _p_\(_rᵢ_\) whenever it drops and computes AP as the sum of the rectangular blocks.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28264%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28264%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28267%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28267%29.png)
 
 ### **COCO mAP**
 
 Latest research papers tend to give results for the COCO dataset only. In COCO mAP, a 101-point interpolated AP definition is used in the calculation. For COCO, AP is the average over multiple IoU \(the minimum IoU to consider a positive match\). **AP@\[.5:.95\]** corresponds to the average AP for IoU from 0.5 to 0.95 with a step size of 0.05. For the COCO competition, AP is the average over 10 IoU levels on 80 categories \(AP@\[.50:.05:.95\]: start from 0.5 to 0.95 with a step size of 0.05\). The following are some other metrics collected for the COCO dataset.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28271%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28271%29.png)
 

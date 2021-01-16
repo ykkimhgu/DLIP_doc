@@ -266,7 +266,7 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
 
 #### Option 2\) Train Valid Test are divided by folder names manually `flow_from_directory` <a id="Option-2)-Train-Valid-Test-are-divided-by-folder-names-manually--flow_from_directory"></a>
 
-![The directory structure for a binary classification problem](../../.gitbook/assets/image%20%281%29.png)
+![The directory structure for a binary classification problem](../../images/image%20%281%29.png)
 
 ```text
 # Assuming datasets are divided in  '/train',''/valid',''/test' folders

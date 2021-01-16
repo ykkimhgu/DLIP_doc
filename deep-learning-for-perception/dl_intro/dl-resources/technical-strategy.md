@@ -4,7 +4,7 @@
 
 This is highlights of important technical strategy from the book.  You should read the book for more detailed explanation. To get the e-book [click here](https://www.deeplearning.ai/machine-learning-yearning/)
 
-{% file src="../../../.gitbook/assets/ng-mly01-13.pdf" caption="Machine Learning Yearning - Andrew Ng" %}
+{% file src="../../../images/ng-mly01-13.pdf" caption="Machine Learning Yearning - Andrew Ng" %}
 
 ### Setting up development and test sets
 
@@ -78,7 +78,7 @@ Common tactics for both bias and variance:
 * The training loss continues to decrease until the end of training
 * The training loss is much higher than the optimal performance
 
-![Image source from \(machinelearningmastery.com\)](../../../.gitbook/assets/image%20%283%29.png)
+![Image source from \(machinelearningmastery.com\)](../../../images/image%20%283%29.png)
 
 **Overfit curve**
 
@@ -86,21 +86,21 @@ Common tactics for both bias and variance:
 * The plot of validation loss decreases to a point and begins increasing again.
 * The plot of validation loss is much higher than training loss
 
-![Image source from \(machinelearningmastery.com\)](../../../.gitbook/assets/image%20%287%29.png)
+![Image source from \(machinelearningmastery.com\)](../../../images/image%20%287%29.png)
 
 **Other examples**
 
 * Low Variance and High Bias
 
-![](../../../.gitbook/assets/image%20%286%29.png)
+![](../../../images/image%20%286%29.png)
 
 * High Variance, and Low bias --&gt; add more training data
 
-![](../../../.gitbook/assets/image%20%284%29.png)
+![](../../../images/image%20%284%29.png)
 
 * High Variance and High Bias
 
-![](../../../.gitbook/assets/image%20%282%29.png)
+![](../../../images/image%20%282%29.png)
 
 #### For very small training sets
 

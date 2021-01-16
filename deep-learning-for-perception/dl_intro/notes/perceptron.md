@@ -34,7 +34,7 @@ The perceptron consists of 4 parts.
 
 ## Multi-Layer Perceptron 
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28223%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28223%29.png)
 
 ## Multi-Layer Perceptron
 

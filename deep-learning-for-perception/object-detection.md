@@ -21,5 +21,5 @@
 
 ![Trade-offs between RV and BEV projectionspost](https://miro.medium.com/max/970/1*zYUa1qJsG8Hsp6sh4L9X8w.png)
 
-![Figure from PointPillars](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%2811%29.png)
+![Figure from PointPillars](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2811%29.png)
 

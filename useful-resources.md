@@ -2,7 +2,7 @@
 
 ### Representing rotation
 
-{% file src=".gitbook/assets/lecture6\_representing\_rotation.pdf" caption="Representing rotation" %}
+{% file src="images/lecture6\_representing\_rotation.pdf" caption="Representing rotation" %}
 
 
 

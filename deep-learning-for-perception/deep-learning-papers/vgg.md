@@ -2,9 +2,9 @@
 
 [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556), Simonyan, Karen, and Andrew Zisserman. 2015 ICLR & preprint arXiv \(2014\)
 
-![VGG architecture image from https://neurohive.io/en/popular-networks/vgg16/](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28247%29.png)
+![VGG architecture image from https://neurohive.io/en/popular-networks/vgg16/](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28247%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28254%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28254%29.png)
 
 VGGNet is invented by VGG \([Visual Geometry Group](http://www.robots.ox.ac.uk/~vgg/)\) from University of Oxford. Though VGGNet is the **1st runner-up**, of **ILSVRC 2014 in the classification task.** Accuracy error less than 10%
 
@@ -12,7 +12,7 @@ VGGNet is invented by VGG \([Visual Geometry Group](http://www.robots.ox.ac.uk/~
 >
 > Improved from AlexNet\(-8\) 16.4% to VGG-16 7.3%\)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28249%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28249%29.png)
 
 A very important paper on CNN. It uses only 3x3 CONV and many networks are based on VGG architecture.
 
@@ -22,9 +22,9 @@ A very important paper on CNN. It uses only 3x3 CONV and many networks are based
 * Repeats 3 layers of 3x3 CONV instead of 1 time of 7x7. They both cover 7x7  receptive field
 * VGG has fewer parameters, more non-linearity.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28253%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28253%29.png)
 
-![a\) Feature Map from 7x7 CONV has 7x7 receptive field. b\) Feature Map from 3 layers of 3x3 also has 7x7 receptive field. Image from https://medium.com/@msmapark2/](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28245%29.png)
+![a\) Feature Map from 7x7 CONV has 7x7 receptive field. b\) Feature Map from 3 layers of 3x3 also has 7x7 receptive field. Image from https://medium.com/@msmapark2/](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28245%29.png)
 
 ## **Ablation Study: VGG-16, 19**
 
@@ -32,15 +32,15 @@ A very important paper on CNN. It uses only 3x3 CONV and many networks are based
 2. VGG-16 obtains 8.8% error rate which means the deep learning network is still improving by adding number of layers.
 3. VGG-19 obtains 9.0% error rate which means the deep learning network is NOT improving by adding number of layers. Thus, authors stop adding layers.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28248%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28248%29.png)
 
 ## **Multi-Scale Training and Testing**
 
 Rescale from 224 to 256~512px. Then crop to 224px which contains the object fully or partially. Has the effect of data augmentation with scaling and translation, which helps to reduce overfitting.
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28250%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28250%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28246%29.png)
+![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28246%29.png)
 
 ## Training
 
