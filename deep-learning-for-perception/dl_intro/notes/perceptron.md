@@ -13,7 +13,7 @@
 
 Binary classifier for  Predict y = 1 if Wx+b &gt; 0 , otherwise y=0
 
-![](../../../.gitbook/assets/image%20%28216%29.png)
+![](../../../images/image%20%28216%29.png)
 
 The perceptron consists of 4 parts.
 
@@ -28,27 +28,27 @@ The perceptron consists of 4 parts.
 
 **Activation Function**  scales output \(0,1\) or  \(-1,1\)
 
-![](../../../.gitbook/assets/image%20%28223%29.png)
+![](../../../images/image%20%28223%29.png)
 
 ## Multi-Layer Perceptron 
 
 
 
-![](../../../.gitbook/assets/image%20%28219%29.png)
+![](../../../images/image%20%28219%29.png)
 
-![](../../../.gitbook/assets/image%20%28215%29.png)
+![](../../../images/image%20%28215%29.png)
 
-![](../../../.gitbook/assets/image%20%28221%29.png)
+![](../../../images/image%20%28221%29.png)
 
-![](../../../.gitbook/assets/image%20%28217%29.png)
+![](../../../images/image%20%28217%29.png)
 
 Since we cannot express XOR with a single Perceptron, we can construct a network of Perceptron or **Multi-Layer Perceptron**
 
-![](../../../.gitbook/assets/image%20%28222%29.png)
+![](../../../images/image%20%28222%29.png)
 
 Using the previous AND, NAND, OR gates with perceptrons, we can build **XOR**
 
-![](../../../.gitbook/assets/image%20%28220%29.png)
+![](../../../images/image%20%28220%29.png)
 
 ## Activation Function
 
