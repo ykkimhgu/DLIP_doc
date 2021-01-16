@@ -1,7 +1,5 @@
 # Notes
 
-## 
-
 * [Overview of Deep Learning](deep-learning-for-perception/notes/overview-of-deep-learning/README.md)
   * [Deep Learning Basics: Introduction](deep-learning-for-perception/notes/overview-of-deep-learning/deep-learning-basics-introduction.md)
   * [Deep Learning State of the Art](deep-learning-for-perception/notes/overview-of-deep-learning/some-notes.md)
