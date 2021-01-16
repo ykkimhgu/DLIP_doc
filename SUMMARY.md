@@ -66,7 +66,6 @@
     * [Cheat Sheet](deep-learning-framework/framework/keras/cheatsheet-keras.md)
     * [Tutorial Keras](deep-learning-framework/framework/keras/tutorial-keras.md)
   * [TensorFlow](deep-learning-framework/framework/tensorflow/README.md)
-    * [Install](deep-learning-framework/framework/tensorflow/install_tf.md)
     * [Cheat Sheet](deep-learning-framework/framework/tensorflow/install_tf-1.md)
     * [Tutorial](deep-learning-framework/framework/tensorflow/install_tf-2.md)
 * [IDE](deep-learning-framework/ide/README.md)
