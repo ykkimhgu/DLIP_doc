@@ -10,9 +10,9 @@
 
 Example of simple CNN architecture
 
-![VGG-19](../../.gitbook/assets/image%20%28232%29.png)
+![VGG-19](../../.gitbook/assets/image%20%28235%29.png)
 
-![](../../.gitbook/assets/image%20%28224%29.png)
+![](../../.gitbook/assets/image%20%28224%29%20%281%29.png)
 
 LeNet-5 \(1998\): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
@@ -24,7 +24,7 @@ AlexNet\(2012\)
 
 VGG-16\(2014\)
 
-![](../../.gitbook/assets/image%20%28233%29.png)
+![](../../.gitbook/assets/image%20%28238%29.png)
 
 ## Convolution
 

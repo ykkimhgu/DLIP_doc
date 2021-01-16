@@ -1,4 +1,4 @@
-# Types of Convolution
+# Convolution
 
 There are different types of Convolution in CNN such as
 
