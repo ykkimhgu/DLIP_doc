@@ -4,8 +4,8 @@
 
 ## Image Processing Basics <a id="image-processing"></a>
 
-* [Image Processing](image-processing/image-processing-part-1/README.md)
-  * [Model n Calibration](image-processing/image-processing-part-1/model-n-calibration.md)
+* [Notes](image-processing/image-processing-notes/README.md)
+  * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 
 ## Deep Learning for Perception
 

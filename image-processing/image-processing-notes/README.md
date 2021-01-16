@@ -1,4 +1,4 @@
-# Image Processing
+# Notes
 
 **Introduction to Image Processing**
 
