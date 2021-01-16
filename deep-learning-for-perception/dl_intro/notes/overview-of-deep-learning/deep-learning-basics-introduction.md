@@ -16,87 +16,87 @@ An introductory lecture for MIT course 6.S094 on the basics of deep learning inc
 
 {% file src="../../../../images/deep\_learning\_basics.pdf" caption="Slides PDF" %}
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2852%29.png)
+![](../../../images/image%20%2852%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2869%29.png)
+![](../../../images/image%20%2869%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2858%29.png)
+![](../../../images/image%20%2858%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2833%29.png)
+![](../../../images/image%20%2833%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2831%29.png)
+![](../../../images/image%20%2831%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2814%29.png)
+![](../../../images/image%20%2814%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2837%29.png)
+![](../../../images/image%20%2837%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2873%29.png)
+![](../../../images/image%20%2873%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2862%29.png)
+![](../../../images/image%20%2862%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2844%29.png)
+![](../../../images/image%20%2844%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2872%29.png)
+![](../../../images/image%20%2872%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2813%29.png)
+![](../../../images/image%20%2813%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2866%29.png)
+![](../../../images/image%20%2866%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2826%29.png)
+![](../../../images/image%20%2826%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2842%29.png)
+![](../../../images/image%20%2842%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2881%29.png)
+![](../../../images/image%20%2881%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2892%29.png)
+![](../../../images/image%20%2892%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2887%29.png)
+![](../../../images/image%20%2887%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2851%29.png)
+![](../../../images/image%20%2851%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2817%29.png)
+![](../../../images/image%20%2817%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2870%29.png)
+![](../../../images/image%20%2870%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2879%29.png)
+![](../../../images/image%20%2879%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2855%29.png)
+![](../../../images/image%20%2855%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2884%29.png)
+![](../../../images/image%20%2884%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2875%29.png)
+![](../../../images/image%20%2875%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2836%29.png)
+![](../../../images/image%20%2836%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2818%29.png)
+![](../../../images/image%20%2818%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2834%29.png)
+![](../../../images/image%20%2834%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2853%29.png)
+![](../../../images/image%20%2853%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2876%29.png)
+![](../../../images/image%20%2876%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2893%29.png)
+![](../../../images/image%20%2893%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2840%29.png)
+![](../../../images/image%20%2840%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2843%29.png)
+![](../../../images/image%20%2843%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2825%29.png)
+![](../../../images/image%20%2825%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2827%29.png)
+![](../../../images/image%20%2827%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2888%29.png)
+![](../../../images/image%20%2888%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2820%29.png)
+![](../../../images/image%20%2820%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2835%29.png)
+![](../../../images/image%20%2835%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2863%29.png)
+![](../../../images/image%20%2863%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2822%29.png)
+![](../../../images/image%20%2822%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2838%29.png)
+![](../../../images/image%20%2838%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2889%29.png)
+![](../../../images/image%20%2889%29.png)
 

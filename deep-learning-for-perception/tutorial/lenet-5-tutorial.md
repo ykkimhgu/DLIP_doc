@@ -13,7 +13,7 @@ Overview of LeNet: click here
 * Input: 32x32x1
   * MNIST image is 28x28.  MNIST is padded to 32
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28231%29.png)
+![](../../../images/image%20%28231%29.png)
 
 ### LeNet-5 layers: <a id="d723"></a>
 

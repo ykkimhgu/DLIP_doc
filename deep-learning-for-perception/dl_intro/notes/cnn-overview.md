@@ -6,25 +6,25 @@
 
 * [image from here](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28225%29.png)
+![](../../../images/image%20%28225%29.png)
 
 Example of simple CNN architecture
 
-![VGG-19](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28232%29.png)
+![VGG-19](../../../images/image%20%28232%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28224%29.png)
+![](../../../images/image%20%28224%29.png)
 
 LeNet-5 \(1998\): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28230%29.png)
+![](../../../images/image%20%28230%29.png)
 
 AlexNet\(2012\)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28226%29.png)
+![](../../../images/image%20%28226%29.png)
 
 VGG-16\(2014\)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28233%29.png)
+![](../../../images/image%20%28233%29.png)
 
 ## Convolution
 

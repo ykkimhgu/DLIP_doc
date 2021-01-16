@@ -135,7 +135,7 @@ input\_tensor.shape\[-1\] \# get value of the last index of shape
 
 source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b)
 
-![source click here](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%289%29.png)
+![source click here](../../../images/image%20%289%29.png)
 
 ## Stacking 2D data to 3D data
 

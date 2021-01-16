@@ -72,7 +72,7 @@ Common tactics for both bias and variance:
 * The training loss continues to decrease until the end of training
 * The training loss is much higher than the optimal performance
 
-![Image source from \(machinelearningmastery.com\)](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%283%29.png)
+![Image source from \(machinelearningmastery.com\)](../../../images/image%20%283%29.png)
 
 **Overfit curve**
 
@@ -80,21 +80,21 @@ Common tactics for both bias and variance:
 * The plot of validation loss decreases to a point and begins increasing again.
 * The plot of validation loss is much higher than training loss
 
-![Image source from \(machinelearningmastery.com\)](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%287%29.png)
+![Image source from \(machinelearningmastery.com\)](../../../images/image%20%287%29.png)
 
 **Other examples**
 
 * Low Variance and High Bias
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%286%29.png)
+![](../../../images/image%20%286%29.png)
 
 * High Variance, and Low bias --&gt; add more training data
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%284%29.png)
+![](../../../images/image%20%284%29.png)
 
 * High Variance and High Bias
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%282%29.png)
+![](../../../images/image%20%282%29.png)
 
 #### For very small training sets
 

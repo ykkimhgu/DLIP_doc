@@ -8,13 +8,13 @@ Read about VGG: click here
 
 ### VGG-16
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28243%29.png)
+![](../../../images/image%20%28243%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28238%29.png)
+![](../../../images/image%20%28238%29.png)
 
 ### VGG-19
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28235%29.png)
+![](../../../images/image%20%28235%29.png)
 
 ## Keras
 
@@ -58,7 +58,7 @@ display(idx, score)
 
 [Read this blog for step by step tutorial](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%28252%29.png)
+![](../../../images/image%20%28252%29.png)
 
 ```python
 #Importing library

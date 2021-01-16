@@ -13,35 +13,35 @@ Lecture on most recent research and developments in deep learning, and hopes for
 
 ## Milestones of Deep Learning
 
-![Lex Fridman, DL Lectures](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2830%29.png)
+![Lex Fridman, DL Lectures](../../../images/image%20%2830%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2890%29.png)
+![](../../../images/image%20%2890%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2812%29.png)
+![](../../../images/image%20%2812%29.png)
 
 ## Deep Library
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2891%29.png)
+![](../../../images/image%20%2891%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2864%29.png)
+![](../../../images/image%20%2864%29.png)
 
 ## Autonomous Vehicle Applications
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2857%29.png)
+![](../../../images/image%20%2857%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2848%29.png)
+![](../../../images/image%20%2848%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2871%29.png)
+![](../../../images/image%20%2871%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2859%29.png)
+![](../../../images/image%20%2859%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2882%29.png)
+![](../../../images/image%20%2882%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2839%29.png)
+![](../../../images/image%20%2839%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2816%29.png)
+![](../../../images/image%20%2816%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2856%29.png)
+![](../../../images/image%20%2856%29.png)
 
-![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2845%29.png)
+![](../../../images/image%20%2845%29.png)
 

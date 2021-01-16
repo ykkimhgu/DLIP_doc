@@ -19,7 +19,7 @@
 
 ### Pruning Deep Network
 
-![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/images/image%20%2810%29.png)
+![\[Lecun et al. NIPS&#x2019;89\] \[Han et al. NIPS&#x2019;15\]](../../../images/image%20%2810%29.png)
 
 #### Weight pruning
 
