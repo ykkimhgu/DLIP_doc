@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Syllabus](image-processing-with-deep-learning.md)
 
 ## Image Processing Basics <a id="image-processing"></a>
 
