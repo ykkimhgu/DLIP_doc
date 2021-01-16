@@ -1,6 +1,6 @@
 # PyTorch
 
-## What  is PyTorch
+## What is PyTorch
 
 An open source machine learning framework that accelerates the path from research prototyping to production deployment. It’s a Python-based scientific computing package targeted at two sets of audiences:
 
@@ -13,16 +13,18 @@ An open source machine learning framework that accelerates the path from researc
 
 Select your preferences and run the install command. Please ensure that you have **met the prerequisites below \(e.g., numpy\)**
 
-\*\*\*\*[**https://pytorch.org/get-started/locally/**](https://pytorch.org/get-started/locally/)\*\*\*\*
+> [**https://pytorch.org/get-started/locally/**](https://pytorch.org/get-started/locally/)
 
-1. Install CUDA or  check the installed GPU CUDA version
+
+
+* Install CUDA or  check the installed GPU CUDA version
 
 ```text
 nvcc --version
 ```
 
-1. Install Anaconda. After installation, run **Anaconda Prompt**
-2. Make a new virtual environment e.g torch16. In the \(base\) of Anaconda Prompt, create a new environment.
+* Install **Anaconda**. After installation, run **Anaconda Prompt**
+* Make a new virtual environment e.g torch16. In the \(base\) of Anaconda Prompt, create a new environment.
 
 ```text
 conda env list
@@ -30,17 +32,17 @@ conda create --name torch16
 activate torch16
 ```
 
-1. Install  Python, Numpy, Panda and other prerequisite. Also, install necessary IDE \(Jupyter Notebook, Visual Studio Code etc.\)
+* Install  Python, Numpy, Panda and other prerequisite. Also, install necessary IDE \(Jupyter Notebook, Visual Studio Code etc.\)
 
 > Check Python version. Need to have Python 3.x on Windows. `python --version`
 >
 > Check the list of packages installed in the environment`conda list`
 
-1. Select your preferences and run the install command in your environment. The command can be found in  [**https://pytorch.org/get-started/locally/**](https://pytorch.org/get-started/locally/)  _\*\*_
+* Select your preferences and run the install command in your environment. The command can be found in  [**https://pytorch.org/get-started/locally/**](https://pytorch.org/get-started/locally/)  _\*\*_
 
 **`conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`**
 
-1. **Install torchvision**. This package consists of popular datasets, model architectures, and common image transformations for computer vision. 
+* **Install torchvision**. This package consists of popular datasets, model architectures, and common image transformations for computer vision. 
 
 `conda install torchvision -c pytorch`
 

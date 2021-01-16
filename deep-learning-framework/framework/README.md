@@ -15,11 +15,12 @@ Need to consider several factors
 
 The top 3 Deep Learning Frameworks:
 
-* Tensorflow/Keras/Pytorch
+* Tensorflow/Keras/Pytorch 
+* Powerscore comparison \[by [Jeff Hale](https://www.linkedin.com/in/jeff-hale-99a7877/)\]
 
-![By&#xA0;Jeff Hale,](../../.gitbook/assets/image%20%28112%29.png)
+![By&#xA0;Jeff Hale](../../.gitbook/assets/image%20%28112%29.png)
 
-By [Jeff Hale](https://www.linkedin.com/in/jeff-hale-99a7877/),
+
 
 ![](../../.gitbook/assets/image%20%28132%29.png)
 

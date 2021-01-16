@@ -2,7 +2,7 @@
 
 Follow the tutorials in the following orders
 
-## Pytorch.org tutorial: [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
+## [Pytorch.org tutorial](https://pytorch.org/tutorials/)
 
 ### Learning PyTorch
 
@@ -22,11 +22,12 @@ Follow the tutorials in the following orders
 
 ### Other Tutorials
 
-1. **Simple MNIST CNN**
-   * modified tutorial
-     * [source from github](https://github.com/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb)
-     * [run on colab](https://colab.research.google.com/github/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb)
-   * original tutorial
-     * [source  from github](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py)
-     * [run on colab](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb)
+**Simple MNIST CNN**
+
+* modified tutorial
+  * [source from github](https://github.com/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb)
+  * [run on colab](https://colab.research.google.com/github/ykkimhgu/dl-tutorial/blob/master/Keras/cnn/keras_tutorial_MNIST_ykk.ipynb)
+* original tutorial
+  * [source  from github](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py)
+  * [run on colab](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb)
 
