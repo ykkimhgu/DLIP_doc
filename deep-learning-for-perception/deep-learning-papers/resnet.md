@@ -6,7 +6,7 @@ Since AlexNet, the state-of-the-art CNN architecture is going deeper and deeper.
 
 Deep networks are hard to train because of the notorious vanishing gradient problem — as the gradient is back-propagated to earlier layers, repeated multiplication may make the gradient infinitively small.
 
-![](../../../images/image%20%28278%29.png)
+![](../../.gitbook/assets/image%20%28278%29.png)
 
 ResNets solve is the famous known vanishing gradient. With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
 
@@ -16,15 +16,15 @@ The core idea of ResNet is introducing a so-called “identity shortcut connecti
 
 The stacked layers fit a residual mapping is easier than letting them directly fit the desired underlaying mapping. With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
 
-![](../../../images/image%20%28272%29.png)
+![](../../.gitbook/assets/image%20%28272%29.png)
 
-![](../../../images/image%20%28273%29.png)
+![](../../.gitbook/assets/image%20%28273%29.png)
 
 ### Blocks
 
-![Layer 1, block 1](../../../images/image%20%28274%29.png)
+![Layer 1, block 1](../../.gitbook/assets/image%20%28274%29.png)
 
-![Layer 1](../../../images/image%20%28279%29.png)
+![Layer 1](../../.gitbook/assets/image%20%28279%29.png)
 
 Down sampling of the volume though the network is achieved by increasing the stride instead of a pooling operation.
 
@@ -32,13 +32,13 @@ Since the volume got modified we need to apply one of our down sampling strategi
 
 ![Layer 2, Block 1](https://miro.medium.com/max/1170/1*Xd-OIT9GRwLaM3F5jdbfzQ.png)
 
-![Layer 2](../../../images/image%20%28277%29.png)
+![Layer 2](../../.gitbook/assets/image%20%28277%29.png)
 
 ### Variant of Residual Block
 
 There are several new architectures based on ResNet over years
 
-![variants of residual blocks](../../../images/image%20%28275%29.png)
+![variants of residual blocks](../../.gitbook/assets/image%20%28275%29.png)
 
 #### Pre-activation variant of residual block \[7\]
 

@@ -13,7 +13,7 @@ Overview of LeNet: click here
 * Input: 32x32x1
   * MNIST image is 28x28.  MNIST is padded to 32
 
-![](../../../images/image%20%28231%29.png)
+![](../../.gitbook/assets/image%20%28231%29.png)
 
 ### LeNet-5 layers: <a id="d723"></a>
 

@@ -12,11 +12,11 @@ Need to understand the concept of 'Grouped Convolution'
 
 "If we allow group convolution to obtain input data from different groups \(as shown in Fig 1 \(b\)\), the input and output channels will be fully related.This can be efficiently and elegantly implemented by a channel shuffle operation \(Fig 1 \(c\)\): suppose a convolutional layer with g groups whose output has g × n channels; we first reshape the output channel dimension into \(g, n\), transposing and then flattening it back as the input of next layer. Note that the operation still takes effect even if the two convolutions have different numbers of groups. Moreover, channel shuffle is also differentiable, which means it can be embedded into network structures for end-to-end training."
 
-![\(a\) Two Stacked Group Convolutions \(GConv1 &amp; GConv2\), \(b\) Shuffle the channels before convolution, \(c\) Equivalent implementation of \(b\)](../../../images/image%20%28197%29.png)
+![\(a\) Two Stacked Group Convolutions \(GConv1 &amp; GConv2\), \(b\) Shuffle the channels before convolution, \(c\) Equivalent implementation of \(b\)](../../.gitbook/assets/image%20%28197%29.png)
 
 ### **ShuffleNet Unit**
 
-![\(a\) bottleneck unit with depthwise convolution \(DWConv\)of ResNet,InceptionV1, MobileNetv2, \(b\) ShuffleNet unit with pointwise group convolution \(GConv\) and channel shuffle, \(c\) ShuffleNet unit with stride = 2.](../../../images/image%20%28196%29.png)
+![\(a\) bottleneck unit with depthwise convolution \(DWConv\)of ResNet,InceptionV1, MobileNetv2, \(b\) ShuffleNet unit with pointwise group convolution \(GConv\) and channel shuffle, \(c\) ShuffleNet unit with stride = 2.](../../.gitbook/assets/image%20%28196%29.png)
 
 * **\(a\) Bottleneck Unit**: This is a standard residual bottleneck unit, but with depthwise convolution used. It can be also treated as a bottleneck type of depthwise separable convolution used in [MobileNetV2](https://towardsdatascience.com/review-mobilenetv2-light-weight-model-image-classification-8febb490e61c).
 
@@ -31,16 +31,16 @@ Given the input _c_×_h_×_w_, and bottleneck channels _m_, [ResNet](https://tow
 
 ### **Results**
 
-![](../../../images/image%20%28198%29.png)
+![](../../.gitbook/assets/image%20%28198%29.png)
 
 * With _g_ = 1, i.e. no pointwise group convolution.
 * Models with group convolutions \(_g_ &gt; 1\) consistently perform better than the counterparts without pointwise group convolutions \(_g_ = 1\).
 
-![](../../../images/image%20%28195%29.png)
+![](../../.gitbook/assets/image%20%28195%29.png)
 
 * With similar accuracy, ShuffleNet is much more efficient than [VGGNet](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11), [GoogLeNet](https://medium.com/coinmonks/paper-review-of-googlenet-inception-v1-winner-of-ilsvlc-2014-image-classification-c2b3565a64e7), [AlexNet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160) and [SqueezeNet](https://towardsdatascience.com/review-squeezenet-image-classification-e7414825581a).
 
-![](../../../images/image%20%28200%29.png)
+![](../../.gitbook/assets/image%20%28200%29.png)
 
 * Compared with [AlexNet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160), ShuffleNet 0.5× model still achieves ~13× actual speedup under comparable classification accuracy \(the theoretical speedup is 18×\).
 

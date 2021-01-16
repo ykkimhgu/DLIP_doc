@@ -2,11 +2,13 @@
 description: 딥러닝영상처리
 ---
 
-# Image Processing with Deep Learning
+# Syllabus
 
 ## Syllabus
 
 ### **Lecture**
+
+#### **Part 1**
 
 * **Introduction to Image Processing**
 * **Optics / Calibration**
@@ -16,6 +18,9 @@ description: 딥러닝영상처리
 * **Morphology**
 * **Edge,Line,Corner Detection**
 * **Color Image Processing**
+
+**Part 2**
+
 * **Inro. Deep Neural Network: MLP, Activation Function,  Loss Function**
 * **Inro. Deep Neural Network: Back Propagation, CaseStudy\(LeNet\)**
 * **Intro. Convolutional Neural Network: Convolution, Evaluation Metric**
