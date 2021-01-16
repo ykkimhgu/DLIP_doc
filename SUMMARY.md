@@ -3,10 +3,10 @@
 * [Introduction](README.md)
 * [Syllabus](image-processing-with-deep-learning.md)
 
-## Image Processing Basics <a id="image-processing-with-dl"></a>
+## Image Processing Basics <a id="image-processing"></a>
 
-* [Image Processing](image-processing-with-dl/image-processing-part-1/README.md)
-  * [Model n Calibration](image-processing-with-dl/image-processing-part-1/model-n-calibration.md)
+* [Image Processing](image-processing/image-processing-part-1/README.md)
+  * [Model n Calibration](image-processing/image-processing-part-1/model-n-calibration.md)
 
 ## Deep Learning for Perception
 
