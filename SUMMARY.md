@@ -12,6 +12,7 @@
 
 * [Notes](deep-learning-for-perception/notes/README.md)
   * [Overview of Deep Learning](deep-learning-for-perception/notes/overview-of-deep-learning/README.md)
+    * [Object Detection](deep-learning-for-perception/notes/overview-of-deep-learning/object-detection.md)
     * [Deep Learning Basics: Introduction](deep-learning-for-perception/notes/overview-of-deep-learning/deep-learning-basics-introduction.md)
     * [Deep Learning State of the Art](deep-learning-for-perception/notes/overview-of-deep-learning/some-notes.md)
     * [CNN, Object Detection](deep-learning-for-perception/notes/overview-of-deep-learning/cnn-object-detection.md)
@@ -26,7 +27,6 @@
   * [BottleNeck Unit](deep-learning-for-perception/notes/bottleneck-unit.md)
   * [DL Techniques](deep-learning-for-perception/notes/dl-resources/README.md)
     * [Technical Strategy by A.Ng](deep-learning-for-perception/notes/dl-resources/technical-strategy.md)
-  * [Object Detection](deep-learning-for-perception/notes/object-detection.md)
 * [Must Read Papers](deep-learning-for-perception/deep-learning-papers/README.md)
   * [AlexNet](deep-learning-for-perception/deep-learning-papers/alexnet.md)
   * [VGG](deep-learning-for-perception/deep-learning-papers/vgg.md)

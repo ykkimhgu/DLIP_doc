@@ -2,8 +2,6 @@
 
 ## Techniques
 
-### Evaluation Method
-
 ### Hyperparameter Tuning
 
 {% embed url="https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/" caption="" %}

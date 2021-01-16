@@ -1,6 +1,8 @@
 # BottleNeck Unit
 
-To reduce complexity while maintaining minimum accuracy loss. Several different types of bottleneck units are
+Read: Inception paper   \[_“Going deeper with convolutions”_\]\([https://arxiv.org/pdf/1409.4842.pdf](https://arxiv.org/pdf/1409.4842.pdf)\)
+
+This reduces complexity while maintaining minimum accuracy loss. Several different types of bottleneck units are
 
 1. Convolution 3x3
 2. Inception Bottleneck
