@@ -17,6 +17,8 @@ Binary classifier for Predict y = 1 if Wx+b &gt; 0 , otherwise y=0
 
 ![](https://github.com/ykkimhgu/DLIP_doc/tree/3298e5d2a4b6369e5cef7973dd93eef44ca7addf/.gitbook/assets/image%20%28216%29.png)
 
+![](../../../.gitbook/assets/image.png)
+
 The perceptron consists of 4 parts.
 
 1. Input values or One input layer
