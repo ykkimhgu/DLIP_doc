@@ -5,6 +5,7 @@
 ## Image Processing Basics <a id="image-processing"></a>
 
 * [Notes](image-processing/image-processing-notes/README.md)
+  * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
   * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 
 ## Deep Learning for Perception

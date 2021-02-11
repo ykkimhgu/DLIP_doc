@@ -1,3 +1,7 @@
+---
+description: (under construction)
+---
+
 # Notes
 
 **Introduction to Image Processing**
