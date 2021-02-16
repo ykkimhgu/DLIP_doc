@@ -41,9 +41,9 @@ Opencv 설치 파일 다운로드 &gt;   **C:\ opencv-3.4.13 폴더**를 새롭�
 
 ‘**새로 만들기**’ &gt;   **C:\opencv-3.4.13\build\x64\vc15\bin    입력**
 
-Path 설정 완료되면 컴퓨터 재부팅
+![](../../.gitbook/assets/image%20%2853%29.png)
 
-![](../../.gitbook/assets/image.png)
+Path 설정 완료되면 컴퓨터 재부팅
 
 ## OpenCV   프로젝트 속성시트\(Property sheet\)만들기
 
@@ -83,9 +83,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 > Opencv 헤더 \(include\)디렉터리 추가하는 과정
 
-![](../../.gitbook/assets/image%20%2839%29.png)
-
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 **공용 속성 &gt; 링커 &gt; 일반 &gt; 추가 라이브러리 디렉터리 &gt; 편집** &gt; 로 추가
 
@@ -93,9 +91,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 > Opencv  라이브러리  \(lib\)디렉터리 추가하는 과정
 
-![](../../.gitbook/assets/image%20%2812%29.png)
-
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 **공용 속성&gt; 링커 &gt; 입력 &gt; 추가 종속성&gt;**  경로추가
 
@@ -107,7 +103,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 ![](../../.gitbook/assets/image%20%2830%29.png)
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 ### **Release x64 Property Sheet 만들기**
 
@@ -139,5 +135,119 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 ## OpenCV   VS프로젝트 만들기
 
+Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 선택**
 
+**Visual C++ &gt; 빈 프로젝트** : 프로젝트 이름 **opencv\_simple\_demo** 입력 후 만들기
+
+### Project Property Sheet 설정
+
+**메뉴&gt;보기&gt;다른 창&gt;속성 관리자** 선택
+
+**속성 관리자 창 &gt; 프로젝트명** &gt; **Debugx64** : RightClick.
+
+**'기존 속성 시트 추가**' 선택 후   앞에서 저장된 **Property Sheet** " **opencv-3.4.13\_debug\_x64.props "** 를 추가
+
+동일한 과정 **Release\|x64** 항목에서  **Property Sheet**  " **opencv-3.4.13\_release\_x64.props "** 를 추가
+
+
+
+![](../../.gitbook/assets/image%20%2852%29.png)
+
+![](../../.gitbook/assets/image%20%2857%29.png)
+
+
+
+### 소스파일 만들기
+
+**보기 – 솔루션탐색기 &gt;  \[프로젝트\] &gt;  소스 파일 &gt;  추가 &gt;  새항목**   click
+
+**opencv\_simple\_demo.cpp  생성**
+
+![](../../.gitbook/assets/image%20%2848%29.png)
+
+![](../../.gitbook/assets/image%20%2845%29.png)
+
+구성 관리자를  **Debug x64**로 설정 후 아래 코드를 입력 및  실행 \(CTRL+F5\)
+
+>
+
+![](../../.gitbook/assets/image%20%2859%29.png)
+
+Demo: Camera Open and capture 
+
+```cpp
+#include "opencv.hpp"
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+    VideoCapture cap(0); // open the video camera no. 0
+
+    if (!cap.isOpened())  // if not success, exit program
+    {
+        cout << "Cannot open the video cam" << endl;
+        return -1;
+    }
+   namedWindow("MyVideo",CV_WINDOW_AUTOSIZE); //create a window called "MyVideo"
+
+    while (1)
+    {
+        Mat frame;
+        bool bSuccess = cap.read(frame); // read a new frame from video
+         if (!bSuccess) //if not success, break loop
+        {
+             cout << "Cannot read a frame from video stream" << endl;
+             break;
+        }
+        imshow("MyVideo", frame); //show the frame in "MyVideo" window
+
+        if (waitKey(30) == 27) //wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop
+       {
+            cout << "esc key is pressed by user" << endl;
+            break; 
+       }
+    }
+    return 0;
+}
+
+```
+
+Demo: Image File Read 
+
+```cpp
+#include <opencv.hpp>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+//* @function main
+int main()
+{
+Mat src;
+
+src = imread("testImage.jpg", 1);/// Load an image
+
+if (src.empty())/// Load image check
+{
+cout << "File Read Failed : src is empty" << endl;
+waitKey(0);
+}
+
+/// Create a window to display results
+namedWindow("DemoWIndow", CV_WINDOW_AUTOSIZE); //CV_WINDOW_AUTOSIZE(1) :Fixed Window, 0: Unfixed window
+
+if (!src.empty())imshow("DemoWIndow", src); // Show image
+
+waitKey(0);//Pause the program
+return 0;
+}
+```
+
+Expected Output
+
+![](../../.gitbook/assets/image%20%2851%29.png)
 
