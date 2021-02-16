@@ -45,7 +45,7 @@ Path 설정 완료되면 컴퓨터 재부팅
 
 ![](../../.gitbook/assets/image.png)
 
-## OpenCV  Visual Studio 프로젝트 속성시트\(Property sheet\)만들기
+## OpenCV   프로젝트 속성시트\(Property sheet\)만들기
 
 Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 선택**
 
@@ -137,5 +137,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 > release에서는 'opencv\_world3413.lib' , debug 에서는 'opencv\_world3413d.lib' 로 설정해야 함
 
-## 
+## OpenCV   VS프로젝트 만들기
+
+
 
