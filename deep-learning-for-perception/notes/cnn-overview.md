@@ -24,7 +24,7 @@ AlexNet\(2012\)
 
 VGG-16\(2014\)
 
-![](../../.gitbook/assets/image%20%28238%29.png)
+![](../../.gitbook/assets/image%20%28238%29%20%281%29.png)
 
 ## Convolution
 

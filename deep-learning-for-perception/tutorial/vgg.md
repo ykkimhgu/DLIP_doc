@@ -10,7 +10,7 @@ Read about VGG: click here
 
 ![](../../.gitbook/assets/image%20%28224%29.png)
 
-![](../../.gitbook/assets/image%20%28238%29%20%281%29.png)
+![](../../.gitbook/assets/image%20%28238%29%20%281%29%20%281%29.png)
 
 ### VGG-19
 
@@ -58,7 +58,7 @@ display(idx, score)
 
 [Read this blog for step by step tutorial](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 
-![](../../.gitbook/assets/image%20%28252%29.png)
+![](../../.gitbook/assets/image%20%28251%29.png)
 
 ```python
 #Importing library
