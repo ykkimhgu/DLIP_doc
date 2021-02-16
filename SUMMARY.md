@@ -89,6 +89,7 @@
   * [Cheat Sheet](programming/python/cheat-sheet.md)
   * [Tips](programming/python/tips.md)
 * [OpenCV](programming/opencv/README.md)
+  * [OpenCV3.4.7  VS2017](programming/opencv/opencv3.4.7-vs2017.md)
   * [Python OpenCV](programming/opencv/python-opencv.md)
   * [MATLAB-OpenCV](programming/opencv/matlab-opencv.md)
 * [DL Library](programming/dl-library-tools/README.md)
