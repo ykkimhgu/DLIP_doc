@@ -70,6 +70,7 @@
     * [Cheat Sheet](deep-learning-framework/framework/tensorflow/install_tf-1.md)
     * [Tutorial](deep-learning-framework/framework/tensorflow/install_tf-2.md)
 * [IDE](deep-learning-framework/ide/README.md)
+  * [Visual Studio Community](deep-learning-framework/ide/visual-studio-community.md)
   * [Google Codelab](deep-learning-framework/ide/colab/README.md)
     * [Install](deep-learning-framework/ide/colab/install-colab.md)
     * [Setup](deep-learning-framework/ide/colab/setup-colab.md)
