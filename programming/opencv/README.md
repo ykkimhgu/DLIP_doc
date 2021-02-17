@@ -25,7 +25,7 @@ OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases
 
 Opencv 설치 파일 다운로드 &gt;   **C:\ opencv-3.4.13 폴더**를 새롭게 만든 후에  설치 파일 압축풀기
 
-![](../../.gitbook/assets/image%20%2864%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 
 
@@ -79,7 +79,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
  **속성시트** ‘opencv-3.4.13\_debug\_x64’ double click
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2875%29.png)
 
 **공용 속성 &gt; C/C++ &gt; 일반 &gt; 추가 포함 디렉터리 &gt; 편집** **&gt; 추가 포함 디렉터리**&gt; 경로추가
 
@@ -115,7 +115,7 @@ Visual Studio 201x 실행 후 '**파일&gt; 새로 만들기&gt; 프로젝트 �
 
 **새 프로젝트 속성 시트 추가 &gt; 속성시트명**: ‘opencv-3.4.13\_release\_x64.props’으로 지정 후 추가
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 위에 설명한 **Debug x64 Property Sheet** 만들기 과정을 아래 경로를 추가하여 반복
 
@@ -219,7 +219,7 @@ return 0;
 
 Expected Output
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2866%29.png)
 
 \*\*\*\*
 

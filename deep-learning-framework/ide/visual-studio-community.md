@@ -48,5 +48,42 @@ VS 실행 후  **메뉴**&gt;'**도구 &gt; 옵션**  선택
 
 ## VS 프로젝트 만들기
 
+"Hello Hanndong" 테스트코드 작성하기
+
+
+
+Visual Studio 2019 실행 후 **새 프로젝트 만들기 &gt; 빈 프로젝**
+
+![](../../.gitbook/assets/image%20%2864%29.png)
+
+프로젝트 이름을  **HelloHandong** 으로 설정 후 만들
+
+![](../../.gitbook/assets/image%20%2863%29.png)
+
+**보기 – 솔루션탐색기 &gt;  \[프로젝트명\] &gt;  소스 파일 &gt;  추가 &gt;  새항목**   click
+
+**C++ 파일\(cpp\) 선택 후  helloHandong.cpp 파 생성**
+
+![](../../.gitbook/assets/image%20%2873%29.png)
+
+![](../../.gitbook/assets/image%20%2870%29.png)
+
+아래 소스코드 입력 후 실행 \(CTRL+F5\)
+
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, Handong!\n");
+
+    return 0;
+}
+```
+
+Expected Output
+
+![](../../.gitbook/assets/image%20%2871%29.png)
+
 
 
