@@ -10,7 +10,7 @@ Read about VGG: click here
 
 ![](../../.gitbook/assets/image%20%28224%29.png)
 
-![](../../.gitbook/assets/image%20%28238%29%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/image%20%28238%29%20%281%29%20%281%29%20%281%29.png)
 
 ### VGG-19
 
