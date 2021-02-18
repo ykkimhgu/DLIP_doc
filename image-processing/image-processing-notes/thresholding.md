@@ -4,6 +4,14 @@ $$
 a = b *b
 $$
 
+$${\label{eq.1}}
+F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)$$
+
+\begin{equation}{\label{eq.1}}
+F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)
+\end{equation},
+
+
 **A Short Summary of Thresholding Algorithm**
 
 * The basic concept of thresholding: to segment objects from the background based on intensity values.
