@@ -1,4 +1,14 @@
+---
+description: (under construction)
+---
+
 # Cheat Sheet
+
+## Pytorch Cheat Sheet
+
+{% file src="../../../.gitbook/assets/pytorch-cheat-sheet-pytorch-tutorials-1.1.0-documentation.pdf" %}
+
+> See also :  numpy cheat sheet
 
 ## Numpy &lt;-&gt; Torch Tensor
 
