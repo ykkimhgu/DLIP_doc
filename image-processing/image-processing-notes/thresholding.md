@@ -4,13 +4,9 @@ $$
 a = b *b
 $$
 
-$${\label{eq.1}}
-F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)$$
+$${\label{eq.1}} F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)$$
 
-\begin{equation}{\label{eq.1}}
-F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)
-\end{equation},
-
+\begin{equation}{\label{eq.1}} F=\alpha A+\beta W=\beta\(\frac{\alpha}{\beta}A+W\) \end{equation},
 
 **A Short Summary of Thresholding Algorithm**
 
@@ -34,10 +30,9 @@ F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)
 ![](../../.gitbook/assets/11.png)
 
 1. repeat from step 2 until ![](../../.gitbook/assets/12%20%281%29.png), where ![](../../.gitbook/assets/13.png)
-
-* OTSU’s method.
-* The aim is to maximize the between-class variance based on the histogram of an image
-* First, calculate the normalized histogram ![](../../.gitbook/assets/14%20%281%29.png), with _ni_ is the number of pixels with the intensity level _I_, and it should satisfy
+2. OTSU’s method.
+3. The aim is to maximize the between-class variance based on the histogram of an image
+4. First, calculate the normalized histogram ![](../../.gitbook/assets/14%20%281%29.png), with _ni_ is the number of pixels with the intensity level _I_, and it should satisfy
 
 ![](../../.gitbook/assets/15%20%281%29.png)
 
@@ -59,7 +54,7 @@ Note: Bayes formula
 
 ![](../../.gitbook/assets/25%20%281%29.png)
 
-* * 
+* \* 
 * Then, the mean of intensity of class ![](../../.gitbook/assets/30.png) becomes
 
 ![](../../.gitbook/assets/31.png)
@@ -94,7 +89,7 @@ since the total mean intensity is ![](../../.gitbook/assets/40%20%281%29.png)
 
 The further the two means of ![](../../.gitbook/assets/47.png)and ![](../../.gitbook/assets/48.png)are from each other, the larger ![](../../.gitbook/assets/49.png) will be
 
- larger value of _η._
+larger value of _η._
 
 To make the calculation simpler, we transform the formula as
 
@@ -114,8 +109,7 @@ Aim: obtain the maximum ![](../../.gitbook/assets/52%20%281%29.png) from the cal
 6. Compute ![](../../.gitbook/assets/62%20%281%29.png), for all ![](../../.gitbook/assets/63%20%281%29.png)
 7. Find k\* at which ![](../../.gitbook/assets/64%20%281%29.png) is at maximum
 8. Apply threshold at ![](../../.gitbook/assets/65%20%281%29.png)\*
-
-* Local thresholding
+9. Local thresholding
 
 Method 1. Image partitioning
 
@@ -129,9 +123,9 @@ Method 2. Based on local image property
 
 ![](../../.gitbook/assets/71.png)
 
- preferable if background is nearly uniform.
+preferable if background is nearly uniform.
 
- Method 3. Moving average.
+Method 3. Moving average.
 
 * Scan line by line in zigzag to reduce illumination effect
 
