@@ -5,6 +5,7 @@
 ## Image Processing Basics <a id="image-processing"></a>
 
 * [Notes](image-processing/image-processing-notes/README.md)
+  * [Thresholding](image-processing/image-processing-notes/thresholding.md)
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
   * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 
