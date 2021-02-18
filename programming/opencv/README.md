@@ -267,5 +267,5 @@ int main(int argc, char* argv[])
 
 Expected Output
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
