@@ -1,5 +1,5 @@
 ---
-description: Course Introduction (updated 2021-1)
+description: (updated 2021.2).   Under construction
 ---
 
 # Introduction
@@ -62,9 +62,9 @@ After taking this course, students will be able to build their own program for
 
 ### **LAB**
 
-* LAB 1: Object Segmentation in Grayscale Image
-* LAB 2: Object Segmentation in Color Image
-* LAB 3: Lane Detection
-* LAB 4: Object Recognition \(Custom dataset\)
-* LAB 5: Object Detection \(Vehicle /Pedestrian\)
+* LAB: Object Segmentation in Grayscale Image
+* LAB: Object Segmentation in Color Image
+* LAB: Lane Detection
+* LAB: Object Detection \(Vehicle /Pedestrian\)
+* LAB: Object Recognition or Detection \(Custom dataset\)
 
