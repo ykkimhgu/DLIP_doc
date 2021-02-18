@@ -19,17 +19,13 @@ Books about the OpenCV are described here: [https://opencv.org/books.html](https
 
 ## Installing OpenCV 3.4.13  with Visual Studio 2019
 
-OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases/%20)
-
-{% embed url="https://app.gitbook.com/@ykkim/s/dlip/~/drafts/-MTmuoDtfVv9M-ZWuOAW/programming/opencv/opencv-install" %}
-
-
-
-
+{% embed url="https://ykkim.gitbook.io/dlip/programming/opencv/opencv-install" %}
 
 ## Installing OpenCV 3.4.7  with Visual Studio 2017
 
-OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases/%20)
+{% embed url="https://ykkim.gitbook.io/dlip/programming/opencv/opencv-install/opencv3.4.7-vs2017" %}
+
+
 
 
 
