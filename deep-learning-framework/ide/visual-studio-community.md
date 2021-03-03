@@ -40,7 +40,7 @@ VS 실행 후  **메뉴**&gt;'**도구 &gt; 옵션**  선택
 
 > 프로젝트 위치: 프로젝트 생성시 소스코드를 포함한 프로젝트의 저장 경로를 의미
 >
-> Default로 VS 프로젝트가 여기 경로에 생성이
+> Default로 VS 프로젝트가 여기 경로에 생성이 됨.
 
 ![](../../.gitbook/assets/image%20%2816%29%20%281%29.png)
 
@@ -48,21 +48,21 @@ VS 실행 후  **메뉴**&gt;'**도구 &gt; 옵션**  선택
 
 ## VS 프로젝트 만들기
 
-"Hello Hanndong" 테스트코드 작성하기
+"Hello Handong" 테스트코드 작성하기
 
 
 
-Visual Studio 2019 실행 후 **새 프로젝트 만들기 &gt; 빈 프로젝**
+Visual Studio 2019 실행 후 **새 프로젝트 만들기 &gt; 빈 프로젝트**
 
 ![](../../.gitbook/assets/image%20%2864%29.png)
 
-프로젝트 이름을  **HelloHandong** 으로 설정 후 만들
+프로젝트 이름을  **HelloHandong** 으로 설정 후 만들기 
 
 ![](../../.gitbook/assets/image%20%2863%29.png)
 
 **보기 – 솔루션탐색기 &gt;  \[프로젝트명\] &gt;  소스 파일 &gt;  추가 &gt;  새항목**   click
 
-**C++ 파일\(cpp\) 선택 후  helloHandong.cpp 파 생성**
+**C++ 파일\(cpp\) 선택 후  helloHandong.cpp 파일 생성**
 
 ![](../../.gitbook/assets/image%20%2873%29.png)
 
