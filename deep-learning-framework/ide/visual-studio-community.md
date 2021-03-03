@@ -6,7 +6,7 @@ For Installing OpenCV on Visual Studio Community:[ click here](https://ykkim.git
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/opencv\#installing-opencv-3-4-13-with-visual-studio-2019" %}
 
-
+ 
 
 ## How to Install
 
