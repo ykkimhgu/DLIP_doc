@@ -19,7 +19,7 @@ $${\label{eq.1}} F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)$$
 
 ![](../../.gitbook/assets/1%20%281%29.png)
 
-1. Analyze the intensity histogram and select the initial estimation of ![](../../.gitbook/assets/5%20%281%29.png)\(usually the mean of the image intensity\). Let the intensity of the input image is defined as g\(x,y\).
+1. Analyze the intensity histogram and select the initial estimation of ![](../../.gitbook/assets/4%20%281%29.png)\(usually the mean of the image intensity\). Let the intensity of the input image is defined as g\(x,y\).
 2. Segment the image by two groups on the histogram using the value of ![](../../.gitbook/assets/6.png)
 
 ![](../../.gitbook/assets/7%20%281%29.png)
@@ -42,7 +42,7 @@ $${\label{eq.1}} F=\alpha A+\beta W=\beta(\frac{\alpha}{\beta}A+W)$$
 
 which is equivalent to
 
-![](../../.gitbook/assets/17.png)
+![](../../.gitbook/assets/40%20%281%29.png)
 
 ![](../../.gitbook/assets/20%20%281%29.png)
 
@@ -57,7 +57,7 @@ Note: Bayes formula
 * \* 
 * Then, the mean of intensity of class ![](../../.gitbook/assets/30.png) becomes
 
-![](../../.gitbook/assets/31.png)
+![](../../.gitbook/assets/31%20%282%29.png)
 
 * Similarly, the mean of intensity of class ![](../../.gitbook/assets/32.png) becomes
 
@@ -67,13 +67,13 @@ where ![](../../.gitbook/assets/34%20%281%29.png) and ![](../../.gitbook/assets/
 
 * The cumulative mean intensity from ‘0’ up to level ![](../../.gitbook/assets/36%20%281%29.png)is defined as
 
-![](../../.gitbook/assets/37.png) // ![](../../.gitbook/assets/38%20%281%29.png)
+![](../../.gitbook/assets/37.png) // ![](../../.gitbook/assets/31%20%282%29%20%282%29.png)
 
 * Thus, we can express the total mean intensity as
 
 ![](../../.gitbook/assets/39.png)
 
-since the total mean intensity is ![](../../.gitbook/assets/40%20%281%29.png)
+since the total mean intensity is ![](../../.gitbook/assets/40%20%281%29%20%281%29.png)
 
 * To evaluate the ‘goodness’ of the threshold values of ![](../../.gitbook/assets/41.png), we can design a score
 
@@ -83,11 +83,11 @@ since the total mean intensity is ![](../../.gitbook/assets/40%20%281%29.png)
 
 ![](../../.gitbook/assets/44%20%281%29.png)
 
-![](../../.gitbook/assets/45.png)is the between-class variance
+![](../../.gitbook/assets/45%20%282%29.png)is the between-class variance
 
 ![](../../.gitbook/assets/46%20%281%29.png)
 
-The further the two means of ![](../../.gitbook/assets/47.png)and ![](../../.gitbook/assets/48.png)are from each other, the larger ![](../../.gitbook/assets/49.png) will be
+The further the two means of ![](../../.gitbook/assets/47.png)and ![](../../.gitbook/assets/48.png)are from each other, the larger ![](../../.gitbook/assets/45%20%282%29%20%281%29.png) will be
 
 larger value of _η._
 
@@ -99,14 +99,14 @@ The Procedure of Otsu Method
 
 ![](../../.gitbook/assets/51.png)
 
-Aim: obtain the maximum ![](../../.gitbook/assets/52%20%281%29.png) from the calculation of ![](../../.gitbook/assets/53%20%281%29.png)for all values of _k_
+Aim: obtain the maximum ![](../../.gitbook/assets/62%20%281%29%20%282%29.png) from the calculation of ![](../../.gitbook/assets/62%20%281%29%20%282%29%20%281%29.png)for all values of _k_
 
 1. Apply an image filter prior to thresholding.
 2. Compute the normalized histogram ![](../../.gitbook/assets/54.png)
-3. Compute the cumulative sum ![](../../.gitbook/assets/55%20%281%29.png), ![](../../.gitbook/assets/56%20%281%29.png)to![](../../.gitbook/assets/57%20%281%29.png)
-4. Compute the cumulative mean ![](../../.gitbook/assets/58%20%281%29.png), ![](../../.gitbook/assets/59%20%281%29.png)to![](../../.gitbook/assets/60.png)
+3. Compute the cumulative sum ![](../../.gitbook/assets/55%20%281%29.png), ![](../../.gitbook/assets/56%20%281%29%20%281%29%20%281%29.png)to![](../../.gitbook/assets/57%20%281%29%20%281%29.png)
+4. Compute the cumulative mean ![](../../.gitbook/assets/58%20%281%29.png), ![](../../.gitbook/assets/56%20%281%29%20%281%29.png)to![](../../.gitbook/assets/57%20%281%29%20%281%29%20%281%29.png)
 5. Compute the global intensity mean ![](../../.gitbook/assets/61%20%281%29.png)
-6. Compute ![](../../.gitbook/assets/62%20%281%29.png), for all ![](../../.gitbook/assets/63%20%281%29.png)
+6. Compute ![](../../.gitbook/assets/62%20%281%29%20%282%29%20%282%29.png), for all ![](../../.gitbook/assets/63%20%281%29.png)
 7. Find k\* at which ![](../../.gitbook/assets/64%20%281%29.png) is at maximum
 8. Apply threshold at ![](../../.gitbook/assets/65%20%281%29.png)\*
 9. Local thresholding
