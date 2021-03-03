@@ -1,5 +1,6 @@
 # Visual Studio Community
 
+(updated 03-03)
 We will use Visual Studio Community for OpenCV C++ . You can download for free if you have a MSN account.
 
 For Installing OpenCV on Visual Studio Community:[ click here](https://ykkim.gitbook.io/dlip/programming/opencv#installing-opencv-3-4-13-with-visual-studio-2019)
