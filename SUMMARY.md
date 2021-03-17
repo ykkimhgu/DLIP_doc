@@ -4,6 +4,8 @@
 
 ## Image Processing Basics <a id="image-processing"></a>
 
+* [Tutorial](image-processing/tutorial/README.md)
+  * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
 * [Notes](image-processing/image-processing-notes/README.md)
   * [Thresholding](image-processing/image-processing-notes/thresholding.md)
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
