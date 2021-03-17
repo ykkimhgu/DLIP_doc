@@ -1,31 +1,28 @@
 # Tutorial: Thresholding and Morphology
 
-**Tutorial: Thresholding and Morphology**
+## **Tutorial: Thresholding and Morphology**
 
 ## **I. Introduction**
 
-In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background.   
-Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces.   
-Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and to determine an optimal value for the thresholding.   
-
+In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces.  ****Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and to determine an optimal value for the thresholding. 
 
 ## **II. Tutorial**
 
 ### **Part 1. Binary Thresholding** 
 
-### **Local Thresholding Algorithms**
+#### **Local Thresholding Algorithms**
 
-#### **Basic Global thresholding**
+#### **A. Basic Global thresholding**
 
 ![](https://lh3.googleusercontent.com/4YB1b61D99qCQW2tBSFXFEDQEOJDcjJ1jSFlQ2QGpk84yVN_YtmC1cgpuEB2BN1MrzlguJdzPrc97xUsaP43n58HdorNlfPIXcqa3iga0DQl0zkzW1OCSaedoolBjKn0iE4Er5c)
 
-#### **Optimum Global thresholding**
+#### **B. Optimum Global thresholding**
 
 ![](https://lh4.googleusercontent.com/Q9Doe8K-IJgBCvg6EWBbcqCJG-i7nxPOnVKSKI3dh92N7E753FgmQOrwQCx8N65QDmarix8DKAZlr0o7UNnbGbFHdIZZ0QUIoUC6pSRDnzUuP1CsOAkwnrX2maKgFgSQsH4WfFw)
 
-### \*\*\*\*
+#### \*\*\*\*
 
-### **Thresholding Application: OpenCV**  
+#### **Thresholding Application: OpenCV**  
 
 This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images**.**  
 
@@ -43,72 +40,15 @@ This tutorial program uses a trackbar to select the threshold value manually. Ap
 
 **4.** Apply ‘Local Adaptive Thresholding’  on the following images. Compare the results of the global thresholding.
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 
 
 **OpenCV: Global and Optimal Thresholding**
 
-```text
-C++: 
+{% embed url="https://docs.opencv.org/3.4/d7/d1b/group\_\_imgproc\_\_misc.html\#gae8a4a146d1ca78c626a53577199e9c57" %}
 
-Global Method:
-double threshold(InputArray src, OutputArray dst, double thresh, double maxval, int type)
-
-Otsu Method: 
-double threshold( src_gray, dst, THRESH_OTSU, max_BINARY_value,threshold_type );
-
-Local Adaptive Thresholding
-void adaptiveThreshold(InputArray src, OutputArray dst, double maxValue, 
-int adaptiveMethod, int thresholdType, int blockSize, double C)
-
-```
-
-```text
-Python: 
-
-Global Method:
-retval, dst=cv.threshold(src, thresh, maxval, type[, dst])
-
-Local Adaptive Thresholding
-dst=cv.adaptiveThreshold(src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst])
-```
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p><b>C++: <br /></b>
-        </p>
-        <p><b>Global Method:</b>
-        </p>
-        <p><b>double threshold(InputArray src, OutputArray dst, double thresh, double maxval, int type)<br /></b>
-        </p>
-        <p><b>Otsu Method: </b>
-        </p>
-        <p><b>double threshold( src_gray, dst, THRESH_OTSU, max_BINARY_value,threshold_type );<br /></b>
-        </p>
-        <p><b>Local Adaptive Thresholding</b>
-        </p>
-        <p><b>void adaptiveThreshold(InputArray src, OutputArray dst, double maxValue, </b>
-        </p>
-        <p><b>int adaptiveMethod, int thresholdType, int blockSize, double C)<br /></b>
-        </p>
-        <p><b>Python: <br /></b>
-        </p>
-        <p><b>Global Method:</b>
-        </p>
-        <p><b>retval, dst=cv.threshold(src, thresh, maxval, type[, dst])<br /></b>
-        </p>
-        <p><b>Local Adaptive Thresholding\</b>
-        </p>
-        <p><b>dst=cv.adaptiveThreshold(src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst])<br /></b>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+![](../../.gitbook/assets/image%20%2843%29.png)
 
 * Sample code
 
@@ -153,18 +93,15 @@ ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 
 #### **Morphology Application: OpenCV**  
 
-**This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images.**  
+This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images.  
   
+**1.** Refer to sample code below. Apply several morphology to obtain clear segmentation of the object in given images. 
 
+* For Python tutorial: [click here](https://docs.opencv.org/3.4/d9/d61/tutorial_py_morphological_ops.html) 
 
-1. **Refer to sample code below. Apply several morphology to obtain clear segmentation of the object in given images.** 
+2. Apply several morphology to obtain clear segmentation of the object in given images. 
 
-* **For Python tutorial:** [**click here**](https://docs.opencv.org/3.4/d9/d61/tutorial_py_morphological_ops.html) ****
-
-1. **Apply several morphology to obtain clear segmentation of the object in given images.** 
-2. **Explain which morphology process you have used and explain the reason.** 
-
-**Sample code:**
+3. Explain which morphology process you have used and explain the reason. ****
 
 \*\*\*\*
 
@@ -180,7 +117,6 @@ int shape = MORPH_RECT; // MORPH_CROSS, MORPH_ELLIPSE
 // Apply a morphology operation
 dilate( src, dst_morph, element);
 erode ( src, dst_morph, element);
-
 ```
 {% endtab %}
 
@@ -199,17 +135,13 @@ erosion = cv.erode(img,kernel,iterations = 1)
 
 
 
-### **Part 3. Exercise** 
+## **III. Exercise**
 
-**After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels.**   
+After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels. 
 
-
-**Goal: Count the number of water bubbles for a thermal fluid experiment**  
-
+**Goal: Count the number of water bubbles for a thermal fluid experiment**
 
 ![&amp;lt;img&amp;gt;Bluerred image.](https://lh4.googleusercontent.com/2OZKpPmzK6SzQUEPrkNzsmuFTFf8D_bTq-GXZ2Uqr5OLe-JKL1vQnYkSZU3gMKcOgIw64qv3CcfZu2974nTxWJDQSKzEbqHCz4FpWqUEhT5kh4Eg0E_4B42QfGvpOzNU4C5OtwI)
-
-### \*\*\*\*
 
 * Analyze the histogram of the image. 
 * Apply a filter to remove image noises
@@ -221,27 +153,28 @@ erosion = cv.erode(img,kernel,iterations = 1)
 
 
 
-**Tip: \(contour\_demo.cpp\)**
+#### **Tip: \(contour\_demo.cpp\)**
 
 ```cpp
 // example code
 // dst: binary image
 vector<vector<Point>> contours;
-  vector<Vec4i> hierarchy;
+vector<Vec4i> hierarchy;
 
-   /// Find contours
-  findContours( dst, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+/// Find contours
+findContours( dst, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
    
-  /// Draw all contours excluding holes
-  Mat drawing( dst.size(), CV_8U,Scalar(255));
-  drawContours( drawing, contours, -1, Scalar(0), CV_FILLED);
+/// Draw all contours excluding holes
+Mat drawing( dst.size(), CV_8U,Scalar(255));
+drawContours( drawing, contours, -1, Scalar(0), CV_FILLED);
     
-  cout<<" Number of coins are ="<<contours.size()<<endl;
+cout<<" Number of coins are ="<<contours.size()<<endl;
   
 for( int i = 0; i< contours.size(); i++ )
   {
        printf(" * Contour[%d] -  Area OpenCV: %.2f - Length: %.2f \n", i, contourArea(contours[i]), arcLength( contours[i], true ) );       
   }
-
 ```
+
+
 
