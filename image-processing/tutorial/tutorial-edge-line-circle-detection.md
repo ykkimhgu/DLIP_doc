@@ -19,6 +19,8 @@ We will learn how to use Canny Edge Algorithm to detect and display edges.
 
 * OpenCV Canny\(\):[ read docs](https://docs.opencv.org/3.4.13/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
 
+![](../../.gitbook/assets/image%20%2889%29.png)
+
 ```cpp
 C++: void Canny(InputArray image, OutputArray edges, double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false )
  
@@ -101,8 +103,6 @@ src.copyTo( dst, detected_edges);
 imshow( window_name, dst );
 ```
 
-
-
 ### **Part 2. Line Detection: Hough Transform**
 
 In OpenCV, there are two kinds of Hough Lıne Transform
@@ -148,7 +148,11 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 		printf(" Error opening image\n");
 		return -1;
 	}
+	
+	imshow("Source", src);
 ```
+
+![](../../.gitbook/assets/image%20%2884%29.png)
 
 *  Detect the edges using Canny detector
 
@@ -166,10 +170,8 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
   ```
 
 *   \(Option 1\) Standard Hough Line Transform
-
   * First, apply the Hough Transform. Then display the results by drawing the lines.
-
-  Output vector of lines. Each line is represented by a 2 or 3 element vector \(ρ,θ\) or \(ρ,θ,votes\) . ρ is the distance from the coordinate origin \(0,0\) \(top-left corner of the image\). θ is the line rotation angle in radians \( 0∼vertical line,π/2∼horizontal line \). votes is the value of accumulator.  
+  * Output vector of lines. Each line is represented by a 2 or 3 element vector \(ρ,θ\) or \(ρ,θ,votes\) . ρ is the distance from the coordinate origin \(0,0\) \(top-left corner of the image\). θ is the line rotation angle in radians \( 0∼vertical line,π/2∼horizontal line \). votes is the value of accumulator. 
 
 ```cpp
 	// (Option 1) Standard Hough Line Transform
@@ -189,7 +191,13 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 		pt2.y = cvRound(y0 - 1000 * (a));
 		line(cdst, pt1, pt2, Scalar(0, 0, 255), 3, LINE_AA);
 	}
+	
+	imshow("Detected Lines (in red) - Standard Hough Line Transform", cdst);
 ```
+
+![](../../.gitbook/assets/image%20%2891%29.png)
+
+
 
 * \(Option 2\) Probabilistic Hough Line Transform
   * Lines \(HoughLinesP\) Output vector of lines. Each line is represented by a 4-element vector \(x1,y1,x2,y2\), where \(x1,y1\) and \(x2,y2\) are the ending points of each detected line segment.
@@ -204,7 +212,11 @@ vector<Vec4i> linesP;
 		Vec4i l = linesP[i];
 		line(cdstP, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, LINE_AA);
 	}
+	
+	imshow("Detected Lines (in red) - Probabilistic Line Transform", cdstP);
 ```
+
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 * Show results
 
@@ -218,6 +230,8 @@ vector<Vec4i> linesP;
 ### **Part 3. Circle Detection: Hough Circles**
 
 Usually, the function detects the centers of circles well but the radius may not be accurate. It helps if you can specify the radius ranges \( minRadius and maxRadius \), if available. Or, you may set maxRadius to a negative number to return centers only without radius search, and find the correct radius using an additional procedure.
+
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 * [HoughCircles\(\) OpenCV docs](https://docs.opencv.org/3.4.13/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
