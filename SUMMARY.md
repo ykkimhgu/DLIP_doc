@@ -6,6 +6,7 @@
 
 * [Tutorial](image-processing/tutorial/README.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
+  * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
 * [Notes](image-processing/image-processing-notes/README.md)
   * [Thresholding](image-processing/image-processing-notes/thresholding.md)
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
