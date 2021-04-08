@@ -8,18 +8,16 @@ In this tutorial, you will learn how to use OpenCV to detect edges, lines and ci
 
 ## **II. Tutorial**
 
-**Find edges, straight lines and circle shapes**
+Find edges, straight lines and circle shapes
+
+* [Example code: click here](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Hough)
+* [Image data: click here](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Hough)
 
 ### **Part 1. Edge Detection**
 
-**We will learn how to use Canny Edge Algorithm to detect and display edges.**
+We will learn how to use Canny Edge Algorithm to detect and display edges.
 
-* **Example code: click here**
-*  **Image data: click here**
-
-OpenCV Canny\(\):[ read docs](https://docs.opencv.org/3.4.13/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
-
-
+* OpenCV Canny\(\):[ read docs](https://docs.opencv.org/3.4.13/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
 
 ```cpp
 C++: void Canny(InputArray image, OutputArray edges, double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false )
@@ -220,6 +218,8 @@ vector<Vec4i> linesP;
 ### **Part 3. Circle Detection: Hough Circles**
 
 Usually, the function detects the centers of circles well but the radius may not be accurate. It helps if you can specify the radius ranges \( minRadius and maxRadius \), if available. Or, you may set maxRadius to a negative number to return centers only without radius search, and find the correct radius using an additional procedure.
+
+* [HoughCircles\(\) OpenCV docs](https://docs.opencv.org/3.4.13/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
 ```cpp
 void cv::HoughCircles(InputArray image, OutputArray circles, int method, double dp, double   minDist, double   param1 = 100, double      	param2 = 100, int minRadius = 0, int              	maxRadius = 0  )
