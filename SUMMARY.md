@@ -5,6 +5,7 @@
 ## Image Processing Basics <a id="image-processing"></a>
 
 * [Tutorial](image-processing/tutorial/README.md)
+  * [LAB: Facial Temperature Measurement with IR images](image-processing/tutorial/lab-facial-temperature-measurement-with-ir-images.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
 * [Notes](image-processing/image-processing-notes/README.md)
