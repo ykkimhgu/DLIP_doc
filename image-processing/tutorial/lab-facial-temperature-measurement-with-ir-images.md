@@ -16,9 +16,9 @@ We will not use any deep learning or any other complex algorithms. Just use simp
 
 Download the source Video file:[ Click here](https://github.com/ykkimhgu/DLIP-src/tree/main/LAB_color)
 
-## [https://www.youtube.com/watch?v=4uzuqZ\_AQxw](https://www.youtube.com/watch?v=4uzuqZ_AQxw)
 
 
+{% embed url="https://youtu.be/xvM0-H5nXoM" %}
 
 
 
