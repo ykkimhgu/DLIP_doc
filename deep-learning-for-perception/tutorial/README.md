@@ -6,9 +6,21 @@
 
 ## Programming Tutorial
 
+
+
 ### Python
 
-[Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) \(google.com\)
+#### Recommended
+
+[A Crash Course in Python for Scientists](http://nbviewer.jupyter.org/gist/rpmuller/5920182#ii.-numpy-and-scipy) \(nbviewer.jupyter.org\)
+
+[Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) \(Stanford CS231n\)
+
+#### Others
+
+[Learn X in Y Minutes \(X = Python\)](http://learnxinyminutes.com/docs/python/) \(brief course for 30 min\)
+
+[Google Developers Python Course](https://www.youtube.com/playlist?list=PLfZeRfzhgQzTMgwFVezQbnpc1ck0I6CQl) \(highly recommended for visual learners\)
 
 [Awesome Machine Learning](https://github.com/josephmisiti/awesome-machine-learning#python) \(github.com/josephmisiti\)
 
@@ -18,9 +30,33 @@
 
 [Machine Learning with Python](https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_quick_guide.htm) \(tutorialspoint.com\)
 
+###  <a id="347e"></a>
+
+### Scipy and numpy <a id="347e"></a>
+
+#### Recommended
+
+[Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) \(Stanford CS231n\)
+
+#### Others
+
+[Scipy Lecture Notes](http://www.scipy-lectures.org/) \(scipy-lectures.org\)
+
+[Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) \(Stanford CS231n\)
+
+[An introduction to Numpy and Scipy](https://engineering.ucsb.edu/~shell/che210d/numpy.pdf) \(UCSB CHE210D\)
+
+[A Crash Course in Python for Scientists](http://nbviewer.jupyter.org/gist/rpmuller/5920182#ii.-numpy-and-scipy) \(nbviewer.jupyter.org\)
+
+
+
 ### PyTorch <a id="03ef"></a>
 
+#### Recommended
+
 [PyTorch Tutorials](http://pytorch.org/tutorials/) \(pytorch.org\)
+
+#### Others
 
 [A Gentle Intro to PyTorch](http://blog.gaurav.im/2017/04/24/a-gentle-intro-to-pytorch/) \(gaurav.im\)
 
@@ -32,9 +68,17 @@
 
 [PyTorch Tutorial for Deep Learning Researchers](https://github.com/yunjey/pytorch-tutorial) \(github.com/yunjey\)
 
+###  <a id="a1b6"></a>
+
 ### Tensorflow <a id="a1b6"></a>
 
+#### Recommended
+
+[Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) \(google.com\)
+
 [Tensorflow Tutorials](https://www.tensorflow.org/tutorials/) \(tensorflow.org\)
+
+#### Others
 
 [Introduction to TensorFlow — CPU vs GPU](https://medium.com/@erikhallstrm/hello-world-tensorflow-649b15aed18c) \(medium.com/@erikhallstrm\)
 
@@ -48,15 +92,9 @@
 
 [Tutorial of Tensorflow with Youtube](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
 
-### Scipy and numpy <a id="347e"></a>
+###  <a id="347e"></a>
 
-[Scipy Lecture Notes](http://www.scipy-lectures.org/) \(scipy-lectures.org\)
-
-[Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) \(Stanford CS231n\)
-
-[An introduction to Numpy and Scipy](https://engineering.ucsb.edu/~shell/che210d/numpy.pdf) \(UCSB CHE210D\)
-
-[A Crash Course in Python for Scientists](http://nbviewer.jupyter.org/gist/rpmuller/5920182#ii.-numpy-and-scipy) \(nbviewer.jupyter.org\)
+###  <a id="347e"></a>
 
 ## Math <a id="8244"></a>
 
