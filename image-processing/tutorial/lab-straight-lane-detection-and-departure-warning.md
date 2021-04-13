@@ -26,19 +26,17 @@ You must explain the whole process with an algorithm flowchart. Show and explain
 
 ## Instructions
 
--       Your program will be evaluated on the validation dataset which will not be provided.
+Your program will be evaluated on the validation dataset which will not be provided.
 
--       The lab score will be based on the algorithm performance, algorithm design process, and the quality of the report.
+The lab score will be based on the algorithm performance, algorithm design process, and the quality of the report.
 
--       Do not duplicate the program from other website or from previous lab report
+Do not duplicate the program from other website or from previous lab report.   You can refer to any technical reports as long as the proper citation is used.
 
--       You can refer to any technical reports as long as the proper citation is used.
-
--       The report should include
+The report should include
 
 * Introduction / Overview \(Algorithm flowchart\) / Algorithm\(Image processing steps\) / Final Result &  Analysis / Conclusion / Appendix: program code
 
--       Submit \(1\) report in PDF and in WORD \(2\) source code \(3\) demo movie clip   
+ Submit \(1\) report in PDF and in WORD \(2\) source code \(3\) demo movie clip   
 
 
 ### Some Examples:
