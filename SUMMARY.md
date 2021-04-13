@@ -5,6 +5,7 @@
 ## Image Processing Basics <a id="image-processing"></a>
 
 * [Tutorial](image-processing/tutorial/README.md)
+  * [LAB: Straight Lane Detection and Departure Warning](image-processing/tutorial/lab-straight-lane-detection-and-departure-warning.md)
   * [LAB: Facial Temperature Measurement with IR images](image-processing/tutorial/lab-facial-temperature-measurement-with-ir-images.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
