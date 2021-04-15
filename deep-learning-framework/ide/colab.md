@@ -4,6 +4,18 @@
 > >
 > > from google.colab.patches import cv2\_imshow
 
+## Write a program in Colab
+
+Login your Google Account in Chrome.
+
+Click below or  [https://colab.research.google.com/notebooks](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) 
+
+{% embed url="https://colab.research.google.com/notebooks/" %}
+
+Start a New Note. 
+
+
+
 ## Loading image file in CoLab
 
 Read the following for detailed information: [Load images by Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/load_data/images.ipynb)
@@ -16,7 +28,7 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-![](../../../.gitbook/assets/image%20%28244%29.png)
+![](../../.gitbook/assets/image%20%28244%29.png)
 
 check the image file
 
@@ -39,7 +51,7 @@ plt.imshow(img)
 
 ### Method 2: How to upload an image from local drive
 
-![](../../../.gitbook/assets/image%20%28240%29.png)
+![](../../.gitbook/assets/image%20%28240%29.png)
 
 ## Loading dataset in CoLab
 

@@ -1,5 +1,11 @@
 # Python
 
+## Tutorial
+
+{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonBasics\_2021.ipynb" %}
+
+
+
 ## Create the new environment:
 
 * To create the new environment for Python 3.6, in your terminal window or an Anaconda Prompt, run: \(example: env name 'py3'\)
