@@ -10,6 +10,9 @@ description: (under construction)
 
 ## Tutorial: Numpy Basics
 
+* Numpy Tutorial in Colab:  [Learning NumPy in 30 min ](https://colab.research.google.com/drive/1w6oIw8_eVulkNRxJ1xl6iu9gR6ScnSqo?usp=sharing)
+* Recommended Tutorial Site:  [https://www.w3schools.com/python/numpy/default.asp](https://www.w3schools.com/python/numpy/default.asp)
+
 
 
 ## Cheat Sheet
