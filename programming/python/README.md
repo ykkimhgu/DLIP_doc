@@ -1,8 +1,12 @@
 # Python
 
-## Tutorial
+## Python Tutorial: Basics
 
 {% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonBasics\_2021.ipynb" %}
+
+## Numpy Tutorial: [NumPy Basics](../dl-library-tools/numpy.md#tutorial-numpy-basics)
+
+## Install
 
 
 

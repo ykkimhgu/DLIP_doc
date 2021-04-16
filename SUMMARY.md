@@ -90,7 +90,7 @@
 
 * [Python](programming/python/README.md)
   * [Install](programming/python/install.md)
-  * [Cheat Sheet](programming/python/cheat-sheet.md)
+  * [Tutorial](programming/python/tutorial-python.md)
   * [Tips](programming/python/tips.md)
 * [OpenCV](programming/opencv/README.md)
   * [Install and Setup](programming/opencv/opencv-install/README.md)

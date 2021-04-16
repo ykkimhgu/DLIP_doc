@@ -8,6 +8,10 @@ description: (under construction)
 
 `conda install -c anaconda numpy`
 
+## Tutorial: Numpy Basics
+
+
+
 ## Cheat Sheet
 
 {% file src="../../.gitbook/assets/numpy-cheat-sheet.pdf" caption="Numpy Cheat Sheet" %}
