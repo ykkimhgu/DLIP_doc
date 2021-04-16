@@ -4,11 +4,11 @@
 \(Updated 2021.4\)  Use Python 3.7
 {% endhint %}
 
-## Python Tutorial: Basics
+## How to use
 
-{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonBasics\_2021.ipynb" %}
+[Python Tutorial: Basics](tutorial-python.md#python-tutorial-basics)
 
-## Numpy Tutorial: [NumPy Basics](../dl-library-tools/numpy.md#tutorial-numpy-basics)
+[NumPy Tutorial: Basics](../dl-library-tools/numpy.md#tutorial-numpy-basics)
 
 ## Install
 
