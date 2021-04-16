@@ -10,7 +10,7 @@
 
 [NumPy Tutorial: Basics](../dl-library-tools/numpy.md#tutorial-numpy-basics)
 
-## Install
+## How to Install
 
 
 
