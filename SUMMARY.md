@@ -89,7 +89,6 @@
 ## Programming
 
 * [Python](programming/python/README.md)
-  * [Install](programming/python/install.md)
   * [Tutorial](programming/python/tutorial-python.md)
   * [Tips](programming/python/tips.md)
 * [OpenCV](programming/opencv/README.md)

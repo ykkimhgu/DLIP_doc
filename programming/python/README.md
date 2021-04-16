@@ -1,5 +1,9 @@
 # Python
 
+{% hint style="info" %}
+\(Updated 2021.4\)  Use Python 3.7
+{% endhint %}
+
 ## Python Tutorial: Basics
 
 {% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonBasics\_2021.ipynb" %}

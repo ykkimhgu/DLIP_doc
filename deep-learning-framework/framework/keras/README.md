@@ -8,7 +8,7 @@ Keras is a deep learning API written in Python, running on top of the machine le
 
 ## Installation & compatibility <a id="installation-amp-compatibility"></a>
 
-Keras comes packaged with TensorFlow 2.0 as `tensorflow.keras`. To start using Keras, simply [install TensorFlow 2.0](https://www.tensorflow.org/install).
+Keras comes packaged with TensorFlow 2 as `tensorflow.keras`. To start using Keras, simply [install TensorFlow 2](https://www.tensorflow.org/install).
 
 Keras/TensorFlow are compatible with:
 
