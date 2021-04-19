@@ -8,7 +8,7 @@
 
 ### Building from Scratch
 
-[Buidling AlexNet as in the original network. AlexNet Class source code ](https://gist.githubusercontent.com/quanhua92/98959ac7e407b2c3e4ef7fa192ac6954/raw/c0a870200ee33a3b99dda9d20b5ee9f65d59bd6b/alexnet_lrn.py)
+[Buiding AlexNet as in the original network. AlexNet Class source code ](https://gist.githubusercontent.com/quanhua92/98959ac7e407b2c3e4ef7fa192ac6954/raw/c0a870200ee33a3b99dda9d20b5ee9f65d59bd6b/alexnet_lrn.py)
 
 ```python
 class AlexNet(nn.Module):
