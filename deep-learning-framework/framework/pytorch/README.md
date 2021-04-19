@@ -11,6 +11,8 @@ An open source machine learning framework that accelerates the path from researc
 
 ## How to Install
 
+> \(2021.4 :  Use  Pytorch 1.7.0, CUDA=11.0\)
+
 Select your preferences and run the install command. Please ensure that you have **met the prerequisites below \(e.g., numpy\)**
 
 > [**https://pytorch.org/get-started/locally/**](https://pytorch.org/get-started/locally/)
@@ -23,6 +25,7 @@ Select your preferences and run the install command. Please ensure that you have
 nvcc --version
 ```
 
+* Install **Anaconda:** To install Anaconda, you will use the [64-bit graphical installer](https://www.anaconda.com/download/#windows) for PyTorch 3.x.
 * Install **Anaconda**. After installation, run **Anaconda Prompt**
 * Make a new virtual environment e.g torch16. In the \(base\) of Anaconda Prompt, create a new environment.
 
