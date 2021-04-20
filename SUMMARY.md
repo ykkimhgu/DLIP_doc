@@ -61,6 +61,7 @@
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 
+* [CUDA cuDNN](deep-learning-framework/cuda-installation.md)
 * [Framework](deep-learning-framework/framework/README.md)
   * [Keras](deep-learning-framework/framework/keras/README.md)
     * [Cheat Sheet](deep-learning-framework/framework/keras/cheatsheet-keras.md)
@@ -76,7 +77,6 @@
       * [MNIST using LeNet](deep-learning-framework/framework/pytorch/tutorial-torch/mnist-using-lenet.md)
       * [Train ConvNet using CIFAR10](deep-learning-framework/framework/pytorch/tutorial-torch/train-convnet-using-cifar10.md)
 * [IDE](deep-learning-framework/ide/README.md)
-  * [CUDA Installation](deep-learning-framework/ide/cuda-installation.md)
   * [Visual Studio Community](deep-learning-framework/ide/visual-studio-community.md)
   * [Google Codelab](deep-learning-framework/ide/colab.md)
   * [Visual Studio Code](deep-learning-framework/ide/vscode/README.md)
