@@ -76,6 +76,7 @@
       * [MNIST using LeNet](deep-learning-framework/framework/pytorch/tutorial-torch/mnist-using-lenet.md)
       * [Train ConvNet using CIFAR10](deep-learning-framework/framework/pytorch/tutorial-torch/train-convnet-using-cifar10.md)
 * [IDE](deep-learning-framework/ide/README.md)
+  * [CUDA Installation](deep-learning-framework/ide/cuda-installation.md)
   * [Visual Studio Community](deep-learning-framework/ide/visual-studio-community.md)
   * [Google Codelab](deep-learning-framework/ide/colab.md)
   * [Visual Studio Code](deep-learning-framework/ide/vscode/README.md)
