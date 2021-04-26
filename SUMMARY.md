@@ -58,6 +58,7 @@
   * [Hardware](deep-learning-for-perception/resource/hardware.md)
   * [Dataset](deep-learning-for-perception/resource/dataset.md)
   * [Useful sites](deep-learning-for-perception/resource/usefulsites.md)
+* [Installation Guide for Deep Learning](deep-learning-for-perception/installation-guide-for-deep-learning.md)
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 
@@ -109,8 +110,7 @@
   * [Pandas](programming/dl-library-tools/underconstruction-2/README.md)
     * [Install](programming/dl-library-tools/underconstruction-2/underconstruction.md)
     * [How to use](programming/dl-library-tools/underconstruction-2/underconstruction-1.md)
-  * [Anaconda](programming/dl-library-tools/underconstruction-1/README.md)
-    * [How to use](programming/dl-library-tools/underconstruction-1/underconstruction-1.md)
+  * [Anaconda](programming/dl-library-tools/underconstruction-1.md)
 
 ## Resources
 
