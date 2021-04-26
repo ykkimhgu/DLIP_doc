@@ -6,19 +6,21 @@
 
 ![](https://miro.medium.com/max/1280/1*P94FiOw7bmfNZi7_u-mHXQ.png)
 
-For this tutorial, we will install:  \(updated 2021.4\)
+Install the following software in the order of
 
-1. **Nvidia GPU driver** — Enables the OS to operate the GPU.
-2. **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
-3. **cuDNN**  — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
-4. **pip** \(v9.0.1\) — Python package installer. Stands for _Pip Installs Packages_.
-5. Python
-6. Visual Studio Code
-7. **TensorFlow** \(v1.3\) ****— DL library, developed by Google.
-8. **Keras** \(v2.0.8\)— ****DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
-9. **PyTorch** \(v0.2.0\) ****— Dynamic DL library with GPU acceleration.
+1. **Nvidia GPU driver** **and Library** — To operate the GPU.
+   * **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
+   * **cuDNN**  — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
+2. **Anaconda**  — Python and libraries package installer. 
+3. **Python**
+4. **IDE \(VS CODE\)**
+5. **Framework**
+   * **TensorFlow** — DL library, developed by Google.
+   * **Keras** — ****DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
+   * **PyTorch**  — Dynamic DL library with GPU acceleration.
+6. **Other libraries**
 
-
+\(updated 2021.4\)
 
 ## **1.** Installing  GPU library \(CUDA, cuDNN\)  <a id="9f39"></a>
 
@@ -36,7 +38,7 @@ For this tutorial, we will install:  \(updated 2021.4\)
 
 ## 5-2. Installing  Framework\_2 \(Pytorch\)
 
-## 6. Installing Deep learning libraries
+## 6. Installing other DL libraries
 
 
 
