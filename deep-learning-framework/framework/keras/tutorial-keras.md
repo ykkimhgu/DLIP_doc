@@ -27,8 +27,14 @@ Follow the tutorials in the following orders
 
 [Collection of pretrained models: click here](https://modelzoo.co/framework/keras)
 
-* [YOLOv3 in Keras](https://modelzoo.co/model/keras-yolov3)
+* [YOLOv3 in Keras](https://github.com/experiencor/keras-yolo3)
 * [SSD in Keras](https://modelzoo.co/model/single-shot-multibox-detector-keras)
+
+### YOLOv3 in Keras
+
+[Blog post](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
+
+Source code by [**experiencor** Huynh Ngoc Anh](https://github.com/experiencor)
 
 ### Other Tutorials
 
