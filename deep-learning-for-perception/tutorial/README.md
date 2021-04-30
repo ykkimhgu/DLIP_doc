@@ -1,12 +1,16 @@
 # Tutorial for Deep Learning
 
-## Machine Learning Tutorial
+## DLIP  Tutorial
+
+Python Tutorial: [Learning Python in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb)
+
+NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb)
+
+## 
+
+## Programming Tutorial: 
 
 #### [Over 200 of the Best Machine Learning, NLP, and Python Tutorials](https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc)
-
-## Programming Tutorial
-
-
 
 ### Python
 
