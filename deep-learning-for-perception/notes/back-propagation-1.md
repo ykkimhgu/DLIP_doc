@@ -6,11 +6,31 @@ A loss function calculates the error between the prediction from the ground trut
 
 ![](../../.gitbook/assets/image%20%2829%29.png)
 
+ **Logistic Loss** and **Multinomial Logistic Loss** are other names for **Cross-Entropy loss**.
+
+In a **binary classification problem**, where C′=2C′=2, the Cross Entropy Loss can be defined also as 
+
+[![](https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C%27=2}t_{i}&space;log&space;%28s_{i}%29&space;=&space;-t_{1}&space;log%28s_{1}%29&space;-&space;%281&space;-&space;t_{1}%29&space;log%281&space;-&space;s_{1}%29)](https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C%27=2}t_{i}&space;log&space;%28s_{i}%29&space;=&space;-t_{1}&space;log%28s_{1}%29&space;-&space;%281&space;-&space;t_{1}%29&space;log%281&space;-&space;s_{1}%29)
+
+### 
+
 ### For Classification
 
-Softmax with Cross-Entropy Loss is often used
+**Softmax Loss**
+
+ Softmax with Cross-Entropy Loss is often used. If we use this loss, we will train a CNN to output a probability over the C classes for each image. It is used for **multi-class classification.**
+
+**Note that** The Softmax function cannot be applied independently to each s i , since it depends on all elements of s . For a given class s i , the Softmax function can be computed as:
 
 ![](../../.gitbook/assets/image%20%2849%29.png)
+
+#### Binary Cross-Entropy Loss <a id="binary-cross-entropy-loss"></a>
+
+Also called **Sigmoid Cross-Entropy loss**. It is a **Sigmoid activation** plus a **Cross-Entropy loss**. Unlike **Softmax loss** it is independent for each vector component \(class\), meaning that the loss computed for every CNN output vector component is not affected by other component values.  It is used for **multi-label classification**
+
+[![](https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C%27=2}t_{i}&space;log&space;%28f%28s_{i}%29%29&space;=&space;-t_{1}&space;log%28f%28s_{1}%29%29&space;-&space;%281&space;-&space;t_{1}%29&space;log%281&space;-&space;f%28s_{1}%29%29)](https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C%27=2}t_{i}&space;log&space;%28f%28s_{i}%29%29&space;=&space;-t_{1}&space;log%28f%28s_{1}%29%29&space;-&space;%281&space;-&space;t_{1}%29&space;log%281&space;-&space;f%28s_{1}%29%29)
+
+![](https://gombru.github.io/assets/cross_entropy_loss/sigmoid_CE_pipeline.png)
 
 ### Further Reading
 
