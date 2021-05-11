@@ -45,7 +45,7 @@
   * [ShuffleNet](deep-learning-for-perception/deep-learning-papers/shufflenet.md)
   * [Recent Methods](deep-learning-for-perception/deep-learning-papers/recent-methods.md)
 * [Tutorial for Deep Learning](deep-learning-for-perception/tutorial/README.md)
-  * [MLP for XOR problem](deep-learning-for-perception/tutorial/mlp-for-xor-problem.md)
+  * [MLP Tutorial](deep-learning-for-perception/tutorial/mlp-for-xor-problem.md)
   * [Train Dataset](deep-learning-for-perception/tutorial/train-dataset.md)
   * [Train custom dataset](deep-learning-for-perception/tutorial/train-custom-dataset.md)
   * [Test model](deep-learning-for-perception/tutorial/test-model.md)
