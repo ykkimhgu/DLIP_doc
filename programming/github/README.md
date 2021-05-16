@@ -6,13 +6,15 @@
 
 ## Sign Up
 
-{% embed url="https://www.wikihow.com/Create-an-Account-on-GitHub" %}
-
-
+[Create account](create-account.md)
 
 ## Apply Student Development Pack
 
+After you create a Github account. 
+
 {% embed url="https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/apply-for-a-student-developer-pack" %}
+
+{% embed url="https://education.github.com/pack" %}
 
 
 
