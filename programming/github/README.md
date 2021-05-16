@@ -6,7 +6,7 @@
 
 ## Sign Up
 
-[Create account](create-account.md)
+[How create an account](create-account.md)
 
 ## Apply Student Development Pack
 
