@@ -12,7 +12,7 @@ You can use Markdown most places around GitHub:
 
 * [Gists](https://gist.github.com/)
 * Comments in Issues and Pull Requests
-* Files with the `.md` or `.markdown` extension
+* Files with the `.md` or `.markdown` extension:  README.md
 
 ## Syntax guide
 
