@@ -2,6 +2,12 @@
 
 ## Useful resources for Deep Learning and Machine Learning
 
+### Tutorials: 
+
+#### [Freecode camp](https://www.freecodecamp.org/news/)
+
+### 
+
 ### Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data: [click here](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
 
 ### Drawing and Visualizing DNN

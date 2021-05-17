@@ -32,6 +32,7 @@
   * [LossFunction Regularization](deep-learning-for-perception/notes/lossfunction-regularization.md)
   * [Bias vs Variance](deep-learning-for-perception/notes/bias-vs-variance.md)
   * [BottleNeck Unit](deep-learning-for-perception/notes/bottleneck-unit.md)
+  * [Object Detection](deep-learning-for-perception/notes/object-detection.md)
   * [DL Techniques](deep-learning-for-perception/notes/dl-resources/README.md)
     * [Technical Strategy by A.Ng](deep-learning-for-perception/notes/dl-resources/technical-strategy.md)
 * [Must Read Papers](deep-learning-for-perception/deep-learning-papers/README.md)
