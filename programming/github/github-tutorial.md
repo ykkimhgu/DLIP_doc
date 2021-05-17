@@ -2,6 +2,10 @@
 
 ## Github Repository Guides
 
+{% embed url="https://www.youtube.com/watch?v=noZnOSpcjYY" %}
+
+
+
 {% embed url="https://guides.github.com/activities/hello-world/" %}
 
 ## How to do Version Control with Github
