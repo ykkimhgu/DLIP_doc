@@ -48,6 +48,14 @@ conda create -n py37tf23 python=3.7
 
 ### 5-1. Install  Framework\_1 \(Tensorflow and Keras\)
 
+Run 'Anaconda Prompt' &gt; activate virtual environment &gt; install tensorflow-gpu 2.3.0 packages &gt; install keras
+
+```c
+>>conda activate py37tf23 
+>>conda install tensorflow-gpu=2.3.0
+>>conda install keras
+```
+
 ### 5-2. Install  Framework\_2 \(Pytorch\)
 
 ### 6. Installing other DL libraries
