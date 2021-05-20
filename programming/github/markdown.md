@@ -1,8 +1,10 @@
 # Markdown
 
-## Reference
+## Markdown Editor
 
-{% embed url="https://guides.github.com/features/mastering-markdown/\#syntax" %}
+We will use  'Typora' as the offline Markdown editor. 
+
+Typora:  [Download from here](https://typora.io/#windows)
 
 ## What is Markdown?
 
@@ -167,4 +169,10 @@ if (isAwesome){
   return true
 }
 ```
+
+## Reference
+
+{% embed url="https://guides.github.com/features/mastering-markdown/\#syntax" %}
+
+## 
 
