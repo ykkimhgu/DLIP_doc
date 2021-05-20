@@ -2,7 +2,46 @@
 
 ## CONDA Installation
 
+[Download the installer on window](https://www.anaconda.com/products/individual#Downloads)
 
+Double click the installer to launch.
+
+Select an install for “Just Me” unless you’re installing for all users \(which requires Windows Administrator privileges\) and click Next.
+
+Select a destination folder to install Anaconda and click the Next button. 
+
+> Install Anaconda to a directory path that does not contain spaces or unicode characters.
+
+Note: Do not install as Administrator unless admin privileges are required  
+
+
+Do NOT  adding Anaconda to the PATH environment variable
+
+Check  to register Anaconda as your default Python.
+
+Click the Install button.
+
+![](../../.gitbook/assets/image%20%28311%29.png)
+
+Click the Install button. If you want to watch the packages Anaconda is installing, click Show Details.
+
+Click the Next button.
+
+After a successful installation you will see the “Thanks for installing Anaconda” dialog box:
+
+
+
+![../../../\_images/win-install-complete.png](https://docs.anaconda.com/_images/win-install-complete.png)
+
+
+
+Start ' Anaconda Navigator'
+
+![](../../.gitbook/assets/image%20%28312%29.png)
+
+### Reference:
+
+{% embed url="https://docs.anaconda.com/anaconda/install/windows/" %}
 
 ## CONDA Cheat Sheet
 
