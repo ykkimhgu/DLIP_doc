@@ -12,7 +12,7 @@ You can do version control easily with Github Desktop SW instead of using Git co
 
 2. Install the software. It will ask you to log-in your github account
 
-![](../../.gitbook/assets/image%20%28308%29.png)
+![](../../.gitbook/assets/image%20%28309%29.png)
 
 ## Tutorial 1**: Version Control \(main branch\)**
 
@@ -32,11 +32,11 @@ Click 'Set up in Desktop'
 
 Choose your local drive folder path to clone a repository. This is making a copy of the repository in your local server/drive. 
 
-![](../../.gitbook/assets/image%20%28307%29.png)
+![](../../.gitbook/assets/image%20%28308%29.png)
 
 You can check which files have been saved in your local drive by clicking **'Show in Explorer'**
 
-![](../../.gitbook/assets/image%20%28269%29.png)
+![](../../.gitbook/assets/image%20%28276%29.png)
 
 ### 2. Add and Modify Documents
 
@@ -54,11 +54,11 @@ You will see the history of changes in Desktop GUI
 
 In Desktop, create or copy a source file. Example: "tutorialNM.h"
 
-![](../../.gitbook/assets/image%20%28276%29.png)
+![](../../.gitbook/assets/image%20%28289%29.png)
 
 Create a Branch. Lets call it as "NM-header-edit"
 
-![](../../.gitbook/assets/image%20%28300%29.png)
+![](../../.gitbook/assets/image%20%28304%29.png)
 
 
 
@@ -80,7 +80,7 @@ Now, Commit to the branch.
 
 It will open a pull request in website. Click 'Create Pull Request'
 
-![](../../.gitbook/assets/image%20%28306%29.png)
+![](../../.gitbook/assets/image%20%28307%29.png)
 
 If the modification is acceptable, then **'Merge pull request'.** Then **Confirm the merge.**
 
@@ -90,7 +90,7 @@ If the modification is acceptable, then **'Merge pull request'.** Then **Confirm
 
 Modify `tutorialNM.h` in the local drive.
 
-![](../../.gitbook/assets/image%20%28309%29.png)
+![](../../.gitbook/assets/image%20%28310%29.png)
 
 Commit the modification
 
