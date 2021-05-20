@@ -92,11 +92,11 @@
 
 ## Programming
 
+* [Markdown](programming/markdown.md)
 * [Github](programming/github/README.md)
   * [Create account](programming/github/create-account.md)
-  * [Gitbook Desktop](programming/github/gitbook-desktop.md)
   * [Github Tutorial](programming/github/github-tutorial.md)
-  * [Markdown](programming/github/markdown.md)
+  * [Github Desktop](programming/github/gitbook-desktop.md)
   * [Tutorial: Numerical Method](programming/github/tutorial-numerical-method.md)
 * [Python](programming/python/README.md)
   * [Tutorial](programming/python/tutorial-python.md)
