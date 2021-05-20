@@ -32,7 +32,15 @@ Install the following software in the order of
 
 [How to install Anaconda](../programming/dl-library-tools/underconstruction-1.md#conda-installation)
 
-### 3. Install Python
+### 3. Install Python \(3.7\)
+
+How to create virtual environment using Conda \(you can skip this now\)
+
+```c
+conda create -n py37tf23 python=3.7
+```
+
+![](../.gitbook/assets/image%20%28311%29.png)
 
 ### 4. Install IDE \(Visual Studio Code\)
 

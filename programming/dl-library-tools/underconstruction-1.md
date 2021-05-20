@@ -21,7 +21,7 @@ Check  to register Anaconda as your default Python.
 
 Click the Install button.
 
-![](../../.gitbook/assets/image%20%28311%29.png)
+![](../../.gitbook/assets/image%20%28312%29.png)
 
 Click the Install button. If you want to watch the packages Anaconda is installing, click Show Details.
 
@@ -37,7 +37,21 @@ After a successful installation you will see the “Thanks for installing Anacon
 
 Start ' Anaconda Navigator'
 
-![](../../.gitbook/assets/image%20%28312%29.png)
+![](../../.gitbook/assets/image%20%28313%29.png)
+
+### 
+
+### Installing Python \(3.7\) in virtual Environment
+
+How to create virtual environment using Conda \(you can skip this now\)
+
+```c
+conda create -n py37tf23 python=3.7
+```
+
+![](../../.gitbook/assets/image%20%28311%29.png)
+
+### 
 
 ### Reference:
 
