@@ -83,8 +83,6 @@
   * [Visual Studio Community](deep-learning-framework/ide/visual-studio-community.md)
   * [Google Codelab](deep-learning-framework/ide/colab.md)
   * [Visual Studio Code](deep-learning-framework/ide/vscode/README.md)
-    * [Install](deep-learning-framework/ide/vscode/install-vscode.md)
-    * [Setup](deep-learning-framework/ide/vscode/setup-vscode.md)
     * [How to use](deep-learning-framework/ide/vscode/example-vscode.md)
   * [Jupyter Notebook](deep-learning-framework/ide/jupyter/README.md)
     * [Install](deep-learning-framework/ide/jupyter/intall-jupyter.md)

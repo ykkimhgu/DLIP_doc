@@ -22,23 +22,27 @@ Install the following software in the order of
 
 \(updated 2021.4\)
 
-### **1.** Installing  GPU library \(CUDA, cuDNN\) 
+## Installation Steps
+
+### **1.** Install  GPU library \(CUDA, cuDNN\) 
 
 [How to install CUDA 10.2, cuDNN 8.0.5  ](../deep-learning-framework/cuda-installation.md#9f39)
 
-### **2. Installing Anaconda**
+### **2. Install Anaconda**
 
 [How to install Anaconda](../programming/dl-library-tools/underconstruction-1.md#conda-installation)
 
-### 3. Installing Python
+### 3. Install Python
 
-### 4. Installing IDE \(Visual Studio Code\)
+### 4. Install IDE \(Visual Studio Code\)
 
-### 5-1. Installing  Framework\_1 \(Tensorflow and Keras\)
+[How to Install VS Code](../deep-learning-framework/ide/vscode/#installation)
 
-### 5-2. Installing  Framework\_2 \(Pytorch\)
+### 5-1. Install  Framework\_1 \(Tensorflow and Keras\)
 
-## 6. Installing other DL libraries
+### 5-2. Install  Framework\_2 \(Pytorch\)
+
+### 6. Installing other DL libraries
 
 
 
