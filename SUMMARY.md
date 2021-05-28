@@ -16,8 +16,8 @@
 
 ## Deep Learning for Perception
 
-* [DLIP Tutorial Exercise](deep-learning-for-perception/dlip-tutorial-exercise.md)
-* [Tutorial:  Yolov3 in Keras](deep-learning-for-perception/tutorial-yolov3-in-keras.md)
+* [DLIP Tutorial Exercise](deep-learning-for-perception/dlip-tutorial-exercise/README.md)
+  * [Tutorial:  Yolov3 in Keras](deep-learning-for-perception/dlip-tutorial-exercise/tutorial-yolov3-in-keras.md)
 * [Notes](deep-learning-for-perception/notes/README.md)
   * [Overview of Deep Learning](deep-learning-for-perception/notes/overview-of-deep-learning/README.md)
     * [Object Detection](deep-learning-for-perception/notes/overview-of-deep-learning/object-detection.md)
