@@ -136,5 +136,53 @@ Run Yolo-tiny with Test video
 python yolo_video.py --model .\model_data\yolo-tiny.h5 --input .\test_Video.avi
 ```
 
+## How to train a dataset
 
+### Prepare dataset
+
+Image file: [Download Kitti Dataset](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_image_2.zip)
+
+Label file:  [Download Kitti Dataset Label](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_label_2.zip)
+
+*  Object Detection annotation Convert to [Yolo Darknet](https://pjreddie.com/darknet/yolo/) Format: [Click here](https://github.com/ssaru/convert2Yolo)
+
+Class file: 
+
+* Copy the 'kitti\__classes.txt' in  \`\mode_\_data\` folder
+
+### Modify train.py 
+
+Open train.py `python train.py`  
+
+
+Go to  LIne 16 : def _main\(\):._  Change the '_'annotation' and 'classes-path'_  to your setting.
+
+```python
+def _main(): 
+annotation_path = 'train.txt' log_dir = 'logs/000/'
+#classes_path = 'model_data/voc_classes.txt'
+classes_path = 'model_data/kitti_classes.txt'
+anchors_path = 'model_data/yolo_anchors.txt'
+```
+
+Go to LIne 32:  Change the name of the trained weight file as you wanted.
+
+* Lets call it `yolo-kitti-weight.h5`
+
+```bash
+  is_tiny_version = len(anchors)==6 # default setting
+    if is_tiny_version:
+        model = create_tiny_model(input_shape, anchors, num_classes,
+            freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
+    else:
+        model = create_model(input_shape, anchors, num_classes,
+            freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
+
+```
+
+Start training.
+
+
+
+* Use your trained weights or checkpoint weights with command line option `--model model_file` when using yolo\_video.py Remember to modify class path or anchor path, with 
 
