@@ -144,15 +144,15 @@ Image file: [Download Kitti Dataset](https://s3.eu-central-1.amazonaws.com/avg-k
 
 Label file:  [Download Kitti Dataset Label](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_label_2.zip)
 
-*  Object Detection annotation Convert to [Yolo Darknet](https://pjreddie.com/darknet/yolo/) Format: [Click here](https://github.com/ssaru/convert2Yolo)
+*  Object Detection annotation Convert to Yolo Darknet Format: [Click here](https://github.com/ssaru/convert2Yolo)
 
 Class file: 
 
-* Copy the 'kitti\__classes.txt' in  \`\mode_\_data\` folder
+* Copy the 'kitti\__classes.txt' in  \`\model_\_data\` folder
 
 ### Modify train.py 
 
-Open train.py `python train.py`  
+Open train.py in VS Code  
 
 
 Go to  LIne 16 : def _main\(\):._  Change the '_'annotation' and 'classes-path'_  to your setting.
@@ -165,15 +165,14 @@ classes_path = 'model_data/kitti_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 ```
 
-Go to LIne 32:  Change the name of the trained weight file as you wanted.
+Go to LIne 32:  Change the name of the pre-trained weight file.
 
-* Lets call it `yolo-kitti-weight.h5`
+* We will use COCO trained weight file as we used above.  We changed the name of the weight file to make a copy as`yolo_weights.h5`
 
-```bash
-  is_tiny_version = len(anchors)==6 # default setting
+```python
     if is_tiny_version:
         model = create_tiny_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
+            freeze_body=2, weights_path='model_data/yolo_tiny_weights.h5')
     else:
         model = create_model(input_shape, anchors, num_classes,
             freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
@@ -182,7 +181,31 @@ Go to LIne 32:  Change the name of the trained weight file as you wanted.
 
 Start training.
 
+`python train.py`
 
 
-* Use your trained weights or checkpoint weights with command line option `--model model_file` when using yolo\_video.py Remember to modify class path or anchor path, with 
+
+Evalulate
+
+* Use your trained weights or checkpoint weights with command line option `--model model_file` when using yolo\_video.py Remember to modify class path or anchor path.
+
+
+
+## TroubleShooting
+
+Error message of
+
+`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])` 
+
+### Solution
+
+Modify  `model.py` \(line 394\)
+
+`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])` 
+
+Change it to 
+
+`_, ignore_mask = tf.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`
+
+
 
