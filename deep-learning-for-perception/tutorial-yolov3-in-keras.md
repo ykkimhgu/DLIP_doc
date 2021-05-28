@@ -94,9 +94,7 @@ If the test video is in the same directory and the name is 'test\_Video.avi'
 python yolo_video.py --model .\model_data\yolo.h5 --input .\test_Video.avi
 ```
 
-`python yolo_video.py --model .\model_data\yolo/h5 --input .\testVideo.mp4`
-
-\`\`
+![](../.gitbook/assets/image%20%28319%29.png)
 
 #### Usage
 
@@ -120,6 +118,22 @@ optional arguments:
                      model_data/coco_classes.txt
   --gpu_num GPU_NUM  Number of GPU to use, default 1
   --image            Image detection mode, will ignore all positional arguments
+```
+
+
+
+### Run Yolov3-Tiny Detection
+
+After downloading yolov3-tiny.weights,  Convert it to Keras model and save it as 'yolo-tiny.h5'
+
+```bash
+ python convert.py yolov3-tiny.cfg yolov3-tiny.weights model_data/yolo-tiny.h5
+```
+
+Run Yolo-tiny with Test video
+
+```bash
+python yolo_video.py --model .\model_data\yolo-tiny.h5 --input .\test_Video.avi
 ```
 
 
