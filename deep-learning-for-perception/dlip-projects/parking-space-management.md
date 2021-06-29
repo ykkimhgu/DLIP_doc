@@ -16,7 +16,7 @@
 
 Since the use of private vehicle has increased due to COVID-19, finding parking spaces has been difficult even in our university. Thus, we decided to show the empty parking spaces on the screen to make parking management easier.
 
-![](../../.gitbook/assets/image%20%28327%29.png)
+![](../../.gitbook/assets/image%20%28329%29.png)
 
 ![parking lot](https://github.com/chloerudals/DLIP_LAB4/blob/main/Img.jpg)  
  To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu_-JY)
@@ -159,11 +159,11 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 
 
 
-![](../../.gitbook/assets/image%20%28330%29.png)
+![](../../.gitbook/assets/image%20%28332%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28329%29.png)
+![](../../.gitbook/assets/image%20%28331%29.png)
 
 To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP_LAB4/blob/main/identify_parking_spots.ipynb)
 

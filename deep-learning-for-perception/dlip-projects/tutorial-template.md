@@ -1,3 +1,7 @@
+---
+description: Tutorial Title goes here
+---
+
 # Tutorial Template
 
 **Date:**
@@ -16,6 +20,8 @@ This tutorial is about ~
 
 ## Requirement
 
+Write a list of HW/SW requirement
+
 ### Hardware
 
 * Jetson Nano
@@ -32,11 +38,13 @@ This tutorial is about ~
 
 ## Dataset
 
-Description of dataset~
+Description of dataset goes here
 
 **Dataset link:** download here
 
 ## Tutorial Procedure
+
+Explain the whole procedure the step by step with proper headings and images.  
 
 ### Setup
 
@@ -46,7 +54,11 @@ Description of dataset~
 
 ## Results and Analysis
 
+Explain the final result and analyze  in terms of accuracy/precision/recall etc..
+
 ## Reference
+
+Complete list of all references used \(github, blog, paper, etc\)
 
 \*\*\*\*
 

@@ -62,11 +62,11 @@ The videos going to use in the tutorial are entrance to the front and back door 
 
 ### Front door
 
-![](../../.gitbook/assets/image%20%28326%29.png)
+![](../../.gitbook/assets/image%20%28328%29.png)
 
 ### Back door
 
-![](../../.gitbook/assets/image%20%28328%29.png)
+![](../../.gitbook/assets/image%20%28330%29.png)
 
 ## Combining Two Videos
 
