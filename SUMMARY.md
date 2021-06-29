@@ -68,6 +68,7 @@
   * [Eye Blinking Detection Alarm](deep-learning-for-perception/dlip-projects/eye-blinking-detection-alarm.md)
   * [Helmet-Detection Using YOLO-V5](deep-learning-for-perception/dlip-projects/helmet-detection-using-yolo-v5.md)
   * [Mask Detection using YOLOv5](deep-learning-for-perception/dlip-projects/mask-detection-using-yolov5.md)
+  * [Parking Space Management](deep-learning-for-perception/dlip-projects/parking-space-management.md)
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 
