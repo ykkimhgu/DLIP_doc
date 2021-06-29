@@ -66,6 +66,7 @@
   * [DLIP\_LAB4\_Report\_21500461\_이건호\_21600372\_송윤경](deep-learning-for-perception/dlip-projects/untitled.md)
   * [Digital Door Lock Control with Face Recognition](deep-learning-for-perception/dlip-projects/untitled-1.md)
   * [People Counting with YOLOv4 and DeepSORT](deep-learning-for-perception/dlip-projects/people-counting-with-yolov4-and-deepsort.md)
+  * [Eye Blinking Detection Alarm](deep-learning-for-perception/dlip-projects/eye-blinking-detection-alarm.md)
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 

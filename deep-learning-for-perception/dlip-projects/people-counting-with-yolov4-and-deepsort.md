@@ -2,7 +2,7 @@
 
 **Author:** S.-S. Lim & H.-J. Kim  
 **Date created:** 2021/06/21  
-
+**Github repository:**  [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access_Control_Application/)
 
 ## Introduction
 
@@ -62,7 +62,11 @@ The videos going to use in the tutorial are entrance to the front and back door 
 
 ### Front door
 
+![](../../.gitbook/assets/image%20%28322%29.png)
+
 ### Back door
+
+![](../../.gitbook/assets/image%20%28323%29.png)
 
 ## Combining Two Videos
 
@@ -148,6 +152,8 @@ python video_sum.py
 ```
 
 ### Combined video
+
+![](../../.gitbook/assets/image%20%28321%29.png)
 
 ## Human-Access-Control application
 
@@ -552,6 +558,10 @@ python access_control.py --video demo2.mp4 --output output.mp4 --model yolov4
 The application were able to successfully determine the number of people entering from a given video through the optimal value. In the given video, people's access was 100% consistent compared to the system visually. Also, warnings were successfully issued when there were more than a certain number of people.
 
 ![](../../.gitbook/assets/image%20%28320%29.png)
+
+**See demo video here**
+
+\*\*\*\*
 
 ## Discussion
 
