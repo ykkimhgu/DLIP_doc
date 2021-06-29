@@ -1,10 +1,10 @@
-# index
+# Digital Door Lock Control with Face Recognition
 
 2021.06.21.Mon - DLIP LAB4
 
-## **Digital Door Lock Control with Face Recognition**
+Keunho Lee, Yoonkyoung Song
 
-**Keunho Lee, Yoonkyoung Song**
+## **Introduction**
 
 In this LAB, we started a project to learn human faces and control only authorized users to open digital door locks. After creating an authorized user's dataset to learn about the face, the digital door lock is opened for registered users. To achieve this in an embedded environment, a real-time door lock can be controlled using a Web Cam, Jetson Nano, Arduino UNO, and digital door lock. In addition, the OpenCV library was used to find and learn faces processed by software.
 
