@@ -62,6 +62,9 @@
   * [Dataset](deep-learning-for-perception/resource/dataset.md)
   * [Useful sites](deep-learning-for-perception/resource/usefulsites.md)
 * [Installation Guide for Deep Learning](deep-learning-for-perception/installation-guide-for-deep-learning.md)
+* [DLIP projects](deep-learning-for-perception/dlip-projects/README.md)
+  * [DLIP\_LAB4\_Report\_21500461\_이건호\_21600372\_송윤경](deep-learning-for-perception/dlip-projects/untitled.md)
+  * [index](deep-learning-for-perception/dlip-projects/untitled-1.md)
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 
