@@ -16,7 +16,7 @@
 
 Since the use of private vehicle has increased due to COVID-19, finding parking spaces has been difficult even in our university. Thus, we decided to show the empty parking spaces on the screen to make parking management easier.
 
-![](../../.gitbook/assets/image%20%28323%29.png)
+![](../../.gitbook/assets/image%20%28327%29.png)
 
 ![parking lot](https://github.com/chloerudals/DLIP_LAB4/blob/main/Img.jpg)  
  To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu_-JY)
@@ -79,12 +79,6 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 
 
 
-![](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
-
-#### 
-
-![](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
-
 #### Finding the parking lines.
 
 > * First, you need a parking lot's picture to detect the parking lines. \(an empty parking lot image would be perfect.\)
@@ -93,25 +87,19 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 >
 >     > Since the lines are mostly white and yellow, select only yellow and white colors from the image.
 >
->   > def select\_rgb\_white\_yellow\(image\):
->
->   ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
->
->
->
->
->
-> ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
->
-> ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
->
+>    `def select_rgb_white_yellow(image):`
+
+![](../../.gitbook/assets/image%20%28321%29.png)
+
+
+
 > > Convert the image to gray scale.
 > >
 > > ```text
 > >   def convert_gray_scale(image):
 > > ```
-> >
-> > ![gray](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/gray_image.jpg)
+>
+> ![gray](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/gray_image.jpg)
 >
 > > Detect the edges with _**Canny**_.
 > >
@@ -120,7 +108,19 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 > > ```
 > >
 > > ![detect edges](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/edge_image.jpg)
-> >
+
+![](../../.gitbook/assets/image%20%28323%29.png)
+
+
+
+![](../../.gitbook/assets/image%20%28320%29.png)
+
+
+
+
+
+
+
 > > * Crop the image using _**roi**_.
 > >
 > >   def filter\_region\(image, vertices\): def select\_region\(image\):
@@ -152,6 +152,18 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 > >   def assign\_spots\_map\(image, spot\_dict=final\_spot\_dict, make\_copy = True, color=\[255, 0, 0\], thickness=2\):
 > >
 > >   ![marked\_spot\_images](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/marked_spot_images.jpg)
+
+
+
+![](../../.gitbook/assets/image%20%28325%29.png)
+
+
+
+![](../../.gitbook/assets/image%20%28330%29.png)
+
+
+
+![](../../.gitbook/assets/image%20%28329%29.png)
 
 To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP_LAB4/blob/main/identify_parking_spots.ipynb)
 
@@ -190,21 +202,21 @@ for *xyxy, conf, cls in reversed(det):
 >   * classes's default is added as 2 to only view car class.
 >   * The bounding box's line-thickness is edited to 2.
 >
->        parser.add\_argument\('--weights', nargs='+', type=str, default='yolov5s.pt', help='model.pt path\(s\)'\)
+>        `parser.add_argument('--weights', nargs='+', type=str, default='yolov5s.pt', help='model.pt path(s)')`
 >
->        parser.add\_argument\('--img-size', type=int, default=608, help='inference size \(pixels\)'\)
+>        `parser.add_argument('--img-size', type=int, default=608, help='inference size (pixels)')`
 >
->        parser.add\_argument\('--conf-thres', type=float, default=0.3, help='object confidence threshold'\) 
+>        `parser.add_argument('--conf-thres', type=float, default=0.3, help='object confidence threshold')` 
 >
->        parser.add\_argument\('--iou-thres', type=float, default=0.4, help='IOU threshold for NMS'\)
+>        `parser.add_argument('--iou-thres', type=float, default=0.4, help='IOU threshold for NMS')`
 >
->        parser.add\_argument\('--view-img', action='store\_false', help='display results'\)
+>        `parser.add_argument('--view-img', action='store_false', help='display results')`
 >
->        parser.add\_argument\('--save-txt', action='store\_false', help='save results to \*.txt'\)
+>        `parser.add_argument('--save-txt', action='store_false', help='save results to *.txt')`
 >
->        parser.add\_argument\('--classes', nargs='+', type=int, default=2, help='filter by class: --class 0, or --class 0 2 3'\)
+>        `parser.add_argument('--classes', nargs='+', type=int, default=2, help='filter by class: --class 0, or --class 0 2 3')`
 >
->        parser.add\_argument\('--line-thickness', default=2, type=int, help='bounding box thickness \(pixels\)'\)
+>        `parser.add_argument('--line-thickness', default=2, type=int, help='bounding box thickness (pixels)')`
 
 [Demo Video](https://drive.google.com/file/d/1LPtyEVEorxBqGS-NXqe6Ns1JMTjdhgKB/view?usp=sharing)
 

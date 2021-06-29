@@ -63,12 +63,15 @@
   * [Useful sites](deep-learning-for-perception/resource/usefulsites.md)
 * [Installation Guide for Deep Learning](deep-learning-for-perception/installation-guide-for-deep-learning.md)
 * [DLIP 2021-1: Object Detection Projects](deep-learning-for-perception/dlip-projects/README.md)
+  * [Tutorial Template](deep-learning-for-perception/dlip-projects/tutorial-template.md)
   * [Digital Door Lock Control with Face Recognition](deep-learning-for-perception/dlip-projects/untitled-1.md)
   * [People Counting with YOLOv4 and DeepSORT](deep-learning-for-perception/dlip-projects/people-counting-with-yolov4-and-deepsort.md)
   * [Eye Blinking Detection Alarm](deep-learning-for-perception/dlip-projects/eye-blinking-detection-alarm.md)
   * [Helmet-Detection Using YOLO-V5](deep-learning-for-perception/dlip-projects/helmet-detection-using-yolo-v5.md)
   * [Mask Detection using YOLOv5](deep-learning-for-perception/dlip-projects/mask-detection-using-yolov5.md)
   * [Parking Space Management](deep-learning-for-perception/dlip-projects/parking-space-management.md)
+  * [Vehicle, Pedestrian Detection with IR Image](deep-learning-for-perception/dlip-projects/vehicle-pedestrian-detection-with-ir-image.md)
+  * [Drum Playing Detection](deep-learning-for-perception/dlip-projects/drum-playing-detection.md)
 
 ## Framework and IDE <a id="deep-learning-framework"></a>
 
