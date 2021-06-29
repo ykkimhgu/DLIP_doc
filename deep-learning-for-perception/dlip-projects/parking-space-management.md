@@ -77,6 +77,14 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 
 ## Essential codes to understand the program.
 
+
+
+![](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
+
+#### 
+
+![](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
+
 #### Finding the parking lines.
 
 > * First, you need a parking lot's picture to detect the parking lines. \(an empty parking lot image would be perfect.\)
@@ -89,15 +97,21 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 >
 >   ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
 >
->   ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
 >
->   > Convert the image to gray scale.
->   >
->   > ```text
->   >   def convert_gray_scale(image):
->   > ```
->   >
->   > ![gray](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/gray_image.jpg)
+>
+>
+>
+> ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
+>
+> ![white-yellow](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/white_yellow_image.jpg)
+>
+> > Convert the image to gray scale.
+> >
+> > ```text
+> >   def convert_gray_scale(image):
+> > ```
+> >
+> > ![gray](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/gray_image.jpg)
 >
 > > Detect the edges with _**Canny**_.
 > >
