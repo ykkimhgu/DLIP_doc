@@ -1,8 +1,10 @@
 # Digital Door Lock Control with Face Recognition
 
-2021.06.21.Mon - DLIP LAB4
+**Date:** 2021-6-21
 
-Keunho Lee, Yoonkyoung Song
+**Author**: Keunho Lee, Yoonkyoung Song
+
+**Github:** [https://github.com/DLIP-Digital-Doorlock-Control-Deep/Digital\_Doorlock\_Control\_Face\_Recognition](https://github.com/DLIP-Digital-Doorlock-Control-Deep/Digital_Doorlock_Control_Face_Recognition)
 
 ## **Introduction**
 
