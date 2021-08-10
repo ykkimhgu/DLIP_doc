@@ -1,0 +1,369 @@
+# Examples
+
+## GPIO
+
+### Blinking LED
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+DigitalOut led(LED1);
+
+int main() {
+    while(1) {
+        led = 1;
+        wait(0.5)
+        led=0;
+        wait(0.5);
+    }
+}
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+### LED with button
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+DigitalIn  button(USER_BUTTON);
+DigitalOut led(LED1);
+
+int main() {
+    while(1) {
+        if(!button) led = 1;
+        else led = 0;
+    }
+}
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## Interrupt
+
+### Button Interrupt
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+InterruptIn button(USER_BUTTON); 
+DigitalOut  led(LED1);
+
+void pressed()
+{
+    led = 1; 
+}
+
+void released(){
+    led = 0;
+}
+
+int main()
+{
+    button.fall(&pressed);
+    button.rise(&released);
+    while (1);
+}
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+## PWM
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+Serial      pc(USBTX, USBRX, 9600);
+PwmOut      trig(D10); // Trigger 핀
+InterruptIn echo(D7);  // Echo 핀
+Timer       tim;
+
+int begin = 0;
+int end = 0;
+
+void rising(){
+    begin = tim.read_us();
+}
+
+void falling(){
+    end = tim.read_us();
+}
+
+int main(void){
+    float distance = 0;
+    
+    trig.period_ms(60);     // period      = 60ms
+    trig.pulsewidth_us(10); // pulse-width = 10us
+    
+    echo.rise(&rising);
+    echo.fall(&falling);
+    
+    tim.start();
+    
+    while(1){
+        distance =  (float)(end - begin) / 58; // [cm]
+        pc.printf("Distance = %.2f[cm]\r\n", distance);
+        wait(0.5);
+    }
+    
+} 
+
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## Timer
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+
+#include "mbed.h"
+
+Timer       timer;
+Serial      pc(USBTX, USBRX, 9600); // for using ‘printf()’
+
+int begin, end;
+int cnt = 0;
+
+int main(void){
+
+    timer.start();
+    
+    begin = timer.read_us();
+    
+    while(cnt < 100) cnt++;
+    
+    end = timer.read_us();
+    
+    pc.printf("Counting 100 takes %d [us]", end-begin);
+}
+```
+{% endtab %}
+
+{% tab title="EC" %}
+```
+
+```
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## Input Capture
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+Serial      pc(USBTX, USBRX, 9600);
+PwmOut      trig(D10); // Trigger 핀
+InterruptIn echo(D7);  // Echo 핀
+Timer       tim;
+
+int begin = 0;
+int end = 0;
+
+void rising(){
+    begin = tim.read_us();
+}
+
+void falling(){
+    end = tim.read_us();
+}
+
+int main(void){
+    float distance = 0;
+    
+    trig.period_ms(60);     // period      = 60ms
+    trig.pulsewidth_us(10); // pulse-width = 10us
+    
+    echo.rise(&rising);
+    echo.fall(&falling);
+    
+    tim.start();
+    
+    while(1){
+        distance =  (float)(end - begin) / 58; // [cm]
+        pc.printf("Distance = %.2f[cm]\r\n", distance);
+        wait(0.5);
+    }
+    
+} 
+
+
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## Ticker
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+
+Ticker     tick;
+DigitalOut led(LED1);
+
+void INT(){
+    led = !led;      
+}
+int main(void){
+    tick.attach(&INT, 1); // 1초마다 LED blink
+    
+    while(1);
+}
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## ADC
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+                                                
+Serial      pc(USBTX, USBRX, 9600);                                                
+AnalogIn    CDS(A0);
+DigitalOut  led(LED1);
+
+int main() {
+    float measure;
+        
+    while(1) {
+        measure = CDS.read(); // mapping(0~3.3V -> 0.0~1.0)
+        measure = measure * 3300; // [mV] (0.0~1.0 -> 0~3300[mV])
+        pc.printf("measure = %f mV\n\r", measure);
+        
+        if (measure < 200) led = 1;
+        else               led = 0;
+        
+        wait(0.2); 
+    }
+}
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+## UART
+
+{% tabs %}
+{% tab title="mbed" %}
+```cpp
+#include "mbed.h"
+ 
+Serial  uart(USBTX, USBRX, 9600);
+ 
+int main(){
+    char RXD;    
+    while(1)
+    {        
+        if(uart.readable()){
+            RXD = uart.getc();
+            uart.printf("%c", RXD);
+        }
+    }
+}
+
+```
+{% endtab %}
+
+{% tab title="EC" %}
+
+{% endtab %}
+
+{% tab title="Arduino" %}
+
+{% endtab %}
+{% endtabs %}
+
+### 
+
+## 
+
