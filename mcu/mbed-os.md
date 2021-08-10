@@ -39,3 +39,113 @@
 | [PortInOut](https://os.mbed.com/docs/mbed-os/v6.13/apis/portinout.html) | ✔ | ✔ |
 | [PwmOut](https://os.mbed.com/docs/mbed-os/v6.13/apis/pwmout.html) | ✔ | ✔ |
 
+
+
+## \# Library 
+
+header: [github](https://github.com/ARMmbed/mbed-os/tree/master/drivers/include/drivers)
+
+source:[github](https://github.com/ARMmbed/mbed-os/tree/master/drivers/source)
+
+[Intenal Library](https://os.mbed.com/handbook/mbed-library-internals.)
+
+## DigitalIn
+
+```cpp
+class DigitalIn
+{
+    public:
+        DigitalIn(PinName pin) : gpio()
+        {
+            gpio_init_in(&gpio, pin);
+        }
+
+        DigitalIn(PinName pin, PinMode mode) : gpio()
+        {
+            gpio_init_in_ex(&gpio, pin, mode);
+        }
+
+        ~DigitalIn()
+        {
+            gpio_free(&gpio);
+        }
+
+        int read()
+        {
+            return gpio_read(&gpio);
+        }
+
+        void mode(PinMode pull);
+        int is_connected()
+        {
+            return gpio_is_connected(&gpio);
+        }
+
+        operator int()
+        {
+            return read();
+        }
+
+    protected:
+    #if !defined(DOXYGEN_ONLY)
+        gpio_t gpio;
+    #endif //!defined(DOXYGEN_ONLY)
+};
+```
+
+```cpp
+void DigitalIn::mode(PinMode pull)
+{
+    core_util_critical_section_enter();
+    gpio_mode(&gpio, pull);
+    core_util_critical_section_exit();
+}
+```
+
+### DigitalOut
+
+```cpp
+class DigitalOut
+{
+public:
+    DigitalOut(PinName pin) : gpio()
+    {
+        gpio_init_out(&gpio, pin);
+    }
+
+    DigitalOut(PinName pin, int value) : gpio()
+    {
+        gpio_init_out_ex(&gpio, pin, value);
+    }
+
+    void write(int value)
+    {
+        gpio_write(&gpio, value);
+    }
+
+    int read()
+    {
+        return gpio_read(&gpio);
+    }
+
+    int is_connected()
+    {
+        return gpio_is_connected(&gpio);
+    }
+
+    DigitalOut& operator= (int value)
+    {
+        write(value);
+        return *this;
+    }
+
+    DigitalOut& operator= (DigitalOut& rhs);
+
+    operator int()
+    {
+        return read();
+    }
+
+};
+```
+
