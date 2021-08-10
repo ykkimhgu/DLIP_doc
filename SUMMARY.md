@@ -140,4 +140,5 @@
 
 * [Arduino](mcu/arduino.md)
 * [mbed OS](mcu/mbed-os.md)
+* [MCU Course](mcu/mcu-course.md)
 
