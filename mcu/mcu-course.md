@@ -24,5 +24,5 @@ Step 4: Apply on STM 32f4
 
 Step 5: Learn Arduino
 
-Step 6: Connect Demo-Kit and Arduino by pins.
+Step 6: Connect Demo-Kit and Arduino by pins? Morpho pin 으로 가능한지?
 
