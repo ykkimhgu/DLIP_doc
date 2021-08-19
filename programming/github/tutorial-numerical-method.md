@@ -1,5 +1,11 @@
 # Tutorial: Numerical Method
 
+## 
+
+{% embed url="https://www.youtube.com/watch?v=xa9wvLssY-w" %}
+
+
+
 ## Tutorial: Version Control and Documentation
 
 ### Objective
