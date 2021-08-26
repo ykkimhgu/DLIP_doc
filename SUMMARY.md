@@ -137,11 +137,3 @@
 * [Useful Resources](resources/useful-resources.md)
 * [Github](https://github.com/ykkimhgu)
 
-## MCU
-
-* [Arduino](mcu/arduino.md)
-* [mbed OS](mcu/mbed-os.md)
-* [Examples](mcu/examples.md)
-* [MCU Course](mcu/mcu-course.md)
-* [GPIO Digital IO](mcu/gpio-digital-io.md)
-
