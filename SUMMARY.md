@@ -102,7 +102,8 @@
 
 ## Programming
 
-* [Markdown](programming/markdown.md)
+* [Markdown](programming/markdown/README.md)
+  * [Example: API documentation](programming/markdown/example-api-documentation.md)
 * [Github](programming/github/README.md)
   * [Create account](programming/github/create-account.md)
   * [Github Tutorial](programming/github/github-tutorial.md)
