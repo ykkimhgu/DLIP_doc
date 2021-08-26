@@ -1,3 +1,7 @@
+---
+description: Numerical Method example
+---
+
 # Example: API documentation
 
 ## Reference of Numerical Programming API
