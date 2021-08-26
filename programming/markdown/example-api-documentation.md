@@ -11,13 +11,13 @@
 Solves the non-linear problem using Newton-Raphson method
 
 ```text
-double newtonRaphson(double _x0, double _tol);
+double newtonRaphson(double x0, double tol);
 ```
 
 **Parameters**
 
-* **x0** is initial value.
-* **tol** is Tolerance error.
+* **x0:**  initial value.
+* **tol**:  tolerance error
 
 **Example code**
 
@@ -35,8 +35,8 @@ NR_result = newtonRaphson(x0, tol);
 
 solves for vector **x** from Ax=b, a linear system problem Using Gauss Elimination
 
-```text
-void    gaussElim(Matrix _A, Matrix _B, Matrix* _U, Matrix* _B_out);
+```cpp
+void gaussElim(Matrix _A, Matrix _B, Matrix* _U, Matrix* _B_out);
 ```
 
 **Parameters**
@@ -93,14 +93,14 @@ void gradient1D(double x[], double y[], double dydx[], int m);
 
 **Parameters**
 
-* **x\[\]**: vector **x\[\]** in structure 1D-array form.
-* **y\[\]**: vector **y\[\]** in structure 1D-array form.
-* **dydx\[\]**: vector **dydx\[\]** in structure 1D-array form.
-* **m**: int **m** is length **x\[\]**.
+* **x\[\]**: input data vector **x** in 1D-array .
+* **y\[\]**: input data vector **y** in 1D-array.
+* **dydx\[\]**: output vector **dydx** in 1D-array.
+* **m**:  length **x** and **y**.
 
 **Example code**
 
-```text
+```cpp
 double x[21];
     for (int i = 0; i < 21; i++) {
         x[i] = 0.2 * i;
@@ -112,30 +112,6 @@ gradient1D(x, y, dydx, 21);
 ```
 
 ## Integration
-
-### trapz\(\)
-
-Integral using Trapezoidal Method.
-
-```text
-double trapz(double x[], double y[], int m);
-```
-
-**Parameters**
-
-* **\_x\[\]** in structure 1D-array form.
-* **\_y\[\]** in structure 1D-array form.
-* **\_m**: int **\_m** is length **\_x\[\]**.
-
-**Example code**
-
-```text
-double x[] = { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60 };
-double y[] = { 0, 3, 8, 20, 33, 42, 40, 48, 60, 12, 8, 4, 3 };
-int M = sizeof(x) / sizeof(x[0]);
-
-double I_trapz = trapz(x, y, M);
-```
 
 ### integral\(\)
 
@@ -203,6 +179,8 @@ double odeFunc_rc(const double t, const double v) {
 ```
 
 -------------------------------------------------------------------------------------------------------
+
+## Class or Header name
 
 ### Function Name
 
