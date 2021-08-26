@@ -1,12 +1,10 @@
 # Tutorial: Numerical Method
 
+{% embed url="https://www.youtube.com/watch?v=yFgIvPB\_Q-c" %}
+
+
+
 ## 
-
-{% embed url="https://www.youtube.com/watch?v=xa9wvLssY-w" %}
-
-
-
-## [https://www.youtube.com/watch?v=yFgIvPB\_Q-c](https://www.youtube.com/watch?v=yFgIvPB_Q-c)
 
 ## 
 
