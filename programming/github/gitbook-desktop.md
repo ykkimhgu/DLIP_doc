@@ -1,4 +1,4 @@
-# Github Desktop
+# Tutorial: Github Desktop
 
 ## What is Github Desktop
 

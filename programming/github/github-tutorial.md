@@ -1,4 +1,4 @@
-# Github Tutorial
+# Tutorial: Github basic
 
 ## Terminology
 
