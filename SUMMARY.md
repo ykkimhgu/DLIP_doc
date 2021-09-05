@@ -108,7 +108,6 @@
   * [Create account](programming/github/create-account.md)
   * [Github Tutorial](programming/github/github-tutorial.md)
   * [Github Desktop](programming/github/gitbook-desktop.md)
-  * [Tutorial: Numerical Method](programming/github/tutorial-numerical-method.md)
 * [Python](programming/python/README.md)
   * [Tutorial](programming/python/tutorial-python.md)
   * [Untitled](programming/python/untitled.md)
