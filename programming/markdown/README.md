@@ -2,7 +2,7 @@
 
 ## Markdown Editor
 
-We will use  'Typora' as the offline Markdown editor. 
+We will use  'Typora' as the offline Markdown editor.&#x20;
 
 Typora:  [Download from here](https://typora.io/#windows)
 
@@ -12,7 +12,7 @@ Typora:  [Download from here](https://typora.io/#windows)
 
 You can use Markdown most places around GitHub:
 
-* [Gists](https://gist.github.com/)
+* [Gists](https://gist.github.com)
 * Comments in Issues and Pull Requests
 * Files with the `.md` or `.markdown` extension:  README.md
 
@@ -22,7 +22,7 @@ Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com 
 
 #### Headers
 
-```text
+```
 # This is an <h1> tag
 ## This is an <h2> tag
 ###### This is an <h6> tag
@@ -30,7 +30,7 @@ Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com 
 
 #### Emphasis
 
-```text
+```
 *This text will be italic*
 _This will also be italic_
 
@@ -42,7 +42,7 @@ _You **can** combine them_
 
 **Unordered List**
 
-```text
+```
 * Item 1
 * Item 2
   * Item 2a
@@ -51,7 +51,7 @@ _You **can** combine them_
 
 **Ordered List**
 
-```text
+```
 1. Item 1
 1. Item 2
 1. Item 3
@@ -61,7 +61,7 @@ _You **can** combine them_
 
 #### Images
 
-```text
+```
 Format: ![Alt Text](url)
 
 ![GitHub Logo](/images/logo.png)
@@ -70,14 +70,14 @@ Format: ![Alt Text](url)
 
 #### Links
 
-```text
+```
 http://github.com - automatic!
 [GitHub](http://github.com)
 ```
 
 #### Blockquotes
 
-```text
+```
 As Kanye West said:
 
 > We're living the future so
@@ -86,14 +86,14 @@ As Kanye West said:
 
 #### Inline code
 
-```text
+```
 I think you should use an
 `<addr>` element here instead.
 ```
 
 **Block code**
 
-```text
+````
 ```javascript
 function fancyAlert(arg) {
   if(arg) {
@@ -109,7 +109,7 @@ int main()
  return 0;
 }
 ```
-```
+````
 
 
 
@@ -122,7 +122,7 @@ int main()
 * [Code](https://guides.github.com/features/mastering-markdown/#)
 * [Extras](https://guides.github.com/features/mastering-markdown/#)
 
-```text
+````
 There are many different ways to style code with GitHub's markdown. If you have inline code blocks, wrap them in backticks: `var example = true`.  If you've got a longer block of code, you can indent with four spaces:
 
     if (isAwesome){
@@ -144,11 +144,11 @@ if (isAwesome){
   return true
 }
 ```
-```
+````
 
 There are many different ways to style code with GitHub’s markdown. If you have inline code blocks, wrap them in backticks: `var example = true`. If you’ve got a longer block of code, you can indent with four spaces:
 
-```text
+```
 if (isAwesome){
   return true
 }
@@ -156,7 +156,7 @@ if (isAwesome){
 
 GitHub also supports something called code fencing, which allows for multiple lines without indentation:
 
-```text
+```
 if (isAwesome){
   return true
 }
@@ -164,7 +164,7 @@ if (isAwesome){
 
 And if you’d like to use syntax highlighting, include the language:
 
-```text
+```
 if (isAwesome){
   return true
 }
@@ -172,7 +172,6 @@ if (isAwesome){
 
 ## Reference
 
-{% embed url="https://guides.github.com/features/mastering-markdown/\#syntax" %}
+{% embed url="https://guides.github.com/features/mastering-markdown/#syntax" %}
 
-## 
-
+##

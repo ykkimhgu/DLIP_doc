@@ -1,26 +1,26 @@
 # People Counting with YOLOv4 and DeepSORT
 
-**Author:** S.-S. Lim & H.-J. Kim  
-**Date created:** 2021/06/21  
-**Github repository:**  [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access_Control_Application/)
+**Author:** S.-S. Lim & H.-J. Kim\
+**Date created:** 2021/06/21\
+**Github repository:**  [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)
 
 ## Introduction
 
-Since the outbreak of COVID-19, people have been restricted from entering various places. However, automation of access control is not yet used in most places. So, this application aims to automatically identify and control people's access to rooms, buildings, or outdoors. This application can be used for personnel control due to government guidelines, attendance checks in classes, building usage status, etc.  
-  
- The application was created using open source YOLOv4, Deep SORT and TensorFlow. YOLOv4 is an algorithm that performs object detection using deep convolutional neural networks, and is created by adding additional algorithms to YOLOv3. YOLOv4 is a 10% improvement in accuracy \(AP\) over YOLOv3 and has the advantage of fast and accurate object detection in a typical learning environment using only one GPU. Deep SORT\(Simple Online and Realtime Tracking with a Deep Association Metric\) is an algorithm for object tracking. It was created using deep learning, Kalman filter and Hungarian algorithm.  
+Since the outbreak of COVID-19, people have been restricted from entering various places. However, automation of access control is not yet used in most places. So, this application aims to automatically identify and control people's access to rooms, buildings, or outdoors. This application can be used for personnel control due to government guidelines, attendance checks in classes, building usage status, etc.\
+\
+&#x20;The application was created using open source YOLOv4, Deep SORT and TensorFlow. YOLOv4 is an algorithm that performs object detection using deep convolutional neural networks, and is created by adding additional algorithms to YOLOv3. YOLOv4 is a 10% improvement in accuracy (AP) over YOLOv3 and has the advantage of fast and accurate object detection in a typical learning environment using only one GPU. Deep SORT(Simple Online and Realtime Tracking with a Deep Association Metric) is an algorithm for object tracking. It was created using deep learning, Kalman filter and Hungarian algorithm.\
 
 
-\*\*\*\*
+****
 
 ## Requirements
 
-To get started, you must first download the YOLOv4 and Deep SORT algorithm codes and directories from my GitHub repository. 
+To get started, you must first download the YOLOv4 and Deep SORT algorithm codes and directories from my GitHub repository.&#x20;
 
-Download all files: [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access_Control_Application/)  
+Download all files: [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)\
 
 
-Also, you need at least one GPU to use YOLOv4. CUDA toolkit must be installed for GPU use. CUDA Toolkit version 10.1 is the proper version for the TensorFlow version used in this application. [https://developer.nvidia.com/cuda-10.1-download-archive-update2](https://developer.nvidia.com/cuda-10.1-download-archive-update2)  
+Also, you need at least one GPU to use YOLOv4. CUDA toolkit must be installed for GPU use. CUDA Toolkit version 10.1 is the proper version for the TensorFlow version used in this application. [https://developer.nvidia.com/cuda-10.1-download-archive-update2](https://developer.nvidia.com/cuda-10.1-download-archive-update2)\
 
 
 After that, install the proper dependencies either via Anaconda. You can install dependencies through either conda-gpu.yml or requirements-gpu.txt.
@@ -38,10 +38,10 @@ pip install -r requirements-gpu.txt
 
 ## Training Data
 
-For object detection, the application must first be trained with a large number of data. However, since the application aims to detect only humans, it use an official pre-trained YOLOv4 model that is able to detect 80 classes without additional training data. Download pre-trained yolov4.weights file: [https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing](https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing)   
+For object detection, the application must first be trained with a large number of data. However, since the application aims to detect only humans, it use an official pre-trained YOLOv4 model that is able to detect 80 classes without additional training data. Download pre-trained yolov4.weights file: [https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing](https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing) \
 
 
-You must download and extract the weights.zip file and place the yolov4.weights file in the data directory of your workspace\(./data/yolov4.weights\). If the download doesn't work properly, refer to the [reference](https://github.com/theAIGuysCode/yolov4-deepsort) in this tutorial.  
+You must download and extract the weights.zip file and place the yolov4.weights file in the data directory of your workspace(./data/yolov4.weights). If the download doesn't work properly, refer to the [reference](https://github.com/theAIGuysCode/yolov4-deepsort) in this tutorial.\
 
 
 The weight file downloaded is a darknet weight file. Transformation is required to apply file to tensorflow models. If you run the save\_model.py, checkpoints directory is created and tensorflow model is stored.
@@ -54,19 +54,19 @@ python save_model.py --model yolov4
 
 ## Downloading Sample Videos
 
-In a place with one entrance, the application can be operated based on real-time images of that one entrance. Likewise, in another place with two or more entrances, the application should be operated based on two or more images. Simultaneous processing can be done through communication, such as ROS systems, but this tutorial combines images for easy processing.  
+In a place with one entrance, the application can be operated based on real-time images of that one entrance. Likewise, in another place with two or more entrances, the application should be operated based on two or more images. Simultaneous processing can be done through communication, such as ROS systems, but this tutorial combines images for easy processing.\
 
 
-The videos going to use in the tutorial are entrance to the front and back door before the start of DLIP class at Handong Global University. The videos have speeds of three times faster and was edited when there was no human access to reduce running time. Also, this project has the consent of class members. You can download and extract the videos.zip file and place the videos directory in the data directory\(./data/videos/frontdoor.mp4\). Download sample videos: [https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing](https://drive.google.com/file/d/10Cts1ObT_e_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing)   
+The videos going to use in the tutorial are entrance to the front and back door before the start of DLIP class at Handong Global University. The videos have speeds of three times faster and was edited when there was no human access to reduce running time. Also, this project has the consent of class members. You can download and extract the videos.zip file and place the videos directory in the data directory(./data/videos/frontdoor.mp4). Download sample videos: [https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing](https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing) \
 
 
 ### Front door
 
-![](../../.gitbook/assets/image%20%28328%29.png)
+![](<../../.gitbook/assets/image (328).png>)
 
 ### Back door
 
-![](../../.gitbook/assets/image%20%28330%29.png)
+![](<../../.gitbook/assets/image (330).png>)
 
 ## Combining Two Videos
 
@@ -143,7 +143,7 @@ cap2.release()
 cv2.destroyAllWindows()
 ```
 
-### Run with terminal\(powershell\)
+### Run with terminal(powershell)
 
 You can run the above code through the terminal.
 
@@ -153,7 +153,7 @@ python video_sum.py
 
 ### Combined video
 
-![](../../.gitbook/assets/image%20%28324%29.png)
+![](<../../.gitbook/assets/image (324).png>)
 
 ## Human-Access-Control application
 
@@ -192,18 +192,18 @@ from tools import generate_detections as gdet
 
 ### Command line arguments
 
-`--video`: path to input video \(use 0 for webcam\)  
- `--output`: path to output video  
- `--output_format`: codec used in VideoWriter when saving video to file  
- `--tiny`: yolov4 or yolov4-tiny  
- `--weights`: path to weights file  
- `--framework`: what framework to use \(tf, trt, tflite\)  
- `--model`: yolov3 or yolov4  
- `--size`: resize images to  
- `--iou`: iou threshold  
- `--score`: confidence threshold  
- `--dont_show`: dont show video output  
- `--info`: print detailed info about tracked objects  
+`--video`: path to input video (use 0 for webcam)\
+&#x20;`--output`: path to output video\
+&#x20;`--output_format`: codec used in VideoWriter when saving video to file\
+&#x20;`--tiny`: yolov4 or yolov4-tiny\
+&#x20;`--weights`: path to weights file\
+&#x20;`--framework`: what framework to use (tf, trt, tflite)\
+&#x20;`--model`: yolov3 or yolov4\
+&#x20;`--size`: resize images to\
+&#x20;`--iou`: iou threshold\
+&#x20;`--score`: confidence threshold\
+&#x20;`--dont_show`: dont show video output\
+&#x20;`--info`: print detailed info about tracked objects\
 
 
 ```bash
@@ -293,7 +293,7 @@ If you want to get video results, you should use command line argument `--output
 
 ### Save object tracking information
 
-`deque(maxlen = 20)` means 20 frames and `in range(1000)` means 1000 queue. Declares to track paths for up to 1000 Bboxes\(the number of objects\). The path is tracked for each id assigned to each object, which is stored up to 20 frames. The disadvantage is that if another object is given the same id, it will interfere with object tracking.
+`deque(maxlen = 20)` means 20 frames and `in range(1000)` means 1000 queue. Declares to track paths for up to 1000 Bboxes(the number of objects). The path is tracked for each id assigned to each object, which is stored up to 20 frames. The disadvantage is that if another object is given the same id, it will interfere with object tracking.
 
 ```bash
     frame_num = 0
@@ -545,7 +545,7 @@ if __name__ == '__main__':
 
 Baselines are blue and the ranges for storing the central value are green.
 
-### Run with terminal\(powershell\)
+### Run with terminal(powershell)
 
 You can run the above code through the terminal.
 
@@ -557,11 +557,11 @@ python access_control.py --video demo2.mp4 --output output.mp4 --model yolov4
 
 The application were able to successfully determine the number of people entering from a given video through the optimal value. In the given video, people's access was 100% consistent compared to the system visually. Also, warnings were successfully issued when there were more than a certain number of people.
 
-![](../../.gitbook/assets/image%20%28322%29.png)
+![](<../../.gitbook/assets/image (322).png>)
 
 **See demo video here**
 
-\*\*\*\*
+****
 
 ## Discussion
 
@@ -571,6 +571,6 @@ There were some problems that detection by the pretrained model, frame drop, loc
 
 ## **References:**
 
-* [YOLOv4 and Deep SORT: https://github.com/theAIGuysCode/yolov4-deepsort](https://github.com/theAIGuysCode/yolov4-deepsort)  
-* [Counting the passing objects: https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking](https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking)
+* [YOLOv4 and Deep SORT: https://github.com/theAIGuysCode/yolov4-deepsort](https://github.com/theAIGuysCode/yolov4-deepsort) \
 
+* [Counting the passing objects: https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking](https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking)

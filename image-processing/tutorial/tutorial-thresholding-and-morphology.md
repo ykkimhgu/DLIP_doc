@@ -4,51 +4,51 @@
 
 ## **I. Introduction**
 
-In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces.  ****Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and to determine an optimal value for the thresholding. 
+In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces. **** Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and to determine an optimal value for the thresholding.&#x20;
 
 ## **II. Tutorial**
 
-### **Part 1. Binary Thresholding** 
+### **Part 1. Binary Thresholding**&#x20;
 
 #### **Local Thresholding Algorithms**
 
 #### **A. Basic Global thresholding**
 
-![](https://lh3.googleusercontent.com/4YB1b61D99qCQW2tBSFXFEDQEOJDcjJ1jSFlQ2QGpk84yVN_YtmC1cgpuEB2BN1MrzlguJdzPrc97xUsaP43n58HdorNlfPIXcqa3iga0DQl0zkzW1OCSaedoolBjKn0iE4Er5c)
+![](https://lh3.googleusercontent.com/4YB1b61D99qCQW2tBSFXFEDQEOJDcjJ1jSFlQ2QGpk84yVN\_YtmC1cgpuEB2BN1MrzlguJdzPrc97xUsaP43n58HdorNlfPIXcqa3iga0DQl0zkzW1OCSaedoolBjKn0iE4Er5c)
 
 #### **B. Optimum Global thresholding**
 
 ![](https://lh4.googleusercontent.com/Q9Doe8K-IJgBCvg6EWBbcqCJG-i7nxPOnVKSKI3dh92N7E753FgmQOrwQCx8N65QDmarix8DKAZlr0o7UNnbGbFHdIZZ0QUIoUC6pSRDnzUuP1CsOAkwnrX2maKgFgSQsH4WfFw)
 
-#### \*\*\*\*
+#### ****
 
-#### **Thresholding Application: OpenCV**  
+#### **Thresholding Application: OpenCV** &#x20;
 
-This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images**.**  
-
+This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images**.**\
+****
 
 1.Download ‘Thresholding\_OpenCV\_Demo.cpp’ and test images.  Apply different values of thresholding for each images
 
-* source code: [click here to download](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/threshold_demo.cpp)
-* test images: [click here to download](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Threshold_Morp/images)
+* source code: [click here to download](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/threshold\_demo.cpp)
+* test images: [click here to download](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Threshold\_Morp/images)
 
 **2.** Modify the tutorial program to include ‘Otsu method’. Compare the global thresholding and Otsu method results
 
-3. Modify the tutorial program to plot ‘histogram’ of the image.  
+3\. Modify the tutorial program to plot ‘histogram’ of the image. &#x20;
 
-* Use this tutorial for help: [click here](https://docs.opencv.org/3.4/d8/dbc/tutorial_histogram_calculation.html)
+* Use this tutorial for help: [click here](https://docs.opencv.org/3.4/d8/dbc/tutorial\_histogram\_calculation.html)
 
 **4.** Apply ‘Local Adaptive Thresholding’  on the following images. Compare the results of the global thresholding.
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](<../../.gitbook/assets/image (82).png>)
 
 
 
 **OpenCV: Global and Optimal Thresholding**
 
-{% embed url="https://docs.opencv.org/3.4/d7/d1b/group\_\_imgproc\_\_misc.html\#gae8a4a146d1ca78c626a53577199e9c57" %}
+{% embed url="https://docs.opencv.org/3.4/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57" %}
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](<../../.gitbook/assets/image (43).png>)
 
 * Sample code
 
@@ -84,26 +84,28 @@ img = cv.imread('gradient.png',0)
 ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 
 ```
+
+
 {% endtab %}
 {% endtabs %}
 
 
 
-### **Part 2. Morphology** 
+### **Part 2. Morphology**&#x20;
 
-#### **Morphology Application: OpenCV**  
+#### **Morphology Application: OpenCV** &#x20;
 
-This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images.  
-  
-**1.** Refer to sample code below. Apply several morphology to obtain clear segmentation of the object in given images. 
+This tutorial program uses a trackbar to select the threshold value manually. Apply various morphology processes to given images.\
+****\
+**1.** Refer to sample code below. Apply several morphology to obtain clear segmentation of the object in given images.&#x20;
 
-* For Python tutorial: [click here](https://docs.opencv.org/3.4/d9/d61/tutorial_py_morphological_ops.html) 
+* For Python tutorial: [click here](https://docs.opencv.org/3.4/d9/d61/tutorial\_py\_morphological\_ops.html)&#x20;
 
-2. Apply several morphology to obtain clear segmentation of the object in given images. 
+2\. Apply several morphology to obtain clear segmentation of the object in given images.&#x20;
 
-3. Explain which morphology process you have used and explain the reason. ****
+3\. Explain which morphology process you have used and explain the reason. ****&#x20;
 
-\*\*\*\*
+****
 
 * Sample code
 
@@ -130,6 +132,8 @@ kernel = np.ones((5,5),np.uint8)
 erosion = cv.erode(img,kernel,iterations = 1)
 
 ```
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -137,13 +141,13 @@ erosion = cv.erode(img,kernel,iterations = 1)
 
 ## **III. Exercise**
 
-After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels. 
+After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels.&#x20;
 
 **Goal: Count the number of water bubbles for a thermal fluid experiment**
 
-![&amp;lt;img&amp;gt;Bluerred image.](https://lh4.googleusercontent.com/2OZKpPmzK6SzQUEPrkNzsmuFTFf8D_bTq-GXZ2Uqr5OLe-JKL1vQnYkSZU3gMKcOgIw64qv3CcfZu2974nTxWJDQSKzEbqHCz4FpWqUEhT5kh4Eg0E_4B42QfGvpOzNU4C5OtwI)
+![\<img>Bluerred image.](https://lh4.googleusercontent.com/2OZKpPmzK6SzQUEPrkNzsmuFTFf8D\_bTq-GXZ2Uqr5OLe-JKL1vQnYkSZU3gMKcOgIw64qv3CcfZu2974nTxWJDQSKzEbqHCz4FpWqUEhT5kh4Eg0E\_4B42QfGvpOzNU4C5OtwI)
 
-* Analyze the histogram of the image. 
+* Analyze the histogram of the image.&#x20;
 * Apply a filter to remove image noises
 * Choose the appropriate threshold value.
 * Apply the appropriate morphology method to segment bubbles
@@ -153,7 +157,7 @@ After applying thresholding and morphology, we can identify and extract the targ
 
 
 
-#### **Tip: \(contour\_demo.cpp\)**
+#### **Tip: (contour\_demo.cpp)**
 
 ```cpp
 // example code
@@ -175,6 +179,4 @@ for( int i = 0; i< contours.size(); i++ )
        printf(" * Contour[%d] -  Area OpenCV: %.2f - Length: %.2f \n", i, contourArea(contours[i]), arcLength( contours[i], true ) );       
   }
 ```
-
-
 

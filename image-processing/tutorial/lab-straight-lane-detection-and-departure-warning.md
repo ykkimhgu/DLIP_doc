@@ -16,13 +16,13 @@ You must explain the whole process with an algorithm flowchart. Show and explain
 
 ## Methods/Requirement
 
--       Detect and segment lanes only from the test image frames.
+\-       Detect and segment lanes only from the test image frames.
 
--       Draw only one line per lane
+\-       Draw only one line per lane
 
--       Display an approximated rate of the lane departure \(unit:%\)
+\-       Display an approximated rate of the lane departure (unit:%)
 
--       If the vehicle has departed from the current lanes then show a warning sign.
+\-       If the vehicle has departed from the current lanes then show a warning sign.
 
 ## Instructions
 
@@ -34,14 +34,13 @@ Do not duplicate the program from other website or from previous lab report.   Y
 
 The report should include
 
-* Introduction / Overview \(Algorithm flowchart\) / Algorithm\(Image processing steps\) / Final Result &  Analysis / Conclusion / Appendix: program code
+* Introduction / Overview (Algorithm flowchart) / Algorithm(Image processing steps) / Final Result &  Analysis / Conclusion / Appendix: program code
 
- Submit \(1\) report in PDF and in WORD \(2\) source code \(3\) demo movie clip   
+&#x20;Submit (1) report in PDF and in WORD (2) source code (3) demo movie clip \
 
 
 ### Some Examples:
 
-![](../../.gitbook/assets/image%20%2895%29.png)
+![](<../../.gitbook/assets/image (95).png>)
 
-![](../../.gitbook/assets/image%20%2894%29.png)
-
+![](<../../.gitbook/assets/image (94).png>)

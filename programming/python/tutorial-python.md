@@ -4,7 +4,7 @@
 
 Learning Python in 30 minutes:
 
-{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonBasics\_2021.ipynb" %}
+{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb" %}
 
 ## Numpy Tutorial
 
@@ -14,7 +14,5 @@ Learning Python in 30 minutes:
 
 ### **Python tutorial by w3school.com**
 
-{% embed url="https://www.w3schools.com/python/default.asp" caption="" %}
-
-
+{% embed url="https://www.w3schools.com/python/default.asp" %}
 

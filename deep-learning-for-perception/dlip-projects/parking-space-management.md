@@ -2,47 +2,46 @@
 
 **Date:** 2021-6-21
 
-**Author**:  강지훈, 도경민 
+**Author**:  강지훈, 도경민&#x20;
 
-**Github:** [https://github.com/chloerudals/DLIP\_LAB4](https://github.com/chloerudals/DLIP_LAB4)
+**Github:** [https://github.com/chloerudals/DLIP\_LAB4](https://github.com/chloerudals/DLIP\_LAB4)
 
 **Demo Video:**
 
-{% embed url="https://www.youtube.com/watch?v=og6CcAu\_-JY" %}
+{% embed url="https://www.youtube.com/watch?v=og6CcAu_-JY" %}
 
-\*\*\*\*
+****
 
 ## Introduction
 
 Since the use of private vehicle has increased due to COVID-19, finding parking spaces has been difficult even in our university. Thus, we decided to show the empty parking spaces on the screen to make parking management easier.
 
-![](../../.gitbook/assets/image%20%28329%29.png)
+![](<../../.gitbook/assets/image (329).png>)
 
-![parking lot](https://github.com/chloerudals/DLIP_LAB4/blob/main/Img.jpg)  
- To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu_-JY)
+![parking lot](https://github.com/chloerudals/DLIP\_LAB4/blob/main/Img.jpg)\
+&#x20;To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu\_-JY)
 
 > Algorithm: 1. Parking lines are detected using HoughlinesP and cars are detected using Yolov5s 2. We improved the detection of parking lines, which had previously been covered by parked cars, by elongating the lines 3. We divided the rectangle the same number as the parking lot. 4. Adjusted distorted regions due to perspectives. 5. By comparing the center of the parking space and the center of the detected box, parking ability is decided. 6. Since cars park in the upper part of the parking space, y axis of the detected box's center is corrected about 10 pixels 7. If a car comes in the camera frame, the car is considered as parking so entering car is printed.
 
 ## Requirements
 
-1. Hardware
+1.  Hardware
 
-   > * NVDIA graphic cards
+    > * NVDIA graphic cards
+2.  Software
 
-2. Software
+    > * CUDA
+    > * cuDNN
+    > * Anaconda
+    > * YOLO V5
 
-   > * CUDA
-   > * cuDNN
-   > * Anaconda
-   > * YOLO V5
-
-Or You can follow the instructions from the yolov5 GitHub repository. [\(requirements\)](https://github.com/ultralytics/yolov5/blob/master/requirements.txt)
+Or You can follow the instructions from the yolov5 GitHub repository. [(requirements)](https://github.com/ultralytics/yolov5/blob/master/requirements.txt)
 
 ### Follow the steps for setting YOLO V5 in the Anaconda.
 
 > Before starting, check your gpu to match the version.
 >
-> ```text
+> ```
 >   # create a conda env name=yolov5 (you can change your env name)
 >   conda create -n yolov5 python=3.8
 >   conda activate yolov5
@@ -67,7 +66,7 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 >   conda install -c conda-forge matplotlib pyyaml tensorboard tqdm opencv 
 > ```
 >
-> ```text
+> ```
 >   # install pytorch
 >   conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 >  
@@ -81,91 +80,95 @@ Or You can follow the instructions from the yolov5 GitHub repository. [\(require
 
 #### Finding the parking lines.
 
-> * First, you need a parking lot's picture to detect the parking lines. \(an empty parking lot image would be perfect.\)
+> *   First, you need a parking lot's picture to detect the parking lines. (an empty parking lot image would be perfect.)
 >
->   * Image processing is conducted.
+>     *   Image processing is conducted.
 >
->     > Since the lines are mostly white and yellow, select only yellow and white colors from the image.
+>         > Since the lines are mostly white and yellow, select only yellow and white colors from the image.
 >
->    `def select_rgb_white_yellow(image):`
+>     &#x20;`def select_rgb_white_yellow(image):`
+>
+>
+>
+>
 
-![](../../.gitbook/assets/image%20%28321%29.png)
+![](<../../.gitbook/assets/image (321).png>)
 
 
 
+>
+>
 > > Convert the image to gray scale.
 > >
-> > ```text
+> > ```
 > >   def convert_gray_scale(image):
 > > ```
 >
-> ![gray](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/gray_image.jpg)
+> ![gray](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/gray\_image.jpg)
 >
 > > Detect the edges with _**Canny**_.
 > >
-> > ```text
+> > ```
 > >   def detect_edges(image, low_threshold=500, high_threshold=1000):
 > > ```
 > >
-> > ![detect edges](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/edge_image.jpg)
+> > ![detect edges](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/edge\_image.jpg)
 
-![](../../.gitbook/assets/image%20%28323%29.png)
-
-
-
-![](../../.gitbook/assets/image%20%28320%29.png)
+![](<../../.gitbook/assets/image (323).png>)
 
 
+
+![](<../../.gitbook/assets/image (320).png>)
 
 
 
 
 
-> > * Crop the image using _**roi**_.
+
+
+>
+>
+> > *   Crop the image using _**roi**_.
 > >
-> >   def filter\_region\(image, vertices\): def select\_region\(image\):
+> >     def filter\_region(image, vertices): def select\_region(image):
 > >
-> >   ![roi](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/roi_image.jpg)
+> >     ![roi](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/roi\_image.jpg)
+> > *   Using HoughlinesP, detect the vertical parking lines.
 > >
-> > * Using HoughlinesP, detect the vertical parking lines.
+> >     def hough\_lines(image): def draw\_lines(image, lines, color=\[255, 0, 0], thickness=2, make\_copy=True):
 > >
-> >   def hough\_lines\(image\): def draw\_lines\(image, lines, color=\[255, 0, 0\], thickness=2, make\_copy=True\):
+> >     ![line](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/line\_image.jpg)
+> > *   Draw a rectangle.
 > >
-> >   ![line](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/line_image.jpg)
+> >     def identify\_blocks(image, lines, make\_copy=True):
 > >
-> > * Draw a rectangle.
-> >
-> >   def identify\_blocks\(image, lines, make\_copy=True\):
-> >
-> >   ![rect](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/rect_image.jpg)
-> >
+> >     ![rect](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/rect\_image.jpg)
 > > * Adjust the rectangle.
 > > * Merge the rectangle with the adjusted verticle lines to delineate the parking lines.
-> > * Count the total parking spaces.
+> > *   Count the total parking spaces.
 > >
-> >   def draw\_parking\(image, rects, make\_copy = True, color=\[255, 0, 0\], thickness=1, save = True\):
+> >     def draw\_parking(image, rects, make\_copy = True, color=\[255, 0, 0], thickness=1, save = True):
 > >
-> >   ![delineated\_image](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/delineated_image.jpg)
+> >     ![delineated\_image](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/delineated\_image.jpg)
+> > *   Assign a number to the parking spaces.
 > >
-> > * Assign a number to the parking spaces.
+> >     def assign\_spots\_map(image, spot\_dict=final\_spot\_dict, make\_copy = True, color=\[255, 0, 0], thickness=2):
 > >
-> >   def assign\_spots\_map\(image, spot\_dict=final\_spot\_dict, make\_copy = True, color=\[255, 0, 0\], thickness=2\):
-> >
-> >   ![marked\_spot\_images](https://github.com/chloerudals/DLIP_LAB4/blob/main/images/marked_spot_images.jpg)
+> >     ![marked\_spot\_images](https://github.com/chloerudals/DLIP\_LAB4/blob/main/images/marked\_spot\_images.jpg)
 
 
 
-![](../../.gitbook/assets/image%20%28325%29.png)
+![](<../../.gitbook/assets/image (325).png>)
 
 
 
-![](../../.gitbook/assets/image%20%28332%29.png)
+![](<../../.gitbook/assets/image (332).png>)
 
 
 
-![](../../.gitbook/assets/image%20%28331%29.png)
+![](<../../.gitbook/assets/image (331).png>)
 
-To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP_LAB4/blob/main/identify_parking_spots.ipynb)
+To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP\_LAB4/blob/main/identify\_parking\_spots.ipynb)
 
 #### Detect cars.
 
@@ -176,7 +179,7 @@ To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP_
 > * Firstly, find the centers of the parking space and the car.
 >   * If the distance between the centers are less than 40, the parking space is determined as occupied.
 
-```text
+```
 for *xyxy, conf, cls in reversed(det):
     bx1, by1, bx2, by2 = xyxy[0], xyxy[1], xyxy[2], xyxy[3]
     bcx, bcy = abs(bx2 + bx1) / 2, abs(by2 + by1) / 2 + 10
@@ -193,39 +196,39 @@ for *xyxy, conf, cls in reversed(det):
 
 #### Editing Parser
 
-> * Since we are using 'YOLO V5s model', we set the default for weights as 'yolov5s'. 
+> * Since we are using 'YOLO V5s model', we set the default for weights as 'yolov5s'.&#x20;
 >   * Image size is set = 608
 >   * conf-thres value = 0.3
 >   * iou-thres value = 0.4
 >   * view-img's action is set as 'store\_false' to view the image.
 >   * save-txt's action is set as 'store\_false' to save the result.
 >   * classes's default is added as 2 to only view car class.
->   * The bounding box's line-thickness is edited to 2.
+>   *   The bounding box's line-thickness is edited to 2.
 >
->        `parser.add_argument('--weights', nargs='+', type=str, default='yolov5s.pt', help='model.pt path(s)')`
+>       &#x20;`parser.add_argument('--weights', nargs='+', type=str, default='yolov5s.pt', help='model.pt path(s)')`
 >
->        `parser.add_argument('--img-size', type=int, default=608, help='inference size (pixels)')`
+>       &#x20;  `parser.add_argument('--img-size', type=int, default=608, help='inference size (pixels)')`
 >
->        `parser.add_argument('--conf-thres', type=float, default=0.3, help='object confidence threshold')` 
+>       &#x20;  `parser.add_argument('--conf-thres', type=float, default=0.3, help='object confidence threshold')`&#x20;
 >
->        `parser.add_argument('--iou-thres', type=float, default=0.4, help='IOU threshold for NMS')`
+>       &#x20;  `parser.add_argument('--iou-thres', type=float, default=0.4, help='IOU threshold for NMS')`
 >
->        `parser.add_argument('--view-img', action='store_false', help='display results')`
+>       &#x20;  `parser.add_argument('--view-img', action='store_false', help='display results')`
 >
->        `parser.add_argument('--save-txt', action='store_false', help='save results to *.txt')`
+>       &#x20;  `parser.add_argument('--save-txt', action='store_false', help='save results to *.txt')`
 >
->        `parser.add_argument('--classes', nargs='+', type=int, default=2, help='filter by class: --class 0, or --class 0 2 3')`
+>       &#x20;  `parser.add_argument('--classes', nargs='+', type=int, default=2, help='filter by class: --class 0, or --class 0 2 3')`
 >
->        `parser.add_argument('--line-thickness', default=2, type=int, help='bounding box thickness (pixels)')`
+>       &#x20;  `parser.add_argument('--line-thickness', default=2, type=int, help='bounding box thickness (pixels)')`
 
 [Demo Video](https://drive.google.com/file/d/1LPtyEVEorxBqGS-NXqe6Ns1JMTjdhgKB/view?usp=sharing)
 
 ## How to run the program
 
-1. Download [video](https://drive.google.com/file/d/170Ccn_BTxPyWlN8Trfk9KXK6ykQmQNAW/view?usp=sharing) to your _**yolov5**_ repository.
-2. Download [image](https://github.com/chloerudals/DLIP_LAB4/blob/main/Img.jpg) to your _**yolov5\data\images**_ directory.
-3. Overwrite [detect.py](https://github.com/chloerudals/DLIP_LAB4/blob/main/detect.py) to the _**yolov5**_ repository.
-4. Overwrite [datasets.py](https://github.com/chloerudals/DLIP_LAB4/blob/main/datasets.py) to your _**yolov5\utils**_ directory.
+1. Download [video](https://drive.google.com/file/d/170Ccn\_BTxPyWlN8Trfk9KXK6ykQmQNAW/view?usp=sharing) to your _**yolov5**_ repository.
+2. Download [image](https://github.com/chloerudals/DLIP\_LAB4/blob/main/Img.jpg) to your _**yolov5\data\images**_ directory.
+3. Overwrite [detect.py](https://github.com/chloerudals/DLIP\_LAB4/blob/main/detect.py) to the _**yolov5**_ repository.
+4. Overwrite [datasets.py](https://github.com/chloerudals/DLIP\_LAB4/blob/main/datasets.py) to your _**yolov5\utils**_ directory.
 
 ## Future work
 
@@ -235,5 +238,4 @@ for *xyxy, conf, cls in reversed(det):
 
 ## Reference
 
-[dudesparsh: Parking detector](https://github.com/dudesparsh/Parking_detector)
-
+[dudesparsh: Parking detector](https://github.com/dudesparsh/Parking\_detector)

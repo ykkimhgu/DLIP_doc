@@ -6,7 +6,7 @@ Keras is a deep learning API written in Python, running on top of the machine le
 
 [_Keras documentation: About Keras_](https://keras.io/about/)
 
-## Installation & compatibility <a id="installation-amp-compatibility"></a>
+## Installation & compatibility <a href="#installation-amp-compatibility" id="installation-amp-compatibility"></a>
 
 Keras comes packaged with TensorFlow 2 as `tensorflow.keras`. To start using Keras, simply [install TensorFlow 2](https://www.tensorflow.org/install).
 
@@ -15,7 +15,7 @@ Keras/TensorFlow are compatible with:
 * Python 3.5–3.8
 * Ubuntu 16.04 or later
 * Windows 7 or later
-* macOS 10.12.6 \(Sierra\) or later.
+* macOS 10.12.6 (Sierra) or later.
 
 ### Install with Anaconda
 
@@ -35,5 +35,4 @@ Keras/TensorFlow are compatible with:
 
 ## Why use Keras?
 
-{% embed url="https://keras.io/why\_keras/" caption="" %}
-
+{% embed url="https://keras.io/why_keras/" %}
