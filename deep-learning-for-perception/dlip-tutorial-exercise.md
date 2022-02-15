@@ -6,16 +6,24 @@
 
 ## Pre-requisite
 
-Read here:
+Follow Quick Tutorial:
 
+* Python Interactive Tutorial: 
 
+Read about
+
+- What is List, Tuple, Dictionary, Tensor in Python and Numpy?
+
+  ​
 
 ## Tutorial
+
 ### Python
 
 Python Tutorial: [Learning Python in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb)
 
 ### Numpy
+
 NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb)
 
 
@@ -26,7 +34,7 @@ NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-
 
 [Design an MLP for XOR problem using numpy\(Student Exercise\)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021_Student.ipynb)
 
-- [MLP XOR problem-Solution](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021.ipynb)
+- [SOLUTION - Numpy MLP XOR problem](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021.ipynb)
 
 -----
 
@@ -38,9 +46,35 @@ NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-
 
 ## Pre-requisite
 
-Follow Quick-Start Tutorial: (Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html) 
+Watch Introduction to PyTorch (20min)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IC0_FRiX-sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html) 
+
+- Run (0.QuickStart tutorial) in Colab, Finish this tutorial before class
+
+
+
+Read about
+
+* What is Tensor in Pytorch?
+
+  ​
+
+Assignment: Submit
+
+* Exercise :
+
+
 
 ## Tutorial
+
+Pytorch-Tutorial Github (recommend)
+
+https://github.com/yunjey/pytorch-tutorial
 
 ### MLP XOR problem
 
@@ -60,17 +94,13 @@ Follow Quick-Start Tutorial: (Pytorch Tutorial](https://tutorials.pytorch.kr/beg
 
 ### MLP XOR problem
 
-[Design an MLP for XOR problem using numpy\(Student Exercise\)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021_Student.ipynb)
-
-* [MLP XOR problem-Solution](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021.ipynb)
-
 [Design an MLP ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_Keras_2021.ipynb)[for XOR problem ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021_Student.ipynb)[using Keras](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_Keras_2021.ipynb)
 
 ### MLP MNIST, Fashion MNIST
 
 [Design an MLP for MNIST classification](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_MNIST_MLP_Keras_2021.ipynb)
 
-### CNN Classification
+### CNN Classification with LeNet
 
 [LeNet with CIFAR-10 using Keras](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_LeNET_Keras_2021.ipynb)
 
