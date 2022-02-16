@@ -1,4 +1,8 @@
-# Installation Guide for Deep Learning
+---
+description: Installation Guide for Deep Learning
+---
+
+# Installation Guide
 
 ## Deep Learning Installation Guide for Win10 <a href="#f126" id="f126"></a>
 
@@ -9,13 +13,13 @@ Install the following software in the order of
 1. **Nvidia GPU driver** **and Library** — To operate the GPU.
    * **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
    * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
-2. **Anaconda** — Python and libraries package installer.&#x20;
+2. **Anaconda** — Python and libraries package installer.
 3. **Python**
 4. **IDE (VS CODE)**
 5. **Framework**
    * **TensorFlow** — DL library, developed by Google.
-   * **Keras** — **** DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
-   * **PyTorch**  — Dynamic DL library with GPU acceleration.
+   * **Keras** — \*\*\*\* DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
+   * **PyTorch** — Dynamic DL library with GPU acceleration.
 6. **Other libraries**
 
 \---
@@ -24,9 +28,9 @@ Install the following software in the order of
 
 ## Installation Steps
 
-### **1.** Install  GPU library (CUDA, cuDNN)&#x20;
+### **1.** Install GPU library (CUDA, cuDNN)
 
-[How to install CUDA 10.2, cuDNN 8.0.5  ](../deep-learning-framework/cuda-installation.md#9f39)
+[How to install CUDA 10.2, cuDNN 8.0.5](cuda-installation.md#9f39)
 
 ### **2. Install Anaconda**
 
@@ -44,9 +48,9 @@ conda create -n py37tf23 python=3.7
 
 ### 4. Install IDE (Visual Studio Code)
 
-[How to Install VS Code](../deep-learning-framework/ide/vscode/#installation)
+[How to Install VS Code](ide/vscode/#installation)
 
-### 5-1. Install  Framework\_1 (Tensorflow and Keras)
+### 5-1. Install Framework\_1 (Tensorflow and Keras)
 
 Run 'Anaconda Prompt' > activate virtual environment > install tensorflow-gpu 2.3.0 packages > install keras
 
@@ -56,13 +60,8 @@ Run 'Anaconda Prompt' > activate virtual environment > install tensorflow-gpu 2.
 >>conda install keras
 ```
 
-### 5-2. Install  Framework\_2 (Pytorch)
+### 5-2. Install Framework\_2 (Pytorch)
 
 ### 6. Installing other DL libraries
 
-
-
 ##
-
-
-
