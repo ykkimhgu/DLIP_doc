@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Image Processing Basics <a id="image-processing"></a>
+## Image Processing Basics <a href="#image-processing" id="image-processing"></a>
 
 * [Tutorial](image-processing/tutorial/README.md)
   * [LAB: Straight Lane Detection and Departure Warning](image-processing/tutorial/lab-straight-lane-detection-and-departure-warning.md)
@@ -16,8 +16,12 @@
 
 ## Deep Learning for Perception
 
-* [DLIP Tutorial Exercise](deep-learning-for-perception/dlip-tutorial-exercise/README.md)
-  * [Tutorial:  Yolov3 in Keras](deep-learning-for-perception/dlip-tutorial-exercise/tutorial-yolov3-in-keras.md)
+* [Tutorial](deep-learning-for-perception/dp-tutorial/README.md)
+  * [Tutorial: Python Numpy](deep-learning-for-perception/dp-tutorial/tutorial-python-numpy.md)
+  * [Tutorial: PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
+  * [Tutorial: Keras](deep-learning-for-perception/dp-tutorial/tutorial-keras.md)
+  * [Tutorial: Yolov3 in Keras](deep-learning-for-perception/dp-tutorial/tutorial-yolov3-in-keras.md)
+  * [Tutorial: Yolov5 in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch.md)
 * [Notes](deep-learning-for-perception/notes/README.md)
   * [Lane Detection with Deep Learning](deep-learning-for-perception/notes/lane-detection-with-deep-learning.md)
   * [Overview of Deep Learning](deep-learning-for-perception/notes/overview-of-deep-learning/README.md)
@@ -57,7 +61,7 @@
   * [VGG Tutorial](deep-learning-for-perception/tutorial/vgg.md)
   * [ResNet Tutorial](deep-learning-for-perception/tutorial/resnet-tutorial.md)
 * [Resource](deep-learning-for-perception/resource/README.md)
-  * [Online Lecture](deep-learning-for-perception/resource/dl_courses.md)
+  * [Online Lecture](deep-learning-for-perception/resource/dl\_courses.md)
   * [Books](deep-learning-for-perception/resource/books.md)
   * [Hardware](deep-learning-for-perception/resource/hardware.md)
   * [Dataset](deep-learning-for-perception/resource/dataset.md)
@@ -74,7 +78,7 @@
   * [Vehicle, Pedestrian Detection with IR Image](deep-learning-for-perception/dlip-projects/vehicle-pedestrian-detection-with-ir-image.md)
   * [Drum Playing Detection](deep-learning-for-perception/dlip-projects/drum-playing-detection.md)
 
-## Framework and IDE <a id="deep-learning-framework"></a>
+## Framework and IDE <a href="#deep-learning-framework" id="deep-learning-framework"></a>
 
 * [CUDA cuDNN](deep-learning-framework/cuda-installation.md)
 * [Framework](deep-learning-framework/framework/README.md)
@@ -82,8 +86,8 @@
     * [Cheat Sheet](deep-learning-framework/framework/keras/cheatsheet-keras.md)
     * [Tutorial Keras](deep-learning-framework/framework/keras/tutorial-keras.md)
   * [TensorFlow](deep-learning-framework/framework/tensorflow/README.md)
-    * [Cheat Sheet](deep-learning-framework/framework/tensorflow/install_tf-1.md)
-    * [Tutorial](deep-learning-framework/framework/tensorflow/install_tf-2.md)
+    * [Cheat Sheet](deep-learning-framework/framework/tensorflow/install\_tf-1.md)
+    * [Tutorial](deep-learning-framework/framework/tensorflow/install\_tf-2.md)
   * [PyTorch](deep-learning-framework/framework/pytorch/README.md)
     * [Cheat Sheet](deep-learning-framework/framework/pytorch/cheatsheet-py.md)
     * [Tutorial](deep-learning-framework/framework/pytorch/tutorial-torch/README.md)
@@ -114,7 +118,7 @@
   * [Tips](programming/python/tips.md)
 * [OpenCV](programming/opencv/README.md)
   * [Install and Setup](programming/opencv/opencv-install/README.md)
-    * [OpenCV3.4.7  VS2017](programming/opencv/opencv-install/opencv3.4.7-vs2017.md)
+    * [OpenCV3.4.7 VS2017](programming/opencv/opencv-install/opencv3.4.7-vs2017.md)
   * [Tutorial](programming/opencv/tutorial.md)
   * [Python OpenCV](programming/opencv/python-opencv.md)
   * [MATLAB-OpenCV](programming/opencv/matlab-opencv.md)
@@ -135,4 +139,3 @@
 
 * [Useful Resources](resources/useful-resources.md)
 * [Github](https://github.com/ykkimhgu)
-

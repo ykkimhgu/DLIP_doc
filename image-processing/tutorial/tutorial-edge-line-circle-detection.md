@@ -4,7 +4,7 @@
 
 ## **I. Introduction**
 
-In this tutorial, you will learn how to use OpenCV to detect edges, lines, and circles. For an application, you will learn how to find straight lanes using Canny edge detection and Hough transformation algorithms. &#x20;
+In this tutorial, you will learn how to use OpenCV to detect edges, lines, and circles. For an application, you will learn how to find straight lanes using Canny edge detection and Hough transformation algorithms.
 
 ## **II. Tutorial**
 
@@ -32,10 +32,9 @@ C++: void Canny(InputArray image, OutputArray edges, double threshold1, double t
 ·         apertureSize – aperture size for the Sobel() operator.
 ·         L2gradient – a flag, indicating whether a more accurate  L2 norm   should be used to calculate the image gradient magnitude ( L2gradient=true ), or whether the default L1 norm  is enough ( L2gradient=false ).
 
-
 ```
 
-* &#x20;Declare and define variables:
+* Declare and define variables:
 
 ```cpp
   Mat src, src_gray;
@@ -47,10 +46,9 @@ C++: void Canny(InputArray image, OutputArray edges, double threshold1, double t
   int ratio = 3;  // a ratio of lower:upper
   int kernel_size = 3; //Sobel Operation
 String window_name = "Edge Map";
-
 ```
 
-* &#x20;Loads the source image:
+* Loads the source image:
 
 ```cpp
 /// Load an image
@@ -84,7 +82,7 @@ createTrackbar( "Min Threshold:", window_name, &lowThreshold, max_lowThreshold, 
 blur( src_gray, detected_edges, Size(3,3) );
 ```
 
-* &#x20;Second, we apply the OpenCV function [Canny](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=canny#canny):
+* Second, we apply the OpenCV function [Canny](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=canny#canny):
 
 ```cpp
 Canny( detected_edges, detected_edges, lowThreshold, lowThreshold*ratio, kernel_size );
@@ -107,14 +105,10 @@ imshow( window_name, dst );
 
 In OpenCV, there are two kinds of Hough Lıne Transform
 
-*   The Standard Hough Transform ([ HoughLines( )](https://docs.opencv.org/3.4.13/dd/d1a/group\_\_imgproc\_\_feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a) ) ****&#x20;
-
-    * It gives you the results of(θ, rθ)
-
-
-* The Probabilistic Hough Line Transform ( [ HoughLinesP](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=houghlinesp#houghlinesp)()  )
-  * A more efficient implementation of the Hough Line Transform. It gives as output of extremes(end) points of the detected lines (x0, y0, x1, y1)\
-
+* The Standard Hough Transform ([ HoughLines( )](https://docs.opencv.org/3.4.13/dd/d1a/group\_\_imgproc\_\_feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a) ) \*\*\*\*
+  * It gives you the results of(θ, rθ)
+* The Probabilistic Hough Line Transform ( [HoughLinesP](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=houghlinesp#houghlinesp)() )
+  * A more efficient implementation of the Hough Line Transform. It gives as output of extremes(end) points of the detected lines (x0, y0, x1, y1)\\
 
 ```cpp
 void HoughLines(InputArray image, OutputArray lines, double rho, double theta, int threshold, double srn=0, double stn=0 )
@@ -135,10 +129,9 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 ·         minLineLength – Minimum line length. Line segments shorter than that are rejected.
 ·         maxLineGap – Maximum allowed gap between points on the same line to link them.
 */
-
 ```
 
-* &#x20;Load an image
+* Load an image
 
 ```cpp
 // Loads an image
@@ -156,24 +149,23 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 
 ![](<../../.gitbook/assets/image (84).png>)
 
-* &#x20;Detect the edges using Canny detector
+* Detect the edges using Canny detector
 
 ```cpp
 	// Edge detection
 	Canny(src, dst, 50, 200, 3);
 ```
 
-*   &#x20;Copy edges to the images that will display the results in BGR
+*   Copy edges to the images that will display the results in BGR
 
     ```cpp
     	// Copy edge results to the images that will display the results in BGR
     	cvtColor(dst, cdst, COLOR_GRAY2BGR);
     	cdstP = cdst.clone();
     ```
-* &#x20; (Option 1) Standard Hough Line Transform
+* (Option 1) Standard Hough Line Transform
   * First, apply the Hough Transform. Then display the results by drawing the lines.
-  * Output vector of lines. Each line is represented by a 2 or 3 element vector (ρ,θ) or (ρ,θ,votes) . ρ is the distance from the coordinate origin (0,0) (top-left corner of the image). θ is the line rotation angle in radians ( 0∼vertical line,π/2∼horizontal line ). votes is the value of accumulator.\
-
+  * Output vector of lines. Each line is represented by a 2 or 3 element vector (ρ,θ) or (ρ,θ,votes) . ρ is the distance from the coordinate origin (0,0) (top-left corner of the image). θ is the line rotation angle in radians ( 0∼vertical line,π/2∼horizontal line ). votes is the value of accumulator.\\
 
 ```cpp
 	// (Option 1) Standard Hough Line Transform
@@ -198,8 +190,6 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 ```
 
 ![](<../../.gitbook/assets/image (91).png>)
-
-
 
 * (Option 2) Probabilistic Hough Line Transform
   * Lines (HoughLinesP) Output vector of lines. Each line is represented by a 4-element vector (x1,y1,x2,y2), where (x1,y1) and (x2,y2) are the ending points of each detected line segment.
