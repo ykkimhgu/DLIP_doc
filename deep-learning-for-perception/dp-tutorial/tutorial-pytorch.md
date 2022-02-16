@@ -21,14 +21,12 @@ Search for
 
 ## Tutorial
 
-Pytorch-Tutorial Github (recommend)
 
-https://github.com/yunjey/pytorch-tutorial
 
 ### MLP 
 
-- T1-1: Train a simple MLP (MNIST)
-- T1-2: Test with loading trained model
+- T1-1: [Train a simple MLP (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PyTorch_MNIST_MLP_Part1_Train.ipynb)
+- T1-2: [Test with loading trained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PyTorch_MNIST_MLP_Part2_Test.ipynb)
 
 ### CNN- Classification
 
@@ -54,6 +52,16 @@ YOLO v5 in PyTorch
 ## 
 
 ## Exercise
+
+
+
+
+
+## Useful Site
+
+Pytorch-Tutorial Github (recommend)
+
+https://github.com/yunjey/pytorch-tutorial
 
 
 
