@@ -10,10 +10,13 @@
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
   * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 * [Tutorial](image-processing/tutorial/README.md)
-  * [LAB: Straight Lane Detection and Departure Warning](image-processing/tutorial/lab-straight-lane-detection-and-departure-warning.md)
-  * [LAB: Facial Temperature Measurement with IR images](image-processing/tutorial/lab-facial-temperature-measurement-with-ir-images.md)
+  * [Tutorial: Spatial Filter](image-processing/tutorial/tutorial-spatial-filter.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
+  * [Tutorial: Color Image Processing](image-processing/tutorial/tutorial-color-image-processing.md)
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
+  * [Tutorial: OpenCv Python](image-processing/tutorial/tutorial-opencv-python.md)
+  * [LAB: Facial Temperature Measurement with IR images](image-processing/tutorial/lab-facial-temperature-measurement-with-ir-images.md)
+  * [LAB: Straight Lane Detection and Departure Warning](image-processing/tutorial/lab-straight-lane-detection-and-departure-warning.md)
 
 ## Deep Learning for Perception
 
