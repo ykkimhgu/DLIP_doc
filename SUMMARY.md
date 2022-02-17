@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Prerequisite](prerequisite.md)
 
 ## Image Processing Basics <a href="#image-processing" id="image-processing"></a>
 
