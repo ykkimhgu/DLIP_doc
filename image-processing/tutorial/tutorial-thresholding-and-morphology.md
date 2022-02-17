@@ -193,7 +193,8 @@ Copy all the result images for Example 1~4 and compare them in a report.  Show t
 
 First, read the OpenCV documentation.
 
-{% embed url="https://docs.opencv.org/3.4.17/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f" %}
+* [morphologyEx()](https://docs.opencv.org/3.4.17/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
+* [erode()](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
 
 
 
