@@ -48,36 +48,52 @@ Search for
 
 **Create simple CNN model** 
 
-- T2-1: Create LeNeT CNN model and Train with openddataset (CIFAR10, Fashin MNIST)
+- T2-1: Create LeNeT CNN model and Train with openddataset (CIFAR10, Fashion MNIST)
 
 - T2-2: Test with loading trained model
 
+- T2-3: Create and Train a CNN model(VGG-16) with opendataset
+
   
 
-  Exercise T2-3: Train with Custom dataset (LeNet CNN)
+**Load torchvision.model** 
 
-
-
-Use torchvision.model (VGG16, ResNet etc)
-
-- T3-1: Test using Pretrained Model with ImagetNet data
+- T3-1: Test using Pretrained Model  (VGG, Inception, ResNet)
 - T3-2: Train torchvision model with OpenDataset(CIFAR10)
-- T3-3: Train torchvision model with Custom Dataset(?)
+- T3-3: Prepare  Custom Dataset for training
 
 
 
-T2-3: Train with Custom dataset (LeNet CNN)
+### LAB: Classification
 
-### CNN- Object Detection(JAN)
+Create a CNN model(VGG-19) and Train with Custom Dataset
 
-YOLO v5 in PyTorch
+ 
 
-- T4-1: Test using Pretrained YOLOv5 with COCO dataset
-- T4-2: Train YOLOv5 with with Custom Dataset
+참고:  https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_VGG_Keras_2021.ipynb
 
-## 
 
-## Exercise
+
+
+
+
+
+### CNN- Object Detection
+
+**Test Object Detection model provided in pytorch** 
+
+* T4-1: Test using Pretrained YOLOv5 with COCO dataset
+
+**YOLO v5 in PyTorch**
+
+- T4-2: Test using Pretrained YOLOv5 with COCO dataset
+- T4-3: Train YOLOv5 with with Custom Dataset
+
+
+
+## LAB: Detection 
+
+
 
 
 
