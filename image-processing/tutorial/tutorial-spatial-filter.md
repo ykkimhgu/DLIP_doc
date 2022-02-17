@@ -288,7 +288,7 @@ result_laplcaian.convertTo(result_laplcaian, CV_8U);
 
 
 
-# Exercise 
+# III. Exercise 
 
 ## Exercise 1
 
