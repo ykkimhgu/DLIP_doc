@@ -1,39 +1,47 @@
 # Tutorial: PyTorch
 
-# Pytorch
 
-## Pre-requisite
 
-Install PyTorch for Cuda 10.2 
+# PyTorch
 
-Run the command in Anaconda Prompt(administrator mode) Python 3.7 Environment
+
+
+## Installation
+
+1. Install PyTorch for Cuda 10.2 
+
+   Run the command in Anaconda Prompt(administrator mode) Python 3.7 Environment[See here for more detail](https://ykkim.gitbook.io/dlip/dlip-installation-guide/framework/pytorch)
 
 ```
 conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 ```
 
-See here for more detail(https://ykkim.gitbook.io/dlip/dlip-installation-guide/framework/pytorch)
 
 
-
-Watch [Introduction to PyTorch (20min)](https://youtu.be/IC0_FRiX-sw)
+2. Also, watch [Introduction to PyTorch (20min)](https://youtu.be/IC0_FRiX-sw)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IC0_FRiX-sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
 
-- Run (0.QuickStart tutorial) in Colab
+
+3. Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
+
 - Finish this tutorial before class
 
-Search for
+
+
+4. Read more about 
 
 - What is Tensor in Pytorch?
 
   
 
+
+
+# Class Tutorial
+
+
 ## Tutorial
-
-
 
 ### MLP 
 
@@ -41,8 +49,6 @@ Search for
 - T1-2: [Test with loading trained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PyTorch_MNIST_MLP_Part2_Test.ipynb)
 
 
-
-</br>
 
 ### CNN- Classification
 
@@ -54,27 +60,12 @@ Search for
 
 - T2-3: Create and Train a CNN model(VGG-16) with opendataset
 
-  
 
 **Load torchvision.model** 
 
 - T3-1: Test using Pretrained Model  (VGG, Inception, ResNet)
 - T3-2: Train torchvision model with OpenDataset(CIFAR10)
 - T3-3: Prepare  Custom Dataset for training
-
-
-
-### LAB: Classification
-
-Create a CNN model(VGG-19) and Train with Custom Dataset
-
- 
-
-참고:  https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_VGG_Keras_2021.ipynb
-
-
-
-
 
 
 
@@ -91,9 +82,17 @@ Create a CNN model(VGG-19) and Train with Custom Dataset
 
 
 
-## LAB: Detection 
+## LAB
+### LAB: Classification
+
+Create a CNN model(VGG-19) and Train with Custom Dataset
+
+참고:  https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_VGG_Keras_2021.ipynb
 
 
+### LAB: Object Detection 
+
+You should design an object detection problem related to your interested area.  For the dataset, you can search kaggle.com or any other open dataset sites.
 
 
 
@@ -101,9 +100,7 @@ Create a CNN model(VGG-19) and Train with Custom Dataset
 
 ## Useful Site
 
-Pytorch-Tutorial Github (recommend)
-
-https://github.com/yunjey/pytorch-tutorial
+[Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)
 
 
 
