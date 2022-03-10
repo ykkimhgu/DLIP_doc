@@ -17,25 +17,32 @@ The correlation of spatial filtering by kernel w(s,t) on the image f(x,y) to obt
 
 
 
-## Design Convolution for Spatial Filter 
+## Convolution for Spatial Filter 
 
 We will learn how the filter convolution works by programming in MATLAB. 
 
 Then, we will learn how to use filter functions in OpenCV. 
 
-Download  the example code and test images. 
+
+
+**Exercise**
+
+1) Download  the example code and test images. 
+
 * [source code: Matlab filter tutorial](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/Lab_filter_tutorial_student.m) 
 *  [test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_test_images.zip)
 
 
 
-Write a simple program that applies a filter mask w(s,t) to image f(x,y) to result the output image g(x,y). 
+2) Write a simple program that applies a filter mask w(s,t) to image f(x,y) to result the output image g(x,y). 
 
 > Note that the index of an array in a program starts from ‘0’ (C/C++) or ‘1 (MATLAB)
+>
+> You need to increase the size of the source image around the border by applying zero padding. 
 
 
 
-You need to increase the size of the source image around the border by applying zero padding. Depending on the type of the filter mask w(s,t), you can obtain smoothing or sharpening filter.
+Depending on the type of the filter mask w(s,t), you can obtain smoothing or sharpening filter.
 
 
 
@@ -115,21 +122,9 @@ https://docs.opencv.org/3.4/dc/dd3/tutorial_gausian_median_blur_bilateral_filter
 
   
 
-#### Sample code
-
-[Example code: Filter_demo_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo_student.cpp)
-
-
-
-### Example  1-1.   Normalized Block Filter
+### Example  1.   Normalized Block Filter
 
 In this tutorial you will learn how to apply diverse linear filters to smooth images using OpenCV functions such as: blur, GaussianBlur, medianBlur
-
-
-
-Download  the example code and test images. 
-
-* [Example code: Filter_demo_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo_student.cpp)
 
 
 
@@ -156,12 +151,8 @@ OpenCV offers the function `filter2D()` for Filter Kernel Convolution.
 ```c++
 C++: void filter2D(InputArray src, OutputArray dst, int ddepth, InputArray kernel, Point anchor=Point(-1,-1), double delta=0, int borderType=BORDER_DEFAULT )
 
-filter2D(src, dst, ddepth , kernel, anchor, delta, BORDER_DEFAULT );
+filter2D(src, dst, ddepth , kernel, anchor);
 ```
-
-
-
-Design a normalized box filter kernel 5 by 5 
 
 
 
@@ -195,8 +186,6 @@ blur = cv.GaussianBlur(img,(5,5),0)
 * sigmaY=The standard deviation in y. Writing 0 implies that   is calculated using kernel
 
   
-
-Apply Gaussian filter in the code
 
 
 
@@ -290,17 +279,30 @@ result_laplcaian.convertTo(result_laplcaian, CV_8U);
 
 # III. Exercise 
 
-## Exercise 1
+## Exercise  1
 
-In the provided sample code, apply the following filters to all test images.  Choose appropriate filter to each image and explain why.
+
+
+Download  the example code and test images. 
+
+* [Example code: Filter_demo_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo_student.cpp)
+* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_test_images.zip)
+
+
+
+In the provided sample code, apply the following filters to all test images.  
+
+Choose appropriate filter to each image and explain why.
 
 - blur()
 - GaussianBlur()
 - medianBlur()
-- filter2D()
+- filter2D()  :  Design a normalized box filter kernel 5 by 5 
 - Laplacian()
 
-Show the result images to TA before finishing this tutorial.
+
+
+Show the result images to TA 
 
 
 
@@ -310,24 +312,29 @@ Create a camera(webcam) application that has filtering function.
 
 Download the exercise code
 
-* [Example code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo_webcam.cpp)
+* [Example code: Webcam Filter Demo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo_webcam.cpp)
 
 
 
-You should make a key input menu to let the user choose the type and size of the filter.
+You should make a keyboard input menu to let the user choose the type and size of the filter.
 
 *  Filter options: Gaussian, Laplacian(3x3), Median, others.. 
-
+*  Example:  'B' for blur with Gaussian,  'L' for Laplacian,  'M' for Median
 *  Let the user also select the size of Gaussian Filter(bluriness) 
+   *  Example:  As  'UP' key is pressed,   filter kernel_size is increased  from 3, 5, 7, 9 , ....
 
 
 
-Show the result images to TA before finishing this tutorial.
+Show the result images to TA. 
 
 
 
 # Resource
 
+An example code of Spatial Filter with OpenCV-C++
+
+* [Example code: Spatial filter demo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/filter_demo.cpp)
+
 An example code of Spatial Filter with OpenCV-Python
 
-[Click this link to run the code](https://colab.research.google.com/drive/1jOlEL4SQGSfeuTDN9tzttptC14n8Y62f#scrollTo=E2imMQU6CIFj)
+* [Example code: Spatial filter Python demo](https://colab.research.google.com/drive/1jOlEL4SQGSfeuTDN9tzttptC14n8Y62f#scrollTo=E2imMQU6CIFj)
