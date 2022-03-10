@@ -4,7 +4,12 @@ Deep Learning Image Processing.
 
 Updated. 2022.2
 
+PDF version: [click here to download](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Filter/tutorial-spatial-filter.pdf)
+
+
+
 # I. Introduction
+
 In this tutorial, you will learn how to design various spatial filters in OpenCV. You will learn which filters to apply for gaussian and impulse noises and how to combine various filters to enhance the noisy corupted images. Also, you are required to create a camera application which allows the user select the type and size of the image filter.
 
 The correlation of spatial filtering by kernel w(s,t) on the image f(x,y) to obtain the output image g(x,y) is represented as 
