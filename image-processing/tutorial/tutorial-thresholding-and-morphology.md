@@ -89,8 +89,8 @@ plt.show()
 
 Download  the example code and test images. 
 
-* [source code_1: Manual Threshold](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/threshold_demo.cpp)
-* [source code_2: Threshold with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/threshold_trackbar.cpp)
+* [source code_1: Manual Threshold](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Threshold_demo.cpp)
+* [source code_2: Threshold with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_ThresholdMorph_trackbar.cpp)
 * [test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
 
@@ -235,7 +235,7 @@ erosion = cv.erode(img,kernel,iterations = 1)
 
 Download  the example code  
 
-* [source code_: Morphology with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/threshold_trackbar.cpp)
+* [source code_: Morphology with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_ThresholdMorph_trackbar.cpp)
 
 
 
