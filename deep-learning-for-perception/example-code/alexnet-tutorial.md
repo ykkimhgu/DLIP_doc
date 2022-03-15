@@ -1,14 +1,14 @@
 # AlexNet Tutorial
 
-![](../../.gitbook/assets/image%20%28239%29.png)
+![](<../../images/image (239).png>)
 
-![](../../.gitbook/assets/image%20%28236%29.png)
+![](<../../images/image (236).png>)
 
 ## Pytorch
 
 ### Building from Scratch
 
-[Buiding AlexNet as in the original network. AlexNet Class source code ](https://gist.githubusercontent.com/quanhua92/98959ac7e407b2c3e4ef7fa192ac6954/raw/c0a870200ee33a3b99dda9d20b5ee9f65d59bd6b/alexnet_lrn.py)
+[Buiding AlexNet as in the original network. AlexNet Class source code](https://gist.githubusercontent.com/quanhua92/98959ac7e407b2c3e4ef7fa192ac6954/raw/c0a870200ee33a3b99dda9d20b5ee9f65d59bd6b/alexnet\_lrn.py)
 
 ```python
 class AlexNet(nn.Module):
@@ -51,7 +51,7 @@ class AlexNet(nn.Module):
 
 ### Pretrained model: Pytorch
 
-[Run pretrained code: pytorch.org ](https://pytorch.org/hub/pytorch_vision_alexnet/)
+[Run pretrained code: pytorch.org](https://pytorch.org/hub/pytorch\_vision\_alexnet/)
 
 All pre-trained models expect input images normalized in the same way, i.e. mini-batches of 3-channel RGB images of shape `(3 x H x W)`, where `H` and `W` are expected to be at least `224`. The images have to be loaded in to a range of `[0, 1]` and then normalized using `mean = [0.485, 0.456, 0.406]` and `std = [0.229, 0.224, 0.225]`.
 
@@ -108,7 +108,7 @@ print(torch.nn.functional.softmax(output[0], dim=0))
 
 [Read this post for detail](https://towardsdatascience.com/implementing-alexnet-cnn-architecture-using-tensorflow-2-0-and-keras-2113e090ad98).
 
-[My Colab source code](https://colab.research.google.com/drive/1BjozVZ_ppmB66lnwEcVN5gqB3L61CJeX#scrollTo=kN38jAKBZ4-t)
+[My Colab source code](https://colab.research.google.com/drive/1BjozVZ\_ppmB66lnwEcVN5gqB3L61CJeX#scrollTo=kN38jAKBZ4-t)
 
 ```python
 model = keras.Sequential()
@@ -174,4 +174,3 @@ model.summary()
 ```
 
 ### Pretrained Model: Keras
-

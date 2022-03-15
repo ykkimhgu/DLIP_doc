@@ -6,7 +6,7 @@
 
 As computer vision technology develops, it is affecting many parts of industrial areas and our daily life. In addition, by applying deep learning, numerous possibilities for utilizing such computer vision were presented. In this document, we will learn how to detect playing of drums using Python-based YOLO v5.
 
-![](<../../.gitbook/assets/0 (2).png>)
+![](<../../.gitbook/assets/11 (2).png>)
 
 Figure1. Results detecting of drum components, LR hands, LR sticks
 
@@ -22,7 +22,7 @@ First of all, you have to installation of YOLOv5. From [https://github.com/ultra
 
 **Data gathering and preparation.**
 
-&#x20;Before you get started training and detecting, you have to label each image. Download the dark label program from this link. [https://darkpgmr.tistory.com/16](https://darkpgmr.tistory.com/16)
+Before you get started training and detecting, you have to label each image. Download the dark label program from this link. [https://darkpgmr.tistory.com/16](https://darkpgmr.tistory.com/16)
 
 ![Figure2. Dark label setting](<../../.gitbook/assets/image (326).png>)
 
@@ -32,31 +32,29 @@ First of all, you have to installation of YOLOv5. From [https://github.com/ultra
 4. Labeling class of COCO dataset. This is the important part of data gathering and preparation. There are 80 classes of COCO dataset, but we will manipulate the classes arbitrarily and label them so that each can detect the drum components and both hands. Number 0 - 13 COCO dataset classes : \[‘person’, ‘bicycle’, ‘car’, ‘motorcycle’, ‘airplane’, ‘bus’, ‘train’, ‘truck’, ‘boat’, ‘traffic light’, ‘fire hydrant’, ‘stop sign’, ‘parking meter’] -> 13 COCO based custom dataset classes : \[‘hihat’, ‘snare’, ‘tom1’, ‘cymbal\_L’, ‘tom2’, ‘floor\_tom’, ‘cymbal\_R’, ‘bass’, ‘bass pedal’, ‘left stick’, ‘left hand’, ‘right stick’, ‘right hand’]
 5. Set ‘Box + label’
 
+After setting the parameter, you can label the image like Figure3.
 
+!\[텍스트이(가) 표시된 사진
 
-&#x20;After setting the parameter, you can label the image like Figure3.
-
-![텍스트이(가) 표시된 사진
-
-자동 생성된 설명](../../.gitbook/assets/2.png)
+자동 생성된 설명]\(../../.gitbook/assets/2.png)
 
 Figure3. Example of labeled image
 
-&#x20;The larger the dataset, the better, but there is a risk of overfitting, so 500\~1000 images are appropriate. The recommended images are the drumming image of the top view and the bass part. After finishing labeling, you can get two folder of images and labels. Put it in one folder and set directory as YOLOv5 installed folder and change folder name as images / labels.
+The larger the dataset, the better, but there is a risk of overfitting, so 500\~1000 images are appropriate. The recommended images are the drumming image of the top view and the bass part. After finishing labeling, you can get two folder of images and labels. Put it in one folder and set directory as YOLOv5 installed folder and change folder name as images / labels.
 
 **Model training.**
 
 After data gathering and preparation, you will have 500\~1000 images labeled with yolov5. Now you’re ready for training. Through the anaconda prompt, you can set up a virtual development environment and run yolov5 in that environment. First, set the directory to YOLOv5 folder, and then activate the virtual environment. Command is ‘conda activate name’ and in my case, name is yolov5. Finally ‘code .’ this command will load directory .py files to VS code.
 
-![텍스트이(가) 표시된 사진
+!\[텍스트이(가) 표시된 사진
 
-자동 생성된 설명](../../.gitbook/assets/3.png)
+자동 생성된 설명]\(../../.gitbook/assets/3.png)
 
 Figure4. Anaconda prompt console
 
-![텍스트, 점수판, 스크린샷이(가) 표시된 사진
+!\[텍스트, 점수판, 스크린샷이(가) 표시된 사진
 
-자동 생성된 설명](../../.gitbook/assets/4.png)
+자동 생성된 설명]\(../../.gitbook/assets/4.png)
 
 You can now manage and view project’s codes, files, and folders through VS code. After entering the path as shown in Figure 5, open the coco.yaml file. The yaml file containing important information in training that informs classes and the path of images, labels. As mentioned earlier, since labeling is based on the COCO dataset, training on the custom dataset is possible by editing this yaml file.
 
@@ -64,23 +62,21 @@ Figure5. Directory of yaml file
 
 If you see Figure 6, it is the state that appears when you open the initial coco.yaml file. Based on this, modify and save as shown in Figure 7. Convert the class to 13, set the labeled image and label directory, and save it again.
 
-![텍스트이(가) 표시된 사진
+!\[텍스트이(가) 표시된 사진
 
-자동 생성된 설명](../../.gitbook/assets/5.png)
+자동 생성된 설명]\(../../.gitbook/assets/5.png)
 
 Figure6. coco.yaml file
 
-![텍스트이(가) 표시된 사진
+!\[텍스트이(가) 표시된 사진
 
-자동 생성된 설명](<../../.gitbook/assets/6 (1).png>)
+자동 생성된 설명]\(<../../.gitbook/assets/6 (1).png>)
 
 Figure7. Modified coco.yaml file
 
-&#x20;At this stage, you are now ready to start training. As you can see in Figure 8 through VS code, you just need to set the parameters for training. Here, issues arise depending on CPU, GPU, and computing power, respectively, and configuration parameters need to be modified. Let’s see command more detail. First, through –data, you need to set directory for coco.yaml which we modified before. Next, you need to set the model of YOLOv5 as --cfg, and you can choose between 4 types: s, m, l, and x. From s to x, there is a trade-off relationship that increases in weight but increases in performance, which is also related to the aforementioned computing power. If your computer's performance is sufficient, YOLOv5l model is enough. Also batch size is related to this issues. If there is insufficient for GPU and CPU, an error of 'out of memory' will occur, and you will need to find the batch size for training by reducing the batch size by /2. An epoch iteration is appropriate of 40-50, too little will cause under-training issues, and too many will cause over-training issues.
+At this stage, you are now ready to start training. As you can see in Figure 8 through VS code, you just need to set the parameters for training. Here, issues arise depending on CPU, GPU, and computing power, respectively, and configuration parameters need to be modified. Let’s see command more detail. First, through –data, you need to set directory for coco.yaml which we modified before. Next, you need to set the model of YOLOv5 as --cfg, and you can choose between 4 types: s, m, l, and x. From s to x, there is a trade-off relationship that increases in weight but increases in performance, which is also related to the aforementioned computing power. If your computer's performance is sufficient, YOLOv5l model is enough. Also batch size is related to this issues. If there is insufficient for GPU and CPU, an error of 'out of memory' will occur, and you will need to find the batch size for training by reducing the batch size by /2. An epoch iteration is appropriate of 40-50, too little will cause under-training issues, and too many will cause over-training issues.
 
 ![Figure8. Training Parameter](<../../.gitbook/assets/7 (2).png>)
-
-
 
 When training is performed by selecting an appropriate model and batch size, the status shown in figure9 can be viewed through the console window. Through this, you can know the training time and progress.
 
@@ -92,7 +88,7 @@ After finishing training, from directory \runs\train\’ Name set via --name’\
 
 ### **Detecting**
 
-&#x20;In this step, by using the weight file trained in the previous step, you can detect the drum playing from the video. However, due to the limitations of the algorithm for detecting drumming, only the drum image with the top view and the bass separately is valid. When the video is ready, detection can be performed through the command in Figure 10 below.
+In this step, by using the weight file trained in the previous step, you can detect the drum playing from the video. However, due to the limitations of the algorithm for detecting drumming, only the drum image with the top view and the bass separately is valid. When the video is ready, detection can be performed through the command in Figure 10 below.
 
 ![](<../../.gitbook/assets/9 (2).png>)
 
@@ -104,15 +100,15 @@ Figure10. Detecting command
 
 Figure11. Detecting without algorithm
 
-![](<../../.gitbook/assets/11 (2).png>)
+![](<../../.gitbook/assets/0 (2).png>)
 
 Figure12. Detecting without algorithm
 
 If detection is performed using the attached detect.py file, the result shown in Figure 12 can be obtained. For each drum component, an algorithm to set the hit point, the range at which the stick directly strikes the drum component, and an algorithm to estimate the drumstick have been added.
 
-![텍스트이(가) 표시된 사진
+!\[텍스트이(가) 표시된 사진
 
-자동 생성된 설명](<../../.gitbook/assets/12 (2).png>)![](<../../.gitbook/assets/13 (2).png>)![](<../../.gitbook/assets/14 (2).png>)
+자동 생성된 설명]\(<../../.gitbook/assets/12 (2).png>)![](<../../.gitbook/assets/13 (2).png>)![](<../../.gitbook/assets/14 (2).png>)
 
 Figure13. Hit check
 
@@ -122,9 +118,9 @@ Additionally, an algorithm has been added to ensure that the stick hits the drum
 
 In this part, evaluation is done to training and detection performance in various models. In the case of training, evaluation was conducted based on the video used to determine whether the drum component was accurately captured for each frame. In the case of detection, accuracy, recall, and precision will be verified to verify that the drum is struck accurately when the drum is struck, and the latency was also evaluated by calculating the interval between when the drum was struck accurately and the drum struck was estimated through detection. When frames were extracted from the 46-second video used for detecting, 2761 frames were obtained. 60 images per second, that is, each image has an interval of about 0.0167s. This allows to calculate the latency. As shown in Fig. 14, the detection evaluation was done within 4 bars. The latency calculation was done only for the true positive case.
 
-![텍스트, 안테나이(가) 표시된 사진
+!\[텍스트, 안테나이(가) 표시된 사진
 
-자동 생성된 설명](<../../.gitbook/assets/15 (2).png>)
+자동 생성된 설명]\(<../../.gitbook/assets/15 (2).png>)
 
 Figure14. Evaluation bar
 

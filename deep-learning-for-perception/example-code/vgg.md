@@ -2,19 +2,19 @@
 
 ## Introduction
 
-[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556) \(ICLR 2015\)
+[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556) (ICLR 2015)
 
 Read about VGG: click here
 
 ### VGG-16
 
-![](../../.gitbook/assets/image%20%28224%29.png)
+![](<../../images/image (224).png>)
 
-![](../../.gitbook/assets/image%20%28238%29%20%281%29%20%281%29%20%281%29.png)
+![](<../../images/image (233).png>)
 
 ### VGG-19
 
-![](../../.gitbook/assets/image%20%28235%29%20%281%29.png)
+![](<../../images/image (232).png>)
 
 ## Keras
 
@@ -54,11 +54,11 @@ display(idx, score)
 
 ### Building from scratch
 
-[VGG-16: My Keras code](https://colab.research.google.com/drive/1TUI3WX639yajO0Hf6KW-GsQ8VCZxPFod?usp=sharing), [VGG-16 weight file](https://drive.google.com/u/1/uc?id=0Bz7KyqmuGsilT0J5dmRCM0ROVHc&export=download)
+[VGG-16: My Keras code](https://colab.research.google.com/drive/1TUI3WX639yajO0Hf6KW-GsQ8VCZxPFod?usp=sharing), [VGG-16 weight file](https://drive.google.com/u/1/uc?id=0Bz7KyqmuGsilT0J5dmRCM0ROVHc\&export=download)
 
 [Read this blog for step by step tutorial](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 
-![](../../.gitbook/assets/image%20%28251%29.png)
+![](<../../.gitbook/assets/image (251).png>)
 
 ```python
 #Importing library
@@ -110,4 +110,3 @@ model.summary()
 ### Building from scratch:
 
 Implementation by PyTorch: [Vgg.py](https://github.com/pytorch/vision/blob/master/torchvision/models/vgg.py)
-

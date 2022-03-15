@@ -2,27 +2,24 @@
 
 ## Which framework to use?
 
-![](../../.gitbook/assets/image%20%28213%29.png)
+![](<../../images/image (213).png>)
 
 Need to consider several factors
 
 * Learning curve
-* Speed of development 
-* Community 
-* Number of research papers implemented 
-* Stability 
+* Speed of development
+* Community
+* Number of research papers implemented
+* Stability
 * Ecosystem and tooling
 
 The top 3 Deep Learning Frameworks:
 
-* Tensorflow/Keras/Pytorch 
-* Powerscore comparison \[by [Jeff Hale](https://www.linkedin.com/in/jeff-hale-99a7877/)\]
+* Tensorflow/Keras/Pytorch
+* Powerscore comparison \[by [Jeff Hale](https://www.linkedin.com/in/jeff-hale-99a7877/)]
 
-![By&#xA0;Jeff Hale](../../.gitbook/assets/image%20%28112%29.png)
+![By Jeff Hale](<../../images/image (112).png>)
 
+![](<../../.gitbook/assets/image (132).png>)
 
-
-![](../../.gitbook/assets/image%20%28132%29.png)
-
-![](../../.gitbook/assets/image%20%28121%29.png)
-
+![](<../../.gitbook/assets/image (121).png>)

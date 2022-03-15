@@ -6,25 +6,25 @@
 
 * [image from here](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
-![](../../.gitbook/assets/image%20%28225%29.png)
+![](<../../images/image (225).png>)
 
 Example of simple CNN architecture
 
-![VGG-19](../../.gitbook/assets/image%20%28235%29.png)
+![VGG-19](<../../images/image (232) (1).png>)
 
-![](../../.gitbook/assets/image%20%28224%29%20%281%29.png)
+![](<../../images/image (224) (1).png>)
 
-LeNet-5 \(1998\): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
+LeNet-5 (1998): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
-![](../../.gitbook/assets/image%20%28230%29.png)
+![](<../../.gitbook/assets/image (230).png>)
 
-AlexNet\(2012\)
+AlexNet(2012)
 
-![](../../.gitbook/assets/image%20%28226%29.png)
+![](<../../images/image (226).png>)
 
-VGG-16\(2014\)
+VGG-16(2014)
 
-![](../../.gitbook/assets/image%20%28238%29%20%281%29%20%281%29.png)
+![](<../../images/image (233) (1).png>)
 
 ## Convolution
 
@@ -42,7 +42,7 @@ A problem with the output feature maps is that they are sensitive to the locatio
 
 [Read here](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
-LeNet-5 is one of the simplest architectures. It has 2 convolutional and 3 fully-connected layers \(hence “5” — it is very common for the names of neural networks to be derived from the number of _convolutional_ and _fully connected_ layers that they have\). The average-pooling layer as we know it now was called a _sub-sampling layer_ and it had trainable weights \(which isn’t the current practice of designing CNNs nowadays\). This architecture has about **60,000 parameters**.
+LeNet-5 is one of the simplest architectures. It has 2 convolutional and 3 fully-connected layers (hence “5” — it is very common for the names of neural networks to be derived from the number of _convolutional_ and _fully connected_ layers that they have). The average-pooling layer as we know it now was called a _sub-sampling layer_ and it had trainable weights (which isn’t the current practice of designing CNNs nowadays). This architecture has about **60,000 parameters**.
 
 **⭐️What’s novel?**
 
@@ -52,5 +52,4 @@ This architecture has become the standard ‘template’: stacking convolutions 
 
 * Paper: [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/index.html#lecun-98)
 * Authors: Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner
-* Published in: \_\*\*\_Proceedings of the IEEE \(1998\)
-
+* Published in: \_\*\*\_Proceedings of the IEEE (1998)

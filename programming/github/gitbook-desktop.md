@@ -14,7 +14,7 @@ You can do version control easily with Github Desktop SW instead of using Git co
 
 ![](<../../.gitbook/assets/image (309).png>)
 
-## Tutorial 1**: Version Control (main branch)**
+## Tutorial 1\*\*: Version Control (main branch)\*\*
 
 ### **1. Creating Repository and Cloning in Local Drive**
 
@@ -26,11 +26,11 @@ Create a public repository 'tutorialNM'. Check add 'README' file
 
 ![](<../../.gitbook/assets/image (202).png>)
 
-Click 'Set up in Desktop'&#x20;
+Click 'Set up in Desktop'
 
 ![](<../../.gitbook/assets/image (232).png>)
 
-Choose your local drive folder path to clone a repository. This is making a copy of the repository in your local server/drive.&#x20;
+Choose your local drive folder path to clone a repository. This is making a copy of the repository in your local server/drive.
 
 ![](<../../.gitbook/assets/image (308).png>)
 
@@ -50,7 +50,7 @@ You will see the history of changes in Desktop GUI
 
 ## Tutorial 2. Collaboration Using Branch
 
-### 1. Create a file in local computer and Publish/Pull to the remote&#x20;
+### 1. Create a file in local computer and Publish/Pull to the remote
 
 In Desktop, create or copy a source file. Example: "tutorialNM.h"
 
@@ -60,19 +60,15 @@ Create a Branch. Lets call it as "NM-header-edit"
 
 ![](<../../.gitbook/assets/image (304).png>)
 
-
-
 ![](<../../.gitbook/assets/image (228).png>)
 
 Now, Commit to the branch.
 
 ![](<../../.gitbook/assets/image (218).png>)
 
+**Publish your branch:** Publishing to the remote (Github website) \*\* `Ctrl+P`\*\*
 
-
-**Publish your branch:** Publishing to the remote (Github website) ** `Ctrl+P`**
-
-****
+***
 
 **Pull Request** to Propose the change
 
@@ -80,13 +76,13 @@ Now, Commit to the branch.
 
 It will open a pull request in website. Click 'Create Pull Request'
 
-![](<../../.gitbook/assets/image (307).png>)
+![](<../../.gitbook/assets/image (306).png>)
 
 If the modification is acceptable, then **'Merge pull request'.** Then **Confirm the merge.**
 
 ![](<../../.gitbook/assets/image (238).png>)
 
-### 2. Modify/Update the version of the  file&#x20;
+### 2. Modify/Update the version of the file
 
 Modify `tutorialNM.h` in the local drive.
 
@@ -94,13 +90,10 @@ Modify `tutorialNM.h` in the local drive.
 
 Commit the modification
 
+Push Origin: `Ctrl+P`
 
-
-Push Origin:  `Ctrl+P`
-
-Open Pull Request:  `Ctrl+R.`&#x20;
+Open Pull Request: `Ctrl+R.`
 
 ![](<../../.gitbook/assets/image (233).png>)
 
 Confirm merge to the main branch if the change is acceptable.
-

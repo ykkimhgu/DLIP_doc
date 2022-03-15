@@ -5,7 +5,7 @@
 **List**
 
 * A list is a mutable, ordered sequence of items.
-* List variables are declared by using brackets `[ ]` 
+* List variables are declared by using brackets `[ ]`
 * The list elements can be anything and each list element can have a completely different type. This is not allowed in arrays. Arrays are objects with definite type and size
 
 ```python
@@ -15,10 +15,10 @@ B = [2, 4, 'john'] # lists can contain different variable types.
 
 **Tuple**
 
-* Similar to list, but  _immutable_ like strings i.e. you cannot modify tuples
-* Tuples are heterogeneous data structures \(i.e., their entries have different meanings\), while lists are homogeneous sequences.
+* Similar to list, but _immutable_ like strings i.e. you cannot modify tuples
+* Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences.
 * can be used as the _key_ in Dictionary
-* tuple is declared in parentheses **\( \)**
+* tuple is declared in parentheses **( )**
 
 ```python
 tupleA = (1, 2, 3, 4)
@@ -30,10 +30,10 @@ tupleA[2] = 5
 
 **Dictionary**
 
-* A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ \(name\) with _values_ \(details\). 
-* written with curly brackets  {  }
-* A colon \(:\) separates each **key** from its **value**.
-* the key must be unique and  immutable  \(tuples, not list\)
+* A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ (name) with _values_ (details).
+* written with curly brackets { }
+* A colon (:) separates each **key** from its **value**.
+* the key must be unique and immutable (tuples, not list)
 
 ```python
 # Python 3
@@ -46,7 +46,7 @@ my_dict.values()
 
 ## Dictionary in Python
 
-### Create a dictionary with dict\(\) constructor
+### Create a dictionary with dict() constructor
 
 ```python
 # create a dictionary using two list
@@ -76,15 +76,15 @@ print(students_ages)
 
 * Called using objects
 * Must have `self` as the first parameter
-* \(`self` is another python term. We can use self to access any data or other instance methods which resides in that class. These cannot be accessed without using self\)
+* (`self` is another python term. We can use self to access any data or other instance methods which resides in that class. These cannot be accessed without using self)
 
 ### Initializer Method
 
-* must be called `__init__()`~~\(~~double underscore is used by python runtime\)
+* must be called `__init__()`\~\~(\~\~double underscore is used by python runtime)
 * The first parameter is `self`
 * If the initializer method is present, the constructor calls `__init__()`
 
-### Super\(\) to inherit all the methods and properties from another class:
+### Super() to inherit all the methods and properties from another class:
 
 * Inherits all the method, properties of Parent or sibling class
 
@@ -129,13 +129,13 @@ This property has 2 rooms with 2 bathrooms
 
 ### .shape
 
-input\_tensor.shape\[-1\] \# get value of the last index of shape
+input\_tensor.shape\[-1] # get value of the last index of shape
 
 ## Reshaping arrays
 
 source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b)
 
-![source click here](../../.gitbook/assets/image%20%289%29.png)
+![source click here](<../../images/image (9).png>)
 
 ## Stacking 2D data to 3D data
 
@@ -171,15 +171,15 @@ source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-pyt
     print(x_train3D.shape)
 ```
 
-## Documenting your code in Python \(docstring\)
+## Documenting your code in Python (docstring)
 
-An official specification on how you should format your docstrings called [PEP 0257](https://www.python.org/dev/peps/pep-0257/), based on reStructuredText \(reST\)
+An official specification on how you should format your docstrings called [PEP 0257](https://www.python.org/dev/peps/pep-0257/), based on reStructuredText (reST)
 
 > For Google style guide for C++, [read here](https://google.github.io/styleguide/cppguide.html)
 
 ### Google format
 
-```text
+```
 """
 Google Style
 
@@ -196,22 +196,22 @@ Raises:
 ```
 
 * **Names to Avoid**
-  * dashes \(`-`\) in any package/module name
+  * dashes (`-`) in any package/module name
   * Use CapWords for class names, but lower\_with\_under.py for module names.
 * Guidelines for naming
-* | Type | Public | Internal |
-  | :--- | :--- | :--- |
-  | Packages | `lower_with_under` |  |
-  | Modules | `lower_with_under` | `_lower_with_under` |
-  | Classes | `CapWords` | `_CapWords` |
-  | Exceptions | `CapWords` |  |
-  | Functions | `lower_with_under()` | `_lower_with_under()` |
-  | Global/Class Constants | `CAPS_WITH_UNDER` | `_CAPS_WITH_UNDER` |
-  | Global/Class Variables | `lower_with_under` | `_lower_with_under` |
-  | Instance Variables | `lower_with_under` | `_lower_with_under` \(protected\) |
-  | Method Names | `lower_with_under()` | `_lower_with_under()` \(protected\) |
-  | Function/Method Parameters | `lower_with_under` |  |
-  | Local Variables | `lower_with_under` |  |
+* | Type                       | Public               | Internal                          |
+  | -------------------------- | -------------------- | --------------------------------- |
+  | Packages                   | `lower_with_under`   |                                   |
+  | Modules                    | `lower_with_under`   | `_lower_with_under`               |
+  | Classes                    | `CapWords`           | `_CapWords`                       |
+  | Exceptions                 | `CapWords`           |                                   |
+  | Functions                  | `lower_with_under()` | `_lower_with_under()`             |
+  | Global/Class Constants     | `CAPS_WITH_UNDER`    | `_CAPS_WITH_UNDER`                |
+  | Global/Class Variables     | `lower_with_under`   | `_lower_with_under`               |
+  | Instance Variables         | `lower_with_under`   | `_lower_with_under` (protected)   |
+  | Method Names               | `lower_with_under()` | `_lower_with_under()` (protected) |
+  | Function/Method Parameters | `lower_with_under`   |                                   |
+  | Local Variables            | `lower_with_under`   |                                   |
 * **Example Google style docstrings**
 
 > This module demonstrates documentation as specified by the `Google Python Style Guide`
@@ -319,4 +319,3 @@ def module_level_function(param1, param2=None, *args, **kwargs):
         raise ValueError('param1 may not be equal to param2')
     return True
 ```
-
