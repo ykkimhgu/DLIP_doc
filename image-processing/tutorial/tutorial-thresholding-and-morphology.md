@@ -90,10 +90,12 @@ plt.show()
 Download  the example code and test images. 
 
 * [source code_1: Manual Threshold](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Threshold_demo.cpp)
+
 * [source code_2: Threshold with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_ThresholdMorph_trackbar.cpp)
-* [test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
+* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
+  
 
 Run the code on all test  images.
 
@@ -105,15 +107,74 @@ Apply different values of thresholding for each images and find the best thresho
 
 Modify the program to include ‘Otsu method’. 
 
+*  [Read this documentation](https://docs.opencv.org/3.4/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3) for THRESH_OTSU 
+
 Apply on each test images and compare the results with global thresholding output.
 
 
 
 ### Example 1-3. Plot Histogram
 
-Plot histogram for each images in gray-scale and analyze if clear threshold value exists in histogram.
+Calculate and Plot histogram for each images in gray-scale and analyze if clear threshold value exists in histogram.
 
-* Use this tutorial code for plotting histogram: [click here](https://docs.opencv.org/3.4/d8/dbc/tutorial\_histogram\_calculation.html)
+* [Read this documentation](https://docs.opencv.org/3.4/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d) for calculating histogram `calcHist()`
+
+```c++
+void cv::calcHist	(	const Mat * 	images,
+                        int 	nimages,
+                        const int * 	channels,
+                        InputArray 	mask,
+                        OutputArray 	hist,
+                        int 	dims,
+                        const int * 	histSize,
+                        const float ** 	ranges,
+                        bool 	uniform = true,
+                        bool 	accumulate = false 
+)		
+```
+
+```python
+# Python:
+hist=cv.calcHist(	images, channels, mask, histSize, ranges[, hist[, accumulate]]	)
+```
+
+
+
+For plotting histogram, you may use the following function. 
+
+
+```c++
+void plotHist(Mat src, string plotname, int width, int height) {
+	/// Compute the histograms 
+	Mat hist;
+	/// Establish the number of bins (for uchar Mat type)
+	int histSize = 256;
+	/// Set the ranges (for uchar Mat type)
+	float range[] = { 0, 256 };
+
+	const float* histRange = { range };
+	calcHist(&src, 1, 0, Mat(), hist, 1, &histSize, &histRange);
+
+	double min_val, max_val;
+	cv::minMaxLoc(hist, &min_val, &max_val);
+	Mat hist_normed = hist * height / max_val; 
+	float bin_w = (float)width / histSize;	
+	Mat histImage(height, width, CV_8UC1, Scalar(0));	
+	for (int i = 0; i < histSize - 1; i++) {	
+		line(histImage,	
+			  Point((int)(bin_w * i), height - cvRound(hist_normed.at<float>(i, 0))),			
+			  Point((int)(bin_w * (i + 1)), height - cvRound(hist_normed.at<float>(i + 1, 0))),	
+			  Scalar(255), 2, 8, 0);											
+	}
+
+	imshow(plotname, histImage);
+}
+```
+
+See here for full example codes
+* Example 1: [Histogram of GrayScale Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_1D_demo_image.cpp)
+* Example 2: [Histogram of Color Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_demo_image.cpp)
+* Example 3: [Histogram of Webcam Image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_1D_demo_webcam.cpp)
 
 
 
@@ -121,9 +182,26 @@ Plot histogram for each images in gray-scale and analyze if clear threshold valu
 
 Apply ‘Local Adaptive Thresholding’  on the following images. Compare the results of the global thresholding.
 
-Refer to `adaptiveThreshold()` [documentation](https://docs.opencv.org/3.4/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
-
 ![](<../../.gitbook/assets/image (82).png>)
+
+Refer to `adaptiveThreshold()` [documentation](https://docs.opencv.org/3.4/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
+```c++
+//adaptiveThreshold()
+void cv::adaptiveThreshold	(	InputArray 	src,
+                                 OutputArray 	dst,
+                                 double 	maxValue,
+                                 int 	adaptiveMethod,
+                                 int 	thresholdType,
+                                 int 	blockSize,
+                                 double 	C 
+)		
+
+```
+
+```python
+#Python:
+dst=cv.adaptiveThreshold(	src, maxValue, adaptiveMethod, thresholdType, blockSize, C)
+```
 
 
 
@@ -179,7 +257,11 @@ plt.show()
 
 ## Exercise
 
-Copy all the result images for Example 1~4 and compare them in a report.  Show the results to TA before proceeding to Part 2.
+Analyze  Histogram and apply Thresholding methods on given images. Find the optimal threshold method and value for the object segmentation. 
+
+
+
+Show the results to TA before proceeding to Part 2.
 
 ----
 
@@ -191,7 +273,7 @@ Copy all the result images for Example 1~4 and compare them in a report.  Show t
 
 ### Morphology:  OpenCV
 
-First, read the OpenCV documentation.
+First, read the OpenCV documentation on morphology.
 
 * [morphologyEx()](https://docs.opencv.org/3.4.17/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
 * [erode()](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
@@ -206,7 +288,7 @@ First, read the OpenCV documentation.
 ```cpp
 // Structuring Element
 int shape = MORPH_RECT; // MORPH_CROSS, MORPH_ELLIPSE  
-  Mat element = getStructuringElement( shape, Size(M, N) )                                     
+Mat element = getStructuringElement( shape, Size(M, N) )                                     
  
 // Apply a morphology operation
 dilate( src, dst_morph, element);
@@ -249,9 +331,10 @@ Apply several morphology to obtain clear segmentation of the object in given ima
 
 ## Exercise
 
-Apply Morphology methods after thresholding images. 
+1. Apply Morphology methods after threshold on all test images.
+2. Analyze which morphology methods works best for each images for object segmentation. 
 
-Analyze which methods works best for each images. 
+
 
 Show the results to TA before finishing this tutorial. 
 
