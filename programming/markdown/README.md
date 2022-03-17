@@ -2,9 +2,9 @@
 
 ## Markdown Editor
 
-We will use  'Typora' as the offline Markdown editor.&#x20;
+We will use 'Typora' as the offline Markdown editor.
 
-Typora:  [Download from here](https://typora.io/#windows)
+Typora: [Download from here](https://drive.google.com/file/d/1nxF\_I7LqXc43A8pA-IJnV7mbMkmtlHXk/view?usp=sharing)
 
 ## What is Markdown?
 
@@ -14,7 +14,7 @@ You can use Markdown most places around GitHub:
 
 * [Gists](https://gist.github.com)
 * Comments in Issues and Pull Requests
-* Files with the `.md` or `.markdown` extension:  README.md
+* Files with the `.md` or `.markdown` extension: README.md
 
 ## Syntax guide
 
@@ -110,8 +110,6 @@ int main()
 }
 ```
 ````
-
-
 
 ## Examples
 
