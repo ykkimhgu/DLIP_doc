@@ -8,16 +8,21 @@ In this tutorial, you will learn how to use OpenCV to detect edges, lines, and c
 
 ## **II. Tutorial**
 
-Find edges, straight lines and circle shapes
+**Download Test Image Files:** [Image data click here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/EdgeLineImages.zip)
 
-* [Example code: click here](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Hough)
-* [Image data: click here](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Hough)
+
 
 ### **Part 1. Edge Detection**
 
 We will learn how to use Canny Edge Algorithm to detect and display edges.
 
 * OpenCV Canny():[ read docs](https://docs.opencv.org/3.4.13/dd/d1a/group\_\_imgproc\_\_feature.html#ga04723e007ed888ddf11d9ba04e2232de)
+
+**Download Tutorial Code:** [Canny Edge Demo ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Canny%20edge%20Demo.cpp)
+
+****
+
+
 
 ![](<../../.gitbook/assets/image (89).png>)
 
@@ -103,12 +108,19 @@ imshow( window_name, dst );
 
 ### **Part 2. Line Detection: Hough Transform**
 
-In OpenCV, there are two kinds of Hough Lıne Transform
+**Download Tutorial Code:** [Hough Line Transform  Demo ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Houghline\_Demo.cpp)
 
-* The Standard Hough Transform ([ HoughLines( )](https://docs.opencv.org/3.4.13/dd/d1a/group\_\_imgproc\_\_feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a) ) \*\*\*\*
-  * It gives you the results of(θ, rθ)
-* The Probabilistic Hough Line Transform ( [HoughLinesP](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=houghlinesp#houghlinesp)() )
-  * A more efficient implementation of the Hough Line Transform. It gives as output of extremes(end) points of the detected lines (x0, y0, x1, y1)\\
+
+
+In OpenCV, there are two Options for Hough Lıne Transform
+
+**1) The Standard Hough Transform (**[ **HoughLines( )**](https://docs.opencv.org/3.4.13/dd/d1a/group\_\_imgproc\_\_feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a) **)**&#x20;
+
+* It gives you the results of(θ, rθ)
+
+**2) The Probabilistic Hough Line Transform (** [**HoughLinesP**](http://docs.opencv.org/modules/imgproc/doc/feature\_detection.html?highlight=houghlinesp#houghlinesp)**() )**
+
+* A more efficient implementation of the Hough Line Transform. It gives as output of extremes(end) points of the detected lines (x0, y0, x1, y1)\\
 
 ```cpp
 void HoughLines(InputArray image, OutputArray lines, double rho, double theta, int threshold, double srn=0, double stn=0 )
@@ -163,9 +175,13 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
     	cvtColor(dst, cdst, COLOR_GRAY2BGR);
     	cdstP = cdst.clone();
     ```
-* (Option 1) Standard Hough Line Transform
-  * First, apply the Hough Transform. Then display the results by drawing the lines.
-  * Output vector of lines. Each line is represented by a 2 or 3 element vector (ρ,θ) or (ρ,θ,votes) . ρ is the distance from the coordinate origin (0,0) (top-left corner of the image). θ is the line rotation angle in radians ( 0∼vertical line,π/2∼horizontal line ). votes is the value of accumulator.\\
+
+
+
+**(Option 1) Standard Hough Line Transform**
+
+* First, apply the Hough Transform. Then display the results by drawing the lines.
+* Output vector of lines. Each line is represented by a 2 or 3 element vector (ρ,θ) or (ρ,θ,votes) . ρ is the distance from the coordinate origin (0,0) (top-left corner of the image). θ is the line rotation angle in radians ( 0∼vertical line,π/2∼horizontal line ). votes is the value of accumulator.\\
 
 ```cpp
 	// (Option 1) Standard Hough Line Transform
@@ -191,8 +207,9 @@ void HoughLinesP(InputArray image, OutputArray lines, double rho, double theta, 
 
 ![](<../../.gitbook/assets/image (91).png>)
 
-* (Option 2) Probabilistic Hough Line Transform
-  * Lines (HoughLinesP) Output vector of lines. Each line is represented by a 4-element vector (x1,y1,x2,y2), where (x1,y1) and (x2,y2) are the ending points of each detected line segment.
+**(Option 2) Probabilistic Hough Line Transform**
+
+* Lines (HoughLinesP) Output vector of lines. Each line is represented by a 4-element vector (x1,y1,x2,y2), where (x1,y1) and (x2,y2) are the ending points of each detected line segment.
 
 ```cpp
 vector<Vec4i> linesP; 
@@ -220,6 +237,10 @@ vector<Vec4i> linesP;
 ```
 
 ### **Part 3. Circle Detection: Hough Circles**
+
+**Download Tutorial Code:** [Circle Detection  Demo ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Hough\_Circle\_Demo.cpp)
+
+
 
 Usually, the function detects the centers of circles well but the radius may not be accurate. It helps if you can specify the radius ranges ( minRadius and maxRadius ), if available. Or, you may set maxRadius to a negative number to return centers only without radius search, and find the correct radius using an additional procedure.
 
@@ -260,3 +281,31 @@ for (size_t i = 0; i < circles.size(); i++)
 namedWindow("circles", 1);
 imshow("circles", src);
 ```
+
+## Exercise
+
+### Exercise 1
+
+
+
+Download the following tutorial codes for Edge and Line Detection. Fill in the blanks.&#x20;
+
+> Try to fill in the codes without referring to the demo source files
+
+* Exercise code 1: [Canny Edge Exercise](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Canny%20edge%20Student.cpp)
+* Exercise code 2: [Hough Line Exercise](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Hough%20Line%20Transform%20Student.cpp)
+
+
+
+### Exercise 2
+
+1. Detect Pupil/Iris & Signpost from the following images
+
+
+
+![](../../.gitbook/assets/eyepupil.png) ![](../../.gitbook/assets/TrafficSign1.png)
+
+2\. Detect all edges and draw lines
+
+![](../../.gitbook/assets/track\_gray.jpg)
+
