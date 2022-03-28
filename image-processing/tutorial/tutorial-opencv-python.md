@@ -2,6 +2,9 @@
 
 # Python OpenCV Tutorial
 
+[Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Opencv_Python_2022.ipynb)
+[Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
+
 ## Import OpenCV Library
 ```python
 import numpy as np
