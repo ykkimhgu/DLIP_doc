@@ -41,13 +41,15 @@ Recommended sites for C++ tutorials
 
 ## Installation
 
+[See here for Installation Instructions.](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
 You must install in the following order. Make sure you have install the correct software  version as instructed.
 
-1. Anaconda: [How to install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation#9f39)
-2. Python (3.7): [How to install Python](https://ykkim.gitbook.io/dlip/programming/python)
-3. Visual Studio Code: [How to Install VS Code](https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/vscode#installation)
-5. GPU library (CUDA, cuDNN):  [How to install CUDA  cuDNN ](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation#9f39)
-5. PyTorch: [How to Install PyTorch](https://ykkim.gitbook.io/dlip/dlip-installation-guide/framework/pytorch)
+1. Anaconda
+2. Python (3.7)
+3. Visual Studio Code
+5. GPU library (CUDA, cuDNN)
+5. PyTorch
 
 
 
