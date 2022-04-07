@@ -28,7 +28,7 @@ Follow: [How to install Anaconda](anaconda.md#conda-installation)
 
 
 
-## 2. Install Python & Numpy
+## 2. Install Python & Numpy & OpenCV
 
 > Python 3.7 (2022-1)
 
@@ -97,7 +97,9 @@ Also, read
 
 
 
+
 ## 4. Install GPU library (CUDA, cuDNN)
+
 Skip this if you do not have GPU.
 
 **Nvidia GPU driver** **and Library** : To operate the GPU.
