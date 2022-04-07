@@ -136,16 +136,6 @@
     * [MNIST using LeNet](programming/pytorch/tutorial-torch/mnist-using-lenet.md)
     * [Train ConvNet using CIFAR10](programming/pytorch/tutorial-torch/train-convnet-using-cifar10.md)
   * [Cheat Sheet](programming/pytorch/cheatsheet-py.md)
-* [DL Library](programming/dl-library-tools/README.md)
-  * [SciPy, scikit-learn](programming/dl-library-tools/underconstruction-5/README.md)
-    * [Install](programming/dl-library-tools/underconstruction-5/underconstruction.md)
-    * [How to use](programming/dl-library-tools/underconstruction-5/underconstruction-1.md)
-  * [MATPlot](programming/dl-library-tools/underconstruction-3/README.md)
-    * [Install](programming/dl-library-tools/underconstruction-3/underconstruction.md)
-    * [How to use](programming/dl-library-tools/underconstruction-3/underconstruction-1.md)
-  * [Pandas](programming/dl-library-tools/underconstruction-2/README.md)
-    * [Install](programming/dl-library-tools/underconstruction-2/underconstruction.md)
-    * [How to use](programming/dl-library-tools/underconstruction-2/underconstruction-1.md)
 
 ## Resources
 
