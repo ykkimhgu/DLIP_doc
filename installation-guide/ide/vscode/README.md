@@ -11,17 +11,3 @@
 
 {% embed url="https://code.visualstudio.com/docs/getstarted/introvideos" %}
 
-## Install Extension
-
-Choose the virtual environment ('if you have created it')
-
-Press 'F1' > 'select interpreter' > Choose Python37tf23
-
-![](<../../../.gitbook/assets/image (316).png>)
-
-![](<../../../.gitbook/assets/image (312).png>)
-
-Install Extension:  Python, Pylance, Jupyter
-
-![](<../../../.gitbook/assets/image (317).png>)
-
