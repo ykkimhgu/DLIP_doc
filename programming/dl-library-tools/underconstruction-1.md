@@ -1,37 +1,48 @@
 # Anaconda
 
-## CONDA Installation
-
-[Download the installer on window](https://www.anaconda.com/products/individual#Downloads)
-
-Double click the installer to launch.
-
-Select an install for “Just Me” unless you’re installing for all users (which requires Windows Administrator privileges) and click Next.
-
-Select a destination folder to install Anaconda and click the Next button.&#x20;
-
-> Install Anaconda to a directory path that does not contain spaces or unicode characters.
-
-Note: Do not install as Administrator unless admin privileges are required\
 
 
-Do NOT  adding Anaconda to the PATH environment variable
+## ANACONDA Installation
 
-Check  to register Anaconda as your default Python.
+Go to https://www.anaconda.com/
+
+Click and download the Window Installer.  or Click here [Download the installer on window](https://www.anaconda.com/products/individual#Downloads)
+
+<img width="722" alt="image" src="https://user-images.githubusercontent.com/38373000/162143256-abe37dec-7fc9-4fd8-b0d3-fe6a6ab89d6b.png">
+
+Follow the following steps
+
+* Double click the installer to launch.
+
+* Select an install for “Just Me” (recommended)
+
+* Select a destination folder to install Anaconda and click the Next button.&#x20;
+
+  > Install Anaconda to a directory path that does NOT contain spaces and unicode(Korean) characters.
+
+  
+
+* Do NOT  adding Anaconda to the PATH environment variable
+
+* Check  to register Anaconda as your default Python.
+
+
 
 Click the Install button.
 
-![](<../../.gitbook/assets/image (313).png>)
+<img width="600" alt="image" src="../../.gitbook/assets/image (313).png">
 
-Click the Install button. If you want to watch the packages Anaconda is installing, click Show Details.
 
-Click the Next button.
+
+
 
 After a successful installation you will see the “Thanks for installing Anaconda” dialog box:
 
 
 
-![../../../\_images/win-install-complete.png](https://docs.anaconda.com/\_images/win-install-complete.png)
+<img width="371" alt="image" src="https://user-images.githubusercontent.com/38373000/162144231-e72c06a6-b34b-423e-94f9-329090e5fb8a.png">
+
+
 
 
 

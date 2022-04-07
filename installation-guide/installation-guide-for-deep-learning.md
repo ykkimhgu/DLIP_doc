@@ -24,22 +24,24 @@ You must install in the following order. Make sure you install the correct softw
 
 
 
-### **1.** Install GPU library (CUDA, cuDNN)
+### 1. Install Anaconda
+
+**Anaconda** : Python and libraries package installer.
+
+Follow: [How to install Anaconda](../programming/dl-library-tools/underconstruction-1.md#conda-installation)
+
+
+
+
+
+###  2.Install GPU library (CUDA, cuDNN)
 
 **Nvidia GPU driver** **and Library** : To operate the GPU.
 
 * **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
 * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
 
-[How to install CUDA 10.2, cuDNN 8.0.5](cuda-installation.md#9f39)
-
-
-
-### **2. Install Anaconda**
-
-**Anaconda** : Python and libraries package installer.
-
-[How to install Anaconda](../programming/dl-library-tools/underconstruction-1.md#conda-installation)
+Follow [How to install CUDA and cuDNN](cuda-installation.md#9f39)
 
 
 
@@ -51,7 +53,7 @@ You must install in the following order. Make sure you install the correct softw
 
 Python is already installed by installing Anaconda. But, we will make a virtual environment for a specific Python version.
 
-
+xit
 
 ```c
 conda create -n py37tf23 python=3.7
