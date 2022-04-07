@@ -1,28 +1,38 @@
-# Tutorial: OpenCv Python
+# Tutorial: OpenCV Python
 
-# Python OpenCV Tutorial
+# 
 
 This tutorial code is based on Colab Notebook.  
 
-* [Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Opencv_Python_2022.ipynb)
+* [Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_2022.ipynb)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
 
 
 
-**Running the code in VS Code**
 
-If you want to run this tutorial with Visual Studio Code, then you need to follow
+### Running the code in VS Code (option)
 
-1. [Installation Instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+If you want to run this tutorial with Visual Studio Code, then you need to follow [Installation Instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
-- Anaconda
-- VS Code
-- Numpy, OpenCV installed in Conda Environment
+* Anaconda
+* VS Code
+* Numpy, OpenCV installed in Conda Environment
 
-2. and learn how to  
 
-- [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
-- [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
+
+Also, you need to know how to 
+
+* [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+* [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
+
+
+
+
+Download the code for VSCODE
+
+* [Notebook source code for VSC](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_vscode_2022.ipynb)
+* [Python source code for VSC](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_opencv_python_vscode_2022.py)
+
 
 
 
@@ -36,8 +46,11 @@ from matplotlib import pyplot as plt
 from google.colab.patches import cv2_imshow as cv_imshow
 ```
 
+
+
 ## Open & Show Image File
-> matplotlib에서 rgb 채널 순서가 다르다
+
+> matplotlib에서 rgb 채널 순서가 다름
 
 * matplot: R-B-G
 * OpenCV: G-B-R
@@ -470,11 +483,19 @@ plt.show()
 
 # Exercise
 
-## Exercise 1: Gray Scale Image
+## Follow Tutorial of OpenCV (C++) in Python
+
+Do the exercise in [Tutorial Thresholding and Morphology](https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-thresholding-and-morphology)
+
+Do the exercises in [Tutorial: Filtering](https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-spatial-filter)
+
+Do the exercises in [Tutorial: Color Image Segmentation](https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-color-image-processing)
 
 
 
-## Exercise 2: Color  Image
+## Follow LAB of OpenCV(C++) in Python
+
+Do the [LAB: Grayscale Image Processing](https://ykkim.gitbook.io/dlip/image-processing/lab/lab-grayscale-image-segmentation)
 
 
 
