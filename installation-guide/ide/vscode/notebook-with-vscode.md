@@ -47,6 +47,7 @@ conda activate py37
 
 ```C
 conda install jupyter
+conda install -c anaconda ipykernel
 ```
 
 

@@ -2,11 +2,13 @@
 description: Installation Guide for Deep Learning
 ---
 
-# Installation Guide
+# Installation Guide for Win10 
 
-## Installation Guide for Win10 <a href="#f126" id="f126"></a>
+This installation guide is for programming a deep learning application using Pytorch or Tensorflow.
 
-You must install in the following order. Make sure you install the correct software version as instructed.
+
+
+Make sure you install the correct software version as instructed.
 
 > For DLIP 2022-1 Lecture:
 >
@@ -177,5 +179,6 @@ conda install -c conda-forge opencv
 conda install -c anaconda scikit-learn
 conda install -c anaconda pandas
 conda install jupyter
+conda install -c anaconda ipykernel
 ```
 

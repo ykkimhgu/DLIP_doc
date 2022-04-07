@@ -2,10 +2,32 @@
 
 # Python OpenCV Tutorial
 
-[Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Opencv_Python_2022.ipynb)
-[Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
+This tutorial code is based on Colab Notebook.  
+
+* [Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Opencv_Python_2022.ipynb)
+* [Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
+
+
+
+**Running the code in VS Code**
+
+If you want to run this tutorial with Visual Studio Code, then you need to follow
+
+1. [Installation Instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
+- Anaconda
+- VS Code
+- Numpy, OpenCV installed in Conda Environment
+
+2. and learn how to  
+
+- [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+- [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
+
+
 
 ## Import OpenCV Library
+
 ```python
 import numpy as np
 import cv2 as cv
