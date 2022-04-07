@@ -32,33 +32,19 @@ Start ' Anaconda Navigator'
 
 
 
-### Installing Python (3.7) in virtual Environment
-
-How to create virtual environment using Conda (you can skip this now)
-
-```c
-conda create -n py37tf23 python=3.7
-```
-
-![](<../.gitbook/assets/image (311).png>)
-
-After installation, activate the newly created environment
-
-```c
-conda activate py37tf23
-```
-
-![](<../.gitbook/assets/image (315).png>)
-
 ### Reference:
 
 {% embed url="https://docs.anaconda.com/anaconda/install/windows/" %}
+
+
 
 ## CONDA Cheat Sheet
 
 [https://docs.conda.io/projects/conda/en/4.6.0/\_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/\_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
 {% embed url="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf" %}
+
+
 
 ## FAQ
 
