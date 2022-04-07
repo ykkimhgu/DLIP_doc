@@ -91,7 +91,7 @@
 ## Installation Gudie <a href="#installation-guide" id="installation-guide"></a>
 
 * [Installation Guide](installation-guide/installation-guide-for-deep-learning.md)
-* [Anaconda](installation-guide/underconstruction-1.md)
+* [Anaconda](installation-guide/anaconda.md)
 * [CUDA cuDNN](installation-guide/cuda-installation.md)
 * [OpenCV](installation-guide/opencv/README.md)
   * [Install and Setup](installation-guide/opencv/opencv-install/README.md)

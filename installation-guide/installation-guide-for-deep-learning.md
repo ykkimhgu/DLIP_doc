@@ -26,7 +26,7 @@ You must install in the following order. Make sure you install the correct softw
 
 **Anaconda** : Python and libraries package installer.
 
-Follow: [How to install Anaconda](underconstruction-1.md#conda-installation)
+Follow: [How to install Anaconda](anaconda.md#conda-installation)
 
 #### 2.Install GPU library (CUDA, cuDNN)
 
