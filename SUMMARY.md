@@ -91,6 +91,7 @@
 ## Installation Gudie <a href="#installation-guide" id="installation-guide"></a>
 
 * [Installation Guide](installation-guide/installation-guide-for-deep-learning.md)
+* [Anaconda](installation-guide/underconstruction-1.md)
 * [CUDA cuDNN](installation-guide/cuda-installation.md)
 * [OpenCV](installation-guide/opencv/README.md)
   * [Install and Setup](installation-guide/opencv/opencv-install/README.md)
@@ -145,7 +146,6 @@
   * [Pandas](programming/dl-library-tools/underconstruction-2/README.md)
     * [Install](programming/dl-library-tools/underconstruction-2/underconstruction.md)
     * [How to use](programming/dl-library-tools/underconstruction-2/underconstruction-1.md)
-  * [Anaconda](programming/dl-library-tools/underconstruction-1.md)
 
 ## Resources
 
