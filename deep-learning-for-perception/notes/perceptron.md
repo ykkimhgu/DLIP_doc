@@ -30,11 +30,11 @@ The perceptron consists of 4 parts.
 
 **Activation Function** scales output (0,1) or (-1,1)
 
-![](<../../.gitbook/assets/image (223) (4) (4) (4) (2) (2) (3).png>)
+![](<../../images/image (223) (1) (1) (2) (3).png>)
 
 ## Multi-Layer Perceptron
 
-![](<../../.gitbook/assets/image (223) (4) (4) (4) (2) (2) (4).png>)
+![](<../../images/image (223) (1) (1) (2) (4).png>)
 
 ## Multi-Layer Perceptron
 
