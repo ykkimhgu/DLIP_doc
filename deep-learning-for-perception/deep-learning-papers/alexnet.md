@@ -10,7 +10,7 @@ Prior to ILSVRC 2012, competitors mostly used feature engineering techniques com
 
 **AlexNet** marked a breakthrough in deep learning where a CNN was used to reduce the error rate in ILSVRC 2012 substantially and achieve the first place of the ILSVRC competition.
 
-![](<../../.gitbook/assets/image (237).png>)
+![](<../../images/image (237).png>)
 
 **The highlights of this paper**:
 

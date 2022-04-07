@@ -1,8 +1,8 @@
 # AlexNet Tutorial
 
-![](<../../.gitbook/assets/image (239).png>)
+![](<../../images/image (239).png>)
 
-![](<../../.gitbook/assets/image (236).png>)
+![](<../../images/image (236).png>)
 
 ## Pytorch
 

@@ -6,13 +6,13 @@
 
 * [image from here](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
-![](<../../.gitbook/assets/image (225).png>)
+![](<../../images/image (225).png>)
 
 Example of simple CNN architecture
 
-![VGG-19](<../../images/image (232).png>)
+![VGG-19](<../../images/image (232) (1).png>)
 
-![](<../../images/image (224).png>)
+![](<../../images/image (224) (1).png>)
 
 LeNet-5 (1998): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 
@@ -20,11 +20,11 @@ LeNet-5 (1998): [image ](https://towardsdatascience.com/illustrated-10-cnn-archi
 
 AlexNet(2012)
 
-![](<../../.gitbook/assets/image (226).png>)
+![](<../../images/image (226).png>)
 
 VGG-16(2014)
 
-![](<../../images/image (233).png>)
+![](<../../images/image (233) (1).png>)
 
 ## Convolution
 
