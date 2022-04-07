@@ -114,7 +114,7 @@ Follow [How to install CUDA and cuDNN](cuda-installation.md#9f39)
 
 ### Install Pytorch
 
-#### With GPU
+ **With GPU**
 
 ```C
 # CUDA 10.2
@@ -125,7 +125,7 @@ conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit
 
 
 
-#### Without GPU
+ **Without GPU**
 
 ```C
 # CPU Only
@@ -135,6 +135,8 @@ conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cpuonly -c 
 
 
 Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
+
+
 
 ###  Install Tensorflow and Keras
 
