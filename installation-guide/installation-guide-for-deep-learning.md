@@ -79,8 +79,8 @@ Follow: [How to Install VS Code](ide/vscode/#installation)
 
 Also, read 
 
-* How to program Python in VS Code
-* How to program CoLab(Notebook) in VS Code
+* [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+* [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
 
 
