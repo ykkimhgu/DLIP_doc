@@ -30,7 +30,7 @@ Start ' Anaconda Navigator'
 
 ![](<../.gitbook/assets/image (314).png>)
 
-###
+
 
 ### Installing Python (3.7) in virtual Environment
 
