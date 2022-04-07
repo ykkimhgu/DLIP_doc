@@ -172,5 +172,8 @@ Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installatio
 ```C
 conda install -c conda-forge matplotlib
 conda install -c conda-forge opencv
+conda install -c anaconda scikit-learn
+conda install -c anaconda pandas
+conda install jupyter
 ```
 
