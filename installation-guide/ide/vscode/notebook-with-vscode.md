@@ -23,7 +23,6 @@ Once you have VSC installed you’ll just need to install a few extensions for V
 
 - Python (author: Microsoft)
 - Pylance (author: Microsoft)
-- Live Server (author: Ritwick Dey)
 - Jupyter (author: Microsoft)
 - Jupyter Keymap (author: Microsoft)
 - Jupter Notebook Renderers (author: Microsoft)

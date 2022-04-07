@@ -67,11 +67,14 @@ conda activate py37
 
 
 
-**Install Numpy**
+## Install Numpy, OpenCV, Matplot
 
 ```C
 conda activate py37
+
 conda install numpy
+conda install -c conda-forge matplotlib
+conda install -c conda-forge opencv
 ```
 
 
@@ -164,6 +167,10 @@ Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installatio
 
 
 
-## 6. Installing other DL libraries
+## 6. Installing  Other libraries
 
+```C
+conda install -c conda-forge matplotlib
+conda install -c conda-forge opencv
+```
 
