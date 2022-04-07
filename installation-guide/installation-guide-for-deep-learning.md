@@ -28,7 +28,7 @@ Follow: [How to install Anaconda](anaconda.md#conda-installation)
 
 
 
-## 2. Install Python 
+## 2. Install Python & Numpy
 
 > Python 3.7 (2022-1)
 
@@ -40,7 +40,6 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 
   ![image](https://user-images.githubusercontent.com/38373000/162147626-98c7c618-2882-4668-a61d-0682cffdd898.png)
 
-  
 
 * First, update conda
 ```c
@@ -65,6 +64,15 @@ conda activate py37
 
 
 <img src="https://user-images.githubusercontent.com/38373000/162150172-0192d3d4-901f-4356-8c99-ff146297bd39.png" alt="image" style="zoom:80%;" />
+
+
+
+**Install Numpy**
+
+```C
+conda activate py37
+conda install numpy
+```
 
 
 

@@ -1,36 +1,99 @@
 # Python with VS Code
 
-
-
-We will learn how to  program Python  *.py in VS Code
-
-
-
-**Preparation**
-
-Anacond and Conda Virtual Environment : e.g. py37  
-
-* [See Here for instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+We will learn how to  program Python  *.py in VS Code.
 
 
 
-## 2. Connect Anaconda With Visual Studio Code
+We want to make sure VSCode recognizes the Anaconda installation so it can access installed packages for autocomplete, syntax highlighting, and error checking.
 
-We want to make sure VSC recognizes the Anaconda installation so it can access installed packages for autocomplete, syntax highlighting, and error checking. VSC should recognize Anaconda by default. If it does you will probably see something like “Python 3.9.7 (‘base’: conda)” in the lower-left corner of VSC (see image below).
+## Prerequisite
+
+* Anacond and Conda Virtual Environment : e.g. py37  
+  * [See Here for instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
+* Python and Numpy Installed by Conda
+
+  ​
+
+
+# 1. Install Python Extension
+
+* Open VS Code
+* Press  Extension Icon or Press  < `Ctrl` +`Shift` +`X`>
+* Install Python (Microsoft)
+
+![image](https://user-images.githubusercontent.com/38373000/162184019-8d5b04af-a04a-486c-9e20-4786474e3c99.png)
 
 
 
-## Install Extension
 
-Choose the virtual environment ('if you have created it')
 
-Press 'F1' > 'select interpreter' > Choose Python37tf23
+# 2. Programming Python in VSCode
 
-![](<C:/Users/ykkim/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (316).png>)
+## Open Working Folder in VS Code
 
-![](<C:/Users/ykkim/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (312).png>)
+Create a new test folder
 
-Install Extension:  Python, Pylance, Jupyter
+* Example:  `\Tutorial_pythonOpenCV`
 
-![](<C:/Users/ykkim/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (317).png>)
+
+
+Open the folder in VS Code
+
+![image](https://user-images.githubusercontent.com/38373000/162183686-3b7a6a12-adff-4fef-aa59-a9f0b3a9372c.png)
+
+
+
+
+## Select Interpreter
+
+Let's select the virtual environment for this tutorial. 
+
+*  Assumed we already have created Conda Environment. 
+*  [See Here for Conda Environment Creation](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
+
+
+Press `F1` > 'Python: Select Interpreter' >  Choose `py37` as the Interpreter
+
+
+
+![image](https://user-images.githubusercontent.com/38373000/162185395-9265cb2e-2441-41d5-9af8-3ad05df0938f.png)
+
+
+
+
+
+## Run Test Code
+
+(1)  Create a new file 
+
+(2) Name the file as `TU_pytest.py`
+
+(3) Program the code 
+
+``` python
+import numpy as np
+a = np.array([1,2,3])
+print(a*a)
+
+```
+
+(4) Run Python File
+
+(5) It should give the output as
+
+` [1 4 9]`
+
+
+
+![image](https://user-images.githubusercontent.com/38373000/162189129-3617e587-7263-45e3-8059-290472d36fd0.png)
+
+
+
+
+
+# Further Reading
+
+[How to program Jupyter and CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
