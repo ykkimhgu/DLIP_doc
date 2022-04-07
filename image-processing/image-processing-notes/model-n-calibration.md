@@ -15,7 +15,7 @@ The transformation between coordinate frames are
 
 ![](<../../.gitbook/assets/image (293).png>)
 
-![](<../../images/image (288).png>)
+![](<../../.gitbook/assets/image (288).png>)
 
 > x: Image Coordinates: (u,v,1)
 >
@@ -73,7 +73,7 @@ Thus, from the image acquisition, we express the object position in px without k
 
 It is determining (1) Extrinsic Matrix (2) Intrinsic Matrix including lens distortion
 
-![](<../../images/image (287).png>)
+![](<../../.gitbook/assets/image (287).png>)
 
 * Intrinsic Calibration
   * Lens distortion
@@ -131,7 +131,7 @@ Read here for detailed explanation
 
     \*\*\*\*
 
-![](<../../images/image (301).png>)
+![](<../../.gitbook/assets/image (301).png>)
 
 #### Transformation: 2D-2D or 3D-3D (in the same dimension)
 
@@ -139,7 +139,7 @@ Read here for detailed explanation
 
 ![](<../../.gitbook/assets/image (297).png>)
 
-![](<../../images/image (298).png>)
+![](<../../.gitbook/assets/image (298).png>)
 
 Transformation Types
 
@@ -152,10 +152,10 @@ Transformation Types
 
 ![](<../../.gitbook/assets/image (295).png>)
 
-![](<../../images/image (303).png>)
+![](<../../.gitbook/assets/image (303).png>)
 
 ![](<../../.gitbook/assets/image (296).png>)
 
-![](<../../images/image (299).png>)
+![](<../../.gitbook/assets/image (299).png>)
 
-![](<../../images/image (302).png>)
+![](<../../.gitbook/assets/image (302).png>)

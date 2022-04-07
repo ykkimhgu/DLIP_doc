@@ -4,7 +4,7 @@
 
 A loss function calculates the error between the prediction from the ground truth. It averages all error from all datasets.
 
-![](<../../images/image (29).png>)
+![](<../../.gitbook/assets/image (29).png>)
 
 **Logistic Loss** and **Multinomial Logistic Loss** are other names for **Cross-Entropy loss**.
 
@@ -22,7 +22,7 @@ Softmax with Cross-Entropy Loss is often used. If we use this loss, we will trai
 
 **Note that** The Softmax function cannot be applied independently to each s i , since it depends on all elements of s . For a given class s i , the Softmax function can be computed as:
 
-![](<../../images/image (49).png>)
+![](<../../.gitbook/assets/image (49).png>)
 
 #### Binary Cross-Entropy Loss <a href="#binary-cross-entropy-loss" id="binary-cross-entropy-loss"></a>
 
@@ -46,11 +46,11 @@ We want to get the model weights(W) to minimize the value of loss function for a
 
 Minimize objective function J(w) by updating parameter(w) in opposite direction of gradient of J(w). Following the negative gradient of the Objective Function to find the minimum value of loss. It control the step size by learning rate n
 
-![](<../../images/image (85).png>)
+![](<../../.gitbook/assets/image (85).png>)
 
 Finding the derivative: 1) analytical 2) numerical approach. If possible, use analytical approach for faster and accurate gradient.
 
-![](<../../images/image (47).png>)
+![](<../../.gitbook/assets/image (47).png>)
 
 Examples of Optimizer include
 
@@ -69,4 +69,4 @@ Often SGD is refered to Mini-batch Gradient Descent
 
 {% embed url="https://ruder.io/optimizing-gradient-descent/" %}
 
-![Forward vs backward pass](<../../images/image (50).png>)
+![Forward vs backward pass](<../../.gitbook/assets/image (50).png>)

@@ -15,15 +15,15 @@ Receiver Operating Characteristic(ROC) Curve
 
 ![](<../../.gitbook/assets/image (261).png>)
 
-![](<../../images/image (255).png>)
+![](<../../.gitbook/assets/image (255).png>)
 
 Area under the curve(AUC): a perfect classifier ROC AUC= 1 a purely random classifier ROC AUC= 0.5.
 
-![](<../../images/image (259).png>)
+![](<../../.gitbook/assets/image (259).png>)
 
 * E.g. Find a Person. Red: Person, Green: non-person
 
-![](<../../images/image (258).png>)
+![](<../../.gitbook/assets/image (258).png>)
 
 ### 민감도와 특이 (Covid-19 진단예시)
 
@@ -95,7 +95,7 @@ It use 11-point interpolated average precision to calculate mean Average Precisi
 
 Example: In this example, the whole dataset contains 5 apples only. We collect all the predictions made for apples in all the images and rank it in descending order according to the predicted confidence level. (IoU>0.5)
 
-![](<../../images/image (256).png>)
+![](<../../.gitbook/assets/image (256).png>)
 
 > For example, for rank#3, assume only 3 apples are predicted(2 are correct)
 >
@@ -103,7 +103,7 @@ Example: In this example, the whole dataset contains 5 apples only. We collect a
 >
 > **Recall** is the proportion of TP out of the possible positives = 2/5 = 0.4
 
-![](<../../images/image (265).png>)
+![](<../../.gitbook/assets/image (265).png>)
 
 **Step 2: use 11 point interpolation technique.**
 
@@ -111,7 +111,7 @@ Example: In this example, the whole dataset contains 5 apples only. We collect a
 
 Point interpolation: take the maximum Precision value of all future points of Recall.
 
-![](<../../images/image (257).png>)
+![](<../../.gitbook/assets/image (257).png>)
 
 **Step 3: Calculate the mean Average Precision(mAP)**
 
@@ -119,7 +119,7 @@ Average Precision is the area under the curve of Precision-Recall
 
 mAP is calculated as
 
-![](<../../images/image (266).png>)
+![](<../../.gitbook/assets/image (266).png>)
 
 In our example, AP = (5 × 1.0 + 4 × 0.57 + 2 × 0.5)/11.
 
@@ -135,7 +135,7 @@ No approximation or interpolation is needed. Instead of sampling 11 points, we s
 
 ![](<../../.gitbook/assets/image (264).png>)
 
-![](<../../images/image (267).png>)
+![](<../../.gitbook/assets/image (267).png>)
 
 ### **COCO mAP**
 

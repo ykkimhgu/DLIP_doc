@@ -8,7 +8,7 @@
 * **MultiBox:** this is the name of a technique for bounding box regression developed by Szegedy et al. (we will briefly cover it shortly)
 * **Detector:** The network is an object detector that also classifies those detected objects
 
-![](<../../images/image (204).png>)
+![](<../../.gitbook/assets/image (204).png>)
 
 ## Single Shot MultiBox Detector <a href="#7a47" id="7a47"></a>
 
@@ -16,11 +16,11 @@
 
 Based on VGG-16. No FC layers but added a set of _auxiliary_ convolutional layers (from _conv6_ onwards). This can extract features at multiple scales and progressively decrease the size of the input to each subsequent layer.
 
-![A comparison between two single shot detection models: SSD and YOLO \[5\]. Our SSD model adds several feature layers to the end of a base network, which predict the offsets to default boxes of different scales and aspect ratios and their associated confidences. SSD with a 300 × 300 input size significantly outperforms its 448 × 448 YOLO counterpart in accuracy on VOC2007 test while also improving the speed.](<../../images/image (203).png>)
+![A comparison between two single shot detection models: SSD and YOLO \[5\]. Our SSD model adds several feature layers to the end of a base network, which predict the offsets to default boxes of different scales and aspect ratios and their associated confidences. SSD with a 300 × 300 input size significantly outperforms its 448 × 448 YOLO counterpart in accuracy on VOC2007 test while also improving the speed.](<../../.gitbook/assets/image (203).png>)
 
 #### Baseline: VGG architecture
 
-![VGG architecture (input is 224x224x3)](<../../images/image (205).png>)
+![VGG architecture (input is 224x224x3)](<../../.gitbook/assets/image (205).png>)
 
 #### MultiBox
 
@@ -34,20 +34,20 @@ Multibox contains 11 priors per feature map cell (8x8, 6x6, 4x4, 3x3, 2x2) and o
 
 > 11\*(8\*8)+11\*(6\*6)+...+11\*(2\*2)=1419 + 1(1\*1)=1420
 
-![Architecture of multi-scale convolutional prediction of the location and confidences of multibox](<../../images/image (210).png>)
+![Architecture of multi-scale convolutional prediction of the location and confidences of multibox](<../../.gitbook/assets/image (210).png>)
 
 MultiBox’s loss function also combined two critical components:
 
 _**multibox\_loss = confidence\_loss + alpha \* location\_loss**_
 
-![](<../../images/image (208).png>)
+![](<../../.gitbook/assets/image (208).png>)
 
 * **Confidence Loss**: this measures how confident the network is of the _objectness_ of the computed bounding box. Categorical [cross-entropy](https://rdipietro.github.io/friendly-intro-to-cross-entropy-loss/#cross-entropy) is used to compute this loss.
 * **Location Loss:** this measures how _far away_ the network’s predicted bounding boxes are from the ground truth ones from the training set. [L2-Norm](https://rorasa.wordpress.com/2012/05/13/l0-norm-l1-norm-l2-norm-l-infinity-norm/) is used here.
 
-![](<../../images/image (209).png>)
+![](<../../.gitbook/assets/image (209).png>)
 
-![](<../../images/image (207).png>)
+![](<../../.gitbook/assets/image (207).png>)
 
 ### **Results** <a href="#ce75" id="ce75"></a>
 
@@ -57,7 +57,7 @@ The SSD paper has around 6 bounding boxes per feature map cell.
 
 #### **Pascal VOC 2007**
 
-![](<../../images/image (211).png>)
+![](<../../.gitbook/assets/image (211).png>)
 
 ## Additional Notes On SSD <a href="#52ce" id="52ce"></a>
 

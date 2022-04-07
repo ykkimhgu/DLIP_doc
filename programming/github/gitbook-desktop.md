@@ -76,7 +76,7 @@ Now, Commit to the branch.
 
 It will open a pull request in website. Click 'Create Pull Request'
 
-![](<../../.gitbook/assets/image (306).png>)
+![](<../../.gitbook/assets/image (307).png>)
 
 If the modification is acceptable, then **'Merge pull request'.** Then **Confirm the merge.**
 
