@@ -6,39 +6,52 @@ description: Installation Guide for Deep Learning
 
 ## Deep Learning Installation Guide for Win10 <a href="#f126" id="f126"></a>
 
-Install the following software in the order of
+You must install in the following order. Make sure you install the correct software version as instructed.
 
-![](<../.gitbook/assets/image (146).png>)
+> For DLIP 2022-1 Lecture: 
+>
+> * Python 3.7,  CUDA 10.2, cuDNN 8.0.5
+> * PyTorch 1.10.x
+> * Anaconda for Python 3.7 or  Anaconda of Latest Version
 
-1. **Nvidia GPU driver** **and Library** — To operate the GPU.
-   * **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
-   * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
-2. **Anaconda** — Python and libraries package installer.
-3. **Python**
-4. **IDE (VS CODE)**
-5. **Framework**
-   * **TensorFlow** — DL library, developed by Google.
-   * **Keras** — \*\*\*\* DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
-   * **PyTorch** — Dynamic DL library with GPU acceleration.
-6. **Other libraries**
+---
 
-\---
 
-(updated 2021.4)
 
-## Installation Steps
+# Installation Steps 
+
+(updated 2022.4)
+
+
 
 ### **1.** Install GPU library (CUDA, cuDNN)
 
+**Nvidia GPU driver** **and Library** : To operate the GPU.
+
+* **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
+* **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
+
 [How to install CUDA 10.2, cuDNN 8.0.5](cuda-installation.md#9f39)
+
+
 
 ### **2. Install Anaconda**
 
+**Anaconda** : Python and libraries package installer.
+
 [How to install Anaconda](../programming/dl-library-tools/underconstruction-1.md#conda-installation)
 
-### 3. Install Python (3.7)
 
-How to create virtual environment using Conda (you can skip this now)
+
+
+
+### 3. Install Python
+
+>  Python 3.7 (2022-1)
+
+Python is already installed by installing Anaconda. But, we will make a virtual environment for a specific Python version.
+
+
 
 ```c
 conda create -n py37tf23 python=3.7
@@ -50,7 +63,21 @@ conda create -n py37tf23 python=3.7
 
 [How to Install VS Code](ide/vscode/#installation)
 
+**IDE (VS CODE)**
+
+### 5 Install DL Framework
+
+**Framework**
+
+* **TensorFlow** — DL library, developed by Google.
+* **Keras** — \*\*\*\* DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
+* **PyTorch** — Dynamic DL library with GPU acceleration.
+
+
+
 ### 5-1. Install Framework\_1 (Tensorflow and Keras)
+
+
 
 Run 'Anaconda Prompt' > activate virtual environment > install tensorflow-gpu 2.3.0 packages > install keras
 
