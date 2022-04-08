@@ -8,86 +8,80 @@ This covers the installation of CUDA, cuDNN on Windows 10. This article below as
 
 [See here for more detailed instruction by NVIDIA](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
 
-## Method 1: Installation using Anaconda
+## Method1: Installation using Anaconda (simple method)
 
 Install CUDA and cuDNN with `conda` in Anaconda prompt.
 
-Here, it is assumed you have already installed Anaconda. If you do not have Anaconda installed, follow [How to Install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation)
+Assumed you have already installed Anaconda. Read: [How to Install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation)
 
 > Recommend to use conda virtual environment for specific CUDA version contained in the env.
 
 ### Installing CUDA =10.2
 
-First, Run Anaconda Prompt(admistration)
+Run Anaconda Prompt(admistration).
 
 **(Option1: install in base)**
 
 If you want to install the same CUDA version for all environment, install in (base)
 
+Install CUDA=10.2
+
 ```c
 conda install -c anaconda cudatoolkit==10.2.89
 ```
 
-**(Option2: install in Specific Environment)**
+**(Option2: install in Env.)**
 
-It is recommended to install specific CUDA version in the selected Python environment.&#x20;
+If not, then activate your virtual environment. Then, Install CUDA=10.2
 
 > \[$ENV\_NAME] is your environment name. e.g. `conda activate py37`
 
 ```c
-#conda activate [$ENV_NAME]
-conda activate py37
+conda activate [$ENV_NAME]
 conda install -c anaconda cudatoolkit==10.2.89
 ```
-
-###
 
 ### Installing cuDNN
 
 Conda will find the compatible cuDNN for the installed version of CUDA
 
+The available cuDNN version could be a low version (e.g. cuDNN 7.6.5).
+
 ```c
 conda install -c anaconda cudnn
 ```
 
-The available cuDNN version could be a low version (e.g. cuDNN 7.6.5). If you want to install a higher version, then follow Method 2: Using NVDIA downloader.
+If you want to install a higher version, then follow Method 2.
 
 ![image](https://user-images.githubusercontent.com/38373000/162138066-87f63943-66f7-49b3-836e-f7423bba69e2.png)
 
-##
-
 ## Method 2: Installation using NVIDIA downloader
 
-### Step 1: Check the software you need to install <a href="#0330" id="0330"></a>
+### Step 1: Check the software you will need to install <a href="#0330" id="0330"></a>
 
-Assuming that Windows is already installed on your PC, the additional bits of software you will install as part of these steps are:
+Assuming that Windows is already installed on your PC, the additional bits of software you will install as part of these steps are:-
 
 * Microsoft Visual Studio Community(v2017 or higher )
 * NVIDIA CUDA Toolkit
 * NVIDIA cuDNN
 
-### &#x20;<a href="#d390" id="d390"></a>
-
 ### Step 2: Install Visual Studio Community <a href="#d390" id="d390"></a>
 
 #### Visual Studio is a Prerequisite for CUDA Toolkit <a href="#bf6e" id="bf6e"></a>
 
-Visual Studio Community is required for the installation of Nvidia CUDA Toolkit. If you attempt to download and install CUDA Toolkit for Windows without having first installed Visual Studio, you get a message for installation.
+Visual studio Community is required for the installation of Nvidia CUDA Toolkit (this prerequisite is referred to [here](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)). If you attempt to download and install CUDA Toolkit for Windows without having first installed Visual Studio, you get a message for installation.
 
 Follow: [How to install Visual Studio Community](ide/visual-studio-community.md#how-to-install)
 
-### &#x20;<a href="#2582" id="2582"></a>
-
 ### Step 3: Install CUDA Toolkit for Windows 10 <a href="#2582" id="2582"></a>
 
-> (updated 2022.2 : Install CUDA Toolkit 10.2 )
+> (updated 2021.4 : Install CUDA Toolkit 10.2 )
 
-For more detailed instructions, see[ Nvidia CUDA installation guide for windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
+The CUDA Toolkit (free) can be downloaded from the Nvidia website\*\*.\*\*
 
-**Installing CUDA Toolkit 10.2**&#x20;
+* For more detailed instructions, see[ Nvidia CUDA installation guide for windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
 
-* Go to CUDA download center
-  * The CUDA Toolkit (free) can be downloaded from the Nvidia website. Click here to go to the download center
+**For CUDA Toolkit 10.2 Installation**: click here
 
 {% embed url="https://developer.nvidia.com/cuda-10.2-download-archive" %}
 
@@ -95,16 +89,15 @@ For more detailed instructions, see[ Nvidia CUDA installation guide for windows]
 >
 > **For Latest CUDA Toolkit :** [**check here**](https://developer.nvidia.com/cuda-downloads)
 
-
-
-* Select **Window10 ,** **exe(Network)**. Download the Base Installer and Run.
+Select **Window10**, **exe(Network)** . Download the Base Installer and run.
 
 ![](<../.gitbook/assets/image (106).png>)
 
 ![](<../.gitbook/assets/image (111).png>)
 
-* After Downloading, Install(Recommended Option). It should take 10\~20min to install.
-  * It will be installed in `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2`
+After Downloading, Install(Recommended Option). It should take 10\~20min to install.
+
+It will be installed in `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2`
 
 ![](<../.gitbook/assets/image (139).png>)
 
@@ -118,15 +111,13 @@ After CUDA installation, install additional Patches for CUDA Toolkit.
 
 ### Step 5: Install cuDNN <a href="#3fc4" id="3fc4"></a>
 
-After installing CUDA and its patches, the next step is to find a compatible version of CuDNN.
+After installing CUDA 9.0 base installer and its patches, the next step is to find a compatible version of CuDNN.
 
-* Check which version of **** cuDNN is needed for specific Tensorflow or Pytorch&#x20;
-
-****
+* cuDNN version at [least 8.0](https://www.tensorflow.org/install/gpu).
 
 **Step 5.1: Register NVIDIA**
 
-Visit [CuDNN website](https://developer.nvidia.com/cudnn) to download.
+Visit [CuDNN site](https://developer.nvidia.com/cudnn), to download.
 
 First, you have to register to become a member of the NVIDIA Developer Program (free).
 
@@ -159,7 +150,7 @@ Select cuDNN version for CUDA 10.2. You can also check cuDNN Archive if you cann
 
 ![](https://user-images.githubusercontent.com/38373000/162139770-10184974-4eb4-408c-8ef6-e34a550a918b.png)
 
-3\. Check the installed CUDA in your computer. Run the Command Prompt and type
+Check the installed CUDA in your computer. Run the Command Prompt and type
 
 ```
 nvcc --version
@@ -167,4 +158,4 @@ nvcc --version
 
 
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (16).png>)
