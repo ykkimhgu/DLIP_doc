@@ -4,7 +4,7 @@
 
 Activation function or transfer function is used to determine the output of a neuron or node. It is a mathematical gate in between the input feeding the current neuron and its output going to the next layer.
 
-![](<../../images/image (78).png>)
+![](<../../.gitbook/assets/image (78).png>)
 
 In deep learning, we commonly use non-linear Activation Function include
 
@@ -12,9 +12,9 @@ In deep learning, we commonly use non-linear Activation Function include
 * ReLU(rectified linear unit): most commonly used in CNN (hidden layers)
 * Others: Tanh, Leaky ReLU, Maxout...
 
-![Image from MIT Deeplearning Lecture](<../../images/image (83).png>)
+![Image from MIT Deeplearning Lecture](<../../.gitbook/assets/image (83).png>)
 
-![Cheat sheet of commonly used Activation Function](<../../images/image (77).png>)
+![Cheat sheet of commonly used Activation Function](<../../.gitbook/assets/image (77).png>)
 
 ## Output Activation Function
 

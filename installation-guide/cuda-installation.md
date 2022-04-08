@@ -158,4 +158,4 @@ nvcc --version
 
 
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (16).png>)
