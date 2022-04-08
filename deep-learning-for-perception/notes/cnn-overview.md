@@ -6,7 +6,7 @@
 
 * [image from here](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
-![](<../../.gitbook/assets/image (225).png>)
+![](<../../images/image (225).png>)
 
 Example of simple CNN architecture
 
@@ -20,7 +20,7 @@ LeNet-5 (1998): [image ](https://towardsdatascience.com/illustrated-10-cnn-archi
 
 AlexNet(2012)
 
-![](<../../.gitbook/assets/image (226).png>)
+![](<../../images/image (226).png>)
 
 VGG-16(2014)
 

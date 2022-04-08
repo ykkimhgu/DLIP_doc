@@ -24,7 +24,7 @@ Read the followings for more detailed information
 
 ![](<../../.gitbook/assets/image (181).png>)
 
-![Convolution for a single channel. Image is adopted from medium@IrhumShafkat](<../../.gitbook/assets/image (188).png>)
+![Convolution for a single channel. Image is adopted from medium@IrhumShafkat](<../../images/image (188).png>)
 
 Using 3x3 kernel. from 5x5=25 input features --> 3x3=9 output.
 
@@ -44,9 +44,9 @@ image from[ here](https://d2l.ai/chapter\_convolutional-neural-networks/padding-
 * ⌊(nh−kh+ph+sh)/sh⌋×⌊(nw−kw+pw+sw)/sw⌋.
 * With padding: WxHxC  (W+S-1)/S x (H+S-1)/S x C Without padding: WxHxC  (W-w+S)/S x (H-h+S)/S xC
 
-![Cross-correlation with strides of 3 and 2 for height and width, respectively.](<../../.gitbook/assets/image (234).png>)
+![Cross-correlation with strides of 3 and 2 for height and width, respectively.](<../../images/image (234).png>)
 
-![A stride 2 convolution w/o padding \[1\]](<../../.gitbook/assets/image (179).png>)
+![A stride 2 convolution w/o padding \[1\]](<../../images/image (179).png>)
 
 ### Filter vs Kernel
 
@@ -70,9 +70,9 @@ Then, three channels are summed by element-wise addition to form one single chan
 
 ![](<../../.gitbook/assets/image (185).png>)
 
-![Another way to think about 2D convolution: thinking of the process as sliding a 3D filter matrix through the input layer. Notice that the input layer and the filter have the same depth (channel number = kernel number). The 3D filter moves only in 2-direction, height & width of the image (That’s why such operation is called as 2D convolution although a 3D filter is used to process 3D volumetric data). The output is a one-layer matrix](<../../.gitbook/assets/image (177).png>)
+![Another way to think about 2D convolution: thinking of the process as sliding a 3D filter matrix through the input layer. Notice that the input layer and the filter have the same depth (channel number = kernel number). The 3D filter moves only in 2-direction, height & width of the image (That’s why such operation is called as 2D convolution although a 3D filter is used to process 3D volumetric data). The output is a one-layer matrix](<../../images/image (177).png>)
 
-![](<../../.gitbook/assets/image (229).png>)
+![](<../../images/image (229).png>)
 
 ## 3D Convolution
 
@@ -145,7 +145,7 @@ For example: Input 7\*7\*3 --> 128 of 3\*3\*3 filters --> 5\*5\*128 output
   * Each kernel convoles with 1 channel(only) layer input : (5\*5\*1) for each kernel
   * Then, stack the maps to get the final output e.g. (5\*5\*3)
 
-![Depthwise separable convolution — first step: Instead of using a single filter of size 3 x 3 x 3 in 2D convolution, we used 3 kernels, separately. Each filter has size 3 x 3 x 1. Each kernel convolves with 1 channel of the input layer (1 channel only, not all channels!). Each of such convolution provides a map of size 5 x 5 x 1. We then stack these maps together to create a 5 x 5 x 3 image. After this, we have the output with size 5 x 5 x 3.](<../../.gitbook/assets/image (178).png>)
+![Depthwise separable convolution — first step: Instead of using a single filter of size 3 x 3 x 3 in 2D convolution, we used 3 kernels, separately. Each filter has size 3 x 3 x 1. Each kernel convolves with 1 channel of the input layer (1 channel only, not all channels!). Each of such convolution provides a map of size 5 x 5 x 1. We then stack these maps together to create a 5 x 5 x 3 image. After this, we have the output with size 5 x 5 x 3.](<../../images/image (178).png>)
 
 * Step 2: 1\*1 Convolution
   * Apply 1\*1 convolution with 1\*1\*3 kernels to get 5\*5\*1 map.
@@ -159,7 +159,7 @@ For example: Input 7\*7\*3 --> 128 of 3\*3\*3 filters --> 5\*5\*128 output
 
 ![Standard 2D convolution](<../../.gitbook/assets/image (190).png>)
 
-![The overall process of depthwise separable convolution.](<../../.gitbook/assets/image (189).png>)
+![The overall process of depthwise separable convolution.](<../../images/image (189).png>)
 
 Calculation comparison
 
@@ -194,7 +194,7 @@ Introduced by[ ShuffleNet(2017)](https://arxiv.org/abs/1707.01083) for computati
 
 Read [this blog ](https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f)for the paper explanations
 
-![Channel shuffle.](<../../.gitbook/assets/image (199).png>)
+![Channel shuffle.](<../../images/image (199).png>)
 
 ## Pointwise grouped convolution
 

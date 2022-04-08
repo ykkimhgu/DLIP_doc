@@ -72,7 +72,7 @@ Common tactics for both bias and variance:
 * The training loss continues to decrease until the end of training
 * The training loss is much higher than the optimal performance
 
-![Image source from (machinelearningmastery.com)](<../../.gitbook/assets/image (3).png>)
+![Image source from (machinelearningmastery.com)](<../../images/image (3).png>)
 
 **Overfit curve**
 
@@ -80,21 +80,21 @@ Common tactics for both bias and variance:
 * The plot of validation loss decreases to a point and begins increasing again.
 * The plot of validation loss is much higher than training loss
 
-![Image source from (machinelearningmastery.com)](<../../.gitbook/assets/image (7).png>)
+![Image source from (machinelearningmastery.com)](<../../images/image (7).png>)
 
 **Other examples**
 
 * Low Variance and High Bias
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../images/image (6).png>)
 
 * High Variance, and Low bias --> add more training data
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../images/image (4).png>)
 
 * High Variance and High Bias
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../images/image (2).png>)
 
 #### For very small training sets
 
