@@ -25,11 +25,11 @@ Assignment
 
 ### Python
 
-P1. Python Tutorial: [Learning Python in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonBasics_2021.ipynb)
+P1. Python Tutorial: [Learning Python in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_PythonBasics_2022.ipynb)
 
 ### Numpy
 
-N1. NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Numpy_2021.ipynb)
+N1. NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
 
 ## Exercise
 
