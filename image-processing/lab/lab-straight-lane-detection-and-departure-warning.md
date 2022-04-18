@@ -10,35 +10,80 @@ You can use any algorithm you learnt in class. If you want to use any other algo
 
 You must explain the whole process with an algorithm flowchart. Show and explain selected example results for each image process.
 
+
+
+Demo Video
+
 {% embed url="https://youtu.be/onMBtLw2ag8" %}
+
+
 
 
 
 ## Methods/Requirement
 
-\-       Detect and segment lanes only from the test image frames.
+* Download test videos
+  * [Test Video- Straigt Line only](https://drive.google.com/file/d/13ZiuL3sDKcptWPdPC_KzsUNcWIStWpWl/view?usp=sharing)
+  * [Test Video - Lane Change](https://drive.google.com/file/d/1eO_fmHNfhX0FEU1rtiVpZxfOJEoksSLf/view?usp=sharing)
 
-\-       Draw only one line per lane
+* Detect and segment lanes only from the test image frames.
 
-\-       Display an approximated rate of the lane departure (unit:%)
+* Draw only one line per lane
 
-\-       If the vehicle has departed from the current lanes then show a warning sign.
+* Display an approximated rate of the lane departure (unit:%)
 
-## Instructions
+* If the vehicle has departed from the current lanes then show a warning sign.
 
-Your program will be evaluated on the validation dataset which will not be provided.
+* Display FPS (frame per sec) for each frame processing
 
-The lab score will be based on the algorithm performance, algorithm design process, and the quality of the report.
+
+
+
+
+## Score
+
+Your program will be evaluated on the validation dataset which will not be provided. The lab score will be based on the algorithm performance, algorithm design process, and the quality of the report.
+
+Also, your code will be tested on another test video file.
+
+
 
 Do not duplicate the program from other website or from previous lab report.   You can refer to any technical reports as long as the proper citation is used.
 
-The report should include
+### Report [50%]
 
-* Introduction / Overview (Algorithm flowchart) / Algorithm(Image processing steps) / Final Result &  Analysis / Conclusion / Appendix: program code
+The report must include 
 
-&#x20;Submit (1) report in PDF and in WORD (2) source code (3) demo movie clip \
+* [5] Introduction
+* [15] Algorithm Overview with flowchart  (DO NOT DRAW BY HAND)
+* [25] Algorithm 
+  * Each Image Process steps and results
+  * Final Result &  Analysis
+* [5] Conclusion
+* Appendix: program code
 
 
+
+### Demo Video [50%]
+
+* Will be scored depending on the detection accuracy and speed
+* Should also be accurate on other test video.
+
+
+
+
+
+##  Submit 
+
+* Report in both PDF and .md source code with text image files.  
+* Demo movie clip
+* Source files
+
+
+
+
+
+## Appendix
 ### Some Examples:
 
 ![](<../../.gitbook/assets/image (95).png>)
