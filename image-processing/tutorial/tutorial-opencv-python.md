@@ -544,6 +544,10 @@ Solution codes for this tutorials can be downloaded
 
 
 
+---
+
+
+
 # Exercise
 
 ## Beginner Level Exercise
@@ -572,8 +576,8 @@ Detect Pupil/Iris and draw circles.
 
 
 
-![](C:\Users\ykkim\source\repos\GithubDesktop\DLIP_doc\.gitbook\assets\eyepupil.png)
 
+![](../../.gitbook/assets/eyepupil.png)
 
 
 
