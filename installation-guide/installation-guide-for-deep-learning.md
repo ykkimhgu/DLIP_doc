@@ -55,7 +55,7 @@ conda update -n base -c defaults conda
 conda create -n py37 python=3.7
 ```
 
-​&#x20;
+&#x20;
 
 ![](https://user-images.githubusercontent.com/38373000/162149298-8e254ebd-c698-4ab9-bb80-40b24ce2b438.png)
 
@@ -76,6 +76,10 @@ conda install numpy
 conda install -c conda-forge matplotlib
 conda install -c conda-forge opencv
 ```
+
+> If installed Numpy is not recognized after installation with `conda`, then install Numpy using `pip`
+>
+> `pip install numpy`
 
 ###
 

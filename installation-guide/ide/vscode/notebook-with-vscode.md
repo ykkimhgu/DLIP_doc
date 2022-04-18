@@ -1,13 +1,18 @@
 # Notebook with VS Code
 
-https://opensourceoptions.com/blog/jupyter-notebooks-in-visual-studio-code/
+
 
 It is simple to get Jupyter or Colab notebooks running inside Visual Studio Code.
 
 1. Install the necessary Jupyter notebook extensions **in VS Code**
+
 2. Install the Jupyter module **in Conda Python Environment**
-3. Open or Make a .ipynb file
+
+3. Open or Make a *.ipynb file
+
 4. Run the code
+
+   
 
 ## 1. Install VSC Extensions to Enable Jupyter Notebooks
 

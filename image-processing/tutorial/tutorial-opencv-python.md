@@ -1,107 +1,154 @@
 # Tutorial: OpenCV Python
 
-# 
 
-This tutorial code is based on Colab Notebook.  
 
-* [Colab source code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_2022.ipynb)
+
+
+## Preparation
+
+This tutorial code is based on Google Colab Notebook. 
+
+Download the tutorial source code and image files.
+
+* [Exercise notebook code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_Exercise_2022.ipynb)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
 
 
 
 
-### Running the code in VS Code (option)
+### (Option) Running tutorial code in VSCode 
 
-If you want to run this tutorial with Visual Studio Code, then you need to follow [Installation Instruction](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+If you want to run this tutorial with Visual Studio Code on Local drive, follow the [Installation Instructions for](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
-* Anaconda
-* VS Code
-* Numpy, OpenCV installed in Conda Environment
+* [Anaconda](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning) 
+* [VS Code](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+* [Numpy, OpenCV in Conda Environment](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
 
 
 Also, you need to know how to 
 
 * [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
-* [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
+* [How to program Notebook(Colab) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
 
 
 
-Download the code for VSCODE
 
-* [Notebook source code for VSC](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_vscode_2022.ipynb)
-* [Python source code for VSC](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_opencv_python_vscode_2022.py)
-
-
-
-
+# Tutorial
 ## Import OpenCV Library
 
 ```python
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
-# If COLAB is used
-from google.colab.patches import cv2_imshow as cv_imshow
+
+```
+
+---
+
+
+## Upload Image Files in Colab
+
+#### Option 1:  Upload Image Files in Colab
+Read how to load image file in Colab
+
+https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/colab#loading-image-file-in-colab
+
+#### Option 2: Upload image file from local drive
+```
+from google.colab import files
+uploaded=files.upload()
 ```
 
 
 
-## Open & Show Image File
 
-> matplotlib에서 rgb 채널 순서가 다름
 
-* matplot: R-B-G
-* OpenCV: G-B-R
+## Load & Show Image File
+
+### Option 1 (recommend): Using matplot  `plt.imshow()`
+This method is recommended for showing images.  This tutorial will use matplotlib functions. 
+> matplotlib에서 rgb 채널 순서가 다르다
+* matplot:  R-B-G
+* OpenCV:   G-B-R
 
 ```python
 # Load image
 img = cv.imread('handonglogo.jpg')
 
 
-# Show Image using Opencv imshow
-#cv.imshow('frame',img)    # NOT available in COLAB or Jupyter
-cv_imshow(img)             # Instead use this
-
-
-
-imgPlt = cv.imread('handonglogo.jpg', cv.COLOR_BGR2RGB)
-# matplotlib에서 rgb 채널 순서가 다르다
-# matplot:  R-B-G
-# OpenCV:   G-B-R
-
 # Show Image using matplotlib
+# matplotlib에서 rgb 채널 순서가 다름
+# matplot:  R-B-G
+# OpenCV:   B-G-R
+imgPlt = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
 plt.imshow(imgPlt),plt.title('Original')
 plt.xticks([]), plt.yticks([])
 plt.show()
+
+```
+
+### Option 2 (for .py only): Using OpenCV imshow()
+Python files running on local drive supports OpenCV  `cv.imshow()`
+
+BUT, Notebook files such as Colab and Jupyter does NOT support  OpenCV  `cv.imshow()`
+```python
+# Load image
+img = cv.imread('handonglogo.jpg')
+
+# Show Image using colab imshow
+cv.imshow('source',img) 
+```
+### Option 3 (colab)
+CoLAB provides a similar function called  `cv2_imshow()`.  
+But this is NOT recommended method. Import
+
+`from google.colab.patches import cv2_imshow as cv_imshow`
+```python
+# Import COLAB imshow() 
+from google.colab.patches import cv2_imshow as cv_imshow
+
+# Load image
+img = cv.imread('handonglogo.jpg')
+
+# Show Image using colab imshow
+cv_imshow(img) 
 ```
 
 
 
 
 
-## Open WebCam
-> cv.VideoCapture(0) is Not available in Colab
+## Open WebCam ( *py only)
+
+[Download example src  in python](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_opencv_python_WebCam_vscode_2022.py)
+
+> cv.VideoCapture(0) is NOT available in Colab.
 
 ```python
-import cv2
-import numpy as np
+# Webcam is used for *.py code. 
+# Using webcam in notebook(colab, jupyter) requires more complex setup.
 
-cap = cv2.VideoCapture(0)
+cap = cv.VideoCapture(0)
 
 while(1):
     _, frame = cap.read()
 
-    cv2.imshow('frame',frame)
+    cv.imshow('frame',frame)
     
-    k = cv2.waitKey(5) & 0xFF
+    k = cv.waitKey(5) & 0xFF
     if k == 27:
         break
 
-cv2.destroyAllWindows()
+cv.destroyAllWindows()
 cap.release()
 ```
+
+---
+
+
 
 
 
@@ -132,6 +179,8 @@ plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 ![image](https://user-images.githubusercontent.com/38373000/160382063-837f2751-5590-416f-95dd-fd30fd4214ac.png)
+
+----
 
 
 
@@ -175,7 +224,10 @@ plt.show()
 Example code
 
 ```python
+# Read image
 img = cv.imread('sudoku.jpg',0)
+
+# Preprocessing
 img = cv.medianBlur(img,5)
 
 # Global threshold
@@ -275,10 +327,6 @@ closing = cv.morphologyEx(img, cv.MORPH_CLOSE, kernel)
 
 
 # Plot results
-#cv.imshow('Original',img)
-#cv.imshow('Opening',opening)
-#cv.imshow('Closing',closing)
-
 titles = ['Original ', 'Opening','Closing']
 images = [src, opening, closing]
 
@@ -291,8 +339,11 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382254-702e76cd-5ead-434f-8dce-32e06bd4d7d5.png)
 
+---
 
-## Color InRange
+
+
+## Color Segmetation (InRange)
 
 [inRange()](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
 
@@ -301,14 +352,14 @@ plt.show()
 Example code
 
 ```python
-# matplotlib에서 rgb 채널 순서가 다르다
-
 # Open Image in RGB
-img = cv.imread('color_ball.jpg',cv.COLOR_BGR2RGB)
-
+img = cv.imread('color_ball.jpg')
 
 # Convert BRG to HSV 
 hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+
+# matplotlib: cvt color for display
+imgPlt = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 
 # Color InRange()
 lower_range = np.array([100,128,0])
@@ -320,30 +371,26 @@ mask = cv.inRange(hsv, lower_range, upper_range)
 dst = cv.bitwise_and(hsv,hsv, mask= mask)
 
 # Plot Results
-#cv2.imshow('frame',frame)
-#cv2.imshow('res',res)
 titles = ['Original ', 'Mask','Inrange']
-images = [img, mask, dst]
+images = [imgPlt, mask, dst]
 
 for i in range(3):
     plt.subplot(1,3,i+1),plt.imshow(images[i])
     plt.title(titles[i])
     plt.xticks([]),plt.yticks([])
 plt.show()
-
-cv_imshow(img)
 ```
 ![image](https://user-images.githubusercontent.com/38373000/160382318-ee98c3be-9064-403a-b56f-54cbb15c9d81.png)
+
+-----
 
 
 
 ## Edge & Line & Circle Detection
 
-
-
 ### Edge Detection
 
-Example code
+Example code 1
 
 ```python
 # Load image
@@ -361,9 +408,11 @@ for i in range(2):
     plt.title(titles[i])
     plt.xticks([]),plt.yticks([])
 plt.show()
-
-
-
+```
+Example code 2
+```python
+# Load image
+img = cv.imread('coins.png',cv.COLOR_BGR2GRAY)
 # Apply Thresholding then Canndy Edge
 thVal=127
 ret,thresh1 = cv.threshold(img,thVal,255,cv.THRESH_BINARY)
@@ -389,11 +438,12 @@ plt.show()
 Example code
 
 ```python
-# Load image
-img = cv.imread('coins.png')
+# Read Image
+src = cv.imread('coins.png')
 
 # Convert it to grayscale:
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
+
 
 # Reduce noise and avoid false circle detection
 gray = cv.medianBlur(gray, 5)
@@ -404,22 +454,26 @@ rows = gray.shape[0]
 circles = cv.HoughCircles(gray, cv.HOUGH_GRADIENT, 1, rows / 8,
                                param1=100, param2=30,
                                minRadius=1, maxRadius=30)
-    
+
 # Draw circle
 if circles is not None:
-  circles = np.uint16(np.around(circles))
-  for i in circles[0, :]:
+    circles = np.uint16(np.around(circles))
+    for i in circles[0, :]:
         center = (i[0], i[1])
         # Draw circle center
         cv.circle(src, center, 1, (0, 100, 100), 3)
         # Draw circle outline
         radius = i[2]
-        cv.circle(src, center, radius, (255, 0, 255), 3)
+        cv.circle(src, center, radius, (255, 0, 0), 3)
 
 
-# Plot Results
-cv_imshow(src)
-#cv.imshow("detected circles", src)
+# Plot images
+titles = ['Original with Circle Detected']
+srcPlt=cv.cvtColor(src,cv.COLOR_BGR2RGB)
+plt.imshow(srcPlt)
+plt.title(titles)
+plt.xticks([]),plt.yticks([])
+plt.show()
 ```
 ![image](https://user-images.githubusercontent.com/38373000/160382486-c8b276f3-92c3-46b0-ac20-1144f0427186.png)
 
@@ -475,6 +529,16 @@ plt.show()
 ```
 ![image](https://user-images.githubusercontent.com/38373000/160382536-53ac2788-34e5-4f1b-9dbf-12736cd13487.png)
 
+
+
+
+
+## Solution Code
+
+Solution codes for this tutorials can be downloaded 
+
+* [Source code (*.ipynb) for COLAB](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_2022.ipynb)
+* [Source code (*.ipynb) for VSCode](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonOpenCV/Tutorial_Opencv_Python_vscode_2022.ipynb)
 
 
 
