@@ -113,7 +113,10 @@
   * [Jupyter Notebook](installation-guide/ide/jupyter/README.md)
     * [Install](installation-guide/ide/jupyter/intall-jupyter.md)
     * [How to use](installation-guide/ide/jupyter/example-jupyter.md)
-* [Ubuntu](installation-guide/ubuntu.md)
+* [Ubuntu](installation-guide/ubuntu/README.md)
+  * [Ubuntu 18.04 Installation](installation-guide/ubuntu/ubuntu-18.04-installation.md)
+  * [Ubuntu Installation using Docker in Win10](installation-guide/ubuntu/ubuntu-installation-using-docker-in-win10.md)
+  * [Ubuntu Troubleshooting](installation-guide/ubuntu/ubuntu-troubleshooting.md)
 * [ROS](installation-guide/ros.md)
 
 ## Programming
