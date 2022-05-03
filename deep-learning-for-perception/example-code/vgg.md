@@ -8,13 +8,13 @@ Read about VGG: click here
 
 ### VGG-16
 
-![](<../../.gitbook/assets/image (224).png>)
+![](<../../images/image (224) (1).png>)
 
-![](<../../.gitbook/assets/image (238) (1) (1).png>)
+![](<../../images/image (233) (1).png>)
 
 ### VGG-19
 
-![](<../../.gitbook/assets/image (235).png>)
+![](<../../images/image (232) (1).png>)
 
 ## Keras
 

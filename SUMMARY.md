@@ -88,7 +88,7 @@
   * [Drum Playing Detection](dlip-project/dlip-projects/drum-playing-detection.md)
 * [DLIP 2020 Projects](dlip-project/dlip-2020-projects.md)
 
-## Installation Gudie <a href="#installation-guide" id="installation-guide"></a>
+## Installation Guide
 
 * [Installation Guide](installation-guide/installation-guide-for-deep-learning.md)
 * [Anaconda](installation-guide/anaconda.md)
@@ -113,6 +113,8 @@
   * [Jupyter Notebook](installation-guide/ide/jupyter/README.md)
     * [Install](installation-guide/ide/jupyter/intall-jupyter.md)
     * [How to use](installation-guide/ide/jupyter/example-jupyter.md)
+* [Ubuntu](installation-guide/ubuntu.md)
+* [ROS](installation-guide/ros.md)
 
 ## Programming
 
