@@ -47,6 +47,7 @@
   * [Tutorial: Keras](deep-learning-for-perception/dp-tutorial/tutorial-keras.md)
   * [Tutorial: Yolov3 in Keras](deep-learning-for-perception/dp-tutorial/tutorial-yolov3-in-keras.md)
   * [Tutorial: Yolov5 in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch.md)
+  * [Tutorial: Tensorboard in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-tensorboard-in-pytorch.md)
 * [Keras Example Code](deep-learning-for-perception/example-code/README.md)
   * [Train Dataset](deep-learning-for-perception/example-code/train-dataset.md)
   * [Train custom dataset](deep-learning-for-perception/example-code/train-custom-dataset.md)
