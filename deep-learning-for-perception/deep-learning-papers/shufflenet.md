@@ -40,6 +40,6 @@ Given the input _c\_×\_h\_×\_w_, and bottleneck channels _m_, [ResNet](https:/
 
 * With similar accuracy, ShuffleNet is much more efficient than [VGGNet](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11), [GoogLeNet](https://medium.com/coinmonks/paper-review-of-googlenet-inception-v1-winner-of-ilsvlc-2014-image-classification-c2b3565a64e7), [AlexNet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160) and [SqueezeNet](https://towardsdatascience.com/review-squeezenet-image-classification-e7414825581a).
 
-![](<../../.gitbook/assets/image (200).png>)
+![](<../../images/image (200).png>)
 
 * Compared with [AlexNet](https://medium.com/coinmonks/paper-review-of-alexnet-caffenet-winner-in-ilsvrc-2012-image-classification-b93598314160), ShuffleNet 0.5× model still achieves \~13× actual speedup under comparable classification accuracy (the theoretical speedup is 18×).

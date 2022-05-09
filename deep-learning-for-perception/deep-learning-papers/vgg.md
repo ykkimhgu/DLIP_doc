@@ -2,9 +2,9 @@
 
 [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556), Simonyan, Karen, and Andrew Zisserman. 2015 ICLR & preprint arXiv (2014)
 
-![VGG architecture image from https://neurohive.io/en/popular-networks/vgg16/](<../../.gitbook/assets/image (247).png>)
+![VGG architecture image from https://neurohive.io/en/popular-networks/vgg16/](<../../images/image (247).png>)
 
-![](<../../.gitbook/assets/image (254).png>)
+![](<../../images/image (254).png>)
 
 VGGNet is invented by VGG ([Visual Geometry Group](http://www.robots.ox.ac.uk/\~vgg/)) from University of Oxford. Though VGGNet is the **1st runner-up**, of **ILSVRC 2014 in the classification task.** Accuracy error less than 10%
 
@@ -12,7 +12,7 @@ VGGNet is invented by VGG ([Visual Geometry Group](http://www.robots.ox.ac.uk/\~
 >
 > Improved from AlexNet(-8) 16.4% to VGG-16 7.3%)
 
-![](<../../.gitbook/assets/image (249).png>)
+![](<../../images/image (249).png>)
 
 A very important paper on CNN. It uses only 3x3 CONV and many networks are based on VGG architecture.
 
@@ -24,7 +24,7 @@ A very important paper on CNN. It uses only 3x3 CONV and many networks are based
 
 ![](<../../.gitbook/assets/image (253).png>)
 
-![a) Feature Map from 7x7 CONV has 7x7 receptive field. b) Feature Map from 3 layers of 3x3 also has 7x7 receptive field. Image from https://medium.com/@msmapark2/](<../../.gitbook/assets/image (245).png>)
+![a) Feature Map from 7x7 CONV has 7x7 receptive field. b) Feature Map from 3 layers of 3x3 also has 7x7 receptive field. Image from https://medium.com/@msmapark2/](<../../images/image (245).png>)
 
 ## **Ablation Study: VGG-16, 19**
 
@@ -32,7 +32,7 @@ A very important paper on CNN. It uses only 3x3 CONV and many networks are based
 2. VGG-16 obtains 8.8% error rate which means the deep learning network is still improving by adding number of layers.
 3. VGG-19 obtains 9.0% error rate which means the deep learning network is NOT improving by adding number of layers. Thus, authors stop adding layers.
 
-![](<../../.gitbook/assets/image (248).png>)
+![](<../../images/image (248).png>)
 
 ## **Multi-Scale Training and Testing**
 
@@ -40,7 +40,7 @@ Rescale from 224 to 256\~512px. Then crop to 224px which contains the object ful
 
 ![](<../../.gitbook/assets/image (250).png>)
 
-![](<../../.gitbook/assets/image (246).png>)
+![](<../../images/image (246).png>)
 
 ## Training
 
