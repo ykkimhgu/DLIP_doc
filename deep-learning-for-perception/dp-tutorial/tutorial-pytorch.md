@@ -8,68 +8,79 @@
 
 1.  Install PyTorch for Cuda 10.2
 
-    Run the command in Anaconda Prompt(administrator mode) Python 3.7 Environment[See here for more detail](https://ykkim.gitbook.io/dlip/dlip-installation-guide/framework/pytorch)
+    Run the command in Anaconda Prompt(administrator mode) Python 3.7 Environment. [See here for more detail](https://ykkim.gitbook.io/dlip/dlip-installation-guide/framework/pytorch)
+
+> Youn should install pytorch in a virtual environment
 
 ```
 conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 ```
 
-1. Also, watch [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
-2. Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
+
+
+2\. Watch Video of [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
+
+* You need to know 'What is Tensor in Pytorch'.
+
+3\. Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
 
 * Finish this tutorial before class
 
-1. Read more about
 
-* What is Tensor in Pytorch?
 
 ## Class Tutorial
 
-### Tutorial
-
-#### MLP
+### MLP
 
 * T1-1: [Train a simple MLP (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PyTorch\_MNIST\_MLP\_Part1\_Train.ipynb)
 * T1-2: [Test with loading trained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PyTorch\_MNIST\_MLP\_Part2\_Test.ipynb)
 
-#### CNN- Classification
+###
 
-**Create simple CNN model**
+### CNN- Classification
+
+#### **Create a simple CNN model**
+
+Download module:  [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/MY\_DLIP.py)
 
 * T2-1: [Create LeNeT CNN model and Train with opendataset (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_LeNet5\_CIFAR10\_CNN\_Part1.ipynb)
 * T2-2: [Test with loading trained model(LeNet-5)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_LeNet5\_CIFAR10\_CNN\_Part2.ipynb)
 * T2-3-1: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_VGG16\_CNN\_Part3\_1.ipynb)
 * T2-3-2: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_VGG16\_CIFAR10\_CNN\_Part3\_2.ipynb)
 
-**Load torchvision.model**
+#### **Load torchvision.model**
 
 * T3-1: Test using Pretrained Model (VGG, Inception, ResNet)
 * T3-2: Train torchvision model with OpenDataset(CIFAR10)
 * T3-3: Prepare Custom Dataset for training
 
-#### CNN- Object Detection
+###
 
-**Test Object Detection model provided in pytorch**
+### CNN- Object Detection
 
-* T4-1: Test using Pretrained YOLOv5 with COCO dataset
+#### **Object Detection with Pretrained Model in pytorch**
 
-**YOLO v5 in PyTorch**
+* T4-1: Test using Pretrained Object detection model in pytorch
+
+#### **YOLO v5 in PyTorch**
 
 * T4-2: Test using Pretrained YOLOv5 with COCO dataset
-* T4-3: Train YOLOv5 with with Custom Dataset
+* T4-3: Train YOLOv5 with a Custom Dataset
 
-### LAB
+## LAB
 
-#### LAB: Classification
+### LAB: Classification
 
 Create a CNN model(VGG-19) and Train with Custom Dataset
 
 참고: https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_VGG\_Keras\_2021.ipynb
 
-#### LAB: Object Detection
+### LAB: Object Detection
 
 You should design an object detection problem related to your interested area. For the dataset, you can search kaggle.com or any other open dataset sites.
 
-### Useful Site
+###
 
-[Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)
+## Useful Sites
+
+1. Pytorch tutorial codes: [Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)
