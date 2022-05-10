@@ -48,11 +48,14 @@ Download module:  [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/T
 * T2-3-1: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_VGG16\_CNN\_Part3\_1.ipynb)
 * T2-3-2: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_VGG16\_CIFAR10\_CNN\_Part3\_2.ipynb)
 
-#### **Load torchvision.model**
+#### **Using Popular CNN models from torchvision.models**
 
-* T3-1: Test using Pretrained Model (VGG, Inception, ResNet)
-* T3-2: Train torchvision model with OpenDataset(CIFAR10)
-* T3-3: Prepare Custom Dataset for training
+* T3-1: [Test using Pretrained Model (VGG, Inception, ResNet)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T3\_1\_Inference\_using\_Pre\_trained\_Model\_\(classification\).ipynb)
+* T3-2: [Train Opendataset with Transfer Learning of Pretrained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T3\_2\_Transfer\_Learning\_using\_Pre\_trained\_Models\_\(classification\).ipynb)
+
+#### Assignment: Classification&#x20;
+
+* T3-3: [(Assignment) Classification with Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Assignment\_PyTorch\_T3\_3\_Transfer\_Learning\_using\_Pre\_trained\_Models\_\(classification\).ipynb)
 
 ###
 
@@ -69,13 +72,13 @@ Download module:  [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/T
 
 ## LAB
 
-### LAB: Classification
+### LAB: Object Detection 1 (
 
 Create a CNN model(VGG-19) and Train with Custom Dataset
 
 참고: https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_VGG\_Keras\_2021.ipynb
 
-### LAB: Object Detection
+### LAB: Object Detection 2 (Custom data)
 
 You should design an object detection problem related to your interested area. For the dataset, you can search kaggle.com or any other open dataset sites.
 
