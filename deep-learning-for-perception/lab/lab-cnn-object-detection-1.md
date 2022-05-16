@@ -16,6 +16,12 @@ For the given dataset, the maximum available parking space is 13. If the current
 
 
 
+![image](https://user-images.githubusercontent.com/38373000/168618818-54cae273-6bb4-40b6-99c8-938e5b5ab54e.png)
+
+
+
+
+
 ## Guidelines
 
 The whole code should be programmed using OpenCV-Python and Pytorch. 
