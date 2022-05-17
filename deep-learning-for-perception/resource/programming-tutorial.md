@@ -38,7 +38,7 @@
 
 #### Others
 
-[Scipy Lecture Notes](http://www.scipy-lectures.org) (scipy-lectures.org)
+[Scipy Lecture Notes](http://www.scipy-lectures.org/) (scipy-lectures.org)
 
 [Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) (Stanford CS231n)
 

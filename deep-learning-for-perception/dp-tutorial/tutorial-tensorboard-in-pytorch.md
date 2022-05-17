@@ -35,7 +35,7 @@ $ python main.py
 
 **3. Open the TensorBoard**
 
-To run the TensorBoard, open a new terminal and run the command below. Then, open [http://localhost:6006/](http://localhost:6006) on your web browser.
+To run the TensorBoard, open a new terminal and run the command below. Then, open [http://localhost:6006/](http://localhost:6006/) on your web browser.
 
 ```
 $ tensorboard --logdir='./logs' --port=6006

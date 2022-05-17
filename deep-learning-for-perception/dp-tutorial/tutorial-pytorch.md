@@ -61,22 +61,18 @@ Download module:  [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/T
 
 ### CNN- Object Detection
 
-#### **Object Detection with Pretrained Model in pytorch**
-
-* T4-1: Test using Pretrained Object detection model in pytorch
-
 #### **YOLO v5 in PyTorch**
 
-* T4-2: Test using Pretrained YOLOv5 with COCO dataset
-* T4-3: Train YOLOv5 with a Custom Dataset
+* T4-1: [Test using Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T4\_1\_Inference\_using\_Pretrained\_YOLOv5\_with\_COCO\_2022.ipynb)
+* T4-2: Train YOLOv5 with a Custom Dataset
 
 ## LAB
 
-### LAB: Object Detection 1 (
+### LAB: Object Detection 1&#x20;
 
-Create a CNN model(VGG-19) and Train with Custom Dataset
+Parking Vehicle Detection&#x20;
 
-참고: https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_VGG\_Keras\_2021.ipynb
+
 
 ### LAB: Object Detection 2 (Custom data)
 

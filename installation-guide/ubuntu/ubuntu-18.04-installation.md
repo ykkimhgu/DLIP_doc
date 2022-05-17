@@ -29,7 +29,7 @@ Ubuntu-18.04.xx-desktop-amd64.iso 파일 다운로드
 
 **Rufus 프로그램 다운로드 및 실행**
 
-설치파일: [https://rufus.ie/](https://rufus.ie)
+설치파일: [https://rufus.ie/](https://rufus.ie/)
 
 Rufus 설치 후 실행하면 아래와 같은 툴이 실행
 
