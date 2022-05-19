@@ -74,7 +74,7 @@ Assuming that Windows is already installed on your PC, the additional bits of so
 
 Visual Studio Community is required for the installation of Nvidia CUDA Toolkit. If you attempt to download and install CUDA Toolkit for Windows without having first installed Visual Studio, you get a message for installation.
 
-Follow: [How to install Visual Studio Community](ide/visual-studio-community.md#how-to-install)
+Follow: [How to install Visual Studio Community](../ide/visual-studio-community.md#how-to-install)
 
 ### &#x20;<a href="#2582" id="2582"></a>
 
@@ -99,22 +99,22 @@ For more detailed instructions, see[ Nvidia CUDA installation guide for windows]
 
 * Select **Window10 ,** **exe(Network)**. Download the Base Installer and Run.
 
-![](<../.gitbook/assets/image (106).png>)
+![](<../../.gitbook/assets/image (106).png>)
 
-![](<../.gitbook/assets/image (111).png>)
+![](<../../.gitbook/assets/image (111).png>)
 
 * After Downloading, Install(Recommended Option). It should take 10\~20min to install.
   * It will be installed in `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2`
 
-![](<../.gitbook/assets/image (139).png>)
+![](<../../.gitbook/assets/image (139).png>)
 
-![](<../.gitbook/assets/image (117).png>)
+![](<../../.gitbook/assets/image (117).png>)
 
 ### Step 4: Install CUDA patches <a href="#3873" id="3873"></a>
 
 After CUDA installation, install additional Patches for CUDA Toolkit.
 
-![](<../.gitbook/assets/image (125).png>)
+![](<../../.gitbook/assets/image (125).png>)
 
 ### Step 5: Install cuDNN <a href="#3fc4" id="3fc4"></a>
 
@@ -167,4 +167,4 @@ nvcc --version
 
 
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../../.gitbook/assets/image (148).png>)

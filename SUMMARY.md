@@ -95,9 +95,11 @@
 
 ## Installation Guide
 
-* [Installation Guide](installation-guide/installation-guide-for-deep-learning.md)
+* [Installation Guide](installation-guide/installation-guide-for-deep-learning/README.md)
+  * [Installation Guide 2021](installation-guide/installation-guide-for-deep-learning/installation-guide-2021.md)
 * [Anaconda](installation-guide/anaconda.md)
-* [CUDA cuDNN](installation-guide/cuda-installation.md)
+* [CUDA cuDNN](installation-guide/cuda-installation/README.md)
+  * [CUDA 10.2](installation-guide/cuda-installation/cuda-10.2.md)
 * [OpenCV](installation-guide/opencv/README.md)
   * [Install and Setup](installation-guide/opencv/opencv-install/README.md)
     * [OpenCV3.4.7 VS2017](installation-guide/opencv/opencv-install/opencv3.4.7-vs2017.md)

@@ -1,5 +1,5 @@
 ---
-description: Installation Guide for Deep Learning
+description: Installation Guide for Deep Learning 2022
 ---
 
 # Installation Guide
@@ -26,7 +26,7 @@ Make sure you install the correct software version as instructed.
 
 **Anaconda** : Python and libraries package installer.
 
-Follow: [How to install Anaconda](anaconda.md#conda-installation)
+Follow: [How to install Anaconda](../anaconda.md#conda-installation)
 
 ###
 
@@ -38,9 +38,7 @@ Follow: [How to install Anaconda](anaconda.md#conda-installation)
 
 Python is already installed by installing Anaconda. But, we will make a virtual environment for a specific Python version.
 
-*   Open Anaconda Prompt(admin mode)
-
-
+* Open Anaconda Prompt(admin mode)
 * First, update conda
 
 ![](https://user-images.githubusercontent.com/38373000/162147626-98c7c618-2882-4668-a61d-0682cffdd898.png)
@@ -54,8 +52,6 @@ conda update -n base -c defaults conda
 ```c
 conda create -n py37 python=3.7
 ```
-
-&#x20;
 
 ![](https://user-images.githubusercontent.com/38373000/162149298-8e254ebd-c698-4ab9-bb80-40b24ce2b438.png)
 
@@ -85,7 +81,7 @@ conda install -c conda-forge opencv
 
 ### 3. Install IDE (Visual Studio Code)
 
-Follow: [How to Install VS Code](ide/vscode/#installation)
+Follow: [How to Install VS Code](../ide/vscode/#installation)
 
 Also, read about
 
@@ -103,7 +99,7 @@ Skip this if you do not have GPU.
 * **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
 * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
 
-Follow [How to install CUDA and cuDNN](cuda-installation.md#9f39)
+Follow [How to install CUDA and cuDNN](../cuda-installation/#9f39)
 
 ###
 
