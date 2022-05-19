@@ -6,80 +6,94 @@ description: Installation Guide for Deep Learning 2022
 
 ## Installation Guide for Win10
 
-This installation guide is for programming a deep learning application using Pytorch or Tensorflow.
+(updated 2022.4)
+
+This installation guide is for programming a deep learning application using Pytorch
 
 Make sure you install the correct software version as instructed.
 
-> For DLIP 2022-1 Lecture:
+> For DLIP 2022 Lecture:
 >
-> * Python 3.7, CUDA 10.2, cuDNN 8.0.5
-> * PyTorch 1.10.x
-> * Anaconda for Python 3.7 or Anaconda of Latest Version
-
+> - Python 3.9, CUDA 10.2, cuDNN 7.6
+> - PyTorch 1.9.1
+> - Anaconda for Python 3.9 or Anaconda of Latest Version
 ***
 
-## Installation Steps
 
-(updated 2022.4)
 
-### 1. Install Anaconda
+# Installation Steps
+
+
+
+
+
+## 1. Install Anaconda
 
 **Anaconda** : Python and libraries package installer.
 
-Follow: [How to install Anaconda](../anaconda.md#conda-installation)
+Follow: [How to install Anaconda](https://ykkim.gitbook.io/dlip/installation-guide/anaconda#conda-installation)
 
-###
 
-### 2. Install Python & Numpy & OpenCV
 
-#### Install Python
 
-> Python 3.7 (2022-1)
+
+## 2. Install Python
+
+> Python 3.9 (2022-1)
 
 Python is already installed by installing Anaconda. But, we will make a virtual environment for a specific Python version.
 
-* Open Anaconda Prompt(admin mode)
-* First, update conda
+- Open Anaconda Prompt(admin mode)
 
-![](https://user-images.githubusercontent.com/38373000/162147626-98c7c618-2882-4668-a61d-0682cffdd898.png)
+  ![image](https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png)
 
-```c
+  
+
+- First, update conda
+
+```
 conda update -n base -c defaults conda
 ```
 
-* Then, Create Virtual environment for Python 3.7. Name the $ENV as `py37`
+![](https://user-images.githubusercontent.com/23421059/169187097-2e482777-fb8b-45c0-b7f6-408073d8b15b.png)
 
-```c
-conda create -n py37 python=3.7
-```
 
-![](https://user-images.githubusercontent.com/38373000/162149298-8e254ebd-c698-4ab9-bb80-40b24ce2b438.png)
 
-After installation, activate the newly created environment
-
-```c
-conda activate py37
-```
-
-![](https://user-images.githubusercontent.com/38373000/162150172-0192d3d4-901f-4356-8c99-ff146297bd39.png)
-
-#### Install Numpy, OpenCV, Matplot
+- Then, Create virtual environment for Python 3.9. Name the $ENV as `py39`.  If you are in base, enter  `conda activate py39`
 
 ```
-conda activate py37
-
-conda install numpy
-conda install -c conda-forge matplotlib
-conda install -c conda-forge opencv
+conda create -n py39 python=3.9.12
 ```
 
-> If installed Numpy is not recognized after installation with `conda`, then install Numpy using `pip`
->
-> `pip install numpy`
+![image](https://user-images.githubusercontent.com/23421059/169187275-6699f8ee-a4fc-449e-97d5-c087439d0098.png)
 
-###
 
-### 3. Install IDE (Visual Studio Code)
+
+- After installation, activate the newly created environment
+
+```
+conda activate py39
+```
+
+![image](https://user-images.githubusercontent.com/23421059/169187341-0aaa7552-fac3-43fe-9702-66321c67fc06.png)
+
+
+
+## 3. Install Libs
+
+### Install Numpy, OpenCV, Matplot, Jupyter
+
+```
+conda activate py39
+conda install -c anaconda seaborn jupyter
+pip install opencv-python
+```
+
+
+
+
+
+## 4. Install Visual Studio Code
 
 Follow: [How to Install VS Code](../ide/vscode/#installation)
 
@@ -88,52 +102,89 @@ Also, read about
 * [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
 * [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
-###
 
-### 4. Install GPU library (CUDA, cuDNN)
 
-Skip this if you do not have GPU.
+
+
+## 5. Install GPU Driver, CUDA, cuDNN
+
+Skip this if you do not have GPU card.
 
 **Nvidia GPU driver** **and Library** : To operate the GPU.
 
-* **CUDA** — GPU C library. Stands for _Compute Unified Device Architecture._
+* **Graphic Driver** -  Mandatory installation. Download from NVIDIA website
+* **CUDA** — GPU library. Stands for _Compute Unified Device Architecture._
 * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
 
-Follow [How to install CUDA and cuDNN](../cuda-installation/#9f39)
+Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/#9f39)
 
-###
 
-### 5. Install DL Framework
 
-**Framework**
+
+
+## 6. Install DL Framework
 
 * **TensorFlow** — DL library, developed by Google.
 * **Keras** — DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
 * **PyTorch** — Dynamic DL library with GPU acceleration.
 
-#### Install Pytorch
+
+
+### Install Pytorch
 
 Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
 
-* **With GPU**
 
-```
-# CUDA 10.2
-conda activate py37
-conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=10.2 -c pytorch
-```
 
-> Latest PyTorch does not support CUDA 10.2 . please use CUDA-11.3 for Latest version.
-
-* **Without GPU**
+**Without GPU(Only CPU)**
 
 ```
 # CPU Only
-conda activate py37
-conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cpuonly -c pytorch
+conda install -c anaconda seaborn jupyter
+conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cpuonly -c pytorch
+pip install opencv-python torchsummary
 ```
 
-#### Install Tensorflow and Keras
+
+
+**With GPU**
+
+```
+# CUDA 10.2
+conda install -c anaconda cudatoolkit==10.2.89 cudnn seaborn jupyter
+conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cudatoolkit=10.2 -c pytorch
+pip install opencv-python torchsummary
+```
+
+Check the pytorch and torchvision are cuda versions when installing
+
+![image](https://user-images.githubusercontent.com/23421059/169194229-7f18983a-de83-483c-9399-f907b9bc5e1f.png)
+
+
+
+#### Check GPU in PyTorch 
+
+```
+conda activate py39
+python
+import torch
+print("cuda" if torch.cuda.is_available() else "cpu")
+```
+
+The result should be `cuda` as shown.
+
+![image-20220519133030672](C:\Users\HGU_MCE\AppData\Roaming\Typora\typora-user-images\image-20220519133030672.png)
+
+
+
+If your result is,
+
+* `cuda` : GOOD, installed normally. You do not need to follow the steps below.
+* `cpu` :  Go to [Troubleshooting]
+
+
+
+### Install Tensorflow and Keras
 
 * Run 'Anaconda Prompt(admin)'
 * Activate virtual environment
@@ -149,15 +200,30 @@ conda install keras
 
 ###
 
-### 6. Installing Other libraries
 
-```
-conda activate py37
 
-conda install -c conda-forge matplotlib
-conda install -c conda-forge opencv
-conda install -c anaconda scikit-learn
-conda install -c anaconda pandas
-conda install jupyter
-conda install -c anaconda ipykernel
-```
+-----
+
+
+
+
+
+# Troubleshooting
+
+## Q1. GPU not detected in PyTorch
+
+### SOLUTION  1) Type `conda list` in the `py39` environment
+
+* check whether `cudatoolkit`, `cudnn` are installed
+* check whether `pytorch` is the `cuda` version
+* If it is not the same as the figure, re-install. else go to **SOLUTION 2**
+
+![image](https://user-images.githubusercontent.com/23421059/169206326-5b2dbf23-f091-404f-b814-8f75fe6b3db2.png)
+
+
+
+#### SOLUTION  2) NVIDIA graphics driver update
+
+If the NVIDIA graphics driver is not installed or if it is an older version, the GPU may not be detected. 
+Please refer to the  [How to install Driver, CUDA and cuDNN](../cuda-installation/#9f39) to install Graphic Driver.
+

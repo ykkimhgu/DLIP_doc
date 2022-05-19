@@ -2,169 +2,148 @@
 
 ## CUDA cuDNN
 
-### Installing CUDA, cuDNN on Windows 10 <a href="#9f39" id="9f39"></a>
+### Installing CUDA, cuDNN on Windows 10 
 
 This covers the installation of CUDA, cuDNN on Windows 10. This article below assumes that you have a CUDA-compatible GPU already installed on your PC.
 
 [See here for more detailed instruction by NVIDIA](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
 
-## Method 1: Installation using Anaconda
+(updated 2022.5)
 
-Install CUDA and cuDNN with `conda` in Anaconda prompt.
 
-Here, it is assumed you have already installed Anaconda. If you do not have Anaconda installed, follow [How to Install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation)
 
-> Recommend to use conda virtual environment for specific CUDA version contained in the env.
 
-### Installing CUDA =10.2
 
-First, Run Anaconda Prompt(admistration)
+# Installation NVIDIA Driver  (필수)
 
-**(Option1: install in base)**
 
-If you want to install the same CUDA version for all environment, install in (base)
 
-```c
-conda install -c anaconda cudatoolkit==10.2.89
-```
+## Prerequisite: Install Visual Studio Community 
 
-**(Option2: install in Specific Environment)**
-
-It is recommended to install specific CUDA version in the selected Python environment.&#x20;
-
-> \[$ENV\_NAME] is your environment name. e.g. `conda activate py37`
-
-```c
-#conda activate [$ENV_NAME]
-conda activate py37
-conda install -c anaconda cudatoolkit==10.2.89
-```
-
-###
-
-### Installing cuDNN
-
-Conda will find the compatible cuDNN for the installed version of CUDA
-
-```c
-conda install -c anaconda cudnn
-```
-
-The available cuDNN version could be a low version (e.g. cuDNN 7.6.5). If you want to install a higher version, then follow Method 2: Using NVDIA downloader.
-
-![image](https://user-images.githubusercontent.com/38373000/162138066-87f63943-66f7-49b3-836e-f7423bba69e2.png)
-
-##
-
-## Method 2: Installation using NVIDIA downloader
-
-### Step 1: Check the software you need to install <a href="#0330" id="0330"></a>
-
-Assuming that Windows is already installed on your PC, the additional bits of software you will install as part of these steps are:
-
-* Microsoft Visual Studio Community(v2017 or higher )
-* NVIDIA CUDA Toolkit
-* NVIDIA cuDNN
-
-### &#x20;<a href="#d390" id="d390"></a>
-
-### Step 2: Install Visual Studio Community <a href="#d390" id="d390"></a>
-
-#### Visual Studio is a Prerequisite for CUDA Toolkit <a href="#bf6e" id="bf6e"></a>
+**Visual Studio is a Prerequisite for CUDA Toolkit **
 
 Visual Studio Community is required for the installation of Nvidia CUDA Toolkit. If you attempt to download and install CUDA Toolkit for Windows without having first installed Visual Studio, you get a message for installation.
 
 Follow: [How to install Visual Studio Community](../ide/visual-studio-community.md#how-to-install)
 
-### &#x20;<a href="#2582" id="2582"></a>
-
-### Step 3: Install CUDA Toolkit for Windows 10 <a href="#2582" id="2582"></a>
-
-> (updated 2022.2 : Install CUDA Toolkit 10.2 )
-
-For more detailed instructions, see[ Nvidia CUDA installation guide for windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
-
-**Installing CUDA Toolkit 10.2**&#x20;
-
-* Go to CUDA download center
-  * The CUDA Toolkit (free) can be downloaded from the Nvidia website. Click here to go to the download center
-
-{% embed url="https://developer.nvidia.com/cuda-10.2-download-archive" %}
-
-> You should check which version of CUDA Toolkit you choose for download and installation to ensure compatibility with Pytorch or [Tensorflow](https://www.tensorflow.org/install/gpu)
->
-> **For Latest CUDA Toolkit :** [**check here**](https://developer.nvidia.com/cuda-downloads)
 
 
 
-* Select **Window10 ,** **exe(Network)**. Download the Base Installer and Run.
 
-![](<../../.gitbook/assets/image (106).png>)
+## Step 1: Check If Graphic Driver is Installed 
 
-![](<../../.gitbook/assets/image (111).png>)
+cudatoolkit에서 GPU에 접근하기 위해서는 특정 버전 이상의 그래픽카드 드라이버가 설치되어있어야 합니다.  
 
-* After Downloading, Install(Recommended Option). It should take 10\~20min to install.
-  * It will be installed in `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2`
+### 
 
-![](<../../.gitbook/assets/image (139).png>)
-
-![](<../../.gitbook/assets/image (117).png>)
-
-### Step 4: Install CUDA patches <a href="#3873" id="3873"></a>
-
-After CUDA installation, install additional Patches for CUDA Toolkit.
-
-![](<../../.gitbook/assets/image (125).png>)
-
-### Step 5: Install cuDNN <a href="#3fc4" id="3fc4"></a>
-
-After installing CUDA and its patches, the next step is to find a compatible version of CuDNN.
-
-* Check which version of **** cuDNN is needed for specific Tensorflow or Pytorch&#x20;
-
-****
-
-**Step 5.1: Register NVIDIA**
-
-Visit [CuDNN website](https://developer.nvidia.com/cudnn) to download.
-
-First, you have to register to become a member of the NVIDIA Developer Program (free).
-
-![](https://miro.medium.com/max/1803/1\*cXR4ODZGhaoR1rXRmvbU6A.png)
-
-**Step 5.2: Install cuDNN 8.0.5 for CUDA 10.2**
-
-Select Download cuDNN.
-
-![image](https://user-images.githubusercontent.com/38373000/162129708-5dbc70fe-f74c-45c8-af3a-2cf8b6fec75e.png)
-
-Select cuDNN version for CUDA 10.2. You can also check cuDNN Archive if you cannot find the version.
-
-> cuDNN v8.0.5 for CUDA 10.2 or
->
-> cuDNN v8.3.3 for CUDA 10.2
-
-![image](https://user-images.githubusercontent.com/38373000/162131292-cfe61536-a14a-43fd-8a8d-aa728ae79533.png)
-
-1.  Unzip the cuDNN package.
-
-    ```
-    cudnn-windows-x86_64-*-archive.zip
-    ```
-2.  Copy the following files from the unzipped package into the NVIDIA CUDA directory.
-
-    * CUDA directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2
-
-    Do not replace the whole folders. Just copy the files.
-
-![](https://user-images.githubusercontent.com/38373000/162139770-10184974-4eb4-408c-8ef6-e34a550a918b.png)
-
-3\. Check the installed CUDA in your computer. Run the Command Prompt and type
+먼저 자신의 드라이버 버전 확인을 위해 cmd 창이나 anaconda prompt를 열고 아래를 입력하십시오
 
 ```
-nvcc --version
+nvidia-smi
+```
+
+![image](https://user-images.githubusercontent.com/23421059/169212558-43a032d0-e1c1-4a35-94cf-564701525668.png)
+
+결과와 같이 자신의 그래픽카드 드라이버 버전을 확인할 수 있습니다. 
+
+
+
+만약 `nvidia-smi`에도 아무 결과가 보이지 않으면 드라이버가 미설치된 상태입니다.  
+
+* Go to Step 2
+
+
+
+## Step 2: Install Graphic Driver for your PC
+
+
+
+1) 본인의 그래픽카드 및 운영체제 정보 확인 
+
+|   항목    |                       그래픽카드 정보                        |                        운영체제 정보                         |
+| :-------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| 접근 방법 |                     win키 → 장치 관리자                      |           win키→ 시스템 (또는 내PC  우클릭 → 속성)           |
+| 결과확인  | ![image](https://user-images.githubusercontent.com/23421059/169219424-f8238a68-5129-4c03-a2fd-2538348c8079.png) | ![image](https://user-images.githubusercontent.com/23421059/169219451-b6e6f76a-0e38-4207-8ad9-5963c0dc1def.png) |
+
+
+
+2) 다운로드 사이트 접속: https://www.nvidia.co.kr/Download/index.aspx?lang=kr
+
+- 확인된 본인의 PC (or 노트북)에 맞는 GPU 제품 및 운영체제를 선택합니다. 다운로드타입은 아무거나 선택하시면 됩니다.
+
+![image](https://user-images.githubusercontent.com/23421059/169218227-26c040fd-1c7e-457d-921e-fcd535b4816b.png)
+
+
+
+- 다운로드 타입(GRD or SD) 별로 드라이버를 찾을 수 있으며, 수업진행에는 모두 차질 없으니 검색되는 제품을 다운받으시면 됩니다. 
+
+![image](https://user-images.githubusercontent.com/23421059/169220103-82df5ba9-dc0b-4e94-a0b1-28132c2713c3.png)
+
+
+
+- 그래픽 드라이버를 설치합니다. GeForce Experience는 본 수업과는 크게 관련없으니 해제해도 좋습니다.
+
+![image](https://user-images.githubusercontent.com/23421059/169220499-a244b3ca-e676-4096-a98b-0732259db7a9.png)
+
+
+
+- 다른 옵션은 초기 설정대로 진행 및 설치를 완료합니다.
+
+
+
+
+
+## Step 3. 그래픽 드라이버 설치 버전 확인
+
+설치가 완료되면 `anaconda prompt`를 관리자 모드로 열고 아래를 입력하십시오. 설치된 드라이버 버전을 확인할 수 있습니다.
+
+> Anaconda 미설치 경우  [설치방법 참고](https://ykkim.gitbook.io/dlip/installation-guide/anaconda#conda-installation)
+
+```
+conda activate py39
+nvidia-smi
+```
+
+![image](https://user-images.githubusercontent.com/23421059/169212558-43a032d0-e1c1-4a35-94cf-564701525668.png)
+
+
+
+
+
+
+
+
+
+# Install CUDA & CuDNN using Conda
+
+Install CUDA and cuDNN with `conda` in Anaconda prompt.
+
+> CUDA=10.2.89,  2022-1 학기 기준
+
+Here, it is assumed you have already installed Anaconda. If you do not have Anaconda installed, follow [How to Install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation)
+
+
+
+First, Run Anaconda Prompt(admistration)
+
+
+
+**Install in Specific Virtual Environment)**
+
+It is recommended to install specific CUDA version in the selected Python environment.&#x20;
+
+> \[$ENV\_NAME] is your environment name. e.g. `conda activate py39`
+
+```c
+#conda activate [$ENV_NAME]
+conda activate py39
+# CUDA 10.2 & CuDNN
+conda install -c anaconda cudatoolkit==10.2.89 cudnn 
 ```
 
 
 
-![](<../../.gitbook/assets/image (148).png>)
+## Next
+
+Install PyTorch and Other library
+
