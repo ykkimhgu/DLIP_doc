@@ -173,14 +173,16 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 The result should be `cuda` as shown.
 
-![image-20220519133030672](C:\Users\HGU_MCE\AppData\Roaming\Typora\typora-user-images\image-20220519133030672.png)
+
+![image](https://user-images.githubusercontent.com/23421059/169334629-c98a3b0a-79d0-48cd-9d41-7e7062ae1870.png)
+
 
 
 
 If your result is,
 
 * `cuda` : GOOD, installed normally. You do not need to follow the steps below.
-* `cpu` :  Go to [Troubleshooting]
+* `cpu` :  Go to [Troubleshooting](#troubleshooting)
 
 
 
@@ -210,6 +212,8 @@ conda install keras
 
 # Troubleshooting
 
+
+
 ## Q1. GPU not detected in PyTorch
 
 ### SOLUTION  1) Type `conda list` in the `py39` environment
@@ -222,8 +226,18 @@ conda install keras
 
 
 
-#### SOLUTION  2) NVIDIA graphics driver update
+### SOLUTION  2) NVIDIA graphics driver update
 
 If the NVIDIA graphics driver is not installed or if it is an older version, the GPU may not be detected. 
 Please refer to the  [How to install Driver, CUDA and cuDNN](../cuda-installation/#9f39) to install Graphic Driver.
 
+
+
+## Q2. Build Error in VS Code ( Numpy C-extension failed)
+
+![image](https://user-images.githubusercontent.com/23421059/169334729-b2081cdf-d51d-414f-a550-8c299fa3c56c.png)
+
+### SOLUTION ) Default Profile Setting in CODE
+`F1`키를 눌러 `select default profile`을 검색 후 클릭 → `command prompt`를 선택합니다.
+
+![image](https://user-images.githubusercontent.com/23421059/169261544-f5b2d98a-5e0f-49f0-9e19-2e5a75c705ba.png)
