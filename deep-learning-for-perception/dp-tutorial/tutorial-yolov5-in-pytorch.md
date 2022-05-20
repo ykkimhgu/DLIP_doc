@@ -88,7 +88,7 @@ coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\da
 
 
 
-### 2. Train with custom dataset
+### 3. Train with custom dataset
 
 under construction
 
