@@ -86,6 +86,14 @@ coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\da
 
 ![image](https://user-images.githubusercontent.com/23421059/169254257-3636431b-3cc1-4b39-bfcf-78d282256f4d.png)
 
+
+
+### 2. Train with custom dataset
+
+under construction
+
+
+
 ## Run YOLOv5 in Local PC with PyTorch Hub
 
 * VS code와 같은 IDE에서도 YOLO v5 결과에 접근하여 프로그래밍할 수 있습니다.
