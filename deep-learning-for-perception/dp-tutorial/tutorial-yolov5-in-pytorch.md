@@ -60,7 +60,7 @@ python detect.py --weights yolov5n.pt --img 640 --conf 0.25 --source data/images
 
 ![image](https://user-images.githubusercontent.com/23421059/169253425-211189e7-c537-490c-8454-699bc5617ad5.png)
 
-### 2. Train
+### 2. Train (Opendataset COCO)
 
 COCO128 학습 오픈데이터셋으로 YOLOv5 학습하는 튜토리얼입니다.
 
