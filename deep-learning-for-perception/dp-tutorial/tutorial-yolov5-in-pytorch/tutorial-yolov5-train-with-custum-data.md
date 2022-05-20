@@ -50,15 +50,8 @@ The first integer number (0) is the object class id. For this dataset, the class
 
 3. Under the directory `/datasets` , create a new folder for the MASK dataset. Then, copy the downloaded dataset under this folder.  Example: `/datasets/dataset_mask/archive/obj/`
 
-   ​	\# parent
+   ![image](https://user-images.githubusercontent.com/38373000/169481650-73315724-9148-4b3e-9c45-aedca8b95d25.png)
 
-   ​	\# ├── yolov5
-
-   ​	\# └── datasets
-
-   ​	\#     └── coco128 
-
-   ​	\#     └── dataset_mask  ← save download files here 
 
 
 
@@ -113,6 +106,9 @@ cv2.waitKey()
 ```
 
 You will see this result
+
+
+
 <img src="https://user-images.githubusercontent.com/38373000/169467614-8907b0be-cda0-4f3d-9094-721c704e2886.png" alt="image" style="zoom:50%;" />
 
 
