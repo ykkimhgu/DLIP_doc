@@ -2,7 +2,7 @@
 
 ## Which framework to use?
 
-![](<../../images/image (213).png>)
+![](<../../.gitbook/assets/image (213).png>)
 
 Need to consider several factors
 
@@ -18,7 +18,7 @@ The top 3 Deep Learning Frameworks:
 * Tensorflow/Keras/Pytorch
 * Powerscore comparison \[by [Jeff Hale](https://www.linkedin.com/in/jeff-hale-99a7877/)]
 
-![By Jeff Hale](<../../images/image (112).png>)
+![By Jeff Hale](<../../.gitbook/assets/image (112).png>)
 
 ![](<../../.gitbook/assets/image (132).png>)
 

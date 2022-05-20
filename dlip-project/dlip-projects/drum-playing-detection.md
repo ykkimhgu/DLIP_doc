@@ -6,7 +6,7 @@
 
 As computer vision technology develops, it is affecting many parts of industrial areas and our daily life. In addition, by applying deep learning, numerous possibilities for utilizing such computer vision were presented. In this document, we will learn how to detect playing of drums using Python-based YOLO v5.
 
-![](<../../.gitbook/assets/11 (2).png>)
+![](<../../.gitbook/assets/0 (2).png>)
 
 Figure1. Results detecting of drum components, LR hands, LR sticks
 
@@ -100,7 +100,7 @@ Figure10. Detecting command
 
 Figure11. Detecting without algorithm
 
-![](<../../.gitbook/assets/0 (2).png>)
+![](<../../.gitbook/assets/11 (2).png>)
 
 Figure12. Detecting without algorithm
 
