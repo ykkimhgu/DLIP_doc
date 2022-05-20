@@ -80,15 +80,17 @@ python train.py --img 640 --batch 1 --epochs 1 --data coco128.yaml --weights yol
 
 * VS code와 같은 IDE에서도 YOLO v5 결과에 접근하여 프로그래밍할 수 있습니다.
 * 필요한 모듈(requirements)만 설치하면, git을 local PC에 저장하는 선행과정이 필요하지 않습니다.
-* \[######]을 참고하여 VS code 설치 및 사용법 숙지를 선행하시기 바랍니다.
+* 사전에 [VS code 설치 및 사용법 숙지](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)를 선행하시기 바랍니다.
 
 ### Inference
 
-임의의 폴더를 생성 후 우클릭 → Code로 열기를 클릭합니다.
+임의의 workspace(작업) 폴더를 생성 후 우클릭 → Code로 열기를 클릭합니다.
+
+> 혹은 VS Code 실행 후 작업 폴더를 열어도 됩니다.
 
 ![](https://user-images.githubusercontent.com/23421059/169258661-a30f94a3-96b9-4890-9a9d-7c4eb5aea4f8.png)
 
-새파일을 만들고 아래의 코드를 붙여 넣습니다.
+&#x20;파이썬 파일 `YOLOv5_run_test.py` 을 생성하들고 아래의 코드를 붙여 넣습니다.
 
 ```python
 import torch
@@ -144,6 +146,8 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/23421059/169262592-30479afb-298c-472a-ade6-8483939c3bbb.png)
 
 `F1`키를 눌러 `select interpreter`를 검색 후 클릭 → `py39`를 선택합니다.
+
+> DLIP 2022 에서는   py39 사용&#x20;
 
 ![image](https://user-images.githubusercontent.com/23421059/169260982-d5dc20a9-9cc4-4b63-8fd1-db3841323358.png)
 
