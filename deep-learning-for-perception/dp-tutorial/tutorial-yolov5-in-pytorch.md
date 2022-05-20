@@ -62,17 +62,27 @@ python detect.py --weights yolov5n.pt --img 640 --conf 0.25 --source data/images
 
 ### 2. Train
 
+COCO128 학습 오픈데이터셋으로 YOLOv5 학습하는 튜토리얼입니다.
+
+
+
 yolov5 폴더 경로가 유지된 상태에서 아래 코드 입력하여 `train.py`를 실행합니다.
 
 ```
 python train.py --img 640 --batch 1 --epochs 1 --data coco128.yaml --weights yolov5n.pt
 ```
 
-결과창. 아래와 같이 학습결과가 저장된 폴더가 상대경로로 표시됩니다.
+coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\dataset` 에  coco 데이터셋 (이미지 및 라벨)이 자동으로 다운로드가 됩니다.
+
+
+
+데이터셋 자동 다운로드 후 학습을 진행하며 아래와 같이 결과창이 보여집니다.
+
+그리고 학습결과가 저장된 폴더가 상대경로로 표시됩니다.
 
 ![image](https://user-images.githubusercontent.com/23421059/169253960-30e810ec-7c90-4602-94fc-b4df96ae7c80.png)
 
-실제로 해당 상대경로로 진입하면 결과를 확인할 수 있습니다.
+실제로 해 상대경로로 진입하면 결과를 확인할 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/23421059/169254257-3636431b-3cc1-4b39-bfcf-78d282256f4d.png)
 
