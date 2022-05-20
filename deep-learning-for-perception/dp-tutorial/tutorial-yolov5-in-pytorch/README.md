@@ -90,7 +90,7 @@ coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\da
 
 ### 3. Train with custom dataset
 
-under construction
+See [Tutorial: Yolov5 with custom dataset](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data)
 
 
 
