@@ -1,11 +1,8 @@
 # CUDA 10.2
 
-
 ## CUDA cuDNN Installation
 
-### Installing CUDA, cuDNN on Windows 10 
-
-
+### Installing CUDA, cuDNN on Windows 10
 
 This covers the installation of CUDA, cuDNN on Windows 10. This article below assumes that you have a CUDA-compatible GPU already installed on your PC.
 
@@ -33,7 +30,7 @@ conda install -c anaconda cudatoolkit==10.2.89
 
 **(Option2: install in Specific Environment)**
 
-It is recommended to install specific CUDA version in the selected Python environment.&#x20;
+It is recommended to install specific CUDA version in the selected Python environment.
 
 > \[$ENV\_NAME] is your environment name. e.g. `conda activate py37`
 
@@ -87,7 +84,7 @@ Follow: [How to install Visual Studio Community](../ide/visual-studio-community.
 
 For more detailed instructions, see[ Nvidia CUDA installation guide for windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
 
-**Installing CUDA Toolkit 10.2**&#x20;
+**Installing CUDA Toolkit 10.2**
 
 * Go to CUDA download center
   * The CUDA Toolkit (free) can be downloaded from the Nvidia website. Click here to go to the download center
@@ -97,8 +94,6 @@ For more detailed instructions, see[ Nvidia CUDA installation guide for windows]
 > You should check which version of CUDA Toolkit you choose for download and installation to ensure compatibility with Pytorch or [Tensorflow](https://www.tensorflow.org/install/gpu)
 >
 > **For Latest CUDA Toolkit :** [**check here**](https://developer.nvidia.com/cuda-downloads)
-
-
 
 * Select **Window10 ,** **exe(Network)**. Download the Base Installer and Run.
 
@@ -123,9 +118,9 @@ After CUDA installation, install additional Patches for CUDA Toolkit.
 
 After installing CUDA and its patches, the next step is to find a compatible version of CuDNN.
 
-* Check which version of **** cuDNN is needed for specific Tensorflow or Pytorch&#x20;
+* Check which version of \*\*\*\* cuDNN is needed for specific Tensorflow or Pytorch
 
-****
+***
 
 **Step 5.1: Register NVIDIA**
 
@@ -168,6 +163,4 @@ Select cuDNN version for CUDA 10.2. You can also check cuDNN Archive if you cann
 nvcc --version
 ```
 
-
-
-![](<../../.gitbook/assets/image (148).png>)
+![](<../../.gitbook/assets/image (16).png>)

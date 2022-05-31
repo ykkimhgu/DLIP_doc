@@ -6,7 +6,7 @@ Since AlexNet, the state-of-the-art CNN architecture is going deeper and deeper.
 
 Deep networks are hard to train because of the notorious vanishing gradient problem — as the gradient is back-propagated to earlier layers, repeated multiplication may make the gradient infinitively small.
 
-![](<../../.gitbook/assets/image (278).png>)
+![](<../../images/image (278).png>)
 
 ResNets solve is the famous known vanishing gradient. With ResNets, the **gradients can flow directly through the skip connections backwards from later layers to initial filters**.
 
@@ -24,7 +24,7 @@ The stacked layers fit a residual mapping is easier than letting them directly f
 
 ![Layer 1, block 1](<../../.gitbook/assets/image (274).png>)
 
-![Layer 1](<../../.gitbook/assets/image (279).png>)
+![Layer 1](<../../images/image (279).png>)
 
 Down sampling of the volume though the network is achieved by increasing the stride instead of a pooling operation.
 
@@ -32,7 +32,7 @@ Since the volume got modified we need to apply one of our down sampling strategi
 
 ![Layer 2, Block 1](https://miro.medium.com/max/1170/1\*Xd-OIT9GRwLaM3F5jdbfzQ.png)
 
-![Layer 2](<../../.gitbook/assets/image (277).png>)
+![Layer 2](<../../images/image (277).png>)
 
 ### Variant of Residual Block
 
