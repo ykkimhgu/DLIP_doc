@@ -50,9 +50,9 @@
     * [Tutorial: Yolov5 train with custum data](deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md)
   * [Tutorial: Tensorboard in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-tensorboard-in-pytorch.md)
 * [LAB](deep-learning-for-perception/lab/README.md)
-  * [LAB: CNN Object Detection 2](deep-learning-for-perception/lab/lab-cnn-object-detection.md)
   * [Assignment: CNN Classification](deep-learning-for-perception/lab/hw-cnn-classification.md)
   * [LAB: CNN Object Detection 1](deep-learning-for-perception/lab/lab-cnn-object-detection-1.md)
+  * [LAB: CNN Object Detection 2](deep-learning-for-perception/lab/lab-cnn-object-detection.md)
   * [LAB Grading Criteria](deep-learning-for-perception/lab/lab-grading-criteria.md)
 * [Keras Example Code](deep-learning-for-perception/example-code/README.md)
   * [Train Dataset](deep-learning-for-perception/example-code/train-dataset.md)
@@ -93,7 +93,7 @@
   * [Parking Space Management](dlip-project/dlip-projects/parking-space-management.md)
   * [Vehicle, Pedestrian Detection with IR Image](dlip-project/dlip-projects/vehicle-pedestrian-detection-with-ir-image.md)
   * [Drum Playing Detection](dlip-project/dlip-projects/drum-playing-detection.md)
-* [DLIP 2020 Projects](dlip-project/dlip-2020-projects.md)
+* [DLIP 2022 Projects](dlip-project/dlip-2022-projects.md)
 
 ## Installation Guide
 
