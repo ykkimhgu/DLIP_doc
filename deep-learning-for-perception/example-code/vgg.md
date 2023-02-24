@@ -8,9 +8,9 @@ Read about VGG: click here
 
 ### VGG-16
 
-![](<../../.gitbook/assets/image (224) (1).png>)
+![](<../../.gitbook/assets/image (224) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (238) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (238) (1) (1) (1).png>)
 
 ### VGG-19
 
