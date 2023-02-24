@@ -10,9 +10,9 @@
 
 Example of simple CNN architecture
 
-![VGG-19](<../../.gitbook/assets/image (235) (1) (1).png>)
+![VGG-19](<../../.gitbook/assets/image (235) (1).png>)
 
-![](<../../.gitbook/assets/image (224) (1).png>)
+![](<../../.gitbook/assets/image (224) (1) (1).png>)
 
 LeNet-5 (1998): [image ](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)[by Raimi Karim](https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d)
 

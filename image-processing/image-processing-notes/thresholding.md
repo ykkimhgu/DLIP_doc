@@ -57,7 +57,7 @@ Note: Bayes formula
 * \*
 * Then, the mean of intensity of class ![](../../.gitbook/assets/30.png) becomes
 
-![](<../../.gitbook/assets/31 (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)
+![](<../../.gitbook/assets/31 (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Similarly, the mean of intensity of class ![](../../.gitbook/assets/32.png) becomes
 
@@ -73,7 +73,7 @@ where ![](<../../.gitbook/assets/34 (1).png>) and ![](../../.gitbook/assets/35.p
 
 ![](../../.gitbook/assets/39.png)
 
-since the total mean intensity is ![](<../../.gitbook/assets/40 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)
+since the total mean intensity is ![](<../../.gitbook/assets/40 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * To evaluate the ‘goodness’ of the threshold values of ![](../../.gitbook/assets/41.png), we can design a score
 
@@ -99,11 +99,11 @@ The Procedure of Otsu Method
 
 ![](../../.gitbook/assets/51.png)
 
-Aim: obtain the maximum ![](<../../.gitbook/assets/62 (1) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>) from the calculation of ![](<../../.gitbook/assets/62 (1) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).png>)for all values of _k_
+Aim: obtain the maximum ![](<../../.gitbook/assets/62 (1) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).png>) from the calculation of ![](<../../.gitbook/assets/62 (1) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)for all values of _k_
 
 1. Apply an image filter prior to thresholding.
 2. Compute the normalized histogram ![](../../.gitbook/assets/54.png)
-3. Compute the cumulative sum ![](<../../.gitbook/assets/55 (1).png>), ![](<../../.gitbook/assets/56 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)to![](<../../.gitbook/assets/57 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+3. Compute the cumulative sum ![](<../../.gitbook/assets/55 (1).png>), ![](<../../.gitbook/assets/56 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)to![](<../../.gitbook/assets/57 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 4. Compute the cumulative mean ![](<../../.gitbook/assets/58 (1).png>), ![](<../../.gitbook/assets/56 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)to![](<../../.gitbook/assets/57 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 5. Compute the global intensity mean ![](<../../.gitbook/assets/61 (1).png>)
 6. Compute ![](<../../.gitbook/assets/62 (1) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (3).png>), for all ![](<../../.gitbook/assets/63 (1).png>)

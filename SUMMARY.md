@@ -94,10 +94,11 @@
   * [Vehicle, Pedestrian Detection with IR Image](dlip-project/dlip-projects/vehicle-pedestrian-detection-with-ir-image.md)
   * [Drum Playing Detection](dlip-project/dlip-projects/drum-playing-detection.md)
 * [DLIP 2022 Projects](dlip-project/dlip-2022-projects.md)
-  * [Page 2](dlip-project/dlip-2022-projects/page-2.md)
-  * [Page 1](dlip-project/dlip-2022-projects/page-1.md)
   * [BakeryCashier](dlip-project/dlip-2022-projects/bakerycashier.md)
   * [Virtual Mouse](dlip-project/dlip-2022-projects/virtual-mouse.md)
+  * [Sudoku Program with Hand gesture](dlip-project/dlip-2022-projects/sudoku-program-with-hand-gesture.md)
+  * [Exercise Posture Assistance System](dlip-project/dlip-2022-projects/exercise-posture-assistance-system.md)
+  * [People Counting Embedded System](dlip-project/dlip-2022-projects/people-counting-embedded-system.md)
 
 ## Installation Guide
 
