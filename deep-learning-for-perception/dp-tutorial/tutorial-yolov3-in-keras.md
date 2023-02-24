@@ -1,10 +1,8 @@
-# Tutorial:  Yolov3 in Keras
+# Tutorial: Yolov3 in Keras
 
 ## Reference
 
-Github:  [https://github.com/qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3)
-
-
+Github: [https://github.com/qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3)
 
 ## Setup
 
@@ -23,7 +21,7 @@ The requirements are
 * matplotlib=3.3.4
 * opencv=3.4.2
 
-&#x20;If you have problems when installing opencv packages, use the following commands `pip install opencv-python`
+If you have problems when installing opencv packages, use the following commands `pip install opencv-python`
 
 ```bash
 conda create -n tf115 python=3.7
@@ -42,19 +40,17 @@ conda install matplotlib
 conda install opencv
 ```
 
-
-
 ### Clone Git
 
 After the installation, activate the virtual environment. We will clone the reference repository to download Yolov3 codes.
 
-#### Method 1:  From conda prompt (in virtual env)
+#### Method 1: From conda prompt (in virtual env)
 
 git [https://github.com/qqwweee/keras-yolo3.git](https://github.com/qqwweee/keras-yolo3.git)
 
 #### Method 2:
 
-Download  zip file from the github and unzip.
+Download zip file from the github and unzip.
 
 ![](<../../.gitbook/assets/image (318).png>)
 
@@ -62,34 +58,32 @@ Download  zip file from the github and unzip.
 
 After the download, place the weight model file in the same directory of Yolov3.
 
-* &#x20;YOLOv3 weights\
+* YOLOv3 weights\
   [https://pjreddie.com/media/files/yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
 
 > You can also download it from the conda Prompt as
 
-`wget` [`https://pjreddie.com/media/files/yolov3.weights`](https://pjreddie.com/media/files/yolov3.weights)``
+`wget` [`https://pjreddie.com/media/files/yolov3.weights`](https://pjreddie.com/media/files/yolov3.weights)\`\`
 
-* &#x20;YOLOv3-tiny weights
+* YOLOv3-tiny weights
 
 [https://pjreddie.com/media/files/yolov3-tiny.weights](https://pjreddie.com/media/files/yolov3-tiny.weights)
 
 ### Open V.S Code
 
-&#x20;`>> code .`
+`>> code .`
 
 > You can also run the below codes in the Conda Promt
 
-In VS code, select the virtual environment:  F1--> Python Interpreter --> Select Environ.
+In VS code, select the virtual environment: F1--> Python Interpreter --> Select Environ.
 
 ### Convert Darknet YOLOv3 to Keras model
 
-In the terminal of VS code or  in Conda Prompt, type:
+In the terminal of VS code or in Conda Prompt, type:
 
 ```bash
 >> python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
-
-
 
 ## Run Yolov3 Detection
 
@@ -105,7 +99,7 @@ If the video file name is 'test\_Video.avi'
 
 ### Run Yolov3-Tiny Detection
 
-After downloading yolov3-tiny.weights,  Convert it to Keras model and save it as 'yolo-tiny.h5'
+After downloading yolov3-tiny.weights, Convert it to Keras model and save it as 'yolo-tiny.h5'
 
 ```bash
  >> python convert.py yolov3-tiny.cfg yolov3-tiny.weights model_data/yolo-tiny.h5
@@ -141,8 +135,6 @@ optional arguments:
   --image            Image detection mode, will ignore all positional arguments
 ```
 
-
-
 ## How to train a dataset
 
 ### Prepare the dataset
@@ -150,17 +142,16 @@ optional arguments:
 For this tutorial, we will use KITTI dataset
 
 * Image file: [Download Kitti Dataset](https://s3.eu-central-1.amazonaws.com/avg-kitti/data\_object\_image\_2.zip)
-* Label file:  [Download Kitti Dataset Label](https://s3.eu-central-1.amazonaws.com/avg-kitti/data\_object\_label\_2.zip)
+* Label file: [Download Kitti Dataset Label](https://s3.eu-central-1.amazonaws.com/avg-kitti/data\_object\_label\_2.zip)
   * Object Detection annotation Convert to Yolo Darknet Format: [Click here](https://github.com/ssaru/convert2Yolo)
-* Class file:&#x20;
-  * Copy the 'kitti\_classes.txt'  in  the folder of  \`\model\_data\` folder
+* Class file:
+  * Copy the 'kitti\_classes.txt' in the folder of \`\model\_data\` folder
 
-### Modify train.py&#x20;
+### Modify train.py
 
-Open 'train.py' file  in VS Code\
+Open 'train.py' file in VS Code\\
 
-
-Go to  LIne 16 : def _main():._  Change the '_'annotation' and 'classes-path'_  to your setting.
+Go to LIne 16 : def _main():._ Change the '_'annotation' and 'classes-path'_ to your setting.
 
 ```python
 def _main(): 
@@ -170,9 +161,9 @@ classes_path = 'model_data/kitti_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 ```
 
-Go to LIne 32:  Change the name of the pre-trained weight file.
+Go to LIne 32: Change the name of the pre-trained weight file.
 
-* We will use COCO trained weight file as we used above(yolo.h5).  Create  a copy and name it as`yolo_weights.h5`
+* We will use COCO trained weight file as we used above(yolo.h5). Create a copy and name it as`yolo_weights.h5`
 
 ```python
     if is_tiny_version:
@@ -181,7 +172,6 @@ Go to LIne 32:  Change the name of the pre-trained weight file.
     else:
         model = create_model(input_shape, anchors, num_classes,
             freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
-
 ```
 
 ### Run Train
@@ -192,13 +182,9 @@ Start training by running the following in the terminal
 >>python train.py
 ```
 
-
-
 ### Evaluate
 
 Use your trained weights or checkpoint weights with command line option `--model model_file` when using yolo\_video.py Remember to modify the class path or anchor path.
-
-
 
 ## TroubleShooting
 
@@ -206,15 +192,14 @@ Use your trained weights or checkpoint weights with command line option `--model
 
 Error message of
 
-`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`&#x20;
+`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`
 
 #### Solution
 
-Modify  `model.py` (line 394)
+Modify `model.py` (line 394)
 
-`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`&#x20;
+`_, ignore_mask = K.control_flow_ops.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`
 
-should be changed to&#x20;
+should be changed to
 
 `_, ignore_mask = tf.while_loop(lambda b,*args: b<m, loop_body, [0, ignore_mask])`
-
