@@ -11,27 +11,34 @@
 
 ### Online Tutorials
 
-1.  Python tutorial by w3school.com
 {% embed url="https://www.w3schools.com/python/default.asp" %}
 
-2. 코딩도장 파이썬
 {% embed url="https://dojang.io/course/view.php?id=7" %}
+
 
 
 ### In-Class Tutorials (using google colab)
 
-1. In-Class Python Tutorial: [Learning Python in 60 minutes_DLIP](https://drive.google.com/file/d/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff/view?usp=share_link)
+In-Class Python Tutorial: [Learning Python in 60 minutes_DLIP](https://drive.google.com/file/d/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff/view?usp=share_link)
+
+
 
 
 
 
 # Tutorial: Numpy 
 ### Online Tutorials
-1.  Numpy tutorial by w3school.com
 {% embed url="https://www.w3schools.com/python/numpy/default.asp" %}
 
+
+
 ### In-Class Tutorials (using google colab)
-1. NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
+
+NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
+
+
+
+---
 
 
 

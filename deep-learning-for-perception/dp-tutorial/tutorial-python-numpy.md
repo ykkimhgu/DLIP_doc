@@ -8,9 +8,15 @@ Recommended tutorial lists for Python and Numpy
 
 # Installation
 
+### Using Colab
+
 For the class tutorial,  we will use google colab.
 
-For installing Python in Visual Studio Code, [follow Installation Steps](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+### Using VS Code
+
+For installing Python in Visual Studio Code, [follow Installation Steps 1~4](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
+After installation of Python in Visual Studio Code, [follow how to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
 
 
 
