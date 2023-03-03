@@ -1,37 +1,26 @@
 # Tutorial: Python Numpy
 
-# Python, Numpy
 
-## Pre-requisite
 
-Do the following tutorial before class: (코딩도장)
+# Tutorial
 
-- [기본 문법 핵심정리](https://dojang.io/mod/page/view.php?id=2168)
-- [숫자연산 핵심정리](https://dojang.io/course/view.php?id=7&section=9)
-- [변수 종류 핵심정리](https://dojang.io/mod/page/view.php?id=2218)
-- [반복 루프 핵심정리:](https://dojang.io/mod/page/view.php?id=2279)
+Recommended tutorial lists for Python and Numpy
 
-Assignment
+{% embed url="https://ykkim.gitbook.io/dlip/programming/python" %}
 
-- Print Multiples of '5' from '5' to '50'
 
-  > 5 * 1 = 5 5 * 2 = 10 ....
 
-  
+# Installation
 
-  
+## Python Installation
 
-## Tutorial
+For the class tutorial,  we will use google colab.
 
-### Python
+For installing Python in Visual Studio Code, [follow Installation Steps](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
-P1. Python Tutorial: [Learning Python in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_PythonBasics_2022.ipynb)
 
-### Numpy
 
-N1. NumPy Tutorial: [Learning Numpy in 60 minutes](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
-
-## Exercise
+# Exercise
 
 ### MLP XOR problem
 
