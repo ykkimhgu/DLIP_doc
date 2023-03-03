@@ -163,4 +163,4 @@ Select cuDNN version for CUDA 10.2. You can also check cuDNN Archive if you cann
 nvcc --version
 ```
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (148).png>)

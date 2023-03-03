@@ -26,7 +26,7 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-![](<../../images/image (244).png>)
+![](<../../.gitbook/assets/image (244).png>)
 
 check the image file
 

@@ -2,11 +2,11 @@
 
 {% embed url="https://medium.com/syncedreview/harvard-researchers-benchmark-tpu-gpu-cpu-for-deep-learning-3034a452958d" %}
 
-![](<../../images/image (212).png>)
+![](<../../.gitbook/assets/image (212).png>)
 
 {% embed url="https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/" %}
 
-![](<../../images/image (134).png>)
+![](<../../.gitbook/assets/image (134).png>)
 
 ![](<../../.gitbook/assets/image (142).png>)
 

@@ -141,7 +141,7 @@
   * [Create account](programming/github/create-account.md)
   * [Tutorial: Github basic](programming/github/github-tutorial.md)
   * [Tutorial: Github Desktop](programming/github/gitbook-desktop.md)
-* [Python](programming/python/README.md)
+* [Python\_Numpy](programming/python/README.md)
   * [Tips](programming/python/tips.md)
 * [Keras](programming/keras/README.md)
   * [Tutorial Keras](programming/keras/tutorial-keras.md)

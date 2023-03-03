@@ -15,7 +15,7 @@ A Perceptron is an algorithm used for [supervised learning](https://deepai.org/m
 
 Binary classifier for Predict y = 1 if Wx+b > 0 , otherwise y=0
 
-![](<../../images/image (216).png>)
+![](<../../.gitbook/assets/image (216).png>)
 
 The perceptron consists of 4 parts.
 
@@ -30,25 +30,25 @@ The perceptron consists of 4 parts.
 
 **Activation Function** scales output (0,1) or (-1,1)
 
-![](<../../.gitbook/assets/image (223) (4) (4) (4) (2) (1).png>)
-
-## Multi-Layer Perceptron
-
 ![](<../../.gitbook/assets/image (223) (4) (4) (4) (2) (1) (1).png>)
 
 ## Multi-Layer Perceptron
 
-![](<../../images/image (219).png>)
+![](<../../.gitbook/assets/image (223) (4) (4) (4) (2) (1) (1) (1).png>)
 
-![](<../../images/image (215).png>)
+## Multi-Layer Perceptron
 
-![](<../../images/image (221).png>)
+![](<../../.gitbook/assets/image (219).png>)
 
-![](<../../images/image (217).png>)
+![](<../../.gitbook/assets/image (215).png>)
+
+![](<../../.gitbook/assets/image (221).png>)
+
+![](<../../.gitbook/assets/image (217).png>)
 
 Since we cannot express XOR with a single Perceptron, we can construct a network of Perceptron or **Multi-Layer Perceptron**
 
-![](<../../images/image (222).png>)
+![](<../../.gitbook/assets/image (222).png>)
 
 Using the previous AND, NAND, OR gates with perceptrons, we can build **XOR**
 
