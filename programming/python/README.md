@@ -34,9 +34,11 @@ In-Class Python Tutorial: [Learning Python in 60 minutes_DLIP](https://colab.res
 
 
 ### In-Class Tutorials (using google colab)
-{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynbf" %}
-
 NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
+
+{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb" %}
+
+
 
 
 
@@ -46,7 +48,7 @@ NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/
 
 
 # Installation
-## Python Installation
+## 1. Python Installation
 ### Using Colab
 For the class tutorial,  we will use google colab.
 
@@ -89,7 +91,7 @@ conda install python=3.6
 
 
 
-## Numpy Installation
+## 2. Numpy Installation
 [Read here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
 `conda install -c anaconda numpy`
