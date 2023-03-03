@@ -22,7 +22,7 @@ After installation of Python in Visual Studio Code, [follow how to program Pytho
 
 # Exercise
 
-###1.  MLP XOR problem
+### 1.  MLP XOR problem
 
 [Design an MLP for XOR problem using numpy(Student Exercise)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021_Student.ipynb)
 

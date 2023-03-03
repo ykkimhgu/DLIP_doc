@@ -1,13 +1,15 @@
 {% hint style="info" %}
-\(Updated 2021.4\)  Use Python 3.6
+\(Updated 2021.4\)  Use Python 3.7
 
-\(Updated 2022.4\)  Use Python 3.7
+\(Updated 2022.4\)  Use Python 3.9
 
 {% endhint %}
 
 
 
-# Tutorial: Python
+# Tutorial
+
+## 1.  Python Tutorial
 
 ### Online Tutorials
 
@@ -19,20 +21,20 @@
 
 ### In-Class Tutorials (using google colab)
 
-In-Class Python Tutorial: [Learning Python in 60 minutes_DLIP](https://drive.google.com/file/d/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff/view?usp=share_link)
+In-Class Python Tutorial: [Learning Python in 60 minutes_DLIP](https://colab.research.google.com/drive/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff)
+
+
+{% embed url="https://colab.research.google.com/drive/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff" %}
 
 
 
-
-
-
-# Tutorial: Numpy 
+## 2. Numpy Tutorial 
 ### Online Tutorials
 {% embed url="https://www.w3schools.com/python/numpy/default.asp" %}
 
 
-
 ### In-Class Tutorials (using google colab)
+{% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynbf" %}
 
 NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
 
@@ -45,10 +47,15 @@ NumPy Tutorial: [Learning Numpy in 60 minutes_DLIP](https://github.com/ykkimhgu/
 
 # Installation
 ## Python Installation
-For this lecture, we will use google colab.
+### Using Colab
+For the class tutorial,  we will use google colab.
 
+### Using VS Code
 
-For installing Python in Visual Studio Code, [follow Installation Steps](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+For installing Python in Visual Studio Code, [follow Installation Steps 1~4](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+
+After installation of Python in Visual Studio Code, [follow how to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+
 
 
 
