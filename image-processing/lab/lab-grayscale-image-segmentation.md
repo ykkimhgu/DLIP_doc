@@ -14,6 +14,8 @@ Segment and count each nuts and bolts
 
 There are 2 different size bolts and 3 different types of nuts. You are required to segment the object and count each parts
 
+[Download the test image](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB\_grayscale/Lab\_GrayScale\_TestImage.jpg)
+
 * Bolt M5
 * Bolt M6
 * Square Nut M5
