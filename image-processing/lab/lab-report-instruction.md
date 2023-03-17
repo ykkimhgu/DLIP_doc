@@ -50,12 +50,18 @@ If the submitted program does not run, it will not be graded. 　
 
 ## Comment on Source Code&#x20;
 
-Please make the main() function as clean as possible.
+**Please make the main() function as concise with high readability.**
 
-* It's not a good idea to do all of your algorithms within the main function.
-* Create a function for each possible function and submit the main function as a combined use of them. 　
+* It's not a good idea to write all of your algorithms within the main() function
+* Modulize your algorithms as  functions.
+* You can define your functions within your library/header&#x20;
 
-5. In the comments, please briefly describe what each function does, and if you have an unusual algorithm and implemented the function, please describe it in detail line by line. 　 Please be sure to download the submitted file and check if it works properly in a new project. If your program does not run due to coding issues, it will not be graded.
+**Write comments to  briefly describe what each function/line does**
+
+* It is a good practice to describe the code  with comments.
+*
+
+
 
 
 
