@@ -39,7 +39,7 @@ You MUST include all the following in the report. Also, you have to draw a simpl
 
 #### Expected Final Output
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Example of Final Output</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (334).png" alt=""><figcaption><p>Example of Final Output</p></figcaption></figure>
 
 
 
@@ -105,25 +105,49 @@ C++: void drawContours(InputOutputArray image, InputArrayOfArrays contours, int 
 
 If the submitted program does not run, it will not be graded. 　
 
-1. Please follow the file names and extensions as specified below. If the submitted file name differs even by one character, you will get penalty points.
-   * File name:&#x20;
-     * DLIP\_LAB1\_yourID\_yourName.\*    (\*.cpp, \*.pdf, \*.zip,  etc..)&#x20;
-     * Example:  DLIP\_LAB1\_21900123\_GilDongHong.\*  &#x20;
-   *   Extension:&#x20;
+1. Please follow the file names and extensions as specified below
 
-       * Submit all files as one zip file.&#x20;
-       * Example:  DLIP\_LAB1\_21900123\_GilDongHong.zip
+> &#x20;If the submitted file name differs even by one character, you will get penalty points.
+
+* File name:&#x20;
+  * DLIP\_LAB1\_yourID\_yourName.\*    (\*.cpp, \*.pdf, \*.zip,  etc..)&#x20;
+  * Example:  DLIP\_LAB1\_21900123\_GilDongHong.\*  &#x20;
+*   Extension:&#x20;
+
+    * Submit all files as one zip file.&#x20;
+    * Example:  DLIP\_LAB1\_21900123\_GilDongHong.zip
+
 
 
 2. The following files must be included in the zip file.
-   * Report (submit both .pdf and .md files / pdf can be created via Typora File -> Export)
-     * If you attached a local image to the md file, please also submit the image used.
-   * Program code used to perform the assignment (.c/cpp and \*.h)
-   * Image file for building the program (Lab\_GrayScale\_TestImage.jpg) Do not submit (never submit) a) The entire folder of solutions and projects done in the assignment b) Solution files (_.sin), project files (_.vcxproj) c) Property sheet files 　
-3. When submitting your program, please specify the imread() path without any additional relative paths.
+
+* Submit all files as one zip file.&#x20;
+  * Example:  DLIP\_LAB1\_21900123\_GilDongHong.zip
+
+&#x20; (a) Report&#x20;
+
+* \*.pdf and \*.md files
+
+> if you attached a local image to the md file, please also submit the image used in  .
+
+(b) Program code and data file
+
+* \*.cpp,   \*.h
+
+> Do not submit the entire folder of solutions and projects
+>
+> NO Submit: \*_.sin, \*_.vcxproj,  Property sheet files 　 etc
+
+(c) Image/data file &#x20;
+
+* (Lab\_GrayScale\_TestImage.jpg)&#x20;
+
+<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
+
+1. When submitting your program, please specify the imread() path without any additional relative paths.
    * It is not possible for me to identify/modify and build different relative paths for fetching images for each student.
    * Therefore, when submitting the program, please try to build it with the images in the 'project folder' as shown in the example below. Example) src = imread("Lab\_GrayScale\_TestImage.jpg"); (O) src = imread("../../images/Lab\_GrayScale\_TestImage.jpg"); (X) 　
-4. Please make the main statement as clean as possible.
+2. Please make the main statement as clean as possible.
 
 * It's not a good idea to do all of your algorithms within the main function.
 * Create a function for each possible function and submit the main function as a combined use of them. 　
