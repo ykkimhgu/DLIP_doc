@@ -1,107 +1,8 @@
----
-description: Count nuts and bolts
----
-
-# LAB: Grayscale Image Segmentation
-
-## LAB: Grayscale Image Segmentation
-
-Segment and count each nuts and bolts
-
-## I. Introduction
-
-**Goal**: Count the number of nuts & bolts of each size for smart factory
-
-There are 2 different size bolts and 3 different types of nuts. You are required to segment the object and count each parts
-
-[Download the test image](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB\_grayscale/Lab\_GrayScale\_TestImage.jpg)
-
-* Bolt M5
-* Bolt M6
-* Square Nut M5
-* Hexa Nut M5
-* Hexa Nut M6
-
-![](https://raw.githubusercontent.com/ykkimhgu/DLIP-src/main/LAB\_grayscale/Lab\_GrayScale\_TestImage.jpg)
-
-After analyzing histogram, applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels.
-
-## II. Procedure
-
-You MUST include all the following in the report. Also, you have to draw a simple flowchart to explain the whole process
-
-* Apply appropriate filters to enhance image
-* Explain how the appropriate threshold value was chosen
-* Apply the appropriate morphology method to segment parts
-* Find the contour and draw the segmented objects.
-  * For applying contour, see Appendix
-* Count the number of each parts
-
-#### Expected Final Output
-
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of Final Output</p></figcaption></figure>
+# LAB Report Instruction
 
 
 
-## III. Report
-
-You are required to write a concise lab report and submit the program files.
-
-#### Lab Report:
-
-* Show what you have done with concise explanations and example results of each necessary process
-* In the appendix, show your source code.
-* You must write the report in markdown file (\*.md),
-  * Recommend (Typora 0.x < 1.x)
-  *   When embedding images
-
-      > Option 1) If you are using local path images: You must include local image folder with the report in zip file
-      >
-      > Option 2) Use online link for images.
-* Submit in both PDF and original documentation file/images
-* No need to print out. Only the On-Line submission.
-
-#### Source Code:
-
-* Zip all the necessary source files.
-* Only the source code files. Do not submit visual studio project files etc.
-
-## Appendix
-
-**Tip**: (contour\_demo.cpp)
-
-```cpp
-// OpenCV - use findCountours function
-
-C++: void findContours (InputOutputArray image, OutputArrayOfArrays contours, int mode, int method, Point offset=Point())
-
-C++: void drawContours(InputOutputArray image, InputArrayOfArrays contours, int contourIdx, const Scalar& color, int thickness=1, int lineType=8, InputArrayhierarchy=noArray(), int maxLevel=INT_MAX, Point offset=Point() )
-```
-
-```cpp
-// Example code
-// dst: binary image
- vector<vector<Point>> contours;
- vector<Vec4i> hierarchy;
-
-  /// Find contours
- findContours( dst, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
-  
- /// Draw all contours excluding holes
- Mat drawing( dst.size(), CV_8U,Scalar(255));
- drawContours( drawing, contours, -1, Scalar(0), CV_FILLED);
-   
- cout<<" Number of coins are ="<<contours.size()<<endl;
- 
- for( int i = 0; i< contours.size(); i++ )
- {
-      printf(" * Contour[%d] -  Area OpenCV: %.2f - Length: %.2f \n", i, contourArea(contours[i]),                          arcLength( contours[i], true ) );       
- }
-```
-
-##
-
-## Report Submission Instruction
+## File Submission&#x20;
 
 If the submitted program does not run, it will not be graded. 　
 
@@ -117,9 +18,7 @@ If the submitted program does not run, it will not be graded. 　
 
 
 
-
-
-2. The following files must be included in the zip file.
+**The following files must be included in the zip file.**
 
 * Submit all files as one zip file.&#x20;
   * Example:  DLIP\_LAB1\_21900123\_GilDongHong.zip
@@ -149,9 +48,9 @@ If the submitted program does not run, it will not be graded. 　
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
+## Comment on Source Code&#x20;
 
-
-1. Please make the main statement as clean as possible.
+Please make the main() function as clean as possible.
 
 * It's not a good idea to do all of your algorithms within the main function.
 * Create a function for each possible function and submit the main function as a combined use of them. 　
@@ -171,6 +70,3 @@ If the submitted program does not run, it will not be graded. 　
 4\) main 문은 최대한 깔끔하게 작성하여 제출바랍니다.  - 메인함수 내에서 모든 알고리즘을 수행하는 것은 좋지 않습니다.  - 가능한 각 기능별로 함수를 만들고 메인함수는 그것들을 종합적으로 이용한 형태로 제출바랍니다
 
 5\) 주석은 각 함수별로 어떤 기능을 수행하는지 간단히 작성바라며, 본인이 특이한 알고리즘을 구상하여 함수를 구현했을 경우 line by line으로 상세히 기재바랍니다.　**※ 반드시 제출파일을 다운로드 받아 새로운 프로젝트에서 정상적으로 구동되는지 확인 바랍니다.※ 제출한 프로그램이 코딩상의 문제로 실행이 되지 않는 경우, 채점대상에서 제외됩니다.**
-
-
-
