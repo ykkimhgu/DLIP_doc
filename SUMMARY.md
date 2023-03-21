@@ -12,6 +12,7 @@
 * [Tutorial](image-processing/tutorial/README.md)
   * [Tutorial: Spatial Filter](image-processing/tutorial/tutorial-spatial-filter.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
+  * [Tutorial: Camera Calibration](image-processing/tutorial/tutorial-camera-calibration.md)
   * [Tutorial: Color Image Processing](image-processing/tutorial/tutorial-color-image-processing.md)
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
   * [Tutorial: OpenCv Python](image-processing/tutorial/tutorial-opencv-python.md)
