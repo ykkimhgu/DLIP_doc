@@ -4,7 +4,12 @@
 
 We will use 'Typora' as the offline Markdown editor.
 
-Typora: [Download from here](https://drive.google.com/file/d/1nxF\_I7LqXc43A8pA-IJnV7mbMkmtlHXk/view?usp=sharing)
+* Typora(무료, 구버전): [Download from here ](https://drive.google.com/file/d/1UmDNSUdOqj\_w2y3YWqwOY-gAXmrvtxKO/view?usp=sharing)
+* Typora(유료, 최신버전): [Download from here](https://typora.io/#windows)&#x20;
+
+Also, you can use **NOTION app**
+
+****
 
 ## What is Markdown?
 
@@ -113,12 +118,12 @@ int main()
 
 ## Examples
 
-* [Text](https://guides.github.com/features/mastering-markdown/#)
-* [Lists](https://guides.github.com/features/mastering-markdown/#)
-* [Images](https://guides.github.com/features/mastering-markdown/#)
-* [Headers & Quotes](https://guides.github.com/features/mastering-markdown/#)
-* [Code](https://guides.github.com/features/mastering-markdown/#)
-* [Extras](https://guides.github.com/features/mastering-markdown/#)
+* [Text](https://guides.github.com/features/mastering-markdown/)
+* [Lists](https://guides.github.com/features/mastering-markdown/)
+* [Images](https://guides.github.com/features/mastering-markdown/)
+* [Headers & Quotes](https://guides.github.com/features/mastering-markdown/)
+* [Code](https://guides.github.com/features/mastering-markdown/)
+* [Extras](https://guides.github.com/features/mastering-markdown/)
 
 ````
 There are many different ways to style code with GitHub's markdown. If you have inline code blocks, wrap them in backticks: `var example = true`.  If you've got a longer block of code, you can indent with four spaces:

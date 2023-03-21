@@ -39,7 +39,7 @@ You MUST include all the following in the report. Also, you have to draw a simpl
 
 #### Expected Final Output
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of Final Output</p></figcaption></figure>
+![image](https://user-images.githubusercontent.com/38373000/226501321-dcb79a67-fffc-4e8d-94f5-3b12e9868f07.png)
 
 
 
