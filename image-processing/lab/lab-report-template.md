@@ -2,6 +2,12 @@
 
 This is an example report template to help students write a concise and organized report. But you do not need to follow the exact format of this template, as long as you write a good quality report.
 
+
+
+[You can download the report template md file here](../../Lab\_report\_template.md)
+
+
+
 ## LAB: Lab Title Goes Here
 
 **Date:** 2023-Aug-21
