@@ -17,6 +17,7 @@
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
   * [Tutorial: OpenCv Python](image-processing/tutorial/tutorial-opencv-python.md)
 * [LAB](image-processing/lab/README.md)
+  * [Lab Report Grading Criteria](image-processing/lab/lab-report-grading-criteria.md)
   * [LAB Report Instruction](image-processing/lab/lab-report-instruction.md)
   * [LAB: Grayscale Image Segmentation](image-processing/lab/lab-grayscale-image-segmentation.md)
   * [LAB: Facial Temperature Measurement with IR images](image-processing/lab/lab-facial-temperature-measurement-with-ir-images.md)
