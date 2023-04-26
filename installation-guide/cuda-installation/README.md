@@ -88,7 +88,7 @@ Install CUDA and cuDNN with `conda` in Anaconda prompt.
 
 Here, it is assumed you have already installed Anaconda. If you do not have Anaconda installed, follow [How to Install Anaconda](https://ykkim.gitbook.io/dlip/dlip-installation-guide/cuda-installation)
 
-****
+
 
 **Install in Specific Virtual Environment**
 

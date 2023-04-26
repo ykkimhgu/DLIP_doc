@@ -20,7 +20,7 @@ We will learn how to use Canny Edge Algorithm to detect and display edges.
 
 **Download Tutorial Code:** [Canny Edge Demo ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Hough/Canny%20edge%20Demo.cpp)
 
-****
+
 
 
 

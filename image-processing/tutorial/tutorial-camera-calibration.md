@@ -4,7 +4,7 @@ DLIP Tutorial for Camera Calibration using MATLAB
 
 **Using **_**"Computer Vision Toolbox"**_** Application in MATLAB**
 
-****
+
 
 ## Tutorial - Calibration using MATLAB Toolbox
 

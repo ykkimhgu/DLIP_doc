@@ -9,7 +9,7 @@ We will use 'Typora' as the offline Markdown editor.
 
 Also, you can use **NOTION app**
 
-****
+
 
 ## What is Markdown?
 
