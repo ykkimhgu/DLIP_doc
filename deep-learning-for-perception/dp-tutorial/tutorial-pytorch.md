@@ -27,7 +27,9 @@ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 
 * [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)  /   [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
 
+4. More of PyTorch Tutorials
 
+* [PyTorch Tutorial List](../../programming/pytorch/)
 
 
 
