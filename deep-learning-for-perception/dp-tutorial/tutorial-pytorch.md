@@ -18,17 +18,20 @@ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 
 
 
-2\. Watch Video of [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
+2\. Watch Tutorial Video of Pytorch
 
-* You need to know 'What is Tensor in Pytorch'.
+* [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
+* You need to know 'What is Tensor in Pytorch'
 
-3\. Follow Quick-Start Tutorial: [Pytorch Tutorial](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
+3\. Follow Quick-Start Tutorial:
 
-* Finish this tutorial before class
+* [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)  /   [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
 
 
 
-## Class Tutorial
+
+
+## In-Class Tutorial
 
 ### MLP
 
