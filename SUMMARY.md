@@ -153,10 +153,10 @@
   * [Cheat Sheet](programming/keras/cheatsheet-keras.md)
 * [PyTorch](programming/pytorch/README.md)
   * [Cheat Sheet](programming/pytorch/cheatsheet-py.md)
-  * [Autograd in PyTorch](programming/pytorch/autograd-torch.md)
-  * [Neural Networks](programming/pytorch/neural-networks.md)
-  * [MNIST using LeNet](programming/pytorch/mnist-using-lenet.md)
-  * [Train ConvNet using CIFAR10](programming/pytorch/train-convnet-using-cifar10.md)
+  * [Autograd in PyTorch](programming/pytorch/tutorial-torch/autograd-torch.md)
+  * [Simple ConvNet](programming/pytorch/tutorial-torch/neural-networks.md)
+  * [MNIST using LeNet](programming/pytorch/tutorial-torch/mnist-using-lenet.md)
+  * [Train ConvNet using CIFAR10](programming/pytorch/tutorial-torch/train-convnet-using-cifar10.md)
 
 ## Resources
 

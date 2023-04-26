@@ -1,8 +1,8 @@
 # Train ConvNet using CIFAR10
 
-[Source code \(Jupyter notebook\)](https://github.com/ykkimhgu/gitbook_docs/blob/master/deep-learning-framework/pytorch/neural_networks_tutorial_ykk.ipynb)
+### [Source code (Jupyter notebook)](https://github.com/ykkimhgu/gitbook\_docs/blob/master/deep-learning-framework/pytorch/neural\_networks\_tutorial\_ykk.ipynb)
 
-## Training an image classifier <a id="Training-an-image-classifier"></a>
+## Training an image classifier <a href="#training-an-image-classifier" id="training-an-image-classifier"></a>
 
 We will do the following steps in order:
 
@@ -14,17 +14,17 @@ We will do the following steps in order:
 
 ## Data Loading
 
-```text
+```
 import torch
 import torchvision
 import torchvision.transforms as transforms
 ```
 
-> The output of torchvision datasets are PILImage images of range \[0, 1\]. We transform them to Tensors of normalized range \[-1, 1\].
+> The output of torchvision datasets are PILImage images of range \[0, 1]. We transform them to Tensors of normalized range \[-1, 1].
 
 ### Download General Dataset
 
-{% embed url="https://pytorch.org/docs/stable/torchvision/datasets.html" caption="" %}
+{% embed url="https://pytorch.org/docs/stable/torchvision/datasets.html" %}
 
 ```python
 # Transform: normalize a tensor image wih mead/std
@@ -53,7 +53,7 @@ classes = ('plane', 'car', 'bird', 'cat',
 
 ### Use Downloaded General Dataset
 
-Change the option `download=False`, and set the path \(`root)`where data is stored.
+Change the option `download=False`, and set the path (`root)`where data is stored.
 
 ```python
 trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
@@ -65,7 +65,7 @@ testset = torchvision.datasets.CIFAR10(root='./data', train=False,
 
 ### User Defined Dataset
 
-## Load and Show images\(tensor, color\)
+## Load and Show images(tensor, color)
 
 ```python
 import matplotlib.pyplot as plt
@@ -210,7 +210,7 @@ print('Accuracy of the network on the %d test images: %d %%' %(len(testloader.da
 
 ### Evaluate each class
 
-> numpy.squeeze\(\) function is used when we want to remove single-dimensional entries from the shape of an array.
+> numpy.squeeze() function is used when we want to remove single-dimensional entries from the shape of an array.
 
 ```python
 class_correct = list(0. for i in range(10))
@@ -234,11 +234,9 @@ for i in range(10):
 
 ## Exercise
 
-* Try increasing the width of your network \(argument 2 of
+*   Try increasing the width of your network (argument 2 of
 
-  the first `nn.Conv2d`, and argument 1 of the second `nn.Conv2d`
+    the first `nn.Conv2d`, and argument 1 of the second `nn.Conv2d`
 
-  they need to be the same number\), see what kind of speedup you get.
-
+    they need to be the same number), see what kind of speedup you get.
 * Build a MNIST Convnet
-

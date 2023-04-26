@@ -1,4 +1,4 @@
-# Neural Networks
+# Simple ConvNet
 
 ## Train a simple Convnet
 
@@ -8,22 +8,22 @@ An `nn.Module` contains layers, and a method `forward(input)`that returns the `o
 
 A typical training procedure for a neural network is as follows:
 
-* Define the neural network that has some learnable parameters \(or weights\)
+* Define the neural network that has some learnable parameters (or weights)
 * Iterate over a dataset of inputs
 * Process input through the network
-* Compute the loss \(how far is the output from being correct\)
+* Compute the loss (how far is the output from being correct)
 * Propagate gradients back into the network’s parameters
 * Update the weights of the network, typically using a simple update rule: `weight = weight - learning_rate * gradient`
 
-![convnet](https://pytorch.org/tutorials/_images/mnist.png)
+![convnet](https://pytorch.org/tutorials/\_images/mnist.png)
 
-input -&gt; conv2d -&gt; relu -&gt; maxpool2d -&gt; conv2d -&gt; relu -&gt; maxpool2d -&gt; view -&gt; linear -&gt; relu -&gt; linear -&gt; relu -&gt; linear -&gt; MSELoss -&gt; loss
+input -> conv2d -> relu -> maxpool2d -> conv2d -> relu -> maxpool2d -> view -> linear -> relu -> linear -> relu -> linear -> MSELoss -> loss
 
 ## Define the network
 
 Let’s define this network:
 
-> tensor.view\(-1,n\), Returns a new tensor with the same data as the self tensor but of a different shape. the size -1 is inferred from other dimensions
+> tensor.view(-1,n), Returns a new tensor with the same data as the self tensor but of a different shape. the size -1 is inferred from other dimensions
 
 ```python
 import torch
@@ -68,7 +68,7 @@ net = Net()
 print(net)
 ```
 
-## Inputs <a id="Update-the-weights"></a>
+## Inputs <a href="#update-the-weights" id="update-the-weights"></a>
 
 `torch.nn` only supports mini-batches. The entire `torch.nn` package only supports inputs that are a mini-batch of samples, and not a single sample. For example, `nn.Conv2d` will take in a 4D Tensor of `nSamples x nChannels x Height x Width`.
 
@@ -85,11 +85,11 @@ net.zero_grad()
 out.backward(torch.randn(1, 10))
 ```
 
-## Datasets \(MNIST\)
+## Datasets (MNIST)
 
 `torchvision.datasets.MNIST(root, train=True, transform=None, target_transform=None, download=False)`
 
-* **root** \(_string_\) – Root directory of dataset where `MNIST/processed/training.pt` and `MNIST/processed/test.pt` exist.
+* **root** (_string_) – Root directory of dataset where `MNIST/processed/training.pt` and `MNIST/processed/test.pt` exist.
 
 ```python
 #  a batch_size of 64, size 1000 for testing
@@ -115,9 +115,9 @@ testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size_test,
                                          shuffle=True, num_workers=2)
 ```
 
-## Loss Function <a id="Update-the-weights"></a>
+## Loss Function <a href="#update-the-weights" id="update-the-weights"></a>
 
-A loss function takes the \(output, target\) pair of inputs. There are several different loss functions [https://pytorch.org/docs/nn.html\#loss-functions](https://pytorch.org/docs/nn.html#loss-functions)\`\`
+A loss function takes the (output, target) pair of inputs. There are several different loss functions [https://pytorch.org/docs/nn.html#loss-functions](https://pytorch.org/docs/nn.html#loss-functions)\`\`
 
 ```python
 output = net(input)
@@ -129,7 +129,7 @@ loss = criterion(output, target)
 print(loss)
 ```
 
-## Update the weights\(Optimization\) <a id="Update-the-weights"></a>
+## Update the weights(Optimization) <a href="#update-the-weights" id="update-the-weights"></a>
 
 various different update rules such as SGD, Nesterov-SGD, Adam, RMSProp, etc.
 
@@ -146,4 +146,3 @@ loss = criterion(output, target)
 loss.backward()
 optimizer.step()    # Does the update
 ```
-

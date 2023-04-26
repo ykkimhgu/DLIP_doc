@@ -11,7 +11,7 @@ It is a simple feed-forward CNN network for MNIST. Lets use LeNet for MNIST hand
 A typical training procedure for a neural network is as follows:
 
 * Prepare dataset of inputs
-* Define the neural network that has some learnable parameters&#x20;
+* Define the neural network that has some learnable parameters
 * Compute the loss (how far is the output from being correct)
 * Propagate gradients back into the network’s parameters
 *   Update the weights of the network, typically using a simple update rule:
