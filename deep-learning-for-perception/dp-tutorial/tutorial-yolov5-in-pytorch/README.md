@@ -1,23 +1,21 @@
-# Tutorial: Yolov5 in Pytorch
+# Tutorial: Yolov5 in Pytorch (VS code)
 
-**A simple YOLOv5 tutorial in Local PC**&#x20;
+## **A simple tutorial for  YOLOv5 Testing  in Local PC**
 
 본 튜토리얼에서는 local PC에 설치한 `py39`환경으로 YOLO v5를 실행하는 두가지 방법의 간단한 예제를 제공합니다.
 
 1. 명령창을 활용해 구동하는 방법
 2. VS code와 같은 IDE로 torch hub를 활용하여 구동하는 방법
 
+:warning: 반드시 [Installation Guide for DLIP](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning) 을 먼저 완료한 후 실행하십시오. 설치 라이브러리 버전이 모두 맞아야 합니다.
 
-
-:warning: 반드시 [Installation Guide for DLIP](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning) 을 먼저 완료한 후 실행하십시오.  설치 라이브러리 버전이 모두 맞아야 합니다.
-
-## Part 1. YOLOv5 Installation
+### Part 1. YOLOv5 Installation
 
 YOLOv5 github([https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5))에 접속하여 아래와 같이 Repository를 다운로드합니다.
 
 ![image](https://user-images.githubusercontent.com/23421059/169227977-bf94857e-3e87-4cc5-9d1d-daf73836a3dd.png)
 
-압축해제 후 폴더명을 `yolov5-master` → `yolov5`로 변경 후  원하는 위치에  붙여넣습니다.
+압축해제 후 폴더명을 `yolov5-master` → `yolov5`로 변경 후 원하는 위치에 붙여넣습니다.
 
 /`yolov5` 폴더에 진입 후 아래 그림과 같이 경로 주소를 복사(ctrl+C)합니다.
 
@@ -33,16 +31,16 @@ pip install -r requirements.txt
 
 ![image](https://user-images.githubusercontent.com/23421059/169230206-55eacf01-0b72-42a2-b8c2-2b046572d5bb.png)
 
-이후 설치가 완료됩니다. 아래와 같이 경고가 뜨지만 무시해도 됩니다.&#x20;
+이후 설치가 완료됩니다. 아래와 같이 경고가 뜨지만 무시해도 됩니다.
 
 ![image](https://user-images.githubusercontent.com/23421059/169255844-7db4db53-9129-41be-a4f3-8f395b369c83.png)
 
-## Part 2. Run YOLOv5 in Local PC with CLI
+### Part 2. Run YOLOv5 in Local PC with CLI
 
 명령창(command line, CLI)로 YOLO v5 실행시 `detect.py`, `val.py`, `train.py`와 같이 git에서 제공된 파일을 빌드합니다.
 
 * 따라서 CLI로 빌드시, 반드시 git을 local PC에 저장하고 폴더 경로에 진입하는 과정이 선행되어야 합니다.
-* 즉, 위의 Part 1을 수행해서 Yolov5 repository를  local PC에 저장하면 됩니다.
+* 즉, 위의 Part 1을 수행해서 Yolov5 repository를 local PC에 저장하면 됩니다.
 
 ### 1. Inference
 
@@ -64,17 +62,13 @@ python detect.py --weights yolov5n.pt --img 640 --conf 0.25 --source data/images
 
 COCO128 학습 오픈데이터셋으로 YOLOv5 학습하는 튜토리얼입니다.
 
-
-
 yolov5 폴더 경로가 유지된 상태에서 아래 코드 입력하여 `train.py`를 실행합니다.
 
 ```
 python train.py --img 640 --batch 1 --epochs 1 --data coco128.yaml --weights yolov5n.pt
 ```
 
-coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\dataset` 에  coco 데이터셋 (이미지 및 라벨)이 자동으로 다운로드가 됩니다.
-
-
+coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\dataset` 에 coco 데이터셋 (이미지 및 라벨)이 자동으로 다운로드가 됩니다.
 
 데이터셋 자동 다운로드 후 학습을 진행하며 아래와 같이 결과창이 보여집니다.
 
@@ -86,21 +80,21 @@ coco128.yml 파일에서 지정된 바와 같이 workspace의 상위 폴더 `\da
 
 ![image](https://user-images.githubusercontent.com/23421059/169254257-3636431b-3cc1-4b39-bfcf-78d282256f4d.png)
 
-
-
 ### 3. Train with custom dataset
 
 See [Tutorial: Yolov5 with custom dataset](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data)
 
+\-----------------------------------------------------------------------------------------------------
 
 
-## Run YOLOv5 in Local PC with PyTorch Hub
+
+## Run YOLOv5 Inference in Local PC with PyTorch Hub
 
 * VS code와 같은 IDE에서도 YOLO v5 결과에 접근하여 프로그래밍할 수 있습니다.
 * 필요한 모듈(requirements)만 설치하면, git을 local PC에 저장하는 선행과정이 필요하지 않습니다.
 * 사전에 [VS code 설치 및 사용법 숙지](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)를 선행하시기 바랍니다.
 
-### Inference
+### Procedure
 
 임의의 workspace(작업) 폴더를 생성 후 우클릭 → Code로 열기를 클릭합니다.
 
@@ -108,7 +102,7 @@ See [Tutorial: Yolov5 with custom dataset](https://ykkim.gitbook.io/dlip/deep-le
 
 ![](https://user-images.githubusercontent.com/23421059/169258661-a30f94a3-96b9-4890-9a9d-7c4eb5aea4f8.png)
 
-&#x20;파이썬 파일 `YOLOv5_run_test.py` 을 생성하들고 아래의 코드를 붙여 넣습니다.
+파이썬 파일 `YOLOv5_run_test.py` 을 생성하들고 아래의 코드를 붙여 넣습니다.
 
 ```python
 import torch
@@ -165,7 +159,7 @@ cv2.waitKey(0)
 
 `F1`키를 눌러 `select interpreter`를 검색 후 클릭 → `py39`를 선택합니다.
 
-> DLIP 2022 에서는   py39 사용&#x20;
+> DLIP 2022 에서는 py39 사용
 
 ![image](https://user-images.githubusercontent.com/23421059/169260982-d5dc20a9-9cc4-4b63-8fd1-db3841323358.png)
 
