@@ -68,7 +68,7 @@ Download module:  [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/T
 
 #### **YOLO v5 in PyTorch**
 
-* T4-1: [Test using Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T4\_1\_Inference\_using\_Pretrained\_YOLOv5\_with\_COCO\_2022.ipynb)
+* T4-1: [Test using Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T4\_1\_Inference\_using\_Pretrained\_YOLOv5\_with\_COCO\_2022.ipynb) (in CoLab)
 * T4-2: Train YOLOv5 with a Custom Dataset
 
 ## LAB
