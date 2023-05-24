@@ -99,6 +99,7 @@
   * [Parking Space Management](dlip-project/dlip-projects/parking-space-management.md)
   * [Vehicle, Pedestrian Detection with IR Image](dlip-project/dlip-projects/vehicle-pedestrian-detection-with-ir-image.md)
   * [Drum Playing Detection](dlip-project/dlip-projects/drum-playing-detection.md)
+  * [Turtle neck measurement program using OpenPose](dlip-project/dlip-projects/turtle-neck-measurement-program-using-openpose.md)
 * [DLIP 2022 Projects](dlip-project/dlip-2022-projects.md)
   * [BakeryCashier](dlip-project/dlip-2022-projects/bakerycashier.md)
   * [Virtual Mouse](dlip-project/dlip-2022-projects/virtual-mouse.md)

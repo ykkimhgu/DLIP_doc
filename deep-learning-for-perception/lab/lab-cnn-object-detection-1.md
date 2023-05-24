@@ -52,8 +52,14 @@ Your lab will not be scored if
     * Each line in text file('counting\_result.txt') should be the pair of **frame# and number of detected car**.
     * Frame number should start from 0.
 
-    ex) 0, 12 1, 12 ...
-* Your program will be scored depending on the accuracy of the detected car
+    ex) 0, 12      1, 12 ...
+*   In the report, you must evaluate the model performance with numbers (accuracy etc)
+
+    * Answer File for  Frame 0 to Frame 1500 are provided:  [download file](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB-ParkingSpace/LAB\_Parking\_counting\_result\_answer\_student.txt)
+
+
+* Your program will be scored depending on the accuracy of the vehicle numbers
+  * TA will check the Frame 0 to the last frame
 
 ## III. Report and Demo Video
 
