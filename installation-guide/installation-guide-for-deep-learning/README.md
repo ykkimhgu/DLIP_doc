@@ -15,10 +15,14 @@ This installation guide is for programming a deep learning application using Pyt
 Make sure you install the correct software version as instructed.
 
 > For DLIP 2022 Lecture:
->
-> * Python 3.9, CUDA 10.2, cuDNN 7.6
-> * PyTorch 1.9.1
-> * Anaconda for Python 3.9 or Anaconda of Latest Version
+
+* Python 3.9, CUDA 10.2, cuDNN 7.6
+* PyTorch 1.9.1
+* Anaconda for Python 3.9 or Anaconda of Latest Version
+
+#### Installation Guide for MacOS
+
+(To be Updated)
 
 ***
 
