@@ -133,6 +133,7 @@
   * [Visual Studio Code](installation-guide/ide/vscode/README.md)
     * [Python with VS Code](installation-guide/ide/vscode/python-vscode.md)
     * [Notebook with VS Code](installation-guide/ide/vscode/notebook-with-vscode.md)
+    * [C++ with VS Code](installation-guide/ide/vscode/c++-with-vs-code.md)
   * [Jupyter Notebook](installation-guide/ide/jupyter/README.md)
     * [Install](installation-guide/ide/jupyter/intall-jupyter.md)
     * [How to use](installation-guide/ide/jupyter/example-jupyter.md)
