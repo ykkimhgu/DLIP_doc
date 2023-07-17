@@ -68,7 +68,7 @@ Now, Commit to the branch.
 
 **Publish your branch:** Publishing to the remote (Github website) \*\* `Ctrl+P`\*\*
 
-***
+
 
 **Pull Request** to Propose the change
 

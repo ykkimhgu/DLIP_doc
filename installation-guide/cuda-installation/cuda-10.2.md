@@ -120,7 +120,7 @@ After installing CUDA and its patches, the next step is to find a compatible ver
 
 * Check which version of \*\*\*\* cuDNN is needed for specific Tensorflow or Pytorch
 
-***
+
 
 **Step 5.1: Register NVIDIA**
 

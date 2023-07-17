@@ -34,7 +34,7 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 ```
 
-***
+
 
 ### Upload Image Files in Colab
 
@@ -135,7 +135,7 @@ cv.destroyAllWindows()
 cap.release()
 ```
 
-***
+
 
 ### Spatial Filter
 
@@ -166,7 +166,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382063-837f2751-5590-416f-95dd-fd30fd4214ac.png)
 
-***
+
 
 ### Thresholding
 
@@ -314,7 +314,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382254-702e76cd-5ead-434f-8dce-32e06bd4d7d5.png)
 
-***
+
 
 ### Color Segmetation (InRange)
 
@@ -356,7 +356,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382318-ee98c3be-9064-403a-b56f-54cbb15c9d81.png)
 
-***
+
 
 ### Edge & Line & Circle Detection
 
@@ -510,7 +510,7 @@ Solution codes for this tutorials can be downloaded
 * [Source code (\*.ipynb) for COLAB](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_2022.ipynb)
 * [Source code (\*.ipynb) for VSCode](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_vscode\_2022.ipynb)
 
-***
+
 
 ## Exercise
 

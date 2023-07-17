@@ -1,12 +1,14 @@
 # Installation Guide 2021
 
----
-description: Installation Guide for Deep Learning 2021
----
+## Installation Guide 2021
 
-# Installation Guide
 
-## Installation Guide for Win10
+
+### description: Installation Guide for Deep Learning 2021
+
+## Installation Guide
+
+### Installation Guide for Win10
 
 This installation guide is for programming a deep learning application using Pytorch or Tensorflow.
 
@@ -18,23 +20,23 @@ Make sure you install the correct software version as instructed.
 > * PyTorch 1.10.x
 > * Anaconda for Python 3.7 or Anaconda of Latest Version
 
-***
 
-## Installation Steps
+
+### Installation Steps
 
 (updated 2021.4)
 
-### 1. Install Anaconda
+#### 1. Install Anaconda
 
 **Anaconda** : Python and libraries package installer.
 
 Follow: [How to install Anaconda](../anaconda.md#conda-installation)
 
-###
+####
 
-### 2. Install Python & Numpy & OpenCV
+#### 2. Install Python & Numpy & OpenCV
 
-#### Install Python
+**Install Python**
 
 > Python 3.7 (2022-1)
 
@@ -65,7 +67,7 @@ conda activate py37
 
 ![](https://user-images.githubusercontent.com/38373000/162150172-0192d3d4-901f-4356-8c99-ff146297bd39.png)
 
-#### Install Numpy, OpenCV, Matplot
+**Install Numpy, OpenCV, Matplot**
 
 ```
 conda activate py37
@@ -79,9 +81,9 @@ conda install -c conda-forge opencv
 >
 > `pip install numpy`
 
-###
+####
 
-### 3. Install IDE (Visual Studio Code)
+#### 3. Install IDE (Visual Studio Code)
 
 Follow: [How to Install VS Code](../ide/vscode/#installation)
 
@@ -90,9 +92,9 @@ Also, read about
 * [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
 * [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
-###
+####
 
-### 4. Install GPU library (CUDA, cuDNN)
+#### 4. Install GPU library (CUDA, cuDNN)
 
 Skip this if you do not have GPU.
 
@@ -103,9 +105,9 @@ Skip this if you do not have GPU.
 
 Follow [How to install CUDA and cuDNN](../cuda-installation/#9f39)
 
-###
+####
 
-### 5. Install DL Framework
+#### 5. Install DL Framework
 
 **Framework**
 
@@ -113,7 +115,7 @@ Follow [How to install CUDA and cuDNN](../cuda-installation/#9f39)
 * **Keras** — DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
 * **PyTorch** — Dynamic DL library with GPU acceleration.
 
-#### Install Pytorch
+**Install Pytorch**
 
 Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
 
@@ -135,7 +137,7 @@ conda activate py37
 conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cpuonly -c pytorch
 ```
 
-#### Install Tensorflow and Keras
+**Install Tensorflow and Keras**
 
 * Run 'Anaconda Prompt(admin)'
 * Activate virtual environment
@@ -149,9 +151,9 @@ conda install tensorflow-gpu=2.3.0
 conda install keras
 ```
 
-###
+####
 
-### 6. Installing Other libraries
+#### 6. Installing Other libraries
 
 ```
 conda activate py37
@@ -163,5 +165,3 @@ conda install -c anaconda pandas
 conda install jupyter
 conda install -c anaconda ipykernel
 ```
-
-

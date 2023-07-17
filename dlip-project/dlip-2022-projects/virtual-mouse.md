@@ -4,7 +4,7 @@
 
 ## AI Virtual Mouse with Hand Gesture Detection
 
-***
+
 
 \*\*Date: \*\*2022-06-20
 
@@ -14,7 +14,7 @@
 
 **Demo Video:** [AI Virtual Mouse with Hand Gesture Detection](https://www.youtube.com/watch?v=hzf\_d3IJKLs)
 
-***
+
 
 ### 1. Introduction
 
@@ -32,7 +32,7 @@ The goal of this project is to perform all basic operations of mouse with only h
 
 Hand can be recognized by using MediaPipe's hand landmakr model. As shown in the figure below, landmark information for each joint of the hand is available.
 
-***
+
 
 ### 2. Requirement
 
@@ -48,7 +48,7 @@ Hand can be recognized by using MediaPipe's hand landmakr model. As shown in the
 * autopy
 * pyautogui
 
-***
+
 
 ### 3. Tutorial Procedure
 
@@ -361,7 +361,7 @@ pTime = check_show_time(img, pTime) # 3) Frame Rate
 cv.imshow("Image", img)             # 4) Display
 ```
 
-***
+
 
 ### 4. Results and Analysis
 
@@ -427,7 +427,7 @@ For a general mouse, a maximum score of 609 was obtained, and for a virtual mous
 
     More functions can be implemented by recognizing both hands. If the recognition of the two hands movements is further developed, it is possible to create a model that can interpret sign language.
 
-***
+
 
 ### 5. References
 

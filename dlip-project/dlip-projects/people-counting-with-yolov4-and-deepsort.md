@@ -2,26 +2,23 @@
 
 **Author:** S.-S. Lim & H.-J. Kim\
 **Date created:** 2021/06/21\
-**Github repository:**  [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)
+**Github repository:** [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)
 
 ## Introduction
 
 Since the outbreak of COVID-19, people have been restricted from entering various places. However, automation of access control is not yet used in most places. So, this application aims to automatically identify and control people's access to rooms, buildings, or outdoors. This application can be used for personnel control due to government guidelines, attendance checks in classes, building usage status, etc.\
 \
-&#x20;The application was created using open source YOLOv4, Deep SORT and TensorFlow. YOLOv4 is an algorithm that performs object detection using deep convolutional neural networks, and is created by adding additional algorithms to YOLOv3. YOLOv4 is a 10% improvement in accuracy (AP) over YOLOv3 and has the advantage of fast and accurate object detection in a typical learning environment using only one GPU. Deep SORT(Simple Online and Realtime Tracking with a Deep Association Metric) is an algorithm for object tracking. It was created using deep learning, Kalman filter and Hungarian algorithm.\
+The application was created using open source YOLOv4, Deep SORT and TensorFlow. YOLOv4 is an algorithm that performs object detection using deep convolutional neural networks, and is created by adding additional algorithms to YOLOv3. YOLOv4 is a 10% improvement in accuracy (AP) over YOLOv3 and has the advantage of fast and accurate object detection in a typical learning environment using only one GPU. Deep SORT(Simple Online and Realtime Tracking with a Deep Association Metric) is an algorithm for object tracking. It was created using deep learning, Kalman filter and Hungarian algorithm.\\
 
 
-****
 
 ## Requirements
 
-To get started, you must first download the YOLOv4 and Deep SORT algorithm codes and directories from my GitHub repository.&#x20;
+To get started, you must first download the YOLOv4 and Deep SORT algorithm codes and directories from my GitHub repository.
 
-Download all files: [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)\
+Download all files: [https://github.com/LIMSES/Access\_Control\_Application/](https://github.com/LIMSES/Access\_Control\_Application/)\\
 
-
-Also, you need at least one GPU to use YOLOv4. CUDA toolkit must be installed for GPU use. CUDA Toolkit version 10.1 is the proper version for the TensorFlow version used in this application. [https://developer.nvidia.com/cuda-10.1-download-archive-update2](https://developer.nvidia.com/cuda-10.1-download-archive-update2)\
-
+Also, you need at least one GPU to use YOLOv4. CUDA toolkit must be installed for GPU use. CUDA Toolkit version 10.1 is the proper version for the TensorFlow version used in this application. [https://developer.nvidia.com/cuda-10.1-download-archive-update2](https://developer.nvidia.com/cuda-10.1-download-archive-update2)\\
 
 After that, install the proper dependencies either via Anaconda. You can install dependencies through either conda-gpu.yml or requirements-gpu.txt.
 
@@ -38,11 +35,9 @@ pip install -r requirements-gpu.txt
 
 ## Training Data
 
-For object detection, the application must first be trained with a large number of data. However, since the application aims to detect only humans, it use an official pre-trained YOLOv4 model that is able to detect 80 classes without additional training data. Download pre-trained yolov4.weights file: [https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing](https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing) \
+For object detection, the application must first be trained with a large number of data. However, since the application aims to detect only humans, it use an official pre-trained YOLOv4 model that is able to detect 80 classes without additional training data. Download pre-trained yolov4.weights file: [https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing](https://drive.google.com/file/d/1VCRU3SpO5x76KngBr8FHAGR68UqMgbEs/view?usp=sharing) \\
 
-
-You must download and extract the weights.zip file and place the yolov4.weights file in the data directory of your workspace(./data/yolov4.weights). If the download doesn't work properly, refer to the [reference](https://github.com/theAIGuysCode/yolov4-deepsort) in this tutorial.\
-
+You must download and extract the weights.zip file and place the yolov4.weights file in the data directory of your workspace(./data/yolov4.weights). If the download doesn't work properly, refer to the [reference](https://github.com/theAIGuysCode/yolov4-deepsort) in this tutorial.\\
 
 The weight file downloaded is a darknet weight file. Transformation is required to apply file to tensorflow models. If you run the save\_model.py, checkpoints directory is created and tensorflow model is stored.
 
@@ -54,11 +49,9 @@ python save_model.py --model yolov4
 
 ## Downloading Sample Videos
 
-In a place with one entrance, the application can be operated based on real-time images of that one entrance. Likewise, in another place with two or more entrances, the application should be operated based on two or more images. Simultaneous processing can be done through communication, such as ROS systems, but this tutorial combines images for easy processing.\
+In a place with one entrance, the application can be operated based on real-time images of that one entrance. Likewise, in another place with two or more entrances, the application should be operated based on two or more images. Simultaneous processing can be done through communication, such as ROS systems, but this tutorial combines images for easy processing.\\
 
-
-The videos going to use in the tutorial are entrance to the front and back door before the start of DLIP class at Handong Global University. The videos have speeds of three times faster and was edited when there was no human access to reduce running time. Also, this project has the consent of class members. You can download and extract the videos.zip file and place the videos directory in the data directory(./data/videos/frontdoor.mp4). Download sample videos: [https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing](https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing) \
-
+The videos going to use in the tutorial are entrance to the front and back door before the start of DLIP class at Handong Global University. The videos have speeds of three times faster and was edited when there was no human access to reduce running time. Also, this project has the consent of class members. You can download and extract the videos.zip file and place the videos directory in the data directory(./data/videos/frontdoor.mp4). Download sample videos: [https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing](https://drive.google.com/file/d/10Cts1ObT\_e\_8B6jleXzUCb2PsgGcoMiM/view?usp=sharing) \\
 
 ### Front door
 
@@ -193,18 +186,17 @@ from tools import generate_detections as gdet
 ### Command line arguments
 
 `--video`: path to input video (use 0 for webcam)\
-&#x20;`--output`: path to output video\
-&#x20;`--output_format`: codec used in VideoWriter when saving video to file\
-&#x20;`--tiny`: yolov4 or yolov4-tiny\
-&#x20;`--weights`: path to weights file\
-&#x20;`--framework`: what framework to use (tf, trt, tflite)\
-&#x20;`--model`: yolov3 or yolov4\
-&#x20;`--size`: resize images to\
-&#x20;`--iou`: iou threshold\
-&#x20;`--score`: confidence threshold\
-&#x20;`--dont_show`: dont show video output\
-&#x20;`--info`: print detailed info about tracked objects\
-
+`--output`: path to output video\
+`--output_format`: codec used in VideoWriter when saving video to file\
+`--tiny`: yolov4 or yolov4-tiny\
+`--weights`: path to weights file\
+`--framework`: what framework to use (tf, trt, tflite)\
+`--model`: yolov3 or yolov4\
+`--size`: resize images to\
+`--iou`: iou threshold\
+`--score`: confidence threshold\
+`--dont_show`: dont show video output\
+`--info`: print detailed info about tracked objects\\
 
 ```bash
 flags.DEFINE_string('framework', 'tf', '(tf, tflite, trt')
@@ -561,16 +553,13 @@ The application were able to successfully determine the number of people enterin
 
 **See demo video here**
 
-****
+
 
 ## Discussion
 
 There were some problems that detection by the pretrained model, frame drop, location of filming, location of the access identification baseline, and person moving in both directions from baseline location. In particular, location of filtering was considered the best problem. The given vidoe captured the front and side of the people moving. Therefore, detection did not occur when people moved overlapped, and the central value of objects changed rapidly. Person moving in both direction from baseline location is also a matter of rapid change in the central value. In this tutorial, the baseline could be repositioned to achieve 100% of the results, but this problem is expected to be fatal in other cases. It is expected that this problem will disappear if the top view is taken from the ceiling to prevent overlapping cases. Because the location of filming problem is a problem other than software, the completed application is a very high accuracy program. This application can successfully control access.
 
-
-
 ## **References:**
 
-* [YOLOv4 and Deep SORT: https://github.com/theAIGuysCode/yolov4-deepsort](https://github.com/theAIGuysCode/yolov4-deepsort) \
-
+* [YOLOv4 and Deep SORT: https://github.com/theAIGuysCode/yolov4-deepsort](https://github.com/theAIGuysCode/yolov4-deepsort) \\
 * [Counting the passing objects: https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking](https://github.com/emasterclassacademy/Single-Multiple-Custom-Object-Detection-and-Tracking)

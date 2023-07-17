@@ -228,7 +228,7 @@ Analyze Histogram and apply Thresholding methods on given images. Find the optim
 
 Show the results to TA before proceeding to Part 2.
 
-***
+
 
 ### Part 2. Morphology
 
@@ -274,7 +274,7 @@ Download the example code
 
 Apply several morphology to obtain clear segmentation of the object in given images, after Thresholding.
 
-***
+
 
 ### Exercise
 
@@ -283,4 +283,3 @@ Apply several morphology to obtain clear segmentation of the object in given ima
 
 Show the results to TA before finishing this tutorial.
 
-***

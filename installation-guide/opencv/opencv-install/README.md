@@ -66,7 +66,7 @@ Visual Studio 201x 실행 후
 
 ![](<../../../.gitbook/assets/image (15).png>)
 
-***
+
 
 \*\*속성관리자 창: \*\* **Debug | x64** > `opencv-3.4.13_debug_x64` double click
 
@@ -218,7 +218,7 @@ Expected Output
 
 ![](<../../../.gitbook/assets/image (66).png>)
 
-***
+
 
 **Demo 코드 2:** Camera Open and capture
 

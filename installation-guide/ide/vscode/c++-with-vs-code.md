@@ -72,7 +72,7 @@ You will need to install the full Mingw-w64 toolchain to get the `gdb` debugger.
 
 Then, select `mingw-w64-x86_64-gbd`
 
-![image-20230717172842570](https://c/Users/ykkim/AppData/Roaming/Typora/typora-user-images/image-20230717172842570.png)
+<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Add the MinGW compiler to your path
 
@@ -83,7 +83,10 @@ Add the path to your Mingw-w64 `bin` folder to the Windows `PATH` environment va
 3. Choose the `Path` variable in your **User variables** and then select **Edit**.
 4. Select **New** and add the Mingw-w64 destination folder path: `C:\msys64\mingw64\bin`.
 5. Select **OK** to save the updated PATH. You will need to reopen any console windows for the new PATH location to be available.
-6. ![image-20230717174320564](https://c/Users/ykkim/AppData/Roaming/Typora/typora-user-images/image-20230717174320564.png)
+
+<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
 
 To check your MinGW installation, open a **new** Command Prompt and type:
 
