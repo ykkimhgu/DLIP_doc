@@ -118,6 +118,7 @@
 * [OpenCV](installation-guide/opencv/README.md)
   * [Install and Setup](installation-guide/opencv/opencv-install/README.md)
     * [OpenCV3.4.7 VS2017](installation-guide/opencv/opencv-install/opencv3.4.7-vs2017.md)
+    * [MacOS OpenCV C++ in XCode](installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md)
   * [Python OpenCV](installation-guide/opencv/python-opencv.md)
   * [MATLAB-OpenCV](installation-guide/opencv/matlab-opencv.md)
 * [Framework](installation-guide/framework/README.md)
