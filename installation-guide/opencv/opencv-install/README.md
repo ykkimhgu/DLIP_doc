@@ -32,12 +32,6 @@ Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
 Path 설정 완료되면 컴퓨터 재부팅
 
-
-
-...
-
-
-
 ## OpenCV 프로젝트 속성시트(Property sheet)만들기
 
 Visual Studio 2022 실행 후
