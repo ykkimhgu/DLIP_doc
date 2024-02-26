@@ -42,11 +42,9 @@ Visual Studio 2022 실행 후
 
 * 방법 2) **파일> 새로 만들기> 프로젝트 선택**
 
-\*\*빈 프로젝트: 프로젝트 이름 \*\* `OpenCVprop` 입력 > **만들기**
+**빈 프로젝트: 프로젝트 이름** : `OpenCVprop` 입력 > **만들기**
 
 ![](<../../../.gitbook/assets/image (22).png>)
-
-###
 
 ### **Debug x64 Property Sheet 만들기**
 
@@ -54,7 +52,7 @@ Visual Studio 2022 실행 후
 
 **속성 관리자 창 > OpenCVprop > Debug|x64** 위에 RightClick.
 
-\*\*새 프로젝트 속성 시트 추가 > 이름 \*\*: `opencv-4.9.0_debug_x64.props` 으로 지정 > **추가**
+**새 프로젝트 속성 시트 추가 > 이름**: `opencv-4.9.0_debug_x64.props` 으로 지정 > **추가**
 
 > 반드시 이름에 .props까지 기재할 것
 >
@@ -66,7 +64,7 @@ Visual Studio 2022 실행 후
 
 ***
 
-\*\*속성관리자 창: \*\* **Debug | x64** > `opencv-3.4.13_debug_x64` double click
+**속성관리자 창**:  **Debug | x64** > `opencv-3.4.13_debug_x64` double click
 
 ![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7f75af32-f023-4588-93bf-33c47f2f0490)
 
@@ -79,7 +77,7 @@ Visual Studio 2022 실행 후
 **> 추가 포함 디렉터리**> **줄추가** : _아래 경로들을 순서에 맞게 추가_ > **확인**
 
 * C:\opencv-4.9.0\build\include
-* C:\opencv-4.9.0\build\include\opencv
+* C:\opencv-4.9.0\build\include\opencv2
 
 ![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e96efff9-fe51-4a93-b595-36c97e18d10f)
 
