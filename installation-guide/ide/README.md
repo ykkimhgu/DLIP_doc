@@ -6,7 +6,7 @@ description: Programming IDE for Deep Learning
 
 ## Recommended IDE for C++ \(OpenCV\) programming 
 
-* Visual Studio Community 2019   \(2021.2월 기준\)
+* Visual Studio Community 2022   \(2024.2월 기준\)
 
 ## Recommended IDE for programming deep learning
 
