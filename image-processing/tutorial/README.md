@@ -2,7 +2,7 @@
 
 ## Tutorial List:  OpenCV C++  
 
-> Visual Studio 2019,  OpenCV 3.4.x
+> Visual Studio 2022,  OpenCV 4.x
 
 * Thresholding and Morphology
 * Edge Line Circle Detection
