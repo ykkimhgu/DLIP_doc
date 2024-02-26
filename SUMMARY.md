@@ -10,6 +10,7 @@
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
   * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 * [Tutorial](image-processing/tutorial/README.md)
+  * [Tutorial: Installation for OpenCV C++](image-processing/tutorial/tutorial-installation-for-opencv-c++.md)
   * [Tutorial: C++ basics for OpenCV](image-processing/tutorial/tutorial-c++-basics-for-opencv.md)
   * [Tutorial: Spatial Filter](image-processing/tutorial/tutorial-spatial-filter.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
