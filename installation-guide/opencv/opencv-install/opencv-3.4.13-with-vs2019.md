@@ -4,7 +4,7 @@
 
 OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases/)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (1) (2).png>)
+![](<../../../.gitbook/assets/image (1) (2).png>)
 
 Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
@@ -12,19 +12,19 @@ Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
 > C:\ opencv-3.4.13 \build, C:\ opencv-3.4.13 \sources\\
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69).png>)
 
 ### **PATH 환경설정**
 
 **제어판> 시스템 및 보안 > 시스템 > 고급 시스템 설정 – 고급 탭 > 환경변수(N)** 클릭
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (26) (1).png>)
+![](<../../../.gitbook/assets/image (26) (1).png>)
 
 **‘시스템 변수’** 항목에 있는 변수 명 중 ‘\*\*Path’\*\*를 찾아 **편집**
 
 ![image](https://user-images.githubusercontent.com/38373000/156104553-0419d61a-4eb9-4a1b-864d-33fa093108a7.png)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14).png>)
 
 **새로 만들기** > **찾아보기** > **C:\opencv-3.4.13\build\x64\vc15\bin 선택**
 
@@ -46,7 +46,7 @@ Visual Studio 201x 실행 후
 
 \*\*빈 프로젝트: 프로젝트 이름 \*\* `OpenCVprop` 입력 > **만들기**
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22).png>)
 
 ###
 
@@ -62,15 +62,15 @@ Visual Studio 201x 실행 후
 >
 > Debug | x64 에서 설정.
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (35).png>)
+![](<../../../.gitbook/assets/image (35).png>)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15).png>)
 
 ***
 
 \*\*속성관리자 창: \*\* **Debug | x64** > `opencv-3.4.13_debug_x64` double click
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75).png>)
 
 **\[Opencv 헤더 (include) 디렉터리 추가]**
 
@@ -84,7 +84,7 @@ Visual Studio 201x 실행 후
 * C:\opencv-3.4.13\build\include\opencv
 * C:\opencv-3.4.13\build\include\opencv2
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (55).png>)
+![](<../../../.gitbook/assets/image (55).png>)
 
 **\[ OpenCV lib 디렉터리 추가]**
 
@@ -92,7 +92,7 @@ Visual Studio 201x 실행 후
 
 * `C:\opencv-3.4.13\build\x64\vc15\lib` 추가
 
-![image](https://user-images.githubusercontent.com/38373000/156107129-4f08152a-678d-41b1-a6e7-686cdc5fe966.png) ![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (58).png>)
+![image](https://user-images.githubusercontent.com/38373000/156107129-4f08152a-678d-41b1-a6e7-686cdc5fe966.png) ![](<../../../.gitbook/assets/image (58).png>)
 
 **\[ OpenCV lib 파일 추가]**
 
@@ -102,9 +102,9 @@ Visual Studio 201x 실행 후
 
 > debug 모드에서는 'd' (xxx3413d.lib) 로 표시된 파일을 추가
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30).png>)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (44).png>)
 
 **(중요)**
 
@@ -118,7 +118,7 @@ Visual Studio 201x 실행 후
 
 **새 프로젝트 속성 시트 추가 > 이름**: `opencv-3.4.13_release_x64.props`으로 지정 후 추가
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (72).png>)
+![](<../../../.gitbook/assets/image (72).png>)
 
 위에 설명한 **Debug x64 Property Sheet** 만들기 과정과 유사하며, 아래 경로를 추가하여 반복
 
@@ -158,9 +158,9 @@ Visual Studio 2019 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
 
 동일한 과정 **Release|x64** 항목에서 **Property Sheet** " **opencv-3.4.13\_release\_x64.props "** 를 추가
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52).png>)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (57).png>)
 
 ### 소스파일 만들기
 
@@ -168,15 +168,15 @@ Visual Studio 2019 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
 
 C++파일(cpp) 선택 후 **opencv\_simple\_demo.cpp 생성**
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (48).png>)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (45).png>)
+![](<../../../.gitbook/assets/image (45).png>)
 
 구성 관리자를 **Debug x64**로 설정 후 아래 코드를 입력.
 
 디버깅하지 않고 시작 (CTRL+F5)
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (59).png>)
+![](<../../../.gitbook/assets/image (59).png>)
 
 **Demo 코드 1**: Image File Read
 
@@ -216,7 +216,7 @@ return 0;
 
 Expected Output
 
-![](<C:/Users/ckdal/source/repos/GithubDesktop/DLIP_doc/.gitbook/assets/image (66).png>)
+![](<../../../.gitbook/assets/image (66).png>)
 
 ***
 
