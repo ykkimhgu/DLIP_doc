@@ -10,7 +10,7 @@ For Installing OpenCV on Visual Studio Community:[ click here](https://ykkim.git
 
 Download link: [https://visualstudio.microsoft.com/ko/vs/community/](https://visualstudio.microsoft.com/ko/vs/community/)
 
-Click **"Free Download"** of Visual Studio Community 2019. After downloading, install the program.
+Click **"Free Download"** of Visual Studio Community 2022. After downloading, install the program.
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/raw/master/.gitbook/assets/image%20\(31\).png)
 
@@ -20,7 +20,7 @@ Select "**C++ programming Desktop**" Option. Optionally, select others such as "
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/raw/master/.gitbook/assets/image%20\(40\).png)
 
-Visual Studio 2019 실행 후: MSN 로그인 .
+Visual Studio 2022 실행 후: MSN 로그인 .
 
 > 한동대 이메일 ID 로 가입 후 로그인.
 
@@ -42,7 +42,7 @@ VS 실행 후 **메뉴**>'**도구 > 옵션** 선택
 
 "Hello Handong" 테스트코드 작성하기
 
-Visual Studio 2019 실행 후 **새 프로젝트 만들기 > 빈 프로젝트**
+Visual Studio 2022 실행 후 **새 프로젝트 만들기 > 빈 프로젝트**
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/raw/master/.gitbook/assets/image%20\(64\).png)
 
