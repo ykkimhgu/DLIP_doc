@@ -8,4 +8,4 @@ You can see basic information about OpenCV at the following sites,
 * Documentation: [https://docs.opencv.org](https://docs.opencv.org)
 * Source code: [https://github.com/opencv](https://github.com/opencv)
 * Tutorial: [https://docs.opencv.org/master](https://docs.opencv.org/master)
-* Books: [https://opencv.org.books.html](https://opencv.org.books.html)
+* Books: [https://opencv.org/books](https://opencv.org/books)
