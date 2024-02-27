@@ -267,7 +267,7 @@ int main(int argc, char* argv[])
 
 **Results**
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
 
 #### Exercise 2
 
