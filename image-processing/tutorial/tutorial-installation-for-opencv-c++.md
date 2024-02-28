@@ -1,7 +1,8 @@
 # Tutorial: Installation for OpenCV C++
 ## Overview
-In this tutorial, you will learn techniques in C++ to use the OpenCV C++ API effectively. Using C++ module and OpenCV, you will perform some tasks about basic image processing and basic image operations.
- 
+Before this course starts, you have to install the following softwares for OpenCV C++ 
+
+
 ## Installing Visual Studio 2022
 
 {% embed url="https://ykkim.gitbook.io/dlip/installation-guide/ide/visual-studio-community" %}
@@ -9,3 +10,7 @@ In this tutorial, you will learn techniques in C++ to use the OpenCV C++ API eff
 ## Installing OpenCV 4.9.0  with Visual Studio 2022
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/opencv/opencv-install" %}
+
+## For Mac OS user
+Xcode and OpenCV C++ : instruction
+Visual Studio Code (MacOS) is not recommended for C++, for you need to compile and run separately.
