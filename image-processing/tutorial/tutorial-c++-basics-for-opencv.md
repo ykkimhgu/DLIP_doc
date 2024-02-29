@@ -18,9 +18,8 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
-## OpenCV Example Code
-
-### Image File Read / Write / Display
+**OpenCV Example Code**
+Image File Read / Write / Display
 
 ```cpp
 #include <iostream>
@@ -76,9 +75,7 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 ---
 
 
-# II. Tutorial
-
-## Project Workspace Setting
+# Project Workspace Setting
 
 Create the lecture workspace as **C:\Users\yourID\source\repos**
 
@@ -102,11 +99,11 @@ Then, create sub-directories such as :
 
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
 
-## Define and Declar Functions in Header Files
+# Define and Declar Functions in Header Files
 
 We will learn how to declare and define functions in the header file
 
-### Exercise
+## Exercise
 
 1. Create header files `TU_DLIP.h`, `TU_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 2. Declare the function in the header file(`TU_DLIP.h`) as
@@ -187,7 +184,8 @@ Source files link
 * [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
 ---
-## C++ Class
+
+# C++ Class
 
 Class is similar to C structure: 
 
@@ -240,7 +238,7 @@ void Account::withdraw(int money){
 {% endtabs %}
 
 
-### Class Constructor
+## Class Constructor
 
 Constructor is **special method** automatically called when an object of a class is created.
 
@@ -276,7 +274,7 @@ int main(){
 }
 ```
 
-### Mat Class in OpenCV
+## Mat Class in OpenCV
 
 The image data are in forms of 1D, 2D, 3D arrays with values 0\~255 or 0\~1
 
@@ -319,6 +317,7 @@ int main(int argc, char* argv[])
 **Results**
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
+
 
 ## Exercise 
 
@@ -581,18 +580,17 @@ Source code link:
 * [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
 
+---
 
-
-## Namespace
+# Namespace
 
 A namespace provides a scope to the identifiers (the names of types, functions, variables, etc) inside it.
 
 * Uses **::** as scope resolution operator
 * Use **namespace** in order to avoid collision using functions with the same name e.g. KimHandong --> Student::KimHandong, TA::KimHandong
 
-{% tabs %}
-{% tab title="Method 1. calling specific function(recommended)" %}
-{% code title="" %}
+
+{% code title="Method 1. calling specific function(recommended)" %}
 ```cpp
 int main(void){
   project_A::add_value(3, 7);
@@ -600,11 +598,11 @@ int main(void){
   return 0;
 }
 ```
-{% endtab %}
 
-{% tab title="Method 2. calling all functions in the namespace" %}
-{% code title="" %}
+
+
 ```cpp
+{% code title="Method 2. calling all functions in the namespace" %}
 using namespace project_A;
 
 int main(void){
@@ -613,8 +611,9 @@ int main(void){
   return 0;
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
+
 
 * **std::cout, std::cin, std::endl** are also defined in **iostream**
 
@@ -627,9 +626,10 @@ using namespace std
 cout<<"print this"<<endl;
 ```
 
-### Exercise 3
 
-#### Create another Class 'myNum'
+## Exercise 
+
+### Create another Class 'MyNum'
 
 1. Declare class member variables like this in **DLIP\_Tutorial\_C++\_namespace\_student.cpp**: **Constructor / val1 / val2 / val3 / sum / print**
    * val1, val2, val3: member variable of integer type
@@ -669,5 +669,7 @@ void main()
 }
 ```
 
-### Function Overloading
+---
+
+# Function Overloading
 Functions with same name (but with different types or number of parameter) can be defined.
