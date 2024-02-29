@@ -590,3 +590,6 @@ void main()
 	system("pause");
 }
 ```
+
+### Function Overloading
+Functions with same name (but with different types or number of parameter) can be defined.
