@@ -750,10 +750,12 @@ void main()
 # Function Overloading
 Functions with the same name (but with different types or number of parameters) can be defined.
 * Different return type (with everything else the same) is not a function overloading.
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e11cb78d-5121-43de-bae2-5f1d465c4193)
 
 ## Example
 `cv::Mat` can be created in many different ways. Use the up or down the keyboard to see what the options are.
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/620aba87-5db2-4cd7-bcb3-419d9e3a9747)
 
 ### Function Overloading Reference
@@ -802,4 +804,20 @@ void cvtGray(cv::Mat color, cv::Mat gray)
 # Default Parameter
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/29674cc4-28fd-49e5-a45e-03dcadda4a96)
 
+## Default parameter in OpenCV
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e7ce1725-0834-48ad-ba22-258038cce5aa)
+
+# Pointer
+A **pointer** is a variable whose value is the address of another variable.
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e4c5e71c-3492-4091-8c9d-50306239b68f)
+
+## What are Pointers?
+* A **pointer** is a variable whose value is the address of another variable.
+* i.e. direct address of the memory locations
+* Pointers are the basis for data structures.
+
+**(a) Define** a pointer variable    `int *ptr;`
+**(b) Assign** the address of a variable to a pointer `ptr = &var`
+**(c) Access** the value at the address available in the pointer variable `int value = *ptr
 
