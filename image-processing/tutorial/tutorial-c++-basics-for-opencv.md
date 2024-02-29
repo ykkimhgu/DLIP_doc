@@ -813,15 +813,15 @@ A **pointer** is a variable whose value is the address of another variable.
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e4c5e71c-3492-4091-8c9d-50306239b68f)
 
 ## What are Pointers?
-* A **pointer** is a variable whose value is the address of another variable.
-* i.e. direct address of the memory locations
-* Pointers are the basis for data structures.
+A **pointer** is a variable whose value is the address of another variable.
+i.e. direct address of the memory locations
+Pointers are the basis for data structures.
 
-- **(a) Define** a pointer variable    `int *ptr;`
+* **Define** a pointer variable    `int *ptr;`
 
-- **(b) Assign** the address of a variable to a pointer `ptr = &var`
+* **Assign** the address of a variable to a pointer `ptr = &var`
 
-- **(c) Access** the value at the address available in the pointer variable `int value = *ptr`
+* **Access** the value at the address available in the pointer variable `int value = *ptr`
 
 
 ```cpp
