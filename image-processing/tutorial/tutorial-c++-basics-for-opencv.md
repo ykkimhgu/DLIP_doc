@@ -319,7 +319,7 @@ int main(int argc, char* argv[])
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
 
-#### Exercise 2
+### Exercise 2
 
 #### Create a Class 'myNum'
 
@@ -333,7 +333,12 @@ int main(int argc, char* argv[])
 2. Split the declaration and definitions of this class in **TU\_DLIP.h** and **TU\_DLIP.cpp**
 
 #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
+#### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
+#### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
+{% tabs %}
+{% tab title="DLIP\_Tutorial\_C++\_student.cpp" %}
+{% code title="" %}
 ```cpp
 #include "TU_DLIP.h"
 
@@ -356,9 +361,10 @@ int main()
 
 }
 ```
+{% endtab %}
 
-#### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-
+{% tab title="TU\_DLIP.h" %}
+{% code title="" %}
 ```cpp
 #ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
 #define _TU_DLIP_H
@@ -383,9 +389,10 @@ class MyNum
 
 #endif // !_TU_DLIP_H
 ```
+{% endtab %}
 
-#### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
-
+{% tab title="TU\_DLIP.cpp" %}
+{% code title="" %}
 ```cpp
 #include "TU_DLIP.h"
 
@@ -419,8 +426,84 @@ void MyNum::print(void)
 	// Add code here
 }
 ```
+{% endtab %}
 
-[Solution Code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP\_answer.cpp)
+{% tab title="TU\_DLIP.h solution" %}
+{% code title="" %}
+```cpp
+#ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
+#define _TU_DLIP_H
+
+#include <iostream>
+
+// =============================
+// Exercise 1 :: Define Function
+// =============================
+
+int sum(int val1, int val2);
+
+// ====================================
+// Exercise 2 :: Create a Class "myNum"
+// ====================================
+
+class MyNum 
+{
+	public:
+		MyNum(int x1, int x2);
+		int val1;
+		int val2;
+		int sum(void);
+		void print(void);
+};
+
+#endif // !_TU_DLIP_H
+```
+{% endtab %}
+
+{% tab title="TU\_DLIP.cpp solution" %}
+{% code title="" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+// =============================
+// Exercise 1 :: Define Function
+// =============================
+
+int sum(int val1, int val2)
+{
+	int out = val1 + val2;
+
+	return out;
+}
+
+// ====================================
+// Exercise 2 :: Create a Class "myNum"
+// ====================================
+
+MyNum::MyNum(int x1, int x2)
+{
+	val1 = x1;
+	val2 = x2;
+}
+
+int MyNum::sum(void)
+{
+	int out = val1 + val2;
+
+	return out;
+}
+
+void MyNum::print(void)
+{
+	std::cout << "MyNum.val1 :: " << val1 << std::endl;
+	std::cout << "MyNum.val2 :: " << val2 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Namespace
 
@@ -429,8 +512,9 @@ A namespace provides a scope to the identifiers (the names of types, functions, 
 * Uses **::** as scope resolution operator
 * Use **namespace** in order to avoid collision using functions with the same name e.g. KimHandong --> Student::KimHandong, TA::KimHandong
 
-#### Method 1) calling specific function(recommended)
-
+{% tabs %}
+{% tab title="Method 1. calling specific function(recommended)" %}
+{% code title="" %}
 ```cpp
 int main(void){
   project_A::add_value(3, 7);
@@ -438,9 +522,10 @@ int main(void){
   return 0;
 }
 ```
+{% endtab %}
 
-#### Method 2) calling all function in the namespace
-
+{% tab title="Method 2. calling all functions in the namespace" %}
+{% code title="" %}
 ```cpp
 using namespace project_A;
 
@@ -450,6 +535,8 @@ int main(void){
   return 0;
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 * **std::cout, std::cin, std::endl** are also defined in **iostream**
 
@@ -462,7 +549,7 @@ using namespace std
 cout<<"print this"<<endl;
 ```
 
-#### Exercise
+### Exercise 3
 
 #### Create another Class 'myNum'
 
