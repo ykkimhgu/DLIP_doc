@@ -163,7 +163,6 @@ int main()
 
 #endif // !_TU_DLIP_H
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="TU_DLIP.cpp" %}
@@ -181,7 +180,7 @@ int sum(int val1, int val2)
 	// Add code here
 }
 ```
-{% endcode %}
+
 {% endtab %}
 {% endtabs %}
 
