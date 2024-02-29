@@ -103,7 +103,7 @@ Then, create sub-directories such as :
 
 We will learn how to declare and define functions in the header file
 
-## Exercise
+## Exercise 1
 
 1. Create header files `TU_DLIP.h`, `TU_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 2. Declare the function in the header file(`TU_DLIP.h`) as
@@ -319,7 +319,7 @@ int main(int argc, char* argv[])
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
 
 
-## Exercise 
+## Exercise 2
 
 ### Create a Class 'MyNum'
 
@@ -626,7 +626,7 @@ cout<<"print this"<<endl;
 ```
 
 
-## Exercise 
+## Exercise 3
 
 ### Create another Class 'MyNum'
 
