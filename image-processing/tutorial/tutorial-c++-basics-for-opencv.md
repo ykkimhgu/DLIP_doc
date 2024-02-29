@@ -79,15 +79,15 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 
 Create the lecture workspace as **C:\Users\yourID\source\repos**
 
-* e.g. **C:\Users\ykkim\source\repos**
+* e.g. `C:\Users\ykkim\source\repos`
 
 Then, create sub-directories such as :
 
-* **C:\Users\yourID\source\repos\DLIP**&#x20;
+* `C:\Users\yourID\source\repos\DLIP`
 
-* **C:\Users\yourID\source\repos\DLIP\Tutorial**&#x20;
+* `C:\Users\yourID\source\repos\DLIP\Tutorial`
 
-* **C:\Users\yourID\source\repos\DLIP\Include**&#x20;
+* `C:\Users\yourID\source\repos\DLIP\Include`
 
 * **C:\Users\yourID\source\repos\DLIP\Assignment**&#x20;
 
@@ -590,7 +590,7 @@ A namespace provides a scope to the identifiers (the names of types, functions, 
 * Use **namespace** in order to avoid collision using functions with the same name e.g. KimHandong --> Student::KimHandong, TA::KimHandong
 
 
-{% code title="Method 1. calling specific function(recommended)" %}
+### Method 1. calling specific function(recommended)
 ```cpp
 int main(void){
   project_A::add_value(3, 7);
@@ -600,9 +600,8 @@ int main(void){
 ```
 
 
-
+### Method 2. calling all functions in the namespace
 ```cpp
-{% code title="Method 2. calling all functions in the namespace" %}
 using namespace project_A;
 
 int main(void){
