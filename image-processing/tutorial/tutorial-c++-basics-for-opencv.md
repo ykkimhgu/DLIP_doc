@@ -4,7 +4,7 @@
 
 Deep Learning Image Processing. Updated. 2024.2
 
-## I. Introduction
+# I. Introduction
 
 The OpenCV Library has **>2500** algorithms, extensive documentation, and sample code for real-time computer vision. You can see basic information about OpenCV at the following sites,
 
@@ -18,9 +18,9 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
-### OpenCV Example Code
+## OpenCV Example Code
 
-#### Image File Read / Write / Display
+### Image File Read / Write / Display
 
 ```cpp
 #include <iostream>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-### C++ for OpenCV
+## C++ for OpenCV
 
 OpenCV is provided in C++, Python, Java. We will learn how to use OpenCV in
 
@@ -65,70 +65,72 @@ For C++, we need to learn
 * Overloading, namespace, template
 * Reference
 
-## II. Tutorial
 
-### C++ Introduction
+## C++ 
 
 C++ is a general-purpose programming language created by Bjarne Stroustrup as an **extension of the C programming language**. C++ is portable and can be used to develop applications that can be adapted to multiple platforms. You can see basic C++ tutorials in following site,
 
 * [https://www.w3schools.com/cpp/](https://www.w3schools.com/cpp/)
 * [https://www.cplusplus.com/doc/tutorial/variables/](https://www.cplusplus.com/doc/tutorial/variables/)
+ 
+---
 
-### Project Workspace Setting
 
-1. Create the lecture workspace as **C:\Users\yourID\source\repos**
+# II. Tutorial
 
-e.g. **C:\Users\ykkim\source\repos**
+## Project Workspace Setting
 
-2. Create sub-directories such as :
+Create the lecture workspace as **C:\Users\yourID\source\repos**
 
-**C:\Users\yourID\source\repos\DLIP**&#x20;
+* e.g. **C:\Users\ykkim\source\repos**
 
-**C:\Users\yourID\source\repos\DLIP\Tutorial**&#x20;
+Then, create sub-directories such as :
 
-**C:\Users\yourID\source\repos\DLIP\Include**&#x20;
+* **C:\Users\yourID\source\repos\DLIP**&#x20;
 
-**C:\Users\yourID\source\repos\DLIP\Assignment**&#x20;
+* **C:\Users\yourID\source\repos\DLIP\Tutorial**&#x20;
 
-**C:\Users\yourID\source\repos\DLIP\LAB**&#x20;
+* **C:\Users\yourID\source\repos\DLIP\Include**&#x20;
 
-**C:\Users\yourID\source\repos\DLIP\Image**
+* **C:\Users\yourID\source\repos\DLIP\Assignment**&#x20;
+
+* **C:\Users\yourID\source\repos\DLIP\LAB**&#x20;
+
+* **C:\Users\yourID\source\repos\DLIP\Image**
 
 &#x20;
 
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
 
-### Define Function
+## Define and Declar Functions in Header Files
 
 We will learn how to declare and define functions in the header file
 
 ### Exercise
 
-1. Create header files **"TU\_DLIP.h", "TU\_DLIP.cpp"** under C:\Users\yourID\source\repos\DLIP\Tutorial\Tutorial\_Cpp\\
-2. Declare the function in the header file(**"TU\_DLIP.h"**)
+1. Create header files `TU\_DLIP.h`, `TU\_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\Tutorial\_Cpp\\`
+2. Declare the function in the header file(`**TU\_DLIP.h**`)
 
 ```cpp
 int sum(int val1, int val2);
 ```
 
-3. Define the function in the header file(**"TU\_DLIP.cpp"**)
+3. Define the function in the header source file(`**TU\_DLIP.cpp**`)
 
 ```cpp
 int sum(int val1, int val2){...}
 ```
 
-4. Run the main() in **"DLIP\_Tutorial\_C++\_student.cpp"** and print the sum value.
+4. Run main source code of **`DLIP\_Tutorial\_C++\_student.cpp`** and print out the sum value of any two input numbers.
 
-
-
-#### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-#### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-#### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
+Source files link
+* #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
+* #### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
+* #### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_student.cpp" %}
-{% code title="" %}
 ```cpp
 #include "TU_DLIP.h"
 
@@ -146,9 +148,7 @@ int main()
 ```
 
 {% endtab %}
-
 {% tab title="TU_DLIP.h" %}
-{% code title="" %}
 ```cpp
 #ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
 #define _TU_DLIP_H
@@ -164,12 +164,9 @@ int main()
 #endif // !_TU_DLIP_H
 ```
 {% endcode %}
-
-
 {% endtab %}
 
 {% tab title="TU_DLIP.cpp" %}
-{% code title="" %}
 ```cpp
 #include "TU_DLIP.h"
 
