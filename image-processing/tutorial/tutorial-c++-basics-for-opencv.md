@@ -835,5 +835,9 @@ int main(){
 	ptr = &var; // Store address of var in a pointer variable
 
 	// Pointer Access
-{
+	printf("Value of *ptr: %d", *ptr);
+
+	system("pause");
+	return 0;
+}
 ```
