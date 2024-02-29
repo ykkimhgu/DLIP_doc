@@ -799,4 +799,7 @@ void cvtGray(cv::Mat color, cv::Mat gray)
 }
 ```
 
-### 
+# Default Parameter
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/29674cc4-28fd-49e5-a45e-03dcadda4a96)
+
+
