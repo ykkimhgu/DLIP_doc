@@ -12,6 +12,7 @@
 * [Tutorial](image-processing/tutorial/README.md)
   * [Tutorial: Installation for OpenCV C++](image-processing/tutorial/tutorial-installation-for-opencv-c++.md)
   * [Tutorial: C++ basics for OpenCV](image-processing/tutorial/tutorial-c++-basics-for-opencv.md)
+  * [Tutorial: OpenCV (C++) Basics](image-processing/tutorial/tutorial-opencv-c++-basics.md)
   * [Tutorial: Spatial Filter](image-processing/tutorial/tutorial-spatial-filter.md)
   * [Tutorial: Thresholding and Morphology](image-processing/tutorial/tutorial-thresholding-and-morphology.md)
   * [Tutorial: Camera Calibration](image-processing/tutorial/tutorial-camera-calibration.md)
