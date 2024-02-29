@@ -748,4 +748,6 @@ void main()
 ---
 
 # Function Overloading
-Functions with same name (but with different types or number of parameter) can be defined.
+Functions with the same name (but with different types or number of parameters) can be defined.
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/24bc864c-7909-4dbb-a028-3148faab0aef)
