@@ -102,7 +102,7 @@ e.g. **C:\Users\ykkim\source\repos**
 
 We will learn how to declare and define functions in the header file
 
-#### Exercise
+### Exercise
 
 1. Create header files **"TU\_DLIP.h", "TU\_DLIP.cpp"** under C:\Users\yourID\source\repos\DLIP\Tutorial\Tutorial\_Cpp\\
 2. Declare the function in the header file(**"TU\_DLIP.h"**)
@@ -122,9 +122,7 @@ int sum(int val1, int val2){...}
 
 
 #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-
-#### &#x20;[TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-
+#### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
 #### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
 {% tabs %}
