@@ -145,8 +145,6 @@ int main()
 }
 ```
 
-
-
 {% endtab %}
 
 {% tab title="TU_DLIP.h" %}
@@ -190,8 +188,6 @@ int sum(int val1, int val2)
 {% endtab %}
 {% endtabs %}
 
-####
-
 ### Class
 
 Class is similar to C structure.
@@ -201,8 +197,9 @@ Class is similar to C structure.
 
     <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/dfe704da-817e-4407-9eae-315074dd64c1" alt=""><figcaption></figcaption></figure>
 
-#### Structure (C language)
-
+{% tabs %}
+{% tab title="Structure (C language)" %}
+{% code title="" %}
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -214,9 +211,10 @@ typedef struct {
   int balance;
 }Account;
 ```
+{% endtab %}
 
-#### Class (C++)
-
+{% tab title="Class (C++)" %}
+{% code title="" %}
 ```cpp
 #inclue <iostream>
 using namespace std;
@@ -240,6 +238,8 @@ void Account::withdraw(int money){
   balance -= money;
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Constructor
 
