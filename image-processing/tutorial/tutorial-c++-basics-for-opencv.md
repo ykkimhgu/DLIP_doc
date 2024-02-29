@@ -108,20 +108,20 @@ We will learn how to declare and define functions in the header file
 
 ### Exercise
 
-1. Create header files `TU\_DLIP.h`, `TU\_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\Tutorial\_Cpp\\`
-2. Declare the function in the header file(`TU\_DLIP.h`)
+1. Create header files `TU_DLIP.h`, `TU_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+2. Declare the function in the header file(`TU_DLIP.h`) as
 
 ```cpp
 int sum(int val1, int val2);
 ```
 
-3. Define the function in the header source file(**`TU\_DLIP.cpp`**)
+3. Define the function in the header source file(`TU_DLIP.cpp`) as
 
 ```cpp
 int sum(int val1, int val2){...}
 ```
 
-4. Run main source code of **`DLIP\_Tutorial\_C++\_student.cpp`** and print out the sum value of any two input numbers.
+4. Run the main source code of `DLIP_Tutorial_C++_student.cpp` and print out the sum value of any two input numbers.
 
 
 
@@ -182,10 +182,11 @@ int sum(int val1, int val2)
 {% endtabs %}
 
 Source files link
-	* #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-	* #### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-	* #### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
+* [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
+* [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
+* [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
+---
 ## C++ Class
 
 Class is similar to C structure: 
@@ -243,9 +244,9 @@ void Account::withdraw(int money){
 
 Constructor is **special method** automatically called when an object of a class is created.
 
-1. Use the **same** name as the class, followed by parentheses **()**
-2. It is always **public**.
-3. It does not have any return values.
+* Use the **same** name as the class, followed by parentheses **()**
+* It is always **public**.
+* It does not have any return values.
 
 ```cpp
 class MyNum{
@@ -321,20 +322,89 @@ int main(int argc, char* argv[])
 
 ## Exercise 
 
-### Create a Class 'myNum'
+### Create a Class 'MyNum'
 
-1. Declare a class member named as **myNum** in `**DLIP\_Tutorial\_C++\_student.cpp**`
+1. Declare a class member named as **MyNum** in `DLIP_Tutorial_C++_student.cpp`
 
 * Constructor : MyNum()
-* Member variables: val1, val2 // integer type
-* Member functions: int sum() // returns the sum of val1 and val2
-* Member functions: void print() // prints values of **val1, val2, and sum**
+* Member variables: val1, val2 		// integer type
+* Member functions: int sum() 		// returns the sum of val1 and val2
+* Member functions: void print() 	// prints values of **val1, val2, and sum**
 
-2. Split the declaration and definitions of this class in **TU\_DLIP.h** and **TU\_DLIP.cpp**
 
-#### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-#### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-#### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
+{% tabs %}
+{% tab title="DLIP\_Tutorial\_C++\_student.cpp" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+int main()
+{
+	// =============================
+	// Exercise 1 :: Define Function
+	// =============================
+
+	// Add code here
+
+
+	// ====================================
+	// Exercise 2 :: Create a Class 'MyNum'
+	// ====================================
+
+	// Add code here
+
+}
+```
+{% endtab %}
+
+{% tab title="DLIP\_Tutorial\_C++\_solution.cpp" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+// =============================
+// Exercise 1 :: Define Function
+// =============================
+
+int sum(int val1, int val2)
+{
+	int out = val1 + val2;
+
+	return out;
+}
+
+// ====================================
+// Exercise 2 :: Create a Class "MyNum"
+// ====================================
+
+MyNum::MyNum(int x1, int x2)
+{
+	val1 = x1;
+	val2 = x2;
+}
+
+int MyNum::sum(void)
+{
+	int out = val1 + val2;
+
+	return out;
+}
+
+void MyNum::print(void)
+{
+	std::cout << "MyNum.val1 :: " << val1 << std::endl;
+	std::cout << "MyNum.val2 :: " << val2 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
+2. After you have checked your MyNum Class works properly, move the class declaration and definition to header files of  `TU_DLIP.h` and `TU_DLIP.cpp`.
+   Then, compile and run the program. 
 
 {% tabs %}
 {% tab title="DLIP\_Tutorial\_C++\_student.cpp" %}
@@ -354,7 +424,7 @@ int main()
 
 
 	// ====================================
-	// Exercise 2 :: Create a Class 'myNum'
+	// Exercise 2 :: Create a Class 'MyNum'
 	// ====================================
 
 	// Add code here
@@ -379,7 +449,7 @@ int main()
 
 
 // ====================================
-// Exercise 2 :: Create a Class 'myNum'
+// Exercise 2 :: Create a Class 'MyNum'
 // ====================================
 
 class MyNum 
@@ -505,7 +575,15 @@ void MyNum::print(void)
 {% endtab %}
 {% endtabs %}
 
-### Namespace
+Source code link:  
+* [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
+* [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
+* [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
+
+
+
+
+## Namespace
 
 A namespace provides a scope to the identifiers (the names of types, functions, variables, etc) inside it.
 
