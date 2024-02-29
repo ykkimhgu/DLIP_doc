@@ -817,11 +817,11 @@ A **pointer** is a variable whose value is the address of another variable.
 * i.e. direct address of the memory locations
 * Pointers are the basis for data structures.
 
-**(a) Define** a pointer variable    `int *ptr;`
+- **(a) Define** a pointer variable    `int *ptr;`
 
-**(b) Assign** the address of a variable to a pointer `ptr = &var`
+- **(b) Assign** the address of a variable to a pointer `ptr = &var`
 
-**(c) Access** the value at the address available in the pointer variable `int value = *ptr`
+- **(c) Access** the value at the address available in the pointer variable `int value = *ptr`
 
 
 ```cpp
@@ -841,3 +841,7 @@ int main(){
 	return 0;
 }
 ```
+
+
+
+
