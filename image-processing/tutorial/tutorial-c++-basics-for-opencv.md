@@ -464,7 +464,7 @@ class MyNum
 {% endtab %}
 
 {% tab title="TU_DLIP_solution.h" %}
-```h
+```cpp
 #ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
 #define _TU_DLIP_H
 
@@ -592,18 +592,15 @@ A namespace provides a scope to the identifiers (the names of types, functions, 
 * Use **namespace** in order to avoid collision using functions with the same name e.g. KimHandong --> Student::KimHandong, TA::KimHandong
 
 
-### Method 1. calling specific function(recommended)
 ```cpp
+// Method 1. Calling specific function(recommended)
 int main(void){
   project_A::add_value(3, 7);
   project_A::subtract_value(10, 2);
   return 0;
 }
-```
 
-
-### Method 2. calling all functions in the namespace
-```cpp
+// Method 2. Calling all functions in the namespace
 using namespace project_A;
 
 int main(void){
@@ -612,9 +609,6 @@ int main(void){
   return 0;
 }
 ```
-
-
-
 
 * **std::cout, std::cin, std::endl** are also defined in **iostream**
 
@@ -626,7 +620,6 @@ std::cout<<"print this"<<std::endl;
 using namespace std
 cout<<"print this"<<endl;
 ```
-
 
 ## Exercise 3
 
@@ -643,6 +636,9 @@ cout<<"print this"<<endl;
 4. Build and compare
 
 [DLIP\_Tutorial\_C++\_namespace\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_namespace\_student.cpp)
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_C++_namespace_student.cpp" %}
 
 ```cpp
 #include <iostream>
@@ -669,6 +665,85 @@ void main()
 	system("pause");
 }
 ```
+{% endtab %}
+
+{% tab title="DLIP_Tutorial_C++_namespace_solution.cpp" %}
+```cpp
+#include <iostream>
+
+namespace proj_A 
+{
+	class myNum 
+	{
+		public:
+			int val1;
+			int val2;
+			int val3;
+
+			myNum(int in1, int in2, int in3) 
+			{
+				val1 = in1;
+				val2 = in2;
+				val3 = in3;
+			}
+			int sum() 
+			{
+				return val1 + val2 + val3;
+			}
+			void print() 
+			{
+				printf("val1 = %d\n", val1);
+				std::cout << "val2 = " << val2 << std::endl;
+				std::cout << "val3 = " << val3 << std::endl;
+				std::cout << "sum  = " << sum() << std::endl;
+				std::cout << "dsize= " << sizeof(sum()) << std::endl;
+			}
+	};
+}
+
+namespace proj_B 
+{
+	class myNum 
+	{
+		public:
+			int val1;
+			int val2;
+			int val3;
+
+			myNum(int in1, int in2, int in3) 
+			{
+				val1 = in1;
+				val2 = in2;
+				val3 = in3;
+			}
+			int sum() 
+			{
+				return val1 + val2 + val3;
+			}
+			void print() 
+			{
+				printf("val1 = %d\n", val1);
+				std::cout << "val2 = " << val2 << std::endl;
+				std::cout << "val3 = " << val3 << std::endl;
+				std::cout << "sum  = " << sum() << std::endl;
+				std::cout << "dsize= " << sizeof(sum()) << std::endl;
+			}
+	};
+}
+
+void main() 
+{	
+	proj_A::myNum mynum1(1, 2, 3);
+	proj_B::myNum mynum2(4, 5, 6);
+
+	mynum1.print();
+	mynum2.print();
+
+	system("pause");
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ---
 
