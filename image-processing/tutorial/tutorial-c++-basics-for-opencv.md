@@ -802,6 +802,7 @@ void cvtGray(cv::Mat color, cv::Mat gray)
 ```
 
 # Default Parameter
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/29674cc4-28fd-49e5-a45e-03dcadda4a96)
 
 ## Default parameter in OpenCV
@@ -823,25 +824,87 @@ Pointers are the basis for data structures.
 
 * **Access** the value at the address available in the pointer variable `int value = *ptr`
 
-
+### Example
 ```cpp
-int main(){
-	int var = 20;
+#include <iostream>
 
-	// Pointer Define
-	int *ptr;
+void swap(int *a, int *b);
 
-	// Pointer Assignment
-	ptr = &var; // Store address of var in a pointer variable
+int main() {
+	int val1 = 10;
+	int val2 = 20;
 
-	// Pointer Access
-	printf("Value of *ptr: %d", *ptr);
+	printf("Before SWAP operation \n");
+	printf("val1: %d \n", val1);
+	printf("val2: %d \n", val2);
+
+	swap(&val1, &val2);
+
+	printf("After SWAP operation \n");
+	printf("val1: %d \n", val1);
+	printf("val2: %d \n", val2);
 
 	system("pause");
 	return 0;
 }
+
+void swap(int *a, int *b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 ```
 
+# Reference
+Reference can replace the use of pointer \*
+* The disadvantage of reference is "We do not know if a function is call-by-value or call-by-reference"
 
+```cpp
+// C/C++ syntax (Pointer)
+#include <iostream>
 
+void swap(int *a, int *b){
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
+int main(void){
+	int value1 = 10;
+	int value2 = 20;
+
+	std::cout << "value1 :" << value1 << "   ";
+	std::cout << "value2 :" << value2 << std::endl;
+
+	swap(&value1, &value2);
+
+	std::cout << "value1 :" << value1 << "   ";
+	std::cout << "value2 :" << value2 << std::endl;
+
+	return 0;
+}
+
+// C++ only (Reference)
+#include <iostream>
+
+void swap(int &a, int &b){
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+int main(void){
+	int value1 = 10;
+	int value2 = 20;
+
+	std::cout << "value1 :" << value1 << "   ";
+	std::cout << "value2 :" << value2 << std::endl;
+
+	swap(value1, value2);
+
+	std::cout << "value1 :" << value1 << "   ";
+	std::cout << "value2 :" << value2 << std::endl;
+
+	return 0;
+}
+```
