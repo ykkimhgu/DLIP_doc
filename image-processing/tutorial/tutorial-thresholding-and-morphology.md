@@ -222,13 +222,9 @@ plt.show()
 {% endtab %}
 {% endtabs %}
 
-### Exercise
+###
 
-Analyze Histogram and apply Thresholding methods on given images. Find the optimal threshold method and value for the object segmentation.
-
-Show the results to TA before proceeding to Part 2.
-
-
+***
 
 ### Part 2. Morphology
 
@@ -274,12 +270,20 @@ Download the example code
 
 Apply several morphology to obtain clear segmentation of the object in given images, after Thresholding.
 
+***
 
+## Exercise
 
-### Exercise
+### Exercise 1
+
+1. Analyze Histogram and apply Thresholding methods on given images.&#x20;
+2. Find the optimal threshold method and value for the object segmentation.
+3. Show the results to TA before proceeding to Exercise  2.
+
+### Exercise 2
 
 1. Apply Morphology methods after threshold on all test images.
 2. Analyze which morphology methods works best for each images for object segmentation.
+3. Show the results to TA before finishing this tutorial.
 
-Show the results to TA before finishing this tutorial.
-
+***
