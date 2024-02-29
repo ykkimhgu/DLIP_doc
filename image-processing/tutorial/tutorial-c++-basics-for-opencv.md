@@ -109,13 +109,13 @@ We will learn how to declare and define functions in the header file
 ### Exercise
 
 1. Create header files `TU\_DLIP.h`, `TU\_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\Tutorial\_Cpp\\`
-2. Declare the function in the header file(`**TU\_DLIP.h**`)
+2. Declare the function in the header file(`TU\_DLIP.h`)
 
 ```cpp
 int sum(int val1, int val2);
 ```
 
-3. Define the function in the header source file(`**TU\_DLIP.cpp**`)
+3. Define the function in the header source file(**`TU\_DLIP.cpp`**)
 
 ```cpp
 int sum(int val1, int val2){...}
@@ -123,10 +123,7 @@ int sum(int val1, int val2){...}
 
 4. Run main source code of **`DLIP\_Tutorial\_C++\_student.cpp`** and print out the sum value of any two input numbers.
 
-Source files link
-* #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-* #### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-* #### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
+
 
 
 {% tabs %}
@@ -184,18 +181,23 @@ int sum(int val1, int val2)
 {% endtab %}
 {% endtabs %}
 
-### Class
+Source files link
+	* #### [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
+	* #### [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
+	* #### [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
-Class is similar to C structure.
+## C++ Class
+
+Class is similar to C structure: 
 
 * Structure: Cannot inclue functions. Only variables
-*   Class: Can include variables, functions definition/declaration, other class&#x20;
+* Class: Can include variables, functions definition/declaration, other classes&#x20;
 
     <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/dfe704da-817e-4407-9eae-315074dd64c1" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
-{% tab title="Structure (C language)" %}
-{% code title="" %}
+{% tab title="Structure (C)" %}
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -210,7 +212,6 @@ typedef struct {
 {% endtab %}
 
 {% tab title="Class (C++)" %}
-{% code title="" %}
 ```cpp
 #inclue <iostream>
 using namespace std;
@@ -237,7 +238,8 @@ void Account::withdraw(int money){
 {% endtab %}
 {% endtabs %}
 
-#### Constructor
+
+### Class Constructor
 
 Constructor is **special method** automatically called when an object of a class is created.
 
@@ -273,14 +275,16 @@ int main(){
 }
 ```
 
-#### Mat Class
+### Mat Class in OpenCV
 
-1. The image data are in forms of 1D, 2D, 3D arrays with values 0\~255 or 0\~1
-2. OpenCV provides the Mat class for operating images
+The image data are in forms of 1D, 2D, 3D arrays with values 0\~255 or 0\~1
+
+OpenCV provides the Mat class for operating multi dimensional images
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/57b39eb8-1ad7-4d86-9229-21ff7a7fe2b9)
 
 **Example**
+Printing out informations about the source image using OpenCV
 
 ```cpp
 #include "opencv.hpp"
@@ -315,11 +319,11 @@ int main(int argc, char* argv[])
 
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/0dfb7c4d-d174-440d-ac31-71f4c7e94f82)
 
-### Exercise 2
+## Exercise 
 
-#### Create a Class 'myNum'
+### Create a Class 'myNum'
 
-1. Declare a class member named as **myNum** in **DLIP\_Tutorial\_C++\_student.cpp**
+1. Declare a class member named as **myNum** in `**DLIP\_Tutorial\_C++\_student.cpp**`
 
 * Constructor : MyNum()
 * Member variables: val1, val2 // integer type
