@@ -21,6 +21,8 @@ In this tutorial, you will learn fundamental concepts of the C++ language to use
 # Basic Image Processing
 ## Example code 1: Read / Write / Display Images
 ```cpp
+#include "opencv.hpp"
+
 /* read image */
 Mat img = imread(filename1);
 Mat img_gray = imread("image.jpg", 0); // read in grayscale
