@@ -4,7 +4,7 @@
 
 Deep Learning Image Processing. Updated. 2024.3
 
-# I. Introduction
+# Introduction
 
 The OpenCV Library has **>2500** algorithms, extensive documentation, and sample code for real-time computer vision. You can see basic information about OpenCV at the following sites,
 
@@ -18,3 +18,18 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
+# Basic Image Processing
+## Example code 1: Read / Write / Display Images
+```cpp
+/* read image */
+Mat img = imread(filename1);
+Mat img_gray = imread("image.jpg", 0); // read in grayscale
+
+/* write image */
+imwrite(filename2, img);
+
+/* display image */
+namedwindow("image", WINDOW_AUTOSIZE);
+imshow("image", img);
+
+```
