@@ -113,7 +113,7 @@ OpenCV provides the Mat class for operating multi-dimensional images
 ## Example 2. Matrix Operation: Create / Copy
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7959071b-8f63-451f-8bdc-92254bb2686a)
-
+{% tabs %}
 {% tab title="DLIP_Tutorial_Mat_Opeeration.cpp" %}
 ```cpp
 #include <iostream>
@@ -161,7 +161,8 @@ int main()
 	waitKey(0);
 }
 ```
-
+{% endtab %}
+{% endtabs %}
 
 
 
