@@ -107,7 +107,8 @@ The image data are in forms of 1D, 2D, 3D arrays with values 0\~255 or 0\~1
 
 OpenCV provides the Mat class for operating multi-dimensional images
 
-![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/57b39eb8-1ad7-4d86-9229-21ff7a7fe2b9)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/41ec96d5-b662-4125-8b1a-224170544a1c)
+
 
 ## Example 2. Matrix Operation: Create / Copy
 
