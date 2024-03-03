@@ -164,7 +164,65 @@ int main()
 {% endtab %}
 {% endtabs %}
 
+# Basic Image Operation: Crop, Rotate, Resize, Color Convert
+The methods for performing tasks such as image crop, rotate, resize, and color conversion (such as converting to grayscale) are as follows. If you want to learn more about the functions below, refer to the OpenCV documentation.
 
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/25434240-678f-41a1-8364-c33edae8f9e3)
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/244c72f0-86bc-45e2-b349-c4e9e5caf753)
+
+## Example 3. Basic Image Opereation
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_Mat_Opeeration.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	/*  Create or Construct Mat  */
+	Mat A(10, 10, CV_8UC3, Scalar::all(155));
+	Mat B(A.size(), CV_8UC1);
+	Mat C = Mat::zeros(A.size(), CV_8UC1);
+	Mat D = Mat::ones(A.size(), CV_32FC1);
+
+	cout << "MAT A: " << A << endl << endl;
+	cout << "MAT B: " << B << endl << endl;
+	cout << "MAT C: " << C << endl << endl;
+	cout << "MAT D: " << D << endl << endl;
+
+	/*  Get size of A (rows, cols)  */
+	cout << "Size of A:  " << A.size() << endl;
+	cout << "# of Rows of A:  " << A.rows << endl;
+	cout << "# of Cols of A:  " << A.cols << endl;
+	cout << "# of Channel of A:  " << A.channels() << endl;
+
+	/*  Copy/Clone Mat A to E/F  */
+	Mat E, F;
+	A.copyTo(E);
+	F = A.clone();
+
+	/*  Convert channel  */
+	Mat img = imread("image.jpg");	// CV8UC3 Image
+	Mat img_gray;
+	cvtColor(img, img_gray, COLOR_BGR2GRAY);
+
+	/*  Chnage image type (8UC1 or 32FC1)  */
+	Mat img_32F;
+	img_gray.convertTo(img_32F, CV_32FC1);
+	imshow("img_32F", img_32F);
+
+	//cout << "img_32F: " << img_32F.channels() << endl << endl;
+
+	waitKey(0);
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 
