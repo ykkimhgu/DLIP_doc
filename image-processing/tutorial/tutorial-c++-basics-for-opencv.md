@@ -746,6 +746,14 @@ void main()
 {% endtabs %}
 
 ---
+# Template
+A template can make a variable type(int, float, char..) as a variable.
+How can you use the same function but with a different number type as the input argument?
+: add(float A, float B), add(int A, int B) `&rarr` add(T A, T B) where T=int or T=float
+
+ ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/ca487951-d22d-4387-aef8-6f2268caa0cc)
+
+---
 
 # Function Overloading
 Functions with the same name (but with different types or number of parameters) can be defined.
