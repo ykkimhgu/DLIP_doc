@@ -4,13 +4,13 @@
 
 OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases/)
 
-![OpenCV_Releases](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/ad1aa16c-0e6e-4cb1-842b-619b440ceb96)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/ad1aa16c-0e6e-4cb1-842b-619b440ceb96)
 
 Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
 **C:\ opencv-4.9.0 폴더** 새롭게 생성 >> 아래 그림과 같이 설치파일 복사
 
-![opencv_folder](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/bfc8b189-1eec-46ef-8a73-c54c4cc49bc1)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/bfc8b189-1eec-46ef-8a73-c54c4cc49bc1)
 
 ### **PATH 환경설정**
 
@@ -22,13 +22,13 @@ Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
 
 
-![image](https://user-images.githubusercontent.com/38373000/156104553-0419d61a-4eb9-4a1b-864d-33fa093108a7.png)
+![](https://user-images.githubusercontent.com/38373000/156104553-0419d61a-4eb9-4a1b-864d-33fa093108a7.png)
 
 **새로 만들기** > **찾아보기** > **C:\opencv-4.9.0\build\x64\vc16\bin 선택**
 
 > OpenCV dll 파일 경로 설정과정임
 
-![opencv_environment](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/15717299-1724-4eb5-b318-45eef7dd44bd)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/15717299-1724-4eb5-b318-45eef7dd44bd)
 
 Path 설정 완료되면 컴퓨터 재부팅
 
@@ -38,7 +38,7 @@ Visual Studio 2022 실행 후
 
 * 방법 1) **새 프로젝트 만들기** **> 빈 프로젝트**
 
-![image](https://user-images.githubusercontent.com/38373000/156105330-702e389a-9bd0-46bd-a617-2510e68b487b.png)
+![](https://user-images.githubusercontent.com/38373000/156105330-702e389a-9bd0-46bd-a617-2510e68b487b.png)
 
 * 방법 2) **파일> 새로 만들기> 프로젝트 선택**
 
@@ -60,26 +60,26 @@ Visual Studio 2022 실행 후
 
 ![](<../../../.gitbook/assets/image (35).png>)
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/77183a8d-5ba1-4486-b44e-412cfcc1a2bd)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/77183a8d-5ba1-4486-b44e-412cfcc1a2bd)
 
 ***
 
 **속성관리자 창**:  **Debug | x64** > `opencv-3.4.13_debug_x64` double click
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7f75af32-f023-4588-93bf-33c47f2f0490)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7f75af32-f023-4588-93bf-33c47f2f0490)
 
 **\[Opencv 헤더 (include) 디렉터리 추가]**
 
 **공용 속성 > C/C++ > 일반 > 추가 포함 디렉터리 > 편집**
 
-![image](https://user-images.githubusercontent.com/38373000/156106499-3fc82297-8d5f-4e6b-9cf1-0de4c10fda62.png)
+![](https://user-images.githubusercontent.com/38373000/156106499-3fc82297-8d5f-4e6b-9cf1-0de4c10fda62.png)
 
 **> 추가 포함 디렉터리**> **줄추가** : _아래 경로들을 순서에 맞게 추가_ > **확인**
 
 * C:\opencv-4.9.0\build\include
 * C:\opencv-4.9.0\build\include\opencv2
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e96efff9-fe51-4a93-b595-36c97e18d10f)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e96efff9-fe51-4a93-b595-36c97e18d10f)
 
 **\[ OpenCV lib 디렉터리 추가]**
 
@@ -105,7 +105,7 @@ Visual Studio 2022 실행 후
 
 위 설정 완료 후 반드시 `opencv-4.9.0_debug_x64` 저장
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/f40a5676-83b5-4e72-8d73-4f3f15f9f8b5)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/f40a5676-83b5-4e72-8d73-4f3f15f9f8b5)
 
 ### **Release x64 Property Sheet 만들기**
 
@@ -156,7 +156,7 @@ Visual Studio 2022 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
 
 ![](<../../../.gitbook/assets/image (57).png>)
 
-![image](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/cebf8418-4f40-4f23-b9a8-1c94df38de0a)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/cebf8418-4f40-4f23-b9a8-1c94df38de0a)
 
 ### 소스파일 만들기
 
