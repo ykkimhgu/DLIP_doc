@@ -300,16 +300,44 @@ image.at<cv::Vec3b>(v,u)[2]= 255;
 printf("%d", img_gray.at<uchar>(0, 0));
 
 // For RGB image
-print("%d", img.at<Vec3b>(0, 0)[0]);
-print("%d", img.at<Vec3b>(0, 0)[1]);
-print("%d", img.at<Vec3b>(0, 0)[2]);
+printf("%d", img.at<Vec3b>(0, 0)[0]);
+printf("%d", img.at<Vec3b>(0, 0)[1]);
+printf("%d", img.at<Vec3b>(0, 0)[2]);
 ```
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
 ## Method 2. Using Pointer for faster operation
+```cpp
+/* Method 2. Accessing Using Pointer */
+// Gray Image
+int pixel_temp;
+for (int v = 0; v < img_gray.rows; v++)
+{
+	uchar* img_data = img_gray.ptr<uchar>(v);
+	for (int u = 0; u < img_gray.cols; u++)
+		pixel_temp = img_data[u];
+}
 
+//RGB Image
+int pixel_temp_r, pixel_temp_g, pixel_temp_b;
+int cnt = 0;
 
+for (int v = 0; v < img.rows; v++)
+{
+	uchar* img_data = img.ptr<uchar>(v);
+	for (int u = 0; u < img.cols * img.channels(); u = u+3)
+	{
+		pixel_temp_r = img_data[u];
+		pixel_temp_g = img_data[u+1];
+		pixel_temp_b = img_data[u+2];
+	}
+}
+```
+
+# Exercise
+Calculate the summation of the pixel intensity and calculate the average intensity value.
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/f29f81f7-e13d-43b4-84dc-9bbe5985351f)
 
 
 
