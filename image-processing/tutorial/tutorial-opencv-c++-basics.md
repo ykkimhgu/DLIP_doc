@@ -280,3 +280,36 @@ int main()
 {% endtabs %}
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/08651da2-78de-43de-925d-fc37d63d35ba)
+
+# Accessing Pixel value
+## Method 1. Accessing using `at<type>(v,u)`
+```cpp
+Mat image= imread(filename);
+
+image.at<uchar>(v,u)= 255;
+image.at<float>(v,u)= 0.9;
+ 
+// For an RGB Image
+// (option1) Vec3b: 8-bit 3-D image (RGB)
+image.at<cv::Vec3b>(v,u)[0]= 255;
+image.at<cv::Vec3b>(v,u)[1]= 255;
+image.at<cv::Vec3b>(v,u)[2]= 255;
+
+/* Method 1. Accessing using "at<type>(v, u)" */
+// For single channel image(Gray-scale)
+printf("%d", img_gray.at<uchar>(0, 0));
+
+// For RGB image
+print("%d", img.at<Vec3b>(0, 0)[0]);
+print("%d", img.at<Vec3b>(0, 0)[1]);
+print("%d", img.at<Vec3b>(0, 0)[2]);
+```
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
+
+## Method 2. Using Pointer for faster operation
+
+
+
+
+
