@@ -89,13 +89,11 @@ Then, create sub-directories such as :
 
 * `C:\Users\yourID\source\repos\DLIP\Include`
 
-* **C:\Users\yourID\source\repos\DLIP\Assignment**&#x20;
+* `C:\Users\yourID\source\repos\DLIP\Assignment`
 
-* **C:\Users\yourID\source\repos\DLIP\LAB**&#x20;
+* `C:\Users\yourID\source\repos\DLIP\LAB`
 
-* **C:\Users\yourID\source\repos\DLIP\Image**
-
-&#x20;
+* `C:\Users\yourID\source\repos\DLIP\Image`
 
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
 
