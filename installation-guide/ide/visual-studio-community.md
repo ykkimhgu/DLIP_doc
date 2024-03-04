@@ -14,7 +14,7 @@ Click **"Free Download"** of Visual Studio Community 2022. After downloading, in
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/854e2c1d-8aa9-4063-b48c-965a1e4a5bb2)
 
-Select "**C++ programming Desktop**" Option. Optionally, select others such as "Visual Studio Extension Pack". Then Select Install button.
+Select "**C++ programming Desktop**" Option. Optionally, select others such as "Visual Studio Extension Pack". Then Select the Install button.
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/48173de7-56b3-4bac-8af3-aca2fa593c5a)
 
