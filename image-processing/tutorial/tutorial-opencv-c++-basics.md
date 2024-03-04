@@ -171,10 +171,10 @@ The methods for performing tasks such as image crop, rotate, resize, and color c
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/244c72f0-86bc-45e2-b349-c4e9e5caf753)
 
-## Example 3. Basic Image Opereation
+## Example 3. Basic Image Operation
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_Mat_Opeeration.cpp" %}
+{% tab title="DLIP_Tutorial_basic_image_operation.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -184,39 +184,24 @@ using namespace cv;
 
 int main()
 {
-	/*  Create or Construct Mat  */
-	Mat A(10, 10, CV_8UC3, Scalar::all(155));
-	Mat B(A.size(), CV_8UC1);
-	Mat C = Mat::zeros(A.size(), CV_8UC1);
-	Mat D = Mat::ones(A.size(), CV_32FC1);
+	/*  read image  */
+	Mat img = imread("image.jpg");
+	imshow("img", img);
 
-	cout << "MAT A: " << A << endl << endl;
-	cout << "MAT B: " << B << endl << endl;
-	cout << "MAT C: " << C << endl << endl;
-	cout << "MAT D: " << D << endl << endl;
+	/*  Crop(Region of Interest)  */
+	Rect r(10, 10, 150, 150);	 // (x, y, width, height)
+	Mat roiImg = img(r);
+	imshow("roiImg", roiImg);
 
-	/*  Get size of A (rows, cols)  */
-	cout << "Size of A:  " << A.size() << endl;
-	cout << "# of Rows of A:  " << A.rows << endl;
-	cout << "# of Cols of A:  " << A.cols << endl;
-	cout << "# of Channel of A:  " << A.channels() << endl;
+	/*  Rotate  */
+	Mat rotImg;
+	rotate(img, rotImg, ROTATE_90_CLOCKWISE);
+	imshow("rotImg", rotImg);
 
-	/*  Copy/Clone Mat A to E/F  */
-	Mat E, F;
-	A.copyTo(E);
-	F = A.clone();
-
-	/*  Convert channel  */
-	Mat img = imread("image.jpg");	// CV8UC3 Image
-	Mat img_gray;
-	cvtColor(img, img_gray, COLOR_BGR2GRAY);
-
-	/*  Chnage image type (8UC1 or 32FC1)  */
-	Mat img_32F;
-	img_gray.convertTo(img_32F, CV_32FC1);
-	imshow("img_32F", img_32F);
-
-	//cout << "img_32F: " << img_32F.channels() << endl << endl;
+	/*  Resize  */
+	Mat resizedImg;
+	resize(img, resizedImg, Size(1000, 100));
+	imshow("resizedImg", resizedImg);
 
 	waitKey(0);
 }
@@ -224,8 +209,74 @@ int main()
 {% endtab %}
 {% endtabs %}
 
+# Exercise
+## Flip horizontally of the original image
+* Useful for Webcam operation.
+* Implement 'flip' operation on video webcam.
+* Make the video horizontal flipped when you press **'h** key.
+* Use with the exercise code below to start
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2dd5d517-8785-4ce8-adcc-13b72245d975)
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_flip_exercise_img.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+
+	Mat img = imread("image.jpg");
+	Mat flipedImg;
+	flip(img, flipedImg, 0);
 
 
+	imshow("image", img);
+	imshow("flipedImg", flipedImg);
+	waitKey(0);
+}
+```
+{% endtab %}
+{% endtabs %}
 
+# Shallow Copy vs Deep Copy
+* Compile and run the code below and see what happens
+* Before you execute this code, try to understand what it does
 
+{% tabs %}
+{% tab title="DLIP_Tutorial_shallow_deep_copy.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+ 
+using namespace std;
+using namespace cv;
+ 
+int main()
+{
+	Mat src, dst_shallow, dst_deep;
+	// read image  
+	src = imread("image.jpg", 0);
+	
+	/* Shallow Copy */
+	dst_shallow = src;
+ 
+	/* Deep Copy */
+	src.copyTo(dst_deep);
+ 
+	flip(src, src, 1);
+ 
+	imshow("dst_shallow", dst_shallow);
+	imshow("dst_deep", dst_deep);
+	waitKey(0);
+	return 0;
+}
+```
+{% endtab %}
+{% endtabs %}
 
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/08651da2-78de-43de-925d-fc37d63d35ba)
