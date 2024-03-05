@@ -292,9 +292,9 @@ int main()
 # Accessing Pixel value
 An image is composed of small units called pixels. Each pixel can be considered as the smallest unit of an image. Pixel intensity represents the brightness of a pixel. For grayscale images, pixel intensity ranges from 0 (black) to 255 (white). In color images, each channel (e.g., Red, Green, Blue) has its intensity value.
 
-The structure of an image is defined by rows and columns. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index, and u represents the column index.
+Rows and columns define the structure of an image. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index, and u represents the column index.
 
-OpenCV provides different methods to access intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
+OpenCV provides different methods to access the intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
 ## Method 1. Accessing using `at<type>(v,u)`
