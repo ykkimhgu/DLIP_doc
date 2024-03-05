@@ -443,7 +443,11 @@ void MyNum::print(void)
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+### Solution
+
+{% tabs %}
 {% tab title="TU_DLIP_solution.h" %}
 ```cpp
 #ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
