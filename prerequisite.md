@@ -4,6 +4,9 @@
 
 You are required to follow the software installation instructions before class starts.
 
+### Visual Studio Community 
+{% embed url="https://ykkim.gitbook.io/dlip/installation-guide/ide/visual-studio-community" %}
+
 ### OpenCV with C++ (Week 1-7)
 {% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-opencv-c++" %}
 
