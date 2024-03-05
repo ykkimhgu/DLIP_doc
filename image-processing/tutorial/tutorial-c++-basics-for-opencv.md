@@ -133,9 +133,13 @@ int main()
 	// =============================
 	// Exercise 1 :: Define Function
 	// =============================
+	int val1 = 11;
+	int val2 = 22;
 
 	// Add code here
 
+
+	std::cout << out << std::endl;
 }
 ```
 
@@ -175,11 +179,6 @@ int sum(int val1, int val2)
 
 {% endtab %}
 {% endtabs %}
-
-Source files link
-* [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-* [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-* [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
 
 ---
 
@@ -320,88 +319,12 @@ int main(int argc, char* argv[])
 ## Exercise 2
 
 ### Create a Class 'MyNum'
-
-1. Declare a class member named as **MyNum** in `DLIP_Tutorial_C++_student.cpp`
+Declare a class member named as **MyNum** to header files of  `TU_DLIP.h` and `TU_DLIP.cpp`. Then, compile and run the program. 
 
 * Constructor : MyNum()
 * Member variables: val1, val2 		// integer type
 * Member functions: int sum() 		// returns the sum of val1 and val2
 * Member functions: void print() 	// prints values of **val1, val2, and sum**
-
-
-{% tabs %}
-{% tab title="DLIP\_Tutorial\_C++\_student.cpp" %}
-```cpp
-#include "TU_DLIP.h"
-
-#include <iostream>
-
-int main()
-{
-	// =============================
-	// Exercise 1 :: Define Function
-	// =============================
-
-	// Add code here
-
-
-	// ====================================
-	// Exercise 2 :: Create a Class 'MyNum'
-	// ====================================
-
-	// Add code here
-
-}
-```
-{% endtab %}
-
-{% tab title="DLIP\_Tutorial\_C++\_solution.cpp" %}
-```cpp
-#include "TU_DLIP.h"
-
-#include <iostream>
-
-// =============================
-// Exercise 1 :: Define Function
-// =============================
-
-int sum(int val1, int val2)
-{
-	int out = val1 + val2;
-
-	return out;
-}
-
-// ====================================
-// Exercise 2 :: Create a Class "MyNum"
-// ====================================
-
-MyNum::MyNum(int x1, int x2)
-{
-	val1 = x1;
-	val2 = x2;
-}
-
-int MyNum::sum(void)
-{
-	int out = val1 + val2;
-
-	return out;
-}
-
-void MyNum::print(void)
-{
-	std::cout << "MyNum.val1 :: " << val1 << std::endl;
-	std::cout << "MyNum.val2 :: " << val2 << std::endl;
-	std::cout << "Sum : " << sum() << std::endl;
-}
-```
-{% endtab %}
-{% endtabs %}
-
-
-2. After you have checked your MyNum Class works properly, move the class declaration and definition to header files of  `TU_DLIP.h` and `TU_DLIP.cpp`.
-   Then, compile and run the program. 
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_main.cpp" %}
@@ -421,7 +344,6 @@ int main()
 	int out = sum(val1, val2);
 
 	std::cout << out << std::endl;
-
 
 	// ====================================
 	// Exercise 2 :: Create a Class 'myNum'
@@ -574,12 +496,6 @@ void MyNum::print(void)
 {% endtab %}
 {% endtabs %}
 
-Source code link:  
-* [DLIP\_Tutorial\_C++\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_student.cpp)
-* [TU\_DLIP.h](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.h)
-* [TU\_DLIP.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/TU\_DLIP.cpp)
-
-
 ---
 
 # Namespace
@@ -632,8 +548,6 @@ cout<<"print this"<<endl;
    * First **myNum** class: namespace name **proj\_A**
    * Second **myNum** class: namespace name **proj\_B**
 4. Build and compare
-
-[DLIP\_Tutorial\_C++\_namespace\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Cpp/DLIP\_Tutorial\_C%2B%2B\_namespace\_student.cpp)
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_namespace_student.cpp" %}
@@ -766,7 +680,6 @@ Functions with the same name (but with different types or number of parameters) 
 
 ### Function Overloading Reference
 ```cpp
-
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -862,7 +775,7 @@ void swap(int *a, int *b) {
 ```
 
 # Reference
-Reference can replace the use of pointer \*
+Reference can replace the use of pointer **\***
 * The disadvantage of reference is "We do not know if a function is call-by-value or call-by-reference"
 
 ```cpp
