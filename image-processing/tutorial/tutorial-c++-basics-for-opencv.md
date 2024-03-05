@@ -97,26 +97,38 @@ Then, create sub-directories such as :
 
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
 
-# Define and Declar Functions in Header Files
+# Define and Declare Functions in Header Files
 
 We will learn how to declare and define functions in the header file
 
 ## Exercise 1
 
-1. Create header files `TU_DLIP.h`, `TU_DLIP.cpp` under `C:\Users\yourID\source\repos\DLIP\Tutorial\`
-2. Declare the function in the header file(`TU_DLIP.h`) as
+1. Create a new C++ project in Visual Studio Community
+* Project Name: `DLIP_Tutorial_C++_Ex1`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\'
+
+2. Create a new C+ source file
+* File Name: `DLIP_Tutorial_C++_student.cpp`
+  
+3. Create new header files
+   * File Names:  `TU_DLIP.h`, `TU_DLIP.cpp`
+   * Lib Folder:  `C:\Users\yourID\source\repos\DLIP\Include`
+
+4. Declare the sum function in the header file(`TU_DLIP.h`) as
 
 ```cpp
 int sum(int val1, int val2);
 ```
 
-3. Define the function in the header source file(`TU_DLIP.cpp`) as
+3. Define the sum function in the header source file(`TU_DLIP.cpp`) as
 
 ```cpp
 int sum(int val1, int val2){...}
 ```
 
-4. Run the main source code of `DLIP_Tutorial_C++_student.cpp` and print out the sum value of any two input numbers.
+4. Include the header file in the main source code of `DLIP_Tutorial_C++_student.cpp`.
+5. Modify the source main code to print the sum value of any two numbers 
+6. Compile and run. 
 
 
 
