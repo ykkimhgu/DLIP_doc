@@ -209,7 +209,7 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Exercise
+# Exercise 1
 ## Flip horizontally of the original image
 * Useful for Webcam operation.
 * Implement 'flip' operation on video webcam.
@@ -244,8 +244,18 @@ int main()
 {% endtabs %}
 
 # Shallow Copy vs Deep Copy
+## Shallow Copy
+**Shallow Copy** means copying only the memory addresses in the memory. Since it copies pointers pointing to the same object or data, the original and the copy end up sharing the same data. This can lead to issues, as modifications to one object or array will affect the other as well.
+
+## Deep Copy
+**Deep Copy** means creating a copy of an object or data in a new memory space. The original and the copy are independent, having separate memory spaces, so modifications made to one side do not affect the other.
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/eb306257-1813-44f3-afd6-4c8279262f8d)
+
+## Example 4. Shallow_Deep_Copy
 * Compile and run the code below and see what happens
 * Before you execute this code, try to understand what it does
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/08651da2-78de-43de-925d-fc37d63d35ba)
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_shallow_deep_copy.cpp" %}
@@ -279,9 +289,12 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/08651da2-78de-43de-925d-fc37d63d35ba)
-
 # Accessing Pixel value
+An image is composed of small units called pixels. Each pixel can be considered as the smallest unit of an image. Pixel intensity represents the brightness of a pixel. For grayscale images, pixel intensity ranges from 0 (black) to 255 (white). In color images, each channel (e.g., Red, Green, Blue) has its intensity value.
+The structure of an image is defined by rows and columns. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index, and u represents the column index.
+OpenCV provides different methods to access intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
+
 ## Method 1. Accessing using `at<type>(v,u)`
 ```cpp
 Mat image= imread(filename);
@@ -304,8 +317,6 @@ printf("%d", img.at<Vec3b>(0, 0)[0]);
 printf("%d", img.at<Vec3b>(0, 0)[1]);
 printf("%d", img.at<Vec3b>(0, 0)[2]);
 ```
-
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
 ## Method 2. Using Pointer for faster operation
 ```cpp
@@ -335,7 +346,7 @@ for (int v = 0; v < img.rows; v++)
 }
 ```
 
-# Exercise
+# Exercise 2
 Calculate the summation of the pixel intensity and calculate the average intensity value.
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/f29f81f7-e13d-43b4-84dc-9bbe5985351f)
 
