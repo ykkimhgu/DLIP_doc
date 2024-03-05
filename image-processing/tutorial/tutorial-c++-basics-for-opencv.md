@@ -371,7 +371,7 @@ int main()
 
 
 // ====================================
-// Exercise 2 :: Create a Class 'MyNum'
+// Exercise 2 :: Create a Class "MyNum"
 // ====================================
 
 class MyNum 
@@ -380,6 +380,42 @@ class MyNum
 };
 
 #endif // !_TU_DLIP_H
+```
+{% endtab %}
+
+{% tab title="TU_DLIP.cpp" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+// =============================
+// Exercise 1 :: Define Function
+// =============================
+
+int sum(int val1, int val2)
+{
+	// Add code here
+}
+
+// ====================================
+// Exercise 2 :: Create a Class "myNum"
+// ====================================
+
+MyNum::MyNum(int x1, int x2)
+{
+	// Add code here
+}
+
+int MyNum::sum(void)
+{
+	// Add code here
+}
+
+void MyNum::print(void)
+{
+	// Add code here
+}
 ```
 {% endtab %}
 
@@ -415,42 +451,6 @@ class MyNum
 ```
 {% endtab %}
 
-{% tab title="TU_DLIP.cpp" %}
-```cpp
-#include "TU_DLIP.h"
-
-#include <iostream>
-
-// =============================
-// Exercise 1 :: Define Function
-// =============================
-
-int sum(int val1, int val2)
-{
-	// Add code here
-}
-
-// ====================================
-// Exercise 2 :: Create a Class ¡®myNum¡¯
-// ====================================
-
-MyNum::MyNum(int x1, int x2)
-{
-	// Add code here
-}
-
-int MyNum::sum(void)
-{
-	// Add code here
-}
-
-void MyNum::print(void)
-{
-	// Add code here
-}
-```
-{% endtab %}
-
 {% tab title="TU_DLIP_solution.cpp" %}
 ```cpp
 #include "TU_DLIP.h"
@@ -469,7 +469,7 @@ int sum(int val1, int val2)
 }
 
 // ====================================
-// Exercise 2 :: Create a Class ¡®myNum¡¯
+// Exercise 2 :: Create a Class "myNum"
 // ====================================
 
 MyNum::MyNum(int x1, int x2)
