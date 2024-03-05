@@ -105,14 +105,14 @@ We will learn how to declare and define functions in the header file
 
 1. Create a new C++ project in Visual Studio Community
 * Project Name: `DLIP_Tutorial_C++_Ex1`
-* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\'
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
 2. Create a new C+ source file
-* File Name: `DLIP_Tutorial_C++_student.cpp`
+* File Name: `DLIP_Tutorial_C++_Ex1.cpp`
   
 3. Create new header files
    * File Names:  `TU_DLIP.h`, `TU_DLIP.cpp`
-   * Lib Folder:  `C:\Users\yourID\source\repos\DLIP\Include`
+   * Lib Folder:  `C:\Users\yourID\source\repos\DLIP\Include\`
 
 4. Declare the sum function in the header file(`TU_DLIP.h`) as
 
@@ -120,23 +120,24 @@ We will learn how to declare and define functions in the header file
 int sum(int val1, int val2);
 ```
 
-3. Define the sum function in the header source file(`TU_DLIP.cpp`) as
+5. Define the sum function in the header source file(`TU_DLIP.cpp`) as
 
 ```cpp
 int sum(int val1, int val2){...}
 ```
 
-4. Include the header file in the main source code of `DLIP_Tutorial_C++_student.cpp`.
-5. Modify the source main code to print the sum value of any two numbers 
-6. Compile and run. 
+6. Include the header file in the main source code of `DLIP_Tutorial_C++_Ex1.cpp`.
+7. Modify the source main code to print the sum value of any two numbers 
+8. Compile and run. 
 
 
 
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_C++_student.cpp" %}
+{% tab title="DLIP_Tutorial_C++_Ex1.cpp" %}
 ```cpp
 #include "TU_DLIP.h"
+//#include "../../Include/TU_DLIP.h"
 
 #include <iostream>
 
@@ -339,10 +340,11 @@ Declare a class member named as **MyNum** to header files of  `TU_DLIP.h` and `T
 * Member functions: void print() 	// prints values of **val1, val2, and sum**
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_C++_main.cpp" %}
+{% tab title="DLIP_Tutorial_C++_Ex2.cpp" %}
 ```cpp
-#include "TU_DLIP.h"
 #include <iostream>
+#include "TU_DLIP.h"
+// #include "../../Include/TU_DLIP.h"
 
 int main()
 {
@@ -379,7 +381,7 @@ int main()
 // Exercise 1 :: Define Function
 // =============================
 
-// Add code here
+// Add code from Ex1
 
 
 // ====================================
@@ -407,7 +409,7 @@ class MyNum
 
 int sum(int val1, int val2)
 {
-	// Add code here
+	// Add code from Ex1
 }
 
 // ====================================
