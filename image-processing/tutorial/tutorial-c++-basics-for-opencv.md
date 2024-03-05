@@ -331,13 +331,24 @@ int main(int argc, char* argv[])
 
 ## Exercise 2
 
-### Create a Class 'MyNum'
-Declare a class member named as **MyNum** to header files of  `TU_DLIP.h` and `TU_DLIP.cpp`. Then, compile and run the program. 
+1. Create a new C++ project in Visual Studio Community
+* Project Name: `DLIP_Tutorial_C++_Ex2`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
+2. Create a new C+ source file
+* File Name: `DLIP_Tutorial_C++_Ex2.cpp`
+  
+
+### Create a Class 'MyNum'
+3. Modify the header file `TU_DLIP.h` and `TU_DLIP.cpp` to declare a class member named as **MyNum**.
 * Constructor : MyNum()
 * Member variables: val1, val2 		// integer type
 * Member functions: int sum() 		// returns the sum of val1 and val2
 * Member functions: void print() 	// prints values of **val1, val2, and sum**
+
+
+4. Then, compile and run the program. 
+
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_Ex2.cpp" %}
