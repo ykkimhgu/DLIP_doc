@@ -18,13 +18,48 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
+# Project Workspace Setting
+
+Create the lecture workspace as **C:\Users\yourID\source\repos**
+
+* e.g. `C:\Users\ykkim\source\repos`
+
+Then, create sub-directories such as :
+
+* `C:\Users\yourID\source\repos\DLIP`
+
+* `C:\Users\yourID\source\repos\DLIP\Tutorial`
+
+* `C:\Users\yourID\source\repos\DLIP\Include`
+
+* `C:\Users\yourID\source\repos\DLIP\Assignment`
+
+* `C:\Users\yourID\source\repos\DLIP\LAB`
+
+* `C:\Users\yourID\source\repos\DLIP\Image`
+
+<figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
+
+
 # Basic Image Processing
-## Example 1. Read / Write / Display
+## Example 1. Read / Write / Display Image
 You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
 
-[Download HGU logo Image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+1. Download HGU logo image and rename **HGU\_logo.jpg**
+   * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+2. Create a new C++ project in Visual Studio Community
+   * Project Name: `DLIP_Tutorial_OpenCV_Image`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+3. Create a new C+ source file
+   * File Name: `DLIP_Tutorial_OpenCV_Image.cpp`
+  
+4. Compile and run. 
+
 {% tabs %}
-{% tab title="DLIP_Tutorial_Image.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_Image.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -54,6 +89,8 @@ int main()
 }
 ```
 {% endtab %}
+{% endtabs %}
+
 
 {% tab title="DLIP_Tutorial_Video.cpp" %}
 ```cpp
