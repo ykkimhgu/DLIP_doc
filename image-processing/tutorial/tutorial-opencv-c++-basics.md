@@ -22,7 +22,7 @@ In this tutorial, you will learn fundamental concepts of the C++ language to use
 ## Example 1. Read / Write / Display
 You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
 
-[Download image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+[Download HGU logo Image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
 {% tabs %}
 {% tab title="DLIP_Tutorial_Image.cpp" %}
 ```cpp
@@ -35,7 +35,7 @@ using namespace cv;
 int main()
 {
 	/*  read image  */
-	String filename1 = "image.jpg";
+	String filename1 = "HGU_logo.jpg";
 	Mat img = imread(filename1);
 	Mat img_gray = imread("image.jpg", 0);  // read in grayscale
 
