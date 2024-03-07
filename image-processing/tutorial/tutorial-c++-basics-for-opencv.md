@@ -104,15 +104,16 @@ We will learn how to declare and define functions in the header file
 ## Exercise 1
 
 1. Create a new C++ project in Visual Studio Community
-* Project Name: `DLIP_Tutorial_C++_Ex1`
-* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+   * Project Name: `DLIP_Tutorial_C++_Ex1`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
 2. Create a new C+ source file
-* File Name: `DLIP_Tutorial_C++_Ex1.cpp`
+   * File Name: `DLIP_Tutorial_C++_Ex1.cpp`
   
 3. Create new header files
    * File Names:  `TU_DLIP.h`, `TU_DLIP.cpp`
    * Lib Folder:  `C:\Users\yourID\source\repos\DLIP\Include\`
+
 
 4. Declare the sum function in the header file(`TU_DLIP.h`) as
 
@@ -136,8 +137,8 @@ int sum(int val1, int val2){...}
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_Ex1.cpp" %}
 ```cpp
-#include "TU_DLIP.h"
-//#include "../../Include/TU_DLIP.h"
+//#include "TU_DLIP.h"
+#include "../../../Include/TU_DLIP.h"
 
 #include <iostream>
 
@@ -353,14 +354,13 @@ int main(int argc, char* argv[])
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_Ex2.cpp" %}
 ```cpp
-#include <iostream>
-#include "TU_DLIP.h"
-// #include "../../Include/TU_DLIP.h"
+//#include "TU_DLIP.h"
+#include "../../../Include/TU_DLIP.h"
 
 int main()
 {
 	// =============================
-	// Exercise 1 :: Define Function
+	// Exercise 1: Define Function
 	// =============================
 
 	int val1 = 11;
@@ -371,7 +371,7 @@ int main()
 	std::cout << out << std::endl;
 
 	// ====================================
-	// Exercise 2 :: Create a Class 'myNum'
+	// Exercise 2: Create a Class 'MyNum'
 	// ====================================
 
 	MyNum mynum(10, 20);
@@ -389,16 +389,20 @@ int main()
 #include <iostream>
 
 // =============================
-// Exercise 1 :: Define Function
+// Exercise 1: Define Function
 // =============================
 
-// Add code from Ex1
+int sum(int val1, int val2)
+{
+	return val1 + val2;
+}
 
 
 // ====================================
-// Exercise 2 :: Create a Class "MyNum"
+// Exercise 2: Create a Class "MyNum"
 // ====================================
 
+// Declare Constructor, function(sum, print), variable(val1, val2)
 class MyNum 
 {
 	// Add code here
@@ -415,18 +419,19 @@ class MyNum
 #include <iostream>
 
 // =============================
-// Exercise 1 :: Define Function
+// Exercise 1: Define Function
 // =============================
 
 int sum(int val1, int val2)
 {
-	// Add code from Ex1
+	return val1 + val2;
 }
 
 // ====================================
-// Exercise 2 :: Create a Class "myNum"
+// Exercise 2: Create a Class "MyNum"
 // ====================================
 
+// Constructor: x1 -> val1, x2 -> val2
 MyNum::MyNum(int x1, int x2)
 {
 	// Add code here
@@ -456,14 +461,14 @@ void MyNum::print(void)
 #include <iostream>
 
 // =============================
-// Exercise 1 :: Define Function
+// Exercise 1: Define Function
 // =============================
 
 int sum(int val1, int val2);
 
 
 // ====================================
-// Exercise 2 :: Create a Class "myNum"
+// Exercise 2: Create a Class "MyNum"
 // ====================================
 
 class MyNum 
@@ -487,7 +492,7 @@ class MyNum
 #include <iostream>
 
 // =============================
-// Exercise 1 :: Define Function
+// Exercise 1: Define Function
 // =============================
 
 int sum(int val1, int val2)
@@ -498,9 +503,10 @@ int sum(int val1, int val2)
 }
 
 // ====================================
-// Exercise 2 :: Create a Class "myNum"
+// Exercise 2: Create a Class "MyNum"
 // ====================================
 
+// Constructor: x1 -> val1, x2 -> val2
 MyNum::MyNum(int x1, int x2)
 {
 	val1 = x1;
@@ -509,15 +515,13 @@ MyNum::MyNum(int x1, int x2)
 
 int MyNum::sum(void)
 {
-	int out = val1 + val2;
-
-	return out;
+	return val1 + val2;
 }
 
 void MyNum::print(void)
 {
-	std::cout << "MyNum.val1 :: " << val1 << std::endl;
-	std::cout << "MyNum.val2 :: " << val2 << std::endl;
+	std::cout << "MyNum.val1: " << val1 << std::endl;
+	std::cout << "MyNum.val2: " << val2 << std::endl;
 	std::cout << "Sum : " << sum() << std::endl;
 }
 
@@ -589,26 +593,16 @@ In this exercise, you create the `MyNum` class, previously implemented in **Exer
 
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_C++_namespace_student.cpp" %}
+{% tab title="DLIP_Tutorial_C++_Ex3.cpp" %}
 
 ```cpp
-#include <iostream>
-
-namespace proj_A
-{
-	// Add code here
-}
-
-namespace proj_B
-{
-	// Add code here
-}
-
+#include "../../../Include/TU_DLIP.h"
+#include "TU_DLIP.h"
 
 void main()
 {
-	proj_A::myNum mynum1(1, 2, 3);
-	proj_B::myNum mynum2(4, 5, 6);
+	proj_A::MyNum mynum1(1, 2, 3);
+	proj_B::MyNum mynum2(4, 5, 6);
 
 	mynum1.print();
 	mynum2.print();
@@ -618,81 +612,267 @@ void main()
 ```
 {% endtab %}
 
-{% tab title="DLIP_Tutorial_C++_namespace_solution.cpp" %}
+{% tab title="TU_DLIP.h" %}
 ```cpp
+#ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
+#define _TU_DLIP_H
+
 #include <iostream>
 
-namespace proj_A 
-{
-	class myNum 
-	{
-		public:
-			int val1;
-			int val2;
-			int val3;
+// =============================
+// Exercise 1: Define Function
+// =============================
 
-			myNum(int in1, int in2, int in3) 
-			{
-				val1 = in1;
-				val2 = in2;
-				val3 = in3;
-			}
-			int sum() 
-			{
-				return val1 + val2 + val3;
-			}
-			void print() 
-			{
-				printf("val1 = %d\n", val1);
-				std::cout << "val2 = " << val2 << std::endl;
-				std::cout << "val3 = " << val3 << std::endl;
-				std::cout << "sum  = " << sum() << std::endl;
-				std::cout << "dsize= " << sizeof(sum()) << std::endl;
-			}
-	};
+int sum(int val1, int val2);
+
+// ====================================
+// Exercise 2: Create a Class "MyNum"
+// ====================================
+
+class MyNum
+{
+public:
+	MyNum(int x1, int x2);
+	int val1;
+	int val2;
+	int sum(void);
+	void print(void);
+};
+
+// ======================================================
+// Exercise 3: Create two Class "MyNum" in proj_A, proj_B
+// ======================================================
+namespace proj_A
+{
+	// Add code here
 }
 
-namespace proj_B 
+namespace proj_B
 {
-	class myNum 
-	{
-		public:
-			int val1;
-			int val2;
-			int val3;
+	// Add code here
+}
+#endif // !_TU_DLIP_H
+```
+{% endtab %}
 
-			myNum(int in1, int in2, int in3) 
-			{
-				val1 = in1;
-				val2 = in2;
-				val3 = in3;
-			}
-			int sum() 
-			{
-				return val1 + val2 + val3;
-			}
-			void print() 
-			{
-				printf("val1 = %d\n", val1);
-				std::cout << "val2 = " << val2 << std::endl;
-				std::cout << "val3 = " << val3 << std::endl;
-				std::cout << "sum  = " << sum() << std::endl;
-				std::cout << "dsize= " << sizeof(sum()) << std::endl;
-			}
-	};
+{% tab title="TU_DLIP.cpp" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+// =============================
+// Exercise 1: Define Function
+// =============================
+
+int sum(int val1, int val2)
+{
+	return val1 + val2;
 }
 
-void main() 
-{	
-	proj_A::myNum mynum1(1, 2, 3);
-	proj_B::myNum mynum2(4, 5, 6);
+// ====================================
+// Exercise 2: Create a Class "MyNum"
+// ====================================
 
-	mynum1.print();
-	mynum2.print();
+MyNum::MyNum(int x1, int x2)
+{
+	val1 = x1;
+	val2 = x2;
+}
 
-	system("pause");
+int MyNum::sum(void)
+{
+	return val1 + val2;
+}
+
+void MyNum::print(void)
+{
+	std::cout << "MyNum.val1 : " << val1 << std::endl;
+	std::cout << "MyNum.val2 : " << val2 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+
+// ======================================================
+// Exercise 3: Create two Class "MyNum" in proj_A, proj_B
+// ======================================================
+proj_A::MyNum::MyNum(int x1, int x2, int x3)
+{
+	// Add code here
+}
+
+int proj_A::MyNum::sum(void)
+{
+	// Add code here
+}
+
+void proj_A::MyNum::print(void)
+{
+	// Add code here
+}
+
+proj_B::MyNum::MyNum(int x1, int x2, int x3)
+{
+	// Add code here
+}
+
+int proj_B::MyNum::sum(void)
+{
+	// Add code here
+}
+
+void proj_B::MyNum::print(void)
+{
+	// Add code here
 }
 ```
+{% endtab %}
+{% endtabs %}
+
+
+{% tabs %}
+{% tab title="TU_DLIP_Solution.h" %}
+
+```cpp
+#ifndef _TU_DLIP_H		// same as "#if !define _TU_DLIP_H" (or #pragma once) 
+#define _TU_DLIP_H
+
+#include <iostream>
+
+// =============================
+// Exercise 1: Define Function
+// =============================
+
+int sum(int val1, int val2);
+
+// ====================================
+// Exercise 2: Create a Class "MyNum"
+// ====================================
+
+class MyNum
+{
+public:
+	MyNum(int x1, int x2);
+	int val1;
+	int val2;
+	int sum(void);
+	void print(void);
+};
+
+// ======================================================
+// Exercise 3: Create two Class "MyNum" in proj_A, proj_B
+// ======================================================
+namespace proj_A
+{
+	class MyNum
+	{
+	public:
+		MyNum(int x1, int x2, int x3);
+		int val1;
+		int val2;
+		int val3;
+		int sum(void);
+		void print(void);
+	};
+}
+
+namespace proj_B
+{
+	class MyNum
+	{
+	public:
+		MyNum(int x1, int x2, int x3);
+		int val1;
+		int val2;
+		int val3;
+		int sum(void);
+		void print(void);
+	};
+}
+#endif // !_TU_DLIP_H
+```
+{% endtab %}
+
+{% tab title="TU_DLIP_solution.cpp" %}
+```cpp
+#include "TU_DLIP.h"
+
+#include <iostream>
+
+// =============================
+// Exercise 1 :: Define Function
+// =============================
+
+int sum(int val1, int val2)
+{
+	return val1 + val2;
+}
+
+// ====================================
+// Exercise 2 :: Create a Class "MyNum"
+// ====================================
+
+MyNum::MyNum(int x1, int x2)
+{
+	val1 = x1;
+	val2 = x2;
+}
+
+int MyNum::sum(void)
+{
+	return val1 + val2;
+}
+
+void MyNum::print(void)
+{
+	std::cout << "MyNum.val1 : " << val1 << std::endl;
+	std::cout << "MyNum.val2 : " << val2 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+
+// ======================================================
+// Exercise 3: Create two Class "MyNum" in proj_A, proj_B
+// ======================================================
+proj_A::MyNum::MyNum(int x1, int x2, int x3)
+{
+	val1 = x1;
+	val2 = x2;
+	val3 = x3;
+}
+
+int proj_A::MyNum::sum(void)
+{
+	return val1 + val2 + val3;
+}
+
+void proj_A::MyNum::print(void)
+{
+	std::cout << "MyNum.val1 : " << val1 << std::endl;
+	std::cout << "MyNum.val2 : " << val2 << std::endl;
+	std::cout << "MyNum.val3 : " << val3 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+
+proj_B::MyNum::MyNum(int x1, int x2, int x3)
+{
+	val1 = x1;
+	val2 = x2;
+	val3 = x3;
+}
+
+int proj_B::MyNum::sum(void)
+{
+	return val1 + val2 + val3;
+}
+
+void proj_B::MyNum::print(void)
+{
+	std::cout << "MyNum.val1 : " << val1 << std::endl;
+	std::cout << "MyNum.val2 : " << val2 << std::endl;
+	std::cout << "MyNum.val3 : " << val3 << std::endl;
+	std::cout << "Sum : " << sum() << std::endl;
+}
+```
+
 {% endtab %}
 {% endtabs %}
 
