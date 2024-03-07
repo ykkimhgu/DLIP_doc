@@ -466,7 +466,7 @@ for (int v = 0; v < img.rows; v++)
 ```
 
 # Exercise 2
-Calculate the summation of the pixel intensity and calculate the average intensity value. Use `cv::Mat::rows`, `cv::Mat::cols`, `cv::sum()`.
+Calculate the summation of the pixel intensity and calculate the average intensity value. Use `cv::Mat::rows`, `cv::Mat::cols`.
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
@@ -514,7 +514,7 @@ int main()
     	Mat srcGray;
     	cvtColor(src, srcGray, COLOR_BGR2GRAY);
 
-    	// Calculate the sum of pixel intensities
+    	// Calculate the sum of pixel intensities using 'at' function
 	// Add code here
 
     	// Calculate the total number of pixels in the image
@@ -559,17 +559,25 @@ int main()
     Mat srcGray;
     cvtColor(src, srcGray, COLOR_BGR2GRAY);
 
-    // Calculate the sum of pixel intensities
-    Scalar sumIntensity = sum(srcGray);
+    // Calculate the sum of pixel intensities using 'at' function
+    double sumIntensity = 0.0;
+    for (int i = 0; i < srcGray.rows; ++i)
+    {
+        for (int j = 0; j < srcGray.cols; ++j)
+        {
+            // Access each pixel in the gray-scale image and add its intensity to the sum
+            sumIntensity += srcGray.at<uchar>(i, j);
+        }
+    }
 
     // Calculate the total number of pixels in the image
     int pixelCount = srcGray.rows * srcGray.cols;
 
     // Calculate the average intensity of the image
-    double avgIntensity = sumIntensity[0] / pixelCount;
+    double avgIntensity = sumIntensity / pixelCount;
 
     // Print the results
-    cout << "Sum of intensity: " << sumIntensity[0] << endl;
+    cout << "Sum of intensity: " << sumIntensity << endl;
     cout << "Number of pixels: " << pixelCount << endl;
     cout << "Average intensity: " << avgIntensity << endl;
 
@@ -579,7 +587,73 @@ int main()
 
     return 0;
 }
+
 ```
+{% endtab %}
 {% endtabs %}
 
+# Exercise 3
+Write a code to invert the colors of this gray-scale image. The resulting image should look like the following. For example, a pixel with an intensity of **100** should become a value of **255 - 100**, which is **155** after the color inversion. Use `Mat::zeros`, `dst.at<uchar>(i,j)`
 
+**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+
+0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+
+1. Download HGU logo image and rename **HGU\_logo.jpg**
+   * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+2. Create a new C++ project in Visual Studio Community
+   * Project Name: `DLIP_Tutorial_OpenCV_EX3`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+3. Create a new C+ source file
+   * File Name: `DLIP_Tutorial_OpenCV_EX3.cpp`
+  
+4. Compile and run.
+
+
+## Result
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/50a25aed-d095-4c20-a13c-b21a7946c024)
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_EX3.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+    // Load the image
+    Mat src = imread("../../../Image/HGU_logo.jpg");
+
+    if (src.empty())
+    {
+        cout << "Error: Couldn't open the image." << endl;
+        return -1;
+    }
+
+    // Convert the image to gray-scale
+    Mat srcGray;
+    cvtColor(src, srcGray, COLOR_BGR2GRAY);
+
+    // Initialize dst with the same size as srcGray
+    // Add code here
+
+    // Invert the colors by accessing each pixel
+    // Add code here
+
+    // Display the original and inverted images
+    imshow("srcGray", srcGray);
+    imshow("dst", dst);
+    waitKey(0);
+
+    return 0;
+}
+
+```
+{% endtab %}
+{% endtabs %}
