@@ -565,18 +565,28 @@ cout<<"print this"<<endl;
 ```
 
 ## Exercise 3
-
 ### Create another Class 'MyNum'
+In this exercise, you create the `MyNum` class, previously implemented in **Exercise 2**, with the same class name in different namespaces, `proj\_A`, and `proj\_B`.
 
-1. Declare class member variables like this in **DLIP\_Tutorial\_C++\_namespace\_student.cpp**: **Constructor / val1 / val2 / val3 / sum / print**
-   * val1, val2, val3: member variable of integer type
-   * sum(): member function that returns the sum of val1, val2, and val3
-   * print(): member function that prints val1, val2, val3, and sum
-2. Build
-3. Use namespace to identify two classes clearly
-   * First **myNum** class: namespace name **proj\_A**
-   * Second **myNum** class: namespace name **proj\_B**
-4. Build and compare
+1. Create a new C++ project in Visual Studio Community
+* Project Name: `DLIP_Tutorial_C++_Ex3`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+2. Create a new C+ source file
+* File Name: `DLIP_Tutorial_C++_Ex3.cpp`
+
+3. Modify the header file `TU_DLIP.h` and `TU_DLIP.cpp` to declare two class members named as **MyNum** in `proj\_A` and `proj\_B`.
+
+4. Use namespace to identify two classes clearly
+   * First **MyNum** class: namespace name **proj\_A**
+   * Second **MyNum** class: namespace name **proj\_B**
+
+5. Also, declare class member variables for each MyNum class: **Constructor / val1 / val2 / val3 / sum / print**
+   * Constructor `MyNum(int in1, int in2, int in3)`: A constructor for specifying values `val1`, `val2`, `val3`
+   * `val1`, `val2`, `val3`: member variable of integer type
+   * `sum(void)`: member function that returns the sum of val1, val2, and val3
+   * `print(void): member function that prints val1, val2, val3, and sum
+
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_C++_namespace_student.cpp" %}
