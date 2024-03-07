@@ -409,7 +409,7 @@ int main()
 # Accessing Pixel value
 An image is composed of small units called pixels. Each pixel can be considered as the smallest unit of an image. Pixel intensity represents the brightness of a pixel. For grayscale images, pixel intensity ranges from 0 (black) to 255 (white). In color images, each channel (e.g., Red, Green, Blue) has its intensity value.
 
-Rows and columns define the structure of an image. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index, and u represents the column index.
+Rows and columns define an image's structure. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index and u represents the column index.
 
 OpenCV provides different methods to access the intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
@@ -466,8 +466,120 @@ for (int v = 0; v < img.rows; v++)
 ```
 
 # Exercise 2
-Calculate the summation of the pixel intensity and calculate the average intensity value.
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/f29f81f7-e13d-43b4-84dc-9bbe5985351f)
+Calculate the summation of the pixel intensity and calculate the average intensity value. Use `cv::Mat::rows`, `cv::Mat::cols`, `cv::sum()`.
 
+**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+
+0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+
+1. Download HGU logo image and rename **HGU\_logo.jpg**
+   * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+2. Create a new C++ project in Visual Studio Community
+   * Project Name: `DLIP_Tutorial_OpenCV_EX2`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+3. Create a new C+ source file
+   * File Name: `DLIP_Tutorial_OpenCV_EX2.cpp`
+  
+4. Compile and run. 
+
+## Result
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/14e47ec7-6896-4e34-9d58-8996d2cb2197)
+
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2bbb3e90-5b66-4b98-9e88-52a4b3fbfc73)
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_EX2.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	// Load the image
+	Mat src = imread("../../../Image/HGU_logo.jpg");
+
+	if (src.empty())
+    	{
+        	cout << "Error: Couldn't open the image." << endl;
+        	return -1;
+    	}
+
+    	// Convert the image to gray-scale
+    	Mat srcGray;
+    	cvtColor(src, srcGray, COLOR_BGR2GRAY);
+
+    	// Calculate the sum of pixel intensities
+	// Add code here
+
+    	// Calculate the total number of pixels in the image
+    	// Add code here
+
+    	// Calculate the average intensity of the image
+    	// Add code here
+
+    	// Print the results
+	// Add code here
+
+    	// Display the gray-scale image
+    	imshow("srcGray", srcGray);
+    	waitKey(0);
+
+    	return 0;
+}
+
+```
+{% endtab %}
+
+{% tab title="DLIP_Tutorial_OpenCV_EX2_Solution.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+    // Load the image
+    Mat src = imread("../../../Image/HGU_logo.jpg");
+
+    if (src.empty())
+    {
+        cout << "Error: Couldn't open the image." << endl;
+        return -1;
+    }
+
+    // Convert the image to gray-scale
+    Mat srcGray;
+    cvtColor(src, srcGray, COLOR_BGR2GRAY);
+
+    // Calculate the sum of pixel intensities
+    Scalar sumIntensity = sum(srcGray);
+
+    // Calculate the total number of pixels in the image
+    int pixelCount = srcGray.rows * srcGray.cols;
+
+    // Calculate the average intensity of the image
+    double avgIntensity = sumIntensity[0] / pixelCount;
+
+    // Print the results
+    cout << "Sum of intensity: " << sumIntensity[0] << endl;
+    cout << "Number of pixels: " << pixelCount << endl;
+    cout << "Average intensity: " << avgIntensity << endl;
+
+    // Display the gray-scale image
+    imshow("srcGray", srcGray);
+    waitKey(0);
+
+    return 0;
+}
+```
+{% endtabs %}
 
 
