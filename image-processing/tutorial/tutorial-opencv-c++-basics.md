@@ -249,7 +249,9 @@ int main()
 
 # Exercise 1
 ## Flip horizontally of the original image
-Here's the code to flip the original HGU_logo image horizontally using the OpenCV flip function. Please refer to the documentation below to find more details about the flip function:
+Here's the code to flip the original HGU_logo image horizontally using the OpenCV flip function. Please refer to the documentation below to find more details about `cv::flip()`
+
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2dd5d517-8785-4ce8-adcc-13b72245d975)
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
