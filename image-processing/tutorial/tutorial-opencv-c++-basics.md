@@ -414,6 +414,7 @@ An image is composed of small units called pixels. Each pixel can be considered 
 Rows and columns define an image's structure. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index and u represents the column index.
 
 OpenCV provides different methods to access the intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
 ## Method 1. Accessing using `at<type>(v,u)` (Recommended)
@@ -489,6 +490,7 @@ Calculate the summation of the pixel intensity and calculate the average intensi
 4. Compile and run. 
 
 ## Result
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/14e47ec7-6896-4e34-9d58-8996d2cb2197)
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2bbb3e90-5b66-4b98-9e88-52a4b3fbfc73)
@@ -618,6 +620,7 @@ Write a code to invert the colors of this Grayscale image. The resulting image s
 
 
 ## Result
+
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/50a25aed-d095-4c20-a13c-b21a7946c024)
 
 {% tabs %}
