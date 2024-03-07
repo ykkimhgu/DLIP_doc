@@ -296,7 +296,7 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-## +Extra Example
+## +Extra Example 1
 The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function.
 **Hint: flag vs delay time of waitKey**
 
