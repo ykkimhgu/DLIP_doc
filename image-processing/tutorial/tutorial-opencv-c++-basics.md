@@ -296,7 +296,7 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-## +Extra Example 1
+# +Extra Example 1
 The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function.
 **Hint: flag vs delay time of waitKey**
 
@@ -466,6 +466,7 @@ for (int v = 0; v < img.rows; v++)
 ```
 
 # Exercise 2
+## Calculate the average intensity value using `at<type>(v,u)`
 Calculate the summation of the pixel intensity and calculate the average intensity value. Use `cv::Mat::rows`, `cv::Mat::cols`.
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
@@ -593,7 +594,8 @@ int main()
 {% endtabs %}
 
 # Exercise 3
-Write a code to invert the colors of this gray-scale image. The resulting image should look like the following. For example, a pixel with an intensity of **100** should become a value of **255 - 100**, which is **155** after the color inversion. Use `Mat::zeros`, `dst.at<uchar>(i,j)`
+## Intensity Inversion in Grayscale Images
+Write a code to invert the colors of this Grayscale image. The resulting image should look like the following. For example, a pixel with an intensity of **100** should become a value of **255 - 100**, which is **155** after the color inversion. Use `Mat::zeros`, `.at<type>(v,u)`
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
