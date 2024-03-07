@@ -581,9 +581,11 @@ In this exercise, you create the `MyNum` class, previously implemented in **Exer
 
 3. Modify the header file `TU_DLIP.h` and `TU_DLIP.cpp` to declare two class members named as **MyNum** in `proj\_A` and `proj\_B`.
 
+
 4. Use namespace to identify two classes clearly
    * First **MyNum** class: namespace name **proj\_A**
    * Second **MyNum** class: namespace name **proj\_B**
+
 
 5. Also, declare class member variables for each MyNum class: **Constructor / val1 / val2 / val3 / sum / print**
    * Constructor `MyNum(int in1, int in2, int in3)`: A constructor for specifying values `val1`, `val2`, `val3`
