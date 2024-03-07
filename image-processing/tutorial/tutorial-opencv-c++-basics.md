@@ -40,10 +40,13 @@ Then, create sub-directories such as :
 
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
 
-
 # Basic Image Processing
-## Example 1. Read / Write / Display Image
+## Example 1. Read / Write / Display
 You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
+
+**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+
+0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
 
 1. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
@@ -54,7 +57,7 @@ You can use the OpenCV C++ library to read, write, and display images/videos. He
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
 3. Create a new C+ source file
-   * File Name: `DLIP_Tutorial_OpenCV_Image.cpp`
+   * File Name: `DLIP_Tutorial_OpenCV_Image.cpp` or `DLIP_Tutorial_OpenCV_Video.cpp`
   
 4. Compile and run. 
 
@@ -70,29 +73,27 @@ using namespace cv;
 int main()
 {
 	/*  read image  */
-	String filename1 = "HGU_logo.jpg";
-	Mat img = imread(filename1);
-	Mat img_gray = imread("image.jpg", 0);  // read in grayscale
+	String HGU_logo = "../../../Image/HGU_logo.jpg";
+	Mat src = imread(HGU_logo);
+	Mat src_gray = imread(HGU_logo, 0);  // read in grayscale
 
 	/*  write image  */
-	String filename2 = "writeTest.jpg";
-	imwrite(filename2, img);
+	String fileName = "writeImage.jpg";
+	imwrite(fileName, src);
 
 	/*  display image  */
-	namedWindow("image", WINDOW_AUTOSIZE);
-	imshow("image", img);
+	namedWindow("src", WINDOW_AUTOSIZE);
+	imshow("src", src);
 
-	namedWindow("image_gray", WINDOW_AUTOSIZE);
-	imshow("image_gray", img_gray);
+	namedWindow("src_gray", WINDOW_AUTOSIZE);
+	imshow("src_gray", src_gray);
 
 	waitKey(0);
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-
-{% tab title="DLIP_Tutorial_Video.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_Video.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -151,7 +152,7 @@ OpenCV provides the Mat class for operating multi-dimensional images
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7959071b-8f63-451f-8bdc-92254bb2686a)
 {% tabs %}
-{% tab title="DLIP_Tutorial_Mat_Opeeration.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_Mat_Operation.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -184,13 +185,13 @@ int main()
 	F = A.clone();
 
 	/*  Convert channel  */
-	Mat img = imread("image.jpg");	// CV8UC3 Image
+	Mat img = imread("../../../Image/HGU_logo.jpg");	// CV8UC3 Image
 	Mat img_gray;
 	cvtColor(img, img_gray, COLOR_BGR2GRAY);
 
 	/*  Chnage image type (8UC1 or 32FC1)  */
 	Mat img_32F;
-	img_gray.convertTo(img_32F, CV_32FC1);
+	img_gray.convertTo(img_32F, CV_32FC1, 1.0/255.0);
 	imshow("img_32F", img_32F);
 
 	//cout << "img_32F: " << img_32F.channels() << endl << endl;
@@ -202,7 +203,7 @@ int main()
 {% endtabs %}
 
 # Basic Image Operation: Crop, Rotate, Resize, Color Convert
-The methods for performing tasks such as image crop, rotate, resize, and color conversion (such as converting to grayscale) are as follows. If you want to learn more about the functions below, refer to the OpenCV documentation.
+The methods for performing tasks such as image crop, rotate, resize, and color conversion (such as converting to grayscale) are as follows. If you want to learn more about the functions below, refer to the [OpenCV documentation](https://docs.opencv.org/4.9.0/index.html).
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/25434240-678f-41a1-8364-c33edae8f9e3)
 
@@ -211,7 +212,7 @@ The methods for performing tasks such as image crop, rotate, resize, and color c
 ## Example 3. Basic Image Operation
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_basic_image_operation.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_basic_image_operation.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -222,7 +223,7 @@ using namespace cv;
 int main()
 {
 	/*  read image  */
-	Mat img = imread("image.jpg");
+	Mat img = imread("../../../Image/HGU_logo.jpg");
 	imshow("img", img);
 
 	/*  Crop(Region of Interest)  */
@@ -248,15 +249,30 @@ int main()
 
 # Exercise 1
 ## Flip horizontally of the original image
-* Useful for Webcam operation.
-* Implement 'flip' operation on video webcam.
-* Make the video horizontal flipped when you press **'h** key.
-* Use with the exercise code below to start
-
+Here's the code to flip the original HGU_logo image horizontally using the OpenCV flip function. Please refer to the documentation below to find more details about the flip function:
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2dd5d517-8785-4ce8-adcc-13b72245d975)
 
+**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+
+0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+
+1. Download HGU logo image and rename **HGU\_logo.jpg**
+   * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+2. Create a new C++ project in Visual Studio Community
+   * Project Name: `DLIP_Tutorial_OpenCV_EX1`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+3. Create a new C+ source file
+   * File Name: `DLIP_Tutorial_OpenCV_EX1.cpp`
+  
+4. Compile and run. 
+
+
+
 {% tabs %}
-{% tab title="DLIP_Tutorial_flip_exercise_img.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_EX1.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -266,16 +282,81 @@ using namespace cv;
 
 int main()
 {
+	/*  read src  */
+	// Add code here
 
-	Mat img = imread("image.jpg");
-	Mat flipedImg;
-	flip(img, flipedImg, 0);
+	/* Flip src image
+	// Add code here
 
-
-	imshow("image", img);
-	imshow("flipedImg", flipedImg);
+	/*  Show source(src) and destination(dst)  */
+	// Add code here
 	waitKey(0);
 }
+```
+{% endtab %}
+{% endtabs %}
+
+## +Extra Example
+The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function.
+**Hint: flag vs delay time of waitKey**
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_EX1_extra.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	// Open video camera with index 0
+	VideoCapture cap(0);
+
+	// Check if the video camera is opened successfully
+	if (!cap.isOpened())
+	{
+		cout << "Cannot open the video camera\n";
+		return -1;
+	}
+
+	// Create a window to display the video feed
+	namedWindow("MyVideo", WINDOW_AUTOSIZE);
+
+	bool flipHorizontal = false;
+
+	while (true)
+	{
+		Mat frame;
+
+		// Read a new frame from the video feed
+        	bool readSuccess = cap.read(frame);
+
+		// Check if reading the frame was successful
+        	if (!readSuccess)
+        	{
+            		cout << "Cannot find a frame from the video stream\n";
+            		break;
+        	}
+
+        	// Add code here
+        	
+
+        	// Display the frame in the "MyVideo" window
+        	imshow("MyVideo", frame);
+
+        	// Wait for 30ms and check if the 'ESC' key is pressed
+        	if (waitKey(30) == 27)
+        	{
+            		cout << "ESC key is pressed by the user\n";
+            		break;
+        	}
+    	}
+
+    	return 0;
+}
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -292,10 +373,9 @@ int main()
 ## Example 4. Shallow_Deep_Copy
 * Compile and run the code below and see what happens
 * Before you execute this code, try to understand what it does
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/08651da2-78de-43de-925d-fc37d63d35ba)
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_shallow_deep_copy.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_deep_copy.cpp" %}
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -307,7 +387,7 @@ int main()
 {
 	Mat src, dst_shallow, dst_deep;
 	// read image  
-	src = imread("image.jpg", 0);
+	src = imread("../../../Image/HGU_logo.jpg", 0);
 	
 	/* Shallow Copy */
 	dst_shallow = src;
@@ -334,7 +414,7 @@ Rows and columns define the structure of an image. Rows represent the vertical d
 OpenCV provides different methods to access the intensity values of pixels in an image. Two common methods are using `at<type>(v, u)` and using pointers for faster operations.
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
-## Method 1. Accessing using `at<type>(v,u)`
+## Method 1. Accessing using `at<type>(v,u)` (Recommended)
 ```cpp
 Mat image= imread(filename);
 
