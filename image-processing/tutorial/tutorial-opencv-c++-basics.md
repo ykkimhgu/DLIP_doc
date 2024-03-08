@@ -672,7 +672,7 @@ int main()
     }
 
     // Initialize dst with the same size as srcGray
-    // Add code here
+    Mat dst = Mat::zeros(src.size(), src.type());
 
     // Invert the colors by accessing each pixel
     // Add code here
