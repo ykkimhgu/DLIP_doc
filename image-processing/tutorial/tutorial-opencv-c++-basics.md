@@ -272,7 +272,6 @@ Here's the code to flip the original HGU_logo image horizontally using the OpenC
 4. Compile and run. 
 
 
-
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_EX1.cpp" %}
 ```cpp
@@ -298,7 +297,7 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# +Extra Example 1
+# +Extra Exercise 1
 The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function.
 **Hint: flag vs delay time of waitKey**
 
@@ -439,6 +438,24 @@ printf("%d", img.at<Vec3b>(0, 0)[0]);
 printf("%d", img.at<Vec3b>(0, 0)[1]);
 printf("%d", img.at<Vec3b>(0, 0)[2]);
 ```
+
+## Example 5. Access pixel intensity of Gray-Scale Image(1D image)
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_Access.cpp" %}
+```cpp
+Mat src_gray= imread(filename, 0);
+
+/* Method 1. Accessing using "at<type>(v, u)" */
+// For single channel image(Gray-scale)
+int v = src_gray.rows;
+int u = src_gray.cols;
+
+for (int i = 0; i < v; ++i)
+	for (int j = 0; j < u; ++j)
+			printf("%d\n", src_gray.at<uchar>(i, j));
+```
+{% endtab %}
+{% endtabs %}
 
 ## Method 2. Using Pointer for faster operation
 ```cpp
