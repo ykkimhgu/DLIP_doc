@@ -439,24 +439,6 @@ printf("%d", img.at<Vec3b>(0, 0)[1]);
 printf("%d", img.at<Vec3b>(0, 0)[2]);
 ```
 
-## Example 5. Access pixel intensity of Gray-Scale Image(1D image)
-{% tabs %}
-{% tab title="DLIP_Tutorial_OpenCV_Access.cpp" %}
-```cpp
-Mat src_gray= imread(filename, 0);
-
-/* Method 1. Accessing using "at<type>(v, u)" */
-// For single channel image(Gray-scale)
-int v = src_gray.rows;
-int u = src_gray.cols;
-
-for (int i = 0; i < v; ++i)
-	for (int j = 0; j < u; ++j)
-			printf("%d\n", src_gray.at<uchar>(i, j));
-```
-{% endtab %}
-{% endtabs %}
-
 ## Method 2. Using Pointer for faster operation
 ```cpp
 /* Method 2. Accessing Using Pointer */
@@ -484,6 +466,36 @@ for (int v = 0; v < img.rows; v++)
 	}
 }
 ```
+
+## Example 5. Access pixel intensity of Gray-Scale Image(1D image)
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_Access.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	Mat src;
+	// read image  
+	src = imread("../../../Image/HGU_logo.jpg", 0);
+
+	int v = src.rows; //행(가로)
+	int u = src.cols; //열(세로)
+
+	for (int i = 0; i < v; ++i)
+		for (int j = 0; j < u; ++j)
+			printf("%d\n", src.at<uchar>(i, j));
+
+	return 0;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 
 # Exercise 2
 ## Calculate the average intensity value using `at<type>(v,u)`
@@ -537,16 +549,22 @@ int main()
     	cvtColor(src, srcGray, COLOR_BGR2GRAY);
 
     	// Calculate the sum of pixel intensities using 'at' function
-	// Add code here
+	double sumIntensity = 0.0;
+	for (int i = 0; i < srcGray.rows; i++)
+	{
+		// Add code here
+	} 
 
     	// Calculate the total number of pixels in the image
-    	// Add code here
+    	int pixelCount =  // Add code here
 
     	// Calculate the average intensity of the image
-    	// Add code here
+    	double avgIntensity = // Add code here
 
     	// Print the results
-	// Add code here
+    	cout << "Sum of intensity: " << sumIntensity << endl;
+    	cout << "Number of pixels: " << pixelCount << endl;
+    	cout << "Average intensity: " << avgIntensity << endl;
 
     	// Display the gray-scale image
     	imshow("srcGray", srcGray);
