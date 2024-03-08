@@ -37,8 +37,10 @@ Then, create sub-directories such as :
 * `C:\Users\yourID\source\repos\DLIP\LAB`
 
 * `C:\Users\yourID\source\repos\DLIP\Image`
+  
+* `C:\Users\yourID\source\repos\DLIP\Props`
 
-<figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/786e5037-d2de-40a8-85d5-3db848ad977c" alt=""><figcaption></figcaption></figure>
+<figure><img src = "https://github.com/ykkimhgu/DLIP_doc/assets/84508106/a33ed57c-9573-466a-a696-360cd54ced3e"><figcaption></figcaption></figure>
 
 # Basic Image Processing
 ## Example 1. Read / Write / Display
