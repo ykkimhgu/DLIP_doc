@@ -535,8 +535,8 @@ using namespace cv;
 
 int main()
 {
-	// Load the image
-	Mat src = imread("../../../Image/HGU_logo.jpg");
+	// Load the image in gray-scale
+	Mat src = imread("../../../Image/HGU_logo.jpg", 0);
 
 	if (src.empty())
     	{
@@ -544,13 +544,9 @@ int main()
         	return -1;
     	}
 
-    	// Convert the image to gray-scale
-    	Mat srcGray;
-    	cvtColor(src, srcGray, COLOR_BGR2GRAY);
-
     	// Calculate the sum of pixel intensities using 'at' function
 	double sumIntensity = 0.0;
-	for (int i = 0; i < srcGray.rows; i++)
+	for (int i = 0; i < src.rows; i++)
 	{
 		// Add code here
 	} 
@@ -567,7 +563,7 @@ int main()
     	cout << "Average intensity: " << avgIntensity << endl;
 
     	// Display the gray-scale image
-    	imshow("srcGray", srcGray);
+    	imshow("src", src);
     	waitKey(0);
 
     	return 0;
@@ -587,7 +583,7 @@ using namespace cv;
 int main()
 {
     // Load the image
-    Mat src = imread("../../../Image/HGU_logo.jpg");
+    Mat src = imread("../../../Image/HGU_logo.jpg", 0);
 
     if (src.empty())
     {
@@ -595,23 +591,20 @@ int main()
         return -1;
     }
 
-    // Convert the image to gray-scale
-    Mat srcGray;
-    cvtColor(src, srcGray, COLOR_BGR2GRAY);
 
     // Calculate the sum of pixel intensities using 'at' function
     double sumIntensity = 0.0;
-    for (int i = 0; i < srcGray.rows; ++i)
+    for (int i = 0; i < src.rows; ++i)
     {
-        for (int j = 0; j < srcGray.cols; ++j)
+        for (int j = 0; j < src.cols; ++j)
         {
             // Access each pixel in the gray-scale image and add its intensity to the sum
-            sumIntensity += srcGray.at<uchar>(i, j);
+            sumIntensity += src.at<uchar>(i, j);
         }
     }
 
     // Calculate the total number of pixels in the image
-    int pixelCount = srcGray.rows * srcGray.cols;
+    int pixelCount = src.rows * src.cols;
 
     // Calculate the average intensity of the image
     double avgIntensity = sumIntensity / pixelCount;
@@ -622,7 +615,7 @@ int main()
     cout << "Average intensity: " << avgIntensity << endl;
 
     // Display the gray-scale image
-    imshow("srcGray", srcGray);
+    imshow("src", src);
     waitKey(0);
 
     return 0;
@@ -670,17 +663,13 @@ using namespace cv;
 int main()
 {
     // Load the image
-    Mat src = imread("../../../Image/HGU_logo.jpg");
+    Mat src = imread("../../../Image/HGU_logo.jpg", 0);
 
     if (src.empty())
     {
         cout << "Error: Couldn't open the image." << endl;
         return -1;
     }
-
-    // Convert the image to gray-scale
-    Mat srcGray;
-    cvtColor(src, srcGray, COLOR_BGR2GRAY);
 
     // Initialize dst with the same size as srcGray
     // Add code here
@@ -689,7 +678,7 @@ int main()
     // Add code here
 
     // Display the original and inverted images
-    imshow("srcGray", srcGray);
+    imshow("src", src);
     imshow("dst", dst);
     waitKey(0);
 
