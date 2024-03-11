@@ -244,9 +244,9 @@ result_laplcaian.convertTo(result_laplcaian, CV_8U);
 ### Exercise 1
 
 Create a new C++ project in Visual Studio Community
-* Project Name: DLIP_Tutorial_Filter_Image
-* Project Folder: C:\Users\yourID\source\repos\DLIP\Tutorial\
-* Source File: DLIP_Tutorial_Filter_Image.cpp
+* Project Name: `DLIP_Tutorial_Filter_Image`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+* Source File: `DLIP_Tutorial_Filter_Image.cpp`
 
 
 Download the example code and test images.
@@ -254,7 +254,7 @@ Download the example code and test images.
 * [Example code: Filter\_demo\_student.cpp](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/filter\_demo\_student.cpp)
 * [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/filter\_test\_images.zip)
 
-In the provided sample code, apply the following filters to all test images.
+Using the provided sample code, apply the following filters to all test images.
 
 Choose appropriate filter to each image and explain why.
 
@@ -271,9 +271,9 @@ Show the result images to TA
 Create a camera(webcam) application that has filtering function.
 
 Create a new C++ project in Visual Studio Community
-* Project Name: DLIP_Tutorial_Filter_Vid
-* Project Folder: C:\Users\yourID\source\repos\DLIP\Tutorial\
-* Source File: DLIP_Tutorial_Filter_Vid.cpp
+* Project Name: `DLIP_Tutorial_Filter_Vid`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+* Source File: `DLIP_Tutorial_Filter_Vid.cpp`
   
 Download the exercise code
 
