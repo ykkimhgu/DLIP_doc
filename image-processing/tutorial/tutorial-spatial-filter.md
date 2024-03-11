@@ -4,13 +4,13 @@
 
 Deep Learning Image Processing.
 
-Updated. 2022.2
+Updated. 2023.3
 
 PDF version: [click here to download](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/tutorial-spatial-filter.pdf)
 
 ## I. Introduction
 
-In this tutorial, you will learn how to design various spatial filters in OpenCV. You will learn which filters to apply for gaussian and impulse noises and how to combine various filters to enhance the noisy corupted images. Also, you are required to create a camera application which allows the user select the type and size of the image filter.
+In this tutorial, you will learn how to design various spatial filters in OpenCV. You will learn which filters to apply for Gaussian and impulse noises and how to combine various filters to enhance the noise-corrupted images. You are required to create a camera application that allows the user to select the type and size of the image filter.
 
 The correlation of spatial filtering by kernel w(s,t) on the image f(x,y) to obtain the output image g(x,y) is represented as
 
@@ -98,21 +98,20 @@ figure, imshow(uint8(g))
 
 ### OpenCV: Filtering
 
-First, read the OpenCV documentation
+First, read the OpenCV 4.9.0 documentation [link](https://docs.opencv.org/4.9.0/dc/dd3/tutorial_gausian_median_blur_bilateral_filter.html)
 
-https://docs.opencv.org/3.4/dc/dd3/tutorial\_gausian\_median\_blur\_bilateral\_filter.html
-
-* [**blur()**](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#ga8c45db9afe636703801b0b2e440fce37)
-* [**GaussianBlur()**](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
-* [**medianBlur()**](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#ga564869aa33e58769b4469101aac458f9)
+* [**blur()**](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga8c45db9afe636703801b0b2e440fce37)
+* [**GaussianBlur()**](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
+* [**medianBlur()**](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga564869aa33e58769b4469101aac458f9)
+* [**bilateralFilter()**](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga9d7064d478c95d60003cf839430737ed)
 
 #### Example 1. Normalized Block Filter
 
-In this tutorial you will learn how to apply diverse linear filters to smooth images using OpenCV functions such as: blur, GaussianBlur, medianBlur
+In this tutorial, you will learn how to apply diverse linear filters to smooth images using OpenCV functions such as: blur, GaussianBlur, medianBlur
 
-OpenCV offers the function [blur](https://docs.opencv.org/master/d4/d86/group\_\_imgproc\_\_filter.html#ga8c45db9afe636703801b0b2e440fce37) to perform smoothing with the normalized box filter.
+OpenCV offers the function [blur](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga8c45db9afe636703801b0b2e440fce37) to perform smoothing with the normalized box filter.
 
-```
+```cpp
 int i = 3;
 blur( src, dst, Size( i, i ), Point(-1,-1) );
 ```
@@ -128,17 +127,17 @@ We specify arguments :
 
 OpenCV offers the function `filter2D()` for Filter Kernel Convolution.
 
-```
-C++: void filter2D(InputArray src, OutputArray dst, int ddepth, InputArray kernel, Point anchor=Point(-1,-1), double delta=0, int borderType=BORDER_DEFAULT )
+```cpp
+void filter2D(InputArray src, OutputArray dst, int ddepth, InputArray kernel, Point anchor=Point(-1,-1), double delta=0, int borderType=BORDER_DEFAULT )
 
 filter2D(src, dst, ddepth , kernel, anchor);
 ```
 
 #### Example 3. Gaussian Filter
 
-It is performed by the function [GaussianBlur](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#gaabe8c836e97159a9193fb0b11ac52cf1) :
+It is performed by the function [GaussianBlur](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1) :
 
-```
+```cpp
 void cv::GaussianBlur	(	
     InputArray 	src,
     OutputArray 	dst,
@@ -152,19 +151,19 @@ int i = 3;
 GaussianBlur( src, dst, Size( i, i ), 0, 0 );
 ```
 
-```
+```cpp
 blur = cv.GaussianBlur(img,(5,5),0)
 ```
 
 * Size(w, h): The size of the kernel to be used (the neighbors to be considered). w and h have to be odd and positive numbers.
-* sigmaX= The standard deviation in x. Writing 0 implies that is calculated using kernel
-* sigmaY=The standard deviation in y. Writing 0 implies that is calculated using kernel
+* sigmaX= The standard deviation in x. Writing 0 implies that it is calculated using kernel
+* sigmaY=The standard deviation in y. Writing 0 implies that it is calculated using kernel
 
 #### Example 4. Median Filter
 
-This filter is provided by the [medianBlur](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#ga564869aa33e58769b4469101aac458f9) function:
+This filter is provided by the [medianBlur](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga564869aa33e58769b4469101aac458f9) function:
 
-```
+```cpp
 // C++
 void cv::medianBlur	(	InputArray 	src,
 OutputArray 	dst,
@@ -180,13 +179,13 @@ medianBlur ( src, dst, i );
 median = cv.medianBlur(img,5)
 ```
 
-* i: Size of the kernel (only one because we use a square window). Must be odd.
+* i: The size of the kernel (there is only one because we use a square window). It must be odd.
 
 #### Example 5. Bilateral Filter
 
-Provided by OpenCV function [bilateralFilter](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#ga9d7064d478c95d60003cf839430737ed)
+Provided by OpenCV function [bilateralFilter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga9d7064d478c95d60003cf839430737ed)
 
-```
+```cpp
 // C++
 
 void cv::bilateralFilter	(	
@@ -208,14 +207,14 @@ blur = cv.bilateralFilter(img,9,75,75)
 ```
 
 * d: The diameter of each pixel neighborhood.
-* sigmaColor : Standard deviation in the color space.
-* sigmaSpace : Standard deviation in the coordinate space (in pixel terms)
+* sigmaColor: Standard deviation in the color space.
+* sigmaSpace: Standard deviation in the coordinate space (in pixel terms)
 
 #### Example 6: Laplacian operator (Sharpening Filter)
 
 Calculates the Laplacian of an image using [Laplacian()](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#gad78703e4c8fe703d479c1860d76429e6)
 
-```
+```cpp
 void cv::Laplacian	(	
     InputArray 	src,
     OutputArray 	dst,
