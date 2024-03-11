@@ -4,7 +4,7 @@
 
 Deep Learning Image Processing.
 
-Updated. 2023.3
+Updated. 2024.3
 
 PDF version: [click here to download](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/tutorial-spatial-filter.pdf)
 
