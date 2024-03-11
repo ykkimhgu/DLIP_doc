@@ -14,7 +14,7 @@ In this tutorial, you will learn how to design various spatial filters in OpenCV
 
 The correlation of spatial filtering by kernel w(s,t) on the image f(x,y) to obtain the output image g(x,y) is represented as
 
-![convgif](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/b1c96e98-83ad-4f6a-9ec8-d4b33038337a)
+![Convolution 1 GIF](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/09f20adc-f186-4f88-a029-c4a7b4036993)
 
 ![image](https://user-images.githubusercontent.com/38373000/154488848-f4591148-7f97-49f0-9c96-6cdd83389e88.png)
 
