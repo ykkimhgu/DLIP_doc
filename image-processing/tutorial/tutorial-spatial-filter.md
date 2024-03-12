@@ -27,6 +27,8 @@ We will learn how the filter convolution works by programming in MATLAB.
 Then, we will learn how to use filter functions in OpenCV.
 
 An example of convolution with arbitrary values : No Padding with stride 1
+
+
 ![ConvGif2](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/8969d384-4933-4d72-9f35-19764feee329)
 
 
