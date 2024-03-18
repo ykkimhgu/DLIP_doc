@@ -2,23 +2,23 @@
 
 ## Tutorial: Thresholding and Morphology
 
-Deep Learning Image Processing. Updated. 2022.2
+Deep Learning Image Processing. Updated. 2024.3
 
 ## I. Introduction
 
-In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces. Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and to determine an optimal value for the thresholding.
+In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces. Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and determine an optimal value for the thresholding.
 
 ## II. Tutorial
 
 ### Part 1. Binary Thresholding
 
-This tutorial shows how to create a simple code to apply OpenCV function for local thresholding.
+This tutorial shows how to create a simple code to apply the OpenCV function for local thresholding.
 
 #### Thresholding: OpenCV
 
 First, read the OpenCV documentation
 
-{% embed url="https://docs.opencv.org/3.4/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57" %}
+{% embed url="https://docs.opencv.org/4.9.0/" %}
 
 ![](<../../.gitbook/assets/image (43).png>)
 
