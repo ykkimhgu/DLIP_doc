@@ -6,7 +6,7 @@ Deep Learning Image Processing. Updated. 2024.3
 
 ## I. Introduction
 
-In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for the post-processing such as pruning unwanted spikes, filling holes and connecting broken pieces. Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and determine an optimal value for the thresholding.
+In this tutorial, we will learn how to apply thresholding and morphology algorithms to segment objects from the background. Thresholding is a powerful tool to segment object images into regions or from the background based on the image intensity values. After applying thresholding methods, morphology methods are usually applied for post-processing such as pruning unwanted spikes, filling holes, and connecting broken pieces. Also, you will learn how to draw and analyze the histogram of a digital image to determine the contrast of the image intensity and use this information to balance the contrast and determine an optimal value for the thresholding.
 
 ## II. Tutorial
 
@@ -89,15 +89,15 @@ Apply different values of thresholding for each images and find the best thresho
 
 Modify the program to include ‘Otsu method’.
 
-* [Read this documentation](https://docs.opencv.org/3.4/d7/d1b/group\_\_imgproc\_\_misc.html#ga72b913f352e4a1b1b397736707afcde3) for THRESH\_OTSU
+* [Read this documentation](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff) for THRESH\_OTSU
 
-Apply on each test images and compare the results with global thresholding output.
+Apply on each test image and compare the results with global thresholding output.
 
 #### Example 1-3. Plot Histogram
 
-Calculate and Plot histogram for each images in gray-scale and analyze if clear threshold value exists in histogram.
+Calculate and Plot the histogram for each image in gray-scale and analyze if a clear threshold value exists in a histogram.
 
-* [Read this documentation](https://docs.opencv.org/3.4/d6/dc7/group\_\_imgproc\_\_hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d) for calculating histogram `calcHist()`
+* [Read this documentation](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d) for calculating histogram `calcHist()`
 
 ```
 void cv::calcHist	(	const Mat * 	images,
@@ -160,7 +160,7 @@ Apply ‘Local Adaptive Thresholding’ on the following images. Compare the res
 
 ![](<../../.gitbook/assets/image (82).png>)
 
-Refer to `adaptiveThreshold()` [documentation](https://docs.opencv.org/3.4/d7/d1b/group\_\_imgproc\_\_misc.html#ga72b913f352e4a1b1b397736707afcde3)
+Refer to `adaptiveThreshold()` [documentation](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
 
 ```
 //adaptiveThreshold()
@@ -232,8 +232,8 @@ plt.show()
 
 First, read the OpenCV documentation on morphology.
 
-* [morphologyEx()](https://docs.opencv.org/3.4.17/d4/d86/group\_\_imgproc\_\_filter.html#ga67493776e3ad1a3df63883829375201f)
-* [erode()](https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
+* [morphologyEx()](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
+* [erode()](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
 
 **Sample code**
 
