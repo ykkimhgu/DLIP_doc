@@ -275,6 +275,11 @@ Apply several morphology to obtain clear segmentation of the object in given ima
 ## Exercise
 
 ### Exercise 1
+Create a new C++ project in Visual Studio Community
+* Project Name: `DLIP_Tutorial_Thresholding`
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+* Source File: `DLIP_Tutorial_Thresholding.cpp`
+* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/testImage.zip)
 
 1. Analyze Histogram and apply Thresholding methods on given images.&#x20;
 2. Find the optimal threshold method and value for the object segmentation.
