@@ -12,7 +12,7 @@ In this tutorial, you will learn how to find corners to track an object using Oo
 
 We will learn how to use Harris Corner Detection to find corners, which is an important algorithm for the camera calibration that requires to find chessboard corners.
 
-* OpenCV function of Harris corner detection: [read docs](https://docs.opencv.org/3.4/d4/d7d/tutorial\_harris\_detector.html)
+* OpenCV function of Harris corner detection: [read docs](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#gac1fc3598018010880e370e2f709b4345)
 
 ![image](https://user-images.githubusercontent.com/38373000/230373249-6392f543-2900-4778-ac4e-2581136a5c33.png)
 
@@ -114,7 +114,7 @@ void cornerHarris_demo( int, void* )
 
 
 
-OpenCV function of Harris corner detection: [read docs](https://docs.opencv.org/3.4/dc/d6b/group\_\_video\_\_track.html#ga473e4b886d0bcc6b65831eb88ed93323)
+OpenCV function of Harris corner detection: [read docs](https://docs.opencv.org/4.9.0/dc/d6b/group__video__track.html#ga473e4b886d0bcc6b65831eb88ed93323)
 
 ```cpp
 // C++: 
@@ -139,7 +139,7 @@ Calculates an optical flow for a sparse feature set using the iterative Lucas-Ka
 
 **Tutorial**
 
-![image](https://user-images.githubusercontent.com/38373000/230376593-22be8343-f915-40af-a4ad-bf67e52ddd13.png)
+![](https://user-images.githubusercontent.com/38373000/230376593-22be8343-f915-40af-a4ad-bf67e52ddd13.png)
 
 1. Declare variables for Optical flow functions such as the previous and current images(gray scaled), point vectors and term criteria
 
@@ -220,7 +220,7 @@ cvtColor(image, gray, COLOR_BGR2GRAY);
 imshow("LK Demo", image);
 ```
 
-**Tutorial Code:** [**see code here**](https://docs.opencv.org/3.4/d2/d1d/samples\_2cpp\_2lkdemo\_8cpp-example.html#a24)
+**Tutorial Code:** [**see code here**](https://docs.opencv.org/4.9.0/d2/d1d/samples_2cpp_2lkdemo_8cpp-example.html#a24)
 
 ```cpp
 // Machine VIsion - YKKim 2016.11
