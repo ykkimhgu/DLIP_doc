@@ -69,8 +69,7 @@ const char* corners_window = "Corners detected";
 void cornerHarris_demo( int, void* );
 int main( int argc, char** argv )
 {
-    CommandLineParser parser( argc, argv, "{@input | building.jpg | input image}" );
-    src = imread( samples::findFile( parser.get<String>( "@input" ) ) );
+    src = imread("../../../Image/checkedPattern.png", 1);
     if ( src.empty() )
     {
         cout << "Could not open or find the image!\n" << endl;
