@@ -14,7 +14,7 @@ We will learn how to use Harris Corner Detection to find corners, which is an im
 
 * OpenCV function of Harris corner detection: [read docs](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#gac1fc3598018010880e370e2f709b4345)
 
-![image](https://user-images.githubusercontent.com/38373000/230373249-6392f543-2900-4778-ac4e-2581136a5c33.png)
+![](https://user-images.githubusercontent.com/38373000/230373249-6392f543-2900-4778-ac4e-2581136a5c33.png)
 
 ```c++
 // C++: 
