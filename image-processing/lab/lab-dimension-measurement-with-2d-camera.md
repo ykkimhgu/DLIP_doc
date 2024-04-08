@@ -32,7 +32,8 @@ You are asked to make an image processing algorithm for an accurate volume measu
 5. Use your webcam or smartphone to capture image(s)
    * Use the given experimental setting of the background and 3D object.
 
-![image-20240408091759030](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/0174b785-0597-4895-9983-750d4f1fc02b) ![image-20240408091759030](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/2440ffe0-c6d4-4c77-9e71-2147155e16eb)
+![image-20240408091759030](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/0174b785-0597-4895-9983-750d4f1fc02b) ![image-20240408091817055](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/316f7dbe-e2ea-4666-b565-14159da63050)
+
 
 1. Measure each dimension of the test rectangular object.
    * The exact width (W) of the target object is given.
