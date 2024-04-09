@@ -117,7 +117,7 @@ Modify your tutorial program to keep drawing the contour on a white or black bac
 
 ![](https://user-images.githubusercontent.com/38373000/154500186-80fb5560-3c3d-455c-96fc-3eed044835ec.png)
 
-[demo](https://youtu.be/TkyMSWmKRxQ?si=8mUScSOp84hJowPt)
+{% embed url="https://www.youtube.com/watch?v=TkyMSWmKRxQ" %}
 
 ## Appendix
 
