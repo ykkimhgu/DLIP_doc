@@ -66,17 +66,17 @@ conda install -c anaconda seaborn jupyter
 pip install opencv-python
 ```
 
-### [4. Install Visual Studio Code](tutorial-installation-for-py-opencv.md#installation)
+### 4. Install Visual Studio Code
 
-[How to Install VS Code](../../installation-guide/ide/vscode/#installation)
-
-
-
-### [5. Setup Configuration in  Visual Studio Code](../../installation-guide/ide/vscode/python-vscode.md)
-
-[Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+Follow:  [How to Install VS Code](../../installation-guide/ide/vscode/#installation)
 
 
+
+### 5. Setup Configuration in  Visual Studio Code
+
+Follow:  [Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
+
+Follow:  [Jupyter Notebook in VS Code](../../installation-guide/ide/vscode/notebook-with-vscode.md)
 
 ***
 
