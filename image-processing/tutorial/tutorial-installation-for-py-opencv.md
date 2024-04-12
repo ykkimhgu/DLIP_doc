@@ -60,10 +60,11 @@ conda activate py39
 
 #### Install Numpy, OpenCV, Matplot, Jupyter
 
-```
+```python
 conda activate py39
 conda install -c anaconda seaborn jupyter
-pip install opencv-python
+conda install -c anaconda numpy
+conda install -c conda-forge opencv
 ```
 
 ### 4. Install Visual Studio Code
