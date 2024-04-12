@@ -1,30 +1,48 @@
-# Tutorial: OpenCv Python
+# Tutorial: OpenCv (Python) Basics
 
-## Tutorial: OpenCV Python
+## Pre-requisite: Basics of Python & Numpy&#x20;
 
-### Preparation
+Skip this if you already know about Python programming
+
+
+
+### Python Basics
+
+{% embed url="https://ykkim.gitbook.io/dlip/programming/python#tutorial" %}
+
+### Numpy  Basics
+
+{% embed url="https://ykkim.gitbook.io/dlip/programming/python#id-2.-numpy-tutorial" %}
+
+
+
+***
+
+## Environment Configuration
+
+You must have followed the installation gude for VS code&#x20;
+
+{% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
 
 This tutorial code is based on Google Colab Notebook.
+
+You can use two options&#x20;
+
+1. (Recommended) Download the notebook file (\*.ipyn) and run in VS.Code
+2. Run directly on Google Colab
+
+
+
+### Source code and images&#x20;
 
 Download the tutorial source code and image files.
 
 * [Exercise notebook code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
 
-#### (Option) Running tutorial code in VSCode
+***
 
-If you want to run this tutorial with Visual Studio Code on Local drive, follow the [Installation Instructions for](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
-
-* [Anaconda](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
-* [VS Code](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
-* [Numpy, OpenCV in Conda Environment](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
-
-Also, you need to know how to
-
-* [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
-* [How to program Notebook(Colab) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
-
-## Tutorial
+## Tutorial: Basics of Python OpenCV
 
 ### Import OpenCV Library
 
