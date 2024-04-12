@@ -20,6 +20,7 @@
   * [Tutorial: Edge Line Circle Detection](image-processing/tutorial/tutorial-edge-line-circle-detection.md)
   * [Tutorial: Corner Detection and Optical Flow](image-processing/tutorial/tutorial-corner-detection-and-optical-flow.md)
   * [Tutorial: OpenCV C++ Cheatsheet](image-processing/tutorial/tutorial-opencv-c++-cheatsheet.md)
+  * [Tutorial: Installation for Py OpenCV](image-processing/tutorial/tutorial-installation-for-py-opencv.md)
   * [Tutorial: OpenCv Python](image-processing/tutorial/tutorial-opencv-python.md)
 * [LAB](deep-learning-for-perception/lab/README.md)
   * [Lab Report Template](image-processing/lab/lab-report-template.md)
