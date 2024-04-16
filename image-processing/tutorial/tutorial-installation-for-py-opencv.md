@@ -31,10 +31,11 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 
 
     <figure><img src="https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png" alt=""><figcaption></figcaption></figure>
-* First, update conda
+* First, update conda and pip
 
 ```
 conda update -n base -c defaults conda
+pip install --upgrade pip
 ```
 
 ![](https://user-images.githubusercontent.com/23421059/169187097-2e482777-fb8b-45c0-b7f6-408073d8b15b.png)
