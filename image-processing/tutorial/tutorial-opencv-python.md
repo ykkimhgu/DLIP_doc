@@ -77,7 +77,7 @@ This method is recommended for showing images. This tutorial will use matplotlib
 
 > matplotlib에서 rgb 채널 순서가 다르다
 
-* matplot: R-B-G
+* matplot: R-G-B
 * OpenCV: G-B-R
 
 ```python
@@ -87,7 +87,7 @@ img = cv.imread('handonglogo.jpg')
 
 # Show Image using matplotlib
 # matplotlib에서 rgb 채널 순서가 다름
-# matplot:  R-B-G
+# matplot:  R-G-B
 # OpenCV:   B-G-R
 imgPlt = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 
