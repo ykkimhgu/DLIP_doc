@@ -38,7 +38,7 @@ You can use two options&#x20;
 Download the tutorial source code and image files.
 
 * [Exercise notebook code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
-* [Test Image Files](https://github.com/ykkimhgu/DLIP-src/upload/main/images)
+* [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
 
 ***
 
