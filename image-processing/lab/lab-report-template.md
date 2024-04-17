@@ -18,7 +18,7 @@ This is an example report template to help students write a concise and organize
 
 **Demo Video:** Youtube link (if available)
 
-
+***
 
 ## Introduction
 
@@ -115,11 +115,11 @@ Summarize the project goal and results.
 
 Also, suggest ways to improve the outcome.
 
+***
 
+***
 
-
-
-
+***
 
 ## Appendix
 

@@ -58,7 +58,7 @@ The available cuDNN version could be a low version (e.g. cuDNN 7.6.5). If you wa
 
 ## Method 2: Installation using NVIDIA downloader
 
-### Step 1: Check the software you need to install <a href="#0330" id="0330"></a>
+### Step 1: Check the software you need to install <a href="#id-0330" id="id-0330"></a>
 
 Assuming that Windows is already installed on your PC, the additional bits of software you will install as part of these steps are:
 
@@ -76,9 +76,9 @@ Visual Studio Community is required for the installation of Nvidia CUDA Toolkit.
 
 Follow: [How to install Visual Studio Community](../ide/visual-studio-community.md#how-to-install)
 
-### &#x20;<a href="#2582" id="2582"></a>
+### &#x20;<a href="#id-2582" id="id-2582"></a>
 
-### Step 3: Install CUDA Toolkit for Windows 10 <a href="#2582" id="2582"></a>
+### Step 3: Install CUDA Toolkit for Windows 10 <a href="#id-2582" id="id-2582"></a>
 
 > (updated 2022.2 : Install CUDA Toolkit 10.2 )
 
@@ -108,19 +108,19 @@ For more detailed instructions, see[ Nvidia CUDA installation guide for windows]
 
 ![](<../../.gitbook/assets/image (117).png>)
 
-### Step 4: Install CUDA patches <a href="#3873" id="3873"></a>
+### Step 4: Install CUDA patches <a href="#id-3873" id="id-3873"></a>
 
 After CUDA installation, install additional Patches for CUDA Toolkit.
 
 ![](<../../.gitbook/assets/image (125).png>)
 
-### Step 5: Install cuDNN <a href="#3fc4" id="3fc4"></a>
+### Step 5: Install cuDNN <a href="#id-3fc4" id="id-3fc4"></a>
 
 After installing CUDA and its patches, the next step is to find a compatible version of CuDNN.
 
 * Check which version of \*\*\*\* cuDNN is needed for specific Tensorflow or Pytorch
 
-
+***
 
 **Step 5.1: Register NVIDIA**
 

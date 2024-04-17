@@ -12,7 +12,7 @@ description: Tutorial Title goes here
 
 **Demo Video:** Youtube link
 
-
+***
 
 ## Introduction
 
@@ -60,3 +60,4 @@ Explain the final result and analyze in terms of accuracy/precision/recall etc..
 
 Complete list of all references used (github, blog, paper, etc)
 
+***

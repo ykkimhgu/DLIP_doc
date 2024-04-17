@@ -2,7 +2,7 @@
 
 ## Installation Guide 2021
 
-
+***
 
 ### description: Installation Guide for Deep Learning 2021
 
@@ -20,7 +20,7 @@ Make sure you install the correct software version as instructed.
 > * PyTorch 1.10.x
 > * Anaconda for Python 3.7 or Anaconda of Latest Version
 
-
+***
 
 ### Installation Steps
 

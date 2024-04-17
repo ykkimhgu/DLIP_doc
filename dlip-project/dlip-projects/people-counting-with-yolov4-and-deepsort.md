@@ -10,7 +10,7 @@ Since the outbreak of COVID-19, people have been restricted from entering variou
 \
 The application was created using open source YOLOv4, Deep SORT and TensorFlow. YOLOv4 is an algorithm that performs object detection using deep convolutional neural networks, and is created by adding additional algorithms to YOLOv3. YOLOv4 is a 10% improvement in accuracy (AP) over YOLOv3 and has the advantage of fast and accurate object detection in a typical learning environment using only one GPU. Deep SORT(Simple Online and Realtime Tracking with a Deep Association Metric) is an algorithm for object tracking. It was created using deep learning, Kalman filter and Hungarian algorithm.\\
 
-
+***
 
 ## Requirements
 
@@ -553,7 +553,7 @@ The application were able to successfully determine the number of people enterin
 
 **See demo video here**
 
-
+***
 
 ## Discussion
 

@@ -3,13 +3,13 @@
 **Date: 2022-06-19** **Author:** Inwoong Kim(21700150), Hyukjun Ha(21700763) **Github:** https://github.com/okdlsdnd/DLIP\_Final/blob/main/Final\_Lab.md\
 **Demo video**: https://youtu.be/jZRFZqah7\_A
 
-
+***
 
 ## Introduction
 
 Because of increasing usage of smartphones and computers, forward head posture is severe in modern young people. But actually by correcting their posture, it can be easily cured. And if you know your current posture, it is naturally followed by correcting posture. So we designed this program to visualize subject's posture by using OpenPose. OpenPose works best at Nvidia GPU environment.
 
-
+***
 
 ### 1. Download OpenPose
 
@@ -156,7 +156,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-
+***
 
 ### Result
 

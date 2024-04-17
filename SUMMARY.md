@@ -8,6 +8,7 @@
 * [Notes](image-processing/image-processing-notes/README.md)
   * [Thresholding](image-processing/image-processing-notes/thresholding.md)
   * [Spatial Filtering](image-processing/image-processing-notes/spatial-filtering.md)
+  * [Masking with Bitwise Operation](image-processing/image-processing-notes/masking-with-bitwise-operation.md)
   * [Model n Calibration](image-processing/image-processing-notes/model-n-calibration.md)
 * [Tutorial](image-processing/tutorial/README.md)
   * [Tutorial: Installation for OpenCV C++](image-processing/tutorial/tutorial-installation-for-opencv-c++.md)

@@ -34,7 +34,7 @@ NumPy Tutorial: [Learning Numpy in 60 minutes\_DLIP](https://github.com/ykkimhgu
 
 {% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb" %}
 
-
+***
 
 ## Installation
 
@@ -82,7 +82,7 @@ conda install python=3.6
 
 `conda install -c anaconda numpy`
 
-
+***
 
 ### Cheat Sheet
 
