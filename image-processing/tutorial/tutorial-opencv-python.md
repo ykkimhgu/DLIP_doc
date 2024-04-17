@@ -61,7 +61,7 @@ You can use the OpenCV C++ library to read, write, and display images/videos. He
 3. Compile and run. 
 
 {% tabs %}
-{% tab title="DLIP_Tutorial_OpenCV_Image.cpp" %}
+{% tab title="DLIP_Tutorial_OpenCV_Image.py" %}
 ```python
 import cv2 as cv
 
@@ -85,48 +85,33 @@ cv.waitKey(0)
 ```
 {% endtab %}
 
-{% tab title="DLIP_Tutorial_OpenCV_Video.cpp" %}
-```cpp
-#include <iostream>
-#include <opencv2/opencv.hpp>
+{% tab title="DLIP_Tutorial_OpenCV_Video.py" %}
+```python
+import cv2 as cv
 
-using namespace std;
-using namespace cv;
+# Open the video camera no.0
+cap = cv.VideoCapture(0)
 
-int main()
-{
-	/*  open the video camera no.0  */
-	VideoCapture cap(0);
+# If not success, exit the program
+if not cap.isOpened():
+    print('Cannot open camera')
 
-	if (!cap.isOpened())	// if not success, exit the programm
-	{
-		cout << "Cannot open the video cam\n";
-		return -1;
-	}
+cv.namedWindow('MyVideo', cv.WINDOW_AUTOSIZE)
 
-	namedWindow("MyVideo", WINDOW_AUTOSIZE);
+while True:
+    # Read a new frame from video
+    ret, frame = cap.read()
 
-	while (1)
-	{
-		Mat frame;
+    # If not success, break loop
+    if not ret:
+        print('Cannot read frame')
+        break
 
-		/*  read a new frame from video  */
-		bool bSuccess = cap.read(frame);
+    cv.imshow('MyVideo', frame)
 
-		if (!bSuccess)	// if not success, break loop
-		{
-			cout << "Cannot find a frame from  video stream\n";
-			break;
-		}
-		imshow("MyVideo", frame);
-
-		if (waitKey(30) == 27) // wait for 'ESC' press for 30ms. If 'ESC' is pressed, break loop
-		{
-			cout << "ESC key is pressed by user\n";
-			break;
-		}
-	}
-}
+    if cv.waitKey(30) & 0xFF == 27:
+        print('Press ESC to stop')
+        break
 ```
 {% endtab %}
 {% endtabs %}
