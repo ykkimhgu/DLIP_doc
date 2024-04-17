@@ -1,4 +1,4 @@
-# Tutorial: OpenCv (Python) Basics
+# Tutorial: OpenCV (Python) Basics
 
 ## Pre-requisite: Basics of Python & Numpy&#x20;
 
@@ -42,7 +42,94 @@ Download the tutorial source code and image files.
 
 ***
 
-## Tutorial: Basics of Python OpenCV
+# Basic Image Processing
+## Example 1. Read / Write / Display
+You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
+
+**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+
+0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+
+1. Download HGU logo image and rename **HGU\_logo.jpg**
+   * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+2. Create a new python source file in Visual Studio Code
+   * File Name: `DLIP_Tutorial_OpenCV_Image.py` or `DLIP_Tutorial_OpenCV_Video.py`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\Python`
+  
+3. Compile and run. 
+
+{% tabs %}
+{% tab title="DLIP_Tutorial_OpenCV_Image.cpp" %}
+```python
+import cv2 as cv
+
+# Read image
+HGU_logo = '../../Image/HGU_logo.jpg'
+src = cv.imread(HGU_logo)
+src_gray = cv.imread(HGU_logo, cv.IMREAD_GRAYSCALE)
+
+# Write image
+HGU_logo_name = 'writeImage.jpg'
+cv.imwrite(HGU_logo_name, src)
+
+# Display image
+cv.namedWindow('src', cv.WINDOW_AUTOSIZE)
+cv.imshow('src', src)
+
+cv.namedWindow('src_gray', cv.WINDOW_AUTOSIZE)
+cv.imshow('src_gray', src_gray)
+
+cv.waitKey(0)
+```
+{% endtab %}
+
+{% tab title="DLIP_Tutorial_OpenCV_Video.cpp" %}
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	/*  open the video camera no.0  */
+	VideoCapture cap(0);
+
+	if (!cap.isOpened())	// if not success, exit the programm
+	{
+		cout << "Cannot open the video cam\n";
+		return -1;
+	}
+
+	namedWindow("MyVideo", WINDOW_AUTOSIZE);
+
+	while (1)
+	{
+		Mat frame;
+
+		/*  read a new frame from video  */
+		bool bSuccess = cap.read(frame);
+
+		if (!bSuccess)	// if not success, break loop
+		{
+			cout << "Cannot find a frame from  video stream\n";
+			break;
+		}
+		imshow("MyVideo", frame);
+
+		if (waitKey(30) == 27) // wait for 'ESC' press for 30ms. If 'ESC' is pressed, break loop
+		{
+			cout << "ESC key is pressed by user\n";
+			break;
+		}
+	}
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Import OpenCV Library
 
