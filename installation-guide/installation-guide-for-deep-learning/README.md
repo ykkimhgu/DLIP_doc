@@ -144,7 +144,9 @@ pip install opencv-python torchsummary
 ```
 
 **With GPU**
+Change the pyTorch version depending on your CUDA version
 
+For DLIP 2024
 ```
 # CUDA 11.8
 conda activate py39
@@ -154,7 +156,7 @@ conda install pytorch=2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c
 pip install opencv-python torchsummary
 ```
 
-
+For DLIP 2022
 ```
 # CUDA 10.2
 conda install -c anaconda cudatoolkit==10.2.89 cudnn seaborn jupyter
