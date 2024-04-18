@@ -163,17 +163,17 @@ Example:
 
 * GTX 1080  is PASCAL(v6.1) and it  is supported by  CUDA SDK from 8.0 to 12.4 
 
-* RTX 40xx is AdaLovelace(v8.9) and it is supported by  CUDA SDK from  11.8 to 12.4 
+* RTX 4xxx is AdaLovelace(v8.9) and it is supported by  CUDA SDK from  11.8 to 12.4 
 
   
 
 > For most GPUs, CUDA SDK >11.x will work fine
 >
-> BUT, if you use RTX4xxs, you may need to install CUDA SDK > 11.8
+> BUT, if you use RTX4xxx, you may need to install CUDA SDK > 11.8
 
 
 
-See here for detail https://en.wikipedia.org/wiki/CUDA
+[See here for detail](https://en.wikipedia.org/wiki/CUDA)
 
 ![image](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/0f0e8418-efb2-45cc-aef3-2998c0dc11d9)
 
@@ -237,13 +237,8 @@ For example
 
   
 
-See here for CUDA and PyTorch Version matching
-
-https://pytorch.org/get-started/previous-versions/
+[See here for CUDA and PyTorch Version matching](https://pytorch.org/get-started/previous-versions/)
 
 
 
-**For DLIP 2024 course,** 
-
->  CUDA=11.8,  PyTorch 2.0
 
