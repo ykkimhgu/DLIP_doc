@@ -121,6 +121,10 @@ while True:
     if cv.waitKey(30) & 0xFF == 27:
         print('Press ESC to stop')
         break
+
+cv.destroyAllWindows()
+cap.release()
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -154,14 +158,14 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-## Load & Show Image File
+### Read Image File
 
-### Option 1 (recommend): Using matplot `plt.imshow()`
-
+#### Using matplot `plt.imshow()`
+This tutorial will use matplotlib functions for *.ipyn files.
 This method is recommended for showing images. This works for both *.py and *.ipyn files. 
-This tutorial will use matplotlib functions.
 
-> matplotlib에서 rgb 채널 순서가 다르다
+
+> matplotlib has different rgb order than OpenCV
 
 * matplot: R-G-B
 * OpenCV: G-B-R
@@ -182,7 +186,7 @@ plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 
-### Option 2 (for .py only): Using OpenCV imshow()
+#### Other Options:   (for .py only)  OpenCV imshow()
 This is only for *.py file. 
 Python files running on local drive supports OpenCV `cv.imshow()`
 
@@ -197,10 +201,12 @@ img = cv.imread('handonglogo.jpg')
 cv.imshow('source',img) 
 ```
 
-### Option 3 (for Colab only)
+#### Other Option: (for Colab only) cv2_imshow()
 
 CoLAB provides a similar function called `cv2_imshow()`.\
-But this is NOT recommended method. Import
+But this is NOT recommended method. 
+
+Import
 
 `from google.colab.patches import cv2_imshow as cv_imshow`
 
@@ -215,34 +221,13 @@ img = cv.imread('handonglogo.jpg')
 cv_imshow(img) 
 ```
 
-### Open WebCam ( \*py only)
-
-[Download example src in python](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_opencv\_python\_WebCam\_vscode\_2022.py)
-
+### Capturing Video 
+Using webcam in notebook(colab, jupyter) requires more complex setup.
 > cv.VideoCapture(0) is NOT available in Colab.
 
-```python
-# Webcam is used for *.py code. 
-# Using webcam in notebook(colab, jupyter) requires more complex setup.
 
-cap = cv.VideoCapture(0)
 
-while(1):
-    _, frame = cap.read()
-
-    cv.imshow('frame',frame)
-    
-    k = cv.waitKey(5) & 0xFF
-    if k == 27:
-        break
-
-cv.destroyAllWindows()
-cap.release()
-```
-
-***
-
-### Spatial Filter
+# Spatial Filter
 
 * Box filter
 * Gaussian filter
@@ -273,13 +258,13 @@ plt.show()
 
 ***
 
-### Thresholding
+# Thresholding
 
 [thresh()](https://docs.opencv.org/3.4.17/d7/d1b/group\_\_imgproc\_\_misc.html#gae8a4a146d1ca78c626a53577199e9c57)
 
 `Python:cv.threshold(src, thresh, maxval, type[, dst]) ->retval, dst`
 
-#### Manual Local Threshold
+## Manual Local Threshold
 
 ```python
 # Open Image
@@ -304,7 +289,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382112-850fddd8-b98b-44dd-8b93-3e2e55029f6e.png)
 
-#### Adaptive Threshold
+## Adaptive Threshold
 
 `cv.adaptiveThreshold( src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst] )`
 
@@ -340,7 +325,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382154-1befab4a-caac-40ba-8a00-7c63a772e1a8.png)
 
-#### Plot Histogram
+## Plot Histogram
 
 ```python
 hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]]	)
@@ -382,7 +367,7 @@ plt.xticks([]),plt.yticks([])
 plt.show()
 ```
 
-### Morphology
+# Morphology
 
 Morphology: Erode, Dilate
 
@@ -421,7 +406,7 @@ plt.show()
 
 ***
 
-### Color Segmetation (InRange)
+# Color Segmentation (InRange)
 
 [inRange()](https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html#ga48af0ab51e36436c5d04340e036ce981)
 
@@ -463,9 +448,9 @@ plt.show()
 
 ***
 
-### Edge & Line & Circle Detection
+# Edge & Line & Circle Detection
 
-#### Edge Detection
+## Edge Detection
 
 Example code 1
 
@@ -511,7 +496,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382352-c2353c3c-6cbd-4cc1-b1aa-98300a0b3024.png)
 
-#### Circle Detection
+## Circle Detection
 
 Example code
 
@@ -556,7 +541,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382486-c8b276f3-92c3-46b0-ac20-1144f0427186.png)
 
-#### Line Detection
+## Line Detection
 
 ```python
 # Load image
@@ -617,11 +602,11 @@ Solution codes for this tutorials can be downloaded
 
 ***
 
-## Exercise
+# Exercise
 
-### Beginner Level Exercise
+## Beginner Level Exercise
 
-#### Exercise 1
+### Exercise 1
 
 Apply Blur filters, Thresholding and Morphology methods on given images for object segmentation.
 
@@ -629,7 +614,7 @@ Apply Blur filters, Thresholding and Morphology methods on given images for obje
 
 ![image](https://user-images.githubusercontent.com/38373000/163776140-51398b0d-6cb2-4e02-b21f-6749b1d75049.png)
 
-#### Example 2
+### Example 2
 
 Choose the appropriate InRange conditions to segment only ' Blue colored ball'. Draw the contour and a box over the target object. Repeat for Red, and Yellow balls
 
@@ -637,15 +622,15 @@ Choose the appropriate InRange conditions to segment only ' Blue colored ball'. 
 
 ![](https://github.com/ykkimhgu/DLIP-src/blob/main/images/color\_ball.jpg?raw=true)
 
-#### Example 3
+### Example 3
 
 Detect Pupil/Iris and draw circles.
 
 ![](../../.gitbook/assets/eyepupil.png)
 
-### Intermediate Level Exercise
+## Intermediate Level Exercise
 
-#### Exercise: Count number of coins and calculate the total amount
+### Exercise: Count number of coins and calculate the total amount
 
 After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels. This technique is used where you need to monitor the number of objects moving on a conveyor belt in an industry process. Goal: Count the number of the individual coins and calculate the total amount of money.
 
