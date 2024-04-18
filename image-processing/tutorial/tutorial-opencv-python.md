@@ -241,10 +241,12 @@ Using webcam in notebook(colab, jupyter) requires more complex setup.
 * [Median filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga564869aa33e58769b4469101aac458f9)
 
 ```python
-cv.blur(	src, ksize[, dst[, anchor[, borderType]]]	)
-cv.GaussianBlur(	src, ksize, sigmaX[, dst[, sigmaY[, borderType]]]	)
-cv.medianBlur(	src, ksize[, dst]	)
+cv.blur(src, ksize[, dst[, anchor[, borderType]]])
+cv.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]])
+cv.medianBlur(src, ksize[, dst])
 ```
+
+### Example Code
 
 ```python
 # Load image
@@ -275,9 +277,12 @@ plt.show()
 
 * [Thresholding](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57)
 
-`Python:cv.threshold(src, thresh, maxval, type[, dst]) ->retval, dst`
+```python
+cv.threshold(src, thresh, maxval, type[, dst])
+```
 
 ## Manual Local Threshold
+### Example Code
 
 ```python
 # Open Image
@@ -305,9 +310,11 @@ plt.show()
 ## Adaptive Threshold
 * [Adaptive Threshold](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
 
-`cv.adaptiveThreshold( src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst] )`
+```python
+cv.adaptiveThreshold(src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst])
+```
 
-Example code
+### Example code
 
 ```python
 # Read image
@@ -344,10 +351,10 @@ plt.show()
 * [calcHist](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d)
 
 ```python
-hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]]	)
+hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])
 ```
 
-Example Code
+### Example Code
 
 ```python
 # Open Image
@@ -390,10 +397,12 @@ plt.show()
 * [morphologyEx](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
 
 ```python
-cv.erode(	src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]] )
-cv.dilate(	src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]]	)
-cv.morphologyEx(	src, op, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]]	)
+cv.erode(src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]])
+cv.dilate(src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]])
+cv.morphologyEx(src, op, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]])
 ```
+
+### Example Code
 
 ```python
 # Open Image
@@ -432,11 +441,13 @@ plt.show()
 
 # Color Segmentation (InRange)
 
-[inRange()](https://docs.opencv.org/4.9.0/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
+* [inRange](https://docs.opencv.org/4.9.0/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
 
-`dst= cv2.inRange(src, lowerb, upperb, dst=None)`
+```python
+dst= cv2.inRange(src, lowerb, upperb, dst=None)
+```
 
-Example code
+### Example code
 
 ```python
 # Open Image in RGB
@@ -475,10 +486,10 @@ plt.show()
 # Edge & Line & Circle Detection
 
 ## Edge Detection
-[Canny](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
+* [Canny](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
 
 ```python
-cv.Canny(	image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]]	)
+cv.Canny(image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]])
 ```
 
 ### Example code 1
@@ -529,7 +540,7 @@ plt.show()
 [HoughCircles](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
 ```python
-cv.HoughCircles(	image, method, dp, minDist[, circles[, param1[, param2[, minRadius[, maxRadius]]]]]	)
+cv.HoughCircles(image, method, dp, minDist[, circles[, param1[, param2[, minRadius[, maxRadius]]]]])
 ```
 
 ### Example code
@@ -576,11 +587,11 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/38373000/160382486-c8b276f3-92c3-46b0-ac20-1144f0427186.png)
 
 ## Line Detection
-[HoughLines](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a)
+* [HoughLines](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a)
 
 ```python
-cv.HoughLines(	image, rho, theta, threshold[, lines[, srn[, stn[, min_theta[, max_theta]]]]]	)
-cv.HoughLinesP(	image, rho, theta, threshold[, lines[, minLineLength[, maxLineGap]]]	)
+cv.HoughLines(image, rho, theta, threshold[, lines[, srn[, stn[, min_theta[, max_theta]]]]])
+cv.HoughLinesP(image, rho, theta, threshold[, lines[, minLineLength[, maxLineGap]]])
 ```
 
 ### Example code
