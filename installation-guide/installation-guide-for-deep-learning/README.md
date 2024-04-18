@@ -3,12 +3,9 @@ description: Installation Guide for Deep Learning 2022
 ---
 
 # Installation Guide
-
-## Installation Guide
-
-### Installation Guide for Win10
-
 (updated 2022.4)
+(updated 2024.4)
+
 
 This installation guide is for programming a deep learning application using Pytorch
 
@@ -16,25 +13,37 @@ Make sure you install the correct software version as instructed.
 
 > For DLIP 2022 Lecture:
 
+* Python 3.9, CUDA 11.8, cuDNN 7.6
+* PyTorch 2.0.x
+* Anaconda for Python 3.9 or Anaconda of Latest Version
+  
+> For DLIP 2022 Lecture:
+
 * Python 3.9, CUDA 10.2, cuDNN 7.6
 * PyTorch 1.9.1
 * Anaconda for Python 3.9 or Anaconda of Latest Version
 
-#### Installation Guide for MacOS
-
+### for MacOS
 (To be Updated)
 
 ***
 
-## Installation Steps
+# Installation Steps
 
-### 1. Install Anaconda
+The installation is divided by two parts
+1. Installing Python Environment 
+2. Installing Graphic Card and CUDA
+3. Installing DL Framework (PyTorch, etc)
+
+## Part 1. Installing Python Environment 
+
+### Step 1. Install Anaconda
 
 **Anaconda** : Python and libraries package installer.
 
 Follow: [How to install Anaconda](https://ykkim.gitbook.io/dlip/installation-guide/anaconda#conda-installation)
 
-### 2. Install Python
+### Step 2. Install Python
 
 > Python 3.9 (2022-1)
 
@@ -67,7 +76,7 @@ conda activate py39
 
 ![image](https://user-images.githubusercontent.com/23421059/169187341-0aaa7552-fac3-43fe-9702-66321c67fc06.png)
 
-### 3. Install Libs
+### Step 3. Install Libs
 
 #### Install Numpy, OpenCV, Matplot, Jupyter
 
@@ -77,7 +86,7 @@ conda install -c anaconda seaborn jupyter
 pip install opencv-python
 ```
 
-### 4. Install Visual Studio Code
+### Step 4. Install Visual Studio Code
 
 Follow: [How to Install VS Code](../ide/vscode/#installation)
 
@@ -86,7 +95,10 @@ Also, read about
 * [How to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
 * [How to program CoLab(Notebook) in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/notebook-with-vscode)
 
-### 5. Install GPU Driver, CUDA, cuDNN
+***
+
+## Part 2. Installing Graphic Card and CUDA
+### Step 5. Install GPU Driver, CUDA, cuDNN
 
 Skip this if you do not have GPU card.
 
@@ -98,13 +110,15 @@ Skip this if you do not have GPU card.
 
 Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
 
-### 6. Install DL Framework
+
+## Part 3. Installing DL Framework
+
 
 * **TensorFlow** — DL library, developed by Google.
 * **Keras** — DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
 * **PyTorch** — Dynamic DL library with GPU acceleration.
 
-#### Install Pytorch
+#### Step 6. Install Pytorch
 
 Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
 
@@ -148,7 +162,7 @@ If your result is,
 * `cuda` : GOOD, installed normally. You do not need to follow the steps below.
 * `cpu` : Go to [Troubleshooting](./#troubleshooting)
 
-#### Install Tensorflow and Keras
+#### Other Option:  Install Tensorflow and Keras
 
 * Run 'Anaconda Prompt(admin)'
 * Activate virtual environment
