@@ -16,6 +16,8 @@ Make sure you install the correct software version as instructed.
 * Python 3.9, CUDA 11.8, cuDNN 7.6
 * PyTorch 2.0.x
 * Anaconda for Python 3.9 or Anaconda of Latest Version
+
+
   
 > For DLIP 2022 Lecture:
 
@@ -142,6 +144,16 @@ pip install opencv-python torchsummary
 ```
 
 **With GPU**
+
+```
+# CUDA 11.8
+conda activate py39
+
+conda install -c anaconda cudatoolkit=11.8 cudnn seaborn jupyter
+conda install pytorch=2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install opencv-python torchsummary
+```
+
 
 ```
 # CUDA 10.2
