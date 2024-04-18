@@ -160,7 +160,7 @@ uploaded=files.upload()
 
 ```python
 # Load image
-img = cv.imread('handonglogo.jpg')
+img = cv.imread('HGU_logo.jpg')
 ```
 
 
@@ -176,7 +176,7 @@ This method is recommended for showing images. This works for both *.py and *.ip
 
 ```python
 # Load image
-img = cv.imread('handonglogo.jpg')
+img = cv.imread('HGU_logo.jpg')
 
 
 # Show Image using matplotlib
@@ -199,7 +199,7 @@ Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
 
 ```python
 # Load image
-img = cv.imread('handonglogo.jpg')
+img = cv.imread('HGU_logo.jpg')
 
 # Show Image using colab imshow
 cv.imshow('source',img) 
@@ -219,7 +219,7 @@ Import
 from google.colab.patches import cv2_imshow as cv_imshow
 
 # Load image
-img = cv.imread('handonglogo.jpg')
+img = cv.imread('HGU_logo.jpg')
 
 # Show Image using colab imshow
 cv_imshow(img) 
