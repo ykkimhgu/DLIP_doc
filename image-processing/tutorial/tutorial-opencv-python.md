@@ -145,13 +145,10 @@ from matplotlib import pyplot as plt
 ### (for COLAB only) Upload Image Files in Colab server
 Skip this if you are using Visual Studio Code 
 
-**Option 1: Upload Image Files in Colab server**
-
 Read how to load image file in Colab
 {% embed url="https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/colab#loading-image-file-in-colab" %}
 
-
-**Option 2: Upload image file to Colab server from local drive**
+**Other Option**: Upload image file to Colab server from local drive
 
 ```
 from google.colab import files
@@ -160,7 +157,14 @@ uploaded=files.upload()
 
 ### Read Image File
 
-#### Using matplot `plt.imshow()`
+
+```python
+# Load image
+img = cv.imread('handonglogo.jpg')
+```
+
+
+### Display Image using matplot `plt.imshow()`
 This tutorial will use matplotlib functions for *.ipyn files.
 This method is recommended for showing images. This works for both *.py and *.ipyn files. 
 
@@ -186,7 +190,7 @@ plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 
-#### Other Options:   (for .py only)  OpenCV imshow()
+### Display Image:   (for .py only)  OpenCV imshow()
 This is only for *.py file. 
 Python files running on local drive supports OpenCV `cv.imshow()`
 
@@ -201,7 +205,7 @@ img = cv.imread('handonglogo.jpg')
 cv.imshow('source',img) 
 ```
 
-#### Other Option: (for Colab only) cv2_imshow()
+### Display Image: (for Colab only) cv2_imshow()
 
 CoLAB provides a similar function called `cv2_imshow()`.\
 But this is NOT recommended method. 
