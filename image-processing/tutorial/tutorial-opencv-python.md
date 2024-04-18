@@ -32,7 +32,7 @@ Follow the tutorial for installation
 ### Download
 Download the tutorial source code and image files.
 
-* [Tutorial Code in *.ipyn](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
+* [Tutorial Code in *.ipynb](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_PythonOpenCV)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
 
 ## Project and Data Folder
