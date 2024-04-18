@@ -40,7 +40,7 @@ The downloaded images should be saved in
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
    
 The python opencv tutorial is operated under the project folder
-   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV\`
 
   
 ## Running the source code
