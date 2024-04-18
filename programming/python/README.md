@@ -46,7 +46,7 @@ In English
 Prepare the environment as
 
 1. Visual Studio Code
-2. Python Environment (>3.7)
+2. Python Environment (>3.6)
 
 Follow the tutorial for installation
 
@@ -54,9 +54,10 @@ Follow the tutorial for installation
 
 ## Create a new environment:
 
-To create the new environment for Python 3.x, in your terminal window or an Anaconda Prompt, run: (example: env name 'py3')
+To create the new environment for Python 3.x, in your terminal window or an Anaconda Prompt, run: 
 
-Example:
+Example: env name 'py36'
+
 ```
 conda create -n py36 python=3.6 anaconda
 ```
@@ -74,7 +75,7 @@ conda update python
 
 ### Upgrade in Anaconda Prompt: 
 
-The following command upgrades Python to another branch---3.6---by installing that version of Python:
+The following command upgrades Python to another branch from 3.4 to 3.6 by installing that version of Python:
 
 ```
 conda install python=3.6
