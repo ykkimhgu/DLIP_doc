@@ -42,7 +42,7 @@ In English
 
 ***
 
-# Virtual Environment 
+# Installation and Virtual Environment 
 Prepare the environment as
 
 1. Visual Studio Code
@@ -87,7 +87,7 @@ Read more about Python Update and Upgrade
 
 
 ***
-## Cheat Sheet for Numpy
+# Cheat Sheet for Numpy
 
 
 {% file src="../../.gitbook/assets/numpy-cheat-sheet.pdf" %}
