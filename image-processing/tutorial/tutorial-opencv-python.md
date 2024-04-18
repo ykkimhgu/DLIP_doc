@@ -267,7 +267,7 @@ plt.show()
 
 # Thresholding
 
-[thresh()](https://docs.opencv.org/3.4.17/d7/d1b/group\_\_imgproc\_\_misc.html#gae8a4a146d1ca78c626a53577199e9c57)
+[threshold()](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57)
 
 `Python:cv.threshold(src, thresh, maxval, type[, dst]) ->retval, dst`
 
@@ -297,7 +297,7 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/38373000/160382112-850fddd8-b98b-44dd-8b93-3e2e55029f6e.png)
 
 ## Adaptive Threshold
-
+[adaptiveThreshold](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
 `cv.adaptiveThreshold( src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst] )`
 
 Example code
@@ -334,6 +334,7 @@ plt.show()
 
 ## Plot Histogram
 
+[calcHist](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d)
 ```python
 hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]]	)
 ```
@@ -376,7 +377,7 @@ plt.show()
 
 # Morphology
 
-Morphology: Erode, Dilate
+Morphology: [Erode](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb), [Dilate](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga4ff0f3318642c4f469d0e11f242f3b6c), [morphologyEx](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
 
 ```python
 # Open Image
@@ -415,7 +416,7 @@ plt.show()
 
 # Color Segmentation (InRange)
 
-[inRange()](https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html#ga48af0ab51e36436c5d04340e036ce981)
+[inRange()](https://docs.opencv.org/4.9.0/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
 
 `dst= cv2.inRange(src, lowerb, upperb, dst=None)`
 
@@ -458,7 +459,7 @@ plt.show()
 # Edge & Line & Circle Detection
 
 ## Edge Detection
-
+[Canny](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
 Example code 1
 
 ```python
@@ -504,6 +505,7 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/38373000/160382352-c2353c3c-6cbd-4cc1-b1aa-98300a0b3024.png)
 
 ## Circle Detection
+[HoughCircles](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
 Example code
 
@@ -549,6 +551,7 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/38373000/160382486-c8b276f3-92c3-46b0-ac20-1144f0427186.png)
 
 ## Line Detection
+[HoughLines](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a)
 
 ```python
 # Load image
