@@ -8,7 +8,7 @@
 
 **For DLIP 2024 course,** 
 
->  CUDA=11.8,  PyTorch 2.0
+>  CUDA=11.8,  PyTorch 2.1
 
 
 
@@ -206,7 +206,7 @@ Activate conda virtual environment. Then, Install specific CUDA version
 conda activate py39
     
 # CUDA 11.8 & CuDNN
-conda install -c anaconda cudatoolkit==10.2.89 cudnn 
+conda install -c anaconda cudatoolkit=11.8 cudnn 
 ```
 
 
