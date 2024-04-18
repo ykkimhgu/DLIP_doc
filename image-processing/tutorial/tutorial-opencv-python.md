@@ -241,6 +241,12 @@ Using webcam in notebook(colab, jupyter) requires more complex setup.
 * [Median filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga564869aa33e58769b4469101aac458f9)
 
 ```python
+cv.blur(	src, ksize[, dst[, anchor[, borderType]]]	)
+cv.GaussianBlur(	src, ksize, sigmaX[, dst[, sigmaY[, borderType]]]	)
+cv.medianBlur(	src, ksize[, dst]	)
+```
+
+```python
 # Load image
 img = cv.imread('Image/Pattern_original.tif')
 
@@ -267,7 +273,7 @@ plt.show()
 
 # Thresholding
 
-[threshold()](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57)
+* [Thresholding](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57)
 
 `Python:cv.threshold(src, thresh, maxval, type[, dst]) ->retval, dst`
 
@@ -297,7 +303,8 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/38373000/160382112-850fddd8-b98b-44dd-8b93-3e2e55029f6e.png)
 
 ## Adaptive Threshold
-[adaptiveThreshold](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
+* [Adaptive Threshold](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
+
 `cv.adaptiveThreshold( src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst] )`
 
 Example code
@@ -334,7 +341,8 @@ plt.show()
 
 ## Plot Histogram
 
-[calcHist](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d)
+* [calcHist](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d)
+
 ```python
 hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]]	)
 ```
@@ -377,7 +385,15 @@ plt.show()
 
 # Morphology
 
-Morphology: [Erode](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb), [Dilate](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga4ff0f3318642c4f469d0e11f242f3b6c), [morphologyEx](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
+* [Erode](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
+* [Dilate](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga4ff0f3318642c4f469d0e11f242f3b6c)
+* [morphologyEx](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)
+
+```python
+cv.erode(	src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]] )
+cv.dilate(	src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]]	)
+cv.morphologyEx(	src, op, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]]	)
+```
 
 ```python
 # Open Image
@@ -460,7 +476,12 @@ plt.show()
 
 ## Edge Detection
 [Canny](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
-Example code 1
+
+```python
+cv.Canny(	image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]]	)
+```
+
+### Example code 1
 
 ```python
 # Load image
@@ -480,7 +501,7 @@ for i in range(2):
 plt.show()
 ```
 
-Example code 2
+### Example code 2
 
 ```python
 # Load image
@@ -507,7 +528,11 @@ plt.show()
 ## Circle Detection
 [HoughCircles](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
-Example code
+```python
+cv.HoughCircles(	image, method, dp, minDist[, circles[, param1[, param2[, minRadius[, maxRadius]]]]]	)
+```
+
+### Example code
 
 ```python
 # Read Image
@@ -554,6 +579,13 @@ plt.show()
 [HoughLines](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a)
 
 ```python
+cv.HoughLines(	image, rho, theta, threshold[, lines[, srn[, stn[, min_theta[, max_theta]]]]]	)
+cv.HoughLinesP(	image, rho, theta, threshold[, lines[, minLineLength[, maxLineGap]]]	)
+```
+
+### Example code
+
+```python
 # Load image
 img = cv.imread('Image/sudoku.jpg',0)  # Gray scale image
 
@@ -584,8 +616,6 @@ if linesP is not None:
   for i in range(0, len(linesP)):
     l = linesP[i][0]
     cv.line(cdstP, (l[0], l[1]), (l[2], l[3]), (0,0,255), 3, cv.LINE_AA)
-
-
 
 # Plot Results
 #cv.imshow("Source", img)
