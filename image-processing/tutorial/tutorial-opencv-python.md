@@ -600,12 +600,6 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382536-53ac2788-34e5-4f1b-9dbf-12736cd13487.png)
 
-### Solution Code
-
-Solution codes for this tutorials can be downloaded
-
-* [Source code (\*.ipynb) for COLAB](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_2022.ipynb)
-* [Source code (\*.ipynb) for VSCode](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_vscode\_2022.ipynb)
 
 ***
 
