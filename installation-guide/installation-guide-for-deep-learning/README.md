@@ -137,7 +137,12 @@ Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installatio
 **Without GPU(Only CPU)**
 
 ```
-# CPU Only
+# CPU Only - PyTorch 2.1
+conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 cpuonly -c pytorch
+pip install opencv-python torchsummary
+
+
+# CPU Only - PyTorch 1.9
 conda install -c anaconda seaborn jupyter
 conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cpuonly -c pytorch
 pip install opencv-python torchsummary
