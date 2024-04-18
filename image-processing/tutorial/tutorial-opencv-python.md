@@ -204,7 +204,8 @@ Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
 img = cv.imread('Image/HGU_logo.jpg')
 
 # Show Image using colab imshow
-cv.imshow('source',img) 
+cv.imshow('source',img)
+cv.waitKey(0)
 ```
 
 ### Display Image: (for Colab only) cv2_imshow()
