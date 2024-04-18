@@ -40,9 +40,11 @@ The downloaded images should be saved in
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
    
 The python opencv tutorial is operated under the project folder
-   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV\`
+   * Python File Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV\`
 
-  
+The visual studio code open project at DLIP folder
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\`
+    
 ## Running the source code
 This tutorial code is based on Google Colab Notebook.
 
@@ -75,7 +77,7 @@ When running the code, you can select from two options&#x20;
 import cv2 as cv
 
 # Read image
-HGU_logo = '../../Image/HGU_logo.jpg'
+HGU_logo = 'Image/HGU_logo.jpg'
 src = cv.imread(HGU_logo)
 src_gray = cv.imread(HGU_logo, cv.IMREAD_GRAYSCALE)
 
@@ -160,7 +162,7 @@ uploaded=files.upload()
 
 ```python
 # Load image
-img = cv.imread('HGU_logo.jpg')
+img = cv.imread('Image/HGU_logo.jpg')
 ```
 
 
@@ -176,7 +178,7 @@ This method is recommended for showing images. This works for both *.py and *.ip
 
 ```python
 # Load image
-img = cv.imread('HGU_logo.jpg')
+img = cv.imread('Image/HGU_logo.jpg')
 
 
 # Show Image using matplotlib
@@ -199,7 +201,7 @@ Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
 
 ```python
 # Load image
-img = cv.imread('HGU_logo.jpg')
+img = cv.imread('Image/HGU_logo.jpg')
 
 # Show Image using colab imshow
 cv.imshow('source',img) 
@@ -219,7 +221,7 @@ Import
 from google.colab.patches import cv2_imshow as cv_imshow
 
 # Load image
-img = cv.imread('HGU_logo.jpg')
+img = cv.imread('Image/HGU_logo.jpg')
 
 # Show Image using colab imshow
 cv_imshow(img) 
@@ -239,7 +241,7 @@ Using webcam in notebook(colab, jupyter) requires more complex setup.
 
 ```python
 # Load image
-img = cv.imread('Pattern_original.tif')
+img = cv.imread('Image/Pattern_original.tif')
 
 # Spatial Filter
 blur = cv.blur(img,(5,5))
@@ -272,7 +274,7 @@ plt.show()
 
 ```python
 # Open Image
-img = cv.imread('coins.png',0)
+img = cv.imread('Image/coins.png',0)
 
 thVal=127
 
@@ -301,7 +303,7 @@ Example code
 
 ```python
 # Read image
-img = cv.imread('sudoku.jpg',0)
+img = cv.imread('Image/sudoku.jpg',0)
 
 # Preprocessing
 img = cv.medianBlur(img,5)
@@ -339,7 +341,7 @@ Example Code
 
 ```python
 # Open Image
-img = cv.imread('coins.png',0)
+img = cv.imread('Image/coins.png',0)
 
 histSize = 256
 histRange = (0, 256) # the upper boundary is exclusive
@@ -377,7 +379,7 @@ Morphology: Erode, Dilate
 
 ```python
 # Open Image
-src = cv.imread('coins.png',0)
+src = cv.imread('Image/coins.png',0)
 
 
 # Threshold
@@ -420,7 +422,7 @@ Example code
 
 ```python
 # Open Image in RGB
-img = cv.imread('color_ball.jpg')
+img = cv.imread('Image/color_ball.jpg')
 
 # Convert BRG to HSV 
 hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
@@ -460,7 +462,7 @@ Example code 1
 
 ```python
 # Load image
-img = cv.imread('coins.png',cv.COLOR_BGR2GRAY)
+img = cv.imread('Image/coins.png',cv.COLOR_BGR2GRAY)
 
 # Apply Canndy Edge
 edges = cv.Canny(img,50,200)
@@ -480,7 +482,7 @@ Example code 2
 
 ```python
 # Load image
-img = cv.imread('coins.png',cv.COLOR_BGR2GRAY)
+img = cv.imread('Image/coins.png',cv.COLOR_BGR2GRAY)
 # Apply Thresholding then Canndy Edge
 thVal=127
 ret,thresh1 = cv.threshold(img,thVal,255,cv.THRESH_BINARY)
@@ -506,7 +508,7 @@ Example code
 
 ```python
 # Read Image
-src = cv.imread('coins.png')
+src = cv.imread('Image/coins.png')
 
 # Convert it to grayscale:
 gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
@@ -549,7 +551,7 @@ plt.show()
 
 ```python
 # Load image
-img = cv.imread('sudoku.jpg',0)  # Gray scale image
+img = cv.imread('Image/sudoku.jpg',0)  # Gray scale image
 
 # Canny Edge Detection
 dst = cv.Canny(img, 50, 200, None, 3)
