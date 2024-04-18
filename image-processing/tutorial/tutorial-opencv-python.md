@@ -236,9 +236,9 @@ Using webcam in notebook(colab, jupyter) requires more complex setup.
 
 # Spatial Filter
 
-* Box filter
-* Gaussian filter
-* Median filter
+* [Box filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga8c45db9afe636703801b0b2e440fce37)
+* [Gaussian filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
+* [Median filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga564869aa33e58769b4469101aac458f9)
 
 ```python
 # Load image
