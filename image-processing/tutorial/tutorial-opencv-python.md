@@ -1,9 +1,9 @@
 # Tutorial: OpenCV (Python) Basics
 
-## Pre-requisite: Basics of Python & Numpy&#x20;
+# Preparation
+## Basics of Python & Numpy&#x20;
 
 Skip this if you already know about Python programming
-
 
 
 ### Python Basics
@@ -16,47 +16,56 @@ Skip this if you already know about Python programming
 
 
 
-***
+## Configuration
+Prepare the environment as 
+1. Visual Studio Code
+2. Python Environment  (>3.7)
+3. OpenCV Installation
 
-## Environment Configuration
-
-You must have followed the installation gude for VS code&#x20;
-
+Follow the tutorial for installation
 {% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
 
+
+
+
+## Source code and images&#x20;
+### Download
+Download the tutorial source code and image files.
+
+* [Tutorial Code in *.ipyn](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
+* [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
+
+### Project Folder
+The downloaded images should be saved in 
+   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+   
+The python opencv tutorial is operated under the project folder
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV`
+
+  
+## Running the source code
 This tutorial code is based on Google Colab Notebook.
 
-You can use two options&#x20;
+When running the code, you can select from two options&#x20;
 
 1. (Recommended) Download the notebook file (\*.ipyn) and run in VS.Code
 2. Run directly on Google Colab
 
 
-
-### Source code and images&#x20;
-
-Download the tutorial source code and image files.
-
-* [Exercise notebook code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
-* [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
-
 ***
 
 # Basic Image Processing
-## Example 1. Read / Write / Display
-You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
+## (*.py) Read / Write / Display Image and Video
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
-
-0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
 
 1. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
    
 2. Create a new python source file in Visual Studio Code
-   * File Name: `DLIP_Tutorial_OpenCV_Image.py` or `DLIP_Tutorial_OpenCV_Video.py`
-   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\Python`
+   * File Name: `DLIP_Tutorial_OpenCV_Image.py` and   `DLIP_Tutorial_OpenCV_Video.py`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV`
   
 3. Compile and run. 
 
@@ -116,6 +125,9 @@ while True:
 {% endtab %}
 {% endtabs %}
 
+***
+
+## (*.ipyn) Read / Write / Display Image and Video
 ### Import OpenCV Library
 
 ```python
@@ -126,26 +138,28 @@ from matplotlib import pyplot as plt
 
 ***
 
-### Upload Image Files in Colab
+### (for COLAB only) Upload Image Files in Colab server
+Skip this if you are using Visual Studio Code 
 
-**Option 1: Upload Image Files in Colab**
+**Option 1: Upload Image Files in Colab server**
 
 Read how to load image file in Colab
+{% embed url="https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/colab#loading-image-file-in-colab" %}
 
-https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/colab#loading-image-file-in-colab
 
-**Option 2: Upload image file from local drive**
+**Option 2: Upload image file to Colab server from local drive**
 
 ```
 from google.colab import files
 uploaded=files.upload()
 ```
 
-### Load & Show Image File
+## Load & Show Image File
 
-#### Option 1 (recommend): Using matplot `plt.imshow()`
+### Option 1 (recommend): Using matplot `plt.imshow()`
 
-This method is recommended for showing images. This tutorial will use matplotlib functions.
+This method is recommended for showing images. This works for both *.py and *.ipyn files. 
+This tutorial will use matplotlib functions.
 
 > matplotlib에서 rgb 채널 순서가 다르다
 
@@ -168,11 +182,12 @@ plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 
-#### Option 2 (for .py only): Using OpenCV imshow()
-
+### Option 2 (for .py only): Using OpenCV imshow()
+This is only for *.py file. 
 Python files running on local drive supports OpenCV `cv.imshow()`
 
-BUT, Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
+Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
+> This does not work on *.ipyn file
 
 ```python
 # Load image
@@ -182,7 +197,7 @@ img = cv.imread('handonglogo.jpg')
 cv.imshow('source',img) 
 ```
 
-#### Option 3 (colab)
+### Option 3 (for Colab only)
 
 CoLAB provides a similar function called `cv2_imshow()`.\
 But this is NOT recommended method. Import
