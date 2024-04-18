@@ -2,9 +2,15 @@
 
 ## Bitwise Operation
 
+`bitwise_and(), bitwise_not()` and more
 
 
-### [◆ ](https://docs.opencv.org/4.x/d2/de8/group\_\_core\_\_array.html#ga60b4d04b251ba5eb1392c34425497e14)bitwise\_and()
+
+Computes bitwise conjunction of the two arrays (src1,  src2) and calculates the **per-element bit-wise** conjunction of two arrays or an array and a scalar.
+
+
+
+### bitwise\_and()
 
 | void cv::bitwise\_and | ( | [InputArray](https://docs.opencv.org/4.x/dc/d84/group\_\_core\_\_basic.html#ga353a9de602fe76c709e12074a6f362ba)   | _src1_,                                                                                                                      |
 | --------------------- | - | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -27,13 +33,17 @@ This means   dst1(I)= src1(I) & src1(I), if mask(I) !=0
 
 
 
-src\[10]\[20] = 1111 0001     / / 8-bit
+Assume   src\[10]\[20] = 1111 0001     / / 8-bit data per  pixel
+
+
 
 Since  binary logic AND is   **X & X=X**
 
 &#x20;    1111 0001  & 1111 0001 = 1111 0001
 
-&#x20;    dst=src & src  = src
+The output of bitwise operation becomes
+
+&#x20;     dst=src & src  = src
 
 
 
@@ -45,13 +55,21 @@ Since  binary logic AND is   **X & X=X**
 
 dst1 and dst2 can be obtained using bitwise operation as
 
+For both  1-CH and 3-CH images
+
 ```cpp
 bitwise_and(src1, src1, dst1, mask1);
 bitwise_and(src2, src2, dst2, mask2);
 dst3=dst1+dst2;
 ```
 
+Also, you can apply as
 
+```cpp
+dst1=src1 & mask1;         // This is NOT the same as  && operation 
+dst2=src2 & mask2;
+dst3=dst1 + dst2;
+```
 
 
 
