@@ -1,32 +1,28 @@
-# Tutorial
-
-Recommended tutorial lists for Python and Numpy
-
-{% embed url="https://ykkim.gitbook.io/dlip/programming/python" %}
+# Tutorial: MLP XOR with Python
 
 
-
-# Installation
-
-### Using Colab
-
-For the class tutorial,  we will use google colab.
-
-### Using VS Code
-
-For installing Python in Visual Studio Code, [follow Installation Steps 1~4](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
-
-After installation of Python in Visual Studio Code, [follow how to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
-
-
-
-# Exercise
-
-### 1.  MLP XOR problem
+# Exercise: MLP XOR problem
 
 [Design an MLP for XOR problem using numpy(Student Exercise)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021_Student.ipynb)
 
 - [SOLUTION - Numpy MLP XOR problem](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_XOR_MLP_numpy_2021.ipynb)
+
+
+
+# Review on Python and Numpy
+Skip this if you already know about Python programming
+
+Recommended tutorial lists for Python and Numpy
+
+{% embed url="https://ykkim.gitbook.io/dlip/programming/python#tutorial" %}
+
+
+
+# Installation
+Read here to install Python and Numpy in Visual Studio Code
+
+{% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
+
 
 
 
