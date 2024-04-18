@@ -108,8 +108,10 @@ print(a*a)
 # Load image
 img = cv.imread('testImage.jpg')
 
-# Show Image 
-cv.imshow('source',img) 
+# Display Image
+cv.namedWindow('source', cv.WINDOW_AUTOSIZE) 
+cv.imshow('source',img)
+cv.waitKey(0)
 ```
 
 
@@ -119,21 +121,34 @@ cv.imshow('source',img)
 Run python code and submit the final output image
 
 ```python
-import cv2
-import numpy as np
+import cv2 as cv
 
-cap = cv2.VideoCapture(0)
+# Open the video camera no.0
+cap = cv.VideoCapture(0)
 
-while(1):
-    _, frame = cap.read()
+# If not success, exit the program
+if not cap.isOpened():
+    print('Cannot open camera')
 
-    cv2.imshow('frame',frame)
-    
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
+cv.namedWindow('MyVideo', cv.WINDOW_AUTOSIZE)
+
+while True:
+    # Read a new frame from video
+    ret, frame = cap.read()
+
+    # If not success, break loop
+    if not ret:
+        print('Cannot read frame')
         break
 
-cv2.destroyAllWindows()
+    cv.imshow('MyVideo', frame)
+
+    if cv.waitKey(30) & 0xFF == 27:
+        print('Press ESC to stop')
+        break
+
+cv.destroyAllWindows()
 cap.release()
+
 ```
 
