@@ -50,7 +50,7 @@ This tutorial code is based on Google Colab Notebook.
 
 When running the code, you can select from two options&#x20;
 
-1. (Recommended) Download the notebook file (\*.ipyn) and run in VS.Code
+1. **(Recommended)** Download the notebook file (\*.ipynb) and run in VS.Code
 2. Run directly on Google Colab
 
 
