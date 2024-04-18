@@ -35,6 +35,11 @@ The installation is divided by two parts
 2. Installing Graphic Card and CUDA
 3. Installing DL Framework (PyTorch, etc)
 
+
+***
+
+
+
 ## Part 1. Installing Python Environment 
 
 ### Step 1. Install Anaconda
@@ -97,6 +102,8 @@ Also, read about
 
 ***
 
+
+
 ## Part 2. Installing Graphic Card and CUDA
 ### Step 5. Install GPU Driver, CUDA, cuDNN
 
@@ -109,6 +116,9 @@ Skip this if you do not have GPU card.
 * **cuDNN** — DL primitives library based on CUDA. Stands for _CUDA Deep Neural Network._
 
 Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
+
+***
+
 
 
 ## Part 3. Installing DL Framework
