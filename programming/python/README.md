@@ -6,69 +6,73 @@
 (Updated 2022.4) Use Python 3.9
 {% endhint %}
 
-## Tutorial
+# Tutorial
 
-### 1. Python Tutorial
+## 1. Python Tutorial
 
-#### Online Tutorials
 
-{% embed url="https://www.w3schools.com/python/default.asp" %}
-
-{% embed url="https://dojang.io/course/view.php?id=7" %}
-
-#### In-Class Tutorials (using google colab)
+### In-Class Tutorial (using google colab)
 
 In-Class Python Tutorial: [Learning Python in 60 minutes\_DLIP](https://colab.research.google.com/drive/1W0dVnmMUF\_Yj-mb7B0tq5kl4x5yWHtff)
 
 {% embed url="https://colab.research.google.com/drive/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff" %}
 
-### 2. Numpy Tutorial
 
-#### Online Tutorials
+### Free Online Tutorials
+In English
+{% embed url="https://www.w3schools.com/python/default.asp" %}
 
-{% embed url="https://www.w3schools.com/python/numpy/default.asp" %}
+In Korean
+{% embed url="https://dojang.io/course/view.php?id=7" %}
 
-#### In-Class Tutorials (using google colab)
+
+
+## 2. Numpy Tutorial
+
+### In-Class Tutorials (using google colab)
 
 NumPy Tutorial: [Learning Numpy in 60 minutes\_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonNumpy/Tutorial\_Numpy\_2022.ipynb)
 
 {% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb" %}
 
+### Free Online Tutorials
+In English
+{% embed url="https://www.w3schools.com/python/numpy/default.asp" %}
+
+
 ***
 
-## Installation
+# Virtual Environment 
+Prepare the environment as
 
-### 1. Python Installation
+1. Visual Studio Code
+2. Python Environment (>3.7)
 
-#### Using Colab
+Follow the tutorial for installation
 
-For the class tutorial, we will use google colab.
+{% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
 
-#### Using VS Code
+## Create a new environment:
 
-For installing Python in Visual Studio Code, [follow Installation Steps 1\~4](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+To create the new environment for Python 3.x, in your terminal window or an Anaconda Prompt, run: (example: env name 'py3')
 
-After installation of Python in Visual Studio Code, [follow how to program Python in VS Code](https://ykkim.gitbook.io/dlip/installation-guide/ide/vscode/python-vscode)
-
-#### Create the new environment:
-
-To create the new environment for Python 3.6, in your terminal window or an Anaconda Prompt, run: (example: env name 'py3')
-
+Example:
 ```
 conda create -n py36 python=3.6 anaconda
 ```
 
-#### Update/upgrade Python
+## Update/upgrade Python
+You can update Python in the same branch or upgrade to a higher branch.
 
-{% embed url="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#id4" %}
-
-Use the terminal or an Anaconda Prompt for the following steps.
-
-If you are in an environment with Python version 3.4.2, the following command updates Python to the latest version in the 3.4 branch:
+### Update in Anaconda Prompt: 
+If you are in an environment with Python version 3.4.2, the following command updates Python to the latest version in the 3.4.x branch:
 
 ```
 conda update python
 ```
+
+
+### Upgrade in Anaconda Prompt: 
 
 The following command upgrades Python to another branch---3.6---by installing that version of Python:
 
@@ -76,17 +80,15 @@ The following command upgrades Python to another branch---3.6---by installing th
 conda install python=3.6
 ```
 
-### 2. Numpy Installation
 
-[Read here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
+Read more about Python Update and Upgrade
+{% embed url="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#id4" %}
 
-`conda install -c anaconda numpy`
+
 
 ***
+## Cheat Sheet for Numpy
 
-### Cheat Sheet
-
-#### 1. Numpy cheat sheet
 
 {% file src="../../.gitbook/assets/numpy-cheat-sheet.pdf" %}
 Numpy Cheat Sheet
