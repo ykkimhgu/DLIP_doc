@@ -36,7 +36,7 @@ This means   dst1(I)= src1(I) & src1(I), if mask(I) !=0
 Assume   src\[10]\[20] = 1111 0001     / / 8-bit data per  pixel
 
 
-
+### Case 1
 Since  binary logic AND is   **X & X=X**
 
 &#x20;    1111 0001  & 1111 0001 = 1111 0001
@@ -44,6 +44,23 @@ Since  binary logic AND is   **X & X=X**
 The output of bitwise operation becomes
 
 &#x20;     dst=src & src  = src
+
+
+### Case 2
+Since  binary logic AND is   **X & 1=X**
+
+&#x20;    1111 0001  & 1111 1111 = 1111 0001
+
+The output of bitwise operation becomes
+
+&#x20;     dst=src & 1  = src
+
+### Case 3
+Since  binary logic AND is   **X & 0=0**
+
+&#x20;    1111 0001  & 0000 0000 = 0000 0000
+
+The output of bitwise operation becomes all black.
 
 
 
