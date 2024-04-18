@@ -35,7 +35,7 @@ Download the tutorial source code and image files.
 * [Tutorial Code in *.ipyn](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonOpenCV/Tutorial\_Opencv\_Python\_Exercise\_2022.ipynb)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
 
-### Project Folder
+## Project and Data Folder
 The downloaded images should be saved in 
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
    
