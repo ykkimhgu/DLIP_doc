@@ -8,17 +8,17 @@
 
 # Tutorial
 
-## 1. Python Tutorial
+##  Python Tutorial
 
 
-### In-Class Tutorial (using google colab)
+### 1. In-Class Tutorial (using google colab)
 
 In-Class Python Tutorial: [Learning Python in 60 minutes\_DLIP](https://colab.research.google.com/drive/1W0dVnmMUF\_Yj-mb7B0tq5kl4x5yWHtff)
 
 {% embed url="https://colab.research.google.com/drive/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff" %}
 
 
-### Free Online Tutorials
+### 2.Free Online Tutorials
 In English
 {% embed url="https://www.w3schools.com/python/default.asp" %}
 
@@ -27,15 +27,15 @@ In Korean
 
 
 
-## 2. Numpy Tutorial
+## Numpy Tutorial
 
-### In-Class Tutorials (using google colab)
+### 1. In-Class Tutorials (using google colab)
 
 NumPy Tutorial: [Learning Numpy in 60 minutes\_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_PythonNumpy/Tutorial\_Numpy\_2022.ipynb)
 
 {% embed url="https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb" %}
 
-### Free Online Tutorials
+### 2. Free Online Tutorials
 In English
 {% embed url="https://www.w3schools.com/python/numpy/default.asp" %}
 
