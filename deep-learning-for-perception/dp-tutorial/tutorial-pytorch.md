@@ -14,13 +14,14 @@ Follow the installatin instruction here
 ## Tutorial Video 
 
 [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
-* You need to know 'What is Tensor in Pytorch'
+> You need to know 'What is Tensor in Pytorch'
+
 
 **Follow Quick-Start Tutorial:**
 
-[Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)  
+* [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)  
 
-[Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
+* [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
 
 
 
