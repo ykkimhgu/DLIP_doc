@@ -36,7 +36,7 @@ The installation is divided by two parts
 3. Installing DL Framework (PyTorch, etc)
 
 ## Summary
-### DLIUP 2024-1
+### DLIP 2024-1
 
 ```
 # Install Anaconda from website
@@ -53,6 +53,8 @@ conda activate py39
 # Install Numpy, OpenCV, Matplot, Jupyter
 conda install -c anaconda seaborn jupyter
 pip install opencv-python
+
+# Check GPU model
 
 # Install NVIDIA Driver from Website
 
