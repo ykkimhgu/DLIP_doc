@@ -250,9 +250,11 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 * Then, Install again 
 
 ## Q3. Conda Error:  ClobberError: This has incompatible packages due to a shared path,   CondaVerification Error
-![image-20240419104030008](C:\Users\ykkim\AppData\Roaming\Typora\typora-user-images\image-20240419104030008.png)
 
-![image-20240419104653305](C:\Users\ykkim\AppData\Roaming\Typora\typora-user-images\image-20240419104653305.png)
+
+![image](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/ac5b1213-384b-4a7e-a87d-ae2aba3c54db)
+
+![image](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/6e1f6aea-3859-420c-9dc7-a8ceb521734e)
 
 ### Go to Solution of Q2
 If this does not work, then you need to Re-Install the Conda Environment. Then, Update CONDA then create Environment again. 
