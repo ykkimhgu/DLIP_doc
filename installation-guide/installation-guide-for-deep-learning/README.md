@@ -38,7 +38,7 @@ The installation is divided by two parts
 ## Summary
 ### DLIP 2024-1
 
-```
+```cmd
 # Install Anaconda from website
 
 # Update CONDA in Base
