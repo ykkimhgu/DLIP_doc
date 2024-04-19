@@ -35,6 +35,40 @@ The installation is divided by two parts
 2. Installing Graphic Card and CUDA
 3. Installing DL Framework (PyTorch, etc)
 
+## Summary
+### DLIUP 2024-1
+
+```
+# Install Anaconda from website
+
+# Update CONDA in Base
+conda update -n base -c defaults conda
+
+# Create myEnv=py39
+conda create -n py39 python=3.9.12
+
+# Activate myEnv
+conda activate py39
+
+# Install Numpy, OpenCV, Matplot, Jupyter
+conda install -c anaconda seaborn jupyter
+pip install opencv-python
+
+# Install NVIDIA Driver from Website
+
+# Install CUDA and cuNN
+conda install -c anaconda cudatoolkit=11.8 cudnn 
+
+# Install PyTorch
+conda install -c anaconda cudatoolkit=11.8 cudnn seaborn jupyter
+conda install pytorch=2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install torchsummary
+
+# Check Installed Packaged in myENV
+conda list all
+
+```
+
 
 ***
 
