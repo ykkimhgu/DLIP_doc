@@ -7,7 +7,7 @@ description: Installation Guide for Deep Learning 2022
 (updated 2024.4)
 
 
-This installation guide is for programming a deep learning application using Pytorch
+This installation guide is for programming deep-learning application using Pytorch
 
 Make sure you install the correct software version as instructed.
 
@@ -130,9 +130,7 @@ Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
 * **Keras** — DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
 * **PyTorch** — Dynamic DL library with GPU acceleration.
 
-#### Step 6. Install Pytorch
-
-Read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
+## Step 6. Install Pytorch
 
 **Without GPU(Only CPU)**
 
@@ -192,7 +190,7 @@ If your result is,
 * `cpu` : Go to [Troubleshooting](./#troubleshooting)
 
 
-** Check Libraries Versions in Conda **
+**Check Libraries Versions in Conda**
 ```c
 # check all lists
 conda list
@@ -200,8 +198,9 @@ conda list
 # check specific program version e.g. pyTorch
 conda list | findstr "torch"
 ```
+You can read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
 
-#### Other Option:  Install Tensorflow and Keras
+## Other Option:  Install Tensorflow and Keras
 
 * Run 'Anaconda Prompt(admin)'
 * Activate virtual environment
