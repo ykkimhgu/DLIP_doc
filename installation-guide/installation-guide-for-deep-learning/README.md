@@ -194,7 +194,7 @@ If your result is,
 * `cpu` : Go to [Troubleshooting](./#troubleshooting)
 
 
-**Check Libraries Versions in Conda**
+**Check Package Versions in Conda**
 ```c
 # check all lists
 conda list
