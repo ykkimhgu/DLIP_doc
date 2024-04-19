@@ -239,7 +239,7 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 <img width="746" alt="image" src="https://github.com/ykkimhgu/DLIP_doc/assets/38373000/019012be-f2d1-4ba6-8819-31b01fa99f2d">
 
 ### Solution 
-* Update Conda:  `conda update conda`
+* Update Conda:  `conda update -n base -c defaults conda`
 * Clean the conda cache  `conda clean --all`
 
 
