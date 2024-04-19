@@ -132,6 +132,9 @@ Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
 
 ## Step 6. Install Pytorch
 
+See here for install instructions of Previsou PyTorch Versions 
+[PyTorch Previos-Version](https://pytorch.org/get-started/previous-versions/)
+
 **Without GPU(Only CPU)**
 
 ```
