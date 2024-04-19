@@ -242,12 +242,36 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 <img width="746" alt="image" src="https://github.com/ykkimhgu/DLIP_doc/assets/38373000/019012be-f2d1-4ba6-8819-31b01fa99f2d">
 
 ### Solution 
-* Update Conda:  `conda update -n base -c defaults conda`
-* Clean the conda cache  `conda clean --all`
+* Update Conda in Base:  `conda update -n base -c defaults conda`
+* Clean the conda cache in Base  `conda clean --all`
+* Activate Env:  `conda activate py39`
+* Update Packages:  `conda update --all`
+* Clean conda cache:  `conda clean --all`
+* Then, Install again 
+
+## Q3. Conda Error:  ClobberError: This has incompatible packages due to a shared path,   CondaVerification Error
+![image-20240419104030008](C:\Users\ykkim\AppData\Roaming\Typora\typora-user-images\image-20240419104030008.png)
+
+![image-20240419104653305](C:\Users\ykkim\AppData\Roaming\Typora\typora-user-images\image-20240419104653305.png)
+
+### Go to Solution of Q2
+If this does not work, then you need to Re-Install the Conda Environment. Then, Update CONDA then create Environment again. 
+
+
+```c
+# $myenv = py39
+
+# To keep the environment but remove all packages
+conda remove -n myenv --all --keep-env
+
+# To remove all enviromnent
+conda remove --all
+```
 
 
 
-## Q3. Build Error in VS Code ( Numpy C-extension failed)
+
+## Q4. Build Error in VS Code ( Numpy C-extension failed)
 
 ![image](https://user-images.githubusercontent.com/23421059/169334729-b2081cdf-d51d-414f-a550-8c299fa3c56c.png)
 
