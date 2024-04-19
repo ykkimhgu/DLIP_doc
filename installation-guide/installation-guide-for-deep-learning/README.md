@@ -191,6 +191,16 @@ If your result is,
 * `cuda` : GOOD, installed normally. You do not need to follow the steps below.
 * `cpu` : Go to [Troubleshooting](./#troubleshooting)
 
+
+** Check Libraries Versions in Conda **
+```c
+# check all lists
+conda list
+
+# check specific program version e.g. pyTorch
+conda list | findstr "torch"
+```
+
 #### Other Option:  Install Tensorflow and Keras
 
 * Run 'Anaconda Prompt(admin)'
@@ -225,7 +235,16 @@ conda install keras
 
 If the NVIDIA graphics driver is not installed or if it is an older version, the GPU may not be detected. Please refer to the [How to install Driver, CUDA and cuDNN](../cuda-installation/#9f39) to install Graphic Driver.
 
-## Q2. Build Error in VS Code ( Numpy C-extension failed)
+## Q2. Conda error:  Downloaded bytes did not match Content-Length
+<img width="746" alt="image" src="https://github.com/ykkimhgu/DLIP_doc/assets/38373000/019012be-f2d1-4ba6-8819-31b01fa99f2d">
+
+### Solution 
+* Update Conda:  `conda update conda`
+* Clean the conda cache  `conda clean --all`
+
+
+
+## Q3. Build Error in VS Code ( Numpy C-extension failed)
 
 ![image](https://user-images.githubusercontent.com/23421059/169334729-b2081cdf-d51d-414f-a550-8c299fa3c56c.png)
 
