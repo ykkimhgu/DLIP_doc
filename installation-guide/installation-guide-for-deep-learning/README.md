@@ -180,6 +180,7 @@ Check the pytorch and torchvision are cuda versions when installing
 conda activate py39
 python
 import torch
+torch.__version__
 print("cuda" if torch.cuda.is_available() else "cpu")
 ```
 
