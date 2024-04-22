@@ -14,7 +14,7 @@ The surface of the chamber and the metal sheet are both specular reflective that
 
 * Use Python OpenCV (\*.py)
 * Don't use Chat-GPT or any other online materials/search
-* Measure the metal sheet tension level from Level 1 to Level 4.
+* Measure the metal sheet tension level from Level 1 to Level 3.
   * Use the minimum y-axis position of the metal sheet curvature
   * Level 1: <250px from the bottom of the image
   * Level 2: 120\~250 px from the bottom of the image
