@@ -46,7 +46,7 @@ If the submitted program does not run, it will not be graded. 　
 
 
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Comment on Source Code&#x20;
 

@@ -31,6 +31,7 @@
   * [LAB: Facial Temperature Measurement with IR images](image-processing/lab/lab-facial-temperature-measurement-with-ir-images.md)
   * [LAB: Straight Lane Detection and Departure Warning](image-processing/lab/lab-straight-lane-detection-and-departure-warning.md)
   * [LAB: Dimension Measurement with 2D camera](image-processing/lab/lab-dimension-measurement-with-2d-camera.md)
+  * [LAB: Tension Detection of Rolling Metal Sheet](image-processing/lab/lab-tension-detection-of-rolling-metal-sheet.md)
 
 ## Deep Learning for Perception
 

@@ -4,7 +4,7 @@
 
 OpenCV Download link: [https://opencv.org/releases/](https://opencv.org/releases/)
 
-![](<../../../.gitbook/assets/image (1) (2).png>)
+![](<../../../.gitbook/assets/image (1) (2) (1).png>)
 
 Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 

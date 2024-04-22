@@ -86,11 +86,11 @@ Common tactics for both bias and variance:
 
 * Low Variance and High Bias
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 * High Variance, and Low bias --> add more training data
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 * High Variance and High Bias
 

@@ -72,7 +72,7 @@ You will need to install the full Mingw-w64 toolchain to get the `gdb` debugger.
 
 Then, select `mingw-w64-x86_64-gbd`
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Add the MinGW compiler to your path
 
@@ -84,7 +84,7 @@ Add the path to your Mingw-w64 `bin` folder to the Windows `PATH` environment va
 4. Select **New** and add the Mingw-w64 destination folder path: `C:\msys64\mingw64\bin`.
 5. Select **OK** to save the updated PATH. You will need to reopen any console windows for the new PATH location to be available.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
