@@ -89,7 +89,9 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 
 *   Open Anaconda Prompt(admin mode)
 
-    <img src="https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png" alt="image" data-size="original">
+
+
+    <figure><img src="https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png" alt=""><figcaption></figcaption></figure>
 * First, update conda
 
 ```
@@ -268,7 +270,7 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 
 ### Q2. Conda error: Downloaded bytes did not match Content-Length
 
-![image](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/019012be-f2d1-4ba6-8819-31b01fa99f2d)
+<figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/38373000/019012be-f2d1-4ba6-8819-31b01fa99f2d" alt=""><figcaption></figcaption></figure>
 
 #### Solution
 
