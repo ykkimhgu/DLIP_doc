@@ -161,7 +161,7 @@ Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
 
 ### Step 6. Install Pytorch
 
-See here for install instructions of Previsou PyTorch Versions [PyTorch Previos-Version](https://pytorch.org/get-started/previous-versions/)
+See here for install instructions of Previous PyTorch Versions [PyTorch Previous-Version](https://pytorch.org/get-started/previous-versions/)
 
 **Without GPU(Only CPU)**
 
@@ -177,7 +177,7 @@ conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cpuonly -c py
 pip install opencv-python torchsummary
 ```
 
-**With GPU** Change the pyTorch version depending on your CUDA version
+**With GPU** Change the PyTorch version depending on your CUDA version
 
 For DLIP 2024
 
