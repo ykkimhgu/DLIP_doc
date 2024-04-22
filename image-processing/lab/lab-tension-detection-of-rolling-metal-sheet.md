@@ -106,7 +106,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0.png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Your algorithm will be validated with other similar test object
 
