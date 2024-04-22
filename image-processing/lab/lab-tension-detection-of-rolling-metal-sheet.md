@@ -8,11 +8,7 @@ The tension in the rolling process can be derived by measuring the curvature lev
 
 The surface of the chamber and the metal sheet are both specular reflective that can create virtual objects in the captured images. You need to design a series of machine vision algorithms to clearly detect the edge of the metal sheet and derive the curvature and tension level.
 
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0)
-
-
-
-
+![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0)
 
 ### Problem Conditions
 
@@ -32,12 +28,14 @@ The surface of the chamber and the metal sheet are both specular reflective that
 
     * Challenging images: You will get up to 15% higher points
 
-    ### Dataset
+    ####
 
-    Download the test images of
+### Dataset
 
-    * Simple dataset
-    * Challenging dataset
+Download the test images of
+
+* \[Simple dataset]
+* \[Challenging dataset]
 
 ## II. Procedure
 
@@ -64,8 +62,6 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 #### Apply Pre-processing such as filtering
 
-
-
 #### Find ROI (region of interest) of the metal sheet from the image
 
 * HINT: Analyze the image area where the metal sheet is located
@@ -87,15 +83,11 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-
-
 #### Measure the curvature's vertex (minimum point of Y-axis \[px] ) as the tension SCORE .
 
 * Measure the height from the bottom of the image.
 
 #### Detect the tension level from Lv. 1 to Lv. 3
-
-
 
 #### Display the Final Output
 
@@ -103,15 +95,9 @@ You can follow the basic procedures as follows. You may add more processes if ne
 * Score: y-position \[px] of the curvature vertex from the bottom of the image
 * Curvature edge overlay
 
-
-
 <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Your algorithm will be validated with other similar test object
-
-
-
-
 
 ## III. Report
 
