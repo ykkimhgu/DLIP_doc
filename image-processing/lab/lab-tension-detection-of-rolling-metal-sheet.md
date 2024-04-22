@@ -8,7 +8,7 @@ The tension in the rolling process can be derived by measuring the curvature lev
 
 The surface of the chamber and the metal sheet are both specular reflective that can create virtual objects in the captured images. You need to design a series of machine vision algorithms to clearly detect the edge of the metal sheet and derive the curvature and tension level.
 
-![image-20240422093025762](https://c/Users/ykkim/AppData/Roaming/Typora/typora-user-images/image-20240422093025762.png)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/908a71b4-b36e-4230-8c25-b23f0ee99f08)
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
