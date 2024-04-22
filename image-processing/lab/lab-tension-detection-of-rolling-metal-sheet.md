@@ -10,7 +10,7 @@ The surface of the chamber and the metal sheet are both specular reflective that
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/908a71b4-b36e-4230-8c25-b23f0ee99f08)
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 
 
 
