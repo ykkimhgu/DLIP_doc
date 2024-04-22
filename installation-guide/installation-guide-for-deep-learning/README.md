@@ -12,7 +12,7 @@ This installation guide is for programming deep-learning application using Pytor
 
 Make sure you install the correct software version as instructed.
 
-> For DLIP 2022 Lecture:
+> For DLIP 2024 Lecture:
 >
 > * Python 3.9, CUDA 11.8, cuDNN 7.6
 > * PyTorch 2.0.x
