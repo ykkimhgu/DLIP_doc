@@ -20,12 +20,11 @@ The surface of the chamber and the metal sheet are both specular reflective that
 * Don't use Chat-GPT or any other online materials/search
 * Measure the metal sheet tension level from Level 1 to Level 4.
   * Use the minimum y-axis position of the metal sheet curvature
-  * Level 1: <00px from the bottom of the image
-  * Level 2: 00\~00 px from the bottom of the image
-  * Level 3: 00\~00 px from the bottom of the image
-  * Level 4: > 00 px from the bottom of the image
+  * Level 1: <250px from the bottom of the image
+  * Level 2: 120\~250 px from the bottom of the image
+  * Level 3: > 120 px from the bottom of the image
 * Display the output on the raw image
-  * Tension level: Level 1\~4
+  * Tension level: Level 1\~3
   * Score: y-position \[px] of the curvature vertex from the bottom of the image
   * Curvature edge
 * Your algorithm will be evaluated on similar test images
@@ -52,14 +51,14 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-![image-20240422095536121](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095536121.png)
+![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095536121.png)
 
 #### From the color raw image, cover to a gray-scaled image
 
 * HINT: copper sheet has a reddish surface\\
 * You can use `cv.split()` to see individual channel
 
-![image-20240422095524759](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095524759.png)
+![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095524759.png)
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -78,13 +77,13 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-![image-20240422095650794](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095650794.png)
+![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095650794.png)
 
 #### Detect and Display the curvature of the metal edge
 
 *   HINT: Find Contour
 
-    ![image-20240422095500780](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095500780.png)
+    ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095500780.png)
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
