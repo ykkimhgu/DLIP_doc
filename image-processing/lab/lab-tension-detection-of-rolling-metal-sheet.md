@@ -34,8 +34,8 @@ The surface of the chamber and the metal sheet are both specular reflective that
 
 Download the test images of
 
-* \[Simple dataset]
-* \[Challenging dataset]
+* [Simple dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB_Tension_Detection_dataset/Simple_Dataset.zip)
+* [Challenging dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB_Tension_Detection_dataset/Challenging_Dataset.zip)
 
 ## II. Procedure
 
