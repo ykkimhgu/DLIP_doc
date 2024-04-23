@@ -16,9 +16,9 @@ The surface of the chamber and the metal sheet are both specular reflective that
 * Don't use Chat-GPT or any other online materials/search
 * Measure the metal sheet tension level from Level 1 to Level 3.
   * Use the minimum y-axis position of the metal sheet curvature
-  * Level 1: <250px from the bottom of the image
+  * Level 1: >250px from the bottom of the image
   * Level 2: 120\~250 px from the bottom of the image
-  * Level 3: > 120 px from the bottom of the image
+  * Level 3: < 120 px from the bottom of the image
 * Display the output on the raw image
   * Tension level: Level 1\~3
   * Score: y-position \[px] of the curvature vertex from the bottom of the image
