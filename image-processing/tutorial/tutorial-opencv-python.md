@@ -496,7 +496,7 @@ cv.Canny(image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]])
 
 ```python
 # Load image
-img = cv.imread('Image/coins.png',cv.COLOR_BGR2GRAY)
+img = cv.imread('Image/coins.png',0)
 
 # Apply Canndy Edge
 edges = cv.Canny(img,50,200)
@@ -516,7 +516,7 @@ plt.show()
 
 ```python
 # Load image
-img = cv.imread('Image/coins.png',cv.COLOR_BGR2GRAY)
+img = cv.imread('Image/coins.png',0)
 # Apply Thresholding then Canndy Edge
 thVal=127
 ret,thresh1 = cv.threshold(img,thVal,255,cv.THRESH_BINARY)
