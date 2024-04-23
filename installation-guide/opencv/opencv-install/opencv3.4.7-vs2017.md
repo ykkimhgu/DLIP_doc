@@ -64,7 +64,7 @@ Visual Studio 201x 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
 
 ![](<../../../.gitbook/assets/image (12).png>)
 
-![](<../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1).png>)
 
 **공용 속성> 링커 > 입력 > 추가 종속성> 편집** Click
 

@@ -72,7 +72,7 @@ Common tactics for both bias and variance:
 * The training loss continues to decrease until the end of training
 * The training loss is much higher than the optimal performance
 
-![Image source from (machinelearningmastery.com)](<../../.gitbook/assets/image (3) (1).png>)
+![Image source from (machinelearningmastery.com)](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 **Overfit curve**
 
@@ -94,7 +94,7 @@ Common tactics for both bias and variance:
 
 * High Variance and High Bias
 
-![](<../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 #### For very small training sets
 
