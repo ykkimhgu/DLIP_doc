@@ -1,6 +1,6 @@
 # Tutorial: PyTorch Tutorial List
 
-## Tutorial: PyTorch
+## Preparation for PyTorch Tutorial
 
 ### PyTorch Installation
 
@@ -24,22 +24,20 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 
 
-
-
-### Tutorial Video
+### Watch PyTorch Intro  Video
 
 [Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
 
 > You need to know 'What is Tensor in Pytorch'
 
-**Follow Quick-Start Tutorial:**
+### **Follow Quick-Start Tutorial:**
 
 * [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)
 * [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
 
 ***
 
-## DLIP Tutorials
+## DLIP Course Tutorials
 
 ### MLP
 
@@ -67,6 +65,11 @@ Download module: [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/Tu
 * T3-3: [(Assignment) Classification with Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Assignment\_PyTorch\_T3\_3\_Transfer\_Learning\_using\_Pre\_trained\_Models\_\(classification\).ipynb)
 
 ### CNN- Object Detection
+
+#### **YOLO v8 in PyTorch**
+
+* T4-1: [Install and Inference using  YOLOv8 ](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
+* T4-2: [Train and Test using Custom Dataset ](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
 
 #### **YOLO v5 in PyTorch**
 
