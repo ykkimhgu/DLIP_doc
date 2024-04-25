@@ -57,6 +57,7 @@
 * [Tutorial](deep-learning-for-perception/dp-tutorial/README.md)
   * [Tutorial: Python Numpy](deep-learning-for-perception/dp-tutorial/tutorial-python-numpy.md)
   * [Tutorial: PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
+  * [Tutorial: PyTorch Example Code](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code.md)
   * [Tutorial: Keras](deep-learning-for-perception/dp-tutorial/tutorial-keras.md)
   * [Tutorial: Yolov8 in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov8-in-pytorch.md)
   * [Tutorial: Yolov3 in Keras](deep-learning-for-perception/dp-tutorial/tutorial-yolov3-in-keras.md)
