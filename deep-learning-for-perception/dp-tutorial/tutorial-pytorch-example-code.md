@@ -1,6 +1,6 @@
 # Tutorial: PyTorch Example Code
 
-## MLP: Building, Training, Testing &#x20;
+## EX.1 ) MLP :  Model, Train, Test &#x20;
 
 ### Problem:&#x20;
 
@@ -16,7 +16,7 @@
 
 
 
-## CNN: Building, Training, Testing
+## EX.2) CNN: :  Model, Train, Test
 
 
 
