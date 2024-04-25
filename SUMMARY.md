@@ -56,7 +56,7 @@
     * [Technical Strategy by A.Ng](deep-learning-for-perception/notes/dl-resources/technical-strategy.md)
 * [Tutorial](deep-learning-for-perception/dp-tutorial/README.md)
   * [Tutorial: Python Numpy](deep-learning-for-perception/dp-tutorial/tutorial-python-numpy.md)
-  * [Tutorial: PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
+  * [Tutorial: PyTorch Tutorial List](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
   * [Tutorial: PyTorch Example Code](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code.md)
   * [Tutorial: Keras](deep-learning-for-perception/dp-tutorial/tutorial-keras.md)
   * [Tutorial: Yolov8 in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov8-in-pytorch.md)

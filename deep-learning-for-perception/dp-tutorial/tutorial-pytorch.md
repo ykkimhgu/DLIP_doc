@@ -1,4 +1,4 @@
-# Tutorial: PyTorch
+# Tutorial: PyTorch Tutorial List
 
 ## Tutorial: PyTorch
 
@@ -74,18 +74,12 @@ Download module: [My\_DLIP.py](https://github.com/ykkimhgu/DLIP-src/blob/main/Tu
 * T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
 * T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
 
-## LAB
 
-### LAB: Object Detection 1
-
-Parking Vehicle Detection
-
-### LAB: Object Detection 2 (Custom data)
-
-You should design an object detection problem related to your interested area. For the dataset, you can search kaggle.com or any other open dataset sites.
 
 ***
 
 ### Useful Sites
 
-Pytorch tutorial codes: [Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial) Pytorch Tutorial List: [PyTorch Tutorial List](../../programming/pytorch/)
+Pytorch tutorial codes: [Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)&#x20;
+
+Pytorch Tutorial List: [PyTorch Tutorial List](../../programming/pytorch/)
