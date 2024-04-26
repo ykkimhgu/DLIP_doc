@@ -31,6 +31,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import myModel
 
+
 # Select GPU or CPU for training.
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
@@ -56,7 +57,7 @@ test_data = datasets.MNIST(
 )
 
 # Create DataLoader with Batch size N
-# MLP Input Dim:  [N, C, H, W]=[N,1,28,28]
+# MNIST and MLP Input Dim:  [N, C, H, W]=[N,1,28,28]
 batch_size = 64
 train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
 test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=True)
@@ -66,26 +67,18 @@ for X, y in test_dataloader:
     print(f"Shape of y: {y.shape} {y.dtype}")
     break
 
-
-
-# Visualize some Datasets
+# Visualize Some Input Datasets
 
 
 
 
 ##########################################################
-## Part 2:  Create Model
+## Part 2:  Create Model Instance - MLP
 ##########################################################
 
 # Model Class Construction
 model = myModel.MLP().to(device)
 print(model)
-
-# Loss Function
-loss_fn = nn.CrossEntropyLoss()
-
-# Optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 
 
 
@@ -93,16 +86,12 @@ optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 ## Part 3:  Train Model
 ##########################################################
 
-# Model in Training Mode
-model.train()
-
 # Run Train for k epoch
 epochs = 1
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
-    myModel.train(train_dataloader, model, loss_fn, optimizer)    
+    myModel.train(train_dataloader, model)    
 print("Done!")
-
 
 # Save Train Model
 torch.save(model,"MNIST_model.pth")
@@ -114,15 +103,7 @@ torch.save(model,"MNIST_model.pth")
 ## Part 4:  Test Model - Evaluation
 ##########################################################
 
-# Model in Test Mode   
-model.eval()
-
-# Run Eval for k epoch
-epochs = 1
-for t in range(epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
-    myModel.test(test_dataloader, model, loss_fn)
-print("Done!")
+myModel.test(test_dataloader, model)
 
 
 
@@ -154,9 +135,7 @@ for index in range(num_of_images):
     plt.axis('off')    
     plt.title("Predicted: {}".format(predicted[index].item()))
     plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
-    plt.show()
-
-
+plt.show()
 
 
 ```
@@ -183,6 +162,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 import numpy as np 
+
 import matplotlib.pyplot as plt
 
 
@@ -196,7 +176,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 ##########################################################
-## Part 2:  Create Model
+## Part 2:  Create Model Architecture
 ##########################################################
 
 # Model Architecture
@@ -222,8 +202,16 @@ class MLP(nn.Module):
 ## Part 3:  Train Model
 ##########################################################
 
+
+# Loss Function
+loss_fn = nn.CrossEntropyLoss()
+
 # Train Module
-def train(dataloader, model, loss_fn, optimizer):
+def train(dataloader, model, loss_fn=loss_fn):
+
+    # Optimizer
+    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+
     # Dataset Size
     size = len(dataloader.dataset)
     
@@ -259,7 +247,7 @@ def train(dataloader, model, loss_fn, optimizer):
 ## Part 4:  Test Model - Evaluation
 ##########################################################
 
-def test(dataloader, model, loss_fn):
+def test(dataloader, model, loss_fn=loss_fn):
     # Dataset Size
     size = len(dataloader.dataset)
 
@@ -287,6 +275,8 @@ def test(dataloader, model, loss_fn):
     test_loss /= num_batches
     correctN /= size
     print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+
+
 
 ```
 ````
