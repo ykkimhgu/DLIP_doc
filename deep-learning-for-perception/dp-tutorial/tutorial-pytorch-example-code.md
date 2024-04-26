@@ -1,15 +1,31 @@
 # Tutorial: PyTorch Example Code
 
-## EX.1 ) MLP : Model, Train, Test
+## Example 1.  ANN(MLP) : Model, Train, Test
 
-### Problem:
+Classify the MNIST digit with a simple ANN\
+
+
+<figure><img src="https://camo.githubusercontent.com/bd39a5ca7bbfdc90303a170fdd99c9faaeff98a80ccb45f5fb96aa8f7d7ebe5a/68747470733a2f2f6769746875622e636f6d2f62656e747265766574742f7079746f7263682d696d6167652d636c617373696669636174696f6e2f626c6f622f6d61737465722f6173736574732f6d6c702d6d6e6973742e706e673f7261773d31" alt=""><figcaption></figcaption></figure>
+
+* Image Input: 1x28x28 image
+* Flatten into a 1x28\*28 element vector
+* 1st Layer: linear to 250 dimensions / ReLU
+* 2nd Layer: linear to 100 dimensions / ReLU
+* 3rd Layer: linear to 10 dimensions / log SoftMax
+* Output: 1x10
+* Activation function: ReLU
+
+### (Option 1) Using Modules for Model Architecture, Train, Test
+
+* Download the main source code:   TU\_PyTorch\_ANN\_Example1.py
+* Download the module source code: myModel.py
 
 
 
 {% tabs %}
 {% tab title="TU_PyTorch_ANN_Example1" %}
-````python
 ```python
+
 ##########################################################
 # PyTorch Tutorial:  Overview of ANN Model Train and Test
 #
@@ -138,13 +154,13 @@ for index in range(num_of_images):
 plt.show()
 
 
+
 ```
-````
 {% endtab %}
 
 {% tab title="myModel.py" %}
-````python
 ```python
+
 ##########################################################
 # PyTorch Tutorial:  ANN Model Train and Test Modules
 #
@@ -278,12 +294,12 @@ def test(dataloader, model, loss_fn=loss_fn):
 
 
 
+
 ```
-````
 {% endtab %}
 {% endtabs %}
 
-### (Option 1) In one \*.py source file
+### (Option 2) Everything in one source file
 
 ```python
 ##########################################################
@@ -508,8 +524,8 @@ for index in range(num_of_images):
 
 ```
 
-### (Option 2) Modules for Model
+###
 
-## EX.2) CNN: : Model, Train, Test
+## Example 2.  CNN : Model, Train, Test
 
 ##
