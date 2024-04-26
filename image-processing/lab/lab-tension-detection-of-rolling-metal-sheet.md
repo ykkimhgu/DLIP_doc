@@ -36,6 +36,7 @@ Download the test images of
 
 * [Simple dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB\_Tension\_Detection\_dataset/Simple\_Dataset.zip)
 * [Challenging dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB\_Tension\_Detection\_dataset/Challenging\_Dataset.zip)
+* [Video](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB_Tension_Detection_dataset/LAB3_Video.mp4)
 
 ## II. Procedure
 
