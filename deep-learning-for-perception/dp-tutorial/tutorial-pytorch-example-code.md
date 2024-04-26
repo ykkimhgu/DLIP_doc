@@ -17,8 +17,8 @@ Classify the MNIST digit with a simple ANN\
 
 ### (Option 1) Using Modules for Model Architecture, Train, Test
 
-* Download the main source code:   TU\_PyTorch\_ANN\_Example1.py
-* Download the module source code: myModel.py
+* Download the main source code:   [TU\_PyTorch\_ANN\_Example1.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+* Download the module source code: [myModel.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
 
 
 
