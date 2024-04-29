@@ -679,7 +679,7 @@ class LeNet5v2(nn.Module):
 ```python
 
 ##########################################################
-# PyTorch Tutorial:  Overview of ANN Model Train and Test
+# PyTorch Tutorial:  Overview of CNN Model Train and Test
 #
 # This example is creating and testing a MLP model 
 # Used MNIST
@@ -824,7 +824,7 @@ plt.show()
 ```python
 
 ##########################################################
-# PyTorch Tutorial:  ANN Model Train and Test Modules
+# PyTorch Tutorial:  CNN Model Train and Test Modules
 #
 # This example is creating model architecture in modules
 # Used MNIST
