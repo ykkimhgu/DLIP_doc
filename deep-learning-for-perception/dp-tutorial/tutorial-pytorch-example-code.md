@@ -83,10 +83,6 @@ for X, y in test_dataloader:
     print(f"Shape of y: {y.shape} {y.dtype}")
     break
 
-# Visualize Some Input Datasets
-
-
-
 
 ##########################################################
 ## Part 2:  Create Model Instance - MLP
@@ -95,7 +91,6 @@ for X, y in test_dataloader:
 # Model Class Construction
 model = myModel.MLP().to(device)
 print(model)
-
 
 
 ##########################################################
@@ -113,15 +108,11 @@ print("Done!")
 torch.save(model,"MNIST_model.pth")
 
 
-
-
 ##########################################################
 ## Part 4:  Test Model - Evaluation
 ##########################################################
 
 myModel.test(test_dataloader, model)
-
-
 
 
 ##########################################################
@@ -132,7 +123,6 @@ myModel.test(test_dataloader, model)
 dataiter = iter(test_dataloader)
 images, labels = next(dataiter)
 print(images.size())
-
 
 # Evaluate on one batch test images
 with torch.no_grad():
@@ -152,8 +142,6 @@ for index in range(num_of_images):
     plt.title("Predicted: {}".format(predicted[index].item()))
     plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
 plt.show()
-
-
 
 ```
 {% endtab %}
@@ -190,7 +178,6 @@ import matplotlib.pyplot as plt
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-
 ##########################################################
 ## Part 2:  Create Model Architecture
 ##########################################################
@@ -213,11 +200,9 @@ class MLP(nn.Module):
         return y_pred
 
 
-
 ##########################################################
 ## Part 3:  Train Model
 ##########################################################
-
 
 # Loss Function
 loss_fn = nn.CrossEntropyLoss()
@@ -292,9 +277,6 @@ def test(dataloader, model, loss_fn=loss_fn):
     correctN /= size
     print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
 
-
-
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -310,7 +292,6 @@ def test(dataloader, model, loss_fn=loss_fn):
 #
 ##########################################################
 
-
 import torch 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -321,7 +302,6 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor
 import numpy as np 
 import matplotlib.pyplot as plt
-
 
 # Select GPU or CPU for training.
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -357,10 +337,6 @@ for X, y in test_dataloader:
     print(f"Shape of y: {y.shape} {y.dtype}")
     break
 
-# Visualize some Datasets
-
-
-
 
 ##########################################################
 ## Part 2:  Create Model
@@ -375,14 +351,12 @@ class MLP(nn.Module):
         self.linear2 = nn.Linear(250, 100)
         self.linear3 = nn.Linear(100, 10)
 
-        
     def forward(self, x):
         x=self.flatten(x)
         x= F.relu(self.linear1(x))
         x = F.relu(self.linear2(x))
         y_pred = F.log_softmax(self.linear3(x))
         return y_pred
-
 
 # Model Class
 model = MLP().to(device)
@@ -393,7 +367,6 @@ loss_fn = nn.CrossEntropyLoss()
 
 # Optimizer
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
-
 
 
 ##########################################################
@@ -432,19 +405,15 @@ def train(dataloader, model, loss_fn, optimizer):
             print(f"loss: {running_loss:>7f}  [{current:>5d}/{size:>5d}]")
             running_loss=0
 
-
 # Run Train for k epoch
-epochs = 1
+epochs = 2
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
     train(train_dataloader, model, loss_fn, optimizer)    
 print("Done!")
 
-
 # Save Train Model
 torch.save(model,"MNIST_model.pth")
-
-
 
 
 ##########################################################
@@ -480,14 +449,8 @@ def test(dataloader, model, loss_fn):
     correctN /= size
     print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
 
-
 # Run Eval for k epoch
-epochs = 1
-for t in range(epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
-    test(test_dataloader, model, loss_fn)
-print("Done!")
-
+test(test_dataloader, model, loss_fn)
 
 
 ##########################################################
@@ -498,7 +461,6 @@ print("Done!")
 dataiter = iter(test_dataloader)
 images, labels = next(dataiter)
 print(images.size())
-
 
 # Evaluate on one batch test images
 with torch.no_grad():
@@ -519,16 +481,11 @@ for index in range(num_of_images):
     plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
     plt.show()
 
-
-
-
 ```
 
 ###
 
 ## Example 2.  CNN : Model, Train, Test
-
-
 
 LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/publis/psgz/lecun-98.ps.gz)
 
@@ -545,16 +502,11 @@ LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/pu
 * **\[F6] FC** : Input (1x120) to Output (1x84) , `relu`
 * **\[OUTPUT]** : Input (1x84) to Output (1x10)
 
-\
-
-
 #### Note
 
 Add `class LeNet5` in  `myModel.py` or you can create a new model.py
 
 * You can reuse other modules such as train() and test() in `myModel.py`
-
-
 
 ```python
 
@@ -600,8 +552,6 @@ class LeNet5(nn.Module):
 
 ```
 
-
-
 ### Other Style using nn.Sequencial()
 
 **Important Note**
@@ -629,8 +579,7 @@ class LeNet5v2(nn.Module):
             nn.ReLU(),
             # S4
             nn.MaxPool2d(2, 2)
-        )
-            
+        )   
         
         self.flatten = nn.Flatten()
         
@@ -645,7 +594,6 @@ class LeNet5v2(nn.Module):
             # Output
             nn.Linear(84, 10)            
         )
-        
 
     def forward(self, x):        
         # Feature Extraction
@@ -657,12 +605,7 @@ class LeNet5v2(nn.Module):
         
         probs = F.softmax(logits,dim=1) # y_pred: 0~1 
         return probs
-
 ```
-
-
-
-
 
 ### Example Code:&#x20;
 
@@ -686,7 +629,6 @@ class LeNet5v2(nn.Module):
 #
 ##########################################################
 
-
 import torch 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -699,7 +641,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import myCNN  as myModel # User defined modules
-
 
 # Select GPU or CPU for training.
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -721,7 +662,6 @@ data_transform = transforms.Compose([
             transforms.Resize((32, 32)),
             transforms.ToTensor(),
 ])
-
 
 training_data = datasets.MNIST(
     root="data",
@@ -747,10 +687,6 @@ for X, y in test_dataloader:
     print(f"Shape of y: {y.shape} {y.dtype}")
     break
 
-# Visualize Some Input Datasets
-
-
-
 
 ##########################################################
 ## Part 2:  Create Model Instance - LeNET 
@@ -761,13 +697,12 @@ model = myModel.LeNet5().to(device)
 print(model)
 
 
-
 ##########################################################
 ## Part 3:  Train Model
 ##########################################################
 
 # Run Train for k epoch
-epochs = 1
+epochs = 2
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
     myModel.train(train_dataloader, model)    
@@ -777,15 +712,11 @@ print("Done!")
 torch.save(model,"MNIST_model.pth")
 
 
-
-
 ##########################################################
 ## Part 4:  Test Model - Evaluation
 ##########################################################
 
 myModel.test(test_dataloader, model)
-
-
 
 
 ##########################################################
@@ -796,7 +727,6 @@ myModel.test(test_dataloader, model)
 dataiter = iter(test_dataloader)
 images, labels = next(dataiter)
 print(images.size())
-
 
 # Evaluate on one batch test images
 with torch.no_grad():
@@ -852,7 +782,6 @@ import matplotlib.pyplot as plt
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-
 ##########################################################
 ## Part 2:  Create Model Architecture   
 ##          (Modify Part 2 for Different Models)
@@ -898,8 +827,6 @@ class LeNet5(nn.Module):
         probs = F.softmax(logits,dim=1) # y_pred: 0~1 
         return probs
 
-
-
 # Model Architecture - 2nd version 
 class LeNet5v2(nn.Module):
 
@@ -919,7 +846,6 @@ class LeNet5v2(nn.Module):
             # S4
             nn.MaxPool2d(2, 2)
         )
-            
         
         self.flatten = nn.Flatten()
         
@@ -934,7 +860,6 @@ class LeNet5v2(nn.Module):
             # Output
             nn.Linear(84, 10)            
         )
-        
 
     def forward(self, x):        
         # Feature Extraction
@@ -948,12 +873,9 @@ class LeNet5v2(nn.Module):
         return probs
 
 
-
-
 ##########################################################
 ## Part 3:  Train Model
 ##########################################################
-
 
 # Loss Function
 loss_fn = nn.CrossEntropyLoss()
@@ -1027,9 +949,6 @@ def test(dataloader, model, loss_fn=loss_fn):
     test_loss /= num_batches
     correctN /= size
     print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
-
-
-
 
 ```
 {% endtab %}
