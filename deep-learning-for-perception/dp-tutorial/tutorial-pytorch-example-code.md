@@ -1,9 +1,15 @@
 # Tutorial: PyTorch Example Code
 
-## Example 1.  ANN(MLP) : Model, Train, Test
+## Preparation
 
-Classify the MNIST digit with a simple ANN\
+1. Create the working directory:  such as **`\TU_MLP_CNN_Classification\`**
+2. Create a subdirectory for saving weights:  **`\TU_MLP_CNN_Classification\weights\`**
 
+
+
+## Example 1. ANN(MLP) : Model, Train, Test
+
+Classify the MNIST digit with a simple ANN\\
 
 <figure><img src="https://camo.githubusercontent.com/bd39a5ca7bbfdc90303a170fdd99c9faaeff98a80ccb45f5fb96aa8f7d7ebe5a/68747470733a2f2f6769746875622e636f6d2f62656e747265766574742f7079746f7263682d696d6167652d636c617373696669636174696f6e2f626c6f622f6d61737465722f6173736574732f6d6c702d6d6e6973742e706e673f7261773d31" alt=""><figcaption></figcaption></figure>
 
@@ -15,145 +21,33 @@ Classify the MNIST digit with a simple ANN\
 * Output: 1x10
 * Activation function: ReLU
 
-### (Option 1) Using Modules for Model Architecture, Train, Test
+### Creating  Model Architecture, Training and Evaluation&#x20;
 
-* Download the main source code:   [TU\_PyTorch\_ANN\_Example1.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
-* Download the module source code: [myModel.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+We will create a class for the  model architecture
 
+Also, we will create PyTorch source files  for processing (1) Training and (2) Evaluation of the model
 
+1. Check if you have created the subfolder **`.\weights\`**
+2. Download the  source code for **Model Architecture**: [myModel.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+3. Download the source code for **Model Training**: [TU\_PyTorch\_MLP\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+   * Run this code and observe the loss
+   * Change the training epoch
+4. Download the source code for **Model Evaluation**: [TU\_PyTorch\_MLP\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+   * Run this code and observe the evaluation accuracy and sample images
 
 {% tabs %}
-{% tab title="TU_PyTorch_ANN_Example1" %}
-```python
-
-##########################################################
-# PyTorch Tutorial:  Overview of ANN Model Train and Test
-#
-# This example is creating and testing a MLP model 
-# Used MNIST
-#
-##########################################################
-
-
-import torch 
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader
-from torchvision import datasets
-from torchvision.transforms import ToTensor
-import numpy as np 
-import matplotlib.pyplot as plt
-import myModel
-
-
-# Select GPU or CPU for training.
-device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using {device} device")
-
-
-##########################################################
-## Part 1:  Prepare Dataset
-##########################################################
-
-# Download Dataset from TorchVision MNIST
-# Once, downloaded locally, it does not download again.
-training_data = datasets.MNIST(
-    root="data",
-    train=True,
-    download=True,
-    transform=ToTensor(),   #converts 0~255 value to 0~1 value.
-)
-test_data = datasets.MNIST(
-    root="data",
-    train=False,
-    download=True,
-    transform=ToTensor(),
-)
-
-# Create DataLoader with Batch size N
-# MNIST and MLP Input Dim:  [N, C, H, W]=[N,1,28,28]
-batch_size = 64
-train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
-test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=True)
-
-for X, y in test_dataloader:
-    print(f"Shape of X [N, C, H, W]: {X.shape}")
-    print(f"Shape of y: {y.shape} {y.dtype}")
-    break
-
-
-##########################################################
-## Part 2:  Create Model Instance - MLP
-##########################################################
-
-# Model Class Construction
-model = myModel.MLP().to(device)
-print(model)
-
-
-##########################################################
-## Part 3:  Train Model
-##########################################################
-
-# Run Train for k epoch
-epochs = 1
-for t in range(epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
-    myModel.train(train_dataloader, model)    
-print("Done!")
-
-# Save Train Model
-torch.save(model,"MNIST_model.pth")
-
-
-##########################################################
-## Part 4:  Test Model - Evaluation
-##########################################################
-
-myModel.test(test_dataloader, model)
-
-
-##########################################################
-## Part 5:  Visualize Evaluation Results
-##########################################################
-
-# Select one batch of images
-dataiter = iter(test_dataloader)
-images, labels = next(dataiter)
-print(images.size())
-
-# Evaluate on one batch test images
-with torch.no_grad():
-  for X, y in dataiter:
-      X, y = X.to(device), y.to(device)
-      
-      # Prediction Label 
-      pred = model(X)
-      _, predicted = torch.max(pred.data, 1)
-
-# Plot 
-figure = plt.figure()
-num_of_images = 9
-for index in range(num_of_images):
-    plt.subplot(3, 3, index+1)
-    plt.axis('off')    
-    plt.title("Predicted: {}".format(predicted[index].item()))
-    plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
-plt.show()
-
-```
-{% endtab %}
-
 {% tab title="myModel.py" %}
+````python
 ```python
-
 ##########################################################
-# PyTorch Tutorial:  ANN Model Train and Test Modules
+# PyTorch Tutorial:  MLP & CNN Model Architecture
 #
-# This example is creating model architecture in modules
-# Used MNIST
+# Author: Y.K.Kim
+# mod: 2024-5-21 
+#
+# Descr: User defined ANN & CNN Model & Modules for Training and Testing
+#
+# Model: MLP, LeNet
 #
 ##########################################################
 
@@ -166,23 +60,17 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 import numpy as np 
-
 import matplotlib.pyplot as plt
 
 
-##########################################################
-## Part 1:  Setup
-##########################################################
-
-# Select GPU or CPU for training.
-device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 ##########################################################
-## Part 2:  Create Model Architecture
+##  Model Architecture   
 ##########################################################
 
-# Model Architecture
+
+# Model Architecture: MLP
 class MLP(nn.Module):
     def __init__(self):
         super(MLP, self).__init__()
@@ -200,22 +88,21 @@ class MLP(nn.Module):
         return y_pred
 
 
-##########################################################
-## Part 3:  Train Model
-##########################################################
+     
 
-# Loss Function
-loss_fn = nn.CrossEntropyLoss()
+##########################################################
+##  Train Module
+##########################################################
 
 # Train Module
-def train(dataloader, model, loss_fn=loss_fn):
-
-    # Optimizer
-    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
-
+def train(dataloader, model, loss_fn,optimizer, device, print_interval=100):
     # Dataset Size
     size = len(dataloader.dataset)
     
+    # Batch size
+    batch_size = dataloader.batch_size
+    print(f"batch size : {batch_size}")
+
     # Model in Training Mode
     model.train()
 
@@ -223,7 +110,7 @@ def train(dataloader, model, loss_fn=loss_fn):
 
     for batch, (X, y) in enumerate(dataloader):
         X, y = X.to(device), y.to(device)
-
+        
         # zero gradients for every batch
         optimizer.zero_grad()   
 
@@ -235,20 +122,22 @@ def train(dataloader, model, loss_fn=loss_fn):
         loss.backward()
         optimizer.step()        
 
-        # Print loss for every 100 batch in an epoch
+        # Print avg. loss for every mini-batch in an epoch
         running_loss+=loss.item()
-        if batch % 100 == 0:
-            running_loss=running_loss/100
-            current = batch * len(X)
+        if batch % print_interval == 0:
+            running_loss=running_loss/print_interval            
+            current = batch * batch_size
             print(f"loss: {running_loss:>7f}  [{current:>5d}/{size:>5d}]")
             running_loss=0
 
 
+
+
 ##########################################################
-## Part 4:  Test Model - Evaluation
+##  Test Model Module 
 ##########################################################
 
-def test(dataloader, model, loss_fn=loss_fn):
+def test(dataloader, model, device):
     # Dataset Size
     size = len(dataloader.dataset)
 
@@ -258,7 +147,8 @@ def test(dataloader, model, loss_fn=loss_fn):
     # Model in Evaluation Mode
     model.eval()
 
-    test_loss, correctN = 0, 0
+    #test_loss=0
+    correctN = 0
     
     # Disable grad() computation to reduce memory consumption.
     with torch.no_grad():
@@ -267,30 +157,290 @@ def test(dataloader, model, loss_fn=loss_fn):
             
             # Compute average prediction loss 
             pred = model(X)            
-            test_loss += loss_fn(pred, y).item()
+            #test_loss += loss_fn(pred, y).item()
 
             # Predict Label
             y_pred=pred.argmax(1);
             correctN += (y_pred == y).type(torch.float).sum().item()
             
-    test_loss /= num_batches
+    #test_loss /= num_batches
     correctN /= size
-    print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+    #print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+    print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}% \n")
+
 
 ```
+````
+{% endtab %}
+
+{% tab title="TU_PyTorch_MLP_Train" %}
+````python
+```python
+##########################################################
+# PyTorch Tutorial:  Classification MLP Model for Training
+#
+# Author: Y.K.Kim
+# mod: 2024-5-21 
+#
+# Descr: This example is creating and training a MLP model for classification
+#
+# Model: MLP
+# Dataset: MNIST
+#
+##########################################################
+
+
+import torch 
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor
+import numpy as np 
+import matplotlib.pyplot as plt
+
+import myModel  as myModel # User defined modules
+
+PATH='./weights/'
+
+##########################################################
+## Part 0:  GPU setting
+##########################################################
+
+# Select GPU or CPU for training.
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using {device} device")
+
+
+
+##########################################################
+## Part 1:  Prepare Dataset 
+##########################################################
+
+# Download Dataset from TorchVision MNIST
+# Once, downloaded locally, it does not download again.
+#
+#  MNIST shape:  1x28x28 
+
+# transformation to tensor:  converts 0~255 value to 0~1 value.
+data_transform = transforms.Compose([            
+            transforms.ToTensor(),
+])
+
+# TRAIN DATA
+training_data = datasets.MNIST(
+    root="data",
+    train=True,
+    download=True,
+    transform=data_transform,   
+)
+
+
+# Create DataLoader with Batch size N
+# Input Dim:  [N, C, H, W]
+batch_size = 64
+train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
+
+
+for X, y in train_dataloader:
+    print(f"Shape of X [N, C, H, W]: {X.shape}")
+    print(f"Shape of y: {y.shape} {y.dtype}")
+    break
+
+
+
+
+##########################################################
+## Part 2:  Create Model Instance 
+##########################################################
+
+# Model Class Construction
+model = myModel.MLP().to(device)
+print(model)
+
+
+
+##########################################################
+## Part 3:  Train Model
+##########################################################
+
+# Loss Function
+loss_fn = nn.CrossEntropyLoss()
+
+# Optimizer
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+
+# Run Train for k epoch
+epochs = 1
+for t in range(epochs):
+    print(f"Epoch {t+1}\n-------------------------------")
+    myModel.train(train_dataloader, model,loss_fn, optimizer,device)    
+print("Done!")
+
+
+# Save Train Model
+# * Need to create a new folder PATH priorly
+torch.save(model,PATH+'MLP_MNIST_model.pth')
+
+
+# Evaluate the trained model in **Eval.py
+
+```
+````
+{% endtab %}
+
+{% tab title="TU_PyTorch_MLP_Eval" %}
+````python
+```python
+##########################################################
+# PyTorch Tutorial:  Classification MLP Model for Evaluation
+#
+# Author: Y.K.Kim
+# mod: 2024-5-21 
+#
+# Descr: This example is tesing pretrined model for classification
+#
+# Model:   MLP
+# Dataset: MNIST
+#
+##########################################################
+
+
+import torch 
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor
+import numpy as np 
+import matplotlib.pyplot as plt
+
+# User defined Model
+import myModel as myModel
+
+# Model weight directory
+ModelPATH='./weights/'
+
+
+
+##########################################################
+## Part 0:  GPU setting
+##########################################################
+
+# Select GPU or CPU for training.
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using {device} device")
+
+
+
+##########################################################
+## Part 1:  Prepare Dataset
+##########################################################
+
+# Download Dataset from TorchVision MNIST
+# Once, downloaded locally, it does not download again.
+#
+#  MNIST shape:  1x28x28 
+
+# transformation to tensor:  converts 0~255 value to 0~1 value.
+data_transform = transforms.Compose([            
+            transforms.ToTensor(),
+])
+
+
+# EVAL DATA
+test_data = datasets.MNIST(
+    root="data",
+    train=False,
+    download=True,
+    transform=data_transform,
+)
+
+
+# Create DataLoader with Batch size N
+# Input Dim:  [N, C, H, W]
+batch_size = 64
+test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=True)
+
+for X, y in test_dataloader:
+    print(f"Shape of X [N, C, H, W]: {X.shape}")
+    print(f"Shape of y: {y.shape} {y.dtype}")
+    break
+
+
+
+##########################################################
+## Part 4:  Test Model - Evaluation
+##########################################################
+
+model=torch.load(ModelPATH+'MLP_MNIST_model.pth')
+myModel.test(test_dataloader, model, device)
+
+
+
+
+##########################################################
+## Part 5:  Visualize Evaluation Results
+##########################################################
+
+# Select one batch of images
+dataiter = iter(test_dataloader)
+images, labels = next(dataiter)
+print(images.size())
+
+
+# Evaluate on one batch test images
+with torch.no_grad():
+  for X, y in dataiter:
+      X, y = X.to(device), y.to(device)
+      
+      # Prediction Label 
+      pred = model(X)
+      _, predicted = torch.max(pred.data, 1)
+
+
+# Plot 9 output images
+figure = plt.figure()
+num_of_images = 9
+for index in range(num_of_images):
+    plt.subplot(3, 3, index+1)
+    plt.axis('off')    
+    plt.title("Predicted: {}".format(predicted[index].item()))
+    plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
+plt.show()
+
+```
+````
 {% endtab %}
 {% endtabs %}
 
-### (Option 2) Everything in one source file
+###
 
+### (For CoLAB) Everything in one source file
+
+<details>
+
+<summary>(For CoLAB) Everything in one source file</summary>
+
+````python
 ```python
 ##########################################################
-# PyTorch Tutorial:  Overview of ANN Model Train and Test
+# PyTorch Tutorial:  Classification MLP Model for Evaluation
 #
-# This example is creating and testing a model in one py file
-# Used MNIST
+# Author: Y.K.Kim
+# mod: 2024-5-21 
+#
+# Descr: This example is tesing pretrined model for classification
+#
+# Model:   MLP
+# Dataset: MNIST
 #
 ##########################################################
+```
 
 import torch 
 import torch.nn as nn
@@ -481,11 +631,14 @@ for index in range(num_of_images):
     plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
     plt.show()
 
-```
+
+````
+
+</details>
 
 ###
 
-## Example 2.  CNN : Model, Train, Test
+## Example 2. CNN : Model, Train, Test
 
 LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/publis/psgz/lecun-98.ps.gz)
 
@@ -502,9 +655,14 @@ LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/pu
 * **\[F6] FC** : Input (1x120) to Output (1x84) , `relu`
 * **\[OUTPUT]** : Input (1x84) to Output (1x10)
 
+####
+
+* Create the working directory:  such as **`\TU_MLP_CNN_Classification\`**
+* Create a subdirectory for saving weights:  **`\TU_MLP_CNN_Classification\weights\`**
+
 #### Note
 
-Add `class LeNet5` in  `myModel.py` or you can create a new model.py
+Add `class LeNet5` in `myModel.py` or you can create a new model.py
 
 * You can reuse other modules such as train() and test() in `myModel.py`
 
@@ -556,9 +714,9 @@ class LeNet5(nn.Module):
 
 **Important Note**
 
-* in Sequential().  use  nn.ReLU() ,  NOT  F.relu()&#x20;
-* ( nn.ReLU()  vs  F.relu()  )  Watch out for spelling and Captital Letters
-* add comma  `,` in nn.Sequential().  Such as   nn.Conv2d(1,6,5), nn.ReLU() etc &#x20;
+* in Sequential(). use nn.ReLU() , NOT F.relu()
+* ( nn.ReLU() vs F.relu() ) Watch out for spelling and Captital Letters
+* add comma `,` in nn.Sequential(). Such as nn.Conv2d(1,6,5), nn.ReLU() etc
 
 ```python
 # Model Architecture - 2nd version 
@@ -607,14 +765,14 @@ class LeNet5v2(nn.Module):
         return probs
 ```
 
-### Example Code:&#x20;
+### Example Code:
 
 > LeNet uses 1x32x32 input. Therefore, reshape MNIST from 1x28x28 to 1x32x32
 >
 > * MLP uses 1x28x28 as the Input for MNIST
 > * LeNet uses 1x32x32 as the Input for MNIST
 
-* Download the main source code:   [TU\_PyTorch\_CNN\_Example1.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
+* Download the main source code: [TU\_PyTorch\_CNN\_Example1.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
 * Download the module source code: [myCNN.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch)
 
 {% tabs %}
