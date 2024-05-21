@@ -52,7 +52,7 @@ git [https://github.com/qqwweee/keras-yolo3.git](https://github.com/qqwweee/kera
 
 Download zip file from the github and unzip.
 
-![](<../../../.gitbook/assets/image (318).png>)
+![](<../../.gitbook/assets/image (318).png>)
 
 ### Download the trained weight file
 
@@ -95,7 +95,7 @@ If the video file name is 'test\_Video.avi'
 >> python yolo_video.py --model .\model_data\yolo.h5 --input .\test_Video.avi
 ```
 
-![](<../../../.gitbook/assets/image (319).png>)
+![](<../../.gitbook/assets/image (319).png>)
 
 ### Run Yolov3-Tiny Detection
 

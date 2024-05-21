@@ -1,14 +1,18 @@
-# Tutorial: Yolov5 train with custum data
+# Tutorial: Train Yolo with custum dataset
 
-This tutorial is about learning how to train YOLOv5 of PyTorch with a custom dataset of Mask-Dataset.
+This tutorial is about learning how to train  YOLO v5 \~ v8  with a custom dataset of Mask-Dataset.
 
-Read here for detailed instruction: [Training YOLOv5 custom dataset with ease](https://medium.com/mlearning-ai/training-yolov5-custom-dataset-with-ease-e4f6272148ad)
+> This Tutorial works for both YOLOv5 and YOLOv8
 
-## Step 1. Configure YOLOv5 in local drive
 
-[Follow Tutorial: Yolov5 in Pytorch](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch)
 
-## Step 2. Custom Dataset Preparation
+## Step 1. Install and Configure YOLO  in local drive
+
+[Follow Tutorial: Installation of  Yolov8](../tutorial-yolov8-in-pytorch.md)
+
+
+
+## Step 2. Prepare Custom Dataset
 
 ### Download Dataset and Label
 
@@ -226,4 +230,4 @@ Your result image will be saved under `runs/detect/exp`
 
 ## NEXT
 
-Test trained YOLOv5 with webcam
+Test trained YOLO with webcam
