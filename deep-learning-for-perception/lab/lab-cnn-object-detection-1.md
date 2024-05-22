@@ -20,10 +20,10 @@ The whole code should be programmed using OpenCV-Python and Pytorch.
 
 * DO NOT copy a project from online sites.
 * You can refer to any online material and github repository for assistance and getting ideas with proper reference citation.
-* Use pretrained YOLO v5.
-  * You can also use any pretrained object detection model, such as YOLO v3\~4
+* Use pretrained YOLO v8.
+  * You can also use any pretrained object detection model, such as YOLO v5
   * You can also train the model using custom/other open datasets
-* You can clone a github repository of the object detection model(e.g. YOLOv5), as long as you cite it in the reference.
+* You can clone a github repository of the object detection model(e.g. YOLOv8), as long as you cite it in the reference.
 
 **Warning!**
 
