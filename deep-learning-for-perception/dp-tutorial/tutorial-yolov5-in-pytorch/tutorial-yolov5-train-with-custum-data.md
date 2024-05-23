@@ -44,7 +44,7 @@ The first integer number (0) is the object class id. For this dataset, the class
 2.  Under the directory `/datasets` , create a new folder for the MASK dataset. Then, copy the downloaded dataset under this folder. Example: `/datasets/dataset_mask/archive/obj/`
 
 
-    <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/e5cc928d-a568-4996-87f1-914051a6f586.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/817dfe50-117b-4bff-a86c-63c4023bdf86.png" alt=""><figcaption></figcaption></figure>
 
 ![img](https://user-images.githubusercontent.com/38373000/169465419-a354e40b-34e3-4608-b104-ae4f866f71a8.png)
 
