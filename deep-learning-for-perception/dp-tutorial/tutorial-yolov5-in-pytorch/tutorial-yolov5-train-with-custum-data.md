@@ -1,14 +1,26 @@
 # Tutorial: Train Yolo v8 with custom dataset
 
-This tutorial is about learning how to train  YOLO v5 \~ v8  with a custom dataset of Mask-Dataset.
+This tutorial is about learning how to train  YOLO  v8  with a custom dataset of Mask-Dataset.
 
-> This Tutorial works for both YOLOv5 and YOLOv8
+> This Tutorial also works for YOLOv5
 
 
 
-## Step 1. Install and Configure YOLO  in local drive
+## Step 0. Install  YOLOv8  in local drive
 
-[Follow Tutorial: Installation of  Yolov8](../../tutorial-yolov8-in-pytorch.md)
+[Follow Tutorial: Installation of  Yolov8](../tutorial-yolov8-in-pytorch.md)
+
+
+
+## Step 1. Create Project Folder
+
+1. We will create the working space directory as&#x20;
+
+`\DLIP\Tutorial\YOLOv8\`
+
+
+
+2. Then, create the sub-folder `/datasets` in the same parent of `/yolov8` folder
 
 
 
@@ -29,20 +41,24 @@ This annotation file has 4 lines being each one referring to one specific face i
 The first integer number (0) is the object class id. For this dataset, the class id 0 refers to the class “using mask” and the class id 1 refers to the “without mask” class. The following float numbers are the `xywh` bounding box coordinates. As one can see, these coordinates are normalized to `[0, 1]`.
 
 1. Download the dataset : [**Labeled Mask YOLO**](https://www.kaggle.com/techzizou/labeled-mask-dataset-yolo-darknet).
-2. Create the folder `/datasets` in the same parent with the `/yolov5` folder. You already have this folder if you have trained coco128 in previous tutorial.
-3.  Under the directory `/datasets` , create a new folder for the MASK dataset. Then, copy the downloaded dataset under this folder. Example: `/datasets/dataset_mask/archive/obj/`
+2.  Under the directory `/datasets` , create a new folder for the MASK dataset. Then, copy the downloaded dataset under this folder. Example: `/datasets/dataset_mask/archive/obj/`
 
-    <img src="https://user-images.githubusercontent.com/38373000/169481650-73315724-9148-4b3e-9c45-aedca8b95d25.png" alt="image" data-size="original">
+
+
+    <figure><img src="https://user-images.githubusercontent.com/38373000/169481650-73315724-9148-4b3e-9c45-aedca8b95d25.png" alt=""><figcaption></figcaption></figure>
 
 ![img](https://user-images.githubusercontent.com/38373000/169465419-a354e40b-34e3-4608-b104-ae4f866f71a8.png)
 
 The dataset is indeed a bunch of images and respective annotation files:
 
-### Visualize Train Dataset image with label
+### Visualize Train Dataset image with Boundary Box and Label
 
-1. Under the folder `/datasets/` create the following python file ( `visualizeLabel.py`) to view images and labels. Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/visualizeLabel.py)
+1. Under the working space ( `YOLOv8/ )` ,  create the following python file ( `visualizeLabel.py`) to view images and labels.&#x20;
+2. Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/visualizeLabel.py)
 
 ```python
+## Visualize B.Box and Label on Train Dataset
+
 import cv2
 
 image_path = 'dataset_mask/archive/obj/2-with-mask'
@@ -79,11 +95,11 @@ cv2.waitKey()
 
 You will see this result
 
-![image](https://user-images.githubusercontent.com/38373000/169467614-8907b0be-cda0-4f3d-9094-721c704e2886.png)
+<figure><img src="https://user-images.githubusercontent.com/38373000/169467614-8907b0be-cda0-4f3d-9094-721c704e2886.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 3 — Split Dataset
 
-The YOLOv5 training process will use the **training subset** to actually learn how to detect objects. The **validation dataset** is used to check the model performance during the training.
+The YOLO training process will use the **training subset** to actually learn how to detect objects. The **validation dataset** is used to check the model performance during the training.
 
 We need to split this data into two groups for training model: training and validation.
 
@@ -92,16 +108,26 @@ We need to split this data into two groups for training model: training and vali
 
 For the inference dataset, you can use any images with people wearing mask.
 
-1. Under the directory `datasets/` create the following python file `split_data.py`. Download \[code here]https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/split\_data.py)
-   * This code will save image files under the folder `/images/` folder and label data under the folder `/labels/`
-   * Under each folders, `/training` and `/validation` datasets will be splitted
+
+
+Under the working directory create the following python file `split_data.py`.&#x20;
+
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/split\_data.py)
+
+This code will save image files under the folder `/images/` folder and label data under the folder `/labels/`
+
+* Under each folders, `/training` and `/validation` datasets will be splitted.
+
+
 
 ```python
+# Split Dataset as Train and Test
+
 import os, shutil, random
 
 # preparing the folder structure
 
-full_data_path = 'dataset_mask/archive/obj/'
+full_data_path = './dataset/dataset_mask/archive/obj/'
 extension_allowed = '.jpg'
 split_percentage = 90
 
@@ -168,13 +194,17 @@ for i in range(split, size):
 print("finished")
 ```
 
-1. Run the following script and check your folders
+
+
+Run the following script and check your folders
 
 ![](https://user-images.githubusercontent.com/38373000/169472524-dd3c5043-e560-479a-aed5-74354c447a58.png)
 
 ## Step 4. Training configuration file
 
-The next step is creating a text file called `maskdataset.yaml` inside the `yolov5` directory with the following content. Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/maskdataset.yaml)
+The next step is creating a text file called `maskdataset.yaml` inside the `yolov8` directory with the following content.&#x20;
+
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/maskdataset.yaml)
 
 ```python
 train: ../datasets/dataset_mask/images/training/
@@ -186,19 +216,23 @@ nc: 2
 names: ['with mask', 'without mask']
 ```
 
-## Step 5. Running the train
+## Step 5. Train Model
 
-It is time to actually run the train:
+> change batch number and epochs number for better training
 
+```python
+code goes here
 ```
-python train.py --img 640 --batch 1 --epochs 2 --data maskdataset.yaml --weights yolov5s.pt
-```
 
-> change bath number and epochs number for better training
+
+
+
 
 Finally, in the end, we have the following output:
 
 ![image](https://user-images.githubusercontent.com/38373000/169474740-da09c0c0-a22e-4fc6-af0b-4d7dd28d5dd2.png)
+
+
 
 Now, confirm that you have a `yolov5_ws/yolov5/runs/train/exp/weights/best.pt` file:
 
@@ -206,7 +240,7 @@ Now, confirm that you have a `yolov5_ws/yolov5/runs/train/exp/weights/best.pt` f
 >
 > For my PC, it was exp3
 
-![image](https://user-images.githubusercontent.com/38373000/169476341-e16db141-96b9-4fd8-98fc-3e9fc889a663.png)
+<figure><img src="https://user-images.githubusercontent.com/38373000/169476341-e16db141-96b9-4fd8-98fc-3e9fc889a663.png" alt=""><figcaption></figcaption></figure>
 
 Also, check the output of `runs/train/exp/results.png` which demonstrates the model performance indicators during the training:
 
@@ -216,7 +250,9 @@ Also, check the output of `runs/train/exp/results.png` which demonstrates the mo
 
 Now we have our model trained with the Labeled Mask dataset, it is time to get some predictions. This can be easily done using an out-of-the-box YOLOv5 script specially designed for this:
 
-Download a [test image here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/mask-teens.jpg) and copy the file under the folder of `yolov5/data/images`
+Download a [test image here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/mask-teens.jpg) and copy the file under the folder of `yolov8/data/images`
+
+
 
 Run the CLI
 

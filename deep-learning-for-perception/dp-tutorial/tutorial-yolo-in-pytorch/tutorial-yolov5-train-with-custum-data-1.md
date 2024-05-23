@@ -8,7 +8,7 @@ This tutorial is about learning how to train  YOLO v5 \~ v8  with a custom datas
 
 ## Step 1. Install and Configure YOLO  in local drive
 
-[Follow Tutorial: Installation of  Yolov8](../../tutorial-yolov8-in-pytorch.md)
+[Follow Tutorial: Installation of  Yolov8](../tutorial-yolov8-in-pytorch.md)
 
 
 
