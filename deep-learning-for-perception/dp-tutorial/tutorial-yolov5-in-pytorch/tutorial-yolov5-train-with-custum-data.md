@@ -60,7 +60,7 @@ The dataset is indeed a bunch of images and respective annotation files:
 
 import cv2
 
-image_path = 'dataset_mask/archive/obj/2-with-mask'
+image_path = 'datasets/dataset_mask/archive/obj/2-with-mask'
 
 image = cv2.imread(image_path + '.jpg')
 
@@ -111,7 +111,7 @@ For the inference dataset, you can use any images with people wearing mask.
 
 Under the working directory create the following python file `split_data.py`.&#x20;
 
-* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/split\_data.py)
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/split_data.py)
 
 This code will save image files under the folder `/images/` folder and label data under the folder `/labels/`
 
@@ -126,16 +126,16 @@ import os, shutil, random
 
 # preparing the folder structure
 
-full_data_path = './dataset/dataset_mask/archive/obj/'
+full_data_path = 'datasets/dataset_mask/archive/obj/'
 extension_allowed = '.jpg'
 split_percentage = 90
 
-images_path = 'dataset_mask/images/'
+images_path = 'datasets/dataset_mask/images/'
 if os.path.exists(images_path):
     shutil.rmtree(images_path)
 os.mkdir(images_path)
     
-labels_path = 'dataset_mask/labels/'
+labels_path = 'datasets/dataset_mask/labels/'
 if os.path.exists(labels_path):
     shutil.rmtree(labels_path)
 os.mkdir(labels_path)
@@ -203,7 +203,7 @@ Run the following script and check your folders
 
 The next step is creating a text file called `maskdataset.yaml` inside the `yolov8` directory with the following content.&#x20;
 
-* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/maskdataset.yaml)
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/maskdataset.yaml)
 
 ```python
 train: ../datasets/dataset_mask/images/training/
@@ -219,49 +219,91 @@ names: ['with mask', 'without mask']
 
 > change batch number and epochs number for better training
 
+Create the following python file ( `Yolov8_train.py`) to train model.
+
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Yolov8_train.py)
+
 ```python
-code goes here
+from ultralytics import YOLO
+
+def train():
+    # Load a pretrained YOLO model
+    model = YOLO('yolov8n.pt')
+
+    # Train the model using the 'maskdataset.yaml' dataset for 3 epochs
+    results = model.train(data='maskdataset.yaml', epochs=3)
+    
+if __name__ == '__main__':
+    train()
 ```
-
-
-
 
 
 Finally, in the end, we have the following output:
 
-![image](https://user-images.githubusercontent.com/38373000/169474740-da09c0c0-a22e-4fc6-af0b-4d7dd28d5dd2.png)
+![](https://user-images.githubusercontent.com/38373000/169474740-da09c0c0-a22e-4fc6-af0b-4d7dd28d5dd2.png)
 
+Now, confirm that you have a `yolov8/runs/detect/train/weights/best.pt` file:
 
-
-Now, confirm that you have a `yolov5_ws/yolov5/runs/train/exp/weights/best.pt` file:
-
-> Depending on the number of runs, it can be under `/train/exp#/weights/best.pt`, where #:number of exp
+> Depending on the number of runs, it can be under `/train#/weights/best.pt`, where #:number of train
 >
-> For my PC, it was exp3
+> For my PC, it was train3
 
-<figure><img src="https://user-images.githubusercontent.com/38373000/169476341-e16db141-96b9-4fd8-98fc-3e9fc889a663.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/d97809e0-608a-4c35-8095-64bca4b90e59.png" alt=""><figcaption></figcaption></figure>
 
-Also, check the output of `runs/train/exp/results.png` which demonstrates the model performance indicators during the training:
+Also, check the output of `runs/detect/train#/results.png` which demonstrates the model performance indicators during the training:
 
 ![](https://miro.medium.com/max/1400/1\*Rxvpvfv7C7\_HuPe9V-UmnA.png)
 
 ## Step 6. Test the model (Inference)
 
-Now we have our model trained with the Labeled Mask dataset, it is time to get some predictions. This can be easily done using an out-of-the-box YOLOv5 script specially designed for this:
+Now we have our model trained with the Labeled Mask dataset, it is time to get some predictions. This can be easily done using an out-of-the-box YOLOv8 script specially designed for this:
 
-Download a [test image here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/mask-teens.jpg) and copy the file under the folder of `yolov8/data/images`
+Download a [test image here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/mask-teens.jpg) and copy the file under the folder of `yolov8/datasets/dataset_mask/images/testing`
 
-
-
-Run the CLI
+Create the following python file ( `Yolov8_test.py`) to test model.
+* Download [code here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Yolov8_test.py)
 
 ```python
-python detect.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.4 --source data/images/mask-teens.jpg
+from ultralytics import YOLO
+import cv2
+
+def test():
+
+    # Load a pretrained YOLO model(Change model directory)
+    model = YOLO('runs/detect/train4/weights/best.pt')
+
+    # Inference Source - a single source(Change directory)
+    src = cv2.imread("datasets/dataset_mask/images/testing/mask-teens.jpg")
+
+    # Perform object detection on an image using the model
+    result = model.predict(source=src, save=True, save_txt=True)  # save predictions as labels
+
+    # View result
+    for r in result:
+        # print the Boxes object containing the detection bounding boxes
+        print(r.boxes)
+
+        # Plot results image
+        print("result.plot()")
+        dst = r.plot()  # return BGR-order numpy array
+        cv2.imshow("result plot", dst)
+
+        # Plot the original image (NParray)
+        print("result.orig_img")
+        cv2.imshow("result orig", r.orig_img)
+
+    # Save results to disk
+    r.save(filename='result.jpg')
+    cv2.waitKey(0)
+    
+if __name__ == '__main__':
+    test()
 ```
 
-Your result image will be saved under `runs/detect/exp`
+Your result image will be saved under `runs/detect/predict#/`
 
-![img](https://miro.medium.com/max/1400/1\*er1NE0k2jF4hKG-sUSjY2A.jpeg)
+![](https://github.com/ykkimhgu/DLIP-src/assets/84508106/07e98e4c-9e5d-48f5-9978-ec38ebaf1f0d)
+
 
 ## NEXT
 
