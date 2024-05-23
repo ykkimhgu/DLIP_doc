@@ -16,7 +16,7 @@ This tutorial is about learning how to train  YOLO  v8  with a custom dataset of
 
 1. We will create the working space directory as&#x20;
 
-`\DLIP\Tutorial\YOLOv8\`
+`\DLIP\YOLOv8\`
 
 
 
@@ -30,7 +30,7 @@ This tutorial is about learning how to train  YOLO  v8  with a custom dataset of
 
 We will use the [**Labeled Mask YOLO**](https://www.kaggle.com/techzizou/labeled-mask-dataset-yolo-darknet) to detect people wearing mask.
 
-![img](https://miro.medium.com/max/1400/1\*kaURkIXnr0SfoxSVSdAEmg.png)
+![](https://miro.medium.com/max/1400/1\*kaURkIXnr0SfoxSVSdAEmg.png)
 
 This annotation file has 4 lines being each one referring to one specific face in the image. Let’s check the first line:
 
