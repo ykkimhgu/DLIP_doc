@@ -96,7 +96,7 @@ You will see this result
 
 <figure><img src="https://user-images.githubusercontent.com/38373000/169467614-8907b0be-cda0-4f3d-9094-721c704e2886.png" alt=""><figcaption></figcaption></figure>
 
-## Step 3 — Split Dataset
+## Step 3. Split Dataset
 
 The YOLO training process will use the **training subset** to actually learn how to detect objects. The **validation dataset** is used to check the model performance during the training.
 
@@ -106,7 +106,6 @@ We need to split this data into two groups for training model: training and vali
 * The remaining images (10% of the full data) will be saved in the folder `/validation/`.
 
 For the inference dataset, you can use any images with people wearing mask.
-
 
 
 Under the working directory create the following python file `split_data.py`.&#x20;
