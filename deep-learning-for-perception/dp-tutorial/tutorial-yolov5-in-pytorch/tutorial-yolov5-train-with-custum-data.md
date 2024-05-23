@@ -197,7 +197,7 @@ print("finished")
 
 Run the following script and check your folders
 
-![](https://user-images.githubusercontent.com/38373000/169472524-dd3c5043-e560-479a-aed5-74354c447a58.png)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/d56a07b8-a671-4df9-85c7-4637532dc493)
 
 ## Step 4. Training configuration file
 
