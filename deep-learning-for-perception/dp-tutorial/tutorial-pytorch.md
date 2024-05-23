@@ -70,7 +70,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 * T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T4\_1\_Inference\_using\_Pretrained\_YOLOv5\_with\_COCO\_2022.ipynb) (in CoLab)
 * T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
-* T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
+* T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolo-in-pytorch/tutorial-yolov5-train-with-custum-data/) (in VS Code, Local PC)
 
 ***
 
