@@ -98,4 +98,4 @@ You must create a demo video that shows the bounding box of the cars within the 
 
 1. Demo Video
 
-* Video file named as : `DLIP_LAB_PARKING_VIDEO_21700000_홍길동_21800000_김한동`
+* Video file named as : `DLIP_LAB_PARKING_VIDEO_21700000_홍길동`
