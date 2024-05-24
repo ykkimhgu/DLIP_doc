@@ -96,6 +96,6 @@ You must create a demo video that shows the bounding box of the cars within the 
   * src (source codes under `/src` folder)
   * counting\_result.txt
 
-1. Demo Video
+2. Demo Video
 
 * Video file named as : `DLIP_LAB_PARKING_VIDEO_21700000_홍길동`
