@@ -89,7 +89,7 @@ You must create a demo video that shows the bounding box of the cars within the 
 
 1. Zip file of report and codes
 
-* Zip file named as : `DLIP_LAB_PARKING_21700000_홍길동_21800000_김한동.zip`
+* Zip file named as : `DLIP_LAB_PARKING_21700000_홍길동.zip`
 * The Zip file includes
   * Report (\*.md) or ( \* .ipynb)
   * Report (\*.pdf)
