@@ -1,5 +1,5 @@
 ---
-description: (updated 2021.2).   Under construction
+description: (updated 2024.2).  
 ---
 
 # Introduction
@@ -23,7 +23,8 @@ After taking this course, students will be able to build their own program for
 * Road lane detection 
 * Vehicle/Pedestrian detection 
 * Face recognition
-* Defect Inspection and more
+* Defect Inspection
+* and more
 
 ### **Lecture Syllabus**
 
@@ -59,12 +60,13 @@ After taking this course, students will be able to build their own program for
 * Tutorial: LeNet
 * Tutorial: AlexNet
 * Tutorial: AlexNet with Customized Dataset
+* Tutorial: YOLOv8
 
 ### **LAB**
 
 * LAB: Object Segmentation in Grayscale Image
 * LAB: Object Segmentation in Color Image
-* LAB: Lane Detection
-* LAB: Object Detection \(Vehicle /Pedestrian\)
-* LAB: Object Recognition or Detection \(Custom dataset\)
+* LAB: Industrial Problem 
+* LAB: CNN Object Detection \(Vehicle /Pedestrian\)
+* LAB: CNN Object Detection  \(Custom dataset, Free Topic\)
 
