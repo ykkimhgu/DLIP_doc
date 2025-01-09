@@ -94,7 +94,7 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
     <figure><img src="https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png" alt=""><figcaption></figcaption></figure>
 * First, update conda
 
-```
+```bash
 conda update -n base -c defaults conda
 ```
 
@@ -102,7 +102,7 @@ conda update -n base -c defaults conda
 
 * Then, Create virtual environment for Python 3.9. Name the $ENV as `py39`. If you are in base, enter `conda activate py39`
 
-```
+```bash
 conda create -n py39 python=3.9.12
 ```
 
@@ -110,7 +110,7 @@ conda create -n py39 python=3.9.12
 
 * After installation, activate the newly created environment
 
-```
+```bash
 conda activate py39
 ```
 
@@ -120,7 +120,7 @@ conda activate py39
 
 #### Install Numpy, OpenCV, Matplot, Jupyter
 
-```
+```bash
 conda activate py39
 conda install -c anaconda seaborn jupyter
 pip install opencv-python
@@ -165,7 +165,7 @@ See here for install instructions of Previous PyTorch Versions [PyTorch Previous
 
 **Without GPU(Only CPU)**
 
-```
+```bash
 # CPU Only - PyTorch 2.1
 conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 cpuonly -c pytorch
 pip install opencv-python torchsummary
@@ -181,7 +181,7 @@ pip install opencv-python torchsummary
 
 For DLIP 2024
 
-```
+```bash
 # CUDA 11.8
 conda activate py39
 
@@ -192,7 +192,7 @@ pip install opencv-python torchsummary
 
 For DLIP 2022
 
-```
+```bash
 # CUDA 10.2
 conda install -c anaconda cudatoolkit==10.2.89 cudnn seaborn jupyter
 conda install pytorch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 cudatoolkit=10.2 -c pytorch
@@ -201,11 +201,11 @@ pip install opencv-python torchsummary
 
 Check the pytorch and torchvision are cuda versions when installing
 
-![image](https://user-images.githubusercontent.com/23421059/169194229-7f18983a-de83-483c-9399-f907b9bc5e1f.png)
+![](https://user-images.githubusercontent.com/23421059/169194229-7f18983a-de83-483c-9399-f907b9bc5e1f.png)
 
 **Check GPU in PyTorch**
 
-```
+```bash
 conda activate py39
 python
 import torch
@@ -224,7 +224,7 @@ If your result is,
 
 **Check Package Versions in Conda**
 
-```c
+```bash
 # check all lists
 conda list
 
@@ -241,7 +241,7 @@ You can read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/ins
 * install tensorflow-gpu 2.3.0 packages
 * install keras
 
-```c
+```bash
 conda create -n py37tf23 python=3.7
 conda activate py37tf23 
 conda install tensorflow-gpu=2.3.0
@@ -291,7 +291,7 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 
 If this does not work, then you need to Re-Install the Conda Environment. Then, Update CONDA then create Environment again.
 
-```c
+```bash
 # $myenv = py39
 
 # To keep the environment but remove all packages
