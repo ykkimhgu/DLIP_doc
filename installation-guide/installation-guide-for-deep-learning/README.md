@@ -38,7 +38,7 @@ The installation is divided by two parts
 
 #### DLIP 2024-1
 
-```cmd
+```bash
 # Install Anaconda from website
 
 # Update CONDA in Base
@@ -106,7 +106,7 @@ conda update -n base -c defaults conda
 conda create -n py39 python=3.9.12
 ```
 
-![image](https://user-images.githubusercontent.com/23421059/169187275-6699f8ee-a4fc-449e-97d5-c087439d0098.png)
+![](https://user-images.githubusercontent.com/23421059/169187275-6699f8ee-a4fc-449e-97d5-c087439d0098.png)
 
 * After installation, activate the newly created environment
 
@@ -114,7 +114,7 @@ conda create -n py39 python=3.9.12
 conda activate py39
 ```
 
-![image](https://user-images.githubusercontent.com/23421059/169187341-0aaa7552-fac3-43fe-9702-66321c67fc06.png)
+![](https://user-images.githubusercontent.com/23421059/169187341-0aaa7552-fac3-43fe-9702-66321c67fc06.png)
 
 ### Step 3. Install Libs
 
@@ -215,7 +215,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 The result should be `cuda` as shown.
 
-![image](https://user-images.githubusercontent.com/23421059/169334629-c98a3b0a-79d0-48cd-9d41-7e7062ae1870.png)
+![](https://user-images.githubusercontent.com/23421059/169334629-c98a3b0a-79d0-48cd-9d41-7e7062ae1870.png)
 
 If your result is,
 
@@ -262,7 +262,7 @@ conda install keras
 * check whether `pytorch` is the `cuda` version
 * If it is not the same as the figure, re-install. else go to **SOLUTION 2**
 
-![image](https://user-images.githubusercontent.com/23421059/169206326-5b2dbf23-f091-404f-b814-8f75fe6b3db2.png)
+![](https://user-images.githubusercontent.com/23421059/169206326-5b2dbf23-f091-404f-b814-8f75fe6b3db2.png)
 
 #### SOLUTION 2) NVIDIA graphics driver update
 
@@ -283,9 +283,9 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 
 ### Q3. Conda Error: ClobberError: This has incompatible packages due to a shared path, CondaVerification Error
 
-![image](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/ac5b1213-384b-4a7e-a87d-ae2aba3c54db)
+![](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/ac5b1213-384b-4a7e-a87d-ae2aba3c54db)
 
-![image](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/6e1f6aea-3859-420c-9dc7-a8ceb521734e)
+![](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/6e1f6aea-3859-420c-9dc7-a8ceb521734e)
 
 #### Go to Solution of Q2
 
@@ -303,10 +303,10 @@ conda remove --all
 
 ### Q4. Build Error in VS Code ( Numpy C-extension failed)
 
-![image](https://user-images.githubusercontent.com/23421059/169334729-b2081cdf-d51d-414f-a550-8c299fa3c56c.png)
+![](https://user-images.githubusercontent.com/23421059/169334729-b2081cdf-d51d-414f-a550-8c299fa3c56c.png)
 
 #### SOLUTION ) Default Profile Setting in CODE
 
 `F1`키를 눌러 `select default profile`을 검색 후 클릭 → `command prompt`를 선택합니다.
 
-![image](https://user-images.githubusercontent.com/23421059/169261544-f5b2d98a-5e0f-49f0-9e19-2e5a75c705ba.png)
+![](https://user-images.githubusercontent.com/23421059/169261544-f5b2d98a-5e0f-49f0-9e19-2e5a75c705ba.png)
