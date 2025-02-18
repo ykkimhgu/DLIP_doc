@@ -1,74 +1,57 @@
-# Tips
+# Python Tutorial - Tips
 
-## List vs tuple vs dictionary in Python
+## if \_\_name\_\_=="\_main\_"
 
-**List**
 
-* A list is a mutable, ordered sequence of items.
-* List variables are declared by using brackets `[ ]`
-* The list elements can be anything and each list element can have a completely different type. This is not allowed in arrays. Arrays are objects with definite type and size
 
-```python
-A = [ ] # This is a blank list variable
-B = [2, 4, 'john'] # lists can contain different variable types.
-```
+모듈이 **직접 실행**되었는지 혹은  **import** 되었는지 아닌지 판단할 때 `__name__` 변수의 값을 사용합니다.
 
-**Tuple**
 
-* Similar to list, but _immutable_ like strings i.e. you cannot modify tuples
-* Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences.
-* can be used as the _key_ in Dictionary
-* tuple is declared in parentheses **( )**
+
+일반적으로, 모듈은 직접 실행되거나 다른 모듈에서 import 되어 사용됩니다. 만약 모듈이 직접 실행되면, `__name__` 변수는 문자열`"__main__"`이 할당됩니다. 반대로, 모듈이 import 되어 사용될 때는,`__name__`변수는 해당 모듈의 이름(파일명)이 할당됩니다.
+
+따라서, `__name__` 변수의 값을`"__main__"`과 비교하면 현재 모듈이 직접 실행되는지(import 되는지)를 판단할 수 있습니다. 따라서 코드를 if`name == "main"로`감싸면, 해당 파일이 모듈로 사용될 때는 실행되지 않고, 직접 실행될 때만 실행됩니다.
+
+**장점:**
+
+* 모듈로 사용될 때는 코드가 실행되지 않으므로, 다른 모듈에서 해당 모듈을 import 할 때 발생할 수 있는 부작용을 방지할 수 있습니다.
+* 모듈을 개발할 때, 테스트 코드를 추가하고 싶을 때,`if name == "main":`구문을 활용하여, 해당 모듈을 직접 실행할 때만 테스트 코드가 실행되도록 할 수 있습니다.
 
 ```python
-tupleA = (1, 2, 3, 4)
-person=(‘ABC’,’admin’,’12345')
+# calc.py
+def add(a, b):
+    return a + b 
+def mul(a, b):
+    return a * b
 
-# This gives error:  'tuple' cannot be assigned
-tupleA[2] = 5
+print('calc.py __name__:', __name__)    # __name__ 변수 출력 
+if __name__ == '__main__':    # 프로그램의 시작점일 때만 아래 코드 실행
+    print(add(10, 20))
+    print(mul(10, 20))
+    
+
+
+
+# cal_main.py
+import calc
+print('calc_main.py __name__:', __name__)    # __name__ 변수 출력
+calc.add(50, 60)
 ```
-
-**Dictionary**
-
-* A dictionary is a **key:value** pair, like an address-book. i.e. we associate _keys_ (name) with _values_ (details).
-* written with curly brackets { }
-* A colon (:) separates each **key** from its **value**.
-* the key must be unique and immutable (tuples, not list)
 
 ```python
-# Python 3
-my_dict = {1: 'one', 2: 'two', 3: 'three'}
-my_dict.keys() 
-# dict_keys([1, 2, 3])
-my_dict.values()
-# dict_values(['one', 'two', 'three'])
+## calc.py 실행시
+# 실행결과
+calc.py __name__: calc
+30
+200
+
+
+## calc_main.py 실행시
+calc_main.py __name__: calc_main
+110   # >>> calc.add(50, 60)
 ```
 
-## Dictionary in Python
 
-### Create a dictionary with dict() constructor
-
-```python
-# create a dictionary using two list
-students = ['Amanda', 'Teresa', 'Paula', 'Mario']
-ages = [27, 38, 17, 40]
-
-# zip method --> iterator of tuples --> dict method --> dictionary
-students_ages = dict(zip(students, ages))
-print(students_ages)
-# {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
-
-
-# create a dictionary with dict() function using keyword arguments
-# dictionary - ages of students
-students_ages = dict(Amanda=27, Teresa=38, Paula=17, Mario=40)
-print(students_ages)
-# {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
-
-
- students_ages = {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}
- print(students_ages)
-```
 
 ## Class in Python
 
@@ -125,19 +108,21 @@ Output:
 This property has 2 rooms with 2 bathrooms
 ```
 
-## Index of array
+## NP Array
 
-### .shape
+###
+
+### Reshaping arrays
+
+#### .shape
 
 input\_tensor.shape\[-1] # get value of the last index of shape
-
-## Reshaping arrays
 
 source:[ read here](https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b)
 
 ![source click here](<../../.gitbook/assets/image (9).png>)
 
-## Stacking 2D data to 3D data
+### Stacking 2D data to 3D data
 
 ```python
  # change to  [rows][cols][channels] for Keras
