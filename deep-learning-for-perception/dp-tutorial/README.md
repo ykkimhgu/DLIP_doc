@@ -1,11 +1,9 @@
-# DLIP Tutorial 
+# Tutorial - PyTorch
 
 DLIP Tutorial for Deep Learning
 
-## Tutorial: Python and Numpy 
+## Tutorial: Python and Numpy
 
 ## Tutorial: PyTorch
 
-## Tutorial: Keras
-
-
+##
