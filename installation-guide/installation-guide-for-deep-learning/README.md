@@ -10,6 +10,7 @@ description: Installation Guide for Deep Learning 2024
 
 This installation guide is for programming deep-learning application using Pytorch
 
+### DLIP 2024-1
 Make sure you install the correct software version as instructed.
 
 > For DLIP 2024 Lecture:
@@ -18,25 +19,6 @@ Make sure you install the correct software version as instructed.
 > * PyTorch 2.0.x
 > * Anaconda for Python 3.9 or Anaconda of Latest Version
 
-> For DLIP 2022 Lecture:
->
-> * Python 3.9, CUDA 10.2, cuDNN 7.6
-> * PyTorch 1.9.1
-> * Anaconda for Python 3.9 or Anaconda of Latest Version
-
-#### for MacOS
-
-(To be Updated)
-
-The installation is divided by two parts
-
-1. Installing Python Environment
-2. Installing Graphic Card and CUDA
-3. Installing DL Framework (PyTorch, etc)
-
-### Summary
-
-#### DLIP 2024-1
 
 ```bash
 # Install Anaconda from website
@@ -71,17 +53,35 @@ conda list all
 
 ```
 
+
+
+> For DLIP 2022 Lecture:
+>
+> * Python 3.9, CUDA 10.2, cuDNN 7.6
+> * PyTorch 1.9.1
+> * Anaconda for Python 3.9 or Anaconda of Latest Version
+
+#### for MacOS
+
+(To be Updated)
+
+The installation is divided by two parts
+
+1. Installing Python Environment
+2. Installing Graphic Card and CUDA
+3. Installing DL Framework (PyTorch, etc)
 ***
+
 
 ## Part 1. Installing Python Environment
 
-### Step 1. Install Anaconda
+### Step 1-1. Install Anaconda
 
 **Anaconda** : Python and libraries package installer.
 
 Follow: [How to install Anaconda](https://ykkim.gitbook.io/dlip/installation-guide/anaconda#conda-installation)
 
-### Step 2. Install Python
+### Step 1-2. Install Python
 
 > Python 3.9 (2022-1)
 
@@ -114,7 +114,7 @@ conda activate py39
 
 ![](https://user-images.githubusercontent.com/23421059/169187341-0aaa7552-fac3-43fe-9702-66321c67fc06.png)
 
-### Step 3. Install Libs
+### Step 1-3. Install Libraries
 
 #### Install Numpy, OpenCV, Matplot, Jupyter
 
@@ -124,7 +124,7 @@ conda install -c anaconda seaborn jupyter
 pip install opencv-python
 ```
 
-#### Step 4. Install Visual Studio Code
+## Part 2. Install Visual Studio Code
 
 Follow: [How to Install VS Code](../ide/vscode/#installation)
 
@@ -135,9 +135,9 @@ Also, read about
 
 ***
 
-## Part 2. Installing Graphic Card and CUDA
+## Part 3. Installing Graphic Card and CUDA
 
-### Step 5. Install GPU Driver, CUDA, cuDNN
+### Step 3-1. Install GPU Driver, CUDA, cuDNN
 
 Skip this if you do not have GPU card.
 
@@ -151,13 +151,13 @@ Follow [How to install Driver, CUDA and cuDNN](../cuda-installation/)
 
 ***
 
-## Part 3. Installing DL Framework
+## Part 4. Installing DL Framework
 
 * **TensorFlow** — DL library, developed by Google.
 * **Keras** — DL wrapper with interchangeable backends. Can be used with TensorFlow, Theano or CNTK.
 * **PyTorch** — Dynamic DL library with GPU acceleration.
 
-### Step 6. Install Pytorch
+### Step 4-1. Install Pytorch
 
 See here for install instructions of Previous PyTorch Versions [PyTorch Previous-Version](https://pytorch.org/get-started/previous-versions/)
 
@@ -232,7 +232,7 @@ conda list | findstr "torch"
 
 You can read more [about PyTorch installation](https://ykkim.gitbook.io/dlip/installation-guide/framework/pytorch)
 
-### Other Option: Install Tensorflow and Keras
+### Step 4-2 Other Option (Tensorflow and Keras)
 
 * Run 'Anaconda Prompt(admin)'
 * Activate virtual environment
