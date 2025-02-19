@@ -1,12 +1,12 @@
 ---
-description: Installation Guide for Deep Learning 2022
+description: Installation Guide for Deep Learning 2024
 ---
 
-# Installation Guide
+# Installation Guide for Pytorch
 
 ## Installation Guide
 
-(updated 2022.4) (updated 2024.4)
+(updated 2024.4)
 
 This installation guide is for programming deep-learning application using Pytorch
 
@@ -88,8 +88,6 @@ Follow: [How to install Anaconda](https://ykkim.gitbook.io/dlip/installation-gui
 Python is already installed by installing Anaconda. But, we will make a virtual environment for a specific Python version.
 
 *   Open Anaconda Prompt(admin mode)
-
-
 
     <figure><img src="https://user-images.githubusercontent.com/23421059/169198062-246162fb-1e21-4d63-9377-a50bf75ef060.png" alt=""><figcaption></figcaption></figure>
 * First, update conda
@@ -248,8 +246,6 @@ conda install tensorflow-gpu=2.3.0
 conda install keras
 ```
 
-
-
 ***
 
 ## Troubleshooting
@@ -283,9 +279,9 @@ If the NVIDIA graphics driver is not installed or if it is an older version, the
 
 ### Q3. Conda Error: ClobberError: This has incompatible packages due to a shared path, CondaVerification Error
 
-![](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/ac5b1213-384b-4a7e-a87d-ae2aba3c54db)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/ac5b1213-384b-4a7e-a87d-ae2aba3c54db)
 
-![](https://github.com/ykkimhgu/DLIP\_doc/assets/38373000/6e1f6aea-3859-420c-9dc7-a8ceb521734e)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/6e1f6aea-3859-420c-9dc7-a8ceb521734e)
 
 #### Go to Solution of Q2
 

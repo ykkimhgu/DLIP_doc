@@ -1,16 +1,18 @@
-# Tutorial: Installation for OpenCV C++
+# Tutorial: Install OpenCV C++
 
-## Overview
+##
 
-Before this course starts, you have to install the following software for OpenCV C++
+## Step 1. Installing Visual Studio Community 2022&#x20;
 
-## Installing Visual Studio Community 2022
+higher version is also acceptable
+
+> Install Visual Studio Community.  It is NOT Visual Studio CODE !!!
 
 {% embed url="https://ykkim.gitbook.io/dlip/installation-guide/ide/visual-studio-community" %}
 
-> It is Visual Studio Community, NOT Visual Studio Code. You may use older version of VSC
 
-## Installing OpenCV 4.9.0 with Visual Studio 2022
+
+## Step 2. Installing OpenCV 4.9.0 (or higher)&#x20;
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/opencv/opencv-install" %}
 
@@ -18,6 +20,10 @@ Before this course starts, you have to install the following software for OpenCV
 
 ## For Mac OS user
 
-* Xcode and OpenCV C++ : [instruction](installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md)
+{% content-ref url="../../installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md" %}
+[macos-opencv-c++-in-xcode.md](../../installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md)
+{% endcontent-ref %}
 
-> Window OS is recommended for this course. You can use Visual Studio Code (MacOS) for C++ programming, but it is not recommended because you need to compile and run separately.
+> Window OS is recommended for this course.&#x20;
+>
+> You can use Visual Studio Code (MacOS) for C++ programming, but it is not recommended because you need to compile and run separately.
