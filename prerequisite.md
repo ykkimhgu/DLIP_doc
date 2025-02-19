@@ -22,7 +22,7 @@ You are required to follow the software installation instructions before class s
 
 ## Basics of C++/Python&#x20;
 
-### C++ Programming
+### 1. C++ Programming
 
 Don't worry if you do not know about C++, as long as you have some experience with C programming. We will learn the basics of C++ programming in class through several tutorials.
 
@@ -34,7 +34,7 @@ Recommended sites for C++ tutorials
 
 • [TCPschool.com](http://www.tcpschool.com/cpp/intro)
 
-### Python Programming
+### 2. Python Programming
 
 Also, don't worry if you do not know about Python programming.
 
