@@ -2,7 +2,7 @@
 
 ##
 
-## Step 1. Installing Visual Studio Community 2022&#x20;
+## Step 1. Install Visual Studio Community 2022&#x20;
 
 higher version is also acceptable
 
@@ -12,13 +12,18 @@ higher version is also acceptable
 
 
 
-## Step 2. Installing OpenCV 4.9.0 (or higher)&#x20;
+## Step 2. Install OpenCV 4.9.0 (or higher)&#x20;
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/opencv/opencv-install" %}
 
 > OpenCV 3.x is also acceptable
 
-## For Mac OS user
+
+## Step 3. Create an OpenCV Project 
+
+
+
+# For Mac OS user
 
 {% content-ref url="../../installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md" %}
 [macos-opencv-c++-in-xcode.md](../../installation-guide/opencv/opencv-install/macos-opencv-c++-in-xcode.md)
