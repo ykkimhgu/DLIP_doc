@@ -1,7 +1,5 @@
 # Tutorial: C++ basics for OpenCV
 
-## Tutorial: C++ basics
-
 Deep Learning Image Processing. Updated. 2024.2
 
 # I. Introduction
@@ -19,6 +17,7 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
 **OpenCV Example Code**
+
 Image File Read / Write / Display
 
 ```cpp
@@ -50,7 +49,7 @@ int main()
 }
 ```
 
-## C++ for OpenCV
+## OpenCV-C++ 
 
 OpenCV is provided in C++, Python, Java. We will learn how to use OpenCV in
 
@@ -67,7 +66,7 @@ For C++, we need to learn
 
 ## C++ 
 
-C++ is a general-purpose programming language created by Bjarne Stroustrup as an **extension of the C programming language**. C++ is portable and can be used to develop applications that can be adapted to multiple platforms. You can see basic C++ tutorials in following site,
+C++ is a general-purpose programming language created by Bjarne Stroustrup as an **extension of the C programming language**. C++ is portable and can be used to develop applications adapted to multiple platforms. You can see basic C++ tutorials on following site,
 
 * [https://www.w3schools.com/cpp/](https://www.w3schools.com/cpp/)
 * [https://www.cplusplus.com/doc/tutorial/variables/](https://www.cplusplus.com/doc/tutorial/variables/)
@@ -77,13 +76,11 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 
 # Project Workspace Setting
 
-Create the lecture workspace as **C:\Users\yourID\source\repos**
+Create the lecture workspace as **C:\Users\yourID\source\repos\DLIP**
 
-* e.g. `C:\Users\ykkim\source\repos`
+* e.g. `C:\Users\ykkim\source\repos\DLIP`
 
 Then, create sub-directories such as :
-
-* `C:\Users\yourID\source\repos\DLIP`
 
 * `C:\Users\yourID\source\repos\DLIP\Tutorial`
 
@@ -294,7 +291,8 @@ OpenCV provides the Mat class for operating multi dimensional images
 ![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/57b39eb8-1ad7-4d86-9229-21ff7a7fe2b9)
 
 **Example**
-Printing out informations about the source image using OpenCV
+
+Printing out information about the source image using OpenCV
 
 ```cpp
 #include "opencv.hpp"
@@ -331,6 +329,7 @@ int main(int argc, char* argv[])
 
 
 ## Exercise 2
+### Create a Class 'MyNum'
 
 1. Create a new C++ project in Visual Studio Community
 * Project Name: `DLIP_Tutorial_C++_Ex2`
@@ -339,13 +338,14 @@ int main(int argc, char* argv[])
 2. Create a new C+ source file
 * File Name: `DLIP_Tutorial_C++_Ex2.cpp`
   
-
-### Create a Class 'MyNum'
 3. Modify the header file `TU_DLIP.h` and `TU_DLIP.cpp` to declare a class member named as **MyNum**.
 * Constructor : MyNum()
-* Member variables: val1, val2 		// integer type
-* Member functions: int sum() 		// returns the sum of val1 and val2
-* Member functions: void print() 	// prints values of **val1, val2, and sum**
+* Member variables: val1, val2
+  ** integer type
+* Member functions: int sum()
+  ** returns the sum of val1 and val2
+* Member functions: void print()
+  ** prints values of **val1, val2, and sum**
 
 
 4. Then, compile and run the program. 
