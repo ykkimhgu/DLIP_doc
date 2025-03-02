@@ -18,7 +18,7 @@ C: opencv-3.4.7 폴더를 새롭게 만든 후에 opencv 설치 파일 압축풀
 
 Path 설정 완료되면 컴퓨터 재부팅
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)
 
 #### OpenCV Visual Studio 프로젝트 설정 및 속성시트(Property sheet)만들기
 
@@ -64,7 +64,7 @@ Visual Studio 201x 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
 
 ![](<../../../.gitbook/assets/image (12).png>)
 
-![](<../../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 **공용 속성> 링커 > 입력 > 추가 종속성> 편집** Click
 

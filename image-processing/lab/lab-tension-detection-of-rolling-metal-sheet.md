@@ -8,7 +8,7 @@ The tension in the rolling process can be derived by measuring the curvature lev
 
 The surface of the chamber and the metal sheet are both specular reflective that can create virtual objects in the captured images. You need to design a series of machine vision algorithms to clearly detect the edge of the metal sheet and derive the curvature and tension level.
 
-![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/fc1002ef-e283-4b91-a3ce-b480244cb2b0)
 
 ### Problem Conditions
 
@@ -24,18 +24,15 @@ The surface of the chamber and the metal sheet are both specular reflective that
   * Score: y-position \[px] of the curvature vertex from the bottom of the image
   * Curvature edge
 * Your algorithm will be evaluated on similar test images
-*   You can choose either simple images or challenging images
-
-    * Challenging images: You will get up to 15% higher points
-
-
+* You can choose either simple images or challenging images
+  * Challenging images: You will get up to 15% higher points
 
 ### Dataset
 
 Download the test images of
 
-* [Simple dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB\_Tension\_Detection\_dataset/Simple\_Dataset.zip)
-* [Challenging dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB\_Tension\_Detection\_dataset/Challenging\_Dataset.zip)
+* [Simple dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB_Tension_Detection_dataset/Simple_Dataset.zip)
+* [Challenging dataset](https://github.com/ykkimhgu/DLIP-src/blob/1d4183c65fb41d2ed5bf093c526c7ef49afa2d8e/LAB_Tension_Detection_dataset/Challenging_Dataset.zip)
 * [Video](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB_Tension_Detection_dataset/LAB3_Video.mp4)
 
 ## II. Procedure
@@ -48,7 +45,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 #### Download dataset images
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095536121.png)
 
@@ -59,7 +56,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095524759.png)
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Apply Pre-processing such as filtering
 
@@ -72,7 +69,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 * HINT: you need to eliminate other objects besides the metal sheet's edge as much as possible
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095650794.png)
 
@@ -82,7 +79,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
     ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095500780.png)
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Measure the curvature's vertex (minimum point of Y-axis \[px] ) as the tension SCORE .
 
