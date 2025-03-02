@@ -1,4 +1,4 @@
-# Install and Setup
+# OpenCV Install and Setup
 
 ## Installing OpenCV 4.9.0 with Visual Studio 2022
 
@@ -19,8 +19,6 @@ Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 ![](<../../../.gitbook/assets/image (26) (1).png>)
 
 **‘시스템 변수’** 항목에 있는 변수 명 중 **Path**를 찾아 **편집**
-
-
 
 ![](https://user-images.githubusercontent.com/38373000/156104553-0419d61a-4eb9-4a1b-864d-33fa093108a7.png)
 
@@ -64,7 +62,7 @@ Visual Studio 2022 실행 후
 
 ***
 
-**속성관리자 창**:  **Debug | x64** > `opencv-3.4.13_debug_x64` double click
+**속성관리자 창**: **Debug | x64** > `opencv-3.4.13_debug_x64` double click
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7f75af32-f023-4588-93bf-33c47f2f0490)
 
@@ -136,127 +134,15 @@ Visual Studio 2022 실행 후
 
 위 설정 완료 후 반드시 `opencv-4.9.0_release_x64` 저장
 
-## OpenCV VS프로젝트 만들기
+##
 
-Visual Studio 2022 실행 후 '**파일> 새로 만들기> 프로젝트 선택**
+## Demo Program
 
-**Visual C++ > 빈 프로젝트** : 프로젝트 이름 **opencv\_simple\_demo** 입력 후 만들기
+Follow the Tutorial: Create OpenCV Project&#x20;
 
-### Project Property Sheet 설정
+{% content-ref url="../../../image-processing/tutorial/tutorial-create-opencv-project.md" %}
+[tutorial-create-opencv-project.md](../../../image-processing/tutorial/tutorial-create-opencv-project.md)
+{% endcontent-ref %}
 
-**메뉴>보기>다른 창>속성 관리자** 선택
 
-**속성 관리자 창 > 프로젝트명** > **Debugx64** : RightClick.
 
-**'기존 속성 시트 추가**' 선택 후 앞에서 저장된 **Property Sheet** " **opencv-4.9.0\_debug\_x64.props "** 를 추가
-
-동일한 과정 **Release|x64** 항목에서 **Property Sheet** " **opencv-4.9.0\_release\_x64.props "** 를 추가
-
-![](<../../../.gitbook/assets/image (52).png>)
-
-![](<../../../.gitbook/assets/image (57).png>)
-
-![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/cebf8418-4f40-4f23-b9a8-1c94df38de0a)
-
-### 소스파일 만들기
-
-**보기 – 솔루션탐색기 > \[프로젝트] > 소스 파일 > 추가 > 새항목 > 모든 템플릿 표시** click
-
-C++파일(cpp) 선택 후 **opencv\_simple\_demo.cpp 생성**
-
-![](<../../../.gitbook/assets/image (48).png>)
-
-![](<../../../.gitbook/assets/image (45).png>)
-
-구성 관리자를 **Debug x64**로 설정 후 아래 코드를 입력.
-
-디버깅하지 않고 시작 (CTRL+F5)
-
-![](<../../../.gitbook/assets/image (59).png>)
-
-**Demo 코드 1**: Image File Read
-
-* 이미지 파일 다운로드: [Click here](https://github.com/ykkimhgu/DLIP-src/blob/main/tutorial-install/testImage.JPG)
-
-> 이미지 파일과 소스코드가 동일 폴더에 있어야 함!!
-
-```cpp
-#include <opencv.hpp>
-#include <iostream>
-
-using namespace cv;
-using namespace std;
-
-//* @function main
-int main()
-{
-Mat src;
-
-src = imread("testImage.jpg", 1);/// Load an image
-
-if (src.empty())/// Load image check
-{
-cout << "File Read Failed : src is empty" << endl;
-waitKey(0);
-}
-
-/// Create a window to display results
-namedWindow("DemoWIndow", WINDOW_AUTOSIZE); //WINDOW_AUTOSIZE(1) :Fixed Window, 0: Unfixed window
-
-if (!src.empty())imshow("DemoWIndow", src); // Show image
-
-waitKey(0);//Pause the program
-return 0;
-}
-```
-
-Expected Output
-
-![](<../../../.gitbook/assets/image (66).png>)
-
-***
-
-**Demo 코드 2:** Camera Open and capture
-
-```cpp
-#include "opencv.hpp"
-#include <iostream>
-
-using namespace cv;
-using namespace std;
-
-int main(int argc, char* argv[])
-{
-    VideoCapture cap(0); // open the video camera no. 0
-
-    if (!cap.isOpened())  // if not success, exit program
-    {
-        cout << "Cannot open the video cam" << endl;
-        return -1;
-    }
-   namedWindow("MyVideo",WINDOW_AUTOSIZE); //create a window called "MyVideo"
-
-    while (1)
-    {
-        Mat frame;
-        bool bSuccess = cap.read(frame); // read a new frame from video
-         if (!bSuccess) //if not success, break loop
-        {
-             cout << "Cannot read a frame from video stream" << endl;
-             break;
-        }
-        imshow("MyVideo", frame); //show the frame in "MyVideo" window
-
-        if (waitKey(30) == 27) //wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop
-       {
-            cout << "esc key is pressed by user" << endl;
-            break; 
-       }
-    }
-    return 0;
-}
-```
-
-Expected Output
-
-![](<../../../.gitbook/assets/image (81).png>)
