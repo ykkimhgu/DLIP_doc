@@ -68,8 +68,8 @@ For C++, we need to learn
 
 C++ is a general-purpose programming language created by Bjarne Stroustrup as an **extension of the C programming language**. C++ is portable and can be used to develop applications adapted to multiple platforms. You can see basic C++ tutorials on following site,
 
-* [https://www.w3schools.com/cpp/](https://www.w3schools.com/cpp/)
-* [https://www.cplusplus.com/doc/tutorial/variables/](https://www.tcpschool.com/cpp/cpp_intro_program)
+* [www.w3schools.com](https://www.w3schools.com/cpp/)
+* [www.tcpschool.com](https://www.tcpschool.com/cpp/cpp_intro_program)
  
 ---
 
