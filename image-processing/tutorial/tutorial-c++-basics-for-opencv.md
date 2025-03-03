@@ -69,7 +69,7 @@ For C++, we need to learn
 C++ is a general-purpose programming language created by Bjarne Stroustrup as an **extension of the C programming language**. C++ is portable and can be used to develop applications adapted to multiple platforms. You can see basic C++ tutorials on following site,
 
 * [https://www.w3schools.com/cpp/](https://www.w3schools.com/cpp/)
-* [https://www.cplusplus.com/doc/tutorial/variables/](https://www.cplusplus.com/doc/tutorial/variables/)
+* [https://www.cplusplus.com/doc/tutorial/variables/](https://www.tcpschool.com/cpp/cpp_intro_program)
  
 ---
 
@@ -940,6 +940,12 @@ void cvtGray(cv::Mat color, cv::Mat gray)
 	cv::imshow("inside_function", gray);
 }
 ```
+## Exercise 
+Do the exercises in 
+
+[Overloading exercise](https://www.w3schools.com/cpp/cpp_function_overloading.asp)
+
+---
 
 # Default Parameter
 
@@ -994,6 +1000,12 @@ void swap(int *a, int *b) {
 	*b = temp;
 }
 ```
+## Exercise 
+Do the exercises in 
+
+[Pointer Exercises](https://www.w3schools.com/cpp/cpp_pointers.asp)
+
+---
 
 # Reference
 Reference can replace the use of pointer **\***
@@ -1048,3 +1060,10 @@ int main(void){
 	return 0;
 }
 ```
+
+## Exercise 
+Do the exercise in 
+
+[Reference Exercises](https://www.w3schools.com/cpp/cpp_references.asp)
+
+
