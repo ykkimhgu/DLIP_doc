@@ -714,8 +714,7 @@ Write a code to create the following image datasets from the original image (464
 * Try to use pixel accesssing to create output images.
 * HINT: Use the outputs from the previous Exercises.
 
-![Image](https://github.com/user-attachments/assets/f91f7e9f-35b7-4a64-8424-eb94e78c5905)
-
+![Image](https://github.com/user-attachments/assets/696c8ea5-95af-4985-badc-5e02bd89d195)
 
 Assignment Setup
    * Project Name: `DLIP_Assignment_OpenCV_Basics`
