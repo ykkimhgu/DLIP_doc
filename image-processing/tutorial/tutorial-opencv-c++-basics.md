@@ -250,13 +250,22 @@ int main()
 {% endtabs %}
 
 # Exercise 1
-## Flip horizontally of the original image
-Here's the code to flip the original HGU_logo image horizontally using the OpenCV flip function. Please refer to the documentation below to find more details about `cv::flip()`
-
+## Flip horizontally, Rotate, Resize and Crop of the original image
+> Everytime you use OpenCV, you must use documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+> 
+For flipping an image, find more details about `cv::flip()`
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2dd5d517-8785-4ce8-adcc-13b72245d975)
 
-**You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
+Crop (ROI)
+![Image](https://github.com/user-attachments/assets/0252ff49-39ba-44d1-bd5e-ea0b8bd213b5)
+
+Rotate (45deg CW)
+![Image](https://github.com/user-attachments/assets/6de74772-2e45-4582-8152-ccf73eb0a7f3)
+
+Resize (by half)
+![Image](https://github.com/user-attachments/assets/ed5af4d8-ce68-487d-99fa-c0eec663c883)
+
 
 0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
 
@@ -289,7 +298,11 @@ int main()
 	// Add code here
 
 	/* Flip src image
-	// Add code here
+	// Add code here and show image
+
+	/*  Crop(Region of Interest)  original image */
+	// Add code here and show image
+
 
 	/*  Show source(src) and destination(dst)  */
 	// Add code here
@@ -690,3 +703,31 @@ int main()
 ```
 {% endtab %}
 {% endtabs %}
+
+
+# Assignment (1 week)
+## Creating a new dataset of training images
+In pre-processings of generating datasets of images, we usually maintain the same image size as the original but various apply geometric transformation such as cropping, translation and resizing.
+
+Write a code to create the following image datasets from the original image (464x480 px). 
+* All output images for this assignment must be the same sized(464x480 px).
+* Try to use pixel accesssing to create output images.
+* HINT: Use the outputs from the previous Exercises.
+
+
+Assignment Setup
+   * Project Name: `DLIP_Assignment_OpenCV_Basics`
+   * Project Folder: `~\DLIP\Assignment\`
+   * File Name: `DLIP_Assignment_OpenCV_Basics.cpp`
+  
+Submit 
+* A short report that shows the output images (PDF)
+* Source codes
+
+
+
+
+
+
+
+
