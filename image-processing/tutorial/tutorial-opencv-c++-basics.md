@@ -707,12 +707,14 @@ int main()
 
 # Assignment (1 week)
 ## Creating a new dataset of training images
-In pre-processings of generating datasets of images, we usually maintain the same image size as the original but various apply geometric transformation such as cropping, translation and resizing.
+In pre-processings of generating datasets of images, we usually maintain the same image size as the original but apply various geometric transformations such as cropping, translation, and resizing.
 
 Write a code to create the following image datasets from the original image (464x480 px). 
-* All output images for this assignment must be the same sized(464x480 px).
+* All three output images for this assignment must be the same sized(464x480 px).
 * Try to use pixel accesssing to create output images.
 * HINT: Use the outputs from the previous Exercises.
+
+![Image](https://github.com/user-attachments/assets/f91f7e9f-35b7-4a64-8424-eb94e78c5905)
 
 
 Assignment Setup
@@ -722,7 +724,9 @@ Assignment Setup
   
 Submit 
 * A short report that shows the output images (PDF)
-* Source codes
+* Source codes: [Use template source file](link)
+  
+
 
 
 
