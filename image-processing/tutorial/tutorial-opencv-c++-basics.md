@@ -723,7 +723,7 @@ Assignment Setup
   
 Submit 
 * A short report that shows the output images (PDF)
-* Source codes: [Use template source file](link)
+* Source codes: [Use template source file]([link](https://github.com/ykkimhgu/DLIP-src/tree/main/Assignment))
   
 
 
