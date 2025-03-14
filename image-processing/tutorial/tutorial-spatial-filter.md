@@ -39,7 +39,7 @@ An example of convolution with arbitrary values : No Padding with stride 1
 * [source code: Matlab filter tutorial](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/Lab\_filter\_tutorial\_student.mlx)
 * [test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/filter\_test\_images.zip)
 
-1. Write a simple program that applies a filter mask w(s,t) to image f(x,y) to result the output image g(x,y).
+2. Write a simple program that applies a filter mask w(s,t) to image f(x,y) to result the output image g(x,y).
 
 > Note that the index of an array in a program starts from ‘0’ (C/C++) or ‘1 (MATLAB)
 >
