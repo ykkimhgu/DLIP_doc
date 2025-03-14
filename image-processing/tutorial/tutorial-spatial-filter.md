@@ -32,12 +32,11 @@ An example of convolution with arbitrary values : No Padding with stride 1
 ![ConvGif2](https://github.com/ykkimhgu/DLIP_doc/assets/38373000/8969d384-4933-4d72-9f35-19764feee329)
 
 
-
 **Exercise**
 
 1. Download the example code and test images.
 
-* [source code: Matlab filter tutorial](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/Lab\_filter\_tutorial\_student.m)
+* [source code: Matlab filter tutorial](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/Lab\_filter\_tutorial\_student.mlx)
 * [test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Filter/filter\_test\_images.zip)
 
 1. Write a simple program that applies a filter mask w(s,t) to image f(x,y) to result the output image g(x,y).
@@ -84,7 +83,7 @@ tic
 
 for v = b+1:b+M  
     for u = a+1:a+N
-        % convolution of kernel at one point (u,v)
+        % convolution of kernel at one point (v,u)
         conv = 0;
         for t = -b:b
             for s = -a:a
