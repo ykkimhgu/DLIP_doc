@@ -1,10 +1,12 @@
-# Tutorial: OpenCV (C++) Basics
+# Tutorial: OpenCV Basics
 
 ## Tutorial: OpenCV (C++) Basics
 
+### Tutorial: OpenCV (C++) Basics
+
 Deep Learning Image Processing. Updated. 2024.3
 
-# Introduction
+## Introduction
 
 The OpenCV Library has **>2500** algorithms, extensive documentation, and sample code for real-time computer vision. You can see basic information about OpenCV at the following sites,
 
@@ -14,11 +16,11 @@ The OpenCV Library has **>2500** algorithms, extensive documentation, and sample
 * Tutorial: [https://docs.opencv.org/master](https://docs.opencv.org/master)
 * Books: [https://opencv.org/books](https://opencv.org/books)
 
-![](https://github.com/ykkimhgu/DLIP\_doc/assets/84508106/2edf3297-6380-4a58-a188-4157a15c3e92)
+![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2edf3297-6380-4a58-a188-4157a15c3e92)
 
 In this tutorial, you will learn fundamental concepts of the C++ language to use the OpenCV API. You will learn namespace, class, C++ syntax to use image reading, writing and displaying.
 
-# Project Workspace Setting
+## Project Workspace Setting
 
 Create the lecture workspace as **C:\Users\yourID\source\repos**
 
@@ -27,41 +29,33 @@ Create the lecture workspace as **C:\Users\yourID\source\repos**
 Then, create sub-directories such as :
 
 * `C:\Users\yourID\source\repos\DLIP`
-
 * `C:\Users\yourID\source\repos\DLIP\Tutorial`
-
 * `C:\Users\yourID\source\repos\DLIP\Include`
-
 * `C:\Users\yourID\source\repos\DLIP\Assignment`
-
 * `C:\Users\yourID\source\repos\DLIP\LAB`
-
 * `C:\Users\yourID\source\repos\DLIP\Image`
-  
 * `C:\Users\yourID\source\repos\DLIP\Props`
 
-<figure><img src = "https://github.com/ykkimhgu/DLIP_doc/assets/84508106/a33ed57c-9573-466a-a696-360cd54ced3e"><figcaption></figcaption></figure>
+<figure><img src="https://github.com/ykkimhgu/DLIP_doc/assets/84508106/a33ed57c-9573-466a-a696-360cd54ced3e" alt=""><figcaption></figcaption></figure>
 
-# Basic Image Processing
-## Example 1. Read / Write / Display
+## Basic Image Processing
+
+### Example 1. Read / Write / Display
+
 You can use the OpenCV C++ library to read, write, and display images/videos. Here is a related example.
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
-0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
-
-1. Download HGU logo image and rename **HGU\_logo.jpg**
+1. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+2. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
-2. Create a new C++ project in Visual Studio Community
+3. Create a new C++ project in Visual Studio Community
    * Project Name: `DLIP_Tutorial_OpenCV_Image`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
-
-3. Create a new C+ source file
+4. Create a new C+ source file
    * File Name: `DLIP_Tutorial_OpenCV_Image.cpp` or `DLIP_Tutorial_OpenCV_Video.cpp`
-  
-4. Compile and run. 
+5. Compile and run.
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_Image.cpp" %}
@@ -141,18 +135,20 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Basic Image Container: Mat Class
-## Mat Class
+## Basic Image Container: Mat Class
+
+### Mat Class
+
 The image data are in forms of 1D, 2D, 3D arrays with values 0\~255 or 0\~1
 
 OpenCV provides the Mat class for operating multi-dimensional images
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/41ec96d5-b662-4125-8b1a-224170544a1c)
 
-
-## Example 2. Matrix Operation: Create / Copy
+### Example 2. Matrix Operation: Create / Copy
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/7959071b-8f63-451f-8bdc-92254bb2686a)
+
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_Mat_Operation.cpp" %}
 ```cpp
@@ -204,14 +200,15 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Basic Image Operation: Crop, Rotate, Resize, Color Convert
+## Basic Image Operation: Crop, Rotate, Resize, Color Convert
+
 The methods for performing tasks such as image crop, rotate, resize, and color conversion (such as converting to grayscale) are as follows. If you want to learn more about the functions below, refer to the [OpenCV documentation](https://docs.opencv.org/4.9.0/index.html).
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/25434240-678f-41a1-8364-c33edae8f9e3)
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/244c72f0-86bc-45e2-b349-c4e9e5caf753)
 
-## Example 3. Basic Image Operation
+### Example 3. Basic Image Operation
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_basic_image_operation.cpp" %}
@@ -249,39 +246,32 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Exercise 1
-## Flip horizontally, Rotate, Resize and Crop of the original image
-> Everytime you use OpenCV, you must use documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
-> 
+## Exercise 1
+
+### Flip horizontally, Rotate, Resize and Crop of the original image
+
+> Everytime you use OpenCV, you must use documentation!!\*\* [link](https://docs.opencv.org/4.9.0/index.html)
+
 For flipping an image, find more details about `cv::flip()`
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/2dd5d517-8785-4ce8-adcc-13b72245d975)
 
-Crop (ROI)
-![Image](https://github.com/user-attachments/assets/0252ff49-39ba-44d1-bd5e-ea0b8bd213b5)
+Crop (ROI) ![Image](https://github.com/user-attachments/assets/0252ff49-39ba-44d1-bd5e-ea0b8bd213b5)
 
-Rotate (45deg CW)
-![Image](https://github.com/user-attachments/assets/6de74772-2e45-4582-8152-ccf73eb0a7f3)
+Rotate (45deg CW) ![Image](https://github.com/user-attachments/assets/6de74772-2e45-4582-8152-ccf73eb0a7f3)
 
-Resize (by half)
-![Image](https://github.com/user-attachments/assets/ed5af4d8-ce68-487d-99fa-c0eec663c883)
+Resize (by half) ![Image](https://github.com/user-attachments/assets/ed5af4d8-ce68-487d-99fa-c0eec663c883)
 
-
-0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
-
-1. Download HGU logo image and rename **HGU\_logo.jpg**
+1. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+2. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
-2. Create a new C++ project in Visual Studio Community
+3. Create a new C++ project in Visual Studio Community
    * Project Name: `DLIP_Tutorial_OpenCV_EX1`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
-
-3. Create a new C+ source file
+4. Create a new C+ source file
    * File Name: `DLIP_Tutorial_OpenCV_EX1.cpp`
-  
-4. Compile and run. 
-
+5. Compile and run.
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_EX1.cpp" %}
@@ -312,9 +302,9 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# +Extra Exercise 1
-The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function.
-**Hint: flag vs delay time of waitKey**
+## +Extra Exercise 1
+
+The flip function is useful when working with videos. Implement a program that flips the webcam feed horizontally when the `h` key is pressed using `waitKey()` function. **Hint: flag vs delay time of waitKey**
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_EX1_extra.cpp" %}
@@ -377,16 +367,20 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Shallow Copy vs Deep Copy
-## Shallow Copy
+## Shallow Copy vs Deep Copy
+
+### Shallow Copy
+
 **Shallow Copy** means copying only the memory addresses in the memory. Since it copies pointers pointing to the same object or data, the original and the copy end up sharing the same data. This can lead to issues, as modifications to one object or array will affect the other as well.
 
-## Deep Copy
+### Deep Copy
+
 **Deep Copy** means creating a copy of an object or data in a new memory space. The original and the copy are independent, having separate memory spaces, so modifications made to one side do not affect the other.
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/eb306257-1813-44f3-afd6-4c8279262f8d)
 
-## Example 4. Shallow_Deep_Copy
+### Example 4. Shallow\_Deep\_Copy
+
 * Compile and run the code below and see what happens
 * Before you execute this code, try to understand what it does
 
@@ -422,7 +416,8 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Accessing Pixel value
+## Accessing Pixel value
+
 An image is composed of small units called pixels. Each pixel can be considered as the smallest unit of an image. Pixel intensity represents the brightness of a pixel. For grayscale images, pixel intensity ranges from 0 (black) to 255 (white). In color images, each channel (e.g., Red, Green, Blue) has its intensity value.
 
 Rows and columns define an image's structure. Rows represent the vertical direction of the image, and columns represent the horizontal direction. The position of a pixel is denoted as (row, column) or (v, u), where v represents the row index and u represents the column index.
@@ -431,7 +426,8 @@ OpenCV provides different methods to access the intensity values of pixels in an
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/3a30bec1-c7fe-403c-bb64-fecfd6013bb3)
 
-## Method 1. Accessing using `at<type>(v,u)` (Recommended)
+### Method 1. Accessing using `at<type>(v,u)` (Recommended)
+
 ```cpp
 Mat image= imread(filename);
 
@@ -454,7 +450,8 @@ printf("%d", img.at<Vec3b>(0, 0)[1]);
 printf("%d", img.at<Vec3b>(0, 0)[2]);
 ```
 
-## Method 2. Using Pointer for faster operation
+### Method 2. Using Pointer for faster operation
+
 ```cpp
 /* Method 2. Accessing Using Pointer */
 // Gray Image
@@ -482,7 +479,8 @@ for (int v = 0; v < img.rows; v++)
 }
 ```
 
-## Example 5. Access pixel intensity of Gray-Scale Image(1D image)
+### Example 5. Access pixel intensity of Gray-Scale Image(1D image)
+
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_Access.cpp" %}
 ```cpp
@@ -511,29 +509,26 @@ int main()
 {% endtab %}
 {% endtabs %}
 
+## Exercise 2
 
-# Exercise 2
-## Calculate the average intensity value using `at<type>(v,u)`
+### Calculate the average intensity value using `at<type>(v,u)`
+
 Calculate the summation of the pixel intensity and calculate the average intensity value. Use `cv::Mat::rows`, `cv::Mat::cols`.
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
-0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
-
-1. Download HGU logo image and rename **HGU\_logo.jpg**
+1. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+2. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
-2. Create a new C++ project in Visual Studio Community
+3. Create a new C++ project in Visual Studio Community
    * Project Name: `DLIP_Tutorial_OpenCV_EX2`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
-
-3. Create a new C+ source file
+4. Create a new C+ source file
    * File Name: `DLIP_Tutorial_OpenCV_EX2.cpp`
-  
-4. Compile and run. 
+5. Compile and run.
 
-## Result
+### Result
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/14e47ec7-6896-4e34-9d58-8996d2cb2197)
 
@@ -640,29 +635,26 @@ int main()
 {% endtab %}
 {% endtabs %}
 
-# Exercise 3
-## Intensity Inversion in Grayscale Images
+## Exercise 3
+
+### Intensity Inversion in Grayscale Images
+
 Write a code to invert the colors of this Grayscale image. The resulting image should look like the following. For example, a pixel with an intensity of **100** should become a value of **255 - 100**, which is **155** after the color inversion. Use `Mat::zeros`, `.at<type>(v,u)`
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
-0. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
-
-1. Download HGU logo image and rename **HGU\_logo.jpg**
+1. Configuration OpenCV 4.9.0 debug, release project property sheet. [Link](https://ykkim.gitbook.io/dlip/installation-guide/opencv/opencv-install)
+2. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_OpenCV/image.jpg)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
-2. Create a new C++ project in Visual Studio Community
+3. Create a new C++ project in Visual Studio Community
    * Project Name: `DLIP_Tutorial_OpenCV_EX3`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
-
-3. Create a new C+ source file
+4. Create a new C+ source file
    * File Name: `DLIP_Tutorial_OpenCV_EX3.cpp`
-  
-4. Compile and run.
+5. Compile and run.
 
-
-## Result
+### Result
 
 ![](https://github.com/ykkimhgu/DLIP_doc/assets/84508106/50a25aed-d095-4c20-a13c-b21a7946c024)
 
@@ -704,12 +696,14 @@ int main()
 {% endtab %}
 {% endtabs %}
 
+## Assignment (1 week)
 
-# Assignment (1 week)
-## Creating a new dataset of training images
+### Creating a new dataset of training images
+
 In pre-processings of generating datasets of images, we usually maintain the same image size as the original but apply various geometric transformations such as cropping, translation, and resizing.
 
-Write a code to create the following image datasets from the original image (464x480 px). 
+Write a code to create the following image datasets from the original image (464x480 px).
+
 * All three output images for this assignment must be the same sized(464x480 px).
 * Try to use pixel accesssing to create output images.
 * HINT: Use the outputs from the previous Exercises.
@@ -717,21 +711,12 @@ Write a code to create the following image datasets from the original image (464
 ![](https://github.com/user-attachments/assets/3e137678-0580-4bbf-b9ed-ecc358113f11)
 
 Assignment Setup
-   * Project Name: `DLIP_Assignment_OpenCV_Basics`
-   * Project Folder: `~\DLIP\Assignment\`
-   * File Name: `DLIP_Assignment_OpenCV_Basics.cpp`
-  
-Submit 
+
+* Project Name: `DLIP_Assignment_OpenCV_Basics`
+* Project Folder: `~\DLIP\Assignment\`
+* File Name: `DLIP_Assignment_OpenCV_Basics.cpp`
+
+Submit
+
 * A short report that shows the output images (PDF)
 * Source codes: [Use template source file](https://github.com/ykkimhgu/DLIP-src/tree/main/Assignment)
-  
-
-
-
-
-
-
-
-
-
-

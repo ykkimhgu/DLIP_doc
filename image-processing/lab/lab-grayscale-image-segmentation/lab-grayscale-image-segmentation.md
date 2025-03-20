@@ -2,7 +2,7 @@
 description: Count nuts and bolts
 ---
 
-# LAB: Grayscale Image Segmentation
+# LAB: Grayscale Image Segmentation - Bolt and Nut
 
 ## LAB: Grayscale Image Segmentation
 
@@ -14,7 +14,7 @@ Segment and count each nuts and bolts
 
 There are 2 different size bolts and 3 different types of nuts. You are required to segment the object and count each parts
 
-[Download the test image](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB\_grayscale/Lab\_GrayScale\_TestImage.jpg)
+[Download the test image](https://github.com/ykkimhgu/DLIP-src/blob/main/LAB_grayscale/Lab_GrayScale_TestImage.jpg)
 
 * Bolt M5
 * Bolt M6
@@ -22,7 +22,7 @@ There are 2 different size bolts and 3 different types of nuts. You are required
 * Hexa Nut M5
 * Hexa Nut M6
 
-![](https://raw.githubusercontent.com/ykkimhgu/DLIP-src/main/LAB\_grayscale/Lab\_GrayScale\_TestImage.jpg)
+![](https://raw.githubusercontent.com/ykkimhgu/DLIP-src/main/LAB_grayscale/Lab_GrayScale_TestImage.jpg)
 
 After analyzing histogram, applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels.
 
@@ -103,7 +103,7 @@ C++: void drawContours(InputOutputArray image, InputArrayOfArrays contours, int 
 
 ## LAB Submission Instruction
 
-[Please read LAB Report Instruction ](lab-report-instruction.md)
+[Please read LAB Report Instruction ](../lab-report-instruction.md)
 
 
 

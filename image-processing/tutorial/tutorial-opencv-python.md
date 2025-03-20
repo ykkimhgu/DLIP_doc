@@ -1,75 +1,80 @@
-# Tutorial: OpenCV (Python) Basics
+# Tutorial: OpenCv (Python) Basics
 
-# Preparation
-## Basics of Python & Numpy&#x20;
+## Tutorial: OpenCV (Python) Basics
+
+## Preparation
+
+### Basics of Python & Numpy
 
 Skip this if you already know about Python programming
 
-
-### Python Basics
+#### Python Basics
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/python#tutorial" %}
 
-### Numpy  Basics
+#### Numpy Basics
 
 {% embed url="https://ykkim.gitbook.io/dlip/programming/python#id-2.-numpy-tutorial" %}
 
+### Configuration
 
+Prepare the environment as
 
-## Configuration
-Prepare the environment as 
 1. Visual Studio Code
-2. Python Environment  (>3.7)
+2. Python Environment (>3.7)
 3. OpenCV Installation
 
 Follow the tutorial for installation
+
 {% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
 
+### Source code and images
 
+#### Download
 
-
-## Source code and images&#x20;
-### Download
 Download the tutorial source code and image files.
 
-* [Tutorial Code in *.ipynb](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_PythonOpenCV)
+* [Tutorial Code in \*.ipynb](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_PythonOpenCV)
 * [Test Image Files](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
 
-## Project and Data Folder
-The downloaded images should be saved in 
-   * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
+### Project and Data Folder
+
+The downloaded images should be saved in
+
+* Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
+
 The python opencv tutorial is operated under the project folder
-   * Python File Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV\`
+
+* Python File Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV\`
 
 The visual studio code open project at DLIP folder
-   * Project Folder: `C:\Users\yourID\source\repos\DLIP\`
-    
-## Running the source code
+
+* Project Folder: `C:\Users\yourID\source\repos\DLIP\`
+
+### Running the source code
+
 This tutorial code is based on Google Colab Notebook.
 
-When running the code, you can select from two options&#x20;
+When running the code, you can select from two options
 
 1. **(Recommended)** Download the notebook file (\*.ipynb) and run in VS.Code
 2. Run directly on Google Colab
 
-
 ***
 
-# Basic Image Processing
-## (*.py) Read / Write / Display Image and Video
+## Basic Image Processing
+
+### (\*.py) Read / Write / Display Image and Video
 
 **You must Read Documentation!!** [link](https://docs.opencv.org/4.9.0/index.html)
 
 1. Download HGU logo image and rename **HGU\_logo.jpg**
    * Image Link: [HGU\_logo](https://github.com/ykkimhgu/DLIP-src/tree/main/images)
    * Image Folder: `C:\Users\yourID\source\repos\DLIP\Image\`
-   
 2. Create a new python source file in Visual Studio Code
-   * File Name: `DLIP_Tutorial_OpenCV_Image.py` and   `DLIP_Tutorial_OpenCV_Video.py`
+   * File Name: `DLIP_Tutorial_OpenCV_Image.py` and `DLIP_Tutorial_OpenCV_Video.py`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\PyOpenCV`
-  
-3. Compile and run. 
+3. Compile and run.
 
 {% tabs %}
 {% tab title="DLIP_Tutorial_OpenCV_Image.py" %}
@@ -133,8 +138,9 @@ cap.release()
 
 ***
 
-## (*.ipyn) Read / Write / Display Image and Video
-### Import OpenCV Library
+### (\*.ipyn) Read / Write / Display Image and Video
+
+#### Import OpenCV Library
 
 ```python
 import numpy as np
@@ -144,10 +150,12 @@ from matplotlib import pyplot as plt
 
 ***
 
-### (for COLAB only) Upload Image Files in Colab server
-Skip this if you are using Visual Studio Code 
+#### (for COLAB only) Upload Image Files in Colab server
+
+Skip this if you are using Visual Studio Code
 
 Read how to load image file in Colab
+
 {% embed url="https://ykkim.gitbook.io/dlip/dlip-installation-guide/ide/colab#loading-image-file-in-colab" %}
 
 **Other Option**: Upload image file to Colab server from local drive
@@ -157,19 +165,16 @@ from google.colab import files
 uploaded=files.upload()
 ```
 
-### Read Image File
-
+#### Read Image File
 
 ```python
 # Load image
 img = cv.imread('Image/HGU_logo.jpg')
 ```
 
+#### Display Image using matplot `plt.imshow()`
 
-### Display Image using matplot `plt.imshow()`
-This tutorial will use matplotlib functions for *.ipyn files.
-This method is recommended for showing images. This works for both *.py and *.ipyn files. 
-
+This tutorial will use matplotlib functions for \*.ipyn files. This method is recommended for showing images. This works for both \*.py and \*.ipyn files.
 
 > matplotlib has different rgb order than OpenCV
 
@@ -192,12 +197,13 @@ plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 
-### Display Image:   (for .py only)  OpenCV imshow()
-This is only for *.py file. 
-Python files running on local drive supports OpenCV `cv.imshow()`
+#### Display Image: (for .py only) OpenCV imshow()
+
+This is only for \*.py file. Python files running on local drive supports OpenCV `cv.imshow()`
 
 Notebook files such as Colab and Jupyter does NOT support OpenCV `cv.imshow()`
-> This does not work on *.ipyn file
+
+> This does not work on \*.ipyn file
 
 ```python
 # Load image
@@ -208,10 +214,10 @@ cv.imshow('source',img)
 cv.waitKey(0)
 ```
 
-### Display Image: (for Colab only) cv2_imshow()
+#### Display Image: (for Colab only) cv2\_imshow()
 
 CoLAB provides a similar function called `cv2_imshow()`.\
-But this is NOT recommended method. 
+But this is NOT recommended method.
 
 Import
 
@@ -228,13 +234,13 @@ img = cv.imread('Image/HGU_logo.jpg')
 cv_imshow(img) 
 ```
 
-### Capturing Video 
+#### Capturing Video
+
 Using webcam in notebook(colab, jupyter) requires more complex setup.
+
 > cv.VideoCapture(0) is NOT available in Colab.
 
-
-
-# Spatial Filter
+## Spatial Filter
 
 * [Box filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga8c45db9afe636703801b0b2e440fce37)
 * [Gaussian filter](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
@@ -246,7 +252,7 @@ cv.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]])
 cv.medianBlur(src, ksize[, dst])
 ```
 
-### Example Code
+#### Example Code
 
 ```python
 # Load image
@@ -273,7 +279,7 @@ plt.show()
 
 ***
 
-# Thresholding
+## Thresholding
 
 * [Thresholding](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57)
 
@@ -281,8 +287,9 @@ plt.show()
 cv.threshold(src, thresh, maxval, type[, dst])
 ```
 
-## Manual Local Threshold
-### Example Code
+### Manual Local Threshold
+
+#### Example Code
 
 ```python
 # Open Image
@@ -307,14 +314,15 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382112-850fddd8-b98b-44dd-8b93-3e2e55029f6e.png)
 
-## Adaptive Threshold
+### Adaptive Threshold
+
 * [Adaptive Threshold](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
 
 ```python
 cv.adaptiveThreshold(src, maxValue, adaptiveMethod, thresholdType, blockSize, C[, dst])
 ```
 
-### Example code
+#### Example code
 
 ```python
 # Read image
@@ -346,7 +354,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382154-1befab4a-caac-40ba-8a00-7c63a772e1a8.png)
 
-## Plot Histogram
+### Plot Histogram
 
 * [calcHist](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d)
 
@@ -354,7 +362,7 @@ plt.show()
 hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])
 ```
 
-### Example Code
+#### Example Code
 
 ```python
 # Open Image
@@ -390,7 +398,7 @@ plt.xticks([]),plt.yticks([])
 plt.show()
 ```
 
-# Morphology
+## Morphology
 
 * [Erode](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)
 * [Dilate](https://docs.opencv.org/4.9.0/d4/d86/group__imgproc__filter.html#ga4ff0f3318642c4f469d0e11f242f3b6c)
@@ -402,7 +410,7 @@ cv.dilate(src, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]
 cv.morphologyEx(src, op, kernel[, dst[, anchor[, iterations[, borderType[, borderValue]]]]])
 ```
 
-### Example Code
+#### Example Code
 
 ```python
 # Open Image
@@ -439,7 +447,7 @@ plt.show()
 
 ***
 
-# Color Segmentation (InRange)
+## Color Segmentation (InRange)
 
 * [inRange](https://docs.opencv.org/4.9.0/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
 
@@ -447,7 +455,7 @@ plt.show()
 dst= cv2.inRange(src, lowerb, upperb, dst=None)
 ```
 
-### Example code
+#### Example code
 
 ```python
 # Open Image in RGB
@@ -483,16 +491,17 @@ plt.show()
 
 ***
 
-# Edge & Line & Circle Detection
+## Edge & Line & Circle Detection
 
-## Edge Detection
+### Edge Detection
+
 * [Canny](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de)
 
 ```python
 cv.Canny(image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]])
 ```
 
-### Example code 1
+#### Example code 1
 
 ```python
 # Load image
@@ -512,7 +521,7 @@ for i in range(2):
 plt.show()
 ```
 
-### Example code 2
+#### Example code 2
 
 ```python
 # Load image
@@ -536,14 +545,15 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382352-c2353c3c-6cbd-4cc1-b1aa-98300a0b3024.png)
 
-## Circle Detection
+### Circle Detection
+
 [HoughCircles](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d)
 
 ```python
 cv.HoughCircles(image, method, dp, minDist[, circles[, param1[, param2[, minRadius[, maxRadius]]]]])
 ```
 
-### Example code
+#### Example code
 
 ```python
 # Read Image
@@ -586,7 +596,8 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382486-c8b276f3-92c3-46b0-ac20-1144f0427186.png)
 
-## Line Detection
+### Line Detection
+
 * [HoughLines](https://docs.opencv.org/4.9.0/dd/d1a/group__imgproc__feature.html#ga46b4e588934f6c8dfd509cc6e0e4545a)
 
 ```python
@@ -594,7 +605,7 @@ cv.HoughLines(image, rho, theta, threshold[, lines[, srn[, stn[, min_theta[, max
 cv.HoughLinesP(image, rho, theta, threshold[, lines[, minLineLength[, maxLineGap]]])
 ```
 
-### Example code
+#### Example code
 
 ```python
 # Load image
@@ -644,38 +655,37 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/38373000/160382536-53ac2788-34e5-4f1b-9dbf-12736cd13487.png)
 
-
 ***
 
-# Exercise
+## Exercise
 
-## Beginner Level Exercise
+### Beginner Level Exercise
 
-### Exercise 1
+#### Exercise 1
 
 Apply Blur filters, Thresholding and Morphology methods on given images for object segmentation.
 
-[download test image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/testImage.zip)
+[download test image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
 ![image](https://user-images.githubusercontent.com/38373000/163776140-51398b0d-6cb2-4e02-b21f-6749b1d75049.png)
 
-### Example 2
+#### Example 2
 
 Choose the appropriate InRange conditions to segment only ' Blue colored ball'. Draw the contour and a box over the target object. Repeat for Red, and Yellow balls
 
-[download test image](https://github.com/ykkimhgu/DLIP-src/blob/main/images/color\_ball.jpg)
+[download test image](https://github.com/ykkimhgu/DLIP-src/blob/main/images/color_ball.jpg)
 
-![](https://github.com/ykkimhgu/DLIP-src/blob/main/images/color\_ball.jpg?raw=true)
+![](https://github.com/ykkimhgu/DLIP-src/blob/main/images/color_ball.jpg?raw=true)
 
-### Example 3
+#### Example 3
 
 Detect Pupil/Iris and draw circles.
 
 ![](../../.gitbook/assets/eyepupil.png)
 
-## Intermediate Level Exercise
+### Intermediate Level Exercise
 
-### Exercise: Count number of coins and calculate the total amount
+#### Exercise: Count number of coins and calculate the total amount
 
 After applying thresholding and morphology, we can identify and extract the target objects from the background by finding the contours around the connected pixels. This technique is used where you need to monitor the number of objects moving on a conveyor belt in an industry process. Goal: Count the number of the individual coins and calculate the total amount of money.
 
