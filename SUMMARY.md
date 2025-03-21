@@ -29,6 +29,7 @@
   * [Lab Report Grading Criteria](image-processing/lab/lab-report-grading-criteria.md)
   * [LAB Report Instruction](image-processing/lab/lab-report-instruction.md)
   * [LAB: Grayscale Image Segmentation](image-processing/lab/lab-grayscale-image-segmentation/README.md)
+    * [LAB: Grayscale Image Segmentation -Gear](image-processing/lab/lab-grayscale-image-segmentation/lab-grayscale-image-segmentation-gear.md)
     * [LAB: Grayscale Image Segmentation - Bolt and Nut](image-processing/lab/lab-grayscale-image-segmentation/lab-grayscale-image-segmentation.md)
   * [LAB: Facial Temperature Measurement with IR images](image-processing/lab/lab-facial-temperature-measurement-with-ir-images.md)
   * [LAB: Straight Lane Detection and Departure Warning](image-processing/lab/lab-straight-lane-detection-and-departure-warning.md)
