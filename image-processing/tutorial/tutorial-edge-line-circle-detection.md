@@ -305,7 +305,35 @@ Download the following tutorial codes for Edge and Line Detection. Fill in the b
 
 ![](../../.gitbook/assets/eyepupil.png) ![](../../.gitbook/assets/TrafficSign1.png)
 
-2\. Detect all edges and draw lines
 
-![](../../.gitbook/assets/track\_gray.jpg)
+
+# Assignment - Submit (1 week)
+
+## Introduction
+In this assignment, detect and draw lanes (left and right each) on the given images. Also, find and draw the vanishing point, the point where the two lane lines intersect. 
+
+Also, refer to [Youtube](https://youtu.be/onMBtLw2ag8)
+
+
+### Dataset
+Download two image files:  [Dataset]()
+
+
+Use the necessary image process techniques, you have learnt in class including
+* Filtering
+* set ROI
+* Canny Edge
+* Hough Line Detection
+* Algorithm for selecting one line per lane
+* Calculate the vanishing point
+* Display lanes in colors
+
+![Image](https://github.com/user-attachments/assets/d8fda73d-3944-4edd-a435-8454e702eea2)
+
+### Output Examples 
+
+![Image](https://github.com/user-attachments/assets/c1ecfdae-3872-45f9-b48d-d8b22acec9d7)
+
+## Report
+Write a concise report using the LAB report template.
 
