@@ -312,8 +312,7 @@ Download the following tutorial codes for Edge and Line Detection. Fill in the b
 ## Introduction
 In this assignment, detect and draw lanes (left and right each) on the given images. Also, find and draw the vanishing point, the point where the two lane lines intersect. 
 
-Also, refer to [Youtube](https://youtu.be/onMBtLw2ag8)
-
+Also, refer to [Youtube](https://youtu.be/iZLFMhi2LDY)
 
 ### Dataset
 Download two image files: 
