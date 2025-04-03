@@ -22,7 +22,7 @@ DLIP Tutorial for Camera Calibration using MATLAB
 4. Load the file in the path: `calibration.resources\sourceCode\` into the project folder
    * Source Code: `ShowUndistorted.cpp`, `ShowUndistorted.cpp`
    * header file: `tinyxml2.cpp`, `tinyxml2.h`
-   * xml file: 'calibTest.xml'
+   * xml file: 'calibTest.xml`
      
 ## Tutorial(Ver. 2) - Calibration using MATLAB Toolbox
 
