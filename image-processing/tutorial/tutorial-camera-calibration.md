@@ -19,7 +19,7 @@ DLIP Tutorial for Camera Calibration using MATLAB
    * Project Name: `DLIP_Tutorial_Camera_Calibration`
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
-4. Load the file in the path: 'calibration.resources/sourceCode/'
+4. Load the file in the path: `calibration.resources/sourceCode/`
 
 
 ## Tutorial(Ver. 2) - Calibration using MATLAB Toolbox
