@@ -19,7 +19,7 @@ DLIP Tutorial for Camera Calibration using GML Program or MATLAB
    * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 
 4. Load the file in the path: `calibration.resources\sourceCode\` into the project folder
-   * Source Code: `ShowUndistorted.cpp`, `ShowUndistorted.cpp`
+   * Source Code: `ShowUndistorted.cpp`, `ShowUndistorted_tiny.cpp`
    * header file: `tinyxml2.cpp`, `tinyxml2.h`
    * xml file: `calibTest.xml`
      
