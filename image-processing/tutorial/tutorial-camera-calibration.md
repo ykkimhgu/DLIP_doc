@@ -1,8 +1,7 @@
 # Tutorial: Camera Calibration
 
-DLIP Tutorial for Camera Calibration using MATLAB
+DLIP Tutorial for Camera Calibration using GML Program or MATLAB
 
-**Using **_**"Computer Vision Toolbox"**_** Application in MATLAB**
 ## Tutorial(Ver. 1) - Calibration Using GML Camera Calibration Program
 
 1. Download _**GML Camera Calibraion Program**_ in link.
@@ -25,6 +24,7 @@ DLIP Tutorial for Camera Calibration using MATLAB
    * xml file: 'calibTest.xml`
      
 ## Tutorial(Ver. 2) - Calibration using MATLAB Toolbox
+**Using **_**"Computer Vision Toolbox"**_** Application in MATLAB**
 
 1. Download _**Computer Vision Toolbox**_ in MATLAB.
 
