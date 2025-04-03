@@ -43,7 +43,7 @@ Project Name and Location
 * Project Name: `DLIP_OpenCV_Simple_Demo`
 * Project Folder: `~\DLIP\Tutorial\`
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setup of Project Property &#x20;
 
@@ -56,7 +56,7 @@ Include the already created OpenCV property sheets
 * `기존 속성 시트 추가` 선택 후 저장된 " **opencv-4.9.0\_debug\_x64.props "**  추가
   * It should be located in "`~\DLIP\Include\"`
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 **(Release x64)**
 
@@ -72,13 +72,13 @@ Create a new C+ source file
 * File Name: `DLIP_OpenCV_Simple_Demo.cpp`
 * 솔루션탐색기 탭:  \[프로젝트] > 소스 파일 > 추가 > 새항목 > C++파일(cpp) 선택&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 구성 관리자를 **Debug x64**로 설정&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Run the following demo program. You can run the program by pressing  (CTRL+F5)
 
@@ -169,4 +169,4 @@ int main(int argc, char* argv[])
 
 Expected Output
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>

@@ -24,6 +24,7 @@
   * [Tutorial: OpenCV C++ Cheatsheet](image-processing/tutorial/tutorial-opencv-c++-cheatsheet.md)
   * [Tutorial: Installation for Py OpenCV](image-processing/tutorial/tutorial-installation-for-py-opencv.md)
   * [Tutorial: OpenCv (Python) Basics](image-processing/tutorial/tutorial-opencv-python.md)
+  * [Tutorial: Image Watch for Debugging](image-processing/tutorial/tutorial-image-watch-for-debugging.md)
 * [LAB](deep-learning-for-perception/lab/README.md)
   * [Lab Report Template](image-processing/lab/lab-report-template.md)
   * [Lab Report Grading Criteria](image-processing/lab/lab-report-grading-criteria.md)
