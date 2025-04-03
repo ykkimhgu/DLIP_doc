@@ -1,17 +1,16 @@
 # Tutorial: Camera Calibration
 
-[calibration resources](https://github.com/ykkimhgu/DLIP_doc/files/14879534/calibration.resources.zip)
-
 DLIP Tutorial for Camera Calibration using MATLAB
 
 **Using **_**"Computer Vision Toolbox"**_** Application in MATLAB**
 ## Tutorial(Ver. 1) - Calibration Using GML Camera Calibration Program
 
-1. Download _**GNL Camera Calibraion Program**_ in link.
+1. Download _**GML Camera Calibraion Program**_ in link.
+[calibration resources](https://github.com/ykkimhgu/DLIP_doc/files/14879534/calibration.resources.zip)
 
-[Download Link](https://darkpgmr.tistory.com/32)
-
-![img3](https://github.com/ykkimhgu/DLIP_doc/blob/master/images/DownloadImage.png)
+2.  GML Program Guide
+![guide1](https://github.com/ykkimhgu/DLIP_doc/blob/master/images/calibration1.png)
+![guide2](https://github.com/ykkimhgu/DLIP_doc/blob/master/images/calibration2.png)
 
 ## Tutorial(Ver. 2) - Calibration using MATLAB Toolbox
 
