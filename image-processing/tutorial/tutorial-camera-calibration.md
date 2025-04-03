@@ -6,11 +6,21 @@ DLIP Tutorial for Camera Calibration using MATLAB
 ## Tutorial(Ver. 1) - Calibration Using GML Camera Calibration Program
 
 1. Download _**GML Camera Calibraion Program**_ in link.
+
 [calibration resources](https://github.com/ykkimhgu/DLIP_doc/files/14879534/calibration.resources.zip)
 
 2.  GML Program Guide
+
 ![guide1](https://github.com/ykkimhgu/DLIP_doc/blob/master/images/calibration1.png)
+
 ![guide2](https://github.com/ykkimhgu/DLIP_doc/blob/master/images/calibration2.png)
+
+3. Create a new C++ project in Visual Studio Community
+   * Project Name: `DLIP_Tutorial_Camera_Calibration`
+   * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
+
+4. Load the file in the path: 'calibration.resources/sourceCode/'
+
 
 ## Tutorial(Ver. 2) - Calibration using MATLAB Toolbox
 
