@@ -1,0 +1,2 @@
+# LAB: Color Image Segmentation
+
