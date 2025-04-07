@@ -86,5 +86,6 @@ First, [read LAB Report Instruction](../lab-report-instruction.md)
 
 ## TIP
 
-**Read about** [**Masking with Bitwise Operation**](../../image-processing-notes/masking-with-bitwise-operation.md)
+1. **Read about** [**Masking with Bitwise Operation**](../../image-processing-notes/masking-with-bitwise-operation.md)
+2. Similar Demo Video:  [https://youtu.be/YLnP2Ge65MU?si=QTzyMdxFGCXCynSG\&t=27](https://youtu.be/YLnP2Ge65MU?si=QTzyMdxFGCXCynSG\&t=27)
 
