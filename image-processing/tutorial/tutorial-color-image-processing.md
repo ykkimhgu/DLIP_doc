@@ -16,9 +16,9 @@ In this tutorial, you are learn how to segment a colored object using a web-cam.
 
 ### OpenCV: inRange()
 
-First, read the OpenCV documentation [read here](https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html#ga48af0ab51e36436c5d04340e036ce981)
+First, read the OpenCV documentation [read here](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga48af0ab51e36436c5d04340e036ce981)
 
-```
+```cpp
 void cv::inRange	(	
     InputArray 	src,
     InputArray 	lowerb,
@@ -44,8 +44,8 @@ One way of choosing the appropriate InRange conditions is analyzing the pixel st
 
 Download the tutorial source code file
 
-* [tutorial code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Color/Tutorial\_ColorSegmentation\_trackbar\_2021.cpp)
-* [test image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Color/color\_ball.jpg)
+* [tutorial code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Color/Tutorial_ColorSegmentation_trackbar_2021.cpp)
+* [test image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Color/color_ball.jpg)
 
 Choose the target window to analyze with mouse click and drag.
 
@@ -53,7 +53,7 @@ Choose the target window to analyze with mouse click and drag.
 
 Analyze for the standard deviation and mean of the targeted color within the window.
 
-```
+```cpp
   Mat roi_RGB(image, selection);           // Set ROI by the selection box       
   Mat roi_HSV;  
   cvtColor(roi_RGB, roi_HSV, CV_BGR2HSV);  
@@ -63,7 +63,7 @@ Analyze for the standard deviation and mean of the targeted color within the win
 
 Add slidebars to change the InRange values of each R, G, B or H, S, V and segment each colored ball.
 
-```
+```cpp
 /// set dst as the output of InRange
 inRange(hsv, Scalar(MIN(hmin, hmax), MIN(smin, smax), MIN(vmin, vmax)),
 	Scalar(MAX(hmin, hmax), MAX(smin, smax), MAX(vmin, vmax)), dst);
@@ -73,7 +73,7 @@ Apply appropriate morphology (i.e. dilation/erosion/fill holes) to the output bi
 
 Find all contours and select the contour with the largest area
 
-```
+```cpp
 Mat image_disp, hsv, hue, mask, dst;
 vector<vector<Point> > contours;
 vector<Vec4i> hierarchy;
@@ -96,7 +96,7 @@ for (; idx >= 0; idx = hierarchy[idx][0])
 
 Draw the contour and a box over the target object
 
-```
+```cpp
 /// Draw the Contour Box on Original Image ///
 drawContours(image_disp, contours, largestComp, Scalar(255, 255, 255), 4, 8, hierarchy);
 Rect boxPoint = boundingRect(contours[largestComp]);
@@ -123,7 +123,7 @@ Modify your tutorial program to keep drawing the contour on a white or black bac
 
 **Sample code: On Mouse Event**
 
-```
+```cpp
 /// On mouse event 
 static void onMouse(int event, int x, int y, int, void*)
 {
@@ -134,7 +134,7 @@ static void onMouse(int event, int x, int y, int, void*)
    	selection.width = abs(x - origin.x) + 1;
    	selection.height = abs(y - origin.y) + 1;
    	selection &= Rect(0, 0, image.cols, image.rows);  
-// Bitwise AND  check selectin is within the image coordinate
+// Bitwise AND  check selection is within the image coordinate
    }
 
    switch (event)
