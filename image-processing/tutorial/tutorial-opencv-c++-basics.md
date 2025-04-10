@@ -71,6 +71,13 @@ int main()
 	/*  read image  */
 	String HGU_logo = "../../../Image/HGU_logo.jpg";
 	Mat src = imread(HGU_logo);
+	
+	if (src.empty())/// Load image check
+	{
+	cout << "File Read Failed : src is empty" << endl;
+	waitKey(0);
+	}
+
 	Mat src_gray = imread(HGU_logo, 0);  // read in grayscale
 
 	/*  write image  */
@@ -223,6 +230,13 @@ int main()
 {
 	/*  read image  */
 	Mat img = imread("../../../Image/HGU_logo.jpg");
+	
+	if (img.empty())/// Load image check
+	{
+	cout << "File Read Failed : src is empty" << endl;
+	waitKey(0);
+	}
+	
 	imshow("img", img);
 
 	/*  Crop(Region of Interest)  */
@@ -399,6 +413,12 @@ int main()
 	// read image  
 	src = imread("../../../Image/HGU_logo.jpg", 0);
 	
+	if (src.empty())/// Load image check
+	{
+	cout << "File Read Failed : src is empty" << endl;
+	waitKey(0);
+	}
+	
 	/* Shallow Copy */
 	dst_shallow = src;
  
@@ -496,6 +516,12 @@ int main()
 	// read image  
 	src = imread("../../../Image/HGU_logo.jpg", 0);
 
+	if (src.empty())/// Load image check
+	{
+	cout << "File Read Failed : src is empty" << endl;
+	waitKey(0);
+	}
+	
 	int v = src.rows; //행(가로)
 	int u = src.cols; //열(세로)
 

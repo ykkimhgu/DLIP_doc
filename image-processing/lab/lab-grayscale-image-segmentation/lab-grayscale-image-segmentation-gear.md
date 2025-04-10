@@ -83,7 +83,7 @@ C++: void drawContours(InputOutputArray image, InputArrayOfArrays contours, int 
  vector<Vec4i> hierarchy;
 
   /// Find contours
- findContours( dst, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+ findContours( dst, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE, Point(0, 0) );
   
  /// Draw all contours excluding holes
  Mat drawing( dst.size(), CV_8U,Scalar(255));

@@ -77,9 +77,9 @@ plt.show()
 
 Download the example code and test images.
 
-* [source code\_1: Manual Threshold](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_Threshold\_demo.cpp)
-* [source code\_2: Threshold with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_ThresholdMorph\_trackbar.cpp)
-* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/testImage.zip)
+* [source code\_1: Manual Threshold](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Threshold_demo.cpp)
+* [source code\_2: Threshold with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_ThresholdMorph_trackbar.cpp)
+* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
 Run the code on all test images.
 
@@ -99,7 +99,7 @@ Calculate and Plot the histogram for each image in gray-scale and analyze if a c
 
 * [Read this documentation](https://docs.opencv.org/4.9.0/d6/dc7/group__imgproc__hist.html#ga4b2b5fd75503ff9e6844cc4dcdaed35d) for calculating histogram `calcHist()`
 
-```
+```cpp
 void cv::calcHist	(	const Mat * 	images,
                         int 	nimages,
                         const int * 	channels,
@@ -120,7 +120,7 @@ hist=cv.calcHist(	images, channels, mask, histSize, ranges[, hist[, accumulate]]
 
 For plotting histogram, you may use the following function.
 
-```
+```cpp
 void plotHist(Mat src, string plotname, int width, int height) {
 	/// Compute the histograms 
 	Mat hist;
@@ -150,9 +150,9 @@ void plotHist(Mat src, string plotname, int width, int height) {
 
 See here for full example codes
 
-* Example 1: [Histogram of GrayScale Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_Histogram\_1D\_demo\_image.cpp)
-* Example 2: [Histogram of Color Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_Histogram\_demo\_image.cpp)
-* Example 3: [Histogram of Webcam Image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_Histogram\_1D\_demo\_webcam.cpp)
+* Example 1: [Histogram of GrayScale Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_1D_demo_image.cpp)
+* Example 2: [Histogram of Color Image File](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_demo_image.cpp)
+* Example 3: [Histogram of Webcam Image](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_Histogram_1D_demo_webcam.cpp)
 
 #### Example 1-4. Local Threshold
 
@@ -162,7 +162,7 @@ Apply ‘Local Adaptive Thresholding’ on the following images. Compare the res
 
 Refer to `adaptiveThreshold()` [documentation](https://docs.opencv.org/4.9.0/d7/d1b/group__imgproc__misc.html#ga72b913f352e4a1b1b397736707afcde3)
 
-```
+```cpp
 //adaptiveThreshold()
 void cv::adaptiveThreshold	(	InputArray 	src,
                                  OutputArray 	dst,
@@ -266,7 +266,7 @@ erosion = cv.erode(img,kernel,iterations = 1)
 
 Download the example code
 
-* [source code\_: Morphology with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/DLIP\_Tutorial\_ThresholdMorph\_trackbar.cpp)
+* [source code\_: Morphology with Trackbar](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/DLIP_Tutorial_ThresholdMorph_trackbar.cpp)
 
 Apply several morphology to obtain clear segmentation of the object in given images, after Thresholding.
 
@@ -275,15 +275,17 @@ Apply several morphology to obtain clear segmentation of the object in given ima
 ## Exercise
 
 ### Exercise 1
+
 Create a new C++ project in Visual Studio Community
+
 * Project Name: `DLIP_Tutorial_Thresholding`
 * Project Folder: `C:\Users\yourID\source\repos\DLIP\Tutorial\`
 * Source File: `DLIP_Tutorial_Thresholding.cpp`
-* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Threshold\_Morp/testImage.zip)
+* [Test images](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Threshold_Morp/testImage.zip)
 
-1. Analyze Histogram and apply Thresholding methods on given images.&#x20;
+1. Analyze Histogram and apply Thresholding methods on given images.
 2. Find the optimal threshold method and value for the object segmentation.
-3. Show the results to TA before proceeding to Exercise  2.
+3. Show the results to TA before proceeding to Exercise 2.
 
 ### Exercise 2
 
