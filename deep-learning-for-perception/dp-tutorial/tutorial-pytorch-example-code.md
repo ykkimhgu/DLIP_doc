@@ -297,14 +297,14 @@ torch.save(model,PATH+'MLP_MNIST_model.pth')
 ````python
 ```python
 ##########################################################
-# PyTorch Tutorial:  Classification MLP Model for Evaluation
+# PyTorch Tutorial:  Classification CNN Model for Evaluation
 #
 # Author: Y.K.Kim
 # mod: 2024-5-21 
 #
-# Descr: This example is tesing pretrined model for classification
+# Descr: This example is tesing pretrined CNN model for classification
 #
-# Model:   MLP
+# Model: LeNet
 # Dataset: MNIST
 #
 ##########################################################
@@ -396,13 +396,10 @@ print(images.size())
 
 
 # Evaluate on one batch test images
+images, labels = images.to(device), labels.to(device)
 with torch.no_grad():
-  for X, y in dataiter:
-      X, y = X.to(device), y.to(device)
-      
-      # Prediction Label 
-      pred = model(X)
-      _, predicted = torch.max(pred.data, 1)
+    pred = model(images)
+    _, predicted = torch.max(pred.data, 1)
 
 
 # Plot 9 output images
@@ -414,7 +411,6 @@ for index in range(num_of_images):
     plt.title("Predicted: {}".format(predicted[index].item()))
     plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
 plt.show()
-
 ```
 ````
 {% endtab %}
