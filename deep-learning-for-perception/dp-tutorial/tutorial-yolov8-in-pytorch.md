@@ -34,7 +34,7 @@ For installations of requirements, [read for more detail instructions](https://y
 * matplotlib>=3.3.0
 * and more. [See requirements](https://github.com/ultralytics/ultralytics/blob/main/pyproject.toml)
 
-### Install Yolov8 via pip package
+### 1)Install Yolov8 via pip package
 
 First, create a new environment for YOLOv8 in Anaconda Prompt.
 
@@ -58,6 +58,24 @@ conda activate yolov8
 pip install ultralytics
 pip install onnx
 ```
+### 2)Install Yolov8 via pip package(numpy 1.26 ver.)
+If There is an OpenCV DLL issue, follow the setup intructions below to configure your environment
+(The DLL issue might be caused by an incompatible Numpy version[your numpy ver. numpy 2.x])
+
+```bash
+conda create -n yolov8 python=3.9.12
+conda activate yolov8
+
+conda install -c anaconda numpy==1.26
+pip install opencv-python matplotlib
+
+conda install pytorch=2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+pip install torchsummary
+pip install ultralytics
+pip install onnx  
+```
+
 
 ### Check for YOLO Installation
 
