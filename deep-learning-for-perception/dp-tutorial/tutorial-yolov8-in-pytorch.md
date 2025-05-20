@@ -60,6 +60,7 @@ pip install onnx
 ```
 ### 2)Install Yolov8 via pip package(numpy 1.26 ver.)
 If There is an OpenCV DLL issue, follow the setup intructions below to configure your environment
+
 (The DLL issue might be caused by an incompatible Numpy version[your numpy ver. numpy 2.x])
 
 ```bash
