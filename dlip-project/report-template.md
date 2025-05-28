@@ -4,6 +4,7 @@ description: Tutorial Title goes here
 
 # Report Template
 
+# Project Title
 **Date:**
 
 **Author:**
@@ -18,11 +19,19 @@ description: Tutorial Title goes here
 
 This tutorial is about \~
 
+## Problem Statement
+Project objectives
+
+Expected Outcome and Evaluation 
+
+
+---
+
 ## Requirement
 
-Write a list of HW/SW requirement
+Write a list of HW/SW requirements
 
-### Hardware
+### Hardware List
 
 * Jetson Nano
 * Webcam
@@ -42,19 +51,35 @@ Description of dataset goes here
 
 **Dataset link:** download here
 
-## Tutorial Procedure
+---
 
-Explain the whole procedure the step by step with proper headings and images.
+## Method
+Explain briefly how you have implemented the project. 
+* Explain how you have done preprocessings
+* Explain the deep learning models you have used
+* Explain how you have tested for evaluation
 
-### Setup
+---
+
+## Procedure
+
+Explain the whole procedure step by step with proper headings and images.
 
 ### Installation
 
-### \*\*\*\*
+### Tutorials
+
+
+---
 
 ## Results and Analysis
 
-Explain the final result and analyze in terms of accuracy/precision/recall etc..
+Show the final results visually (images, graph, table etc)
+
+Analyze the results in terms of accuracy/precision/recall etc..
+
+Explain wheather you have achieved the project objectives
+
 
 ## Reference
 
