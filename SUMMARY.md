@@ -78,6 +78,7 @@
   * [LAB: CNN Object Detection 1](deep-learning-for-perception/lab/lab-cnn-object-detection-1.md)
   * [LAB: CNN Object Detection 2](deep-learning-for-perception/lab/lab-cnn-object-detection.md)
   * [LAB Grading Criteria](deep-learning-for-perception/lab/lab-grading-criteria.md)
+  * [LAB Report Template (Deep Learning)](deep-learning-for-perception/lab/report-template.md)
 * [Tutorial- Keras](deep-learning-for-perception/example-code/README.md)
   * [Train Dataset](deep-learning-for-perception/example-code/train-dataset.md)
   * [Train custom dataset](deep-learning-for-perception/example-code/train-custom-dataset.md)
@@ -110,7 +111,6 @@
 
 ## DLIP Project
 
-* [Report Template](dlip-project/report-template.md)
 * [DLIP 2021 Projects](dlip-project/dlip-projects/README.md)
   * [Digital Door Lock Control with Face Recognition](dlip-project/dlip-projects/untitled-1.md)
   * [People Counting with YOLOv4 and DeepSORT](dlip-project/dlip-projects/people-counting-with-yolov4-and-deepsort.md)
