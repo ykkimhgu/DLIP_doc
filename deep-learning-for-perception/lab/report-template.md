@@ -27,7 +27,7 @@ Write a short abstract of the project with necessary diagram.
 
 ## II. Problem Statement
 
-### Project objectives
+### 1. Project Objectives
 
 Explain the objectives of the project
 
@@ -43,7 +43,7 @@ This project aims to develop an AI-powered vision system for a waste recycling s
 
 
 
-### Expected Outcomes  
+### 2. Expected Outcomes  
 
 Explain what outcome and evaluation index you are going to achieve.
 
@@ -53,14 +53,14 @@ Explain what outcome and evaluation index you are going to achieve.
 
 
 
-### Evaluation Index
+### 3. Evaluation Index
 
-| Evaluation Index                            | Goal    | Comments                 |
+| Evaluation Index                            | Goal    | Description              |
 | ------------------------------------------- | ------- | ------------------------ |
 | 1. Accuracy of object detection             | >90%    | Test image of 500 frames |
 | 2. F1-score of Anomaly Classification       | >00     |                          |
 | 3. Estimate accuracy of the detection model | >00     |                          |
-| 4. Inference Time (FPS)                     | >10 fps | GTX1080 TI               |
+| 4. Inference Time (FPS)                     | >10 fps | Tested on GTX1080 TI     |
 
 
 
@@ -71,14 +71,14 @@ Explain what outcome and evaluation index you are going to achieve.
 
 ## III. Requirements
 
-Write a list of HW/SW requirements
+Write a list of HW/SW requirements.
 
-### Hardware List
+### 1. Hardware List
 
 * Jetson Nano
 * Webcam
 
-### Software  List 
+### 2. Software  List 
 
 * CUDA 10.1
 * cudatoolkit 10.1
@@ -89,9 +89,9 @@ Write a list of HW/SW requirements
 
 
 
-## III. Dataset
+### 3. Dataset
 
-Description of dataset goes here
+A brief description of dataset goes here.
 
 **Dataset link:** download here
 
@@ -117,24 +117,36 @@ This section is a tutorial that helps the reader to follow the whole procedure
 
 
 
-### Hardware Setup
+### 1. Hardware Setup
+
+A simple overview how to install the hardware setup. You may skip this if you do not have any hardware.
 
 
 
-### Software Installation
+### 2. Software Installation
+
+Do need to include installation of  {Python, OpenCV, NumPy, PyTorch} , which were covered in class.
+
+But, you should include CLI  for installing libraries(Python etc), which versions are different from the ones used in class.
 
 
 
-### Data Preparation
+### 3. Data Preparation
+
+Explain how to download the datasets,  and how to partition train/test sets 
 
 
 
 
-### Train model
+### 4. Train model
+
+Explain how to train the model. Don't need to show the whole source code. 
 
 
 
-### Test model
+### 5. Test model
+
+Explain how to test the model. Don't need to show the whole source code. 
 
 
 
@@ -145,33 +157,47 @@ This section is a tutorial that helps the reader to follow the whole procedure
 ## V. Method
 
 
-### Overview
+### 1. Overview
 
-Explain briefly how you have implemented the project. 
-
-You may include the flowchart.
+Explain the overview of your algorithm with  proper diagrams and  flow chart.  
 
 
 
-### Preprocessing
+### 2. Preprocessing
 
-Explain how you have done preprocessing.
+Explain how you have done preprocessing on the datasets.
 
-Include how you have prepared the dataset.
-
-
-
-### Deep Learning Model
-
-Explain which the deep learning model you have used
+Also include other  image processing you have done
 
 
 
-### Experiment Method 
+### 3. Deep Learning Model
+
+Briefly explain which the deep learning model you have used, with proper citations
+
+
+
+### 4. Postprocessing
+
+**Algorithm #1: 0000**
+
+Briefly explain other algorithms you have created 
+
+
+
+**Algorithm #2: 0000**
+
+Briefly explain other algorithms you have created 
+
+
+
+
+
+### 5. Experiment Method 
 
 Explain how you have tested for evaluation
 
-Evaluation Index  Explain how you have tested for evaluation.
+Also include which evaluation Index were used 
 
 
 
@@ -194,7 +220,13 @@ Explain whether you have achieved the project objectives
 
 
 
-## Conclusion
+## VII. Conclusion
+
+Do not write your personal comments. 
+
+This is to summarize the overall project that include the main objectives, the methods, and the final results.
+
+Also, include what should be the further work to improve the project.
 
 
 
@@ -208,7 +240,13 @@ Complete list of all references used (github, blog, paper, etc)
 
 
 
-## Team Contribution
+
+
+## Appendix
+
+
+
+### 1. Team Contribution
 
 | Name | Job Descriptions |
 | ---- | ---------------- |
@@ -217,5 +255,11 @@ Complete list of all references used (github, blog, paper, etc)
 
 
 
-## Appendix
+### 2. Debugging
+
+
+
+### 3. Others
+
+
 
