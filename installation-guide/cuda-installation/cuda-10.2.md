@@ -128,7 +128,7 @@ Visit [CuDNN website](https://developer.nvidia.com/cudnn) to download.
 
 First, you have to register to become a member of the NVIDIA Developer Program (free).
 
-![](https://miro.medium.com/max/1803/1\*cXR4ODZGhaoR1rXRmvbU6A.png)
+![](https://miro.medium.com/max/1803/1*cXR4ODZGhaoR1rXRmvbU6A.png)
 
 **Step 5.2: Install cuDNN 8.0.5 for CUDA 10.2**
 
@@ -163,4 +163,4 @@ Select cuDNN version for CUDA 10.2. You can also check cuDNN Archive if you cann
 nvcc --version
 ```
 
-![](<../../.gitbook/assets/image (148).png>)
+![](<../../.gitbook/assets/image (148) (1).png>)
