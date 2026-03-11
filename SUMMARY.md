@@ -13,7 +13,7 @@
 * [Tutorial](image-processing/tutorial/README.md)
   * [Tutorial: Install OpenCV C++](image-processing/tutorial/tutorial-installation-for-opencv-c++.md)
   * [Tutorial: Create OpenCV Project](image-processing/tutorial/tutorial-create-opencv-project.md)
-  * [Tutorial: C++ basics](image-processing/tutorial/tutorial-c++-basics-for-opencv.md)
+  * [Tutorial: C++ basics](image-processing/tutorial/tutorial-cpp-basics.md)
   * [Tutorial: OpenCV Basics](image-processing/tutorial/tutorial-opencv-basics.md)
   * [Tutorial: Image Watch for Debugging](image-processing/tutorial/tutorial-image-watch-for-debugging.md)
   * [Tutorial: Spatial Filter](image-processing/tutorial/tutorial-spatial-filter.md)
