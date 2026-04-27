@@ -37,21 +37,29 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 ### 1. MLP
 
-#### Numpy Only
+#### Numpy (colab)
 
 * T0: [Numpy for a simple MLP for XOR ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
 
-#### PyTorch
+#### PyTorch (colab)
 
-* T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)
+* T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)-colab
+
+#### PyTorch (VSC)
+
+* T1: [Train a simple MLP and Test with loading trained model (MNIST) in VS code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)
 
 ### 2. CNN- Classification
 
-#### **Create a simple CNN model**
+#### **Create a simple CNN model (colab)**
 
 * T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_1_LeNet5_CIFAR10_CNN_2024.ipynb)
 * T2-2-1: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_2_1_VGG16_CNN_2024.ipynb)
 * T2-2-2: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_2_2_VGG16_CIFAR10_CNN_2024.ipynb)
+
+#### **Create a simple CNN model (VSC)**
+
+* T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_1_LeNet5_CIFAR10_CNN_2024.ipynb)
 
 #### 3. CNN- Object Detection
 
