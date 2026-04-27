@@ -47,9 +47,9 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### PyTorch (VSC)
 
-* T1: [Train a simple MLP and Test with loading trained model (MNIST) in VS code](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)
+* T1: [Train a simple MLP and Test with loading trained model (MNIST) in VS code](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code#example-1.-ann-mlp-model-train-test)
 
-### 2. CNN- Classification
+### 2. CNN Design- Classification
 
 #### **Create a simple CNN model (colab)**
 
@@ -59,9 +59,11 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### **Create a simple CNN model (VSC)**
 
-* T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_1_LeNet5_CIFAR10_CNN_2024.ipynb)
+* T2-1: [Create Train LeNeT CNN model for CIFAR10](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code#example-2.-cnn-model-train-test)
 
-#### 3. CNN- Object Detection
+###
+
+### 3. CNN Pretrained - Classification&#x20;
 
 #### **Using Popular CNN models from torchvision.models**
 
@@ -73,7 +75,9 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 * T3-3: [(Assignment) Classification with Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
 * T3-4: [(Assignment) Create ResNet-50 model for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_4_ResNet50_2024.ipynb)
 
-### 3. CNN- Object Detection
+###
+
+### 4. CNN- Object Detection- YOLO
 
 #### **YOLO v8 in PyTorch**
 
