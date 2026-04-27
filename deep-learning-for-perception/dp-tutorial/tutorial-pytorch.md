@@ -1,16 +1,14 @@
 # Tutorial: PyTorch Tutorial List
 
-## Preparation for PyTorch Tutorial
+## Preparation&#x20;
 
-### PyTorch Installation
-
-#### Install PyTorch
+### 1. Install: PyTorch&#x20;
 
 Follow the installatin instruction: [See here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning#part-3.-installing-dl-framework)
 
 > You should install pytorch in a virtual environment
 
-### Check PyTorch Installation and GPU
+#### Check PyTorch Installation and GPU availability
 
 In the Anaconda Promt, type
 
@@ -22,44 +20,52 @@ torch.__version__
 print("cuda" if torch.cuda.is_available() else "cpu")
 ```
 
-### Watch PyTorch Intro Video
+### 2. Watch : Introduction Video on PyTorch&#x20;
 
-[Introduction to PyTorch (20min)](https://youtu.be/IC0\_FRiX-sw)
+[Introduction to PyTorch (20min)](https://youtu.be/IC0_FRiX-sw)
 
 > You need to know 'What is Tensor in Pytorch'
 
-### **Follow Quick-Start Tutorial:**
+### **3. Follow:  Quick-Start Tutorials**
 
-* [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart\_tutorial.html)
-* [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart\_tutorial.html)
+* [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
+* [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
 
 ***
 
-## DLIP Course Tutorials
+## List of Tutorials for DLIP
 
-### MLP
+### 1. MLP
 
-* T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T1\_MNIST\_MLP\_2024.ipynb)
+#### Numpy Only
 
-### CNN- Classification
+* T0: [Numpy for a simple MLP for XOR ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
+
+#### PyTorch
+
+* T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)
+
+### 2. CNN- Classification
 
 #### **Create a simple CNN model**
 
-* T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T2\_1\_LeNet5\_CIFAR10\_CNN\_2024.ipynb)
-* T2-2-1: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T2\_2\_1\_VGG16\_CNN\_2024.ipynb)
-* T2-2-2: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T2\_2\_2\_VGG16\_CIFAR10\_CNN\_2024.ipynb)
+* T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_1_LeNet5_CIFAR10_CNN_2024.ipynb)
+* T2-2-1: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_2_1_VGG16_CNN_2024.ipynb)
+* T2-2-2: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_2_2_VGG16_CIFAR10_CNN_2024.ipynb)
+
+#### 3. CNN- Object Detection
 
 #### **Using Popular CNN models from torchvision.models**
 
-* T3-1: [Test using Pretrained Model (VGG, Inception, ResNet)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T3\_1\_Inference\_using\_Pre\_trained\_Model\_\(classification\)\_2024.ipynb)
-* T3-2: [Train Opendataset with Transfer Learning of Pretrained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Tutorial\_PyTorch\_T3\_2\_Transfer\_Learning\_using\_Pre\_trained\_Models\_\(classification\)\_2024.ipynb)
+* T3-1: [Test using Pretrained Model (VGG, Inception, ResNet)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T3_1_Inference_using_Pre_trained_Model_\(classification\)_2024.ipynb)
+* T3-2: [Train Opendataset with Transfer Learning of Pretrained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T3_2_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
 
 #### Assignment: Classification
 
-* T3-3: [(Assignment) Classification with Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Assignment\_PyTorch\_T3\_3\_Transfer\_Learning\_using\_Pre\_trained\_Models\_\(classification\)\_2024.ipynb)
-* T3-4: [(Assignment) Create ResNet-50 model for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/2024/Assignment\_PyTorch\_T3\_4\_ResNet50\_2024.ipynb)
+* T3-3: [(Assignment) Classification with Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
+* T3-4: [(Assignment) Create ResNet-50 model for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_4_ResNet50_2024.ipynb)
 
-### CNN- Object Detection
+### 3. CNN- Object Detection
 
 #### **YOLO v8 in PyTorch**
 
@@ -68,7 +74,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### **YOLO v5 in PyTorch**
 
-* T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/Tutorial\_PyTorch\_T4\_1\_Inference\_using\_Pretrained\_YOLOv5\_with\_COCO\_2022.ipynb) (in CoLab)
+* T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Tutorial_PyTorch_T4_1_Inference_using_Pretrained_YOLOv5_with_COCO_2022.ipynb) (in CoLab)
 * T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
 * T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
 
