@@ -65,7 +65,7 @@
   * [Tutorial: Install PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-install-pytorch.md)
   * [Tutorial: Python Numpy](deep-learning-for-perception/dp-tutorial/tutorial-python-numpy.md)
   * [Tutorial: PyTorch Tutorial List](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
-  * [Tutorial: PyTorch Example Code](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code.md)
+  * [Tutorial: PyTorch in Visual Studio Code](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code.md)
   * [Tutorial: Tensorboard in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-tensorboard-in-pytorch.md)
   * [Tutorial: YOLO in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolo-in-pytorch/README.md)
     * [Tutorial: Yolov8 in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov8-in-pytorch.md)

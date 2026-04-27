@@ -1,13 +1,11 @@
-# Tutorial: PyTorch Example Code
+# Tutorial: PyTorch in Visual Studio Code
 
 ## Preparation
 
-1. Create the working directory:  such as **`\TU_MLP_CNN_Classification\`**
-2. Download the Tutorial Code in Zip file:  [TU\_MLP\_CNN\_Classification\_Example Code 2024.zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode/TU\_MLP\_CNN\_Classification\_Example%20Code%202024.zip)
-3. Unzip the files in the working directory.&#x20;
-4. Make sure you have the subdirectory for saving weights:  **`\TU_MLP_CNN_Classification\weights\`**
-
-
+1. Create the working directory: such as **`\TU_MLP_CNN_Classification\`**
+2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode/TU_MLP_CNN_Classification_Example%20Code%202024.zip)&#x20;
+3. Unzip the files in the working directory.
+4. Make sure you have the subdirectory for saving weights: **`\TU_MLP_CNN_Classification\weights\`**
 
 ## Example 1. ANN(MLP) : Model, Train, Test
 
@@ -23,18 +21,18 @@ Classify the MNIST digit with a simple ANN\\
 * Output: 1x10
 * Activation function: ReLU
 
-### Creating  Model Architecture, Training and Evaluation&#x20;
+### Creating Model Architecture, Training and Evaluation
 
-We will create a class for the  model architecture
+We will create a class for the model architecture
 
-Also, we will create PyTorch source files  for processing (1) Training and (2) Evaluation of the model
+Also, we will create PyTorch source files for processing (1) Training and (2) Evaluation of the model
 
 1. Check if you have created the subfolder **`.\weights\`**
-2. Download the  source code for **Model Architecture**: [myModel.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
-3. Download the source code for **Model Training**: [TU\_PyTorch\_MLP\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
+2. Download the source code for **Model Architecture**: [myModel.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
+3. Download the source code for **Model Training**: [TU\_PyTorch\_MLP\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
    * Run this code and observe the loss
    * Change the training epoch
-4. Download the source code for **Model Evaluation**: [TU\_PyTorch\_MLP\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
+4. Download the source code for **Model Evaluation**: [TU\_PyTorch\_MLP\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
    * Run this code and observe the evaluation accuracy and sample images
 
 {% tabs %}
@@ -657,21 +655,17 @@ LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/pu
 
 *
 
-### Creating  Model Architecture, Training and Evaluation&#x20;
+### Creating Model Architecture, Training and Evaluation
 
+We will worki in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Classification\`**
 
+We will create a class for the model architecture. Also, we will create PyTorch source files for processing (1) Training and (2) Evaluation of the model
 
-We will worki  in the same working directory as Example 1:  e.g.  **`\TU_MLP_CNN_Classification\`**
-
-
-
-We will create a class for the  model architecture. Also, we will create PyTorch source files  for processing (1) Training and (2) Evaluation of the model
-
-1. Update `myModel.py` by adding   `class LeNet5`&#x20;
-2. Download the source code for **Model Training**: [TU\_PyTorch\_CNN\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
+1. Update `myModel.py` by adding `class LeNet5`
+2. Download the source code for **Model Training**: [TU\_PyTorch\_CNN\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
    * Run this code and observe the loss
    * Change the training epoch
-3. Download the source code for **Model Evaluation**: [TU\_PyTorch\_CNN\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
+3. Download the source code for **Model Evaluation**: [TU\_PyTorch\_CNN\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
    * Run this code and observe the evaluation accuracy and sample images
 
 ### Other Style using nn.Sequencial()
@@ -684,8 +678,6 @@ We will create a class for the  model architecture. Also, we will create PyTorch
 
 {% tabs %}
 {% tab title="myModel.py" %}
-
-
 ```python
 # myModel.py
 
@@ -735,8 +727,6 @@ class LeNet5(nn.Module):
 {% endtab %}
 
 {% tab title="myModel.py (2nd version)" %}
-
-
 ```python
 # myModel.py
 
@@ -791,10 +781,8 @@ class LeNet5v2(nn.Module):
 {% endtab %}
 {% endtabs %}
 
-
-
 {% hint style="info" %}
-The only changes in Example 2 are  (1) creating CNN model class  (2) changing the input image dimension. The rest of the code are the same
+The only changes in Example 2 are (1) creating CNN model class (2) changing the input image dimension. The rest of the code are the same
 {% endhint %}
 
 ###
@@ -806,20 +794,11 @@ The only changes in Example 2 are  (1) creating CNN model class  (2) changing th
 > * MLP uses 1x28x28 as the Input for MNIST
 > * LeNet uses 1x32x32 as the Input for MNIST
 
-
-
-1.  Download the source code for **Model Training**: [TU\_PyTorch\_CNN\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
-
-    * Run this code and observe the loss
-    * Change the training epoch
-
-
-2. Download the source code for **Model Evaluation**: [TU\_PyTorch\_CNN\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial\_Pytorch/TU\_MLP\_CNN\_Classification\_ExampleCode)
+1. Download the source code for **Model Training**: [TU\_PyTorch\_CNN\_Train.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
+   * Run this code and observe the loss
+   * Change the training epoch
+2. Download the source code for **Model Evaluation**: [TU\_PyTorch\_CNN\_Eval.py](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
    * Run this code and observe the evaluation accuracy and sample images
-
-
-
-
 
 {% tabs %}
 {% tab title="TU_PyTorch_CNN_Train.py" %}
