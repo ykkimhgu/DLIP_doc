@@ -1,4 +1,4 @@
-# Tutorial: PyTorch in Visual Studio Code
+# Tutorial: PyTorch in Visual Studio Code (\~2024)
 
 ## Preparation
 
