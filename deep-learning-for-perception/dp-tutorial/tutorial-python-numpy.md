@@ -8,17 +8,29 @@ Read here to install Python and Numpy in Visual Studio Code
 
 {% embed url="https://ykkim.gitbook.io/dlip/image-processing/tutorial/tutorial-installation-for-py-opencv" %}
 
-### Short Tutorial on  Python and Numpy
+###
+
+## Tutorials
 
 Skip this if you already know about Python programming
 
 Recommended tutorial lists for Python and Numpy
 
+#### Python Tutorial  <a href="#python-tutorial" id="python-tutorial"></a>
+
+In-Class Python Tutorial: [Learning Python in 60 minutes\_DLIP](https://colab.research.google.com/drive/1W0dVnmMUF_Yj-mb7B0tq5kl4x5yWHtff)
+
+#### Numpy Tutorial <a href="#numpy-tutorial" id="numpy-tutorial"></a>
+
+NumPy Tutorial: [Learning Numpy in 60 minutes\_DLIP](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_2022.ipynb)
+
+#### **For More Tutorials**
+
 {% embed url="https://ykkim.gitbook.io/dlip/programming/python#tutorial" %}
 
 
 
-## Exercise:&#x20;
+## Exercise&#x20;
 
 ### Create an MLP to solve an XOR problem (Numpy)
 
