@@ -45,7 +45,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 #### Download dataset images
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095536121.png)
 
@@ -56,7 +56,7 @@ You can follow the basic procedures as follows. You may add more processes if ne
 
 ![](C:%5CUsers%5Cykkim%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240422095524759.png)
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Apply Pre-processing such as filtering
 

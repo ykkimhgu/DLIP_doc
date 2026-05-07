@@ -18,7 +18,7 @@ This can be helpful for tracking down bugs, or for simply understanding what a g
 
 Visual Studio Community
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## How to use
 
@@ -56,13 +56,13 @@ int main(int argc, char *argv[])
 
 #### Process
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 If an image has a thumbnail, left-clicking on that image will select it for detailed viewing in the _Image Viewer_ on the right. The viewer lets you pan (drag mouse) and zoom (mouse wheel). It also displays the pixel coordinate and value at the current mouse position.
 
 <figure><img src="https://docs.opencv.org/4.x/viewer.jpg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

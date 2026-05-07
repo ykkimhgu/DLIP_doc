@@ -863,4 +863,89 @@ class LeNet5v2(nn.Module):
 {% endtab %}
 {% endtabs %}
 
-###
+## Exercise
+
+### Exercise 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+
+Create a class that inherits from nn.Module
+
+* Define the layers of the network in **init** function
+* Specify Forward network in the **forward function.**
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+**Architecture detailed**
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+```py
+
+#########################################################
+# [EXERCISE] Create VGG-16 architecture 
+#########################################################
+class VGG16(nn.Module):
+    def __init__(self):
+        super(VGG16, self).__init__()
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+    def forward(self, x):
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+model = VGG16().to(device)
+print(model)
+     
+
+
+## Check your model with summary() function
+from torchsummary import summary
+summary(model, (3, 224, 244))
+```
+
+
+
+### Exercise 2:  Modify  VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+
+Modify VGG-19 for CIFAR-10 (Input: 32x32x3)
+
+Then, Train and Evaluate using CIFAR-10&#x20;
+
+
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+
+
+```py
+
+#########################################################
+# [EXERCISE] Create VGG-16 architecture (refer to part1)
+#########################################################
+class VGG16_cifar10(nn.Module):
+    def __init__(self):
+        super(VGG16_cifar10, self).__init__()
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+    def forward(self, x):
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+
+model = VGG16_cifar10().to(device)
+print(model)
+
+## Saving Models
+## save the structure of this class together with the model
+torch.save(model,"trained_VGG16(CIFAR10).pth")
+```
+

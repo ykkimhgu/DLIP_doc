@@ -58,10 +58,12 @@ conda activate yolov8
 pip install ultralytics
 pip install onnx
 ```
+
 ### 2)Install Yolov8 via pip package(numpy 1.26 ver.)
+
 If There is an OpenCV DLL issue, follow the setup intructions below to configure your environment
 
-(The DLL issue might be caused by an incompatible Numpy version[your numpy ver. numpy 2.x])
+(The DLL issue might be caused by an incompatible Numpy version\[your numpy ver. numpy 2.x])
 
 ```bash
 conda create -n yolov8 python=3.9.12
@@ -76,7 +78,6 @@ pip install torchsummary
 pip install ultralytics
 pip install onnx  
 ```
-
 
 ### Check for YOLO Installation
 
@@ -110,7 +111,7 @@ The result will be saved in the project folder `\runs\detect\predict\`
 
 > Example: C:\Users\ykkim\source\repos\DLIP\yolov8\runs\detect\predict\\
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Run a Segmentation Example
 
@@ -122,7 +123,7 @@ yolo predict model=yolov8n-seg.pt source='https://youtu.be/LNwODJXcvt4' imgsz=32
 
 The result will be saved in the project folder `\runs\segment\predict\`
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ***
 
