@@ -68,7 +68,7 @@
     * [Tutorial: PyTorch Tutorial List (\~2025)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch/tutorial-pytorch-2025.md)
   * [Tutorial: PyTorch in Visual Studio Code](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/README.md)
     * [Tutorial: PyTorch in Visual Studio Code(2025)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md)
-    * [Tutorial: PyTorch in Visual Studio Code (\~2024)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/tutorial-pytorch-example-code.md)
+    * [Tutorial: PyTorch in Visual Studio Code (\~2024)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/tutorial-pytorch-example-code-2024.md)
   * [Tutorial: Tensorboard in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-tensorboard-in-pytorch.md)
   * [Tutorial: YOLO in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolo-in-pytorch/README.md)
     * [Tutorial: Yolov8 in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov8-in-pytorch.md)
