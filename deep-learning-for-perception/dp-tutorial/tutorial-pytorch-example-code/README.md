@@ -335,7 +335,7 @@ def train():
 
 def test():
     load_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
-    model = MLP().to(device)
+    #model = MLP().to(device)
     model = torch.load(load_model_path, map_location=device, weights_only=False)
 
     evaluate(test_dataloader, model, device)
@@ -817,35 +817,33 @@ The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
 The only changes in Example 2 are (1) creating CNN architecture class (2) changing the input image dimension. The rest of the code are the same
 {% endhint %}
 
+**What to Change**
+
+* \_\_init\_\_.py
+  * import LeNet5
+* main.py
+  * `from .lenet5 import LeNet5`
+  * Input Data Size:  `transforms.Resize((32, 32))`
+  * `model = LeNet5().to(device)`
+
 {% tabs %}
 {% tab title="TU_PyTorch_MLP_CNN_main.py" %}
 ````python
 ```python
 
-##########################################################
-## ...
+
+from models import LeNet5
 
 
 # === Parameter === #
-DATA_DIR_PATH = "data"
-MODEL_DIR_PATH = "models"
-MODEL_FILENAME = "MLP_MNIST_model.pth"
+#...
+MODEL_FILENAME = "LeNet_MNIST_model.pth"
+#...
 
-BATCH_SIZE = 64
-TOTAL_EPOCHS = 2
-LEARNING_RATE = 1e-3
-
-
-
-
-
+#...
 ##########################################################
 ## Part 1:  Prepare Dataset 
 ##########################################################
-
-# Download Dataset from TorchVision MNIST
-# Once, downloaded locally, it does not download again.
-#
 # NOTE: LeNet uses 1x32x32 input. 
 # Reshape MNIST from 1x28x28 to  1x32x32
 
@@ -854,27 +852,37 @@ data_transform = transforms.Compose([
             transforms.Resize((32, 32)),
             transforms.ToTensor(),
 ])
+#...
 
-# TRAIN DATA
-training_data = datasets.MNIST(
-    root="data",
-    train=True,
-    download=True,
-    transform=data_transform,   #converts data size
-)
+##########################################################
+## Part 2:  Create Model Instance 
+##########################################################
+#...
 
+# Model Class Construction
+model = LeNet5().to(device)
+print(model)
 
-# Create DataLoader with Batch size N
-# Input Dim:  [N, C, H, W]
-batch_size = 64
-train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
+#...
 
 
-
-``
+```
 ````
 {% endtab %}
+
+{% tab title="__init__.py" %}
+```py
+from .mlp import MLP
+from .lenet5 import LeNet5
+```
+{% endtab %}
 {% endtabs %}
+
+
+
+
+
+
 
 ###
 
