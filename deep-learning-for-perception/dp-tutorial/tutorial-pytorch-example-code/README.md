@@ -6,12 +6,15 @@ description: updated 2026-5
 
 This is a template code for a general deep learning model project using VS Code in local PC.
 
+You can reuse this tutorial code for your assignments.
+
 ## Preparation
 
-1. Create the working directory: such as **`\TU_MLP_CNN_Classification\`**
-2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)&#x20;
+1. Create the working directory: such as **`tutorial\TU_PyTorch_MLP_CNN_MNIST\`**
+2. Download the Tutorial Code in Zip file:[ TU\_PyTorch\_MLP\_CNN\_MNIST.zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_PyTorch_VSC/TU_PyTorch_MLP_CNN_MNIST.zip)
 3. Unzip the files in the working directory.
-4. Make sure you have the subdirectory for saving weights: **`\TU_MLP_CNN_Classification\weights\`**
+
+
 
 ***
 
@@ -23,11 +26,19 @@ Classify the MNIST digit with a simple MLP
 
 
 
-### Creating Model Architecture
+### Dataset
+
+In this tutorial, we will use the MLP dataset saved in your local computer.
+
+It is stores in `\data\` folder
+
+
+
+### Model: Creating Architecture
 
 We will create a class for the model architecture
 
-The **Model Architecture** is programmed in the source code of: `myModel_MLP.py`
+The **Model Architecture** is programmed in the source code of: `mlp.py`
 
 <figure><img src="https://camo.githubusercontent.com/bd39a5ca7bbfdc90303a170fdd99c9faaeff98a80ccb45f5fb96aa8f7d7ebe5a/68747470733a2f2f6769746875622e636f6d2f62656e747265766574742f7079746f7263682d696d6167652d636c617373696669636174696f6e2f626c6f622f6d61737465722f6173736574732f6d6c702d6d6e6973742e706e673f7261773d31" alt=""><figcaption></figcaption></figure>
 
@@ -39,34 +50,24 @@ The **Model Architecture** is programmed in the source code of: `myModel_MLP.py`
 * Output: 1x10
 * Activation function: ReLU
 
-### Training and Evaluation
-
-We will create two main files for training and evaluating  the model architecture.
-
-> Check if you have created the subfolder **`.\weights\`**
-
-A main program for  **Model Training**: TU\_PyTorch\_MLP\_Train.py
-
-* Run this code and observe the loss
-* Change the training epoch
 
 
+### Util: Train and Evaluation Modules
 
-A main program for **Model Evaluation**: TU\_PyTorch\_MLP\_Eval.py
+The modules for Training and Testing are defined in `train.py`, `eval.py`
 
-* Run this code and observe the evaluation accuracy and sample images
+> You don't need to modify these scripts.&#x20;
 
 {% tabs %}
-{% tab title="myModel.py" %}
-````python
-```python
+{% tab title="mlp.py" %}
+```py
 ##########################################################
 # PyTorch Tutorial:  MLP & CNN Model Architecture
 #
 # Author: Y.K.Kim
 # mod: 2024-5-21 
 #
-# Descr: User defined ANN & CNN Model & Modules for Training and Testing
+# Description: User defined ANN & CNN Model & Modules for Training and Testing
 #
 # Model: MLP, LeNet
 #
@@ -83,13 +84,9 @@ from torchvision.transforms import ToTensor
 import numpy as np 
 import matplotlib.pyplot as plt
 
-
-
-
 ##########################################################
 ##  Model Architecture   
 ##########################################################
-
 
 # Model Architecture: MLP
 class MLP(nn.Module):
@@ -105,21 +102,24 @@ class MLP(nn.Module):
         x=self.flatten(x)
         x= F.relu(self.linear1(x))
         x = F.relu(self.linear2(x))
-        y_pred = F.log_softmax(self.linear3(x))
+        y_pred = F.log_softmax(self.linear3(x), dim=1)
         return y_pred
+```
+{% endtab %}
 
-
-     
-
-##########################################################
-##  Train Module
-##########################################################
+{% tab title="train.py" %}
+```py
+import torch
+import torch.nn as nn
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision import datasets
 
 # Train Module
-def train(dataloader, model, loss_fn,optimizer, device, print_interval=100):
+def train(dataloader, model, loss_fn, optimizer, device, print_interval=100):
     # Dataset Size
     size = len(dataloader.dataset)
-    
+
     # Batch size
     batch_size = dataloader.batch_size
     print(f"batch size : {batch_size}")
@@ -127,67 +127,262 @@ def train(dataloader, model, loss_fn,optimizer, device, print_interval=100):
     # Model in Training Mode
     model.train()
 
-    running_loss=0.0
+    running_loss = 0.0
 
-    for batch, (X, y) in enumerate(dataloader):
+    for iter, (X, y) in enumerate(dataloader):
         X, y = X.to(device), y.to(device)
-        
-        # zero gradients for every batch
-        optimizer.zero_grad()   
 
-        # Compute prediction loss 
+        # zero gradients for every batch
+        optimizer.zero_grad()
+
+        # Compute prediction loss
         pred = model(X)
         loss = loss_fn(pred, y)
 
-        # Backpropagation and Update        
+        # Backpropagation and Update
         loss.backward()
-        optimizer.step()        
+        optimizer.step()
 
         # Print avg. loss for every mini-batch in an epoch
-        running_loss+=loss.item()
-        if batch % print_interval == 0:
-            running_loss=running_loss/print_interval            
-            current = batch * batch_size
+        running_loss += loss.item()
+        if iter % print_interval == 0:
+            running_loss = running_loss / print_interval
+            current = iter * batch_size
             print(f"loss: {running_loss:>7f}  [{current:>5d}/{size:>5d}]")
-            running_loss=0
+            running_loss = 0
+```
+{% endtab %}
 
+{% tab title="eval.py" %}
+```py
+import torch
 
-
-
-##########################################################
-##  Test Model Module 
-##########################################################
-
-def test(dataloader, model, device):
-    # Dataset Size
-    size = len(dataloader.dataset)
-
-    # Batch Size
-    num_batches = len(dataloader)
-    
-    # Model in Evaluation Mode
+def evaluate(dataloader, model, device):
     model.eval()
+    total_samples = len(dataloader.dataset)
+    correct = 0
 
-    #test_loss=0
-    correctN = 0
-    
-    # Disable grad() computation to reduce memory consumption.
     with torch.no_grad():
-        for X, y in dataloader:
-            X, y = X.to(device), y.to(device)
-            
-            # Compute average prediction loss 
-            pred = model(X)            
-            #test_loss += loss_fn(pred, y).item()
+        for images, labels in dataloader:
+            images = images.to(device)
+            labels = labels.to(device)
 
-            # Predict Label
-            y_pred=pred.argmax(1);
-            correctN += (y_pred == y).type(torch.float).sum().item()
-            
-    #test_loss /= num_batches
-    correctN /= size
-    #print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}%, Avg loss: {test_loss:>8f} \n")
-    print(f"Test Error: \n Accuracy: {(100*correctN):>0.1f}% \n")
+            outputs = model(images)
+            predicted = outputs.argmax(dim=1)
+            correct += (predicted == labels).sum().item()
+
+    accuracy = correct / total_samples
+    print(f"Test Accuracy: {accuracy * 100:.2f}%")
+    return accuracy
+```
+{% endtab %}
+{% endtabs %}
+
+### Main Script: Train and Evaluate
+
+We will create a main script that runs the training and evaluating  the model architecture.
+
+> You can create different scripts for traing and testing.&#x20;
+
+The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
+
+* Run this code and observe the loss
+* Change the training epoch
+* Run this code and observe the evaluation accuracy and sample images
+* Understand each lines of code
+
+
+
+{% tabs %}
+{% tab title="main.py" %}
+````python
+```python
+# """
+# Image Processing with Deep Learning in Handong Global University
+# 
+# Author        : Y.K.Kim
+# Created       : 2026-05-07
+# Language      : PyTorch
+#   
+# Decription    : [PyTorch Tutorial] This example is creating and training a MLP model for classification
+#  """
+
+import os
+import torch
+import torch.nn as nn
+import torchvision.transforms as transforms
+import matplotlib.pyplot as plt
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor
+
+from models import MLP
+from utils.train import train as training
+from utils.eval import evaluate
+
+
+# === Parameter === #
+DATA_DIR_PATH = "data"
+MODEL_DIR_PATH = "models"
+MODEL_FILENAME = "MLP_MNIST_model.pth"
+
+BATCH_SIZE = 64
+TOTAL_EPOCHS = 2
+LEARNING_RATE = 1e-3
+
+
+
+##########################################################
+## Part 0:  GPU setting
+##########################################################
+
+# Select GPU or CPU for training.
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using {device} device")
+
+
+
+##########################################################
+## Part 1:  Prepare Dataset 
+##########################################################
+
+# Download Dataset from TorchVision MNIST
+# Once, downloaded locally, it does not download again.
+#
+#  MNIST shape:  1x28x28 
+
+# transformation to tensor:  converts 0~255 value to 0~1 value.
+data_transform = transforms.Compose([
+    transforms.ToTensor()
+    ])
+
+# TRAIN DATA
+training_data = datasets.MNIST(
+    root=DATA_DIR_PATH,
+    train=True,
+    download=True,
+    transform=data_transform,
+    # transforms=ToTensor(),
+    )
+
+# EVAL DATA
+test_data = datasets.MNIST(
+    root=DATA_DIR_PATH,
+    train=False,
+    download=True,
+    transform=data_transform,
+    )
+
+# Create DataLoader with Batch size N
+# Input Dim:  [N, C, H, W]
+train_dataloader = DataLoader(
+    training_data, 
+    batch_size=BATCH_SIZE, 
+    shuffle=True,
+    )
+
+test_dataloader = DataLoader(
+    test_data,
+    batch_size=BATCH_SIZE,
+    shuffle=False,
+    )
+
+for X, y in train_dataloader:
+    print(f"Shape of X [N, C, H, W]: {X.shape}")
+    print(f"Shape of y: {y.shape} {y.dtype}")
+    break
+
+
+
+
+##########################################################
+## Part 2:  Create Model Instance 
+##########################################################
+
+# Model Class Construction
+model = MLP().to(device)
+print(model)
+
+
+
+##########################################################
+## Part 3:  Train Model
+##########################################################
+
+# Loss Function
+loss_fn = nn.CrossEntropyLoss()
+
+# Optimizer
+optimizer = torch.optim.SGD(model.parameters(), lr=LEARNING_RATE)
+
+def train():
+    # Run Train for k epoch
+    for epoch in range(TOTAL_EPOCHS):
+        print(f"Epoch {epoch + 1}\n-------------------------------")
+        training(train_dataloader, model, loss_fn, optimizer, device)
+    print("Done!")
+
+    # Save Train Model
+    # * Need to create a new folder PATH priorly
+    save_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    torch.save(model, save_model_path)
+
+
+
+##########################################################
+## Part 4:  Test Model - Evaluation
+##########################################################
+
+def test():
+    load_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    model = MLP().to(device)
+    model = torch.load(load_model_path, map_location=device, weights_only=False)
+
+    evaluate(test_dataloader, model, device)
+
+
+
+##########################################################
+## Part 5:  Visualize Evaluation Results
+##########################################################
+
+def visualize():
+    # # Get some random test  images // BatchSize at a time
+    dataiter = iter(test_dataloader)
+    images, labels = next(dataiter)
+    print(images.size())
+
+
+    # Evaluate mode
+    # Prediction of some sample images 
+    images, labels = images.to(device), labels.to(device)
+    with torch.no_grad():
+        pred = model(images)
+        _, predicted = torch.max(pred.data, 1)
+
+
+    # Plot 9 output images
+    figure = plt.figure()
+    num_of_images = 9
+    for index in range(num_of_images):
+        plt.subplot(3, 3, index+1)
+        plt.axis('off')    
+        plt.title("Predicted: {}".format(predicted[index].item()))
+        plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
+    plt.show()
+
+
+
+
+
+##########################################################
+## MAIN
+##########################################################
+if __name__ == "__main__":
+    train()
+    test()
+    visualize()
+
 
 
 ```
@@ -439,15 +634,15 @@ plt.show()
 
 ## Example 2. CNN (LeNet)
 
-We will work in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Classification\`**
+We will work in the same working directory as Example 1:
 
-### Creating Model Architecture
+### Model: Creating  Architecture&#x20;
 
 We will create a class   `class LeNet5` for the model architecture for LeNet
 
 * LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/publis/psgz/lecun-98.ps.gz)
 
-The **Model Architecture** is programmed in the source code of: `myModel_LeNet.py`&#x20;
+The **Model Architecture** is programmed in the source code of: `lenet5.py`&#x20;
 
 * it should be under the same directory `models`
 
@@ -466,40 +661,46 @@ The **Model Architecture** is programmed in the source code of: `myModel_LeNet.p
 
 
 
+### (Option) Architecture Building  using nn.Sequencial()
 
+**Important Note**
 
-### Training and Evaluation
-
-We will work in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Classification\`**
-
-> LeNet uses 1x32x32 input. Therefore, reshape MNIST from 1x28x28 to 1x32x32
->
-> * MLP uses 1x28x28 as the Input for MNIST
-> * LeNet uses 1x32x32 as the Input for MNIST
-
-
-
-A main program for  **Model Training**: TU\_PyTorch\_CNN\_Train.py
-
-* Run this code and observe the loss
-* Change the training epoch
-
-
-
-A main program for **Model Evaluation**: TU\_PyTorch\_CNN\_Eval.py
-
-* Run this code and observe the evaluation accuracy and sample images
-
-{% hint style="info" %}
-The only changes in Example 2 are (1) creating CNN architecture class (2) changing the input image dimension. The rest of the code are the same
-{% endhint %}
+* Using **ReLU** activation function in `nn.Sequencial()`
+  * use `nn.ReLU()` ,  DO NOT use  `F.relu()`   &#x20;
+  * Watch out for the spelling and Captital Letters (`ReLU` vs `relu`)
+* inside `nn.Sequential()` add comma `,`  in every line:  e.g,   `nn.Conv2d(1,6,5), nn.ReLU()` etc
 
 {% tabs %}
-{% tab title="myModel_LeNet.py" %}
-```python
-# myModel.py
+{% tab title="leNet5.py" %}
 
-# ... same as Example 1
+
+```python
+##########################################################
+# PyTorch Tutorial:  MLP & CNN Model Architecture
+#
+# Author: Y.K.Kim
+# mod: 2024-5-21 
+#
+# Description: User defined ANN & CNN Model & Modules for Training and Testing
+#
+# Model: MLP, LeNet
+#
+##########################################################
+
+import torch 
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor
+import numpy as np 
+import matplotlib.pyplot as plt
+
+##########################################################
+##  Model Architecture   
+##########################################################
 
 # Model Architecture
 class LeNet5(nn.Module):
@@ -540,280 +741,11 @@ class LeNet5(nn.Module):
 
         probs = F.softmax(logits,dim=1) # y_pred: 0~1 
         return probs
-
 ```
 {% endtab %}
 
-{% tab title="TU_PyTorch_CNN_Train.py" %}
-````python
+{% tab title="leNet5_v2.py (nn.Sequential)" %}
 ```python
-##########################################################
-# PyTorch Tutorial:  Classification CNN Model for Training
-#
-# Author: Y.K.Kim
-# mod: 2024-5-21 
-#
-# Descr: This example is creating and training a CNN model for classification
-#
-# Model: LeNet
-# Dataset: MNIST
-#
-##########################################################
-
-
-import torch 
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader
-from torchvision import datasets
-from torchvision.transforms import ToTensor
-import numpy as np 
-import matplotlib.pyplot as plt
-
-# User defined Model
-import myModel  as myModel 
-
-# Model weight directory
-ModelPATH='./weights/'
-
-##########################################################
-## Part 0:  GPU setting
-##########################################################
-
-# Select GPU or CPU for training.
-device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using {device} device")
-
-
-
-##########################################################
-## Part 1:  Prepare Dataset 
-##########################################################
-
-# Download Dataset from TorchVision MNIST
-# Once, downloaded locally, it does not download again.
-#
-# NOTE: LeNet uses 1x32x32 input. 
-# Reshape MNIST from 1x28x28 to  1x32x32
-
-# transformation for resize
-data_transform = transforms.Compose([
-            transforms.Resize((32, 32)),
-            transforms.ToTensor(),
-])
-
-# TRAIN DATA
-training_data = datasets.MNIST(
-    root="data",
-    train=True,
-    download=True,
-    transform=data_transform,   #converts data size
-)
-
-
-# Create DataLoader with Batch size N
-# Input Dim:  [N, C, H, W]
-batch_size = 64
-train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
-
-
-for X, y in train_dataloader:
-    print(f"Shape of X [N, C, H, W]: {X.shape}")
-    print(f"Shape of y: {y.shape} {y.dtype}")
-    break
-
-
-
-
-##########################################################
-## Part 2:  Create Model Instance - CNN
-##########################################################
-
-# Model Class Construction
-model = myModel.LeNet5().to(device)
-print(model)
-
-
-
-##########################################################
-## Part 3:  Train Model
-##########################################################
-
-# Loss Function
-loss_fn = nn.CrossEntropyLoss()
-
-# Optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
-
-# Run Train for k epoch
-epochs = 1
-for t in range(epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
-    myModel.train(train_dataloader, model,loss_fn, optimizer,device)    
-print("Done!")
-
-
-# Save Train Model
-# * Need to create a new folder PATH priorly
-torch.save(model,ModelPATH+'LeNet_MNIST_model.pth')
-
-
-
-# Evaluate the trained model in **Eval.py
-```
-````
-{% endtab %}
-
-{% tab title="TU_PyTorch_CNN_Eval.py" %}
-````python
-```python
-##########################################################
-# PyTorch Tutorial:  Classification CNN Model for Evaluation
-#
-# Author: Y.K.Kim
-# mod: 2024-5-21 
-#
-# Descr: This example is tesing pretrined CNN model for classification
-#
-# Model: LeNet
-# Dataset: MNIST
-#
-##########################################################
-
-
-import torch 
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader
-from torchvision import datasets
-from torchvision.transforms import ToTensor
-import numpy as np 
-import matplotlib.pyplot as plt
-
-# User defined Model
-import myModel as myModel
-
-# Model weight directory
-ModelPATH='./weights/'
-
-
-
-##########################################################
-## Part 0:  GPU setting
-##########################################################
-
-# Select GPU or CPU for training.
-device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using {device} device")
-
-
-
-##########################################################
-## Part 1:  Prepare Dataset
-##########################################################
-
-# Download Dataset from TorchVision MNIST
-# Once, downloaded locally, it does not download again.
-#
-# NOTE: LeNet uses 1x32x32 input. 
-# Reshape MNIST from 1x28x28 to  1x32x32
-
-
-# transformation for resize
-data_transform = transforms.Compose([
-            transforms.Resize((32, 32)),
-            transforms.ToTensor(),
-])
-
-# EVAL DATA
-test_data = datasets.MNIST(
-    root="data",
-    train=False,
-    download=True,
-    transform=data_transform,
-)
-
-
-# Create DataLoader with Batch size N
-# Input Dim:  [N, C, H, W]
-batch_size = 64
-test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=True)
-
-for X, y in test_dataloader:
-    print(f"Shape of X [N, C, H, W]: {X.shape}")
-    print(f"Shape of y: {y.shape} {y.dtype}")
-    break
-
-
-
-##########################################################
-## Part 4:  Test Model - Evaluation
-##########################################################
-
-model=torch.load(ModelPATH+'LeNet_MNIST_model.pth')
-myModel.test(test_dataloader, model, device)
-
-
-
-
-##########################################################
-## Part 5:  Visualize Evaluation Results
-##########################################################
-
-# Select one batch of images
-dataiter = iter(test_dataloader)
-images, labels = next(dataiter)
-print(images.size())
-
-
-# Evaluate on one batch test images
-with torch.no_grad():
-  for X, y in dataiter:
-      X, y = X.to(device), y.to(device)
-      
-      # Prediction Label 
-      pred = model(X)
-      _, predicted = torch.max(pred.data, 1)
-
-
-# Plot 9 output images
-figure = plt.figure()
-num_of_images = 9
-for index in range(num_of_images):
-    plt.subplot(3, 3, index+1)
-    plt.axis('off')    
-    plt.title("Predicted: {}".format(predicted[index].item()))
-    plt.imshow(images[index].cpu().numpy().squeeze(), cmap='gray_r')
-plt.show()
-
-
-```
-````
-{% endtab %}
-{% endtabs %}
-
-###
-
-### (Option) Other Style using nn.Sequencial()
-
-**Important Note**
-
-* Using **ReLU** activation function in `nn.Sequencial()`
-  * use `nn.ReLU()` ,  DO NOT use  `F.relu()`   &#x20;
-  * Watch out for the spelling and Captital Letters (`ReLU` vs `relu`)
-* inside `nn.Sequential()` add comma `,`  in every line:  e.g,   `nn.Conv2d(1,6,5), nn.ReLU()` etc
-
-{% tabs %}
-{% tab title="myModel_LeNet.py (nn.Sequential)" %}
-```python
-# myModel.py
-
-# ... same as Example 1
-
 
 # Model Architecture - 2nd version using Sequential
 class LeNet5v2(nn.Module):
@@ -862,6 +794,91 @@ class LeNet5v2(nn.Module):
 ```
 {% endtab %}
 {% endtabs %}
+
+### Main Script: Train and Evaluate
+
+We will work in the same working directory as Example 1
+
+> LeNet uses 1x32x32 input. Therefore, reshape MNIST from 1x28x28 to 1x32x32
+>
+> * MLP uses 1x28x28 as the Input for MNIST
+> * LeNet uses 1x32x32 as the Input for MNIST
+
+Use the same script as Exercise 1.
+
+The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
+
+* Run this code and observe the loss
+* Change the training epoch
+* Run this code and observe the evaluation accuracy and sample images
+* Understand each lines of code
+
+{% hint style="info" %}
+The only changes in Example 2 are (1) creating CNN architecture class (2) changing the input image dimension. The rest of the code are the same
+{% endhint %}
+
+{% tabs %}
+{% tab title="TU_PyTorch_MLP_CNN_main.py" %}
+````python
+```python
+
+##########################################################
+## ...
+
+
+# === Parameter === #
+DATA_DIR_PATH = "data"
+MODEL_DIR_PATH = "models"
+MODEL_FILENAME = "MLP_MNIST_model.pth"
+
+BATCH_SIZE = 64
+TOTAL_EPOCHS = 2
+LEARNING_RATE = 1e-3
+
+
+
+
+
+##########################################################
+## Part 1:  Prepare Dataset 
+##########################################################
+
+# Download Dataset from TorchVision MNIST
+# Once, downloaded locally, it does not download again.
+#
+# NOTE: LeNet uses 1x32x32 input. 
+# Reshape MNIST from 1x28x28 to  1x32x32
+
+# transformation for resize
+data_transform = transforms.Compose([
+            transforms.Resize((32, 32)),
+            transforms.ToTensor(),
+])
+
+# TRAIN DATA
+training_data = datasets.MNIST(
+    root="data",
+    train=True,
+    download=True,
+    transform=data_transform,   #converts data size
+)
+
+
+# Create DataLoader with Batch size N
+# Input Dim:  [N, C, H, W]
+batch_size = 64
+train_dataloader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
+
+
+
+``
+````
+{% endtab %}
+{% endtabs %}
+
+###
+
+###
 
 ## Exercise
 
