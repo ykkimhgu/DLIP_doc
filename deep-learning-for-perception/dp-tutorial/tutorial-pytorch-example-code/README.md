@@ -820,9 +820,9 @@ The only changes in Example 2 are (1) creating CNN architecture class (2) changi
 **What to Change**
 
 * \_\_init\_\_.py
-  * import LeNet5
-* main.py
   * `from .lenet5 import LeNet5`
+* main.py
+  * `from models import LeNet5`
   * Input Data Size:  `transforms.Resize((32, 32))`
   * `model = LeNet5().to(device)`
 
@@ -894,6 +894,7 @@ from .lenet5 import LeNet5
 
 Create a class that inherits from nn.Module
 
+* **`vgg16_imagenet.py`**
 * Define the layers of the network in **init** function
 * Specify Forward network in the **forward function.**
 
@@ -922,6 +923,8 @@ class VGG16(nn.Module):
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
 
+
+from models import VGG16
 model = VGG16().to(device)
 print(model)
      
@@ -936,7 +939,9 @@ summary(model, (3, 224, 244))
 
 ### Exercise 2:  Modify  VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
-Modify VGG-19 for CIFAR-10 (Input: 32x32x3)
+Create VGG-19 for CIFAR-10 (Input: 32x32x3)
+
+* **`vgg16_cifar10.py`**
 
 Then, Train and Evaluate using CIFAR-10&#x20;
 
@@ -944,7 +949,14 @@ Then, Train and Evaluate using CIFAR-10&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
+**What to Change**
 
+* \_\_init\_\_.py
+  * `from .vgg16_cifar10 import VGG16_cifar10`
+* main.py
+  * `from models import VGG16_cifar10 as VGG16`
+  * Input Data Size:  `transforms.Resize((32, 32))`
+  * `model = VGG16().to(device)`
 
 ```py
 
@@ -966,7 +978,8 @@ class VGG16_cifar10(nn.Module):
         # ADD YOUR CODE HERE
 
 
-model = VGG16_cifar10().to(device)
+from models import VGG16_cifar10 as VGG16
+model = VGG16().to(device)
 print(model)
 
 ## Saving Models
