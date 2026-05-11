@@ -699,7 +699,7 @@ Show your model with summary() function
 
 **Architecture detailed**
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image%20(1).png" alt=""><figcaption></figcaption></figure>
 
 ```py
 #########################################################
