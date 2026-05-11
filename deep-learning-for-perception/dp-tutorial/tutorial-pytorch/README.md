@@ -49,6 +49,8 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 * T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)-colab
 
+###
+
 ### 2. CNN Classification: Model Design and Train
 
 #### **(VSC) Create a simple CNN model**&#x20;
@@ -65,7 +67,9 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### Assignment: CNN Model Design
 
-* T2-4: [(Assignment) Create ResNet-50 model for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_4_ResNet50_2024.ipynb)
+* [(Assignment) Create VGG-16 and ResNet-50 model for ImageNet](../tutorial-pytorch-example-code/#assignment-1-week)
+
+###
 
 ### 3. CNN Classification : Pretrained Model and Transfer Learning
 
