@@ -937,13 +937,19 @@ summary(model, (3, 224, 244))
 
 
 
-### Exercise 2:  Modify  VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+## Assignment:  (1 week)
+
+### Assignment 1:   VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create VGG-19 for CIFAR-10 (Input: 32x32x3)
 
 * **`vgg16_cifar10.py`**
 
 Then, Train and Evaluate using CIFAR-10&#x20;
+
+* **`vgg16_main.py`**
+
+Show the output of Evaluation
 
 
 
@@ -953,7 +959,7 @@ Then, Train and Evaluate using CIFAR-10&#x20;
 
 * \_\_init\_\_.py
   * `from .vgg16_cifar10 import VGG16_cifar10`
-* main.py
+* **`vgg16_main.py`**
   * `from models import VGG16_cifar10 as VGG16`
   * Input Data Size:  `transforms.Resize((32, 32))`
   * `model = VGG16().to(device)`
@@ -985,5 +991,177 @@ print(model)
 ## Saving Models
 ## save the structure of this class together with the model
 torch.save(model,"trained_VGG16(CIFAR10).pth")
+```
+
+
+
+
+
+### Assignment 2:  ResNet-50 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+
+Create a class that inherits from nn.Module
+
+* **`resnet50_imagenet.py`**
+* Define the layers of the network in **init** function
+* Specify Forward network in the **forward function.**
+
+Compare the architecture with the pretrained model provided by PyTorch
+
+* **`resnet50_main.py`**
+* ```py
+  from torchsummary import summary
+  import torchvision.models as models
+  model_resnet50 = models.resnet50(pretrained=True).cuda()
+  summary(model_resnet50, (3,224,224))
+  ```
+
+
+
+#### **Architecture**
+
+{% embed url="https://arxiv.org/abs/1512.03385" %}
+
+
+
+<figure><img src="../../../.gitbook/assets/image (349).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (350).png" alt=""><figcaption></figcaption></figure>
+
+**Skip Connection**
+
+![image](https://camo.githubusercontent.com/28c6e0ef61bb9d3d371967a8e2ef2c3ab568259c1cac3ffc533ae8781837c80a/68747470733a2f2f6769746875622e636f6d2f796b6b696d6867752f444c49502d7372632f6173736574732f38343530383130362f34323561663934342d646338322d346438622d623961392d623763303334346238653066)
+
+#### Example
+
+**`resnet50_imagenet.py`**
+
+{% code overflow="wrap" expandable="true" %}
+```py
+# BasicBlock class defines the building block for ResNet
+class BasicBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, downsampling=None, stride=1):
+        super().__init__()
+        self.expansion = 4  # Expansion ratio for ResNet-50, 101, 152
+        self.downsampling = downsampling
+        self.stride = stride
+        
+        ### conv(1x1) -> batch_norm -> relu -> conv(3x3) -> batch_norm -> relu -> conv(1x1) -> batch_norm -> downsampling(if needed) -> Add skip connection -> relu ###
+        
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+
+    def forward(self, x):
+        # Clone input for the skip connection (using .clone())
+        # ADD YOUR CODE HERE
+        
+        # forward layer
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # Down Sampling
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # Add skip connection & Apply ReLU activation
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        return x
+
+# ResNet class defines the entire ResNet-50 architecture
+class ResNet(nn.Module):
+    def __init__(self, block, layers, image_channels, num_classes):
+        super(ResNet, self).__init__()
+        self.in_channels = 64  # Initial input channels
+        self.expansion = 4  # Expansion ratio for ResNet-50, 101, 152
+        
+        # conv2d, batch_norm2d, relu, maxpool2d
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+        # The main layers of ResNet (using self._make_layer)
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # Adaptive average pooling
+        # ADD YOUR CODE HERE
+        
+        # Fully connected layer
+        # ADD YOUR CODE HERE
+
+    def forward(self, x):
+        # First conv layer -> bn -> relu -> maxpooling
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # Layer 1 ~ 4
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # Adaptive average pooling
+        # ADD YOUR CODE HERE
+        
+        # Flatten
+        # ADD YOUR CODE HERE
+        
+        # Fully connected layer
+        # ADD YOUR CODE HERE
+
+        return x
+
+    # _make_layer method constructs the layers for ResNet
+    def _make_layer(self, block, num_residual_blocks, out_channels, stride):
+        downsampling = None
+        layers = []
+
+        # Downsample identity if we change input dimensions or channels
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        
+        # append block layers
+        # ADD YOUR CODE HERE
+
+
+        # Expansion size is always 4 for ResNet-50, 101, 152 (e.g. 64 -> 256)
+        # ADD YOUR CODE HERE
+
+        # Add additional blocks
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+        return nn.Sequential(*layers)
+
+# Function to create ResNet-50 model
+def ResNet50(img_channel=3, num_classes=1000):
+    return ResNet(BasicBlock, [3, 4, 6, 3], img_channel, num_classes)
+```
+{% endcode %}
+
+You can compare with the Pretrained model provided by PyTorch
+
+**`resnet50_main.py`**
+
+```py
+from torchsummary import summary
+import torchvision.models as models
+###...
+
+### Custum design model
+model = ResNet50()
+model = model.to(device)  
+print(model)
+summary(model, (3, 224, 224))
+
+### PyTorch Pretrained Model
+model_resnet50 = models.resnet50(pretrained=True).to(device)
+summary(model_resnet50, (3,224,224))
+
 ```
 
