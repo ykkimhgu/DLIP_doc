@@ -894,7 +894,7 @@ from .lenet5 import LeNet5
 
 ## Exercise
 
-### Assignment 1:   VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Exercise 1: VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create VGG-19 for CIFAR-10 (Input: 32x32x3)
 
@@ -946,7 +946,7 @@ class VGG16_cifar10(nn.Module):
 
 ## Assignment:  (1 week)
 
-### Exercise 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Assignment 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create a class that inherits from nn.Module
 
