@@ -195,6 +195,7 @@ The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
 
 {% tabs %}
 {% tab title="main.py" %}
+{% code expandable="true" %}
 ````python
 ```python
 # """
@@ -387,6 +388,7 @@ if __name__ == "__main__":
 
 ```
 ````
+{% endcode %}
 {% endtab %}
 
 {% tab title="TU_PyTorch_MLP_Train" %}
@@ -674,6 +676,7 @@ The **Model Architecture** is programmed in the source code of: `lenet5.py`&#x20
 {% tab title="leNet5.py" %}
 
 
+{% code expandable="true" %}
 ```python
 ##########################################################
 # PyTorch Tutorial:  MLP & CNN Model Architecture
@@ -742,6 +745,7 @@ class LeNet5(nn.Module):
         probs = F.softmax(logits,dim=1) # y_pred: 0~1 
         return probs
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="leNet5_v2.py (nn.Sequential)" %}
@@ -890,6 +894,58 @@ from .lenet5 import LeNet5
 
 ## Exercise
 
+### Assignment 1:   VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+
+Create VGG-19 for CIFAR-10 (Input: 32x32x3)
+
+* **`vgg16_cifar10.py`**
+
+Then, Train and Evaluate using CIFAR-10&#x20;
+
+* **`vgg16_cifar10_main.py`**
+
+Show the output of Evaluation
+
+
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+**What to Change**
+
+* \_\_init\_\_.py
+  * `from .vgg16_cifar10 import VGG16_cifar10`
+* **`vgg16_cifar10_main.py`**
+  * `from models import VGG16_cifar10 as VGG16`
+  * Input Data Size:  `transforms.Resize((32, 32))`
+  * `model = VGG16().to(device)`
+
+```py
+
+#########################################################
+# [EXERCISE] Create VGG-16 architecture (refer to part1)
+#########################################################
+class VGG16_cifar10(nn.Module):
+    def __init__(self):
+        super(VGG16_cifar10, self).__init__()
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+    def forward(self, x):
+
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+        # ADD YOUR CODE HERE
+
+```
+
+
+
+
+
+## Assignment:  (1 week)
+
 ### Exercise 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create a class that inherits from nn.Module
@@ -897,6 +953,20 @@ Create a class that inherits from nn.Module
 * **`vgg16_imagenet.py`**
 * Define the layers of the network in **init** function
 * Specify Forward network in the **forward function.**
+
+
+
+Show your model with summary() function
+
+* **`vgg16_imagenet_main.py`**
+* ```python
+  model = VGG16().to(device)
+  print(model)
+
+  ## Check your model with summary() function
+  from torchsummary import summary
+  summary(model, (3, 224, 244))
+  ```
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -923,77 +993,7 @@ class VGG16(nn.Module):
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
 
-
-from models import VGG16
-model = VGG16().to(device)
-print(model)
-     
-
-
-## Check your model with summary() function
-from torchsummary import summary
-summary(model, (3, 224, 244))
 ```
-
-
-
-## Assignment:  (1 week)
-
-### Assignment 1:   VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
-
-Create VGG-19 for CIFAR-10 (Input: 32x32x3)
-
-* **`vgg16_cifar10.py`**
-
-Then, Train and Evaluate using CIFAR-10&#x20;
-
-* **`vgg16_main.py`**
-
-Show the output of Evaluation
-
-
-
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
-**What to Change**
-
-* \_\_init\_\_.py
-  * `from .vgg16_cifar10 import VGG16_cifar10`
-* **`vgg16_main.py`**
-  * `from models import VGG16_cifar10 as VGG16`
-  * Input Data Size:  `transforms.Resize((32, 32))`
-  * `model = VGG16().to(device)`
-
-```py
-
-#########################################################
-# [EXERCISE] Create VGG-16 architecture (refer to part1)
-#########################################################
-class VGG16_cifar10(nn.Module):
-    def __init__(self):
-        super(VGG16_cifar10, self).__init__()
-
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-
-    def forward(self, x):
-
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-
-
-from models import VGG16_cifar10 as VGG16
-model = VGG16().to(device)
-print(model)
-
-## Saving Models
-## save the structure of this class together with the model
-torch.save(model,"trained_VGG16(CIFAR10).pth")
-```
-
-
 
 
 
