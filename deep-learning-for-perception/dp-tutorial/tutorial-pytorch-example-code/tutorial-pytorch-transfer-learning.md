@@ -186,10 +186,10 @@ for i in range(top5_prob.size(0)):
     print(categories[top5_catid[i]], top5_prob[i].item())
 ```
 
-{% tabs %}  
-{% tab title="main.py" %}  
-{% code expandable="true" %}  
-```py
+{% tabs %}
+{% tab title="main.py" %}
+{% code expandable="true" %}
+```python
 import os
 import torch
 import torch.nn as nn
@@ -326,6 +326,7 @@ if __name__ == "__main__":
     # test()
     visualize()
 ```
+{% endcode %}
 {% endtab %}
 
 
