@@ -186,6 +186,7 @@ for i in range(top5_prob.size(0)):
     print(categories[top5_catid[i]], top5_prob[i].item())
 ```
 
+## Example: Main Script
 {% tabs %}
 {% tab title="main.py" %}
 {% code expandable="true" %}
