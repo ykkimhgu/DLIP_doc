@@ -80,13 +80,17 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### Assignment: Classification
 
-* T3-3: [(Assignment) Transfer Learning using Pretrained Mdel - Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
+* [(Assignment) Transfer Learning using Pretrained Mdel - Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
 
 
 
 ###
 
 ### 4. CNN- Object Detection- YOLO
+
+#### **YOLO v26**
+
+
 
 #### **YOLO v8 in PyTorch**
 
