@@ -1,5 +1,6 @@
 ---
 description: updated 2026-5
+
 ---
 
 # Tutorial: PyTorch Transfer Learning
@@ -18,12 +19,12 @@ classification model using a pretrained CNN model provided by PyTorch
 
 The models were pre-trained on the **ImageNet** dataset (1000 classes)
 
+
+
 ## Preparation
 
-1. Create the file for train and evaluate
+1. Create the file
    * `**T3_1_main.py**`
-
-
 
 ### Import Library
 
@@ -40,8 +41,6 @@ import urllib.request
 import matplotlib.pyplot as plt
 from PIL import Image
 ```
-
-
 
 ### GPU Setting
 
@@ -186,10 +185,14 @@ for i in range(top5_prob.size(0)):
     print(categories[top5_catid[i]], top5_prob[i].item())
 ```
 
+
+
 ## Example: Main Script
+
 {% tabs %}
 {% tab title="main.py" %}
 {% code expandable="true" %}
+
 ````python
 import os
 import torch
@@ -327,10 +330,268 @@ if __name__ == "__main__":
     # test()
     visualize()
 ````
+
 {% endcode %}
 {% endtab %}
 
 
 
+
+
 ## Part 2: Transfer Learning using Pre-trained Models (Classification)
 
+- Part1: inference using pre-trained model
+- **Part2: Transfer Learning using Pre-trained Models (Classification)**
+
+The purpose of this tutorial is to learn how to **transfer learning** using a pre-trained model.
+
+In this document we will perform two types of **transfer learning**:
+
+- **finetuning**: update all parameters of the pretrained model for our new task
+- **feature extraction**: only update the final layer weights for predictions
+
+## Preparation
+
+1. we will download Python modules and image data.
+
+- [download modules](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/T3_2_pytorch_classification_modules.zip)
+
+  > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the `**models**` folder.
+
+- [download dataset(ant/bee)](https://drive.google.com/file/d/123qUnqUpSzpnj7BnJjftFClmK6PLRzfA/view?usp=sharing)
+
+  > Move to the `**data**` folder.
+
+2. Create the file
+   * `**T3_2_main.py**`
+
+```python
+import os
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torchvision import models
+from torchsummary import summary
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from utils.train import train as training
+from utils.eval import evaluate
+```
+
+### Import from the downloaded modules
+
+```python
+from models.initialize_model import initialize_model
+```
+
+### GPU Setting
+
+```python
+##########################################################
+## Part 0:  GPU setting
+##########################################################
+
+# Select GPU or CPU for training.
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using {device} device")
+if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
+```
+
+
+
+## Load Pretrained MODEL
+
+Basically, the classification models provided by torchvision are trained on ImageNet and consist of 1000 output layers.
+
+However, in the model for fine-tuning with other datasets, the number of output layers should be different depending on the class.
+
+Here, we use the initialize_model() function provided in the [pytorch tutorial](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html) to change the output stage of the model.
+
+initialize_model() is a function that helps to initialize the fine-tuning of some models.
+
+If the model is not in the function, the output layer information can be known by printing the model with the print() function.
+
+### Load ResNet with initialization_model()
+
+```python
+##########################################################
+## Part 1:  Create Model Instance 
+##########################################################
+
+# Models to choose from [resnet, alexnet, vgg, squeezenet, densenet, inception*]
+model_name = "resnet"
+
+# Number of classes in the dataset
+num_classes = 2
+
+# - True(feature extraction): only update the reshaped layer params,
+# - False(finetuning)       : finetune the whole model, 
+feature_extract = True  
+
+model_ft, input_size = initialize_model(model_name, num_classes, feature_extract, use_pretrained=True)
+model_ft = model_ft.to(device)
+
+summary(model_ft, (3,input_size,input_size))
+
+print(model_ft)
+```
+
+
+
+## Prepare Datasets: hymenoptera_data
+
+The downloaded datafile `hymenoptera_data.zip` should be in the subfolder `\data`
+
+Unzip hymenoptera_data.zip to create training data
+
+[hymenoptera_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) is a binary (Ants and Bees) classification dataset consisting of a small number of images.
+
+> Download and Move the `archive/hymenoptera_data/hymenoptera_data` to the `**data**` folder.
+
+```python
+# === Parameter === #
+DATA_DIR_PATH = "data/hymenoptera_data"
+MODEL_DIR_PATH = "models"
+MODEL_FILENAME = "hymenoptera_model.pth"
+
+# Batch size for training (change depending on how much memory you have)
+BATCH_SIZE = 8
+TOTAL_EPOCHS = 2
+LEARNING_RATE = 1e-3
+```
+
+The images in the prepared dataset have different sizes. In order to be used as a learning model, the following process is required.
+
+- Assign the images in the folder to training/test data for learning
+- Same pre-processing as ImageNet data for input of learning model
+- Resize the new dataset to the input size of pretrained model (e.g. 224 x 224)
+
+```python
+##########################################################
+## Part 2:  Prepare Dataset 
+##########################################################
+
+# Data augmentation and normalization for training
+# Just normalization for validation
+# Normalized with ImageNet mean and variance
+data_transform = {
+    'train': transforms.Compose([
+        transforms.RandomResizedCrop(input_size),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+    'val': transforms.Compose([
+        transforms.Resize(input_size),
+        transforms.CenterCrop(input_size),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+}
+
+print("Initializing Datasets and Dataloaders...")
+
+training_data = torchvision.datasets.ImageFolder(
+    root=os.path.join(DATA_DIR_PATH, 'train'), 
+    transform=data_transform['train'],
+    )
+
+test_data = torchvision.datasets.ImageFolder(
+    root=os.path.join(DATA_DIR_PATH, 'val'), 
+    transform=data_transform['val'],
+    )
+
+classes = ['ant', 'bee']
+print(f"train dataset length = {len(training_data)}")
+print(f"test  dataset length = {len(test_data)}")
+```
+
+Use DataLoader to make dataset iterable.
+
+```python
+train_dataloader = torch.utils.data.DataLoader(
+    training_data, 
+    batch_size=BATCH_SIZE, 
+    shuffle=True,
+    )
+
+test_dataloader = torch.utils.data.DataLoader(
+    test_data, 
+    batch_size=BATCH_SIZE, 
+    shuffle=True,
+    )
+
+for X, y in test_dataloader:
+    print(f"Shape of X [N, C, H, W]: {X.shape} {y.dtype}")
+    print(f"Shape of y: {y.shape} {y.dtype}")
+    break
+```
+
+
+
+## Optimization Setup
+
+### Optmizer function
+
+Gradient descent is the common optimisation strategy used in neural networks. Many of the variants and advanced optimisation functions now are available,
+
+- Stochastic Gradient Descent, Adagrade, Adam, etc
+
+### Loss function
+
+- Linear regression: Mean Squared Error
+- Classification: Cross entropy
+
+```python
+#########################################################
+## Part 3:  Train Model
+##########################################################
+
+# Loss Function
+loss_fn = nn.CrossEntropyLoss()
+
+# Optimizer
+optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9,weight_decay=5e-4)
+```
+
+
+
+## Transfer Learning with New Dataset
+
+```python
+def train():
+    # Run Train for k epoch
+    for epoch in range(TOTAL_EPOCHS):
+        print(f"Epoch {epoch + 1}\n-------------------------------")
+        training(train_dataloader, model_ft, loss_fn, optimizer, device)
+    print("Done!")
+
+    # Save Train Model
+    # * Need to create a new folder PATH priorly
+    save_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    torch.save(model_ft, save_model_path)
+
+
+
+##########################################################
+## Part 4:  Test Model - Evaluation
+##########################################################
+
+def test():
+    load_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    model_ft = torch.load(load_model_path, map_location=device, weights_only=False)
+
+    evaluate(test_dataloader, model_ft, device)
+```
+
+
+
+## Visualize test results
+
+Select random test images and evaluate
