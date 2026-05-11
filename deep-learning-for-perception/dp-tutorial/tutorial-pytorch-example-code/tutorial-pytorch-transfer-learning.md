@@ -189,7 +189,7 @@ for i in range(top5_prob.size(0)):
 {% tabs %}
 {% tab title="main.py" %}
 {% code expandable="true" %}
-```python
+````python
 import os
 import torch
 import torch.nn as nn
@@ -325,7 +325,7 @@ if __name__ == "__main__":
     # train()
     # test()
     visualize()
-```
+````
 {% endcode %}
 {% endtab %}
 
