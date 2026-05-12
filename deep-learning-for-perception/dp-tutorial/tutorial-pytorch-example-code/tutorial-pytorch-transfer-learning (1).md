@@ -17,7 +17,7 @@ In this document we will perform two types of **transfer learning**:
 
 First, you need to complete Tutorial: PyTorch Pretarin Model
 
-* [Part1: inference using pre-trained model](tutorial-pytorch-example-code/tutorial-pytorch-transfer-learning.md#tutorial-inference-using-pre-trained-model-classification)
+* [Part1: inference using pre-trained model](../tutorial-pytorch-transfer-learning.md#tutorial-inference-using-pre-trained-model-classification)
 
 Also, refer to PyTorch tutorial: [https://docs.pytorch.org/tutorials/beginner/transfer\_learning\_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 
