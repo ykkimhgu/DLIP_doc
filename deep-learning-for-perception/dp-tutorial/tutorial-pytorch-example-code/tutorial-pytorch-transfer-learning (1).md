@@ -25,9 +25,9 @@ Also, refer to PyTorch tutorial: [https://docs.pytorch.org/tutorials/beginner/tr
 
 We will download Python modules and image data.
 
-*   [Download modules](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/T3_2_pytorch_classification_modules.zip)
+*   [Download module](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_PyTorch_VSC/T3_2/initialize_model.py)
 
-    > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the **`models`** folder.
+    > Move `initialize_model.py` to the **`models`** folder.
 
 
 
@@ -103,7 +103,7 @@ feature_extract = True
 model_ft, input_size = initialize_model(model_name, num_classes, feature_extract, use_pretrained=True)
 model_ft = model_ft.to(device)
 
-summary(model_ft, (3,input_size,input_size))
+summary(model_ft, (3, input_size,input_size))
 
 print(model_ft)
 ```
@@ -221,7 +221,7 @@ Gradient descent is the common optimisation strategy used in neural networks. Ma
 loss_fn = nn.CrossEntropyLoss()
 
 # Optimizer
-optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9,weight_decay=5e-4)
+optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9, weight_decay=5e-4)
 ```
 
 ## Transfer Learning with New Dataset
@@ -240,9 +240,6 @@ def train():
     # * Need to create a new folder PATH priorly
     save_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
     torch.save(model_ft, save_model_path)
-
-
-
 ```
 
 ## Evaluate Dataset
@@ -260,7 +257,6 @@ def test():
     model_ft = torch.load(load_model_path, map_location=device, weights_only=False)
 
     evaluate(test_dataloader, model_ft, device)
-
 ```
 {% endcode %}
 
@@ -386,7 +382,7 @@ feature_extract = True
 model_ft, input_size = initialize_model(model_name, num_classes, feature_extract, use_pretrained=True)
 model_ft = model_ft.to(device)
 
-summary(model_ft, (3,input_size,input_size))
+summary(model_ft, (3, input_size,input_size))
 
 print(model_ft)
 
@@ -457,7 +453,7 @@ for X, y in test_dataloader:
 loss_fn = nn.CrossEntropyLoss()
 
 # Optimizer
-optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9,weight_decay=5e-4)
+optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9, weight_decay=5e-4)
 
 def train():
     # Run Train for k epoch
