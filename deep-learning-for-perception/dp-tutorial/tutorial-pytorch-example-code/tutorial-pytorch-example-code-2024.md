@@ -3,7 +3,7 @@
 ## Preparation
 
 1. Create the working directory: such as **`\TU_MLP_CNN_Classification\`**
-2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode/TU_MLP_CNN_Classification_Example%20Code%202024.zip)&#x20;
+2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode/TU_MLP_CNN_Classification_Example%20Code%202024.zip)
 3. Unzip the files in the working directory.
 4. Make sure you have the subdirectory for saving weights: **`\TU_MLP_CNN_Classification\weights\`**
 
