@@ -35,7 +35,7 @@ from PIL import Image
 # === Parameter === #
 DATA_DIR_PATH = "data"
 MODEL_DIR_PATH = "models"
-MODEL_FILENAME = "MLP_MNIST_model.pth"
+MODEL_FILENAME = "vgg16_pretrained_model.pth"
 
 BATCH_SIZE = 64
 TOTAL_EPOCHS = 2
@@ -109,7 +109,7 @@ In this tutorial, we load one test image file: [download image here](https://git
 
 You can also use the test image file from URL
 
-> Edit the **Part 1** in main file.
+> Create the **Part 1** in main file.
 
 ```python
 ##########################################################
@@ -138,9 +138,11 @@ Thus, we will load label information from a text file having a list of all the 1
 
 ```python
 # Download ImageNet labels
-url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
 label_filename = os.path.join(DATA_DIR_PATH, 'imagenet_classes.txt')
-urllib.request.urlretrieve(url, label_filename)
+
+url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
+try: urllib.request.urlretrieve(url, label_filename)
+except: urllib.request.urlretrieve(url, label_filename)
 ```
 
 ### Preprocessing Test Data
@@ -228,8 +230,12 @@ from PIL import Image
 
 # === Parameter === #
 DATA_DIR_PATH = "data"
-...
+MODEL_DIR_PATH = "models"
+MODEL_FILENAME = "vgg16_pretrained_model.pth"
 
+BATCH_SIZE = 64
+TOTAL_EPOCHS = 2
+LEARNING_RATE = 1e-3
 
 
 ##########################################################
@@ -246,9 +252,10 @@ if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0
 ## Part 1:  Prepare Dataset 
 ##########################################################
 
-url = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
-filename = os.path.join(DATA_DIR_PATH, "test_image.jpg")
+filename = os.path.join(DATA_DIR_PATH, "test_image_dog.png")
 
+##(Option 2)
+url = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
 try: urllib.URLopener().retrieve(url, filename)
 except: urllib.request.urlretrieve(url, filename)
 
@@ -257,6 +264,14 @@ img = cv.imread(filename)
 dst = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 plt.imshow(dst)
 plt.show()
+
+# Download ImageNet labels
+label_filename = os.path.join(DATA_DIR_PATH, 'imagenet_classes.txt')
+
+url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
+try: urllib.request.urlretrieve(url, label_filename)
+except: urllib.request.urlretrieve(url, label_filename)
+
 
 # transformation to tensor:  converts 0~255 value to 0~1 value.
 data_transform = transforms.Compose([
@@ -282,28 +297,6 @@ summary(model, (3, 224, 224))
 
 
 ##########################################################
-## Part 3:  Train Model
-##########################################################
-
-# Loss Function
-loss_fn = nn.CrossEntropyLoss()
-
-# Optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=LEARNING_RATE)
-
-def train():
-    ...
-
-
-##########################################################
-## Part 4:  Test Model - Evaluation
-##########################################################
-
-def test():
-    ...
-
-
-##########################################################
 ## Part 5:  Visualize Result
 ##########################################################
 
@@ -324,10 +317,6 @@ def visualize():
     probabilities = torch.nn.functional.softmax(output[0], dim=0)
     print(probabilities)
 
-    # Download ImageNet labels
-    url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
-    label_filename = os.path.join(DATA_DIR_PATH, 'imagenet_classes.txt')
-    urllib.request.urlretrieve(url, label_filename)
 
     # Read the categories
     with open(label_filename, "r") as f:
@@ -345,11 +334,8 @@ def visualize():
 ## MAIN
 ##########################################################
 if __name__ == "__main__":
-    # train()
-    # test()
     visualize()
 ```
 {% endcode %}
 
-##
 
