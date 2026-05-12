@@ -1,6 +1,5 @@
 ---
 description: updated 2026-5
-
 ---
 
 # Tutorial: PyTorch Transfer Learning
@@ -458,7 +457,7 @@ Unzip hymenoptera_data.zip to create training data
 # === Parameter === #
 DATA_DIR_PATH = "data/hymenoptera_data"
 MODEL_DIR_PATH = "models"
-MODEL_FILENAME = "hymenoptera_model.pth"
+MODEL_FILENAME = "ResNet_ft(hymenoptera).pth"
 
 # Batch size for training (change depending on how much memory you have)
 BATCH_SIZE = 8
@@ -578,7 +577,6 @@ def train():
     torch.save(model_ft, save_model_path)
 
 
-
 ##########################################################
 ## Part 4:  Test Model - Evaluation
 ##########################################################
@@ -595,3 +593,288 @@ def test():
 ## Visualize test results
 
 Select random test images and evaluate
+
+```python
+##########################################################
+## Part 5:  Visualize Evaluation Results
+##########################################################
+
+def visualize():
+    # # Get some random test  images // BatchSize at a time
+    dataiter = iter(test_dataloader)
+    images, labels = next(dataiter)
+    print(images.size())
+
+
+    # Evaluate mode
+    # Prediction of some sample images 
+    images, labels = images.to(device), labels.to(device)
+    with torch.no_grad():
+        pred = model_ft(images)
+        _, predicted = torch.max(pred.data, 1)
+
+
+    # Plot BATCH_SIZE-9 output images
+    figure = plt.figure()
+    num_of_images = min(BATCH_SIZE, 9)
+
+    for index in range(num_of_images):
+        plt.subplot(3, 3, index+1)
+        plt.axis('off')
+        # plt.title(f"Ground Truth: {classes[labels[index]]}")  
+        plt.title(f"Predicted: {classes[predicted[index].item()]}")
+        # 출력을 위한 차원변환 (channels*rows*cols) -> (rows*cols*channels)
+        plt.imshow(np.transpose((images[index] * 0.224  + 0.456).cpu().numpy().squeeze(), (1, 2, 0)))
+    plt.show()
+```
+
+
+
+Plot heatmap (confusion matrix)
+
+> Add it to `def visualize()`
+
+```python
+    # Get some random test  images // BatchSize at a time
+    heatmap = pd.DataFrame(data=0, index=classes, columns=classes)
+
+    for images, labels in test_dataloader:
+        with torch.no_grad():
+            images, labels = images.to(device), labels.to(device)
+            outputs = model_ft(images)
+            _, predicted = torch.max(outputs, 1)
+            c = (predicted == labels).squeeze()
+            for i in range(len(labels)):
+                true_label = labels[i].item()
+                predicted_label = predicted[i].item()
+                heatmap.iloc[true_label, predicted_label] += 1
+    print(heatmap)
+    _, ax = plt.subplots(figsize=(10, 8))
+    ax = sns.heatmap(heatmap, annot=True, fmt="d", cmap="YlGnBu")
+    plt.show()
+```
+
+
+
+## Example: Main Script
+
+{% tabs %}
+{% tab title="main.py" %}
+{% code expandable="true" %}
+
+```python
+import os
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torchvision import models
+from torchsummary import summary
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from models.initialize_model import initialize_model
+from utils.train import train as training
+from utils.eval import evaluate
+
+
+# === Parameter === #
+DATA_DIR_PATH = "data/hymenoptera_data"
+MODEL_DIR_PATH = "models"
+MODEL_FILENAME = "ResNet_ft(hymenoptera).pth"
+
+BATCH_SIZE = 8
+TOTAL_EPOCHS = 2
+LEARNING_RATE = 1e-3
+
+
+##########################################################
+## Part 0:  GPU setting
+##########################################################
+
+# Select GPU or CPU for training.
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using {device} device")
+if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
+
+
+##########################################################
+## Part 1:  Create Model Instance 
+##########################################################
+
+# Models to choose from [resnet, alexnet, vgg, squeezenet, densenet, inception*]
+model_name = "resnet"
+
+# Number of classes in the dataset
+num_classes = 2
+
+# - True(feature extraction): only update the reshaped layer params,
+# - False(finetuning)       : finetune the whole model, 
+feature_extract = True  
+
+model_ft, input_size = initialize_model(model_name, num_classes, feature_extract, use_pretrained=True)
+model_ft = model_ft.to(device)
+
+summary(model_ft, (3,input_size,input_size))
+
+print(model_ft)
+
+
+##########################################################
+## Part 2:  Prepare Dataset 
+##########################################################
+
+# Data augmentation and normalization for training
+# Just normalization for validation
+# Normalized with ImageNet mean and variance
+data_transform = {
+    'train': transforms.Compose([
+        transforms.RandomResizedCrop(input_size),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+    'val': transforms.Compose([
+        transforms.Resize(input_size),
+        transforms.CenterCrop(input_size),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+}
+
+print("Initializing Datasets and Dataloaders...")
+
+training_data = torchvision.datasets.ImageFolder(
+    root=os.path.join(DATA_DIR_PATH, 'train'), 
+    transform=data_transform['train'],
+    )
+
+test_data = torchvision.datasets.ImageFolder(
+    root=os.path.join(DATA_DIR_PATH, 'val'), 
+    transform=data_transform['val'],
+    )
+
+
+classes = ['ant', 'bee']
+print(f"train dataset length = {len(training_data)}")
+print(f"test  dataset length = {len(test_data)}")
+
+
+train_dataloader = torch.utils.data.DataLoader(
+    training_data, 
+    batch_size=BATCH_SIZE, 
+    shuffle=True,
+    )
+
+test_dataloader = torch.utils.data.DataLoader(
+    test_data, 
+    batch_size=BATCH_SIZE, 
+    shuffle=True,
+    )
+
+for X, y in test_dataloader:
+    print(f"Shape of X [N, C, H, W]: {X.shape} {y.dtype}")
+    print(f"Shape of y: {y.shape} {y.dtype}")
+    break
+
+
+#########################################################
+## Part 3:  Train Model
+##########################################################
+
+# Loss Function
+loss_fn = nn.CrossEntropyLoss()
+
+# Optimizer
+optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9,weight_decay=5e-4)
+
+def train():
+    # Run Train for k epoch
+    for epoch in range(TOTAL_EPOCHS):
+        print(f"Epoch {epoch + 1}\n-------------------------------")
+        training(train_dataloader, model_ft, loss_fn, optimizer, device)
+    print("Done!")
+
+    # Save Train Model
+    # * Need to create a new folder PATH priorly
+    save_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    torch.save(model_ft, save_model_path)
+
+
+##########################################################
+## Part 4:  Test Model - Evaluation
+##########################################################
+
+def test():
+    load_model_path = os.path.join(MODEL_DIR_PATH, MODEL_FILENAME)
+    model_ft = torch.load(load_model_path, map_location=device, weights_only=False)
+
+    evaluate(test_dataloader, model_ft, device)
+
+
+##########################################################
+## Part 5:  Visualize Evaluation Results
+##########################################################
+
+def visualize():
+    # # Get some random test  images // BatchSize at a time
+    dataiter = iter(test_dataloader)
+    images, labels = next(dataiter)
+    print(images.size())
+
+
+    # Evaluate mode
+    # Prediction of some sample images 
+    images, labels = images.to(device), labels.to(device)
+    with torch.no_grad():
+        pred = model_ft(images)
+        _, predicted = torch.max(pred.data, 1)
+
+
+    # Plot BATCH_SIZE-9 output images
+    figure = plt.figure()
+    num_of_images = min(BATCH_SIZE, 9)
+
+    for index in range(num_of_images):
+        plt.subplot(3, 3, index+1)
+        plt.axis('off')
+        # plt.title(f"Ground Truth: {classes[labels[index]]}")  
+        plt.title(f"Predicted: {classes[predicted[index].item()]}")
+        # 출력을 위한 차원변환 (channels*rows*cols) -> (rows*cols*channels)
+        plt.imshow(np.transpose((images[index] * 0.224  + 0.456).cpu().numpy().squeeze(), (1, 2, 0)))
+    plt.show()
+
+    # Get some random test  images // BatchSize at a time
+    heatmap = pd.DataFrame(data=0, index=classes, columns=classes)
+
+    for images, labels in test_dataloader:
+        with torch.no_grad():
+            images, labels = images.to(device), labels.to(device)
+            outputs = model_ft(images)
+            _, predicted = torch.max(outputs, 1)
+            c = (predicted == labels).squeeze()
+            for i in range(len(labels)):
+                true_label = labels[i].item()
+                predicted_label = predicted[i].item()
+                heatmap.iloc[true_label, predicted_label] += 1
+    print(heatmap)
+    _, ax = plt.subplots(figsize=(10, 8))
+    ax = sns.heatmap(heatmap, annot=True, fmt="d", cmap="YlGnBu")
+    plt.show()
+
+
+##########################################################
+## MAIN
+##########################################################
+if __name__ == "__main__":
+    train()
+    test()
+    visualize()
+```
+
+{% endcode %}
+{% endtab %}
