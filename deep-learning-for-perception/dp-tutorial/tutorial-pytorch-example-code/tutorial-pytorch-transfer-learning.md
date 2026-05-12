@@ -23,7 +23,7 @@ The models were pre-trained on the **ImageNet** dataset (1000 classes)
 ## Preparation
 
 1. Create the file
-   * `**T3_1_main.py**`
+   * **`T3_1_main.py`**
 
 ### Import Library
 
@@ -355,14 +355,14 @@ In this document we will perform two types of **transfer learning**:
 
 - [download modules](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/T3_2_pytorch_classification_modules.zip)
 
-  > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the `**models**` folder.
+  > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the **`models`** folder.
 
 - [download dataset(ant/bee)](https://drive.google.com/file/d/123qUnqUpSzpnj7BnJjftFClmK6PLRzfA/view?usp=sharing)
 
-  > Move to the `**data**` folder.
+  > Move to the **`data`** folder.
 
 2. Create the file
-   * `**T3_2_main.py**`
+   * **`T3_2_main.py`**
 
 ```python
 import os
@@ -451,7 +451,7 @@ Unzip hymenoptera_data.zip to create training data
 
 [hymenoptera_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) is a binary (Ants and Bees) classification dataset consisting of a small number of images.
 
-> Download and Move the `archive/hymenoptera_data/hymenoptera_data` to the `**data**` folder.
+> Download and Move the `archive/hymenoptera_data/hymenoptera_data` to the **`data`** folder.
 
 ```python
 # === Parameter === #
