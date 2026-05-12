@@ -9,19 +9,15 @@ This is a template code for a general deep learning model project using VS Code 
 ## Preparation
 
 1. Create the working directory: such as **`\TU_MLP_CNN_Classification\`**
-2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)&#x20;
+2. Download the Tutorial Code in Zip file: [TU\_MLP\_CNN\_Classification\_Example Code .zip](https://github.com/ykkimhgu/DLIP-src/tree/main/Tutorial_Pytorch/TU_MLP_CNN_Classification_ExampleCode)
 3. Unzip the files in the working directory.
 4. Make sure you have the subdirectory for saving weights: **`\TU_MLP_CNN_Classification\weights\`**
 
 ***
 
-
-
-## Example 1 :  MLP&#x20;
+## Example 1 : MLP
 
 Classify the MNIST digit with a simple MLP
-
-
 
 ### Creating Model Architecture
 
@@ -41,16 +37,14 @@ The **Model Architecture** is programmed in the source code of: `myModel_MLP.py`
 
 ### Training and Evaluation
 
-We will create two main files for training and evaluating  the model architecture.
+We will create two main files for training and evaluating the model architecture.
 
 > Check if you have created the subfolder **`.\weights\`**
 
-A main program for  **Model Training**: TU\_PyTorch\_MLP\_Train.py
+A main program for **Model Training**: TU\_PyTorch\_MLP\_Train.py
 
 * Run this code and observe the loss
 * Change the training epoch
-
-
 
 A main program for **Model Evaluation**: TU\_PyTorch\_MLP\_Eval.py
 
@@ -443,11 +437,11 @@ We will work in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Cla
 
 ### Creating Model Architecture
 
-We will create a class   `class LeNet5` for the model architecture for LeNet
+We will create a class `class LeNet5` for the model architecture for LeNet
 
 * LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/publis/psgz/lecun-98.ps.gz)
 
-The **Model Architecture** is programmed in the source code of: `myModel_LeNet.py`&#x20;
+The **Model Architecture** is programmed in the source code of: `myModel_LeNet.py`
 
 * it should be under the same directory `models`
 
@@ -464,10 +458,6 @@ The **Model Architecture** is programmed in the source code of: `myModel_LeNet.p
 * **\[F6] FC** : Input (1x120) to Output (1x84) , `relu`
 * **\[OUTPUT]** : Input (1x84) to Output (1x10)
 
-
-
-
-
 ### Training and Evaluation
 
 We will work in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Classification\`**
@@ -477,14 +467,10 @@ We will work in the same working directory as Example 1: e.g. **`\TU_MLP_CNN_Cla
 > * MLP uses 1x28x28 as the Input for MNIST
 > * LeNet uses 1x32x32 as the Input for MNIST
 
-
-
-A main program for  **Model Training**: TU\_PyTorch\_CNN\_Train.py
+A main program for **Model Training**: TU\_PyTorch\_CNN\_Train.py
 
 * Run this code and observe the loss
 * Change the training epoch
-
-
 
 A main program for **Model Evaluation**: TU\_PyTorch\_CNN\_Eval.py
 
@@ -803,9 +789,9 @@ plt.show()
 **Important Note**
 
 * Using **ReLU** activation function in `nn.Sequencial()`
-  * use `nn.ReLU()` ,  DO NOT use  `F.relu()`   &#x20;
+  * use `nn.ReLU()` , DO NOT use `F.relu()`
   * Watch out for the spelling and Captital Letters (`ReLU` vs `relu`)
-* inside `nn.Sequential()` add comma `,`  in every line:  e.g,   `nn.Conv2d(1,6,5), nn.ReLU()` etc
+* inside `nn.Sequential()` add comma `,` in every line: e.g, `nn.Conv2d(1,6,5), nn.ReLU()` etc
 
 {% tabs %}
 {% tab title="myModel_LeNet.py (nn.Sequential)" %}
@@ -865,7 +851,7 @@ class LeNet5v2(nn.Module):
 
 ## Exercise
 
-### Exercise 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Exercise 1: Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create a class that inherits from nn.Module
 
@@ -907,19 +893,11 @@ from torchsummary import summary
 summary(model, (3, 224, 244))
 ```
 
-
-
-### Exercise 2:  Modify  VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Exercise 2: Modify VGG 16 for CIFAR10 (32x32) & Train <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Modify VGG-19 for CIFAR-10 (Input: 32x32x3)
 
-Then, Train and Evaluate using CIFAR-10&#x20;
-
-
-
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
-
+Then, Train and Evaluate using CIFAR-10
 
 ```py
 
@@ -948,4 +926,3 @@ print(model)
 ## save the structure of this class together with the model
 torch.save(model,"trained_VGG16(CIFAR10).pth")
 ```
-

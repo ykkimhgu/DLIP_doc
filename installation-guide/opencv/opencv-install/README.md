@@ -16,7 +16,7 @@ Opencv 설치 파일 다운로드 >> 설치 파일 압축풀기
 
 **제어판> 시스템 및 보안 > 시스템 > 고급 시스템 설정 – 고급 탭 > 환경변수(N)** 클릭
 
-![](<../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../.gitbook/assets/image (26).png>)
 
 **‘시스템 변수’** 항목에 있는 변수 명 중 **Path**를 찾아 **편집**
 
@@ -138,11 +138,8 @@ Visual Studio 2022 실행 후
 
 ## Demo Program
 
-Follow the Tutorial: Create OpenCV Project&#x20;
+Follow the Tutorial: Create OpenCV Project
 
 {% content-ref url="../../../image-processing/tutorial/tutorial-create-opencv-project.md" %}
 [tutorial-create-opencv-project.md](../../../image-processing/tutorial/tutorial-create-opencv-project.md)
 {% endcontent-ref %}
-
-
-

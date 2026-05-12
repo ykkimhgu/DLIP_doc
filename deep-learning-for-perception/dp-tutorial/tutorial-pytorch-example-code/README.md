@@ -14,25 +14,17 @@ You can reuse this tutorial code for your assignments.
 2. Download the Tutorial Code in Zip file:[ TU\_PyTorch\_MLP\_CNN\_MNIST.zip](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_PyTorch_VSC/TU_PyTorch_MLP_CNN_MNIST.zip)
 3. Unzip the files in the working directory.
 
-
-
 ***
 
-
-
-## Example 1 :  MLP&#x20;
+## Example 1 : MLP
 
 Classify the MNIST digit with a simple MLP
-
-
 
 ### Dataset
 
 In this tutorial, we will use the MLP dataset saved in your local computer.
 
 It is stores in `\data\` folder
-
-
 
 ### Model: Creating Architecture
 
@@ -50,13 +42,11 @@ The **Model Architecture** is programmed in the source code of: `mlp.py`
 * Output: 1x10
 * Activation function: ReLU
 
-
-
 ### Util: Train and Evaluation Modules
 
 The modules for Training and Testing are defined in `train.py`, `eval.py`
 
-> You don't need to modify these scripts.&#x20;
+> You don't need to modify these scripts.
 
 {% tabs %}
 {% tab title="mlp.py" %}
@@ -166,9 +156,9 @@ def evaluate(dataloader, model, device):
 
 ### Main Script: Train and Evaluate
 
-We will create a main script that runs the training and evaluating  the model architecture.
+We will create a main script that runs the training and evaluating the model architecture.
 
-> You can create different scripts for traing and testing.&#x20;
+> You can create different scripts for traing and testing.
 
 The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
 
@@ -177,12 +167,8 @@ The main script: **TU\_PyTorch\_MLP\_CNN\_main.py**
 * Run this code and observe the evaluation accuracy and sample images
 * Understand each lines of code
 
-
-
-{% tabs %}
-{% tab title="main.py" %}
 {% code expandable="true" %}
-````python
+```python
 ##########################################################
 # Image Processing with Deep Learning in Handong Global University
 # 
@@ -366,9 +352,8 @@ if __name__ == "__main__":
     train()
     test()
     visualize()
-````
+```
 {% endcode %}
-{% endtab %}
 
 ###
 
@@ -376,13 +361,13 @@ if __name__ == "__main__":
 
 We will work in the same working directory as Example 1:
 
-### Model: Creating  Architecture&#x20;
+### Model: Creating Architecture
 
-We will create a class   `class LeNet5` for the model architecture for LeNet
+We will create a class `class LeNet5` for the model architecture for LeNet
 
 * LeNet-5 Architecture. Credit: [LeCun et al., 1998](http://yann.lecun.com/exdb/publis/psgz/lecun-98.ps.gz)
 
-The **Model Architecture** is programmed in the source code of: `lenet5.py`&#x20;
+The **Model Architecture** is programmed in the source code of: `lenet5.py`
 
 * it should be under the same directory `models`
 
@@ -399,21 +384,17 @@ The **Model Architecture** is programmed in the source code of: `lenet5.py`&#x20
 * **\[F6] FC** : Input (1x120) to Output (1x84) , `relu`
 * **\[OUTPUT]** : Input (1x84) to Output (1x10)
 
-
-
-### (Option) Architecture Building  using nn.Sequencial()
+### (Option) Architecture Building using nn.Sequencial()
 
 **Important Note**
 
 * Using **ReLU** activation function in `nn.Sequencial()`
-  * use `nn.ReLU()` ,  DO NOT use  `F.relu()`   &#x20;
+  * use `nn.ReLU()` , DO NOT use `F.relu()`
   * Watch out for the spelling and Captital Letters (`ReLU` vs `relu`)
-* inside `nn.Sequential()` add comma `,`  in every line:  e.g,   `nn.Conv2d(1,6,5), nn.ReLU()` etc
+* inside `nn.Sequential()` add comma `,` in every line: e.g, `nn.Conv2d(1,6,5), nn.ReLU()` etc
 
 {% tabs %}
 {% tab title="leNet5.py" %}
-
-
 {% code expandable="true" %}
 ```python
 ##########################################################
@@ -556,8 +537,8 @@ The only changes in Example 2 are (1) creating CNN architecture class (2) changi
 * \_\_init\_\_.py
   * `from .lenet5 import LeNet5`
 * main.py
-  * `from models import LeNet5` 
-  * Input Data Size:  `transforms.Resize((32, 32))`
+  * `from models import LeNet5`
+  * Input Data Size: `transforms.Resize((32, 32))`
   * `model = LeNet5().to(device)`
 
 {% tabs %}
@@ -610,12 +591,6 @@ from .lenet5 import LeNet5
 {% endtab %}
 {% endtabs %}
 
-
-
-
-
-
-
 ###
 
 ###
@@ -628,15 +603,11 @@ Create VGG-19 for CIFAR-10 (Input: 32x32x3)
 
 * **`vgg16_cifar10.py`**
 
-Then, Train and Evaluate using CIFAR-10&#x20;
+Then, Train and Evaluate using CIFAR-10
 
 * **`vgg16_cifar10_main.py`**
 
 Show the output of Evaluation
-
-
-
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 **What to Change**
 
@@ -644,7 +615,7 @@ Show the output of Evaluation
   * `from .vgg16_cifar10 import VGG16_cifar10`
 * **`vgg16_cifar10_main.py`**
   * `from models import VGG16_cifar10 as VGG16`
-  * Input Data Size:  `transforms.Resize((32, 32))`
+  * Input Data Size: `transforms.Resize((32, 32))`
   * `model = VGG16().to(device)`
 
 ```py
@@ -667,21 +638,15 @@ class VGG16_cifar10(nn.Module):
 
 ```
 
+## Assignment: (1 week)
 
-
-
-
-## Assignment:  (1 week)
-
-### Assignment 1:  Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Assignment 1: Create Architecture - VGG 16 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create a class that inherits from nn.Module
 
 * **`vgg16_imagenet.py`**
 * Define the layers of the network in **init** function
 * Specify Forward network in the **forward function.**
-
-
 
 Show your model with summary() function
 
@@ -699,7 +664,7 @@ Show your model with summary() function
 
 **Architecture detailed**
 
-<figure><img src="../../../.gitbook/assets/image%20(1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ```py
 #########################################################
@@ -721,9 +686,7 @@ class VGG16(nn.Module):
 
 ```
 
-
-
-### Assignment 2:  ResNet-50 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
+### Assignment 2: ResNet-50 (Imagenet 224x224) <a href="#exercise-define-model-vgg-16" id="exercise-define-model-vgg-16"></a>
 
 Create a class that inherits from nn.Module
 
@@ -741,13 +704,9 @@ Compare the architecture with the pretrained model provided by PyTorch
   summary(model_resnet50, (3,224,224))
   ```
 
-
-
 #### **Architecture**
 
 {% embed url="https://arxiv.org/abs/1512.03385" %}
-
-
 
 <figure><img src="../../../.gitbook/assets/image (349).png" alt=""><figcaption></figcaption></figure>
 
@@ -890,4 +849,3 @@ model_resnet50 = models.resnet50(pretrained=True).to(device)
 summary(model_resnet50, (3,224,224))
 
 ```
-

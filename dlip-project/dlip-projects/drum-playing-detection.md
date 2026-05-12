@@ -100,7 +100,7 @@ Figure10. Detecting command
 
 Figure11. Detecting without algorithm
 
-![](<../../.gitbook/assets/11 (2).png>)
+![](<../../.gitbook/assets/0 (2).png>)
 
 Figure12. Detecting without algorithm
 

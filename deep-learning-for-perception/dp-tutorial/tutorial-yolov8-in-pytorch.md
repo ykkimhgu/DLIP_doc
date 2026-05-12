@@ -111,7 +111,7 @@ The result will be saved in the project folder `\runs\detect\predict\`
 
 > Example: C:\Users\ykkim\source\repos\DLIP\yolov8\runs\detect\predict\\
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Run a Segmentation Example
 

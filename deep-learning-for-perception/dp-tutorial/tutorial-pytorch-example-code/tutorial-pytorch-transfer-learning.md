@@ -4,365 +4,36 @@ description: updated 2026-5
 
 # Tutorial: PyTorch Transfer Learning
 
-* T3-1: [Test using Pretrained Model (VGG, Inception, ResNet)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T3_1_Inference_using_Pre_trained_Model_\(classification\)_2024.ipynb)
-
-* T3-2: [Transfer Learning of Pretrained model](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T3_2_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
-
-
-
-
-
-## Part 1: Inference using pre-trained model (classification)
-
-classification model using a pretrained CNN model provided by PyTorch
-
-The models were pre-trained on the **ImageNet** dataset (1000 classes)
-
-
-
-## Preparation
-
-1. Create the file
-   * **`T3_1_main.py`**
-
-### Import Library
-
-```python
-import os
-import torch
-import torch.nn as nn
-import torchvision.transforms as transforms
-from torchvision import models
-from torchsummary import summary
-
-import cv2 as cv
-import urllib.request
-import matplotlib.pyplot as plt
-from PIL import Image
-```
-
-### GPU Setting
-
-```python
-##########################################################
-## Part 0:  GPU setting
-##########################################################
-
-# Select GPU or CPU for training.
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using {device} device")
-if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
-```
-
-
-
-## Load a pre-trained model from TorchVision
-
-Let’s import models from torchvision module and see what are the different models and architectures available with us. (see: https://pytorch.org/vision/stable/models.html)
-
-Notice that there is one entry called AlexNet and one called alexnet. The capitalised name refers to the Python class (AlexNet) whereas alexnet is a convenience function that returns the model instantiated from the AlexNet class. These convenience functions can have different parameter sets.
-
-Densenet121, densenet161, densenet169, densenet201, all are instances of DenseNet class but with a different number of layers – 121,161,169 and 201, respectively.
-
-### Load Pretrained VGG-16
-
-We will use VGG-16 for this tutorial. Check the model architecture using summary
-
-> Edit the **Part 2** in main file.
-
-```python
-##########################################################
-## Part 2:  Load Pretrained Model
-##########################################################
-
-# Model Class Construction
-model = models.vgg16(weights='DEFAULT')
-model.eval() # run the model with evaluation mode
-model = model.to(device)
-
-summary(model, (3, 224, 224))
-```
-
-
-
-## Test image preparation
-
-In this tutorial, we load one test image file from the following URL
-
->  Edit the **Part 1** in main file.
-
-```python
-##########################################################
-## Part 1:  Prepare Image
-##########################################################
-
-url = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
-filename = os.path.join(DATA_DIR_PATH, "test_image.jpg")
-
-try: urllib.URLopener().retrieve(url, filename)
-except: urllib.request.urlretrieve(url, filename)
-
-# image show
-img = cv.imread(filename)
-dst = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-plt.imshow(dst)
-plt.show()
-```
-
-
-
-## Inference using pretrained model
-
-All pre-trained models expect input images normalized in the same way, i.e. mini-batches of 3-channel RGB images of shape (3 x H x W), where H and W are expected to be at least 224. The images have to be loaded in to a range of [0, 1] and then normalized using mean = [0.485, 0.456, 0.406] and std = [0.229, 0.224, 0.225].
-
-> Add it to **Part 1** in main file.
-
-```
-data_transform = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
-```
-
-Here's a sample execution.
-
-The output is the probability value for each 1000 classes. (the sum of all probabilities is 1)
-
-> Edit the **def visualize()** in main file.
-
-```python
-##########################################################
-## Part 5:  Visualize Result
-##########################################################
-
-def visualize():
-    # sample execution (requires torchvision)
-    # Normalize and resize to 224x224
-    input_image = Image.open(filename)
-    input_tensor = data_transform(input_image)
-    input_batch = input_tensor.unsqueeze(0).to(device) # create a mini-batch as expected by the model
-
-    # Forward process
-    with torch.no_grad():
-        output = model(input_batch)
-    # Tensor of shape 1000, with confidence scores over Imagenet's 1000 classes
-    #print(output[0])
-
-    # The output has unnormalized scores. To get probabilities, you can run a softmax on it.
-    probabilities = torch.nn.functional.softmax(output[0], dim=0)
-    print(probabilities)
-```
-
-What do we do with the output which is a vector with 1000 elements? We need to get class label list of the image.
-
-Thus, we will load label information from a text file having a list of all the 1000 class labels. The line number specifies the class number
-
-> Add it to **def visualize()** in main file
-
-```python
-# Download ImageNet labels
-url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
-label_filename = os.path.join(DATA_DIR_PATH, 'imagenet_classes.txt')
-urllib.request.urlretrieve(url, label_filename)
-```
-
-Now, we need to find out the index for the maximum probability. This index is the prediction class. For this tutorial, we will print the top-5 probability
-
-> Add it to **def visualize()** in main file.
-
-```python
-# Read the categories
-with open(label_filename, "r") as f:
-    categories = [s.strip() for s in f.readlines()]
-
-# Show top 5 categories per image
-top5_prob, top5_catid = torch.topk(probabilities, 5)
-
-for i in range(top5_prob.size(0)):
-    print(categories[top5_catid[i]], top5_prob[i].item())
-```
-
-
-
-## Example: Main Script
-
-{% tabs %}
-{% tab title="main.py" %}
-{% code expandable="true" %}
-
-````python
-import os
-import torch
-import torch.nn as nn
-import torchvision.transforms as transforms
-from torchvision import models
-from torchsummary import summary
-
-import cv2 as cv
-import urllib.request
-import matplotlib.pyplot as plt
-from PIL import Image
-
-
-# === Parameter === #
-DATA_DIR_PATH = "data"
-...
-
-
-
-##########################################################
-## Part 0:  GPU setting
-##########################################################
-
-# Select GPU or CPU for training.
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using {device} device")
-if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
-
-
-##########################################################
-## Part 1:  Prepare Dataset 
-##########################################################
-
-url = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
-filename = os.path.join(DATA_DIR_PATH, "test_image.jpg")
-
-try: urllib.URLopener().retrieve(url, filename)
-except: urllib.request.urlretrieve(url, filename)
-
-# image show
-img = cv.imread(filename)
-dst = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-plt.imshow(dst)
-plt.show()
-
-# transformation to tensor:  converts 0~255 value to 0~1 value.
-data_transform = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
-
-
-
-##########################################################
-## Part 2:  Create Model Instance 
-##########################################################
-
-# Model Class Construction
-model = models.vgg16(weights='DEFAULT')
-model.eval() # run the model with evaluation mode
-model = model.to(device)
-
-summary(model, (3, 224, 224))
-
-
-
-##########################################################
-## Part 3:  Train Model
-##########################################################
-
-# Loss Function
-loss_fn = nn.CrossEntropyLoss()
-
-# Optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=LEARNING_RATE)
-
-def train():
-    ...
-
-
-##########################################################
-## Part 4:  Test Model - Evaluation
-##########################################################
-
-def test():
-    ...
-
-
-##########################################################
-## Part 5:  Visualize Result
-##########################################################
-
-def visualize():
-    # sample execution (requires torchvision)
-    # Normalize and resize to 224x224
-    input_image = Image.open(filename)
-    input_tensor = data_transform(input_image)
-    input_batch = input_tensor.unsqueeze(0).to(device) # create a mini-batch as expected by the model
-
-    # Forward process
-    with torch.no_grad():
-        output = model(input_batch)
-    # Tensor of shape 1000, with confidence scores over Imagenet's 1000 classes
-    #print(output[0])
-
-    # The output has unnormalized scores. To get probabilities, you can run a softmax on it.
-    probabilities = torch.nn.functional.softmax(output[0], dim=0)
-    print(probabilities)
-
-    # Download ImageNet labels
-    url = 'https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt'
-    label_filename = os.path.join(DATA_DIR_PATH, 'imagenet_classes.txt')
-    urllib.request.urlretrieve(url, label_filename)
-
-    # Read the categories
-    with open(label_filename, "r") as f:
-        categories = [s.strip() for s in f.readlines()]
-
-    # Show top 5 categories per image
-    top5_prob, top5_catid = torch.topk(probabilities, 5)
-
-    for i in range(top5_prob.size(0)):
-        print(categories[top5_catid[i]], top5_prob[i].item())
-
-
-
-##########################################################
-## MAIN
-##########################################################
-if __name__ == "__main__":
-    # train()
-    # test()
-    visualize()
-````
-
-{% endcode %}
-{% endtab %}
-
-
-
-
-
-## Part 2: Transfer Learning using Pre-trained Models (Classification)
-
-- Part1: inference using pre-trained model
-- **Part2: Transfer Learning using Pre-trained Models (Classification)**
+## Tutorial: Transfer Learning using Pre-trained Models (Classification)
 
 The purpose of this tutorial is to learn how to **transfer learning** using a pre-trained model.
 
 In this document we will perform two types of **transfer learning**:
 
-- **finetuning**: update all parameters of the pretrained model for our new task
-- **feature extraction**: only update the final layer weights for predictions
+* **finetuning**: update all parameters of the pretrained model for our new task
+* **feature extraction**: only update the final layer weights for predictions
 
 ## Preparation
 
-1. we will download Python modules and image data.
+First, you need to complete Tutorial: PyTorch Pretarin Model
 
-- [download modules](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/T3_2_pytorch_classification_modules.zip)
+* [Part1: inference using pre-trained model](tutorial-pytorch-pretrain-model.md#tutorial-inference-using-pre-trained-model-classification)
 
-  > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the **`models`** folder.
+Also, refer to PyTorch tutorial: [https://docs.pytorch.org/tutorials/beginner/transfer\_learning\_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 
-- [download dataset(ant/bee)](https://drive.google.com/file/d/123qUnqUpSzpnj7BnJjftFClmK6PLRzfA/view?usp=sharing)
 
-  > Move to the **`data`** folder.
 
-2. Create the file
-   * **`T3_2_main.py`**
+We will download Python modules and image data.
+
+*   [download modules](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/T3_2_pytorch_classification_modules.zip)
+
+    > Move `initialize_model.py` and `set_parameter_requires_grad.py` to the **`models`** folder.
+
+
+
+Create the main script
+
+* **`TU_PyTorch_transferlearning_main.py`**
 
 ```python
 import os
@@ -402,21 +73,17 @@ print(f"Using {device} device")
 if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
 ```
 
+## Load Model: Pretrained&#x20;
 
+The classification models provided by torchvision are trained on ImageNet and consist of 1000 output layers.
 
-## Load Pretrained MODEL
+Here, we want to fine-tune to other dataset with different class numbers.&#x20;
 
-Basically, the classification models provided by torchvision are trained on ImageNet and consist of 1000 output layers.
+* Use the `initialize_model()` module provided in the [pytorch tutorial](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html) to change the output stage of the model.
+* helps to initialize the fine-tuning of some models
+* If the model is not in the function, the output layer information can be known by printing the model with the print() function.
 
-However, in the model for fine-tuning with other datasets, the number of output layers should be different depending on the class.
-
-Here, we use the initialize_model() function provided in the [pytorch tutorial](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html) to change the output stage of the model.
-
-initialize_model() is a function that helps to initialize the fine-tuning of some models.
-
-If the model is not in the function, the output layer information can be known by printing the model with the print() function.
-
-### Load ResNet with initialization_model()
+### Load ResNet with initialization\_model()
 
 ```python
 ##########################################################
@@ -441,15 +108,15 @@ summary(model_ft, (3,input_size,input_size))
 print(model_ft)
 ```
 
+## Prepare Datasets: hymenoptera\_data
 
+The downloaded datafile  [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) &#x20;
 
-## Prepare Datasets: hymenoptera_data
+* [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) is a binary (Ants and Bees) classification dataset consisting of a small number of images.
 
-The downloaded datafile `hymenoptera_data.zip` should be in the subfolder `\data`
+Unzip hymenoptera\_data.zip to create training data
 
-Unzip hymenoptera_data.zip to create training data
-
-[hymenoptera_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) is a binary (Ants and Bees) classification dataset consisting of a small number of images.
+* `hymenoptera_data.zip` should be in the subfolder `\data`
 
 > Download and Move the `archive/hymenoptera_data/hymenoptera_data` to the **`data`** folder.
 
@@ -467,9 +134,9 @@ LEARNING_RATE = 1e-3
 
 The images in the prepared dataset have different sizes. In order to be used as a learning model, the following process is required.
 
-- Assign the images in the folder to training/test data for learning
-- Same pre-processing as ImageNet data for input of learning model
-- Resize the new dataset to the input size of pretrained model (e.g. 224 x 224)
+* Assign the images in the folder to training/test data for learning
+* Same pre-processing as ImageNet data for input of learning model
+* Resize the new dataset to the input size of pretrained model (e.g. 224 x 224)
 
 ```python
 ##########################################################
@@ -532,20 +199,18 @@ for X, y in test_dataloader:
     break
 ```
 
-
-
 ## Optimization Setup
 
 ### Optmizer function
 
 Gradient descent is the common optimisation strategy used in neural networks. Many of the variants and advanced optimisation functions now are available,
 
-- Stochastic Gradient Descent, Adagrade, Adam, etc
+* Stochastic Gradient Descent, Adagrade, Adam, etc
 
 ### Loss function
 
-- Linear regression: Mean Squared Error
-- Classification: Cross entropy
+* Linear regression: Mean Squared Error
+* Classification: Cross entropy
 
 ```python
 #########################################################
@@ -559,9 +224,9 @@ loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9,weight_decay=5e-4)
 ```
 
-
-
 ## Transfer Learning with New Dataset
+
+Modify Part 3 of the main script
 
 ```python
 def train():
@@ -587,8 +252,6 @@ def test():
 
     evaluate(test_dataloader, model_ft, device)
 ```
-
-
 
 ## Visualize test results
 
@@ -628,8 +291,6 @@ def visualize():
     plt.show()
 ```
 
-
-
 Plot heatmap (confusion matrix)
 
 > Add it to `def visualize()`
@@ -654,14 +315,9 @@ Plot heatmap (confusion matrix)
     plt.show()
 ```
 
-
-
 ## Example: Main Script
 
-{% tabs %}
-{% tab title="main.py" %}
 {% code expandable="true" %}
-
 ```python
 import os
 import torch
@@ -875,6 +531,4 @@ if __name__ == "__main__":
     test()
     visualize()
 ```
-
 {% endcode %}
-{% endtab %}

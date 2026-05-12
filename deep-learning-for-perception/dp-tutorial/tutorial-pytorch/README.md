@@ -1,8 +1,8 @@
 # Tutorial: PyTorch Tutorial List
 
-## Preparation&#x20;
+## Preparation
 
-### 1. Install: PyTorch&#x20;
+### 1. Install: PyTorch
 
 Follow the installatin instruction: [See here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning#part-3.-installing-dl-framework)
 
@@ -20,13 +20,13 @@ torch.__version__
 print("cuda" if torch.cuda.is_available() else "cpu")
 ```
 
-### 2. Watch : Introduction Video on PyTorch&#x20;
+### 2. Watch : Introduction Video on PyTorch
 
 [Introduction to PyTorch (20min)](https://youtu.be/IC0_FRiX-sw)
 
 > You need to know 'What is Tensor in Pytorch'
 
-### **3. Follow:  Quick-Start Tutorials**
+### **3. Follow: Quick-Start Tutorials**
 
 * [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
 * [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
@@ -39,7 +39,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### Numpy (colab)
 
-* T0: [Numpy for a simple MLP for XOR ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
+* T0: [Numpy for a simple MLP for XOR](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
 
 #### PyTorch (VSC)
 
@@ -53,13 +53,13 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 ### 2. CNN Classification: Model Design and Train
 
-#### **(VSC) Create a simple CNN model**&#x20;
+#### **(VSC) Create a simple CNN model**
 
 * T2-1: [Create Train LeNeT CNN model for CIFAR10](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code#example-2.-cnn-model-train-test)
-* T2-2: [Create a CNN model(VGG-16) for ImageNet](../tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
+* T2-2: [Create a CNN model(VGG-16) for ImageNet](../tutorial-pytorch-in-visual-studio-code-2025/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
 * T2-3: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](../tutorial-pytorch-example-code/#exercise-define-model-vgg-16-1)
 
-#### **(Colab) Create a simple CNN model**&#x20;
+#### **(Colab) Create a simple CNN model**
 
 * T2-1: [Create LeNeT CNN model, Train with opendataset, and Test with loading trained model (CIFAR10)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_1_LeNet5_CIFAR10_CNN_2024.ipynb)
 * T2-2: [Create a CNN model(VGG-16) for ImageNet](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T2_2_1_VGG16_CNN_2024.ipynb)
@@ -82,15 +82,11 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 * [(Assignment) Transfer Learning using Pretrained Mdel - Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
 
-
-
 ###
 
 ### 4. CNN- Object Detection- YOLO
 
 #### **YOLO v26**
-
-
 
 #### **YOLO v8 in PyTorch**
 
