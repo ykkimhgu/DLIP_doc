@@ -17,19 +17,15 @@ In this document we will perform two types of **transfer learning**:
 
 First, you need to complete Tutorial: PyTorch Pretarin Model
 
-* [Part1: inference using pre-trained model](../tutorial-pytorch-transfer-learning.md#tutorial-inference-using-pre-trained-model-classification)
+* [Part1: inference using pre-trained model](tutorial-pytorch-pretrained.md#tutorial-inference-using-pre-trained-model-classification)
 
 Also, refer to PyTorch tutorial: [https://docs.pytorch.org/tutorials/beginner/transfer\_learning\_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
-
-
 
 We will download Python modules and image data.
 
 *   [Download module](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_PyTorch_VSC/T3_2/initialize_model.py)
 
     > Move `initialize_model.py` to the **`models`** folder.
-
-
 
 Create the main script
 
@@ -77,7 +73,7 @@ if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0
 
 The classification models provided by torchvision are trained on ImageNet and consist of 1000 output layers.
 
-Here, we want to fine-tune to other dataset with different class numbers.&#x20;
+Here, we want to fine-tune to other dataset with different class numbers.
 
 * Use the `initialize_model()` module provided in the [pytorch tutorial](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html) to change the output stage of the model.
 * helps to initialize the fine-tuning of some models
@@ -110,7 +106,7 @@ print(model_ft)
 
 ## Prepare Datasets: hymenoptera\_data
 
-The downloaded datafile  [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) &#x20;
+The downloaded datafile [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data)
 
 * [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data) is a binary (Ants and Bees) classification dataset consisting of a small number of images.
 
