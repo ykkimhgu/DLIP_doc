@@ -637,6 +637,7 @@ class VGG16_cifar10(nn.Module):
         # ADD YOUR CODE HERE
 
 ```
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Assignment: (1 week)
 
