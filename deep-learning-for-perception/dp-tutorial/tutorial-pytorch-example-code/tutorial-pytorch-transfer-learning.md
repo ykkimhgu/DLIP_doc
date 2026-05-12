@@ -568,7 +568,7 @@ def train():
     # Run Train for k epoch
     for epoch in range(TOTAL_EPOCHS):
         print(f"Epoch {epoch + 1}\n-------------------------------")
-        training(train_dataloader, model_ft, loss_fn, optimizer, device)
+        training(train_dataloader, model_ft, loss_fn, optimizer, device, 15)
     print("Done!")
 
     # Save Train Model
@@ -796,7 +796,7 @@ def train():
     # Run Train for k epoch
     for epoch in range(TOTAL_EPOCHS):
         print(f"Epoch {epoch + 1}\n-------------------------------")
-        training(train_dataloader, model_ft, loss_fn, optimizer, device)
+        training(train_dataloader, model_ft, loss_fn, optimizer, device, 15)
     print("Done!")
 
     # Save Train Model
