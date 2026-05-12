@@ -56,7 +56,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 #### **(VSC) Create a simple CNN model**
 
 * T2-1: [Create Train LeNeT CNN model for CIFAR10](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code#example-2.-cnn-model-train-test)
-* T2-2: [Create a CNN model(VGG-16) for ImageNet](../tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
+* T2-2: [Create a CNN model(VGG-16) for ImageNet](../tutorial-pytorch-example-code/tutorial-pytorch-in-visual-studio-code-2025/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
 * T2-3: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](../tutorial-pytorch-example-code/#exercise-define-model-vgg-16-1)
 
 #### **(Colab) Create a simple CNN model**
