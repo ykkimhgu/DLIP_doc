@@ -2,13 +2,13 @@
 
 DLIP Tutorial for Deep Learning
 
-## Installation&#x20;
+## Preparation
+
+### Installation&#x20;
 
 Follow the installatin instruction: [See here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning#part-3.-installing-dl-framework)
 
 > You should install pytorch in a virtual environment
-
-## Preparation
 
 ### Introduction Video on PyTorch
 
@@ -21,7 +21,7 @@ Follow the installatin instruction: [See here for more detail](https://ykkim.git
 * [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
 * [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
 
-
+***
 
 ## List of Tutorials for DLIP
 
@@ -39,9 +39,11 @@ Follow the installatin instruction: [See here for more detail](https://ykkim.git
 
 * T1: [Train a simple MLP and Test with loading trained model (MNIST)](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Tutorial_PyTorch_T1_MNIST_MLP_2024.ipynb)-colab
 
-###
 
-### 2. CNN Classification: Model Design and Train
+
+
+
+### 2. CNN Classification: Model Design
 
 #### **(VSC) Create a simple CNN model**
 
@@ -59,7 +61,9 @@ Follow the installatin instruction: [See here for more detail](https://ykkim.git
 
 * [(Assignment) Create VGG-16 and ResNet-50 model for ImageNet](tutorial-pytorch-example-code/#assignment-1-week)
 
-###
+
+
+
 
 ### 3. CNN Classification : Pretrained Model and Transfer Learning
 
@@ -75,20 +79,24 @@ Follow the installatin instruction: [See here for more detail](https://ykkim.git
 
 #### Assignment: Classification
 
-* [(Assignment) Transfer Learning using Pretrained Mdel - Custom Dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/2024/Assignment_PyTorch_T3_3_Transfer_Learning_using_Pre_trained_Models_\(classification\)_2024.ipynb)
+* [(Assignment) Transfer Learning using Pretrained Mdel](tutorial-pytorch-transfer-learnings.md#assignment)
 
-###
 
-### 4. CNN- Object Detection- YOLO
+
+
+
+### 4. CNN Object Detection: YOLO
 
 #### **YOLO v26**
 
-#### **YOLO v8 in PyTorch**
+* T4:&#x20;
+
+#### **YOLO v8**
 
 * T4-1: [Install and Inference using YOLOv8](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
 * T4-2: [Train and Test using Custom Dataset](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
 
-#### **YOLO v5 in PyTorch**
+#### **YOLO v5**
 
 * T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Tutorial_PyTorch_T4_1_Inference_using_Pretrained_YOLOv5_with_COCO_2022.ipynb) (in CoLab)
 * T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)

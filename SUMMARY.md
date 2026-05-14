@@ -73,7 +73,7 @@
   * [Tutorial: PyTorch Pretrain Model](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-pretrained.md)
   * [Tutorial: PyTorch Transfer Learning](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-transfer-learnings.md)
   * [Tutorial: Tensorboard in Pytorch](deep-learning-for-perception/dp-tutorial/tutorial-tensorboard-in-pytorch.md)
-  * [Tutorial: YOLO in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolo-in-pytorch/README.md)
+  * [Tutorial: YOLO](deep-learning-for-perception/dp-tutorial/tutorial-yolo-in-pytorch/README.md)
     * [Tutorial: Yolov8 in PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-yolov8-in-pytorch.md)
     * [Tutorial: Train Yolo v8 with custom dataset](deep-learning-for-perception/dp-tutorial/tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md)
       * [Tutorial: Train Yolo v5 with custom dataset](deep-learning-for-perception/dp-tutorial/tutorial-yolo-in-pytorch/tutorial-yolov5-train-with-custum-data-1.md)
