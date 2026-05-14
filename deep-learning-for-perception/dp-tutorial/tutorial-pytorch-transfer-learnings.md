@@ -19,7 +19,9 @@ First, you need to complete Tutorial: PyTorch Pretarin Model
 
 * [Part1: inference using pre-trained model](tutorial-pytorch-pretrained.md#tutorial-inference-using-pre-trained-model-classification)
 
-Also, refer to PyTorch tutorial: [https://docs.pytorch.org/tutorials/beginner/transfer\_learning\_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
+Also, refer to PyTorch tutorial:&#x20;
+
+* [https://docs.pytorch.org/tutorials/beginner/transfer\_learning\_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 
 We will download Python modules and image data.
 
@@ -69,7 +71,9 @@ print(f"Using {device} device")
 if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
 ```
 
-## Load Model: Pretrained model
+## Example: Transfer Learning from Resnet(imagenet)
+
+### Model: Pretrained model
 
 The classification models provided by torchvision are trained on ImageNet and consist of 1000 output layers.
 
@@ -79,7 +83,7 @@ Here, we want to fine-tune to other dataset with different class numbers.
 * helps to initialize the fine-tuning of some models
 * If the model is not in the function, the output layer information can be known by printing the model with the print() function.
 
-### Load ResNet with initialization\_model()
+#### Load ResNet with initialization\_model()
 
 ```python
 ##########################################################
@@ -104,7 +108,7 @@ summary(model_ft, (3, input_size,input_size))
 print(model_ft)
 ```
 
-## Prepare Datasets: hymenoptera\_data
+### Datasets: hymenoptera\_data
 
 The downloaded datafile [hymenoptera\_data](https://www.kaggle.com/datasets/ajayrana/hymenoptera-data)
 
@@ -127,6 +131,8 @@ BATCH_SIZE = 8
 TOTAL_EPOCHS = 2
 LEARNING_RATE = 1e-3
 ```
+
+### Preprocessing: Train data
 
 The images in the prepared dataset have different sizes. In order to be used as a learning model, the following process is required.
 
@@ -195,15 +201,15 @@ for X, y in test_dataloader:
     break
 ```
 
-## Optimization Setup
+### Optimization Setup
 
-### Optmizer function
+#### Optmizer function
 
 Gradient descent is the common optimisation strategy used in neural networks. Many of the variants and advanced optimisation functions now are available,
 
 * Stochastic Gradient Descent, Adagrade, Adam, etc
 
-### Loss function
+#### Loss function
 
 * Linear regression: Mean Squared Error
 * Classification: Cross entropy
@@ -220,7 +226,7 @@ loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model_ft.parameters(), lr=LEARNING_RATE, momentum=0.9, weight_decay=5e-4)
 ```
 
-## Transfer Learning with New Dataset
+### Train: Transfer Learning with New Dataset
 
 Modify Part 3 of the main script
 
@@ -238,7 +244,7 @@ def train():
     torch.save(model_ft, save_model_path)
 ```
 
-## Evaluate Dataset
+### Inference:&#x20;
 
 Modify Part 4 of the main script
 
@@ -256,7 +262,7 @@ def test():
 ```
 {% endcode %}
 
-## Visualize test results
+### Visualize: test results
 
 Select random test images and evaluate
 
@@ -318,7 +324,7 @@ Plot heatmap (confusion matrix)
     plt.show()
 ```
 
-## Example: Main Script
+### Example code
 
 {% code expandable="true" %}
 ```python
@@ -535,3 +541,17 @@ if __name__ == "__main__":
     visualize()
 ```
 {% endcode %}
+
+***
+
+## Assignment
+
+Apply Transfer Learng on  'EfficientNet(efficientnet\_b7)' by Training a Custom Dataset of Cat/Dog.
+
+Then, show the test results on the test datasets.
+
+### Model: EfficientNet <a href="#prepare-datasets-kaggle-cats-and-dogs" id="prepare-datasets-kaggle-cats-and-dogs"></a>
+
+### Datasets: kaggle cats and dogs <a href="#prepare-datasets-kaggle-cats-and-dogs" id="prepare-datasets-kaggle-cats-and-dogs"></a>
+
+Download the kaggle cats and dogs dataset: [download link](https://www.microsoft.com/en-us/download/details.aspx?id=54765)
