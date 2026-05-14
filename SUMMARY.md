@@ -64,7 +64,7 @@
 * [Tutorial - PyTorch](deep-learning-for-perception/dp-tutorial/README.md)
   * [Tutorial: Install PyTorch](deep-learning-for-perception/dp-tutorial/tutorial-install-pytorch.md)
   * [Tutorial: Python Numpy](deep-learning-for-perception/dp-tutorial/tutorial-python-numpy.md)
-  * [Tutorial: PyTorch Tutorial List](deep-learning-for-perception/dp-tutorial/tutorial-pytorch.md)
+  * [Tutorial: PyTorch Tutorial List](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-list.md)
   * [Tutorial: PyTorch MLP CNN (VSCODE)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/README.md)
     * [Tutorial:PyTorch in Visual Studio Code(\~2025)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-in-visual-studio-code-2025/README.md)
       * [Tutorial: PyTorch in Visual Studio Code(2025)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md)
