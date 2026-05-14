@@ -4,8 +4,6 @@ description: updated 2026-5
 
 # Tutorial: PyTorch Pretrain Model
 
-
-
 ## Tutorial: Inference using pre-trained model (classification)
 
 classification model using a pretrained CNN model provided by PyTorch
@@ -55,13 +53,13 @@ print(f"Using {device} device")
 if torch.cuda.is_available(): print(f'Device name: {torch.cuda.get_device_name(0)}') 
 ```
 
-## Load a pre-trained model from TorchVision
+## Example : Use a pretrained model from TorchVision
 
-Let’s import models from torchvision module and see what are the different models and architectures available with us.&#x20;
+Let’s import models from torchvision module and see what are the different models and architectures available with us.
 
 {% embed url="https://pytorch.org/vision/stable/models.html" %}
 
-You can check the list by&#x20;
+You can check the list by
 
 {% code expandable="true" %}
 ```py
@@ -71,7 +69,7 @@ dir(models)
 
 Example:
 
-* AlexNet is a class, whereas alexnet is a convenience function that returns the model instantiated from the AlexNet class.&#x20;
+* AlexNet is a class, whereas alexnet is a convenience function that returns the model instantiated from the AlexNet class.
 * densenet121, densenet161, densenet169, densenet201, all are instances of **DenseNet class** but with a different number of layers – 121, 161, 169 and 201, respectively.
 
 ### Load Pretrained VGG-16
@@ -93,17 +91,15 @@ model = model.to(device)
 summary(model, (3, 224, 224))
 ```
 
-## Test image preparation
+### Dataset: Test image&#x20;
 
-### Download Test Image
+#### Download Test Image
 
 (Option 1)
 
 In this tutorial, we load one test image file: [download image here](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/TU_PyTorch_VSC/test_image_dog.png)
 
-* Save the image file under `data\` folder&#x20;
-
-
+* Save the image file under `data\` folder
 
 (Option 2)
 
@@ -130,9 +126,9 @@ plt.imshow(dst)
 plt.show()
 ```
 
-### Download  Label data
+#### Download Label data
 
-We need to get the class label list.&#x20;
+We need to get the class label list.
 
 Thus, we will load label information from a text file having a list of all the 1000 class labels. The line number specifies the class number
 
@@ -145,11 +141,11 @@ try: urllib.request.urlretrieve(url, label_filename)
 except: urllib.request.urlretrieve(url, label_filename)
 ```
 
-### Preprocessing Test Data
+### Preprocessing:  Test Data
 
-All pre-trained models expect input images normalized in the same way, i.e. mini-batches of 3-channel RGB images of shape (3 x H x W), where H and W are expected to be at least 224.&#x20;
+All pre-trained models expect input images normalized in the same way, i.e. mini-batches of 3-channel RGB images of shape (3 x H x W), where H and W are expected to be at least 224.
 
-The images have to be loaded in to a range of \[0, 1] and then normalized using mean = \[0.485, 0.456, 0.406] and std = \[0.229, 0.224, 0.225]  (ImageNet dataset).
+The images have to be loaded in to a range of \[0, 1] and then normalized using mean = \[0.485, 0.456, 0.406] and std = \[0.229, 0.224, 0.225] (ImageNet dataset).
 
 > Add it to **Part 1** in main file.
 
@@ -162,9 +158,7 @@ data_transform = transforms.Compose([
     ])
 ```
 
-
-
-## Inference using pretrained model
+### Inference:  using pretrained model
 
 The output is the probability value for each 1000 classes. (the sum of all probabilities is 1)
 
@@ -193,8 +187,6 @@ def visualize():
     print(probabilities)
 ```
 
-
-
 Now, we need to find out the index for the maximum probability. This index is the prediction class. For this tutorial, we will print the top-5 probability
 
 > Add it to **def visualize()** in main file.
@@ -211,7 +203,7 @@ for i in range(top5_prob.size(0)):
     print(categories[top5_catid[i]], top5_prob[i].item())
 ```
 
-## Example: Main Script
+### Example code
 
 {% code expandable="true" %}
 ```python
@@ -338,4 +330,4 @@ if __name__ == "__main__":
 ```
 {% endcode %}
 
-
+## Assignment
