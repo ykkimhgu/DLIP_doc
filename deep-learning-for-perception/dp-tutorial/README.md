@@ -89,7 +89,8 @@ Follow the installatin instruction: [See here for more detail](https://ykkim.git
 
 #### **YOLO v26**
 
-* T4:&#x20;
+* T4-1: [Install and Inference Examples using YOLOv8](tutorial-yolo-in-pytorch/#tutorial-installation-and-inference-examples)
+* T4-2: [Train and Test using Custom Dataset](tutorial-yolo-in-pytorch/#tutorial-train-yolo26-with-custom-dataset)
 
 #### **YOLO v8**
 
