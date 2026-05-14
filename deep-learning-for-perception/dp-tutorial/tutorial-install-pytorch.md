@@ -1,10 +1,8 @@
 # Tutorial: Install PyTorch
 
-## Installation Guide for DLIP: Deep learning
+## Installation Guide for DLIP: Deep learning (PyTorch)
 
 (updated 2024.4)
-
-
 
 This installation guide is for programming deep-learning application using Pytorch
 
@@ -15,8 +13,6 @@ Make sure you install the correct software version as instructed.
 > * Python 3.9, CUDA 11.8, cuDNN 7.6
 > * PyTorch 2.0.x
 > * Anaconda for Python 3.9 or Anaconda of Latest Version
-
-
 
 ### Installation Steps <a href="#part-1.-installing-python-environment" id="part-1.-installing-python-environment"></a>
 
@@ -36,3 +32,18 @@ Step 5. Installing Graphic Card and CUDA
 
 Step 6. Installing DL Framework (PyTorch)
 
+
+
+### Check PyTorch Installation and GPU availability
+
+In the Anaconda Promt, type
+
+```cpp
+conda activate py39
+python
+import torch
+torch.__version__
+print("cuda" if torch.cuda.is_available() else "cpu")
+```
+
+###

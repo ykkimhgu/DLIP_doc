@@ -2,7 +2,7 @@
 description: updated 2026-5
 ---
 
-# Tutorial: PyTorch MLP CNN (VSCODE)
+# Tutorial: PyTorch in Visual Studio Code
 
 This is a template code for a general deep learning model project using VS Code in local PC.
 
@@ -577,6 +577,8 @@ model = LeNet5().to(device)
 print(model)
 
 #...
+
+
 ```
 ````
 {% endtab %}
@@ -589,9 +591,9 @@ from .lenet5 import LeNet5
 {% endtab %}
 {% endtabs %}
 
+###
 
-
-
+###
 
 ## Exercise
 
@@ -633,11 +635,9 @@ class VGG16_cifar10(nn.Module):
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
+
 ```
-
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
-
-For the last fully connected layer, apply Softmax after ReLU
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Assignment: (1 week)
 
@@ -665,9 +665,7 @@ Show your model with summary() function
 
 **Architecture detailed**
 
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
-
-For the last fully connected layer, apply Softmax after ReLU
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ```py
 #########################################################
