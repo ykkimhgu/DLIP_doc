@@ -1,8 +1,8 @@
 # Tutorial: PyTorch Tutorial List (\~2025)
 
-## Preparation&#x20;
+## Preparation
 
-### 1. Install: PyTorch&#x20;
+### 1. Install: PyTorch
 
 Follow the installatin instruction: [See here for more detail](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning#part-3.-installing-dl-framework)
 
@@ -20,13 +20,13 @@ torch.__version__
 print("cuda" if torch.cuda.is_available() else "cpu")
 ```
 
-### 2. Watch : Introduction Video on PyTorch&#x20;
+### 2. Watch : Introduction Video on PyTorch
 
 [Introduction to PyTorch (20min)](https://youtu.be/IC0_FRiX-sw)
 
 > You need to know 'What is Tensor in Pytorch'
 
-### **3. Follow:  Quick-Start Tutorials**
+### **3. Follow: Quick-Start Tutorials**
 
 * [Pytorch Tutorial(ENG)](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
 * [Pytorch Tutorial(KOR)](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
@@ -39,7 +39,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### Numpy (colab)
 
-* T0: [Numpy for a simple MLP for XOR ](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
+* T0: [Numpy for a simple MLP for XOR](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_PythonNumpy/Tutorial_Numpy_MLP_XOR_Student.ipynb)
 
 #### PyTorch (colab)
 
@@ -63,7 +63,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 ###
 
-### 3. CNN Pretrained - Classification&#x20;
+### 3. CNN Pretrained - Classification
 
 #### **Using Popular CNN models from torchvision.models**
 
@@ -81,14 +81,14 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### **YOLO v8 in PyTorch**
 
-* T4-1: [Install and Inference using YOLOv8](../tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
-* T4-2: [Train and Test using Custom Dataset](../tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
+* T4-1: [Install and Inference using YOLOv8](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
+* T4-2: [Train and Test using Custom Dataset](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
 
 #### **YOLO v5 in PyTorch**
 
 * T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Tutorial_PyTorch_T4_1_Inference_using_Pretrained_YOLOv5_with_COCO_2022.ipynb) (in CoLab)
-* T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](../tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
-* T4-2: [Train YOLOv5 with a Custom Dataset](../tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
+* T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
+* T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
 
 ***
 
@@ -96,4 +96,4 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 Pytorch tutorial codes: [Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)
 
-Pytorch Tutorial List: [PyTorch Tutorial List](../../../programming/pytorch/)
+Pytorch Tutorial List: [PyTorch Tutorial List](../../programming/pytorch/)

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Tutorial: PyTorch Tutorial List
 
 ## Preparation
@@ -56,8 +60,8 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 #### **(VSC) Create a simple CNN model**
 
 * T2-1: [Create Train LeNeT CNN model for CIFAR10](https://ykkim.gitbook.io/dlip/deep-learning-for-perception/dp-tutorial/tutorial-pytorch-example-code#example-2.-cnn-model-train-test)
-* T2-2: [Create a CNN model(VGG-16) for ImageNet](../tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
-* T2-3: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](../tutorial-pytorch-example-code/#exercise-define-model-vgg-16-1)
+* T2-2: [Create a CNN model(VGG-16) for ImageNet](tutorial-pytorch-example-code/tutorial-pytorch-example-code-2025.md#exercise-define-model-vgg-16)
+* T2-3: [Create, Train and Test a CNN model(VGG-16) for CIFAR10](tutorial-pytorch-example-code/#exercise-define-model-vgg-16-1)
 
 #### **(Colab) Create a simple CNN model**
 
@@ -67,7 +71,7 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### Assignment: CNN Model Design
 
-* [(Assignment) Create VGG-16 and ResNet-50 model for ImageNet](../tutorial-pytorch-example-code/#assignment-1-week)
+* [(Assignment) Create VGG-16 and ResNet-50 model for ImageNet](tutorial-pytorch-example-code/#assignment-1-week)
 
 ###
 
@@ -90,14 +94,14 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 #### **YOLO v8 in PyTorch**
 
-* T4-1: [Install and Inference using YOLOv8](../tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
-* T4-2: [Train and Test using Custom Dataset](../tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
+* T4-1: [Install and Inference using YOLOv8](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
+* T4-2: [Train and Test using Custom Dataset](tutorial-yolov8-in-pytorch.md#tutorial-yolo-v8-in-pytorch)
 
 #### **YOLO v5 in PyTorch**
 
 * T4-1(option1): [Pretrained YOLOv5 with COCO dataset](https://github.com/ykkimhgu/DLIP-src/blob/main/Tutorial_Pytorch/Tutorial_PyTorch_T4_1_Inference_using_Pretrained_YOLOv5_with_COCO_2022.ipynb) (in CoLab)
-* T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](../tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
-* T4-2: [Train YOLOv5 with a Custom Dataset](../tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
+* T4-1(option2):[ Pretrained YOLOv5 with COCO dataset](tutorial-yolov5-in-pytorch/) (in VS Code, Local PC)
+* T4-2: [Train YOLOv5 with a Custom Dataset](tutorial-yolov5-in-pytorch/tutorial-yolov5-train-with-custum-data.md) (in VS Code, Local PC)
 
 ***
 
@@ -105,4 +109,4 @@ print("cuda" if torch.cuda.is_available() else "cpu")
 
 Pytorch tutorial codes: [Pytorch-Tutorial](https://github.com/yunjey/pytorch-tutorial)
 
-Pytorch Tutorial List: [PyTorch Tutorial List](../../../programming/pytorch/)
+Pytorch Tutorial List: [PyTorch Tutorial List](../../programming/pytorch/)
