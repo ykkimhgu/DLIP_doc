@@ -80,8 +80,7 @@
     * [Tutorial: Yolov3 in Keras](deep-learning-for-perception/dp-tutorial/tutorial-yolov3-in-keras.md)
   * [Tutorial: PyTorch Tutorial List (\~2025)](deep-learning-for-perception/dp-tutorial/tutorial-pytorch-2025.md)
 * [LAB](image-processing/lab/README.md)
-  * [Assignment: CNN Classification](deep-learning-for-perception/lab/hw-cnn-classification.md)
-  * [Assignment: Object Detection](deep-learning-for-perception/lab/assignment-object-detection.md)
+  * [PreLAB: Past Project on Object Detection ](deep-learning-for-perception/lab/assignment-object-detection.md)
   * [LAB: CNN Object Detection 1](deep-learning-for-perception/lab/lab-cnn-object-detection-1.md)
   * [LAB: CNN Object Detection 2](deep-learning-for-perception/lab/lab-cnn-object-detection.md)
   * [LAB Grading Criteria](deep-learning-for-perception/lab/lab-grading-criteria.md)
@@ -118,6 +117,7 @@
 
 ## DLIP Project
 
+* [DLIP Past Projects](dlip-project/dlip-past-projects.md)
 * [DLIP 2021 Projects](dlip-project/dlip-projects/README.md)
   * [Digital Door Lock Control with Face Recognition](dlip-project/dlip-projects/untitled-1.md)
   * [People Counting with YOLOv4 and DeepSORT](dlip-project/dlip-projects/people-counting-with-yolov4-and-deepsort.md)
@@ -135,7 +135,6 @@
   * [Exercise Posture Assistance System](dlip-project/dlip-2022-projects/exercise-posture-assistance-system.md)
   * [People Counting Embedded System](dlip-project/dlip-2022-projects/people-counting-embedded-system.md)
   * [Turtle neck measurement program using OpenPose](dlip-project/dlip-2022-projects/turtle-neck-measurement-program-using-openpose.md)
-* [DLIP Past Projects](dlip-project/dlip-past-projects.md)
 
 ## Installation Guide
 
