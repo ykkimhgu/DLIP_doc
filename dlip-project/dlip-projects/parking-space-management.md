@@ -4,8 +4,6 @@
 
 **Author**: 강지훈, 도경민
 
-**Github:** [https://github.com/chloerudals/DLIP\_LAB4](https://github.com/chloerudals/DLIP\_LAB4)
-
 **Demo Video:**
 
 {% embed url="https://www.youtube.com/watch?v=og6CcAu_-JY" %}
@@ -18,8 +16,8 @@ Since the use of private vehicle has increased due to COVID-19, finding parking 
 
 ![](<../../.gitbook/assets/image (329).png>)
 
-![parking lot](https://github.com/chloerudals/DLIP\_LAB4/blob/main/Img.jpg)\
-To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu\_-JY)
+![parking lot](https://github.com/chloerudals/DLIP_LAB4/blob/main/Img.jpg)\
+To watch a short explanatory video. [Click Here](https://youtu.be/og6CcAu_-JY)
 
 > Algorithm: 1. Parking lines are detected using HoughlinesP and cars are detected using Yolov5s 2. We improved the detection of parking lines, which had previously been covered by parked cars, by elongating the lines 3. We divided the rectangle the same number as the parking lot. 4. Adjusted distorted regions due to perspectives. 5. By comparing the center of the parking space and the center of the detected box, parking ability is decided. 6. Since cars park in the upper part of the parking space, y axis of the detected box's center is corrected about 10 pixels 7. If a car comes in the camera frame, the car is considered as parking so entering car is printed.
 
@@ -74,7 +72,7 @@ Or You can follow the instructions from the yolov5 GitHub repository. [(requirem
 >   conda install -c conda-forge onnx
 > ```
 
-## Essential codes to understand the program.
+## Algorithm Summary
 
 #### Finding the parking lines.
 
@@ -142,8 +140,6 @@ Or You can follow the instructions from the yolov5 GitHub repository. [(requirem
 
 ![](<../../.gitbook/assets/image (331).png>)
 
-To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP\_LAB4/blob/main/identify\_parking\_spots.ipynb)
-
 #### Detect cars.
 
 > * Car detection is done by YOLO V5s with COCO datasets.
@@ -152,21 +148,6 @@ To see a detailed explanation. [Click Here](https://github.com/chloerudals/DLIP\
 
 > * Firstly, find the centers of the parking space and the car.
 >   * If the distance between the centers are less than 40, the parking space is determined as occupied.
-
-```
-for *xyxy, conf, cls in reversed(det):
-    bx1, by1, bx2, by2 = xyxy[0], xyxy[1], xyxy[2], xyxy[3]
-    bcx, bcy = abs(bx2 + bx1) / 2, abs(by2 + by1) / 2 + 10
-    cv2.circle(im0, (int(bcx), int(bcy)), 5, (255, 255, 255), 2)
-    parking_distance = math.sqrt((bcx - pcx)**2 + (bcy - pcy)**2)
-
-    if parking_distance < 40:
-        cv2.polylines(im0, [poly_points], 1, [0, 0, 255], 2)
-        cv2.line(im0, (int(bcx), int(bcy)), (int(pcx), int(pcy)), (255, 255, 255), 2)
-        cv2.putText(im0, "%d" %spot_cnt, text_coordinate, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
-        Parked_Space_Array.append(spot_cnt)
-        break
-```
 
 #### Editing Parser
 
@@ -195,14 +176,7 @@ for *xyxy, conf, cls in reversed(det):
 >
 >       `parser.add_argument('--line-thickness', default=2, type=int, help='bounding box thickness (pixels)')`
 
-[Demo Video](https://drive.google.com/file/d/1LPtyEVEorxBqGS-NXqe6Ns1JMTjdhgKB/view?usp=sharing)
-
-## How to run the program
-
-1. Download [video](https://drive.google.com/file/d/170Ccn\_BTxPyWlN8Trfk9KXK6ykQmQNAW/view?usp=sharing) to your _**yolov5**_ repository.
-2. Download [image](https://github.com/chloerudals/DLIP\_LAB4/blob/main/Img.jpg) to your _**yolov5\data\images**_ directory.
-3. Overwrite [detect.py](https://github.com/chloerudals/DLIP\_LAB4/blob/main/detect.py) to the _**yolov5**_ repository.
-4. Overwrite [datasets.py](https://github.com/chloerudals/DLIP\_LAB4/blob/main/datasets.py) to your _**yolov5\utils**_ directory.
+##
 
 ## Future work
 
@@ -212,4 +186,4 @@ for *xyxy, conf, cls in reversed(det):
 
 ## Reference
 
-[dudesparsh: Parking detector](https://github.com/dudesparsh/Parking\_detector)
+[dudesparsh: Parking detector](https://github.com/dudesparsh/Parking_detector)
