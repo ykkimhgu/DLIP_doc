@@ -77,9 +77,9 @@ The lab report must be written as a 'Tutorial' format to explain the whole proce
 * Use the report template given here: [https://ykkim.gitbook.io/dlip/dlip-project/report-template](https://ykkim.gitbook.io/dlip/dlip-project/report-template)
 * Also, refer to another examples of tutorials: [example 1](https://keras.io/examples/vision/retinanet/), [example 2](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/images/classification.ipynb)
 * Write the report in markdown ‘\*.md’ format
-  * You can also write in ''\*.ipynb' format
 * You need to include concise explanations and codes for each process in the report
 * You should embed code snippets where necessary
+* DO NOT include all source code in the report
 * You can also embed your demo video in the report
 
 ### Demo Video
