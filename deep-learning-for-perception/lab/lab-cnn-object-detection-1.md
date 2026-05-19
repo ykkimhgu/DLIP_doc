@@ -4,6 +4,8 @@
 
 Vehicle counting using a CNN based object detection model
 
+Read : [Project Report on Parking Management System](../../dlip-project/dlip-projects/parking-space-management.md#introduction)
+
 {% embed url="https://www.youtube.com/watch?v=0_IQlXTnO7k" %}
 
 ## I. Introduction
