@@ -2,7 +2,7 @@
 description: updated 2026-5
 ---
 
-# Tutorial: PyTorch in Visual Studio Code
+# Tutorial: PyTorch MLP CNN (VSCODE)
 
 This is a template code for a general deep learning model project using VS Code in local PC.
 
@@ -637,6 +637,7 @@ class VGG16_cifar10(nn.Module):
         # ADD YOUR CODE HERE
 
 ```
+
 <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Assignment: (1 week)
@@ -739,9 +740,7 @@ class BasicBlock(nn.Module):
         
 
     def forward(self, x):
-        # Clone input for the skip connection (using .clone())
-        # ADD YOUR CODE HERE
-        
+
         # forward layer
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
@@ -767,12 +766,7 @@ class ResNet(nn.Module):
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
         # ADD YOUR CODE HERE
-
-        # The main layers of ResNet (using self._make_layer)
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        
+       
         # Adaptive average pooling
         # ADD YOUR CODE HERE
         
@@ -801,28 +795,7 @@ class ResNet(nn.Module):
 
         return x
 
-    # _make_layer method constructs the layers for ResNet
-    def _make_layer(self, block, num_residual_blocks, out_channels, stride):
-        downsampling = None
-        layers = []
-
-        # Downsample identity if we change input dimensions or channels
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-        
-        # append block layers
-        # ADD YOUR CODE HERE
-
-
-        # Expansion size is always 4 for ResNet-50, 101, 152 (e.g. 64 -> 256)
-        # ADD YOUR CODE HERE
-
-        # Add additional blocks
-        # ADD YOUR CODE HERE
-        # ADD YOUR CODE HERE
-
-        return nn.Sequential(*layers)
+    
 
 # Function to create ResNet-50 model
 def ResNet50(img_channel=3, num_classes=1000):
@@ -850,3 +823,44 @@ model_resnet50 = models.resnet50(pretrained=True).to(device)
 summary(model_resnet50, (3,224,224))
 
 ```
+
+Example code for residual connection
+
+{% code expandable="true" %}
+```py
+import torch
+import torch.nn as nn
+
+class SimpleResidualBlock(nn.Module):
+    def __init__(self, channels):
+        super().__init__()
+        # Two identical convolutional layers that keep the image size the same (padding=1)
+        self.conv1 = nn.Conv2d(channels, channels, kernel_size=3, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(channels)
+        
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, padding=1, bias=False)
+        self.bn2 = nn.BatchNorm2d(channels)
+        
+        self.relu = nn.ReLU(inplace=True)
+
+    def forward(self, x):
+        # 1. Save the original input
+        identity = x
+        
+        # 2. Pass the input through the network layers
+        out = self.conv1(x)
+        out = self.bn1(out)
+        out = self.relu(out)
+        
+        out = self.conv2(out)
+        out = self.bn2(out)
+        
+        # 3. THE RESIDUAL CONNECTION: Add the saved input back to the output
+        out += identity
+        
+        # 4. Apply the final activation function
+        out = self.relu(out)
+        
+        return out
+```
+{% endcode %}
