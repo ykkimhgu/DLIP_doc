@@ -31,7 +31,43 @@ The whole code should be programmed using OpenCV-Python and Pytorch.
 
 If you create a simple hardware for demonstration, you will get extra score. Please ask TA if you need an embedded GPU board or any other hardware materials.
 
-## II. Report and Demo Video
+
+
+## II. Submission
+
+### Files
+
+**`$PROJECT_NAME$` = DLIP\_YEAR\_FinalProject\_KEYWORD\_Name1\_Name2**
+
+* Submit as  Zip File:  `$PROJECT_NAME$` .zip&#x20;
+*   The Zip file includes
+
+    * report (\*.md), (\*.pdf)
+    * src (source code)
+    * dataset (sample, test image files, or download link)
+    * presentation
+    * demoVideo
+
+
+* Example:
+
+<figure><img src="../../.gitbook/assets/image (352).png" alt=""><figcaption></figcaption></figure>
+
+* Report File Name should be  `$PROJECT_NAME$` .pdf
+
+<figure><img src="../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
+
+#### Github Repos
+
+* Write the report in markdown ‘\*.md’ format
+* You need to include concise explanations and codes for each process in the report
+* Create a Repository(Public) in Your Github
+  * Repository Name:  **`$PROJECT_NAME$`**&#x20;
+* Upload the source code and report in your github repository
+
+
+
+## III. Report and Demo Video
 
 This lab will be scored depending on the Contents, Complexity, and Completeness .
 
@@ -47,27 +83,21 @@ Use the report template given here: https://ykkim.gitbook.io/dlip/dlip-project/r
 
 * Also, see example tutorials: [example 1](https://keras.io/examples/vision/retinanet/), [example 2](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/images/classification.ipynb)
 
-**Requirement**
 
-* Write the report in markdown ‘\*.md’ format
-* You need to include concise explanations and codes for each process in the report
-* Create a Repository(Public) in Your Github&#x20;
-  * Repository example: DLIP\_Project\_keywords\_2022
-  * e.g.  DLIP\_Project\_MaskDetection\_2022
-* Upload the source code and report in your github repository&#x20;
-* Then, download your repository as zip file and submit the zip file to online.handong.edu. The Zip file includes
-  * Report (\*.md)
-  * Report (\*.pdf)
-  * src (source code)
-  * images (sample, test image files )
-  * data (whole dataset or download link)
 
 ### Demo Video
 
-You must create a demo video (\~40 sec) that will be uploaded in the Lecture's Youtube channel.
+You must create a demo video (10\~15 sec)&#x20;
 
 * The demo video must contain
-  * Title page: course name (DLIP2022-1 by Y.-K.Kim), your name, your project tile, date
-  * Introduction, Dataset, Model, Results, Conclusion
+  * Title page:
+    * course name (DLIP2026-1 by Y.-K.Kim), your name, your project tile, date etc
+  * Introduction
+  * Results
 * Embed the youtube video in your report
 * Submit the video file to LMS or TA's email
+
+
+
+
+
