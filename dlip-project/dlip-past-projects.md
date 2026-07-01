@@ -2,13 +2,33 @@
 
 ## 2026-1
 
+### Real-time fall detection system using a lightweight skeleton-based deep learning model
+
+Author:  Lee Dawon,  Kim Yumin
+
+{% embed url="https://www.youtube.com/watch?v=Fj4v5w7nEvA&feature=youtu.be" %}
+
+
+
+### Vision-based Robotic Adaptive Grasping&#xD; System using Deep Learning
+
+Authors: Ryu Minseo , Kim Yechan&#x20;
+
+{% embed url="https://www.youtube.com/watch?v=696Fa_Nqc_U&feature=youtu.be" %}
+
+### &#x20;Real-time Korean Sign Language (KSL) recognition system&#x20;
+
+Author: Yoo Hyeseong , Ma Suhyeon&#x20;<br>
+
+{% embed url="https://youtu.be/i0XG5nwzPgE?si=fHyeLvba0kvp5InL" %}
+
+<br>
+
+
+
 ### Single-Camera 3D Scanner&#xD;
 
-this project aims to examine\
-their feasibility in low-cost 3D scanning, from image acquisition and object extraction to 3D\
-model generation and evaluation.
-
-Author: 22100618 ImEunGyeol / 22100149 KimYejoon\
+Author:  ImEunGyeol / KimYejoon\
 Demo Video: Demo Link
 
 {% embed url="https://www.youtube.com/watch?v=w5_QxdQ4qYo" %}
@@ -17,13 +37,11 @@ Demo Video: Demo Link
 
 This project implemented a system that automatically estimates the number of people in a video and detects the location of each individual at the point level using **P2PNet (Point-to-Point Network)**. By directly predicting the location coordinates of individuals beyond simple counting, it can be used as a base technology for crowd density analysis and real-time alert systems.
 
-
-
 **Author:** 22000167(Kim Inyeop), 22100362(Seo Yubin)
 
-**Github:** [(Real-Time Crowd Counting System with P2Pnet)](https://github.com/Kiminyeop-cpu/DLIP/tree/main/DLIP_Project_Real-Time-Crowd-Counting-System_2026)
 
-**Demo Video:** [Youtube link](https://youtu.be/UW7SBx5sAvc)
+
+{% embed url="https://www.youtube.com/watch?v=UW7SBx5sAvc&feature=youtu.be" %}
 
 
 

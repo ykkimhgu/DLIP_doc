@@ -90,7 +90,7 @@ Use the report template given here: https://ykkim.gitbook.io/dlip/dlip-project/r
 You must create a demo video (10\~15 sec)&#x20;
 
 * The demo video must contain
-  * Title page:
+  * **Title page:**
     * course name (DLIP2026-1 by Y.-K.Kim), your name, your project tile, date etc
   * Introduction
   * Results
